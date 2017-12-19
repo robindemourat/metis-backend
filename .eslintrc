@@ -1,0 +1,39 @@
+{
+  "parser"  : "babel-eslint",
+  "extends" : [
+    "standard",
+    "eslint:recommended",
+    "plugin:node/recommended",
+    "plugin:security/recommended"
+  ],
+  "plugins": [
+    "babel",
+    "node",
+    "mocha",
+    "security"
+  ],
+  "env"     : {
+    "browser" : true
+  },
+  "globals" : {
+    "__DEV__"      : false,
+    "__PROD__"     : false,
+    "__DEBUG__"    : false,
+    "__COVERAGE__" : false,
+    "__BASENAME__" : false
+  },
+  "rules": {
+    "semi" : ["error", "always"],
+    "max-len": [2, 120, 2],
+    "generator-star-spacing": 0,
+    "babel/generator-star-spacing": 1,
+    "no-unused-vars": ["warn", {"vars": "local"}],
+
+    "node/no-unsupported-features": 0,
+    "no-console": 1,
+
+    "no-process-exit": 1,
+
+    "mocha/no-exclusive-tests": "error"
+  }
+}
