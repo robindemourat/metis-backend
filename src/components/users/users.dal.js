@@ -6,7 +6,7 @@
 
 import db from '../../utils/plugDb';
 
-import schema from './user.schema';
+import {User as schema} from 'plurishing-schemas';
 import design from './users.design';
 import {addDesign} from '../../utils/couchdb';
 import {dataIsValid} from '../../utils/schemas';

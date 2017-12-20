@@ -1,5 +1,3 @@
-// user objects json schema
-export schema from './user.schema';
 // user-related db views
 export design from './users.design';
 // view controller

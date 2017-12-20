@@ -1216,9 +1216,7 @@ var _plugDb = require('../../utils/plugDb');
 
 var _plugDb2 = _interopRequireDefault(_plugDb);
 
-var _user = require('./user.schema');
-
-var _user2 = _interopRequireDefault(_user);
+var _plurishingSchemas = require('plurishing-schemas');
 
 var _users = require('./users.design');
 
@@ -1337,7 +1335,7 @@ var getUser = exports.getUser = function getUser(_ref2) {
       cov_2h66hwxyav.s[19]++;
       return (
         // verify that data is compliant before returning it
-        (0, _schemas.dataIsValid)(user, _user2.default)
+        (0, _schemas.dataIsValid)(user, _plurishingSchemas.User)
       );
     });
   } else {
@@ -1382,7 +1380,7 @@ cov_2h66hwxyav.s[25]++;
 var createUser = exports.createUser = function createUser(user) {
   cov_2h66hwxyav.f[14]++;
   cov_2h66hwxyav.s[26]++;
-  return (0, _schemas.dataIsValid)(user, _user2.default).then(function () {
+  return (0, _schemas.dataIsValid)(user, _plurishingSchemas.User).then(function () {
     cov_2h66hwxyav.f[15]++;
     cov_2h66hwxyav.s[27]++;
     return _plugDb2.default.insertAsync(user);
@@ -1401,7 +1399,7 @@ var updateUser = exports.updateUser = function updateUser(id, user) {
   cov_2h66hwxyav.s[29]++;
   return (
     // validate
-    (0, _schemas.dataIsValid)(user, _user2.default)
+    (0, _schemas.dataIsValid)(user, _plurishingSchemas.User)
     // get existing document
     .then(function () {
       cov_2h66hwxyav.f[17]++;

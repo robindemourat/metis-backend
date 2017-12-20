@@ -3,7 +3,7 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.api = exports.dal = exports.controller = exports.design = exports.schema = undefined;
+exports.api = exports.dal = exports.controller = exports.design = undefined;
 
 var cov_22ucle89ae = function () {
   var path = '/Users/rawbin/Documents/Projets/collaborations/ensad-publishing/prototype/plurishing-backend/src/components/users/index.js',
@@ -28,12 +28,8 @@ var cov_22ucle89ae = function () {
 
   coverageData.hash = hash;
   return coverage[path] = coverageData;
-}(); // user objects json schema
+}(); // user-related db views
 
-
-var _user = require('./user.schema');
-
-var _user2 = _interopRequireDefault(_user);
 
 var _users = require('./users.design');
 
@@ -54,9 +50,6 @@ var _users6 = _interopRequireDefault(_users5);
 function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-exports.schema = _user2.default;
-// user-related db views
 
 exports.design = _users2.default;
 // view controller

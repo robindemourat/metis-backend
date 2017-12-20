@@ -7,7 +7,10 @@ import {lookup} from 'mime-types';
 
 import db from '../../utils/plugDb';
 
-import schema from './asset.schema';
+import {Asset as schema} from 'plurishing-schemas';
+import {Resource as resource} from 'plurishing-schemas';
+console.log('resource', resource);
+
 import design from './assets.design';
 import {addDesign} from '../../utils/couchdb';
 import {dataIsValid} from '../../utils/schemas';
