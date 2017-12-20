@@ -144,6 +144,92 @@ Handle password reset request from a user
 | req | object |  | the request |
 | res | object |  | the resource |
 
+## `getCompositions(req: object, res: object)`
+
+Get a list of compositions
+
+| Name | Type | Attribute | Description |
+| --- | --- | --- | --- |
+| req | object |  | the request of query |
+| res | object |  | the composition of query |
+
+## `getComposition(req: object, res: object)`
+
+Get a single composition
+
+| Name | Type | Attribute | Description |
+| --- | --- | --- | --- |
+| req | object |  | the request of query |
+| res | object |  | the composition of query |
+
+## `createComposition(req: object, res: object)`
+
+Create a single composition
+
+| Name | Type | Attribute | Description |
+| --- | --- | --- | --- |
+| req | object |  | the request of query |
+| res | object |  | the composition of query |
+
+## `updateComposition(req: object, res: object)`
+
+Update a single composition
+
+| Name | Type | Attribute | Description |
+| --- | --- | --- | --- |
+| req | object |  | the request of query |
+| res | object |  | the composition of query |
+
+## `deleteComposition(req: object, res: object)`
+
+Delete a single composition
+
+| Name | Type | Attribute | Description |
+| --- | --- | --- | --- |
+| req | object |  | the request of query |
+| res | object |  | the composition of query |
+
+## `getCompositions(parameters: object): Promise`
+
+Gets a list of compositions with optional query params
+
+| Name | Type | Attribute | Description |
+| --- | --- | --- | --- |
+| parameters | object |  |
+
+## `getComposition(parameters: object): Promise`
+
+Gets a composition with a specific id or email
+
+| Name | Type | Attribute | Description |
+| --- | --- | --- | --- |
+| parameters | object |  |
+
+## `createComposition(composition: object): Promise`
+
+Creates a new composition
+
+| Name | Type | Attribute | Description |
+| --- | --- | --- | --- |
+| composition | object |  |
+
+## `updateComposition(id: string, composition: object): Promise`
+
+Updates a composition
+
+| Name | Type | Attribute | Description |
+| --- | --- | --- | --- |
+| id | string |  | id of composition to update |
+| composition | object |  | data to update |
+
+## `deleteComposition(composition: object): Promise`
+
+Deletes a composition
+
+| Name | Type | Attribute | Description |
+| --- | --- | --- | --- |
+| composition | object |  | composition to delete |
+
 ## `getResources(req: object, res: object)`
 
 Get a list of resources

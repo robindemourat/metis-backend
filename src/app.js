@@ -21,6 +21,7 @@ import {
  */
 import {api as assets} from './components/assets';
 import {api as resources} from './components/resources';
+import {api as compositions} from './components/compositions';
 import {api as users} from './components/users';
 import {api as auth} from './components/auth';
 
@@ -105,6 +106,7 @@ apiRoutes.use('/', auth);
 apiRoutes.use('/users', users);
 apiRoutes.use('/assets', assets);
 apiRoutes.use('/resources', resources);
+apiRoutes.use('/compositions', compositions);
 
 // /**
 //  * Connect the api router to the app

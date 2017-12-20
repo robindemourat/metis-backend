@@ -4,13 +4,13 @@ var _keys = require('babel-runtime/core-js/object/keys');
 
 var _keys2 = _interopRequireDefault(_keys);
 
-var cov_qrl02b2uj = function () {
-    var path = '/Users/rawbin/Documents/Projets/collaborations/ensad-publishing/prototype/plurishing-backend/src/components/resources/resources.design.spec.js',
-        hash = 'd678d484c467d49f8d8312780b5d035293b32a5b',
+var cov_1464dl5y6c = function () {
+    var path = '/Users/rawbin/Documents/Projets/collaborations/ensad-publishing/prototype/plurishing-backend/src/components/compositions/compositions.design.spec.js',
+        hash = '3dfc6ed73ed66d3435e6e52c319cb90839e0b23a',
         global = new Function('return this')(),
         gcv = '__coverage__',
         coverageData = {
-        path: '/Users/rawbin/Documents/Projets/collaborations/ensad-publishing/prototype/plurishing-backend/src/components/resources/resources.design.spec.js',
+        path: '/Users/rawbin/Documents/Projets/collaborations/ensad-publishing/prototype/plurishing-backend/src/components/compositions/compositions.design.spec.js',
         statementMap: {
             '0': {
                 start: {
@@ -79,17 +79,17 @@ var cov_qrl02b2uj = function () {
                 decl: {
                     start: {
                         line: 4,
-                        column: 37
+                        column: 40
                     },
                     end: {
                         line: 4,
-                        column: 38
+                        column: 41
                     }
                 },
                 loc: {
                     start: {
                         line: 4,
-                        column: 43
+                        column: 46
                     },
                     end: {
                         line: 12,
@@ -176,31 +176,31 @@ var cov_qrl02b2uj = function () {
 
 var _chai = require('chai');
 
-var _resources = require('./resources.design');
+var _compositions = require('./compositions.design');
 
-var _resources2 = _interopRequireDefault(_resources);
+var _compositions2 = _interopRequireDefault(_compositions);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-cov_qrl02b2uj.s[0]++;
+cov_1464dl5y6c.s[0]++;
 
 
-describe('Resources couchdb design', function () {
-    cov_qrl02b2uj.f[0]++;
-    cov_qrl02b2uj.s[1]++;
+describe('Compositions couchdb design', function () {
+    cov_1464dl5y6c.f[0]++;
+    cov_1464dl5y6c.s[1]++;
 
     it('should eval each view map as a function', function (done) {
-        cov_qrl02b2uj.f[1]++;
-        cov_qrl02b2uj.s[2]++;
+        cov_1464dl5y6c.f[1]++;
+        cov_1464dl5y6c.s[2]++;
 
-        (0, _keys2.default)(_resources2.default.views).forEach(function (id) {
-            cov_qrl02b2uj.f[2]++;
+        (0, _keys2.default)(_compositions2.default.views).forEach(function (id) {
+            cov_1464dl5y6c.f[2]++;
 
-            var view = (cov_qrl02b2uj.s[3]++, _resources2.default.views[id]);
-            cov_qrl02b2uj.s[4]++;
+            var view = (cov_1464dl5y6c.s[3]++, _compositions2.default.views[id]);
+            cov_1464dl5y6c.s[4]++;
             (0, _chai.expect)(eval('(' + view.map + ')')).to.be.a('function');
         });
-        cov_qrl02b2uj.s[5]++;
+        cov_1464dl5y6c.s[5]++;
         done();
     });
 });

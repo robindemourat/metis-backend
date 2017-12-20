@@ -1,7 +1,7 @@
 import {expect} from 'chai';
-import design from './resources.design';
+import design from './compositions.design';
 
-describe('Resources couchdb design', () => {
+describe('Compositions couchdb design', () => {
     it('should eval each view map as a function', (done) => {
         Object.keys(design.views).forEach(id => {
           const view = design.views[id];

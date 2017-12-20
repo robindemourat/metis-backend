@@ -6,7 +6,7 @@ Object.defineProperty(exports, "__esModule", {
 
 var cov_2145knos0z = function () {
   var path = '/Users/rawbin/Documents/Projets/collaborations/ensad-publishing/prototype/plurishing-backend/src/app.js',
-      hash = '20b150268bcf97358a2203d217762bcdf0e8603a',
+      hash = '36d421167e56ed5801d8c440ee482415e1a3c92b',
       global = new Function('return this')(),
       gcv = '__coverage__',
       coverageData = {
@@ -14,201 +14,211 @@ var cov_2145knos0z = function () {
     statementMap: {
       '0': {
         start: {
-          line: 33,
+          line: 34,
           column: 15
         },
         end: {
-          line: 33,
+          line: 34,
           column: 26
         }
       },
       '1': {
         start: {
-          line: 34,
+          line: 35,
           column: 17
         },
         end: {
-          line: 34,
+          line: 35,
           column: 23
         }
       },
       '2': {
         start: {
-          line: 39,
+          line: 40,
           column: 12
         },
         end: {
-          line: 39,
+          line: 40,
           column: 21
         }
       },
       '3': {
         start: {
-          line: 44,
+          line: 45,
           column: 0
         },
         end: {
-          line: 44,
+          line: 45,
           column: 67
         }
       },
       '4': {
         start: {
-          line: 45,
+          line: 46,
           column: 0
         },
         end: {
-          line: 45,
+          line: 46,
           column: 27
         }
       },
       '5': {
         start: {
-          line: 46,
+          line: 47,
           column: 0
         },
         end: {
-          line: 46,
+          line: 47,
           column: 16
         }
       },
       '6': {
         start: {
-          line: 47,
+          line: 48,
           column: 0
         },
         end: {
-          line: 47,
+          line: 48,
           column: 38
         }
       },
       '7': {
         start: {
-          line: 48,
+          line: 49,
           column: 0
         },
         end: {
-          line: 59,
+          line: 60,
           column: 4
         }
       },
       '8': {
         start: {
-          line: 64,
+          line: 65,
           column: 0
         },
         end: {
-          line: 64,
+          line: 65,
           column: 31
         }
       },
       '9': {
         start: {
-          line: 69,
+          line: 70,
           column: 0
         },
         end: {
-          line: 71,
+          line: 72,
           column: 3
         }
       },
       '10': {
         start: {
-          line: 70,
+          line: 71,
           column: 2
         },
         end: {
-          line: 70,
+          line: 71,
           column: 77
         }
       },
       '11': {
         start: {
-          line: 78,
+          line: 79,
           column: 19
         },
         end: {
-          line: 78,
+          line: 79,
           column: 52
         }
       },
       '12': {
         start: {
-          line: 79,
+          line: 80,
           column: 0
         },
         end: {
-          line: 79,
+          line: 80,
           column: 47
         }
       },
       '13': {
         start: {
-          line: 85,
+          line: 86,
           column: 18
         },
         end: {
-          line: 85,
+          line: 86,
           column: 34
         }
       },
       '14': {
         start: {
-          line: 90,
+          line: 91,
           column: 0
         },
         end: {
-          line: 90,
+          line: 91,
           column: 25
         }
       },
       '15': {
         start: {
-          line: 105,
+          line: 106,
           column: 0
         },
         end: {
-          line: 105,
+          line: 106,
           column: 31
         }
       },
       '16': {
         start: {
-          line: 106,
+          line: 107,
           column: 0
         },
         end: {
-          line: 106,
+          line: 107,
           column: 33
         }
       },
       '17': {
         start: {
-          line: 107,
+          line: 108,
           column: 0
         },
         end: {
-          line: 107,
+          line: 108,
           column: 39
         }
       },
       '18': {
         start: {
-          line: 112,
+          line: 109,
           column: 0
         },
         end: {
-          line: 112,
-          column: 27
+          line: 109,
+          column: 45
         }
       },
       '19': {
         start: {
-          line: 117,
+          line: 114,
           column: 0
         },
         end: {
-          line: 117,
+          line: 114,
+          column: 27
+        }
+      },
+      '20': {
+        start: {
+          line: 119,
+          column: 0
+        },
+        end: {
+          line: 119,
           column: 22
         }
       }
@@ -218,25 +228,25 @@ var cov_2145knos0z = function () {
         name: '(anonymous_0)',
         decl: {
           start: {
-            line: 69,
+            line: 70,
             column: 13
           },
           end: {
-            line: 69,
+            line: 70,
             column: 14
           }
         },
         loc: {
           start: {
-            line: 69,
+            line: 70,
             column: 27
           },
           end: {
-            line: 71,
+            line: 72,
             column: 1
           }
         },
-        line: 69
+        line: 70
       }
     },
     branchMap: {},
@@ -260,7 +270,8 @@ var cov_2145knos0z = function () {
       '16': 0,
       '17': 0,
       '18': 0,
-      '19': 0
+      '19': 0,
+      '20': 0
     },
     f: {
       '0': 0
@@ -323,6 +334,8 @@ var _middlewares = require('./utils/middlewares');
 var _assets = require('./components/assets');
 
 var _resources = require('./components/resources');
+
+var _compositions = require('./components/compositions');
 
 var _users = require('./components/users');
 
@@ -426,15 +439,17 @@ cov_2145knos0z.s[16]++;
 apiRoutes.use('/assets', _assets.api);
 cov_2145knos0z.s[17]++;
 apiRoutes.use('/resources', _resources.api);
+cov_2145knos0z.s[18]++;
+apiRoutes.use('/compositions', _compositions.api);
 
 // /**
 //  * Connect the api router to the app
 //  */
-cov_2145knos0z.s[18]++;
+cov_2145knos0z.s[19]++;
 app.use('/api', apiRoutes);
 
 // /**
 //  * Connect error handler
 //  */
-cov_2145knos0z.s[19]++;
+cov_2145knos0z.s[20]++;
 app.use(_middlewares.errorHandler);
