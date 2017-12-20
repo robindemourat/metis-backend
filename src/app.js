@@ -20,6 +20,7 @@ import {
  * Dependencies : Components API
  */
 import {api as assets} from './components/assets';
+import {api as resources} from './components/resources';
 import {api as users} from './components/users';
 import {api as auth} from './components/auth';
 
@@ -103,6 +104,7 @@ apiRoutes.use('/', auth);
 // // apiRoutes.use('/articles', articles);
 apiRoutes.use('/users', users);
 apiRoutes.use('/assets', assets);
+apiRoutes.use('/resources', resources);
 
 // /**
 //  * Connect the api router to the app

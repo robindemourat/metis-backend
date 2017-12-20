@@ -144,6 +144,92 @@ Handle password reset request from a user
 | req | object |  | the request |
 | res | object |  | the resource |
 
+## `getResources(req: object, res: object)`
+
+Get a list of resources
+
+| Name | Type | Attribute | Description |
+| --- | --- | --- | --- |
+| req | object |  | the request of query |
+| res | object |  | the resource of query |
+
+## `getResource(req: object, res: object)`
+
+Get a single resource
+
+| Name | Type | Attribute | Description |
+| --- | --- | --- | --- |
+| req | object |  | the request of query |
+| res | object |  | the resource of query |
+
+## `createResource(req: object, res: object)`
+
+Create a single resource
+
+| Name | Type | Attribute | Description |
+| --- | --- | --- | --- |
+| req | object |  | the request of query |
+| res | object |  | the resource of query |
+
+## `updateResource(req: object, res: object)`
+
+Update a single resource
+
+| Name | Type | Attribute | Description |
+| --- | --- | --- | --- |
+| req | object |  | the request of query |
+| res | object |  | the resource of query |
+
+## `deleteResource(req: object, res: object)`
+
+Delete a single resource
+
+| Name | Type | Attribute | Description |
+| --- | --- | --- | --- |
+| req | object |  | the request of query |
+| res | object |  | the resource of query |
+
+## `getResources(parameters: object): Promise`
+
+Gets a list of resources with optional query params
+
+| Name | Type | Attribute | Description |
+| --- | --- | --- | --- |
+| parameters | object |  |
+
+## `getResource(parameters: object): Promise`
+
+Gets a resource with a specific id or email
+
+| Name | Type | Attribute | Description |
+| --- | --- | --- | --- |
+| parameters | object |  |
+
+## `createResource(resource: object): Promise`
+
+Creates a new resource
+
+| Name | Type | Attribute | Description |
+| --- | --- | --- | --- |
+| resource | object |  |
+
+## `updateResource(id: string, resource: object): Promise`
+
+Updates a resource
+
+| Name | Type | Attribute | Description |
+| --- | --- | --- | --- |
+| id | string |  | id of resource to update |
+| resource | object |  | data to update |
+
+## `deleteResource(resource: object): Promise`
+
+Deletes a resource
+
+| Name | Type | Attribute | Description |
+| --- | --- | --- | --- |
+| resource | object |  | resource to delete |
+
 ## `retrieveToken()`
 
 | Name | Type | Attribute | Description |

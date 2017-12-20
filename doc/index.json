@@ -3,7 +3,7 @@
     "__docId__": 0,
     "kind": "file",
     "name": "src/app.js",
-    "content": "/**\n * Plurishing-backend\n * =======\n * Application entrypoint\n */\nimport express from 'express';\nimport cors from 'cors';\nimport bodyParser from 'body-parser';\nimport {resolve} from 'path';\n/**\n * Dependencies : middlewares\n */\nimport bunyanLogger from 'express-bunyan-logger';\nimport debugStream from 'bunyan-debug-stream';\nimport {\n  //authenticateWithTokens,\n  errorHandler\n} from './utils/middlewares';\n/**\n * Dependencies : Components API\n */\nimport {api as assets} from './components/assets';\nimport {api as users} from './components/users';\nimport {api as auth} from './components/auth';\n\n/**\n * Connect config\n */\nimport {\n  getConfig\n} from './utils/config';\nconst config = getConfig();\nconst {secret} = config;\n\n/**\n * Init express app\n */\nconst app = express();\n\n/**\n * Enhance the app with middlewares\n */\napp.use(bodyParser.urlencoded({ extended: true, limit: \"200Mo\" }));\napp.use(bodyParser.json()); // use json body parser except when uploading raw files\napp.use(cors());\napp.use(require('express-promise')());\napp.use(bunyanLogger({\n  name: \"log\",\n  streams: [{\n      level:  'info',\n      type:   'raw',\n      stream: debugStream({\n          basepath: __dirname, // this should be the root folder of your project.\n          forceColor: true\n      })\n  }],\n  serializers: debugStream.serializers\n}));\n\n/**\n * set secret variable for auth processes\n */\napp.set('superSecret', secret);\n\n/**\n * Set a route\n */\napp.get('/', (req, res) => {\n  res.send('This is an api. Connect to /api/:whatyouwant to get something.');\n});\n\nexport default app;\n\n/**\n * Static asset files\n */\nconst assetsPath = resolve(`${__dirname}/../assets`);\napp.use('/assets', express.static(assetsPath));\n\n\n/**\n * Create API router\n */\nconst apiRoutes = express.Router();\n\n/**\n * No-token authentication-related routes\n */\napiRoutes.use('/', auth);\n\n/**\n * API documentation route\n */\n\n// /**\n//  * Apply authentication middleware for protected routes using jwt\n//  * (after that line all routes are protected)\n//  */\n// // apiRoutes.use(authenticateWithTokens);\n// /**\n//  * Protected api routes\n//  */\n// // apiRoutes.use('/articles', articles);\napiRoutes.use('/users', users);\napiRoutes.use('/assets', assets);\n\n// /**\n//  * Connect the api router to the app\n//  */\napp.use('/api', apiRoutes);\n\n// /**\n//  * Connect error handler\n//  */\napp.use(errorHandler);\n\n",
+    "content": "/**\n * Plurishing-backend\n * =======\n * Application entrypoint\n */\nimport express from 'express';\nimport cors from 'cors';\nimport bodyParser from 'body-parser';\nimport {resolve} from 'path';\n/**\n * Dependencies : middlewares\n */\nimport bunyanLogger from 'express-bunyan-logger';\nimport debugStream from 'bunyan-debug-stream';\nimport {\n  //authenticateWithTokens,\n  errorHandler\n} from './utils/middlewares';\n/**\n * Dependencies : Components API\n */\nimport {api as assets} from './components/assets';\nimport {api as resources} from './components/resources';\nimport {api as users} from './components/users';\nimport {api as auth} from './components/auth';\n\n/**\n * Connect config\n */\nimport {\n  getConfig\n} from './utils/config';\nconst config = getConfig();\nconst {secret} = config;\n\n/**\n * Init express app\n */\nconst app = express();\n\n/**\n * Enhance the app with middlewares\n */\napp.use(bodyParser.urlencoded({ extended: true, limit: \"200Mo\" }));\napp.use(bodyParser.json()); // use json body parser except when uploading raw files\napp.use(cors());\napp.use(require('express-promise')());\napp.use(bunyanLogger({\n  name: \"log\",\n  streams: [{\n      level:  'info',\n      type:   'raw',\n      stream: debugStream({\n          basepath: __dirname, // this should be the root folder of your project.\n          forceColor: true\n      })\n  }],\n  serializers: debugStream.serializers\n}));\n\n/**\n * set secret variable for auth processes\n */\napp.set('superSecret', secret);\n\n/**\n * Set a route\n */\napp.get('/', (req, res) => {\n  res.send('This is an api. Connect to /api/:whatyouwant to get something.');\n});\n\nexport default app;\n\n/**\n * Static asset files\n */\nconst assetsPath = resolve(`${__dirname}/../assets`);\napp.use('/assets', express.static(assetsPath));\n\n\n/**\n * Create API router\n */\nconst apiRoutes = express.Router();\n\n/**\n * No-token authentication-related routes\n */\napiRoutes.use('/', auth);\n\n/**\n * API documentation route\n */\n\n// /**\n//  * Apply authentication middleware for protected routes using jwt\n//  * (after that line all routes are protected)\n//  */\n// // apiRoutes.use(authenticateWithTokens);\n// /**\n//  * Protected api routes\n//  */\n// // apiRoutes.use('/articles', articles);\napiRoutes.use('/users', users);\napiRoutes.use('/assets', assets);\napiRoutes.use('/resources', resources);\n\n// /**\n//  * Connect the api router to the app\n//  */\napp.use('/api', apiRoutes);\n\n// /**\n//  * Connect error handler\n//  */\napp.use(errorHandler);\n\n",
     "static": true,
     "longname": "/Users/rawbin/Documents/Projets/collaborations/ensad-publishing/prototype/plurishing-backend/src/app.js",
     "access": null,
@@ -22,7 +22,7 @@
     "importPath": "plurishing-backend/src/app.js",
     "importStyle": null,
     "description": null,
-    "lineNumber": 32,
+    "lineNumber": 33,
     "undocument": true
   },
   {
@@ -37,7 +37,7 @@
     "importPath": "plurishing-backend/src/app.js",
     "importStyle": null,
     "description": null,
-    "lineNumber": 33,
+    "lineNumber": 34,
     "undocument": true
   },
   {
@@ -52,7 +52,7 @@
     "importPath": "plurishing-backend/src/app.js",
     "importStyle": null,
     "description": "Static asset files",
-    "lineNumber": 77
+    "lineNumber": 78
   },
   {
     "__docId__": 4,
@@ -66,7 +66,7 @@
     "importPath": "plurishing-backend/src/app.js",
     "importStyle": null,
     "description": "Create API router",
-    "lineNumber": 84
+    "lineNumber": 85
   },
   {
     "__docId__": 5,
@@ -80,7 +80,7 @@
     "importPath": "plurishing-backend/src/app.js",
     "importStyle": "app",
     "description": "Init express app",
-    "lineNumber": 38
+    "lineNumber": 39
   },
   {
     "__docId__": 6,
@@ -883,6 +883,455 @@
   {
     "__docId__": 34,
     "kind": "file",
+    "name": "src/components/resources/index.js",
+    "content": "// resource-related db views\nexport design from './resources.design';\n// view controller\nexport * as controller from './resources.controller';\n// database abstraction layer operations\nexport * as dal from './resources.dal';\n// api / routes bindings\nexport api from './resources.api';\n",
+    "static": true,
+    "longname": "/Users/rawbin/Documents/Projets/collaborations/ensad-publishing/prototype/plurishing-backend/src/components/resources/index.js",
+    "access": null,
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 35,
+    "kind": "file",
+    "name": "src/components/resources/resources.api.js",
+    "content": "/**\n * Plurishing-backend\n * =======\n * Resource api\n */\n\nimport express from 'express';\n\nimport {\n  getResources,\n  getResource,\n  createResource,\n  updateResource,\n  deleteResource\n} from './resources.controller';\n\nconst router = new express.Router();\n\nrouter.get('/', getResources);\nrouter.get('/:id', getResource);\nrouter.post('/', createResource);\nrouter.put('/:id', updateResource);\nrouter.delete('/:id', deleteResource);\n\nexport default router;\n",
+    "static": true,
+    "longname": "/Users/rawbin/Documents/Projets/collaborations/ensad-publishing/prototype/plurishing-backend/src/components/resources/resources.api.js",
+    "access": null,
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 36,
+    "kind": "file",
+    "name": "src/components/resources/resources.controller.js",
+    "content": "// /**\n//  * Plurishing-backend\n//  * =======\n//  * Resources component controller\n//  */\n\nimport {\n  getResources as getResourcesDAL,\n  getResource as getResourceDAL,\n  createResource as createResourceDAL,\n  updateResource as updateResourceDAL,\n  deleteResource as deleteResourceDAL\n} from './resources.dal';\n\n/**\n * Get a list of resources\n * @param {object} req - the request of query\n * @param {object} res - the resource of query\n * @todo add filters handling through req queries\n */\nexport const getResources = (req, res) =>\n  res.json(getResourcesDAL({}));\n\n/**\n * Get a single resource\n * @param {object} req - the request of query\n * @param {object} res - the resource of query\n */\nexport const getResource = (req, res) =>\n  res.json(\n    getResourceDAL({\n      id: req.params.id\n    })\n  );\n\n/**\n * Create a single resource\n * @param {object} req - the request of query\n * @param {object} res - the resource of query\n */\nexport const createResource = (req, res) =>\n  // create the resource\n  createResourceDAL({\n          ...req.body,\n          type: 'resource'\n        })\n  // return the resource\n  .then(({id}) => getResourceDAL({id}))\n  .then(resource => res.json(resource));\n\n/**\n * Update a single resource\n * @param {object} req - the request of query\n * @param {object} res - the resource of query\n */\nexport const updateResource = (req, res) =>\n  res.json(\n    // update the resource\n    updateResourceDAL(\n      req.params.id,\n      req.body, // for now we perform a full replace (vs merge with $set)\n    )\n    // return the resource\n    .then(({id}) => getResourceDAL({id}))\n    .then(resource => res.json(resource))\n  );\n\n/**\n * Delete a single resource\n * @param {object} req - the request of query\n * @param {object} res - the resource of query\n */\nexport const deleteResource = (req, res) =>\n  res.json(deleteResourceDAL({_id: req.params.id}));\n\n",
+    "static": true,
+    "longname": "/Users/rawbin/Documents/Projets/collaborations/ensad-publishing/prototype/plurishing-backend/src/components/resources/resources.controller.js",
+    "access": null,
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 37,
+    "kind": "function",
+    "name": "getResources",
+    "memberof": "src/components/resources/resources.controller.js",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "src/components/resources/resources.controller.js~getResources",
+    "access": null,
+    "export": true,
+    "importPath": "plurishing-backend/src/components/resources/resources.controller.js",
+    "importStyle": "{getResources}",
+    "description": "Get a list of resources",
+    "lineNumber": 21,
+    "todo": [
+      "add filters handling through req queries"
+    ],
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "object"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "req",
+        "description": "the request of query"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "object"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "res",
+        "description": "the resource of query"
+      }
+    ]
+  },
+  {
+    "__docId__": 38,
+    "kind": "function",
+    "name": "getResource",
+    "memberof": "src/components/resources/resources.controller.js",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "src/components/resources/resources.controller.js~getResource",
+    "access": null,
+    "export": true,
+    "importPath": "plurishing-backend/src/components/resources/resources.controller.js",
+    "importStyle": "{getResource}",
+    "description": "Get a single resource",
+    "lineNumber": 29,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "object"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "req",
+        "description": "the request of query"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "object"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "res",
+        "description": "the resource of query"
+      }
+    ]
+  },
+  {
+    "__docId__": 39,
+    "kind": "function",
+    "name": "createResource",
+    "memberof": "src/components/resources/resources.controller.js",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "src/components/resources/resources.controller.js~createResource",
+    "access": null,
+    "export": true,
+    "importPath": "plurishing-backend/src/components/resources/resources.controller.js",
+    "importStyle": "{createResource}",
+    "description": "Create a single resource",
+    "lineNumber": 41,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "object"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "req",
+        "description": "the request of query"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "object"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "res",
+        "description": "the resource of query"
+      }
+    ]
+  },
+  {
+    "__docId__": 40,
+    "kind": "function",
+    "name": "updateResource",
+    "memberof": "src/components/resources/resources.controller.js",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "src/components/resources/resources.controller.js~updateResource",
+    "access": null,
+    "export": true,
+    "importPath": "plurishing-backend/src/components/resources/resources.controller.js",
+    "importStyle": "{updateResource}",
+    "description": "Update a single resource",
+    "lineNumber": 56,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "object"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "req",
+        "description": "the request of query"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "object"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "res",
+        "description": "the resource of query"
+      }
+    ]
+  },
+  {
+    "__docId__": 41,
+    "kind": "function",
+    "name": "deleteResource",
+    "memberof": "src/components/resources/resources.controller.js",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "src/components/resources/resources.controller.js~deleteResource",
+    "access": null,
+    "export": true,
+    "importPath": "plurishing-backend/src/components/resources/resources.controller.js",
+    "importStyle": "{deleteResource}",
+    "description": "Delete a single resource",
+    "lineNumber": 73,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "object"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "req",
+        "description": "the request of query"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "object"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "res",
+        "description": "the resource of query"
+      }
+    ]
+  },
+  {
+    "__docId__": 42,
+    "kind": "file",
+    "name": "src/components/resources/resources.dal.js",
+    "content": "/**\n * Plurishing-backend\n * =======\n * Resource data access layer\n */\n\nimport db from '../../utils/plugDb';\n\nimport {Resource as schema} from 'plurishing-schemas';\nimport design from './resources.design';\nimport {addDesign} from '../../utils/couchdb';\nimport {dataIsValid} from '../../utils/schemas';\n\n/**\n * Registering couchdb views related to resources objects\n */\naddDesign(db, 'resources', design);\n\n\n/**\n * Gets a list of resources with optional query params\n * @param {object} parameters\n * @return {Promise}\n */\nexport const getResources = ({\n  // query = {},\n  include_docs = true\n}) => {\n  return db.viewAsync('resources', 'by_id', {\n      include_docs\n    }).then(\n      results =>\n        new Promise(\n          resolve =>\n            resolve(\n              results.rows.map(doc => doc.doc)\n            )\n          )\n    );\n};\n\n/**\n * Gets a resource with a specific id or email\n * @param {object} parameters\n * @return {Promise}\n */\nexport const getResource = ({\n  id\n}) =>\n  db.getAsync(id)\n      .then(resource =>\n        // verify that data is compliant before returning it\n        dataIsValid(resource, schema)\n      );\n\n/**\n * Creates a new resource\n * @param {object} resource\n * @return {Promise}\n */\nexport const createResource = resource =>\n  dataIsValid(resource, schema)\n    .then(() => db.insertAsync(resource));\n\n/**\n * Updates a resource\n * @param {string} id - id of resource to update\n * @param {object} resource - data to update\n * @return {Promise}\n */\nexport const updateResource = (id, resource) =>\n  // validate\n  dataIsValid(resource, schema)\n    // get existing document\n    .then(() => db.getAsync(id))\n    // update with new rev\n    .then(resourceDb =>\n        db.insertAsync({\n          ...resource,\n          _rev: resourceDb._rev\n        }, resourceDb._id)\n    );\n\n/**\n * Deletes a resource\n * @param {object} resource - resource to delete\n * @return {Promise}\n */\nexport const deleteResource = ({_id}) =>\n  db.getAsync(_id)\n    .then(resource => db.destroyAsync(_id, resource._rev));\n",
+    "static": true,
+    "longname": "/Users/rawbin/Documents/Projets/collaborations/ensad-publishing/prototype/plurishing-backend/src/components/resources/resources.dal.js",
+    "access": null,
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 43,
+    "kind": "function",
+    "name": "getResources",
+    "memberof": "src/components/resources/resources.dal.js",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "src/components/resources/resources.dal.js~getResources",
+    "access": null,
+    "export": true,
+    "importPath": "plurishing-backend/src/components/resources/resources.dal.js",
+    "importStyle": "{getResources}",
+    "description": "Gets a list of resources with optional query params",
+    "lineNumber": 25,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "object"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "parameters",
+        "description": ""
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "Promise"
+      ],
+      "spread": false,
+      "description": ""
+    }
+  },
+  {
+    "__docId__": 44,
+    "kind": "function",
+    "name": "getResource",
+    "memberof": "src/components/resources/resources.dal.js",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "src/components/resources/resources.dal.js~getResource",
+    "access": null,
+    "export": true,
+    "importPath": "plurishing-backend/src/components/resources/resources.dal.js",
+    "importStyle": "{getResource}",
+    "description": "Gets a resource with a specific id or email",
+    "lineNumber": 47,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "object"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "parameters",
+        "description": ""
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "Promise"
+      ],
+      "spread": false,
+      "description": ""
+    }
+  },
+  {
+    "__docId__": 45,
+    "kind": "function",
+    "name": "createResource",
+    "memberof": "src/components/resources/resources.dal.js",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "src/components/resources/resources.dal.js~createResource",
+    "access": null,
+    "export": true,
+    "importPath": "plurishing-backend/src/components/resources/resources.dal.js",
+    "importStyle": "{createResource}",
+    "description": "Creates a new resource",
+    "lineNumber": 61,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "object"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "resource",
+        "description": ""
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "Promise"
+      ],
+      "spread": false,
+      "description": ""
+    }
+  },
+  {
+    "__docId__": 46,
+    "kind": "function",
+    "name": "updateResource",
+    "memberof": "src/components/resources/resources.dal.js",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "src/components/resources/resources.dal.js~updateResource",
+    "access": null,
+    "export": true,
+    "importPath": "plurishing-backend/src/components/resources/resources.dal.js",
+    "importStyle": "{updateResource}",
+    "description": "Updates a resource",
+    "lineNumber": 71,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "string"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "id",
+        "description": "id of resource to update"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "object"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "resource",
+        "description": "data to update"
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "Promise"
+      ],
+      "spread": false,
+      "description": ""
+    }
+  },
+  {
+    "__docId__": 47,
+    "kind": "function",
+    "name": "deleteResource",
+    "memberof": "src/components/resources/resources.dal.js",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "src/components/resources/resources.dal.js~deleteResource",
+    "access": null,
+    "export": true,
+    "importPath": "plurishing-backend/src/components/resources/resources.dal.js",
+    "importStyle": "{deleteResource}",
+    "description": "Deletes a resource",
+    "lineNumber": 89,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "object"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "resource",
+        "description": "resource to delete"
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "Promise"
+      ],
+      "spread": false,
+      "description": ""
+    }
+  },
+  {
+    "__docId__": 48,
+    "kind": "file",
+    "name": "src/components/resources/resources.design.js",
+    "content": "export default {\n  \"views\": {\n    \"by_id\": {\n      \"map\": `function(doc) {\n                    if (doc.type === 'resource') {\n                      emit(doc._id, null);\n                    }\n                  }`\n    }\n  }\n};\n",
+    "static": true,
+    "longname": "/Users/rawbin/Documents/Projets/collaborations/ensad-publishing/prototype/plurishing-backend/src/components/resources/resources.design.js",
+    "access": null,
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 49,
+    "kind": "file",
+    "name": "src/components/resources/resources.design.spec.js",
+    "content": "import {expect} from 'chai';\nimport design from './resources.design';\n\ndescribe('Resoures couchdb design', () => {\n    it('should eval each view map as a function', (done) => {\n        Object.keys(design.views).forEach(id => {\n          const view = design.views[id];\n          expect(eval(`(${view.map})`)).to.be.a('function');\n        });\n        done();\n    });\n});\n",
+    "static": true,
+    "longname": "/Users/rawbin/Documents/Projets/collaborations/ensad-publishing/prototype/plurishing-backend/src/components/resources/resources.design.spec.js",
+    "access": null,
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 50,
+    "kind": "file",
     "name": "src/components/users/index.js",
     "content": "// user-related db views\nexport design from './users.design';\n// view controller\nexport * as controller from './users.controller';\n// database abstraction layer operations\nexport * as dal from './users.dal';\n// api / routes bindings\nexport api from './users.api';\n",
     "static": true,
@@ -892,7 +1341,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 35,
+    "__docId__": 51,
     "kind": "file",
     "name": "src/components/users/users.api.js",
     "content": "/**\n * Plurishing-backend\n * =======\n * User api\n */\n\nimport express from 'express';\n\nimport {\n  getUsers,\n  getUser,\n  createUser,\n  changeUserPassword,\n  updateUser,\n  deleteUser\n} from './users.controller';\n\nconst router = new express.Router();\n\nrouter.get('/', getUsers);\nrouter.get('/:id', getUser);\nrouter.post('/', createUser);\n// password change is particularly protected (only own user can access it)\nrouter.post('/change-password', changeUserPassword);\nrouter.put('/:id', updateUser);\nrouter.delete('/:id', deleteUser);\n\nexport default router;\n",
@@ -903,7 +1352,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 36,
+    "__docId__": 52,
     "kind": "file",
     "name": "src/components/users/users.controller.js",
     "content": "// /**\n//  * Plurishing-backend\n//  * =======\n//  * Users component controller\n//  */\nimport jwt from 'jsonwebtoken'; // used to create, sign, and verify tokens\n\nimport {hash} from '../../utils/crypto';\nimport sendEmail from '../../utils/mailer';\nimport {welcomeEmail} from '../../utils/emails';\n\nimport {\n  getUsers as getUsersDAL,\n  getUser as getUserDAL,\n  createUser as createUserDAL,\n  updateUser as updateUserDAL,\n  deleteUser as deleteUserDAL\n} from './users.dal';\n\nimport {getConfig} from '../../utils/config';\nconst config = getConfig();\n\nconst {\n  // smtpPort,\n  // smtpHost,\n  smtpEmail,\n  smtpService,\n  smtpPassword,\n  secret,\n  backofficeBaseUri\n} = config;\nconst mailConfig = {\n  // smtpPort,\n  // smtpHost,\n  smtpEmail,\n  smtpService,\n  smtpPassword\n};\n\nconst retrieveToken = req => req.body.token || req.params.token || req.headers['x-access-token'];\n\n/**\n * Verifies req is performed by an admin user by inspecting auth token\n * @param {object} req - the request of query\n * @return {Promise} res - resolves if token bearer is an admin\n */\nconst ensureAdmin = (req) =>\n  new Promise((resolve, reject) => {\n    const token = retrieveToken(req);\n    // verify that the token data corresponds to the user willing to change the password\n    jwt.verify(token, secret, function (err, decoded) {\n      if (err) {\n        reject(err);\n      } else if (decoded.admin) {\n        resolve();\n      } else {\n        reject();\n      }\n    });\n  });\n\n/**\n * Verifies req is performed by an admin user or by the user corresponding to id param by inspecting auth token\n * @param {object} req - the request of query\n * @return {Promise} res - resolves if token bearer is an admin or the own user\n */\nconst ensureAdminOrOwn = (req) =>\n  new Promise((resolve, reject) => {\n    const token = retrieveToken(req);\n    // verify that the token data corresponds to the user willing to change the password\n    jwt.verify(token, secret, function (err, decoded) {\n      const admin = decoded.admin;\n      const own = decoded.userid === req.params.id;\n      if (err) {\n        reject(err);\n      } else if (admin || own) {\n        resolve();\n      } else {\n        reject();\n      }\n    });\n  });\n\n/**\n * Get a list of users\n * @param {object} req - the request of query\n * @param {object} res - the resource of query\n * @todo add filters handling through req queries\n */\nexport const getUsers = (req, res) =>\n  ensureAdmin(req)\n    .then(() =>\n        res.json(getUsersDAL({}))\n    )\n    .catch(error => res.status(403).json({message: 'admin only', error}));\n\n/**\n * Get a single user\n * @param {object} req - the request of query\n * @param {object} res - the resource of query\n */\nexport const getUser = (req, res) =>\n  res.json(\n    getUserDAL({\n      id: req.params.id\n    })\n  );\n\n/**\n * Create a single user\n * @param {object} req - the request of query\n * @param {object} res - the resource of query\n */\nexport const createUser = (req, res) =>\n  ensureAdmin(req)\n    .catch(error => res.status(403).json({message: 'admin only', error}))\n    // ensure user does not already exists\n    .then(() =>\n      getUsersDAL({query: {email: req.body.email}})\n    )\n    .then(users => {\n      if (users.length) {\n        return res.status(403).json({message: 'email already exists'});\n      } else {\n        // create user\n        return createUserDAL({\n          ...req.body,\n          type: 'user'\n        });\n      }\n    })\n    .then(({id}) => getUserDAL({id}))\n    .then(user => {\n      // create a token\n      var payload = {\n        admin: user.admin,\n        userid: user._id\n      };\n      var token = jwt.sign(payload, secret, {\n        expiresIn: 86400 // expires in 24 hours\n      });\n      user.resetPasswordToken = token;\n      return updateUserDAL(user._id, user);\n    })\n    .then(({id}) => getUserDAL({id}))\n    .then(user => {\n      const appUrl = backofficeBaseUri;\n      const {subject, html} = welcomeEmail(appUrl, user);\n      return sendEmail({\n        subject,\n        html,\n        to: [user.email]\n      }, mailConfig, req.log);\n    })\n    .then(() => {\n      res.json(getUsersDAL({}));\n    });\n\n/**\n * Update a single user\n * @param {object} req - the request of query\n * @param {object} res - the resource of query\n */\nexport const updateUser = (req, res) =>\n  ensureAdminOrOwn(req)\n    .catch(error => res.status(403).json({message: 'admin only', error}))\n    .then(() =>\n      res.json(\n        updateUserDAL(\n          req.params.id,\n          req.body, // for now we perform a full replace (vs merge with $set)\n        )\n      )\n    );\n\n/**\n * Delete a single user\n * @param {object} req - the request of query\n * @param {object} res - the resource of query\n */\nexport const deleteUser = (req, res) =>\n  ensureAdmin(req)\n    .catch(error => res.status(403).json({message: 'admin only', error}))\n    .then(() =>\n      res.json(deleteUserDAL({_id: req.params.id}))\n    );\n\n/**\n * Handles password reset (only own user can do that, not even admin)\n * @param {object} req - the request of query\n * @param {object} res - the resource of query\n */\nexport const changeUserPassword = (req, res) => {\n  const {_id, password} = req.body;\n  const token = retrieveToken(req);\n  // verify that the token data corresponds to the user willing to change the password\n  jwt.verify(token, secret, function (err, decoded) {\n    if (err) {\n      res.status(422).json({message: 'Invalid token', error: err});\n    } else if (decoded.userid === _id) {\n      hash(password)\n        .then(hash =>\n          updateUserDAL(\n            // get\n            _id,\n            // set\n            {\n              ...req.body,\n              password: hash,\n              resetPasswordToken: undefined\n            }\n          ))\n          .then(() =>\n            getUserDAL({query: {id: _id}})\n          )\n          .then(user => {\n            if (user) {\n              res.json(user);\n            } else {\n              res.status(404).json({message: 'user not found'});\n            }\n          })\n        .catch(error => res.status(500).json({message: 'error with database.', error}));\n    } else {\n      res.status(403).json({message: 'not allowed to modify password of another user'});\n    }\n  });\n};\n",
@@ -914,7 +1363,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 37,
+    "__docId__": 53,
     "kind": "variable",
     "name": "config",
     "memberof": "src/components/users/users.controller.js",
@@ -929,7 +1378,7 @@
     "undocument": true
   },
   {
-    "__docId__": 38,
+    "__docId__": 54,
     "kind": "variable",
     "name": "smtpEmail",
     "memberof": "src/components/users/users.controller.js",
@@ -944,7 +1393,7 @@
     "undocument": true
   },
   {
-    "__docId__": 39,
+    "__docId__": 55,
     "kind": "variable",
     "name": "mailConfig",
     "memberof": "src/components/users/users.controller.js",
@@ -959,7 +1408,7 @@
     "undocument": true
   },
   {
-    "__docId__": 40,
+    "__docId__": 56,
     "kind": "function",
     "name": "retrieveToken",
     "memberof": "src/components/users/users.controller.js",
@@ -976,7 +1425,7 @@
     "undocument": true
   },
   {
-    "__docId__": 41,
+    "__docId__": 57,
     "kind": "function",
     "name": "ensureAdmin",
     "memberof": "src/components/users/users.controller.js",
@@ -1012,7 +1461,7 @@
     }
   },
   {
-    "__docId__": 42,
+    "__docId__": 58,
     "kind": "function",
     "name": "ensureAdminOrOwn",
     "memberof": "src/components/users/users.controller.js",
@@ -1048,7 +1497,7 @@
     }
   },
   {
-    "__docId__": 43,
+    "__docId__": 59,
     "kind": "function",
     "name": "getUsers",
     "memberof": "src/components/users/users.controller.js",
@@ -1089,7 +1538,7 @@
     ]
   },
   {
-    "__docId__": 44,
+    "__docId__": 60,
     "kind": "function",
     "name": "getUser",
     "memberof": "src/components/users/users.controller.js",
@@ -1127,7 +1576,7 @@
     ]
   },
   {
-    "__docId__": 45,
+    "__docId__": 61,
     "kind": "function",
     "name": "createUser",
     "memberof": "src/components/users/users.controller.js",
@@ -1165,7 +1614,7 @@
     ]
   },
   {
-    "__docId__": 46,
+    "__docId__": 62,
     "kind": "function",
     "name": "updateUser",
     "memberof": "src/components/users/users.controller.js",
@@ -1203,7 +1652,7 @@
     ]
   },
   {
-    "__docId__": 47,
+    "__docId__": 63,
     "kind": "function",
     "name": "deleteUser",
     "memberof": "src/components/users/users.controller.js",
@@ -1241,7 +1690,7 @@
     ]
   },
   {
-    "__docId__": 48,
+    "__docId__": 64,
     "kind": "function",
     "name": "changeUserPassword",
     "memberof": "src/components/users/users.controller.js",
@@ -1279,7 +1728,7 @@
     ]
   },
   {
-    "__docId__": 49,
+    "__docId__": 65,
     "kind": "file",
     "name": "src/components/users/users.dal.js",
     "content": "/**\n * Plurishing-backend\n * =======\n * User data access layer\n */\n\nimport db from '../../utils/plugDb';\n\nimport {User as schema} from 'plurishing-schemas';\nimport design from './users.design';\nimport {addDesign} from '../../utils/couchdb';\nimport {dataIsValid} from '../../utils/schemas';\n\n/**\n * Registering couchdb views related to users objects\n */\naddDesign(db, 'users', design);\n\n\n/**\n * Gets a list of users with optional query params\n * @param {object} parameters\n * @return {Promise}\n */\nexport const getUsers = ({\n  query = {},\n  include_docs = true\n}) => {\n  if (query.email && query.password) {\n    return db.viewAsync('users', 'by_email_and_password', {\n      key: [query.email, query.password],\n      include_docs\n    }).then(\n      results =>\n        new Promise(\n          resolve =>\n            resolve(\n              results.rows.map(doc => doc.doc)\n            )\n          )\n    );\n  } else if (query.email) {\n    return db.viewAsync('users', 'by_email', {\n      key: query.email,\n      include_docs\n    }).then(\n      results =>\n        new Promise(\n          resolve =>\n            resolve(\n              results.rows.map(doc => doc.doc)\n            )\n          )\n    );\n  } else {\n    return db.viewAsync('users', 'by_email', {\n      include_docs\n    }).then(\n      results =>\n        new Promise(\n          resolve =>\n            resolve(\n              results.rows.map(doc => doc.doc)\n            )\n          )\n    );\n  }\n};\n\n/**\n * Gets a user with a specific id or email\n * @param {object} parameters\n * @return {Promise}\n */\nexport const getUser = ({\n  id,\n  email\n}) => {\n  if (id) {\n    return db.getAsync(id)\n      .then(user =>\n        // verify that data is compliant before returning it\n        dataIsValid(user, schema)\n      );\n  } else {\n    return db.viewAsync('users', 'by_email', {\n              key: email,\n              include_docs: true\n            })\n            .then(result =>\n              new Promise((resolve, reject) => {\n                if (result.rows && result.rows.length) {\n                  resolve(result.rows[0].doc);\n                } else {\n                  /**\n                   * @todo normalize this error\n                   */\n                  reject(new Error('no match'));\n                }\n              })\n            );\n  }\n};\n\n/**\n * Creates a new user\n * @param {object} user\n * @return {Promise}\n */\nexport const createUser = user =>\n  dataIsValid(user, schema)\n    .then(() => db.insertAsync(user));\n\n/**\n * Updates a user\n * @param {string} id - id of user to update\n * @param {object} user - data to update\n * @return {Promise}\n */\nexport const updateUser = (id, user) =>\n  // validate\n  dataIsValid(user, schema)\n    // get existing document\n    .then(() => db.getAsync(id))\n    // update with new rev\n    .then(userDb =>\n        db.insertAsync({\n          ...user,\n          _rev: userDb._rev\n        }, userDb._id)\n    );\n\n/**\n * Deletes a user\n * @param {object} user - user to delete\n * @return {Promise}\n */\nexport const deleteUser = ({_id}) =>\n  db.getAsync(_id)\n          .then(user => db.destroyAsync(_id, user._rev));\n",
@@ -1290,7 +1739,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 50,
+    "__docId__": 66,
     "kind": "function",
     "name": "getUsers",
     "memberof": "src/components/users/users.dal.js",
@@ -1326,7 +1775,7 @@
     }
   },
   {
-    "__docId__": 51,
+    "__docId__": 67,
     "kind": "function",
     "name": "getUser",
     "memberof": "src/components/users/users.dal.js",
@@ -1362,7 +1811,7 @@
     }
   },
   {
-    "__docId__": 52,
+    "__docId__": 68,
     "kind": "function",
     "name": "createUser",
     "memberof": "src/components/users/users.dal.js",
@@ -1398,7 +1847,7 @@
     }
   },
   {
-    "__docId__": 53,
+    "__docId__": 69,
     "kind": "function",
     "name": "updateUser",
     "memberof": "src/components/users/users.dal.js",
@@ -1444,7 +1893,7 @@
     }
   },
   {
-    "__docId__": 54,
+    "__docId__": 70,
     "kind": "function",
     "name": "deleteUser",
     "memberof": "src/components/users/users.dal.js",
@@ -1480,7 +1929,7 @@
     }
   },
   {
-    "__docId__": 55,
+    "__docId__": 71,
     "kind": "file",
     "name": "src/components/users/users.design.js",
     "content": "export default {\n  \"views\": {\n    \"by_email_and_password\": {\n      \"map\": `function(doc) {\n                    if (doc.type === 'user') {\n                      emit([doc.email, doc.password], null);\n                    }\n                  }`\n    },\n    \"by_email\": {\n      \"map\": `function(doc) {\n                    if (doc.type === 'user') {\n                      emit(doc.email, null);\n                    }\n                  }`\n    },\n    \"by_id\": {\n      \"map\": `function(doc) {\n                    if (doc.type === 'user') {\n                      emit(doc._id, null);\n                    }\n                  }`\n    }\n  }\n};\n",
@@ -1491,7 +1940,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 56,
+    "__docId__": 72,
     "kind": "file",
     "name": "src/components/users/users.design.spec.js",
     "content": "import {expect} from 'chai';\nimport design from './users.design';\n\ndescribe('Users couchdb design', () => {\n    it('should eval each view map as a function', (done) => {\n        Object.keys(design.views).forEach(id => {\n          const view = design.views[id];\n          expect(eval(`(${view.map})`)).to.be.a('function');\n        });\n        done();\n    });\n});\n",
@@ -1502,7 +1951,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 57,
+    "__docId__": 73,
     "kind": "file",
     "name": "src/server.js",
     "content": "// import fs from 'fs';\n// import https from 'https';\n/* eslint no-console : 0 */\nimport app from './app';\n\n/**\n * Connect config\n */\nimport {getConfig} from './utils/config';\nconst config = getConfig();\nconst {\n  port\n  // key, csr, cert\n} = config;\n\n/**\n * ===============\n * HTTPS Connection\n * ===============\n */\n\n// /**\n//  * Prepare https certificate\n//  */\n// const options = {\n//   key,\n//   ca: csr,\n//   cert\n// };\n\n// /**\n//  * Launch server\n//  */\n// https.createServer(options, app).listen(port, null, function () {\n//   console.log('Server listening on port %d in %s mode', this.address().port, app.settings.env);\n// });\n\n\n/**\n * ===============\n * HTTP Connection\n * ===============\n */\n\napp.listen(port, null, function () {\n  console.log('Server listening on port %d in %s mode', this.address().port, app.settings.env);\n});\n\n\n\n\n",
@@ -1513,7 +1962,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 58,
+    "__docId__": 74,
     "kind": "variable",
     "name": "config",
     "memberof": "src/server.js",
@@ -1528,7 +1977,7 @@
     "undocument": true
   },
   {
-    "__docId__": 59,
+    "__docId__": 75,
     "kind": "variable",
     "name": "port",
     "memberof": "src/server.js",
@@ -1543,7 +1992,7 @@
     "undocument": true
   },
   {
-    "__docId__": 60,
+    "__docId__": 76,
     "kind": "file",
     "name": "src/utils/config.js",
     "content": "/**\n * Plurishing-backend\n * =======\n * Config utils\n */\nimport configMap from '../../config/config.map';\n\nconst constantify = str => str.replace(/([A-Z])/g, '_$1').toUpperCase();\n\n/**\n * Resolves config retrieval method according to mode ('development' or 'production')\n * Uses json file if in dev, env variables if in prod\n * @return {object} config\n */\nexport function getConfig () {\n  if (process.env.NODE_ENV !== 'production') {\n    return require('../../config/config.dev');/* eslint node/no-unpublished-require : 0 */\n  } else {\n    return configMap.reduce((result, key) => ({\n      ...result,\n      [key]: process.env[constantify(key)]\n    }), {});\n  }\n}\n",
@@ -1554,7 +2003,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 61,
+    "__docId__": 77,
     "kind": "function",
     "name": "constantify",
     "memberof": "src/utils/config.js",
@@ -1571,7 +2020,7 @@
     "undocument": true
   },
   {
-    "__docId__": 62,
+    "__docId__": 78,
     "kind": "function",
     "name": "getConfig",
     "memberof": "src/utils/config.js",
@@ -1595,7 +2044,7 @@
     }
   },
   {
-    "__docId__": 63,
+    "__docId__": 79,
     "kind": "file",
     "name": "src/utils/couchdb.js",
     "content": "\n\n/**\n * Inserts a design document in a couchdb database\n * @param {object} doc\n * @param {object} db\n * @param {string} designName\n * @param {object} design\n * @return {Promise}\n */\nconst insertDesignDocument = (doc, db, designName, design) => {\n  let _rev;\n  if (doc) {\n    _rev = doc._rev;\n  }\n  return db.insertAsync({\n    _rev,\n    ...design\n  }, `_design/${designName}`);\n};\n\n/**\n * Adds a new design to a database\n * @param db {object} the nano-handled database\n * @param designName {string}\n */\nexport const addDesign = (db, designName, design) =>\n    db.getAsync(`_design/${designName}`)\n    // design document exists\n    .then(doc => insertDesignDocument(doc, db, designName, design))\n    // design document does not exist (we don't care about the error)\n    .catch(() => insertDesignDocument(undefined, db, designName, design));\n",
@@ -1606,7 +2055,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 64,
+    "__docId__": 80,
     "kind": "function",
     "name": "insertDesignDocument",
     "memberof": "src/utils/couchdb.js",
@@ -1672,7 +2121,7 @@
     }
   },
   {
-    "__docId__": 65,
+    "__docId__": 81,
     "kind": "function",
     "name": "addDesign",
     "memberof": "src/utils/couchdb.js",
@@ -1710,7 +2159,7 @@
     ]
   },
   {
-    "__docId__": 66,
+    "__docId__": 82,
     "kind": "file",
     "name": "src/utils/crypto.js",
     "content": "/**\n * Plurishing-backend\n * =======\n * Crypto utils\n */\nconst bcrypt = require('bcrypt');\nconst saltRounds = 10;\n\n/**\n * Encodes a string into a crypted hash\n * @param {str} pwd - the string to encoded\n * @return {Promise}\n */\nexport const hash = (pwd) => bcrypt.hash(pwd, saltRounds);\n\n/**\n * Checks whether string matches hash\n * @param {string} pwd\n * @param {string} hash\n * @return {Promise} - resolves with a boolean as parameter\n */\nexport const comparePwd = (pwd, hash) => bcrypt.compare(pwd, hash);\n",
@@ -1721,7 +2170,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 67,
+    "__docId__": 83,
     "kind": "variable",
     "name": "bcrypt",
     "memberof": "src/utils/crypto.js",
@@ -1735,7 +2184,7 @@
     "lineNumber": 6
   },
   {
-    "__docId__": 68,
+    "__docId__": 84,
     "kind": "variable",
     "name": "saltRounds",
     "memberof": "src/utils/crypto.js",
@@ -1750,7 +2199,7 @@
     "undocument": true
   },
   {
-    "__docId__": 69,
+    "__docId__": 85,
     "kind": "function",
     "name": "hash",
     "memberof": "src/utils/crypto.js",
@@ -1786,7 +2235,7 @@
     }
   },
   {
-    "__docId__": 70,
+    "__docId__": 86,
     "kind": "function",
     "name": "comparePwd",
     "memberof": "src/utils/crypto.js",
@@ -1832,7 +2281,7 @@
     }
   },
   {
-    "__docId__": 71,
+    "__docId__": 87,
     "kind": "file",
     "name": "src/utils/emails.js",
     "content": "/**\n * Plurishing-backend\n * =======\n * Mailing utils\n */\n\n\nexport const welcomeEmail = (appUrl, user) => ({\n  subject: 'Plurishing - Bienvenue !',\n  html: `\n<h1>Plurishing - bienvenue !</h1>\n<p>\n  Vous avez été ajouté à la liste des utilisateurs de l'application Plurishing. Si vous souhaitez participer,\n  <a\n    href=\"${appUrl}/signup/${user._id}/${user.resetPasswordToken}\"\n  >\n    visitez cette adresse pour y entrer un nouveau mot de passe\n  </a> d'ici 24 heures.\n</p>`\n});\n\nexport const resetPwdEmail = (appUrl, user) => ({\n  subject: 'Plurishing - réinitialisation de votre mot de passe',\n  html: `\n<h1>Plurishing - réinitialisation du mot de passe</h1>\n<p>\n  Vous avez fait une demande de réinitialisation de votre mot de passe pour l'application Plurishing. <a\n    href=\"${appUrl}/signup/${user._id}/${user.resetPasswordToken}\">\n    Visitez cette adresse pour y entrer un nouveau mot de passe\n  </a> d'ici 24 heures.\n</p>`\n});\n",
@@ -1843,7 +2292,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 72,
+    "__docId__": 88,
     "kind": "function",
     "name": "welcomeEmail",
     "memberof": "src/utils/emails.js",
@@ -1859,7 +2308,7 @@
     "lineNumber": 8
   },
   {
-    "__docId__": 73,
+    "__docId__": 89,
     "kind": "function",
     "name": "resetPwdEmail",
     "memberof": "src/utils/emails.js",
@@ -1876,7 +2325,7 @@
     "undocument": true
   },
   {
-    "__docId__": 74,
+    "__docId__": 90,
     "kind": "file",
     "name": "src/utils/errorHandler.js",
     "content": "/**\n * Some utils for managing errors in the right way\n * Taken from the repertory of good practices https://github.com/i0natan/nodebestpractices/\n */\n\n/**\n * Catch unhandled promise rejections\n */\nprocess.on('unhandledRejection', function (reason) {\n  //I just caught an unhandled promise rejection,\n  // since we already have fallback handler for unhandled errors (see below),\n  // let throw and let him handle that\n  throw reason;\n});\n\n/**\n * Catch unhandled exceptions to shut the process gracefully\n */\nprocess.on('uncaughtException', function(error) {\n// process.on('uncaughtException', function(error) {\n   // @todo setup error types system\n   // errorManagement.handler.handleError(error);\n   // if(!errorManagement.handler.isTrustedError(error))\n   throw error;\n});\n\n/**\n * Custom error handling object\n * to be used in a middleware in order to catch all errors\n * and process them here (save them, send a mail to admin, ...)\n */\n// const sendMailToAdminIfCritical = (logger, err) => logger.debug('send email to admin if critical');\n\n// const saveInOpsQueueIfCritical = (logger, err) => logger.debug('saveInOpsQueueIfCritical');\n\nconst determineIfOperationalError = () => false;\n\nexport default function errorHandler(logger){\n    this.handleError = function (error) {\n        return new Promise(resolve => {\n          logger.error(error);\n          // sendMailToAdminIfCritical(logger, error)\n          // saveInOpsQueueIfCritical(logger, error)\n          resolve(determineIfOperationalError(error));\n        });\n    };\n  }\n",
@@ -1887,7 +2336,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 75,
+    "__docId__": 91,
     "kind": "function",
     "name": "determineIfOperationalError",
     "memberof": "src/utils/errorHandler.js",
@@ -1903,7 +2352,7 @@
     "lineNumber": 36
   },
   {
-    "__docId__": 76,
+    "__docId__": 92,
     "kind": "function",
     "name": "errorHandler",
     "memberof": "src/utils/errorHandler.js",
@@ -1920,7 +2369,7 @@
     "undocument": true
   },
   {
-    "__docId__": 77,
+    "__docId__": 93,
     "kind": "file",
     "name": "src/utils/mailer.js",
     "content": "/**\n * Plurishing-backend\n * =======\n * Mailer utils\n */\nimport nodemailer from 'nodemailer';\n\n/**\n * Simulate email sending with ethereal\n */\nexport function sendTestEmail ({\n  from = '\"Fred Foo 👻\" <foo@blurdybloop.com>',\n  to = [],\n  subject = 'Hello ✔',\n  html = '<b>Hello world?</b>'\n}, {\n  smtpHost = 'smtp.ethereal.email',\n  smtpPort = 587\n  // smtpEmail,\n  // smtpService,\n  // smtpPassword,\n}, logger) {\n  return new Promise((resolve, reject) => {\n    // Generate test SMTP service account from ethereal.email\n    // Only needed if you don't have a real mail account for testing\n    nodemailer.createTestAccount((err, account) => {\n      if (err) {\n        return reject(err);\n      }\n      // create reusable transporter object using the default SMTP transport\n      let transporter = nodemailer.createTransport({\n        host: smtpHost,\n        port: smtpPort,\n        secure: false, // true for 465, false for other ports\n        auth: {\n          user: account.user, // generated ethereal user\n          pass: account.pass // generated ethereal password\n        }\n      });\n\n      // setup email data with unicode symbols\n      let mailOptions = {\n        from, // sender address\n        to: to.join(', '), // list of receivers\n        subject, // Subject line\n        html // html body\n      };\n\n      // send mail with defined transport object\n      transporter.sendMail(mailOptions, (error, info) => {\n        if (error) {\n          reject(error);\n          return logger.error(error);\n        }\n        logger.debug('Message sent: %s', info.messageId);\n        // Preview only available when sending through an Ethereal account\n\n        // Message sent: <b658f8ca-6296-ccf4-8306-87d57a0b4321@blurdybloop.com>\n        // Preview URL: https://ethereal.email/message/WaQKMgKddxQDoou...\n        resolve(nodemailer.getTestMessageUrl(info));\n      });\n    });\n  });\n}\n\n/**\n * Sends an email\n * @param {object} data - the data of the email\n * @param {object} config - the config to use\n */\nexport default function sendEmail ({\n  // from = '\"Fred Foo 👻\" <foo@blurdybloop.com>',\n  to = [],\n  subject = 'Hello ✔',\n  html = '<b>Hello world?</b>'\n}, {\n  smtpEmail,\n  smtpService,\n  smtpPassword\n}, logger) {\n  return new Promise((resolve, reject) => {\n    // create reusable transporter object using the default SMTP transport\n    let transporter;\n    if (smtpService === 'Gmail') {\n      const smtp = `smtps://${encodeURIComponent(smtpEmail)}:${encodeURIComponent(smtpPassword)}@smtp.gmail.com:465`;\n      transporter = nodemailer.createTransport(smtp);\n    } else {\n      transporter = nodemailer.createTransport('SMTP', {\n        service: smtpService,\n        auth: {\n          user: smtpEmail,\n          pass: smtpPassword\n        }\n      });\n    }\n\n    // setup email data\n    let mailOptions = {\n      from: smtpEmail, // sender address\n      to: to.join(', '), // list of receivers\n      subject, // Subject line\n      html // html body\n    };\n\n    // send mail with defined transport object\n    transporter.sendMail(mailOptions, (error, info) => {\n      if (error) {\n        reject(error);\n        return logger.error(error);\n      }\n      logger.debug('Message sent: %s', info.messageId);\n      // Message sent: <b658f8ca-6296-ccf4-8306-87d57a0b4321@blurdybloop.com>\n      // Preview URL: https://ethereal.email/message/WaQKMgKddxQDoou...\n      resolve(nodemailer.getTestMessageUrl(info));\n    });\n  });\n}\n",
@@ -1931,7 +2380,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 78,
+    "__docId__": 94,
     "kind": "function",
     "name": "sendTestEmail",
     "memberof": "src/utils/mailer.js",
@@ -1947,7 +2396,7 @@
     "lineNumber": 11
   },
   {
-    "__docId__": 79,
+    "__docId__": 95,
     "kind": "function",
     "name": "sendEmail",
     "memberof": "src/utils/mailer.js",
@@ -1985,7 +2434,7 @@
     ]
   },
   {
-    "__docId__": 80,
+    "__docId__": 96,
     "kind": "file",
     "name": "src/utils/middlewares.js",
     "content": "/**\n * Plurishing-backend\n * =======\n * Custom middlewares for express\n */\nimport errorHandlerObj from './errorHandler';\n\nexport const errorHandler = (err, req, res, next) => {\n  const handler = new errorHandlerObj(req.log);\n  handler.handleError(err).then((isOperationalError) => {\n      if (!isOperationalError) {\n          next(err);\n      } else {\n        throw new Error(err);\n      }\n  });\n};\n",
@@ -1996,7 +2445,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 81,
+    "__docId__": 97,
     "kind": "function",
     "name": "errorHandler",
     "memberof": "src/utils/middlewares.js",
@@ -2013,7 +2462,7 @@
     "undocument": true
   },
   {
-    "__docId__": 82,
+    "__docId__": 98,
     "kind": "file",
     "name": "src/utils/plugDb.js",
     "content": "/**\n * Plurishing-backend\n * =======\n * Couchdb connection script\n */\nconst Promise = require('bluebird');\n\n\nconst config = require('./config').getConfig();\n\n/**\n * Init nano\n */\nconst nano = require('nano')(config.couchdbUri);\n\n/**\n * Specify db name\n */\nvar db = nano.db.use(config.couchdbName);\n\n/**\n * Promisify\n */\nPromise.promisifyAll(db);\n\nexport default db;\n",
@@ -2024,7 +2473,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 83,
+    "__docId__": 99,
     "kind": "variable",
     "name": "Promise",
     "memberof": "src/utils/plugDb.js",
@@ -2038,7 +2487,7 @@
     "lineNumber": 6
   },
   {
-    "__docId__": 84,
+    "__docId__": 100,
     "kind": "variable",
     "name": "config",
     "memberof": "src/utils/plugDb.js",
@@ -2053,7 +2502,7 @@
     "undocument": true
   },
   {
-    "__docId__": 85,
+    "__docId__": 101,
     "kind": "variable",
     "name": "nano",
     "memberof": "src/utils/plugDb.js",
@@ -2067,7 +2516,7 @@
     "lineNumber": 14
   },
   {
-    "__docId__": 86,
+    "__docId__": 102,
     "kind": "variable",
     "name": "db",
     "memberof": "src/utils/plugDb.js",
@@ -2081,7 +2530,7 @@
     "lineNumber": 19
   },
   {
-    "__docId__": 87,
+    "__docId__": 103,
     "kind": "file",
     "name": "src/utils/populateDb.js",
     "content": "/**\n * Plurishing-backend\n * =======\n * Server population script\n */\n/* eslint no-console : 0 */\nimport {hash} from './crypto';\n\nimport db from './plugDb';\n\nconst admin = {\n  type: 'user',\n  name: 'admin',\n  password: 'admin',\n  admin: true,\n  email: 'robin.demourat@protonmail.com'\n};\n\nconst addAdmin = doc => {\n  let _rev;\n  if (doc) {\n    _rev = doc._rev;\n  }\n  hash(admin.password)\n  .then(password =>\n    db.insertAsync({\n      ...admin,\n      _rev,\n      password\n    }, 'admin')\n  )\n  .then(info => {\n    console.log('created admin', info);\n  })\n  .catch(error => {\n    console.log('error while creating admin', error);\n  });\n};\n\ndb.getAsync('admin')\n  .then(addAdmin)\n  .catch(addAdmin);\n",
@@ -2092,7 +2541,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 88,
+    "__docId__": 104,
     "kind": "variable",
     "name": "admin",
     "memberof": "src/utils/populateDb.js",
@@ -2107,7 +2556,7 @@
     "undocument": true
   },
   {
-    "__docId__": 89,
+    "__docId__": 105,
     "kind": "function",
     "name": "addAdmin",
     "memberof": "src/utils/populateDb.js",
@@ -2124,7 +2573,7 @@
     "undocument": true
   },
   {
-    "__docId__": 90,
+    "__docId__": 106,
     "kind": "file",
     "name": "src/utils/schemas.js",
     "content": "import Ajv from 'ajv';\nconst ajv = new Ajv();\n\nexport const dataIsValid = (data, schema) =>\n  new Promise((resolve, reject) => {\n    const valid = ajv.validate(schema, data);\n    if (valid) {\n      resolve(data);\n    } else {\n      reject(ajv.errors);\n    }\n  });\n",
@@ -2135,7 +2584,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 91,
+    "__docId__": 107,
     "kind": "variable",
     "name": "ajv",
     "memberof": "src/utils/schemas.js",
@@ -2150,7 +2599,7 @@
     "undocument": true
   },
   {
-    "__docId__": 92,
+    "__docId__": 108,
     "kind": "function",
     "name": "dataIsValid",
     "memberof": "src/utils/schemas.js",
