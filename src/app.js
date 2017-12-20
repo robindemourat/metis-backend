@@ -40,7 +40,7 @@ const app = express();
 /**
  * Enhance the app with middlewares
  */
-app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.urlencoded({ extended: true, limit: "200Mo" }));
 app.use(bodyParser.json()); // use json body parser except when uploading raw files
 app.use(cors());
 app.use(require('express-promise')());

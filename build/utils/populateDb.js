@@ -1,8 +1,12 @@
 'use strict';
 
+var _extends2 = require('babel-runtime/helpers/extends');
+
+var _extends3 = _interopRequireDefault(_extends2);
+
 var cov_25akiw6xvc = function () {
   var path = '/Users/rawbin/Documents/Projets/collaborations/ensad-publishing/prototype/plurishing-backend/src/utils/populateDb.js',
-      hash = '887a07149680312bed9d8a9496f7dfdf9d0d483b',
+      hash = '2dfa0d1abea078984f4b1a2fb7ad2a0e505f00e6',
       global = new Function('return this')(),
       gcv = '__coverage__',
       coverageData = {
@@ -10,61 +14,91 @@ var cov_25akiw6xvc = function () {
     statementMap: {
       '0': {
         start: {
-          line: 37,
+          line: 11,
           column: 14
         },
         end: {
-          line: 43,
+          line: 17,
           column: 1
         }
       },
       '1': {
         start: {
-          line: 57,
+          line: 19,
           column: 17
         },
         end: {
-          line: 63,
-          column: 4
+          line: 38,
+          column: 1
         }
       },
       '2': {
         start: {
-          line: 57,
-          column: 23
+          line: 21,
+          column: 2
         },
         end: {
-          line: 63,
-          column: 4
+          line: 23,
+          column: 3
         }
       },
       '3': {
         start: {
-          line: 59,
+          line: 22,
           column: 4
         },
         end: {
-          line: 59,
-          column: 39
+          line: 22,
+          column: 20
         }
       },
       '4': {
         start: {
-          line: 62,
-          column: 4
+          line: 24,
+          column: 2
         },
         end: {
-          line: 62,
-          column: 53
+          line: 37,
+          column: 5
         }
       },
       '5': {
         start: {
-          line: 65,
+          line: 26,
+          column: 4
+        },
+        end: {
+          line: 30,
+          column: 15
+        }
+      },
+      '6': {
+        start: {
+          line: 33,
+          column: 4
+        },
+        end: {
+          line: 33,
+          column: 39
+        }
+      },
+      '7': {
+        start: {
+          line: 36,
+          column: 4
+        },
+        end: {
+          line: 36,
+          column: 53
+        }
+      },
+      '8': {
+        start: {
+          line: 40,
           column: 0
         },
         end: {
-          line: 67,
+          line: 42,
           column: 19
         }
       }
@@ -74,90 +108,154 @@ var cov_25akiw6xvc = function () {
         name: '(anonymous_0)',
         decl: {
           start: {
-            line: 57,
+            line: 19,
             column: 17
           },
           end: {
-            line: 57,
+            line: 19,
             column: 18
           }
         },
         loc: {
           start: {
-            line: 57,
-            column: 23
+            line: 19,
+            column: 24
           },
           end: {
-            line: 63,
-            column: 4
+            line: 38,
+            column: 1
           }
         },
-        line: 57
+        line: 19
       },
       '1': {
         name: '(anonymous_1)',
         decl: {
           start: {
-            line: 58,
+            line: 25,
             column: 8
           },
           end: {
-            line: 58,
+            line: 25,
             column: 9
           }
         },
         loc: {
           start: {
-            line: 58,
-            column: 16
+            line: 26,
+            column: 4
           },
           end: {
-            line: 60,
-            column: 3
+            line: 30,
+            column: 15
           }
         },
-        line: 58
+        line: 26
       },
       '2': {
         name: '(anonymous_2)',
         decl: {
           start: {
-            line: 61,
+            line: 32,
+            column: 8
+          },
+          end: {
+            line: 32,
+            column: 9
+          }
+        },
+        loc: {
+          start: {
+            line: 32,
+            column: 16
+          },
+          end: {
+            line: 34,
+            column: 3
+          }
+        },
+        line: 32
+      },
+      '3': {
+        name: '(anonymous_3)',
+        decl: {
+          start: {
+            line: 35,
             column: 9
           },
           end: {
-            line: 61,
+            line: 35,
             column: 10
           }
         },
         loc: {
           start: {
-            line: 61,
+            line: 35,
             column: 18
           },
           end: {
-            line: 63,
+            line: 37,
             column: 3
           }
         },
-        line: 61
+        line: 35
       }
     },
-    branchMap: {},
+    branchMap: {
+      '0': {
+        loc: {
+          start: {
+            line: 21,
+            column: 2
+          },
+          end: {
+            line: 23,
+            column: 3
+          }
+        },
+        type: 'if',
+        locations: [{
+          start: {
+            line: 21,
+            column: 2
+          },
+          end: {
+            line: 23,
+            column: 3
+          }
+        }, {
+          start: {
+            line: 21,
+            column: 2
+          },
+          end: {
+            line: 23,
+            column: 3
+          }
+        }],
+        line: 21
+      }
+    },
     s: {
       '0': 0,
       '1': 0,
       '2': 0,
       '3': 0,
       '4': 0,
-      '5': 0
+      '5': 0,
+      '6': 0,
+      '7': 0,
+      '8': 0
     },
     f: {
       '0': 0,
       '1': 0,
-      '2': 0
+      '2': 0,
+      '3': 0
     },
-    b: {},
+    b: {
+      '0': [0, 0]
+    },
     _coverageSchema: '332fd63041d2c1bcb487cc26dd0d5f7d97098a6c'
   },
       coverage = global[gcv] || (global[gcv] = {});
@@ -174,41 +272,15 @@ var cov_25akiw6xvc = function () {
       * Server population script
       */
 /* eslint no-console : 0 */
-// import {createArticle} from '../components/articles/articles.dal';
-// import {createUser} from '../components/users/users.dal';
-// import {hash} from './crypto';
+
+
+var _crypto = require('./crypto');
 
 var _plugDb = require('./plugDb');
 
 var _plugDb2 = _interopRequireDefault(_plugDb);
 
-var _users = require('../components/users/users.dal');
-
-var _users2 = _interopRequireDefault(_users);
-
-var _uuid = require('uuid');
-
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-// const config = require('./config').getConfig();
-
-// const {couchdbName, couchdbUri} = config;
-
-
-// const log = console.log;
-
-// /**
-//  * Define init objects
-//  */
-// const mockArticle1 = {
-//   title: 'foo',
-//   content: 'bar'
-// };
-
-// const mockArticle2 = {
-//   title: 'bar2',
-//   content: 'foo2'
-// };
 
 var admin = (cov_25akiw6xvc.s[0]++, {
   type: 'user',
@@ -218,34 +290,40 @@ var admin = (cov_25akiw6xvc.s[0]++, {
   email: 'robin.demourat@protonmail.com'
 });
 
-// const adminDB = User.create({
-//   _id: 'admin',
-//   data: admin,
-//   createdAt: Date.now()
-// });
-
-// adminDB.save();
-
-// User.findAll()
-//   .then(res => console.log('res', res));
-
-
 cov_25akiw6xvc.s[1]++;
-var addAdmin = function addAdmin() {
+var addAdmin = function addAdmin(doc) {
   cov_25akiw6xvc.f[0]++;
+
+  var _rev = void 0;
   cov_25akiw6xvc.s[2]++;
-  return _plugDb2.default.insertAsync(admin, 'admin').then(function (info) {
-    cov_25akiw6xvc.f[1]++;
+  if (doc) {
+    cov_25akiw6xvc.b[0][0]++;
     cov_25akiw6xvc.s[3]++;
+
+    _rev = doc._rev;
+  } else {
+    cov_25akiw6xvc.b[0][1]++;
+  }
+  cov_25akiw6xvc.s[4]++;
+  (0, _crypto.hash)(admin.password).then(function (password) {
+    cov_25akiw6xvc.f[1]++;
+    cov_25akiw6xvc.s[5]++;
+    return _plugDb2.default.insertAsync((0, _extends3.default)({}, admin, {
+      _rev: _rev,
+      password: password
+    }), 'admin');
+  }).then(function (info) {
+    cov_25akiw6xvc.f[2]++;
+    cov_25akiw6xvc.s[6]++;
 
     console.log('created admin', info);
   }).catch(function (error) {
-    cov_25akiw6xvc.f[2]++;
-    cov_25akiw6xvc.s[4]++;
+    cov_25akiw6xvc.f[3]++;
+    cov_25akiw6xvc.s[7]++;
 
     console.log('error while creating admin', error);
   });
 };
 
-cov_25akiw6xvc.s[5]++;
+cov_25akiw6xvc.s[8]++;
 _plugDb2.default.getAsync('admin').then(addAdmin).catch(addAdmin);
