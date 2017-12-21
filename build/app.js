@@ -6,7 +6,7 @@ Object.defineProperty(exports, "__esModule", {
 
 var cov_2145knos0z = function () {
   var path = '/Users/rawbin/Documents/Projets/collaborations/ensad-publishing/prototype/plurishing-backend/src/app.js',
-      hash = '36d421167e56ed5801d8c440ee482415e1a3c92b',
+      hash = '4409f9f194fbdbc944d1d512a53e3d7af53d6941',
       global = new Function('return this')(),
       gcv = '__coverage__',
       coverageData = {
@@ -14,211 +14,231 @@ var cov_2145knos0z = function () {
     statementMap: {
       '0': {
         start: {
-          line: 34,
+          line: 36,
           column: 15
         },
         end: {
-          line: 34,
+          line: 36,
           column: 26
         }
       },
       '1': {
         start: {
-          line: 35,
+          line: 37,
           column: 17
         },
         end: {
-          line: 35,
+          line: 37,
           column: 23
         }
       },
       '2': {
         start: {
-          line: 40,
+          line: 42,
           column: 12
         },
         end: {
-          line: 40,
+          line: 42,
           column: 21
         }
       },
       '3': {
         start: {
-          line: 45,
+          line: 47,
           column: 0
         },
         end: {
-          line: 45,
+          line: 47,
           column: 67
         }
       },
       '4': {
         start: {
-          line: 46,
+          line: 48,
           column: 0
         },
         end: {
-          line: 46,
+          line: 48,
           column: 27
         }
       },
       '5': {
         start: {
-          line: 47,
+          line: 49,
           column: 0
         },
         end: {
-          line: 47,
+          line: 49,
           column: 16
         }
       },
       '6': {
         start: {
-          line: 48,
+          line: 50,
           column: 0
         },
         end: {
-          line: 48,
+          line: 50,
           column: 38
         }
       },
       '7': {
         start: {
-          line: 49,
+          line: 51,
           column: 0
         },
         end: {
-          line: 60,
+          line: 62,
           column: 4
         }
       },
       '8': {
         start: {
-          line: 65,
+          line: 67,
           column: 0
         },
         end: {
-          line: 65,
+          line: 67,
           column: 31
         }
       },
       '9': {
         start: {
-          line: 70,
+          line: 72,
           column: 0
         },
         end: {
-          line: 72,
+          line: 74,
           column: 3
         }
       },
       '10': {
         start: {
-          line: 71,
+          line: 73,
           column: 2
         },
         end: {
-          line: 71,
+          line: 73,
           column: 77
         }
       },
       '11': {
         start: {
-          line: 79,
+          line: 81,
           column: 19
         },
         end: {
-          line: 79,
+          line: 81,
           column: 52
         }
       },
       '12': {
         start: {
-          line: 80,
+          line: 82,
           column: 0
         },
         end: {
-          line: 80,
+          line: 82,
           column: 47
         }
       },
       '13': {
         start: {
-          line: 86,
+          line: 88,
           column: 18
         },
         end: {
-          line: 86,
+          line: 88,
           column: 34
         }
       },
       '14': {
         start: {
-          line: 91,
+          line: 93,
           column: 0
         },
         end: {
-          line: 91,
+          line: 93,
           column: 25
         }
       },
       '15': {
         start: {
-          line: 106,
+          line: 108,
           column: 0
         },
         end: {
-          line: 106,
+          line: 108,
           column: 31
         }
       },
       '16': {
         start: {
-          line: 107,
+          line: 109,
           column: 0
         },
         end: {
-          line: 107,
+          line: 109,
           column: 33
         }
       },
       '17': {
         start: {
-          line: 108,
+          line: 110,
           column: 0
         },
         end: {
-          line: 108,
+          line: 110,
           column: 39
         }
       },
       '18': {
         start: {
-          line: 109,
+          line: 111,
           column: 0
         },
         end: {
-          line: 109,
+          line: 111,
           column: 45
         }
       },
       '19': {
         start: {
-          line: 114,
+          line: 112,
           column: 0
         },
         end: {
-          line: 114,
-          column: 27
+          line: 112,
+          column: 41
         }
       },
       '20': {
         start: {
-          line: 119,
+          line: 113,
           column: 0
         },
         end: {
-          line: 119,
+          line: 113,
+          column: 37
+        }
+      },
+      '21': {
+        start: {
+          line: 118,
+          column: 0
+        },
+        end: {
+          line: 118,
+          column: 27
+        }
+      },
+      '22': {
+        start: {
+          line: 123,
+          column: 0
+        },
+        end: {
+          line: 123,
           column: 22
         }
       }
@@ -228,25 +248,25 @@ var cov_2145knos0z = function () {
         name: '(anonymous_0)',
         decl: {
           start: {
-            line: 70,
+            line: 72,
             column: 13
           },
           end: {
-            line: 70,
+            line: 72,
             column: 14
           }
         },
         loc: {
           start: {
-            line: 70,
+            line: 72,
             column: 27
           },
           end: {
-            line: 72,
+            line: 74,
             column: 1
           }
         },
-        line: 70
+        line: 72
       }
     },
     branchMap: {},
@@ -271,7 +291,9 @@ var cov_2145knos0z = function () {
       '17': 0,
       '18': 0,
       '19': 0,
-      '20': 0
+      '20': 0,
+      '21': 0,
+      '22': 0
     },
     f: {
       '0': 0
@@ -331,11 +353,15 @@ var _bunyanDebugStream2 = _interopRequireDefault(_bunyanDebugStream);
 
 var _middlewares = require('./utils/middlewares');
 
-var _assets = require('./components/assets');
+var _compositions = require('./components/compositions');
+
+var _diffusions = require('./components/diffusions');
 
 var _resources = require('./components/resources');
 
-var _compositions = require('./components/compositions');
+var _montages = require('./components/montages');
+
+var _assets = require('./components/assets');
 
 var _users = require('./components/users');
 
@@ -441,15 +467,19 @@ cov_2145knos0z.s[17]++;
 apiRoutes.use('/resources', _resources.api);
 cov_2145knos0z.s[18]++;
 apiRoutes.use('/compositions', _compositions.api);
+cov_2145knos0z.s[19]++;
+apiRoutes.use('/diffusions', _diffusions.api);
+cov_2145knos0z.s[20]++;
+apiRoutes.use('/montages', _montages.api);
 
 // /**
 //  * Connect the api router to the app
 //  */
-cov_2145knos0z.s[19]++;
+cov_2145knos0z.s[21]++;
 app.use('/api', apiRoutes);
 
 // /**
 //  * Connect error handler
 //  */
-cov_2145knos0z.s[20]++;
+cov_2145knos0z.s[22]++;
 app.use(_middlewares.errorHandler);

@@ -19,9 +19,11 @@ import {
 /**
  * Dependencies : Components API
  */
-import {api as assets} from './components/assets';
-import {api as resources} from './components/resources';
 import {api as compositions} from './components/compositions';
+import {api as diffusions} from './components/diffusions';
+import {api as resources} from './components/resources';
+import {api as montages} from './components/montages';
+import {api as assets} from './components/assets';
 import {api as users} from './components/users';
 import {api as auth} from './components/auth';
 
@@ -107,6 +109,8 @@ apiRoutes.use('/users', users);
 apiRoutes.use('/assets', assets);
 apiRoutes.use('/resources', resources);
 apiRoutes.use('/compositions', compositions);
+apiRoutes.use('/diffusions', diffusions);
+apiRoutes.use('/montages', montages);
 
 // /**
 //  * Connect the api router to the app

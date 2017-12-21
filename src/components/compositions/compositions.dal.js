@@ -40,7 +40,7 @@ export const getCompositions = ({
 };
 
 /**
- * Gets a composition with a specific id or email
+ * Gets a composition with a specific id
  * @param {object} parameters
  * @return {Promise}
  */
@@ -49,7 +49,7 @@ export const getComposition = ({
 }) =>
   db.getAsync(id)
       .then(composition =>
-        // verify that data is compliant before returning it
+        // verify that returned data is compliant before returning it
         dataIsValid(composition, schema)
       );
 

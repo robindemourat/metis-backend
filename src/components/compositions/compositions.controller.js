@@ -15,7 +15,7 @@ import {
 /**
  * Get a list of compositions
  * @param {object} req - the request of query
- * @param {object} res - the composition of query
+ * @param {object} res - the resource of query
  * @todo add filters handling through req queries
  */
 export const getCompositions = (req, res) =>
@@ -24,7 +24,7 @@ export const getCompositions = (req, res) =>
 /**
  * Get a single composition
  * @param {object} req - the request of query
- * @param {object} res - the composition of query
+ * @param {object} res - the resource of query
  */
 export const getComposition = (req, res) =>
   res.json(
@@ -36,7 +36,7 @@ export const getComposition = (req, res) =>
 /**
  * Create a single composition
  * @param {object} req - the request of query
- * @param {object} res - the composition of query
+ * @param {object} res - the resource of query
  */
 export const createComposition = (req, res) =>
   // create the composition
@@ -51,7 +51,7 @@ export const createComposition = (req, res) =>
 /**
  * Update a single composition
  * @param {object} req - the request of query
- * @param {object} res - the composition of query
+ * @param {object} res - the resource of query
  */
 export const updateComposition = (req, res) =>
   res.json(
@@ -68,7 +68,7 @@ export const updateComposition = (req, res) =>
 /**
  * Delete a single composition
  * @param {object} req - the request of query
- * @param {object} res - the composition of query
+ * @param {object} res - the resource of query
  */
 export const deleteComposition = (req, res) =>
   res.json(deleteCompositionDAL({_id: req.params.id}));

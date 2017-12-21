@@ -151,7 +151,7 @@ Get a list of compositions
 | Name | Type | Attribute | Description |
 | --- | --- | --- | --- |
 | req | object |  | the request of query |
-| res | object |  | the composition of query |
+| res | object |  | the resource of query |
 
 ## `getComposition(req: object, res: object)`
 
@@ -160,7 +160,7 @@ Get a single composition
 | Name | Type | Attribute | Description |
 | --- | --- | --- | --- |
 | req | object |  | the request of query |
-| res | object |  | the composition of query |
+| res | object |  | the resource of query |
 
 ## `createComposition(req: object, res: object)`
 
@@ -169,7 +169,7 @@ Create a single composition
 | Name | Type | Attribute | Description |
 | --- | --- | --- | --- |
 | req | object |  | the request of query |
-| res | object |  | the composition of query |
+| res | object |  | the resource of query |
 
 ## `updateComposition(req: object, res: object)`
 
@@ -178,7 +178,7 @@ Update a single composition
 | Name | Type | Attribute | Description |
 | --- | --- | --- | --- |
 | req | object |  | the request of query |
-| res | object |  | the composition of query |
+| res | object |  | the resource of query |
 
 ## `deleteComposition(req: object, res: object)`
 
@@ -187,7 +187,7 @@ Delete a single composition
 | Name | Type | Attribute | Description |
 | --- | --- | --- | --- |
 | req | object |  | the request of query |
-| res | object |  | the composition of query |
+| res | object |  | the resource of query |
 
 ## `getCompositions(parameters: object): Promise`
 
@@ -199,7 +199,7 @@ Gets a list of compositions with optional query params
 
 ## `getComposition(parameters: object): Promise`
 
-Gets a composition with a specific id or email
+Gets a composition with a specific id
 
 | Name | Type | Attribute | Description |
 | --- | --- | --- | --- |
@@ -229,6 +229,178 @@ Deletes a composition
 | Name | Type | Attribute | Description |
 | --- | --- | --- | --- |
 | composition | object |  | composition to delete |
+
+## `getDiffusions(req: object, res: object)`
+
+Get a list of diffusions
+
+| Name | Type | Attribute | Description |
+| --- | --- | --- | --- |
+| req | object |  | the request of query |
+| res | object |  | the resource of query |
+
+## `getDiffusion(req: object, res: object)`
+
+Get a single diffusion
+
+| Name | Type | Attribute | Description |
+| --- | --- | --- | --- |
+| req | object |  | the request of query |
+| res | object |  | the resource of query |
+
+## `createDiffusion(req: object, res: object)`
+
+Create a single diffusion
+
+| Name | Type | Attribute | Description |
+| --- | --- | --- | --- |
+| req | object |  | the request of query |
+| res | object |  | the resource of query |
+
+## `updateDiffusion(req: object, res: object)`
+
+Update a single diffusion
+
+| Name | Type | Attribute | Description |
+| --- | --- | --- | --- |
+| req | object |  | the request of query |
+| res | object |  | the resource of query |
+
+## `deleteDiffusion(req: object, res: object)`
+
+Delete a single diffusion
+
+| Name | Type | Attribute | Description |
+| --- | --- | --- | --- |
+| req | object |  | the request of query |
+| res | object |  | the resource of query |
+
+## `getDiffusions(parameters: object): Promise`
+
+Gets a list of diffusions with optional query params
+
+| Name | Type | Attribute | Description |
+| --- | --- | --- | --- |
+| parameters | object |  |
+
+## `getDiffusion(parameters: object): Promise`
+
+Gets a diffusion with a specific id
+
+| Name | Type | Attribute | Description |
+| --- | --- | --- | --- |
+| parameters | object |  |
+
+## `createDiffusion(diffusion: object): Promise`
+
+Creates a new diffusion
+
+| Name | Type | Attribute | Description |
+| --- | --- | --- | --- |
+| diffusion | object |  |
+
+## `updateDiffusion(id: string, diffusion: object): Promise`
+
+Updates a diffusion
+
+| Name | Type | Attribute | Description |
+| --- | --- | --- | --- |
+| id | string |  | id of diffusion to update |
+| diffusion | object |  | data to update |
+
+## `deleteDiffusion(diffusion: object): Promise`
+
+Deletes a diffusion
+
+| Name | Type | Attribute | Description |
+| --- | --- | --- | --- |
+| diffusion | object |  | diffusion to delete |
+
+## `getMontages(req: object, res: object)`
+
+Get a list of montages
+
+| Name | Type | Attribute | Description |
+| --- | --- | --- | --- |
+| req | object |  | the request of query |
+| res | object |  | the resource of query |
+
+## `getMontage(req: object, res: object)`
+
+Get a single montage
+
+| Name | Type | Attribute | Description |
+| --- | --- | --- | --- |
+| req | object |  | the request of query |
+| res | object |  | the resource of query |
+
+## `createMontage(req: object, res: object)`
+
+Create a single montage
+
+| Name | Type | Attribute | Description |
+| --- | --- | --- | --- |
+| req | object |  | the request of query |
+| res | object |  | the resource of query |
+
+## `updateMontage(req: object, res: object)`
+
+Update a single montage
+
+| Name | Type | Attribute | Description |
+| --- | --- | --- | --- |
+| req | object |  | the request of query |
+| res | object |  | the resource of query |
+
+## `deleteMontage(req: object, res: object)`
+
+Delete a single montage
+
+| Name | Type | Attribute | Description |
+| --- | --- | --- | --- |
+| req | object |  | the request of query |
+| res | object |  | the resource of query |
+
+## `getMontages(parameters: object): Promise`
+
+Gets a list of montages with optional query params
+
+| Name | Type | Attribute | Description |
+| --- | --- | --- | --- |
+| parameters | object |  |
+
+## `getMontage(parameters: object): Promise`
+
+Gets a montage with a specific id
+
+| Name | Type | Attribute | Description |
+| --- | --- | --- | --- |
+| parameters | object |  |
+
+## `createMontage(montage: object): Promise`
+
+Creates a new montage
+
+| Name | Type | Attribute | Description |
+| --- | --- | --- | --- |
+| montage | object |  |
+
+## `updateMontage(id: string, montage: object): Promise`
+
+Updates a montage
+
+| Name | Type | Attribute | Description |
+| --- | --- | --- | --- |
+| id | string |  | id of montage to update |
+| montage | object |  | data to update |
+
+## `deleteMontage(montage: object): Promise`
+
+Deletes a montage
+
+| Name | Type | Attribute | Description |
+| --- | --- | --- | --- |
+| montage | object |  | montage to delete |
 
 ## `getResources(req: object, res: object)`
 

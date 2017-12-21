@@ -3,7 +3,7 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.deleteComposition = exports.updateComposition = exports.createComposition = exports.getComposition = exports.getCompositions = undefined;
+exports.deleteMontage = exports.updateMontage = exports.createMontage = exports.getMontage = exports.getMontages = undefined;
 
 var _extends2 = require('babel-runtime/helpers/extends');
 
@@ -13,13 +13,13 @@ var _promise = require('babel-runtime/core-js/promise');
 
 var _promise2 = _interopRequireDefault(_promise);
 
-var cov_2l9x15qscx = function () {
-  var path = '/Users/rawbin/Documents/Projets/collaborations/ensad-publishing/prototype/plurishing-backend/src/components/compositions/compositions.dal.js',
-      hash = '587e33621484f324f223cb363ea9eac7ce8ad498',
+var cov_fbpigcu09 = function () {
+  var path = '/Users/rawbin/Documents/Projets/collaborations/ensad-publishing/prototype/plurishing-backend/src/components/montages/montages.dal.js',
+      hash = 'deb60056d42a3caa7023d0b9a46a237daab7ade5',
       global = new Function('return this')(),
       gcv = '__coverage__',
       coverageData = {
-    path: '/Users/rawbin/Documents/Projets/collaborations/ensad-publishing/prototype/plurishing-backend/src/components/compositions/compositions.dal.js',
+    path: '/Users/rawbin/Documents/Projets/collaborations/ensad-publishing/prototype/plurishing-backend/src/components/montages/montages.dal.js',
     statementMap: {
       '0': {
         start: {
@@ -28,13 +28,13 @@ var cov_2l9x15qscx = function () {
         },
         end: {
           line: 17,
-          column: 38
+          column: 34
         }
       },
       '1': {
         start: {
           line: 25,
-          column: 31
+          column: 27
         },
         end: {
           line: 40,
@@ -84,7 +84,7 @@ var cov_2l9x15qscx = function () {
       '6': {
         start: {
           line: 47,
-          column: 30
+          column: 26
         },
         end: {
           line: 54,
@@ -108,17 +108,17 @@ var cov_2l9x15qscx = function () {
         },
         end: {
           line: 53,
-          column: 40
+          column: 36
         }
       },
       '9': {
         start: {
           line: 61,
-          column: 33
+          column: 29
         },
         end: {
           line: 63,
-          column: 44
+          column: 40
         }
       },
       '10': {
@@ -128,7 +128,7 @@ var cov_2l9x15qscx = function () {
         },
         end: {
           line: 63,
-          column: 44
+          column: 40
         }
       },
       '11': {
@@ -138,13 +138,13 @@ var cov_2l9x15qscx = function () {
         },
         end: {
           line: 63,
-          column: 43
+          column: 39
         }
       },
       '12': {
         start: {
           line: 71,
-          column: 33
+          column: 29
         },
         end: {
           line: 82,
@@ -178,17 +178,17 @@ var cov_2l9x15qscx = function () {
         },
         end: {
           line: 81,
-          column: 29
+          column: 25
         }
       },
       '16': {
         start: {
           line: 89,
-          column: 33
+          column: 29
         },
         end: {
           line: 91,
-          column: 64
+          column: 56
         }
       },
       '17': {
@@ -198,17 +198,17 @@ var cov_2l9x15qscx = function () {
         },
         end: {
           line: 91,
-          column: 64
+          column: 56
         }
       },
       '18': {
         start: {
           line: 91,
-          column: 25
+          column: 21
         },
         end: {
           line: 91,
-          column: 63
+          column: 55
         }
       }
     },
@@ -218,11 +218,11 @@ var cov_2l9x15qscx = function () {
         decl: {
           start: {
             line: 25,
-            column: 31
+            column: 27
           },
           end: {
             line: 25,
-            column: 32
+            column: 28
           }
         },
         loc: {
@@ -314,11 +314,11 @@ var cov_2l9x15qscx = function () {
         decl: {
           start: {
             line: 47,
-            column: 30
+            column: 26
           },
           end: {
             line: 47,
-            column: 31
+            column: 27
           }
         },
         loc: {
@@ -352,7 +352,7 @@ var cov_2l9x15qscx = function () {
           },
           end: {
             line: 53,
-            column: 40
+            column: 36
           }
         },
         line: 53
@@ -362,11 +362,11 @@ var cov_2l9x15qscx = function () {
         decl: {
           start: {
             line: 61,
-            column: 33
+            column: 29
           },
           end: {
             line: 61,
-            column: 34
+            column: 30
           }
         },
         loc: {
@@ -376,7 +376,7 @@ var cov_2l9x15qscx = function () {
           },
           end: {
             line: 63,
-            column: 44
+            column: 40
           }
         },
         line: 62
@@ -400,7 +400,7 @@ var cov_2l9x15qscx = function () {
           },
           end: {
             line: 63,
-            column: 43
+            column: 39
           }
         },
         line: 63
@@ -410,11 +410,11 @@ var cov_2l9x15qscx = function () {
         decl: {
           start: {
             line: 71,
-            column: 33
+            column: 29
           },
           end: {
             line: 71,
-            column: 34
+            column: 30
           }
         },
         loc: {
@@ -472,7 +472,7 @@ var cov_2l9x15qscx = function () {
           },
           end: {
             line: 81,
-            column: 29
+            column: 25
           }
         },
         line: 78
@@ -482,11 +482,11 @@ var cov_2l9x15qscx = function () {
         decl: {
           start: {
             line: 89,
-            column: 33
+            column: 29
           },
           end: {
             line: 89,
-            column: 34
+            column: 30
           }
         },
         loc: {
@@ -496,7 +496,7 @@ var cov_2l9x15qscx = function () {
           },
           end: {
             line: 91,
-            column: 64
+            column: 56
           }
         },
         line: 90
@@ -516,11 +516,11 @@ var cov_2l9x15qscx = function () {
         loc: {
           start: {
             line: 91,
-            column: 25
+            column: 21
           },
           end: {
             line: 91,
-            column: 63
+            column: 55
           }
         },
         line: 91
@@ -604,7 +604,7 @@ var cov_2l9x15qscx = function () {
 }(); /**
       * Plurishing-backend
       * =======
-      * Composition data access layer
+      * Montage data access layer
       */
 
 var _plugDb = require('../../utils/plugDb');
@@ -613,9 +613,9 @@ var _plugDb2 = _interopRequireDefault(_plugDb);
 
 var _plurishingSchemas = require('plurishing-schemas');
 
-var _compositions = require('./compositions.design');
+var _montages = require('./montages.design');
 
-var _compositions2 = _interopRequireDefault(_compositions);
+var _montages2 = _interopRequireDefault(_montages);
 
 var _couchdb = require('../../utils/couchdb');
 
@@ -624,34 +624,34 @@ var _schemas = require('../../utils/schemas');
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 /**
- * Registering couchdb views related to compositions objects
+ * Registering couchdb views related to montages objects
  */
-cov_2l9x15qscx.s[0]++;
-(0, _couchdb.addDesign)(_plugDb2.default, 'compositions', _compositions2.default);
+cov_fbpigcu09.s[0]++;
+(0, _couchdb.addDesign)(_plugDb2.default, 'montages', _montages2.default);
 
 /**
- * Gets a list of compositions with optional query params
+ * Gets a list of montages with optional query params
  * @param {object} parameters
  * @return {Promise}
  */
-cov_2l9x15qscx.s[1]++;
-var getCompositions = exports.getCompositions = function getCompositions(_ref) {
+cov_fbpigcu09.s[1]++;
+var getMontages = exports.getMontages = function getMontages(_ref) {
   var _ref$include_docs = _ref.include_docs,
-      include_docs = _ref$include_docs === undefined ? (cov_2l9x15qscx.b[0][0]++, true) : _ref$include_docs;
-  cov_2l9x15qscx.f[0]++;
-  cov_2l9x15qscx.s[2]++;
+      include_docs = _ref$include_docs === undefined ? (cov_fbpigcu09.b[0][0]++, true) : _ref$include_docs;
+  cov_fbpigcu09.f[0]++;
+  cov_fbpigcu09.s[2]++;
 
-  return _plugDb2.default.viewAsync('compositions', 'by_id', {
+  return _plugDb2.default.viewAsync('montages', 'by_id', {
     include_docs: include_docs
   }).then(function (results) {
-    cov_2l9x15qscx.f[1]++;
-    cov_2l9x15qscx.s[3]++;
+    cov_fbpigcu09.f[1]++;
+    cov_fbpigcu09.s[3]++;
     return new _promise2.default(function (resolve) {
-      cov_2l9x15qscx.f[2]++;
-      cov_2l9x15qscx.s[4]++;
+      cov_fbpigcu09.f[2]++;
+      cov_fbpigcu09.s[4]++;
       return resolve(results.rows.map(function (doc) {
-        cov_2l9x15qscx.f[3]++;
-        cov_2l9x15qscx.s[5]++;
+        cov_fbpigcu09.f[3]++;
+        cov_fbpigcu09.s[5]++;
         return doc.doc;
       }));
     });
@@ -659,84 +659,84 @@ var getCompositions = exports.getCompositions = function getCompositions(_ref) {
 };
 
 /**
- * Gets a composition with a specific id
+ * Gets a montage with a specific id
  * @param {object} parameters
  * @return {Promise}
  */
-cov_2l9x15qscx.s[6]++;
-var getComposition = exports.getComposition = function getComposition(_ref2) {
+cov_fbpigcu09.s[6]++;
+var getMontage = exports.getMontage = function getMontage(_ref2) {
   var id = _ref2.id;
-  cov_2l9x15qscx.f[4]++;
-  cov_2l9x15qscx.s[7]++;
-  return _plugDb2.default.getAsync(id).then(function (composition) {
-    cov_2l9x15qscx.f[5]++;
-    cov_2l9x15qscx.s[8]++;
+  cov_fbpigcu09.f[4]++;
+  cov_fbpigcu09.s[7]++;
+  return _plugDb2.default.getAsync(id).then(function (montage) {
+    cov_fbpigcu09.f[5]++;
+    cov_fbpigcu09.s[8]++;
     return (
-      // verify that returned data is compliant before returning it
-      (0, _schemas.dataIsValid)(composition, _plurishingSchemas.Composition)
+      // verify that data is compliant before returning it
+      (0, _schemas.dataIsValid)(montage, _plurishingSchemas.Montage)
     );
   });
 };
 
 /**
- * Creates a new composition
- * @param {object} composition
+ * Creates a new montage
+ * @param {object} montage
  * @return {Promise}
  */
-cov_2l9x15qscx.s[9]++;
-var createComposition = exports.createComposition = function createComposition(composition) {
-  cov_2l9x15qscx.f[6]++;
-  cov_2l9x15qscx.s[10]++;
-  return (0, _schemas.dataIsValid)(composition, _plurishingSchemas.Composition).then(function () {
-    cov_2l9x15qscx.f[7]++;
-    cov_2l9x15qscx.s[11]++;
-    return _plugDb2.default.insertAsync(composition);
+cov_fbpigcu09.s[9]++;
+var createMontage = exports.createMontage = function createMontage(montage) {
+  cov_fbpigcu09.f[6]++;
+  cov_fbpigcu09.s[10]++;
+  return (0, _schemas.dataIsValid)(montage, _plurishingSchemas.Montage).then(function () {
+    cov_fbpigcu09.f[7]++;
+    cov_fbpigcu09.s[11]++;
+    return _plugDb2.default.insertAsync(montage);
   });
 };
 
 /**
- * Updates a composition
- * @param {string} id - id of composition to update
- * @param {object} composition - data to update
+ * Updates a montage
+ * @param {string} id - id of montage to update
+ * @param {object} montage - data to update
  * @return {Promise}
  */
-cov_2l9x15qscx.s[12]++;
-var updateComposition = exports.updateComposition = function updateComposition(id, composition) {
-  cov_2l9x15qscx.f[8]++;
-  cov_2l9x15qscx.s[13]++;
+cov_fbpigcu09.s[12]++;
+var updateMontage = exports.updateMontage = function updateMontage(id, montage) {
+  cov_fbpigcu09.f[8]++;
+  cov_fbpigcu09.s[13]++;
   return (
     // validate
-    (0, _schemas.dataIsValid)(composition, _plurishingSchemas.Composition)
+    (0, _schemas.dataIsValid)(montage, _plurishingSchemas.Montage)
     // get existing document
     .then(function () {
-      cov_2l9x15qscx.f[9]++;
-      cov_2l9x15qscx.s[14]++;
+      cov_fbpigcu09.f[9]++;
+      cov_fbpigcu09.s[14]++;
       return _plugDb2.default.getAsync(id);
     })
     // update with new rev
-    .then(function (compositionDb) {
-      cov_2l9x15qscx.f[10]++;
-      cov_2l9x15qscx.s[15]++;
-      return _plugDb2.default.insertAsync((0, _extends3.default)({}, composition, {
-        _rev: compositionDb._rev
-      }), compositionDb._id);
+    .then(function (montageDb) {
+      cov_fbpigcu09.f[10]++;
+      cov_fbpigcu09.s[15]++;
+      return _plugDb2.default.insertAsync((0, _extends3.default)({}, montage, {
+        _rev: montageDb._rev
+      }), montageDb._id);
     })
   );
 };
 
 /**
- * Deletes a composition
- * @param {object} composition - composition to delete
+ * Deletes a montage
+ * @param {object} montage - montage to delete
  * @return {Promise}
  */
-cov_2l9x15qscx.s[16]++;
-var deleteComposition = exports.deleteComposition = function deleteComposition(_ref3) {
+cov_fbpigcu09.s[16]++;
+var deleteMontage = exports.deleteMontage = function deleteMontage(_ref3) {
   var _id = _ref3._id;
-  cov_2l9x15qscx.f[11]++;
-  cov_2l9x15qscx.s[17]++;
-  return _plugDb2.default.getAsync(_id).then(function (composition) {
-    cov_2l9x15qscx.f[12]++;
-    cov_2l9x15qscx.s[18]++;
-    return _plugDb2.default.destroyAsync(_id, composition._rev);
+  cov_fbpigcu09.f[11]++;
+  cov_fbpigcu09.s[17]++;
+  return _plugDb2.default.getAsync(_id).then(function (montage) {
+    cov_fbpigcu09.f[12]++;
+    cov_fbpigcu09.s[18]++;
+    return _plugDb2.default.destroyAsync(_id, montage._rev);
   });
 };

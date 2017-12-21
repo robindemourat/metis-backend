@@ -3,7 +3,7 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.deleteComposition = exports.updateComposition = exports.createComposition = exports.getComposition = exports.getCompositions = undefined;
+exports.deleteDiffusion = exports.updateDiffusion = exports.createDiffusion = exports.getDiffusion = exports.getDiffusions = undefined;
 
 var _extends2 = require('babel-runtime/helpers/extends');
 
@@ -13,13 +13,13 @@ var _promise = require('babel-runtime/core-js/promise');
 
 var _promise2 = _interopRequireDefault(_promise);
 
-var cov_2l9x15qscx = function () {
-  var path = '/Users/rawbin/Documents/Projets/collaborations/ensad-publishing/prototype/plurishing-backend/src/components/compositions/compositions.dal.js',
-      hash = '587e33621484f324f223cb363ea9eac7ce8ad498',
+var cov_1abd6z6759 = function () {
+  var path = '/Users/rawbin/Documents/Projets/collaborations/ensad-publishing/prototype/plurishing-backend/src/components/diffusions/diffusions.dal.js',
+      hash = 'db1b1a303ef8db78aa997fed5b533a0b6fff5f97',
       global = new Function('return this')(),
       gcv = '__coverage__',
       coverageData = {
-    path: '/Users/rawbin/Documents/Projets/collaborations/ensad-publishing/prototype/plurishing-backend/src/components/compositions/compositions.dal.js',
+    path: '/Users/rawbin/Documents/Projets/collaborations/ensad-publishing/prototype/plurishing-backend/src/components/diffusions/diffusions.dal.js',
     statementMap: {
       '0': {
         start: {
@@ -28,13 +28,13 @@ var cov_2l9x15qscx = function () {
         },
         end: {
           line: 17,
-          column: 38
+          column: 36
         }
       },
       '1': {
         start: {
           line: 25,
-          column: 31
+          column: 29
         },
         end: {
           line: 40,
@@ -84,7 +84,7 @@ var cov_2l9x15qscx = function () {
       '6': {
         start: {
           line: 47,
-          column: 30
+          column: 28
         },
         end: {
           line: 54,
@@ -108,17 +108,17 @@ var cov_2l9x15qscx = function () {
         },
         end: {
           line: 53,
-          column: 40
+          column: 38
         }
       },
       '9': {
         start: {
           line: 61,
-          column: 33
+          column: 31
         },
         end: {
           line: 63,
-          column: 44
+          column: 42
         }
       },
       '10': {
@@ -128,7 +128,7 @@ var cov_2l9x15qscx = function () {
         },
         end: {
           line: 63,
-          column: 44
+          column: 42
         }
       },
       '11': {
@@ -138,13 +138,13 @@ var cov_2l9x15qscx = function () {
         },
         end: {
           line: 63,
-          column: 43
+          column: 41
         }
       },
       '12': {
         start: {
           line: 71,
-          column: 33
+          column: 31
         },
         end: {
           line: 82,
@@ -178,17 +178,17 @@ var cov_2l9x15qscx = function () {
         },
         end: {
           line: 81,
-          column: 29
+          column: 27
         }
       },
       '16': {
         start: {
           line: 89,
-          column: 33
+          column: 31
         },
         end: {
           line: 91,
-          column: 64
+          column: 60
         }
       },
       '17': {
@@ -198,17 +198,17 @@ var cov_2l9x15qscx = function () {
         },
         end: {
           line: 91,
-          column: 64
+          column: 60
         }
       },
       '18': {
         start: {
           line: 91,
-          column: 25
+          column: 23
         },
         end: {
           line: 91,
-          column: 63
+          column: 59
         }
       }
     },
@@ -218,11 +218,11 @@ var cov_2l9x15qscx = function () {
         decl: {
           start: {
             line: 25,
-            column: 31
+            column: 29
           },
           end: {
             line: 25,
-            column: 32
+            column: 30
           }
         },
         loc: {
@@ -314,11 +314,11 @@ var cov_2l9x15qscx = function () {
         decl: {
           start: {
             line: 47,
-            column: 30
+            column: 28
           },
           end: {
             line: 47,
-            column: 31
+            column: 29
           }
         },
         loc: {
@@ -352,7 +352,7 @@ var cov_2l9x15qscx = function () {
           },
           end: {
             line: 53,
-            column: 40
+            column: 38
           }
         },
         line: 53
@@ -362,11 +362,11 @@ var cov_2l9x15qscx = function () {
         decl: {
           start: {
             line: 61,
-            column: 33
+            column: 31
           },
           end: {
             line: 61,
-            column: 34
+            column: 32
           }
         },
         loc: {
@@ -376,7 +376,7 @@ var cov_2l9x15qscx = function () {
           },
           end: {
             line: 63,
-            column: 44
+            column: 42
           }
         },
         line: 62
@@ -400,7 +400,7 @@ var cov_2l9x15qscx = function () {
           },
           end: {
             line: 63,
-            column: 43
+            column: 41
           }
         },
         line: 63
@@ -410,11 +410,11 @@ var cov_2l9x15qscx = function () {
         decl: {
           start: {
             line: 71,
-            column: 33
+            column: 31
           },
           end: {
             line: 71,
-            column: 34
+            column: 32
           }
         },
         loc: {
@@ -472,7 +472,7 @@ var cov_2l9x15qscx = function () {
           },
           end: {
             line: 81,
-            column: 29
+            column: 27
           }
         },
         line: 78
@@ -482,11 +482,11 @@ var cov_2l9x15qscx = function () {
         decl: {
           start: {
             line: 89,
-            column: 33
+            column: 31
           },
           end: {
             line: 89,
-            column: 34
+            column: 32
           }
         },
         loc: {
@@ -496,7 +496,7 @@ var cov_2l9x15qscx = function () {
           },
           end: {
             line: 91,
-            column: 64
+            column: 60
           }
         },
         line: 90
@@ -516,11 +516,11 @@ var cov_2l9x15qscx = function () {
         loc: {
           start: {
             line: 91,
-            column: 25
+            column: 23
           },
           end: {
             line: 91,
-            column: 63
+            column: 59
           }
         },
         line: 91
@@ -604,7 +604,7 @@ var cov_2l9x15qscx = function () {
 }(); /**
       * Plurishing-backend
       * =======
-      * Composition data access layer
+      * Diffusion data access layer
       */
 
 var _plugDb = require('../../utils/plugDb');
@@ -613,9 +613,9 @@ var _plugDb2 = _interopRequireDefault(_plugDb);
 
 var _plurishingSchemas = require('plurishing-schemas');
 
-var _compositions = require('./compositions.design');
+var _diffusions = require('./diffusions.design');
 
-var _compositions2 = _interopRequireDefault(_compositions);
+var _diffusions2 = _interopRequireDefault(_diffusions);
 
 var _couchdb = require('../../utils/couchdb');
 
@@ -624,34 +624,34 @@ var _schemas = require('../../utils/schemas');
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 /**
- * Registering couchdb views related to compositions objects
+ * Registering couchdb views related to diffusions objects
  */
-cov_2l9x15qscx.s[0]++;
-(0, _couchdb.addDesign)(_plugDb2.default, 'compositions', _compositions2.default);
+cov_1abd6z6759.s[0]++;
+(0, _couchdb.addDesign)(_plugDb2.default, 'diffusions', _diffusions2.default);
 
 /**
- * Gets a list of compositions with optional query params
+ * Gets a list of diffusions with optional query params
  * @param {object} parameters
  * @return {Promise}
  */
-cov_2l9x15qscx.s[1]++;
-var getCompositions = exports.getCompositions = function getCompositions(_ref) {
+cov_1abd6z6759.s[1]++;
+var getDiffusions = exports.getDiffusions = function getDiffusions(_ref) {
   var _ref$include_docs = _ref.include_docs,
-      include_docs = _ref$include_docs === undefined ? (cov_2l9x15qscx.b[0][0]++, true) : _ref$include_docs;
-  cov_2l9x15qscx.f[0]++;
-  cov_2l9x15qscx.s[2]++;
+      include_docs = _ref$include_docs === undefined ? (cov_1abd6z6759.b[0][0]++, true) : _ref$include_docs;
+  cov_1abd6z6759.f[0]++;
+  cov_1abd6z6759.s[2]++;
 
-  return _plugDb2.default.viewAsync('compositions', 'by_id', {
+  return _plugDb2.default.viewAsync('diffusions', 'by_id', {
     include_docs: include_docs
   }).then(function (results) {
-    cov_2l9x15qscx.f[1]++;
-    cov_2l9x15qscx.s[3]++;
+    cov_1abd6z6759.f[1]++;
+    cov_1abd6z6759.s[3]++;
     return new _promise2.default(function (resolve) {
-      cov_2l9x15qscx.f[2]++;
-      cov_2l9x15qscx.s[4]++;
+      cov_1abd6z6759.f[2]++;
+      cov_1abd6z6759.s[4]++;
       return resolve(results.rows.map(function (doc) {
-        cov_2l9x15qscx.f[3]++;
-        cov_2l9x15qscx.s[5]++;
+        cov_1abd6z6759.f[3]++;
+        cov_1abd6z6759.s[5]++;
         return doc.doc;
       }));
     });
@@ -659,84 +659,84 @@ var getCompositions = exports.getCompositions = function getCompositions(_ref) {
 };
 
 /**
- * Gets a composition with a specific id
+ * Gets a diffusion with a specific id
  * @param {object} parameters
  * @return {Promise}
  */
-cov_2l9x15qscx.s[6]++;
-var getComposition = exports.getComposition = function getComposition(_ref2) {
+cov_1abd6z6759.s[6]++;
+var getDiffusion = exports.getDiffusion = function getDiffusion(_ref2) {
   var id = _ref2.id;
-  cov_2l9x15qscx.f[4]++;
-  cov_2l9x15qscx.s[7]++;
-  return _plugDb2.default.getAsync(id).then(function (composition) {
-    cov_2l9x15qscx.f[5]++;
-    cov_2l9x15qscx.s[8]++;
+  cov_1abd6z6759.f[4]++;
+  cov_1abd6z6759.s[7]++;
+  return _plugDb2.default.getAsync(id).then(function (diffusion) {
+    cov_1abd6z6759.f[5]++;
+    cov_1abd6z6759.s[8]++;
     return (
-      // verify that returned data is compliant before returning it
-      (0, _schemas.dataIsValid)(composition, _plurishingSchemas.Composition)
+      // verify that data is compliant before returning it
+      (0, _schemas.dataIsValid)(diffusion, _plurishingSchemas.Diffusion)
     );
   });
 };
 
 /**
- * Creates a new composition
- * @param {object} composition
+ * Creates a new diffusion
+ * @param {object} diffusion
  * @return {Promise}
  */
-cov_2l9x15qscx.s[9]++;
-var createComposition = exports.createComposition = function createComposition(composition) {
-  cov_2l9x15qscx.f[6]++;
-  cov_2l9x15qscx.s[10]++;
-  return (0, _schemas.dataIsValid)(composition, _plurishingSchemas.Composition).then(function () {
-    cov_2l9x15qscx.f[7]++;
-    cov_2l9x15qscx.s[11]++;
-    return _plugDb2.default.insertAsync(composition);
+cov_1abd6z6759.s[9]++;
+var createDiffusion = exports.createDiffusion = function createDiffusion(diffusion) {
+  cov_1abd6z6759.f[6]++;
+  cov_1abd6z6759.s[10]++;
+  return (0, _schemas.dataIsValid)(diffusion, _plurishingSchemas.Diffusion).then(function () {
+    cov_1abd6z6759.f[7]++;
+    cov_1abd6z6759.s[11]++;
+    return _plugDb2.default.insertAsync(diffusion);
   });
 };
 
 /**
- * Updates a composition
- * @param {string} id - id of composition to update
- * @param {object} composition - data to update
+ * Updates a diffusion
+ * @param {string} id - id of diffusion to update
+ * @param {object} diffusion - data to update
  * @return {Promise}
  */
-cov_2l9x15qscx.s[12]++;
-var updateComposition = exports.updateComposition = function updateComposition(id, composition) {
-  cov_2l9x15qscx.f[8]++;
-  cov_2l9x15qscx.s[13]++;
+cov_1abd6z6759.s[12]++;
+var updateDiffusion = exports.updateDiffusion = function updateDiffusion(id, diffusion) {
+  cov_1abd6z6759.f[8]++;
+  cov_1abd6z6759.s[13]++;
   return (
     // validate
-    (0, _schemas.dataIsValid)(composition, _plurishingSchemas.Composition)
+    (0, _schemas.dataIsValid)(diffusion, _plurishingSchemas.Diffusion)
     // get existing document
     .then(function () {
-      cov_2l9x15qscx.f[9]++;
-      cov_2l9x15qscx.s[14]++;
+      cov_1abd6z6759.f[9]++;
+      cov_1abd6z6759.s[14]++;
       return _plugDb2.default.getAsync(id);
     })
     // update with new rev
-    .then(function (compositionDb) {
-      cov_2l9x15qscx.f[10]++;
-      cov_2l9x15qscx.s[15]++;
-      return _plugDb2.default.insertAsync((0, _extends3.default)({}, composition, {
-        _rev: compositionDb._rev
-      }), compositionDb._id);
+    .then(function (diffusionDb) {
+      cov_1abd6z6759.f[10]++;
+      cov_1abd6z6759.s[15]++;
+      return _plugDb2.default.insertAsync((0, _extends3.default)({}, diffusion, {
+        _rev: diffusionDb._rev
+      }), diffusionDb._id);
     })
   );
 };
 
 /**
- * Deletes a composition
- * @param {object} composition - composition to delete
+ * Deletes a diffusion
+ * @param {object} diffusion - diffusion to delete
  * @return {Promise}
  */
-cov_2l9x15qscx.s[16]++;
-var deleteComposition = exports.deleteComposition = function deleteComposition(_ref3) {
+cov_1abd6z6759.s[16]++;
+var deleteDiffusion = exports.deleteDiffusion = function deleteDiffusion(_ref3) {
   var _id = _ref3._id;
-  cov_2l9x15qscx.f[11]++;
-  cov_2l9x15qscx.s[17]++;
-  return _plugDb2.default.getAsync(_id).then(function (composition) {
-    cov_2l9x15qscx.f[12]++;
-    cov_2l9x15qscx.s[18]++;
-    return _plugDb2.default.destroyAsync(_id, composition._rev);
+  cov_1abd6z6759.f[11]++;
+  cov_1abd6z6759.s[17]++;
+  return _plugDb2.default.getAsync(_id).then(function (diffusion) {
+    cov_1abd6z6759.f[12]++;
+    cov_1abd6z6759.s[18]++;
+    return _plugDb2.default.destroyAsync(_id, diffusion._rev);
   });
 };

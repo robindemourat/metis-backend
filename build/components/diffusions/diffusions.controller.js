@@ -3,28 +3,28 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.deleteComposition = exports.updateComposition = exports.createComposition = exports.getComposition = exports.getCompositions = undefined;
+exports.deleteDiffusion = exports.updateDiffusion = exports.createDiffusion = exports.getDiffusion = exports.getDiffusions = undefined;
 
 var _extends2 = require('babel-runtime/helpers/extends');
 
 var _extends3 = _interopRequireDefault(_extends2);
 
-var cov_ut1gnjtfe = function () {
-  var path = '/Users/rawbin/Documents/Projets/collaborations/ensad-publishing/prototype/plurishing-backend/src/components/compositions/compositions.controller.js',
-      hash = 'd3fd531466089b3dcf4e5b9672a21f18b577d8ae',
+var cov_1pp8drd87p = function () {
+  var path = '/Users/rawbin/Documents/Projets/collaborations/ensad-publishing/prototype/plurishing-backend/src/components/diffusions/diffusions.controller.js',
+      hash = 'bbcf30585c8c5a4ec7e92ac42c89c26627b6559f',
       global = new Function('return this')(),
       gcv = '__coverage__',
       coverageData = {
-    path: '/Users/rawbin/Documents/Projets/collaborations/ensad-publishing/prototype/plurishing-backend/src/components/compositions/compositions.controller.js',
+    path: '/Users/rawbin/Documents/Projets/collaborations/ensad-publishing/prototype/plurishing-backend/src/components/diffusions/diffusions.controller.js',
     statementMap: {
       '0': {
         start: {
           line: 21,
-          column: 31
+          column: 29
         },
         end: {
           line: 22,
-          column: 34
+          column: 32
         }
       },
       '1': {
@@ -34,13 +34,13 @@ var cov_ut1gnjtfe = function () {
         },
         end: {
           line: 22,
-          column: 34
+          column: 32
         }
       },
       '2': {
         start: {
           line: 29,
-          column: 30
+          column: 28
         },
         end: {
           line: 34,
@@ -60,11 +60,11 @@ var cov_ut1gnjtfe = function () {
       '4': {
         start: {
           line: 41,
-          column: 33
+          column: 31
         },
         end: {
           line: 49,
-          column: 45
+          column: 41
         }
       },
       '5': {
@@ -74,7 +74,7 @@ var cov_ut1gnjtfe = function () {
         },
         end: {
           line: 49,
-          column: 45
+          column: 41
         }
       },
       '6': {
@@ -84,23 +84,23 @@ var cov_ut1gnjtfe = function () {
         },
         end: {
           line: 48,
-          column: 41
+          column: 39
         }
       },
       '7': {
         start: {
           line: 49,
-          column: 23
+          column: 21
         },
         end: {
           line: 49,
-          column: 44
+          column: 40
         }
       },
       '8': {
         start: {
           line: 56,
-          column: 33
+          column: 31
         },
         end: {
           line: 66,
@@ -124,27 +124,27 @@ var cov_ut1gnjtfe = function () {
         },
         end: {
           line: 64,
-          column: 43
+          column: 41
         }
       },
       '11': {
         start: {
           line: 65,
-          column: 25
+          column: 23
         },
         end: {
           line: 65,
-          column: 46
+          column: 42
         }
       },
       '12': {
         start: {
           line: 73,
-          column: 33
+          column: 31
         },
         end: {
           line: 74,
-          column: 54
+          column: 52
         }
       },
       '13': {
@@ -154,7 +154,7 @@ var cov_ut1gnjtfe = function () {
         },
         end: {
           line: 74,
-          column: 54
+          column: 52
         }
       }
     },
@@ -164,11 +164,11 @@ var cov_ut1gnjtfe = function () {
         decl: {
           start: {
             line: 21,
-            column: 31
+            column: 29
           },
           end: {
             line: 21,
-            column: 32
+            column: 30
           }
         },
         loc: {
@@ -178,7 +178,7 @@ var cov_ut1gnjtfe = function () {
           },
           end: {
             line: 22,
-            column: 34
+            column: 32
           }
         },
         line: 22
@@ -188,11 +188,11 @@ var cov_ut1gnjtfe = function () {
         decl: {
           start: {
             line: 29,
-            column: 30
+            column: 28
           },
           end: {
             line: 29,
-            column: 31
+            column: 29
           }
         },
         loc: {
@@ -212,11 +212,11 @@ var cov_ut1gnjtfe = function () {
         decl: {
           start: {
             line: 41,
-            column: 33
+            column: 31
           },
           end: {
             line: 41,
-            column: 34
+            column: 32
           }
         },
         loc: {
@@ -226,7 +226,7 @@ var cov_ut1gnjtfe = function () {
           },
           end: {
             line: 49,
-            column: 45
+            column: 41
           }
         },
         line: 43
@@ -250,7 +250,7 @@ var cov_ut1gnjtfe = function () {
           },
           end: {
             line: 48,
-            column: 41
+            column: 39
           }
         },
         line: 48
@@ -270,11 +270,11 @@ var cov_ut1gnjtfe = function () {
         loc: {
           start: {
             line: 49,
-            column: 23
+            column: 21
           },
           end: {
             line: 49,
-            column: 44
+            column: 40
           }
         },
         line: 49
@@ -284,11 +284,11 @@ var cov_ut1gnjtfe = function () {
         decl: {
           start: {
             line: 56,
-            column: 33
+            column: 31
           },
           end: {
             line: 56,
-            column: 34
+            column: 32
           }
         },
         loc: {
@@ -322,7 +322,7 @@ var cov_ut1gnjtfe = function () {
           },
           end: {
             line: 64,
-            column: 43
+            column: 41
           }
         },
         line: 64
@@ -342,11 +342,11 @@ var cov_ut1gnjtfe = function () {
         loc: {
           start: {
             line: 65,
-            column: 25
+            column: 23
           },
           end: {
             line: 65,
-            column: 46
+            column: 42
           }
         },
         line: 65
@@ -356,11 +356,11 @@ var cov_ut1gnjtfe = function () {
         decl: {
           start: {
             line: 73,
-            column: 33
+            column: 31
           },
           end: {
             line: 73,
-            column: 34
+            column: 32
           }
         },
         loc: {
@@ -370,7 +370,7 @@ var cov_ut1gnjtfe = function () {
           },
           end: {
             line: 74,
-            column: 54
+            column: 52
           }
         },
         line: 74
@@ -418,101 +418,101 @@ var cov_ut1gnjtfe = function () {
 }(); // /**
 //  * Plurishing-backend
 //  * =======
-//  * Compositions component controller
+//  * Diffusions component controller
 //  */
 
-var _compositions = require('./compositions.dal');
+var _diffusions = require('./diffusions.dal');
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 /**
- * Get a list of compositions
+ * Get a list of diffusions
  * @param {object} req - the request of query
  * @param {object} res - the resource of query
  * @todo add filters handling through req queries
  */
-cov_ut1gnjtfe.s[0]++;
-var getCompositions = exports.getCompositions = function getCompositions(req, res) {
-  cov_ut1gnjtfe.f[0]++;
-  cov_ut1gnjtfe.s[1]++;
-  return res.json((0, _compositions.getCompositions)({}));
+cov_1pp8drd87p.s[0]++;
+var getDiffusions = exports.getDiffusions = function getDiffusions(req, res) {
+  cov_1pp8drd87p.f[0]++;
+  cov_1pp8drd87p.s[1]++;
+  return res.json((0, _diffusions.getDiffusions)({}));
 };
 
 /**
- * Get a single composition
+ * Get a single diffusion
  * @param {object} req - the request of query
  * @param {object} res - the resource of query
  */
-cov_ut1gnjtfe.s[2]++;
-var getComposition = exports.getComposition = function getComposition(req, res) {
-  cov_ut1gnjtfe.f[1]++;
-  cov_ut1gnjtfe.s[3]++;
-  return res.json((0, _compositions.getComposition)({
+cov_1pp8drd87p.s[2]++;
+var getDiffusion = exports.getDiffusion = function getDiffusion(req, res) {
+  cov_1pp8drd87p.f[1]++;
+  cov_1pp8drd87p.s[3]++;
+  return res.json((0, _diffusions.getDiffusion)({
     id: req.params.id
   }));
 };
 
 /**
- * Create a single composition
+ * Create a single diffusion
  * @param {object} req - the request of query
  * @param {object} res - the resource of query
  */
-cov_ut1gnjtfe.s[4]++;
-var createComposition = exports.createComposition = function createComposition(req, res) {
-  cov_ut1gnjtfe.f[2]++;
-  cov_ut1gnjtfe.s[5]++;
+cov_1pp8drd87p.s[4]++;
+var createDiffusion = exports.createDiffusion = function createDiffusion(req, res) {
+  cov_1pp8drd87p.f[2]++;
+  cov_1pp8drd87p.s[5]++;
   return (
-    // create the composition
-    (0, _compositions.createComposition)((0, _extends3.default)({}, req.body, {
-      type: 'composition'
+    // create the diffusion
+    (0, _diffusions.createDiffusion)((0, _extends3.default)({}, req.body, {
+      type: 'diffusion'
     }))
-    // return the composition
+    // return the diffusion
     .then(function (_ref) {
       var id = _ref.id;
-      cov_ut1gnjtfe.f[3]++;
-      cov_ut1gnjtfe.s[6]++;
-      return (0, _compositions.getComposition)({ id: id });
-    }).then(function (composition) {
-      cov_ut1gnjtfe.f[4]++;
-      cov_ut1gnjtfe.s[7]++;
-      return res.json(composition);
+      cov_1pp8drd87p.f[3]++;
+      cov_1pp8drd87p.s[6]++;
+      return (0, _diffusions.getDiffusion)({ id: id });
+    }).then(function (diffusion) {
+      cov_1pp8drd87p.f[4]++;
+      cov_1pp8drd87p.s[7]++;
+      return res.json(diffusion);
     })
   );
 };
 
 /**
- * Update a single composition
+ * Update a single diffusion
  * @param {object} req - the request of query
  * @param {object} res - the resource of query
  */
-cov_ut1gnjtfe.s[8]++;
-var updateComposition = exports.updateComposition = function updateComposition(req, res) {
-  cov_ut1gnjtfe.f[5]++;
-  cov_ut1gnjtfe.s[9]++;
+cov_1pp8drd87p.s[8]++;
+var updateDiffusion = exports.updateDiffusion = function updateDiffusion(req, res) {
+  cov_1pp8drd87p.f[5]++;
+  cov_1pp8drd87p.s[9]++;
   return res.json(
-  // update the composition
-  (0, _compositions.updateComposition)(req.params.id, req.body).
-  // return the composition
+  // update the diffusion
+  (0, _diffusions.updateDiffusion)(req.params.id, req.body).
+  // return the diffusion
   then(function (_ref2) {
     var id = _ref2.id;
-    cov_ut1gnjtfe.f[6]++;
-    cov_ut1gnjtfe.s[10]++;
-    return (0, _compositions.getComposition)({ id: id });
-  }).then(function (composition) {
-    cov_ut1gnjtfe.f[7]++;
-    cov_ut1gnjtfe.s[11]++;
-    return res.json(composition);
+    cov_1pp8drd87p.f[6]++;
+    cov_1pp8drd87p.s[10]++;
+    return (0, _diffusions.getDiffusion)({ id: id });
+  }).then(function (diffusion) {
+    cov_1pp8drd87p.f[7]++;
+    cov_1pp8drd87p.s[11]++;
+    return res.json(diffusion);
   }));
 };
 
 /**
- * Delete a single composition
+ * Delete a single diffusion
  * @param {object} req - the request of query
  * @param {object} res - the resource of query
  */
-cov_ut1gnjtfe.s[12]++;
-var deleteComposition = exports.deleteComposition = function deleteComposition(req, res) {
-  cov_ut1gnjtfe.f[8]++;
-  cov_ut1gnjtfe.s[13]++;
-  return res.json((0, _compositions.deleteComposition)({ _id: req.params.id }));
+cov_1pp8drd87p.s[12]++;
+var deleteDiffusion = exports.deleteDiffusion = function deleteDiffusion(req, res) {
+  cov_1pp8drd87p.f[8]++;
+  cov_1pp8drd87p.s[13]++;
+  return res.json((0, _diffusions.deleteDiffusion)({ _id: req.params.id }));
 };
