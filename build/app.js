@@ -6,7 +6,7 @@ Object.defineProperty(exports, "__esModule", {
 
 var cov_2145knos0z = function () {
   var path = '/Users/rawbin/Documents/Projets/collaborations/ensad-publishing/prototype/plurishing-backend/src/app.js',
-      hash = '0175f46a50c7c72a9cddd96c8a6e32f5ad538398',
+      hash = '8f087f2a94aaaeee9ae3e7bf73bf88946ce9b4ec',
       global = new Function('return this')(),
       gcv = '__coverage__',
       coverageData = {
@@ -14,242 +14,242 @@ var cov_2145knos0z = function () {
     statementMap: {
       '0': {
         start: {
-          line: 39,
+          line: 40,
           column: 15
         },
         end: {
-          line: 39,
+          line: 40,
           column: 26
         }
       },
       '1': {
         start: {
-          line: 40,
+          line: 41,
           column: 17
         },
         end: {
-          line: 40,
+          line: 41,
           column: 23
         }
       },
       '2': {
         start: {
-          line: 45,
+          line: 46,
           column: 12
         },
         end: {
-          line: 45,
+          line: 46,
           column: 21
         }
       },
       '3': {
         start: {
-          line: 50,
+          line: 51,
           column: 0
         },
         end: {
-          line: 50,
+          line: 51,
           column: 67
         }
       },
       '4': {
         start: {
-          line: 51,
+          line: 52,
           column: 0
         },
         end: {
-          line: 51,
+          line: 52,
           column: 27
         }
       },
       '5': {
         start: {
-          line: 52,
+          line: 53,
           column: 0
         },
         end: {
-          line: 52,
+          line: 53,
           column: 16
         }
       },
       '6': {
         start: {
-          line: 53,
+          line: 54,
           column: 0
         },
         end: {
-          line: 53,
+          line: 54,
           column: 38
         }
       },
       '7': {
         start: {
-          line: 54,
+          line: 55,
           column: 0
         },
         end: {
-          line: 65,
+          line: 66,
           column: 4
         }
       },
       '8': {
         start: {
-          line: 70,
+          line: 71,
           column: 0
         },
         end: {
-          line: 70,
+          line: 71,
           column: 31
         }
       },
       '9': {
         start: {
-          line: 75,
+          line: 76,
           column: 0
         },
         end: {
-          line: 77,
+          line: 78,
           column: 3
         }
       },
       '10': {
         start: {
-          line: 76,
+          line: 77,
           column: 2
         },
         end: {
-          line: 76,
+          line: 77,
           column: 77
         }
       },
       '11': {
         start: {
-          line: 84,
+          line: 85,
           column: 19
         },
         end: {
-          line: 84,
+          line: 85,
           column: 52
         }
       },
       '12': {
         start: {
-          line: 85,
+          line: 86,
           column: 0
         },
         end: {
-          line: 85,
+          line: 86,
           column: 47
         }
       },
       '13': {
         start: {
-          line: 91,
+          line: 92,
           column: 18
         },
         end: {
-          line: 91,
+          line: 92,
           column: 34
         }
       },
       '14': {
         start: {
-          line: 96,
+          line: 97,
           column: 0
         },
         end: {
-          line: 96,
+          line: 97,
           column: 25
         }
       },
       '15': {
         start: {
-          line: 110,
+          line: 111,
           column: 0
         },
         end: {
-          line: 110,
+          line: 111,
           column: 31
         }
       },
       '16': {
         start: {
-          line: 111,
+          line: 112,
           column: 0
         },
         end: {
-          line: 111,
+          line: 112,
           column: 33
         }
       },
       '17': {
         start: {
-          line: 112,
+          line: 113,
           column: 0
         },
         end: {
-          line: 112,
+          line: 113,
           column: 39
         }
       },
       '18': {
         start: {
-          line: 113,
+          line: 114,
           column: 0
         },
         end: {
-          line: 113,
+          line: 114,
           column: 45
         }
       },
       '19': {
         start: {
-          line: 114,
+          line: 115,
           column: 0
         },
         end: {
-          line: 114,
+          line: 115,
           column: 41
         }
       },
       '20': {
         start: {
-          line: 115,
+          line: 116,
           column: 0
         },
         end: {
-          line: 115,
+          line: 116,
           column: 37
         }
       },
       '21': {
         start: {
-          line: 120,
+          line: 117,
           column: 0
         },
         end: {
-          line: 120,
-          column: 27
+          line: 117,
+          column: 45
         }
       },
       '22': {
         start: {
-          line: 125,
-          column: 22
+          line: 122,
+          column: 0
         },
         end: {
-          line: 125,
-          column: 38
+          line: 122,
+          column: 27
         }
       },
       '23': {
         start: {
           line: 127,
-          column: 0
+          column: 22
         },
         end: {
           line: 127,
-          column: 41
+          column: 38
         }
       },
       '24': {
@@ -259,16 +259,26 @@ var cov_2145knos0z = function () {
         },
         end: {
           line: 129,
-          column: 36
+          column: 41
         }
       },
       '25': {
         start: {
-          line: 134,
+          line: 131,
           column: 0
         },
         end: {
-          line: 134,
+          line: 131,
+          column: 36
+        }
+      },
+      '26': {
+        start: {
+          line: 136,
+          column: 0
+        },
+        end: {
+          line: 136,
           column: 22
         }
       }
@@ -278,25 +288,25 @@ var cov_2145knos0z = function () {
         name: '(anonymous_0)',
         decl: {
           start: {
-            line: 75,
+            line: 76,
             column: 13
           },
           end: {
-            line: 75,
+            line: 76,
             column: 14
           }
         },
         loc: {
           start: {
-            line: 75,
+            line: 76,
             column: 27
           },
           end: {
-            line: 77,
+            line: 78,
             column: 1
           }
         },
-        line: 75
+        line: 76
       }
     },
     branchMap: {},
@@ -326,7 +336,8 @@ var cov_2145knos0z = function () {
       '22': 0,
       '23': 0,
       '24': 0,
-      '25': 0
+      '25': 0,
+      '26': 0
     },
     f: {
       '0': 0
@@ -387,6 +398,8 @@ var _bunyanDebugStream2 = _interopRequireDefault(_bunyanDebugStream);
 var _middlewares = require('./utils/middlewares');
 
 var _compositions = require('./components/compositions');
+
+var _deliverables = require('./components/deliverables');
 
 var _diffusions = require('./components/diffusions');
 
@@ -505,26 +518,28 @@ cov_2145knos0z.s[19]++;
 apiRoutes.use('/diffusions', _diffusions.api);
 cov_2145knos0z.s[20]++;
 apiRoutes.use('/montages', _montages.api);
+cov_2145knos0z.s[21]++;
+apiRoutes.use('/deliverables', _deliverables.api);
 
 /**
  * Connect the api router to the app
  */
-cov_2145knos0z.s[21]++;
+cov_2145knos0z.s[22]++;
 app.use('/api', apiRoutes);
 
 /**
  * SERVICES router
  */
-var serviceRoutes = (cov_2145knos0z.s[22]++, _express2.default.Router());
-
-cov_2145knos0z.s[23]++;
-serviceRoutes.use('/html2img', _html2img.router);
+var serviceRoutes = (cov_2145knos0z.s[23]++, _express2.default.Router());
 
 cov_2145knos0z.s[24]++;
+serviceRoutes.use('/html2img', _html2img.router);
+
+cov_2145knos0z.s[25]++;
 app.use('/services', serviceRoutes);
 
 /**
  * Connect error handler
  */
-cov_2145knos0z.s[25]++;
+cov_2145knos0z.s[26]++;
 app.use(_middlewares.errorHandler);

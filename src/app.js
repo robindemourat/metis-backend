@@ -20,6 +20,7 @@ import {
  * Dependencies : Components API
  */
 import {api as compositions} from './components/compositions';
+import {api as deliverables} from './components/deliverables';
 import {api as diffusions} from './components/diffusions';
 import {api as resources} from './components/resources';
 import {api as montages} from './components/montages';
@@ -113,6 +114,7 @@ apiRoutes.use('/resources', resources);
 apiRoutes.use('/compositions', compositions);
 apiRoutes.use('/diffusions', diffusions);
 apiRoutes.use('/montages', montages);
+apiRoutes.use('/deliverables', deliverables);
 
 /**
  * Connect the api router to the app

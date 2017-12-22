@@ -230,6 +230,111 @@ Deletes a composition
 | --- | --- | --- | --- |
 | composition | object |  | composition to delete |
 
+## `getDeliverables(req: object, res: object)`
+
+Get a list of deliverables
+
+| Name | Type | Attribute | Description |
+| --- | --- | --- | --- |
+| req | object |  | the request of query |
+| res | object |  | the resource of query |
+
+## `getDeliverable(req: object, res: object)`
+
+Get a single deliverable
+
+| Name | Type | Attribute | Description |
+| --- | --- | --- | --- |
+| req | object |  | the request of query |
+| res | object |  | the resource of query |
+
+## `getDeliverableAttachment(req: object, res: object)`
+
+Get a single deliverable attachment
+
+| Name | Type | Attribute | Description |
+| --- | --- | --- | --- |
+| req | object |  | the request of query |
+| res | object |  | the resource of query |
+
+## `createDeliverable(req: object, res: object)`
+
+Create a single deliverable
+
+| Name | Type | Attribute | Description |
+| --- | --- | --- | --- |
+| req | object |  | the request of query |
+| res | object |  | the resource of query |
+
+## `updateDeliverable(req: object, res: object)`
+
+Update a single deliverable
+
+| Name | Type | Attribute | Description |
+| --- | --- | --- | --- |
+| req | object |  | the request of query |
+| res | object |  | the resource of query |
+
+## `deleteDeliverable(req: object, res: object)`
+
+Delete a single deliverable
+
+| Name | Type | Attribute | Description |
+| --- | --- | --- | --- |
+| req | object |  | the request of query |
+| res | object |  | the resource of query |
+
+## `getDeliverables(parameters: object): Promise`
+
+Gets a list of deliverables with optional query params
+
+| Name | Type | Attribute | Description |
+| --- | --- | --- | --- |
+| parameters | object |  |
+
+## `getDeliverable(parameters: object): Promise`
+
+Gets a deliverable with a specific id or email
+
+| Name | Type | Attribute | Description |
+| --- | --- | --- | --- |
+| parameters | object |  |
+
+## `getDeliverableAttachment(parameters: object): Promise`
+
+Gets a deliverable with a specific id or email
+
+| Name | Type | Attribute | Description |
+| --- | --- | --- | --- |
+| parameters | object |  |
+
+## `createDeliverable(deliverable: object, data: object): Promise`
+
+Creates a new deliverable
+
+| Name | Type | Attribute | Description |
+| --- | --- | --- | --- |
+| deliverable | object |  |
+| data | object |  |
+
+## `updateDeliverable(id: string, deliverable: object, data: object): Promise`
+
+Updates an deliverable
+
+| Name | Type | Attribute | Description |
+| --- | --- | --- | --- |
+| id | string |  | id of the deliverable |
+| deliverable | object |  | deliverable data to update |
+| data | object |  | attachment data to update |
+
+## `deleteDeliverable(deliverable: object): Promise`
+
+Deletes a deliverable
+
+| Name | Type | Attribute | Description |
+| --- | --- | --- | --- |
+| deliverable | object |  | deliverable to delete |
+
 ## `getDiffusions(req: object, res: object)`
 
 Get a list of diffusions
