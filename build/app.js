@@ -6,7 +6,7 @@ Object.defineProperty(exports, "__esModule", {
 
 var cov_2145knos0z = function () {
   var path = '/Users/rawbin/Documents/Projets/collaborations/ensad-publishing/prototype/plurishing-backend/src/app.js',
-      hash = '4409f9f194fbdbc944d1d512a53e3d7af53d6941',
+      hash = '0175f46a50c7c72a9cddd96c8a6e32f5ad538398',
       global = new Function('return this')(),
       gcv = '__coverage__',
       coverageData = {
@@ -14,231 +14,261 @@ var cov_2145knos0z = function () {
     statementMap: {
       '0': {
         start: {
-          line: 36,
+          line: 39,
           column: 15
         },
         end: {
-          line: 36,
+          line: 39,
           column: 26
         }
       },
       '1': {
         start: {
-          line: 37,
+          line: 40,
           column: 17
         },
         end: {
-          line: 37,
+          line: 40,
           column: 23
         }
       },
       '2': {
         start: {
-          line: 42,
+          line: 45,
           column: 12
         },
         end: {
-          line: 42,
+          line: 45,
           column: 21
         }
       },
       '3': {
         start: {
-          line: 47,
+          line: 50,
           column: 0
         },
         end: {
-          line: 47,
+          line: 50,
           column: 67
         }
       },
       '4': {
         start: {
-          line: 48,
+          line: 51,
           column: 0
         },
         end: {
-          line: 48,
+          line: 51,
           column: 27
         }
       },
       '5': {
         start: {
-          line: 49,
+          line: 52,
           column: 0
         },
         end: {
-          line: 49,
+          line: 52,
           column: 16
         }
       },
       '6': {
         start: {
-          line: 50,
+          line: 53,
           column: 0
         },
         end: {
-          line: 50,
+          line: 53,
           column: 38
         }
       },
       '7': {
         start: {
-          line: 51,
+          line: 54,
           column: 0
         },
         end: {
-          line: 62,
+          line: 65,
           column: 4
         }
       },
       '8': {
         start: {
-          line: 67,
+          line: 70,
           column: 0
         },
         end: {
-          line: 67,
+          line: 70,
           column: 31
         }
       },
       '9': {
         start: {
-          line: 72,
+          line: 75,
           column: 0
         },
         end: {
-          line: 74,
+          line: 77,
           column: 3
         }
       },
       '10': {
         start: {
-          line: 73,
+          line: 76,
           column: 2
         },
         end: {
-          line: 73,
+          line: 76,
           column: 77
         }
       },
       '11': {
         start: {
-          line: 81,
+          line: 84,
           column: 19
         },
         end: {
-          line: 81,
+          line: 84,
           column: 52
         }
       },
       '12': {
         start: {
-          line: 82,
+          line: 85,
           column: 0
         },
         end: {
-          line: 82,
+          line: 85,
           column: 47
         }
       },
       '13': {
         start: {
-          line: 88,
+          line: 91,
           column: 18
         },
         end: {
-          line: 88,
+          line: 91,
           column: 34
         }
       },
       '14': {
         start: {
-          line: 93,
+          line: 96,
           column: 0
         },
         end: {
-          line: 93,
+          line: 96,
           column: 25
         }
       },
       '15': {
         start: {
-          line: 108,
+          line: 110,
           column: 0
         },
         end: {
-          line: 108,
+          line: 110,
           column: 31
         }
       },
       '16': {
         start: {
-          line: 109,
+          line: 111,
           column: 0
         },
         end: {
-          line: 109,
+          line: 111,
           column: 33
         }
       },
       '17': {
         start: {
-          line: 110,
+          line: 112,
           column: 0
         },
         end: {
-          line: 110,
+          line: 112,
           column: 39
         }
       },
       '18': {
         start: {
-          line: 111,
+          line: 113,
           column: 0
         },
         end: {
-          line: 111,
+          line: 113,
           column: 45
         }
       },
       '19': {
         start: {
-          line: 112,
+          line: 114,
           column: 0
         },
         end: {
-          line: 112,
+          line: 114,
           column: 41
         }
       },
       '20': {
         start: {
-          line: 113,
+          line: 115,
           column: 0
         },
         end: {
-          line: 113,
+          line: 115,
           column: 37
         }
       },
       '21': {
         start: {
-          line: 118,
+          line: 120,
           column: 0
         },
         end: {
-          line: 118,
+          line: 120,
           column: 27
         }
       },
       '22': {
         start: {
-          line: 123,
+          line: 125,
+          column: 22
+        },
+        end: {
+          line: 125,
+          column: 38
+        }
+      },
+      '23': {
+        start: {
+          line: 127,
           column: 0
         },
         end: {
-          line: 123,
+          line: 127,
+          column: 41
+        }
+      },
+      '24': {
+        start: {
+          line: 129,
+          column: 0
+        },
+        end: {
+          line: 129,
+          column: 36
+        }
+      },
+      '25': {
+        start: {
+          line: 134,
+          column: 0
+        },
+        end: {
+          line: 134,
           column: 22
         }
       }
@@ -248,25 +278,25 @@ var cov_2145knos0z = function () {
         name: '(anonymous_0)',
         decl: {
           start: {
-            line: 72,
+            line: 75,
             column: 13
           },
           end: {
-            line: 72,
+            line: 75,
             column: 14
           }
         },
         loc: {
           start: {
-            line: 72,
+            line: 75,
             column: 27
           },
           end: {
-            line: 74,
+            line: 77,
             column: 1
           }
         },
-        line: 72
+        line: 75
       }
     },
     branchMap: {},
@@ -293,7 +323,10 @@ var cov_2145knos0z = function () {
       '19': 0,
       '20': 0,
       '21': 0,
-      '22': 0
+      '22': 0,
+      '23': 0,
+      '24': 0,
+      '25': 0
     },
     f: {
       '0': 0
@@ -366,6 +399,8 @@ var _assets = require('./components/assets');
 var _users = require('./components/users');
 
 var _auth = require('./components/auth');
+
+var _html2img = require('./services/html2img');
 
 var _config = require('./utils/config');
 
@@ -450,15 +485,14 @@ apiRoutes.use('/', _auth.api);
  * API documentation route
  */
 
-// /**
-//  * Apply authentication middleware for protected routes using jwt
-//  * (after that line all routes are protected)
-//  */
-// // apiRoutes.use(authenticateWithTokens);
-// /**
-//  * Protected api routes
-//  */
-// // apiRoutes.use('/articles', articles);
+/**
+ * Apply authentication middleware for protected routes using jwt
+ * (after that line all routes are protected)
+ */
+// apiRoutes.use(authenticateWithTokens);
+/**
+ * Protected api routes
+ */
 cov_2145knos0z.s[15]++;
 apiRoutes.use('/users', _users.api);
 cov_2145knos0z.s[16]++;
@@ -472,14 +506,25 @@ apiRoutes.use('/diffusions', _diffusions.api);
 cov_2145knos0z.s[20]++;
 apiRoutes.use('/montages', _montages.api);
 
-// /**
-//  * Connect the api router to the app
-//  */
+/**
+ * Connect the api router to the app
+ */
 cov_2145knos0z.s[21]++;
 app.use('/api', apiRoutes);
 
-// /**
-//  * Connect error handler
-//  */
-cov_2145knos0z.s[22]++;
+/**
+ * SERVICES router
+ */
+var serviceRoutes = (cov_2145knos0z.s[22]++, _express2.default.Router());
+
+cov_2145knos0z.s[23]++;
+serviceRoutes.use('/html2img', _html2img.router);
+
+cov_2145knos0z.s[24]++;
+app.use('/services', serviceRoutes);
+
+/**
+ * Connect error handler
+ */
+cov_2145knos0z.s[25]++;
 app.use(_middlewares.errorHandler);

@@ -89,7 +89,8 @@
     "nodemailer": "^4.4.1",
     "plurishing-schemas": "git+https://github.com/robindemourat/plurishing-schemas.git",
     "pm2": "^2.8.0",
-    "uuid": "^3.1.0"
+    "uuid": "^3.1.0",
+    "webshot": "^0.18.0"
   },
   "devDependencies": {
     "babel-cli": "^6.5.1",

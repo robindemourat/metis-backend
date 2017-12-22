@@ -604,6 +604,16 @@ Deletes a user
 | --- | --- | --- | --- |
 | user | object |  | user to delete |
 
+## `controller()`
+
+| Name | Type | Attribute | Description |
+| --- | --- | --- | --- |
+
+## `html2img()`
+
+| Name | Type | Attribute | Description |
+| --- | --- | --- | --- |
+
 ## `constantify()`
 
 | Name | Type | Attribute | Description |

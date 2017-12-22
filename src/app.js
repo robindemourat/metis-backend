@@ -27,6 +27,9 @@ import {api as assets} from './components/assets';
 import {api as users} from './components/users';
 import {api as auth} from './components/auth';
 
+import {router as html2img} from './services/html2img';
+
+
 /**
  * Connect config
  */
@@ -96,15 +99,14 @@ apiRoutes.use('/', auth);
  * API documentation route
  */
 
-// /**
-//  * Apply authentication middleware for protected routes using jwt
-//  * (after that line all routes are protected)
-//  */
-// // apiRoutes.use(authenticateWithTokens);
-// /**
-//  * Protected api routes
-//  */
-// // apiRoutes.use('/articles', articles);
+/**
+ * Apply authentication middleware for protected routes using jwt
+ * (after that line all routes are protected)
+ */
+// apiRoutes.use(authenticateWithTokens);
+/**
+ * Protected api routes
+ */
 apiRoutes.use('/users', users);
 apiRoutes.use('/assets', assets);
 apiRoutes.use('/resources', resources);
@@ -112,13 +114,22 @@ apiRoutes.use('/compositions', compositions);
 apiRoutes.use('/diffusions', diffusions);
 apiRoutes.use('/montages', montages);
 
-// /**
-//  * Connect the api router to the app
-//  */
+/**
+ * Connect the api router to the app
+ */
 app.use('/api', apiRoutes);
 
-// /**
-//  * Connect error handler
-//  */
+/**
+ * SERVICES router
+ */
+const serviceRoutes = express.Router();
+
+serviceRoutes.use('/html2img', html2img);
+
+app.use('/services', serviceRoutes);
+
+/**
+ * Connect error handler
+ */
 app.use(errorHandler);
 
