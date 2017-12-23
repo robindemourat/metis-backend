@@ -14,7 +14,10 @@
       },
       "smtp_email": {
         "type": "string"
+      },
+      "mailing_hub_email": {
+        "type": "string"
       }
     },
-    "required": ["smtp_password", "smtp_service", "smtp_email"]
+    "required": ["smtp_password", "smtp_service", "smtp_email", "mailing_hub_email"]
 }

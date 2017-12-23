@@ -2,6 +2,7 @@ module.exports = [
   'backofficeBaseUri',
   'mongodbUri',
   'websiteBuilderUri',
+  'mailingHubEmail',
   'smtpService',
   'smtpEmail',
   'smtpPassword',

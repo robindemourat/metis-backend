@@ -20,7 +20,8 @@ const {
 
   smtpService,
   smtpEmail,
-  smtpPassword
+  smtpPassword,
+  mailingHubEmail,
   // facebook_access_token
 } = getConfig();
 
@@ -34,7 +35,8 @@ const twitterConfig = {
 const mailConfig = {
   smtp_service: smtpService,
   smtp_password: smtpPassword,
-  smtp_email: smtpEmail
+  smtp_email: smtpEmail,
+  mailing_hub_email: mailingHubEmail
 };
 
 /**

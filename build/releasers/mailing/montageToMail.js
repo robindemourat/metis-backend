@@ -6,7 +6,7 @@ Object.defineProperty(exports, "__esModule", {
 
 var cov_211w85fik5 = function () {
   var path = '/Users/rawbin/Documents/Projets/collaborations/ensad-publishing/prototype/plurishing-backend/src/releasers/mailing/montageToMail.js',
-      hash = '90fefd10efdbcc040255ec0d10984d682cd5f6a2',
+      hash = '8a84d5dca5acdaace11d78cb59b775be744350d7',
       global = new Function('return this')(),
       gcv = '__coverage__',
       coverageData = {
@@ -39,7 +39,7 @@ var cov_211w85fik5 = function () {
         },
         end: {
           line: 9,
-          column: 99
+          column: 117
         }
       },
       '3': {
@@ -69,7 +69,7 @@ var cov_211w85fik5 = function () {
         loc: {
           start: {
             line: 7,
-            column: 81
+            column: 100
           },
           end: {
             line: 20,
@@ -112,27 +112,27 @@ var cov_211w85fik5 = function () {
           },
           end: {
             line: 9,
-            column: 99
+            column: 117
           }
         },
         type: 'cond-expr',
         locations: [{
           start: {
             line: 9,
-            column: 48
+            column: 66
           },
           end: {
             line: 9,
-            column: 70
+            column: 88
           }
         }, {
           start: {
             line: 9,
-            column: 73
+            column: 91
           },
           end: {
             line: 9,
-            column: 99
+            column: 117
           }
         }],
         line: 9
@@ -181,7 +181,8 @@ var _oyVey2 = _interopRequireDefault(_oyVey);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function montageToMail(montage, composition, asset, _ref) {
-  var smtp_email = _ref.smtp_email;
+  var smtp_email = _ref.smtp_email,
+      mailing_hub_email = _ref.mailing_hub_email;
   cov_211w85fik5.f[0]++;
   cov_211w85fik5.s[0]++;
 
@@ -190,11 +191,11 @@ function montageToMail(montage, composition, asset, _ref) {
     cov_211w85fik5.s[1]++;
     return _react2.default.createElement(_MicropublicationMail2.default, { montage: montage, composition: composition });
   };
-  var title = (cov_211w85fik5.s[2]++, montage.metadata.title.length ? (cov_211w85fik5.b[0][0]++, montage.metadata.title) : (cov_211w85fik5.b[0][1]++, composition.metadata.title));
+  var title = (cov_211w85fik5.s[2]++, '[Plurishing] ' + montage.metadata.title.length ? (cov_211w85fik5.b[0][0]++, montage.metadata.title) : (cov_211w85fik5.b[0][1]++, composition.metadata.title));
   cov_211w85fik5.s[3]++;
   return {
     from: '"Plurishing \uD83D\uDC7B" <' + smtp_email + '>',
-    to: ['robin.demourat@gmail.com'],
+    to: [mailing_hub_email],
     subject: title,
     html: _oyVey2.default.renderTemplate(_react2.default.createElement(Template, null), {
       title: title,

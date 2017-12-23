@@ -6,6 +6,8 @@ module.exports = {
   smtpService: "Gmail",
   smtpEmail: "mlkmlkjmlkjmlkjmlkjmlkj@gmail.com",
   smtpPassword: "mlkjmlkj",
+  mailingHubEmail: "crouton.depain@gmail.com",
+
 
   secret: "patéencroute",
 

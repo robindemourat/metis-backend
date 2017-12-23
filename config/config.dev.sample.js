@@ -10,12 +10,10 @@ module.exports = {
   websiteBuilderUri: '',
 
 
-  smtpHost: "smtp.ethereal.email",
-  smtpPort: 587,
-
   smtpService: "Gmail",
   smtpEmail: "mlkjmlkj.mlk@gmail.com",
   smtpPassword: "xxxxxxxx",
+  mailingHubEmail: "my-diffusion-mail@gmail.com",
 
   secret: "patéencroute",
 

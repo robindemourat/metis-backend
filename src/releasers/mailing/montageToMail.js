@@ -4,12 +4,12 @@ import MailContent from 'plurishing-shared/dist/components/views/micro/Micropubl
 import Oy from 'oy-vey';
 
 
-export default function montageToMail(montage, composition, asset, {smtp_email}) {
+export default function montageToMail(montage, composition, asset, {smtp_email, mailing_hub_email}) {
   const Template = () => (<MailContent montage={montage} composition={composition} />);
-  const title = montage.metadata.title.length ? montage.metadata.title : composition.metadata.title;
+  const title = '[Plurishing] ' + montage.metadata.title.length ? montage.metadata.title : composition.metadata.title;
   return {
     from: `"Plurishing 👻" <${smtp_email}>`,
-    to: ['robin.demourat@gmail.com'],
+    to: [mailing_hub_email],
     subject: title,
     html: Oy.renderTemplate(<Template />, {
       title,
