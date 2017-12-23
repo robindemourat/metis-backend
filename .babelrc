@@ -8,6 +8,10 @@
   "presets": ["es2015", "stage-0", "react"],
   "plugins": [
     "transform-runtime",
-    "istanbul"
+    "istanbul",
+    "transform-decorators-legacy",
+    "transform-decorators",
+    "transform-object-rest-spread",
+    "transform-class-properties"
   ]
 }

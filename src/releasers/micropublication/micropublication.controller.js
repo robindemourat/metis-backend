@@ -21,7 +21,7 @@ const {
   smtpService,
   smtpEmail,
   smtpPassword,
-  mailingHubEmail,
+  mailingHubEmail
   // facebook_access_token
 } = getConfig();
 
