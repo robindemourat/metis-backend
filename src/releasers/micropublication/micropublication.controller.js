@@ -9,13 +9,18 @@ import {dal as compositionDal} from '../../components/compositions';
 import  {service as html2img} from '../../services/html2img';
 
 import {tweet, montageToTweet} from '../twitter';
+import {mail, montageToMail} from '../mailing';
 
 import {getConfig} from '../../utils/config';
 const {
   twitter_consumer_key,
   twitter_consumer_secret,
   twitter_access_token,
-  twitter_access_token_secret
+  twitter_access_token_secret,
+
+  smtpService,
+  smtpEmail,
+  smtpPassword
   // facebook_access_token
 } = getConfig();
 
@@ -24,6 +29,12 @@ const twitterConfig = {
  consumer_secret: twitter_consumer_secret,
  access_token: twitter_access_token,
  access_token_secret: twitter_access_token_secret
+};
+
+const mailConfig = {
+  smtp_service: smtpService,
+  smtp_password: smtpPassword,
+  smtp_email: smtpEmail
 };
 
 /**
@@ -63,6 +74,9 @@ export const release = (diffusion) => {
       const resources = montage.resources;
       if (resources) {
         // do stuff to fetch them
+        /**
+         * @todo implement resource fetching when adding resources images in micropublication
+         */
       } else {
         return Promise.resolve();
       }
@@ -100,14 +114,17 @@ export const release = (diffusion) => {
       const targets = diffusion.parameters.targets;
       const operations = targets.map(targetId => {
         let tweetContents;
+        let mailContents;
         switch(targetId) {
 
           case 'twitter':
             tweetContents = montageToTweet(montage, composition, assets);
             return tweet(tweetContents, twitterConfig);
 
-          case 'facebook':
           case 'mailing':
+            mailContents = montageToMail(montage, composition, assets, mailConfig);
+            return mail(mailContents, mailConfig);
+          case 'facebook':
           default:
             return Promise.resolve();
         }

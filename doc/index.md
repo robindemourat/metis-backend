@@ -718,6 +718,13 @@ Sends a personal feed's status message
 | contents | object |  | the contents to send |
 | params | object |  | connection params (credentials, ...) |
 
+## `mail(contents: object, params: object): Promise`
+
+| Name | Type | Attribute | Description |
+| --- | --- | --- | --- |
+| contents | object |  | the contents to send |
+| params | object |  | connection params (credentials, ...) |
+
 ## `renderAbstractAsHtml()`
 
 | Name | Type | Attribute | Description |

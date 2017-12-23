@@ -1,0 +1,20 @@
+{
+    "id": "/mail.paramters.schema.json",
+    "title": "Mailing action parameters",
+    "description": "Mail parameters schema",
+    "$schema": "http://json-schema.org/draft-06/schema#",
+    "type": "object",
+    "properties":
+    {
+      "smtp_password": {
+        "type": "string"
+      },
+      "smtp_service": {
+        "type": "string"
+      },
+      "smtp_email": {
+        "type": "string"
+      }
+    },
+    "required": ["smtp_password", "smtp_service", "smtp_email"]
+}

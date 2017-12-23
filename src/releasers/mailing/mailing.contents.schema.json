@@ -1,0 +1,30 @@
+{
+    "id": "/mailing.contents.schema.json",
+    "title": "Mailing action contents",
+    "description": "Mail contents schema",
+    "$schema": "http://json-schema.org/draft-06/schema#",
+    "type": "object",
+    "properties":
+    {
+      "from": {
+        "type": "string",
+        "description": "email of the sender"
+      },
+      "to": {
+        "type": "array",
+        "description": "recipees of the email",
+        "items": {
+          "type": "string"
+        }
+      },
+      "subject": {
+        "type": "string",
+        "description": "subject of the email"
+      },
+      "html": {
+        "type": "string",
+        "description": "html of the mail body"
+      }
+    },
+    "required": ["from", "to", "subject", "html"]
+}
