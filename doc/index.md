@@ -709,10 +709,41 @@ Deletes a user
 | --- | --- | --- | --- |
 | user | object |  | user to delete |
 
+## `status(contents: object, params: object): Promise`
+
+Sends a personal feed's status message
+
+| Name | Type | Attribute | Description |
+| --- | --- | --- | --- |
+| contents | object |  | the contents to send |
+| params | object |  | connection params (credentials, ...) |
+
+## `renderAbstractAsHtml()`
+
+| Name | Type | Attribute | Description |
+| --- | --- | --- | --- |
+
 ## `release()`
 
 | Name | Type | Attribute | Description |
 | --- | --- | --- | --- |
+
+## `makeText()`
+
+| Name | Type | Attribute | Description |
+| --- | --- | --- | --- |
+
+## `montageToTweet()`
+
+| Name | Type | Attribute | Description |
+| --- | --- | --- | --- |
+
+## `tweet(contents: object, params: object): Promise`
+
+| Name | Type | Attribute | Description |
+| --- | --- | --- | --- |
+| contents | object |  | the contents to send |
+| params | object |  | connection params (credentials, ...) |
 
 ## `controller()`
 
@@ -827,3 +858,20 @@ Sends an email
 
 | Name | Type | Attribute | Description |
 | --- | --- | --- | --- |
+
+## `$args(func: function): array`
+
+Retrieves the arguments name of a function
+
+| Name | Type | Attribute | Description |
+| --- | --- | --- | --- |
+| func | function |  | the function to analyse |
+
+## `transformJSON(inputData: object|Array, inputSchema: object, outputSchema: object, transformFunction: function): Promise`
+
+| Name | Type | Attribute | Description |
+| --- | --- | --- | --- |
+| inputData | object|Array |  | the original data to convert |
+| inputSchema | object |  | the schema of original data to convert in json-schema |
+| outputSchema | object |  | the schema of the resulting data to convert in json-schema |
+| transformFunction | function |  | a function taking data as argument and returning new data This transform function can : - return a json object resolving with a json object - return a promise resolving with a json object - provide a node-js style callback as second argument |

@@ -1,0 +1,15 @@
+{
+    "id": "/facebook.status.schema.json",
+    "title": "Facebook status post contents",
+    "description": "Facebook status post schema",
+    "$schema": "http://json-schema.org/draft-06/schema#",
+    "type": "object",
+    "properties":
+    {
+        "message": {
+            "type": "string",
+            "description": "the status text"
+        }
+    },
+    "required": ["message"]
+}

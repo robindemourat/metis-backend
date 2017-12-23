@@ -42,24 +42,25 @@ export const getDiffusion = (req, res) =>
  * @param {object} res - the resource of query
  */
 export const createDiffusion = (req, res) => {
+  // normally diffusion should have a 'waiting' status when provided
   const diff = {
     ...req.body,
-    type: 'diffusion',
     status: 'processing'
   };
   let diffId;
   // create the diffusion
   createDiffusionDAL(diff)
-  // return the diffusion
+  // return the diffusion with 'processing' status
   .then(({id}) => {
     diffId = id;
     return getDiffusionDAL({id});
   })
   .then(diffusion => res.json(diffusion))
+  // launch diffusion operations
   .then(() => {
     switch(diff.montage_type) {
       case 'micropublication':
-        return micropublicationController.release(diff.montage_id);
+        return micropublicationController.release(diff);
       default:
         return Promise.resolve();
     }
@@ -68,7 +69,8 @@ export const createDiffusion = (req, res) => {
   .then(() =>
     updateDiffusionDAL(diffId, {...diff, status: 'success'})
   )
-  .catch(e =>
+  // error
+  .catch(() =>
     updateDiffusionDAL(diffId, {...diff, status: 'error'})
   );
 };

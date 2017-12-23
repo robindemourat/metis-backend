@@ -21,5 +21,11 @@ module.exports = {
 
   key: fs.readFileSync('ssl/key.pem'),
   csr: fs.readFileSync('ssl/csr.pem'),
-  cert: fs.readFileSync('ssl/cert.pem')
+  cert: fs.readFileSync('ssl/cert.pem'),
+
+  "twitter_consumer_key": "xxxx",
+  "twitter_consumer_secret": "xxxx",
+  "twitter_access_token": "xxx-xxxx",
+  "twitter_access_token_secret": "xxxxxx",
+  "facebook_access_token": "xxxxxxxxx"
 }

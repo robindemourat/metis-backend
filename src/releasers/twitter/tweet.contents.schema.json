@@ -1,0 +1,38 @@
+{
+    "id": "/tweet.contents.schema.json",
+    "title": "Twitter's tweet action contents",
+    "description": "Twitter contents schema",
+    "$schema": "http://json-schema.org/draft-06/schema#",
+    "type": "object",
+    "properties":
+    {
+        "status": {
+            "type": "string",
+            "description": "the tweet status"
+        },
+        "media": {
+          "type": "object",
+          "description": "a media to attach to the tweet",
+          "properties": {
+            "type": {
+              "type": "string",
+              "description": "the type of media to attach to the tweet",
+              "enum": ["image"]
+            },
+            "description": {
+              "type": "string",
+              "description": "a description/alt text for the media"
+            },
+            "uri": {
+              "type": "string",
+              "description": "the uri of the media if appropriate"
+            },
+            "path": {
+              "type": "string",
+              "description": "the absolute path of the media to attach if appropriate"
+            }
+          }
+        }
+    },
+    "required": ["status"]
+}

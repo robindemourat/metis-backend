@@ -1,0 +1,14 @@
+{
+    "id": "/twitter-parameters.json",
+    "title": "Twitter parameters",
+    "description": "Twitter connection parameters schema",
+    "$schema": "http://json-schema.org/draft-06/schema#",
+    "type": "object",
+    "properties":
+    {
+        "access_token": {
+            "type": "string"
+        }
+    },
+    "required": ["access_token"]
+}

@@ -7,5 +7,11 @@ module.exports = {
   smtpEmail: "mlkmlkjmlkjmlkjmlkjmlkj@gmail.com",
   smtpPassword: "mlkjmlkj",
 
-  secret: "patéencroute"
+  secret: "patéencroute",
+
+  "twitter_consumer_key": "xxxx",
+  "twitter_consumer_secret": "xxx",
+  "twitter_access_token": "xxx-xxxxx",
+  "twitter_access_token_secret": "xxxxx",
+  "facebook_access_token": "xxxxxxxxx"
 }
