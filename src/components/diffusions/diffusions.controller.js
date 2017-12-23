@@ -12,6 +12,9 @@ import {
   deleteDiffusion as deleteDiffusionDAL
 } from './diffusions.dal';
 
+import {controller as micropublicationController} from '../../releasers/micropublication';
+
+
 /**
  * Get a list of diffusions
  * @param {object} req - the request of query
@@ -38,15 +41,37 @@ export const getDiffusion = (req, res) =>
  * @param {object} req - the request of query
  * @param {object} res - the resource of query
  */
-export const createDiffusion = (req, res) =>
+export const createDiffusion = (req, res) => {
+  const diff = {
+    ...req.body,
+    type: 'diffusion',
+    status: 'processing'
+  };
+  let diffId;
   // create the diffusion
-  createDiffusionDAL({
-          ...req.body,
-          type: 'diffusion'
-        })
+  createDiffusionDAL(diff)
   // return the diffusion
-  .then(({id}) => getDiffusionDAL({id}))
-  .then(diffusion => res.json(diffusion));
+  .then(({id}) => {
+    diffId = id;
+    return getDiffusionDAL({id});
+  })
+  .then(diffusion => res.json(diffusion))
+  .then(() => {
+    switch(diff.montage_type) {
+      case 'micropublication':
+        return micropublicationController.release(diff.montage_id);
+      default:
+        return Promise.resolve();
+    }
+  })
+  // success
+  .then(() =>
+    updateDiffusionDAL(diffId, {...diff, status: 'success'})
+  )
+  .catch(e =>
+    updateDiffusionDAL(diffId, {...diff, status: 'error'})
+  );
+};
 
 /**
  * Update a single diffusion

@@ -709,6 +709,11 @@ Deletes a user
 | --- | --- | --- | --- |
 | user | object |  | user to delete |
 
+## `release()`
+
+| Name | Type | Attribute | Description |
+| --- | --- | --- | --- |
+
 ## `controller()`
 
 | Name | Type | Attribute | Description |
