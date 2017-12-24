@@ -319,7 +319,7 @@ Creates a new deliverable
 
 ## `updateDeliverable(id: string, deliverable: object, data: object): Promise`
 
-Updates an deliverable
+Updates a deliverable
 
 | Name | Type | Attribute | Description |
 | --- | --- | --- | --- |
@@ -709,6 +709,16 @@ Deletes a user
 | --- | --- | --- | --- |
 | user | object |  | user to delete |
 
+## `release()`
+
+| Name | Type | Attribute | Description |
+| --- | --- | --- | --- |
+
+## `publish()`
+
+| Name | Type | Attribute | Description |
+| --- | --- | --- | --- |
+
 ## `status(contents: object, params: object): Promise`
 
 Sends a personal feed's status message
@@ -735,6 +745,16 @@ Sends a personal feed's status message
 | Name | Type | Attribute | Description |
 | --- | --- | --- | --- |
 
+## `publish()`
+
+| Name | Type | Attribute | Description |
+| --- | --- | --- | --- |
+
+## `release()`
+
+| Name | Type | Attribute | Description |
+| --- | --- | --- | --- |
+
 ## `makeText()`
 
 | Name | Type | Attribute | Description |
@@ -751,6 +771,11 @@ Sends a personal feed's status message
 | --- | --- | --- | --- |
 | contents | object |  | the contents to send |
 | params | object |  | connection params (credentials, ...) |
+
+## `publish()`
+
+| Name | Type | Attribute | Description |
+| --- | --- | --- | --- |
 
 ## `controller()`
 
@@ -810,6 +835,16 @@ Checks whether string matches hash
 | --- | --- | --- | --- |
 | pwd | string |  |
 | hash | string |  |
+
+## `mapify()`
+
+| Name | Type | Attribute | Description |
+| --- | --- | --- | --- |
+
+## `fetchMontageDependencies()`
+
+| Name | Type | Attribute | Description |
+| --- | --- | --- | --- |
 
 ## `welcomeEmail()`
 

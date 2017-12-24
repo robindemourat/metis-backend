@@ -92,6 +92,7 @@
     "plurishing-schemas": "git+https://github.com/robindemourat/plurishing-schemas.git",
     "plurishing-shared": "git+https://github.com/robindemourat/plurishing-shared.git",
     "pm2": "^2.8.0",
+    "prince": "^1.4.7",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
     "twit": "^2.2.9",

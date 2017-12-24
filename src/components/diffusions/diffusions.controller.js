@@ -13,6 +13,8 @@ import {
 } from './diffusions.dal';
 
 import {controller as micropublicationController} from '../../releasers/micropublication';
+import {controller as staticpublicationController} from '../../releasers/staticpublication';
+import {controller as dynamicpublicationController} from '../../releasers/dynamicpublication';
 
 
 /**
@@ -61,6 +63,10 @@ export const createDiffusion = (req, res) => {
     switch(diff.montage_type) {
       case 'micropublication':
         return micropublicationController.release(diff);
+      case 'static':
+        return staticpublicationController.release(diff);
+      case 'dynamic':
+        return dynamicpublicationController.release(diff);
       default:
         return Promise.resolve();
     }

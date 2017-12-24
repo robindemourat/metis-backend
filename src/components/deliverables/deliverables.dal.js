@@ -138,7 +138,7 @@ export const createDeliverable = (deliverable, data) => {
 };
 
 /**
- * Updates an deliverable
+ * Updates a deliverable
  * @param {string} id - id of the deliverable
  * @param {object} deliverable - deliverable data to update
  * @param {object} data - attachment data to update

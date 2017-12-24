@@ -1600,7 +1600,7 @@
     "__docId__": 59,
     "kind": "file",
     "name": "src/components/deliverables/deliverables.dal.js",
-    "content": "/**\n * Plurishing-backend\n * =======\n * Deliverable data access layer\n */\nimport {lookup} from 'mime-types';\n\nimport db from '../../utils/plugDb';\n\nimport {Deliverable as schema} from 'plurishing-schemas';\n\nimport design from './deliverables.design';\nimport {addDesign} from '../../utils/couchdb';\nimport {dataIsValid} from '../../utils/schemas';\n\n/**\n * Registering couchdb views related to deliverables objects\n */\naddDesign(db, 'deliverables', design);\n\n\n/**\n * Gets a list of deliverables with optional query params\n * @param {object} parameters\n * @return {Promise}\n */\nexport const getDeliverables = ({\n  query = {},\n  include_docs = true\n}) => {\n  if (query.filename) {\n    return db.viewAsync('deliverables', 'by_filename', {\n      key: query.filename,\n      include_docs\n    }).then(\n      results =>\n        new Promise(\n          resolve =>\n            resolve(\n              results.rows.map(doc => doc.doc)\n            )\n          )\n    );\n  } else {\n    return db.viewAsync('deliverables', 'by_filename', {\n      include_docs\n    }).then(\n      results =>\n        new Promise(\n          resolve =>\n            resolve(\n              results.rows.map(doc => doc.doc)\n            )\n          )\n    );\n  }\n};\n\n/**\n * Gets a deliverable with a specific id or email\n * @param {object} parameters\n * @return {Promise}\n */\nexport const getDeliverable = ({\n  id\n}) =>\n  db.getAsync(id)\n    .then(deliverable =>\n      // verify that data is compliant before returning it\n      dataIsValid(deliverable, schema)\n    );\n\n/**\n * Gets a deliverable with a specific id or email\n * @param {object} parameters\n * @return {Promise}\n */\nexport const getDeliverableAttachment = ({\n  id,\n  filename\n}) =>\n  new Promise((resolve, reject) => {\n    db.attachment.get(id, filename, (err, body) => {\n      if (err) {\n        reject(err);\n      } else {\n        resolve({data: body, mimetype: lookup(filename)});\n      }\n    });\n  });\n\n\n/**\n * Creates a new deliverable\n * @param {object} deliverable\n * @param {object} data\n * @return {Promise}\n */\nexport const createDeliverable = (deliverable, data) => {\n  const {filename} = deliverable;\n  const mimeType = lookup(filename);\n  // validate data\n  return dataIsValid(deliverable, schema)\n  // create document\n  .then(() =>\n    db.insertAsync({\n      ...deliverable,\n      mimetype: mimeType\n    })\n  )\n  // add attachment\n  .then(op => {\n    const {id, rev} = op;\n\n    return new Promise((resolve, reject) => {\n      db.attachment.insert(\n        // doc id\n        id,\n        // attachment filename\n        filename,\n        // attachment data\n        data,\n        // doc mimetype\n        mimeType,\n        // doc rev\n        {rev},\n        // callback\n        (err, body) => {\n          if (err) {\n            reject(err);\n          } else {\n            resolve(body);\n          }\n        }\n      );\n    });\n  });\n};\n\n/**\n * Updates an deliverable\n * @param {string} id - id of the deliverable\n * @param {object} deliverable - deliverable data to update\n * @param {object} data - attachment data to update\n * @return {Promise}\n */\nexport const updateDeliverable = (deliverableId, {filename, mimetype}, attachmentData) => {\n  // get existing document\n  return db.getAsync(deliverableId)\n          // then update document\n          .then(deliverable =>\n            db.insertAsync({\n              ...deliverable,\n              filename,\n              mimetype,\n              rev: deliverable._rev\n            })\n          )\n          // destroy previous attachments\n          .then(() =>\n            db.getAsync(deliverableId)\n          )\n          .then(deliverable => {\n            const previousAttachment =  deliverable._attachments && Object.keys(deliverable._attachments)[0];\n            return new Promise((resolve, reject) => {\n              if (previousAttachment) {\n                db.attachment.destroy(deliverable._id, encodeURIComponent(previousAttachment), {rev: deliverable._rev},\n                  (err, body) => {\n                    if (err) {\n                      reject(err);\n                    } else resolve(body);\n                  });\n              }\n            });\n          })\n          // add new attachment\n          .then(op => {\n            const {id, rev} = op;\n\n            return new Promise((resolve, reject) => {\n              db.attachment.insert(\n                // doc id\n                id,\n                // attachment filename\n                filename,\n                // attachment data\n                attachmentData,\n                // doc mimetype\n                mimetype,\n                // doc rev\n                {rev},\n                // callback\n                (err, body) => {\n                  if (err) {\n                    reject(err);\n                  } else {\n                    resolve(body);\n                  }\n                }\n              );\n            });\n          });\n};\n\n/**\n * Deletes a deliverable\n * @param {object} deliverable - deliverable to delete\n * @return {Promise}\n */\nexport const deleteDeliverable = ({_id}) =>\n  db.getAsync(_id)\n    .then(deliverable => db.destroyAsync(_id, deliverable._rev));\n",
+    "content": "/**\n * Plurishing-backend\n * =======\n * Deliverable data access layer\n */\nimport {lookup} from 'mime-types';\n\nimport db from '../../utils/plugDb';\n\nimport {Deliverable as schema} from 'plurishing-schemas';\n\nimport design from './deliverables.design';\nimport {addDesign} from '../../utils/couchdb';\nimport {dataIsValid} from '../../utils/schemas';\n\n/**\n * Registering couchdb views related to deliverables objects\n */\naddDesign(db, 'deliverables', design);\n\n\n/**\n * Gets a list of deliverables with optional query params\n * @param {object} parameters\n * @return {Promise}\n */\nexport const getDeliverables = ({\n  query = {},\n  include_docs = true\n}) => {\n  if (query.filename) {\n    return db.viewAsync('deliverables', 'by_filename', {\n      key: query.filename,\n      include_docs\n    }).then(\n      results =>\n        new Promise(\n          resolve =>\n            resolve(\n              results.rows.map(doc => doc.doc)\n            )\n          )\n    );\n  } else {\n    return db.viewAsync('deliverables', 'by_filename', {\n      include_docs\n    }).then(\n      results =>\n        new Promise(\n          resolve =>\n            resolve(\n              results.rows.map(doc => doc.doc)\n            )\n          )\n    );\n  }\n};\n\n/**\n * Gets a deliverable with a specific id or email\n * @param {object} parameters\n * @return {Promise}\n */\nexport const getDeliverable = ({\n  id\n}) =>\n  db.getAsync(id)\n    .then(deliverable =>\n      // verify that data is compliant before returning it\n      dataIsValid(deliverable, schema)\n    );\n\n/**\n * Gets a deliverable with a specific id or email\n * @param {object} parameters\n * @return {Promise}\n */\nexport const getDeliverableAttachment = ({\n  id,\n  filename\n}) =>\n  new Promise((resolve, reject) => {\n    db.attachment.get(id, filename, (err, body) => {\n      if (err) {\n        reject(err);\n      } else {\n        resolve({data: body, mimetype: lookup(filename)});\n      }\n    });\n  });\n\n\n/**\n * Creates a new deliverable\n * @param {object} deliverable\n * @param {object} data\n * @return {Promise}\n */\nexport const createDeliverable = (deliverable, data) => {\n  const {filename} = deliverable;\n  const mimeType = lookup(filename);\n  // validate data\n  return dataIsValid(deliverable, schema)\n  // create document\n  .then(() =>\n    db.insertAsync({\n      ...deliverable,\n      mimetype: mimeType\n    })\n  )\n  // add attachment\n  .then(op => {\n    const {id, rev} = op;\n\n    return new Promise((resolve, reject) => {\n      db.attachment.insert(\n        // doc id\n        id,\n        // attachment filename\n        filename,\n        // attachment data\n        data,\n        // doc mimetype\n        mimeType,\n        // doc rev\n        {rev},\n        // callback\n        (err, body) => {\n          if (err) {\n            reject(err);\n          } else {\n            resolve(body);\n          }\n        }\n      );\n    });\n  });\n};\n\n/**\n * Updates a deliverable\n * @param {string} id - id of the deliverable\n * @param {object} deliverable - deliverable data to update\n * @param {object} data - attachment data to update\n * @return {Promise}\n */\nexport const updateDeliverable = (deliverableId, {filename, mimetype}, attachmentData) => {\n  // get existing document\n  return db.getAsync(deliverableId)\n          // then update document\n          .then(deliverable =>\n            db.insertAsync({\n              ...deliverable,\n              filename,\n              mimetype,\n              rev: deliverable._rev\n            })\n          )\n          // destroy previous attachments\n          .then(() =>\n            db.getAsync(deliverableId)\n          )\n          .then(deliverable => {\n            const previousAttachment =  deliverable._attachments && Object.keys(deliverable._attachments)[0];\n            return new Promise((resolve, reject) => {\n              if (previousAttachment) {\n                db.attachment.destroy(deliverable._id, encodeURIComponent(previousAttachment), {rev: deliverable._rev},\n                  (err, body) => {\n                    if (err) {\n                      reject(err);\n                    } else resolve(body);\n                  });\n              }\n            });\n          })\n          // add new attachment\n          .then(op => {\n            const {id, rev} = op;\n\n            return new Promise((resolve, reject) => {\n              db.attachment.insert(\n                // doc id\n                id,\n                // attachment filename\n                filename,\n                // attachment data\n                attachmentData,\n                // doc mimetype\n                mimetype,\n                // doc rev\n                {rev},\n                // callback\n                (err, body) => {\n                  if (err) {\n                    reject(err);\n                  } else {\n                    resolve(body);\n                  }\n                }\n              );\n            });\n          });\n};\n\n/**\n * Deletes a deliverable\n * @param {object} deliverable - deliverable to delete\n * @return {Promise}\n */\nexport const deleteDeliverable = ({_id}) =>\n  db.getAsync(_id)\n    .then(deliverable => db.destroyAsync(_id, deliverable._rev));\n",
     "static": true,
     "longname": "/Users/rawbin/Documents/Projets/collaborations/ensad-publishing/prototype/plurishing-backend/src/components/deliverables/deliverables.dal.js",
     "access": null,
@@ -1774,7 +1774,7 @@
     "export": true,
     "importPath": "plurishing-backend/src/components/deliverables/deliverables.dal.js",
     "importStyle": "{updateDeliverable}",
-    "description": "Updates an deliverable",
+    "description": "Updates a deliverable",
     "lineNumber": 147,
     "params": [
       {
@@ -1901,7 +1901,7 @@
     "__docId__": 70,
     "kind": "file",
     "name": "src/components/diffusions/diffusions.controller.js",
-    "content": "// /**\n//  * Plurishing-backend\n//  * =======\n//  * Diffusions component controller\n//  */\n\nimport {\n  getDiffusions as getDiffusionsDAL,\n  getDiffusion as getDiffusionDAL,\n  createDiffusion as createDiffusionDAL,\n  updateDiffusion as updateDiffusionDAL,\n  deleteDiffusion as deleteDiffusionDAL\n} from './diffusions.dal';\n\nimport {controller as micropublicationController} from '../../releasers/micropublication';\n\n\n/**\n * Get a list of diffusions\n * @param {object} req - the request of query\n * @param {object} res - the resource of query\n * @todo add filters handling through req queries\n */\nexport const getDiffusions = (req, res) =>\n  res.json(getDiffusionsDAL({}));\n\n/**\n * Get a single diffusion\n * @param {object} req - the request of query\n * @param {object} res - the resource of query\n */\nexport const getDiffusion = (req, res) =>\n  res.json(\n    getDiffusionDAL({\n      id: req.params.id\n    })\n  );\n\n/**\n * Create a single diffusion\n * @param {object} req - the request of query\n * @param {object} res - the resource of query\n */\nexport const createDiffusion = (req, res) => {\n  // normally diffusion should have a 'waiting' status when provided\n  const diff = {\n    ...req.body,\n    status: 'processing'\n  };\n  let diffId;\n  // create the diffusion\n  createDiffusionDAL(diff)\n  // return the diffusion with 'processing' status\n  .then(({id}) => {\n    diffId = id;\n    return getDiffusionDAL({id});\n  })\n  .then(diffusion => res.json(diffusion))\n  // launch diffusion operations\n  .then(() => {\n    switch(diff.montage_type) {\n      case 'micropublication':\n        return micropublicationController.release(diff);\n      default:\n        return Promise.resolve();\n    }\n  })\n  // success\n  .then(() =>\n    updateDiffusionDAL(diffId, {...diff, status: 'success'})\n  )\n  // error\n  .catch(() =>\n    updateDiffusionDAL(diffId, {...diff, status: 'error'})\n  );\n};\n\n/**\n * Update a single diffusion\n * @param {object} req - the request of query\n * @param {object} res - the resource of query\n */\nexport const updateDiffusion = (req, res) =>\n  res.json(\n    // update the diffusion\n    updateDiffusionDAL(\n      req.params.id,\n      req.body, // for now we perform a full replace (vs merge with $set)\n    )\n    // return the diffusion\n    .then(({id}) => getDiffusionDAL({id}))\n    .then(diffusion => res.json(diffusion))\n  );\n\n/**\n * Delete a single diffusion\n * @param {object} req - the request of query\n * @param {object} res - the resource of query\n */\nexport const deleteDiffusion = (req, res) =>\n  res.json(deleteDiffusionDAL({_id: req.params.id}));\n\n",
+    "content": "// /**\n//  * Plurishing-backend\n//  * =======\n//  * Diffusions component controller\n//  */\n\nimport {\n  getDiffusions as getDiffusionsDAL,\n  getDiffusion as getDiffusionDAL,\n  createDiffusion as createDiffusionDAL,\n  updateDiffusion as updateDiffusionDAL,\n  deleteDiffusion as deleteDiffusionDAL\n} from './diffusions.dal';\n\nimport {controller as micropublicationController} from '../../releasers/micropublication';\nimport {controller as staticpublicationController} from '../../releasers/staticpublication';\nimport {controller as dynamicpublicationController} from '../../releasers/dynamicpublication';\n\n\n/**\n * Get a list of diffusions\n * @param {object} req - the request of query\n * @param {object} res - the resource of query\n * @todo add filters handling through req queries\n */\nexport const getDiffusions = (req, res) =>\n  res.json(getDiffusionsDAL({}));\n\n/**\n * Get a single diffusion\n * @param {object} req - the request of query\n * @param {object} res - the resource of query\n */\nexport const getDiffusion = (req, res) =>\n  res.json(\n    getDiffusionDAL({\n      id: req.params.id\n    })\n  );\n\n/**\n * Create a single diffusion\n * @param {object} req - the request of query\n * @param {object} res - the resource of query\n */\nexport const createDiffusion = (req, res) => {\n  // normally diffusion should have a 'waiting' status when provided\n  const diff = {\n    ...req.body,\n    status: 'processing'\n  };\n  let diffId;\n  // create the diffusion\n  createDiffusionDAL(diff)\n  // return the diffusion with 'processing' status\n  .then(({id}) => {\n    diffId = id;\n    return getDiffusionDAL({id});\n  })\n  .then(diffusion => res.json(diffusion))\n  // launch diffusion operations\n  .then(() => {\n    switch(diff.montage_type) {\n      case 'micropublication':\n        return micropublicationController.release(diff);\n      case 'static':\n        return staticpublicationController.release(diff);\n      case 'dynamic':\n        return dynamicpublicationController.release(diff);\n      default:\n        return Promise.resolve();\n    }\n  })\n  // success\n  .then(() =>\n    updateDiffusionDAL(diffId, {...diff, status: 'success'})\n  )\n  // error\n  .catch(() =>\n    updateDiffusionDAL(diffId, {...diff, status: 'error'})\n  );\n};\n\n/**\n * Update a single diffusion\n * @param {object} req - the request of query\n * @param {object} res - the resource of query\n */\nexport const updateDiffusion = (req, res) =>\n  res.json(\n    // update the diffusion\n    updateDiffusionDAL(\n      req.params.id,\n      req.body, // for now we perform a full replace (vs merge with $set)\n    )\n    // return the diffusion\n    .then(({id}) => getDiffusionDAL({id}))\n    .then(diffusion => res.json(diffusion))\n  );\n\n/**\n * Delete a single diffusion\n * @param {object} req - the request of query\n * @param {object} res - the resource of query\n */\nexport const deleteDiffusion = (req, res) =>\n  res.json(deleteDiffusionDAL({_id: req.params.id}));\n\n",
     "static": true,
     "longname": "/Users/rawbin/Documents/Projets/collaborations/ensad-publishing/prototype/plurishing-backend/src/components/diffusions/diffusions.controller.js",
     "access": null,
@@ -1922,7 +1922,7 @@
     "importPath": "plurishing-backend/src/components/diffusions/diffusions.controller.js",
     "importStyle": "{getDiffusions}",
     "description": "Get a list of diffusions",
-    "lineNumber": 24,
+    "lineNumber": 26,
     "todo": [
       "add filters handling through req queries"
     ],
@@ -1963,7 +1963,7 @@
     "importPath": "plurishing-backend/src/components/diffusions/diffusions.controller.js",
     "importStyle": "{getDiffusion}",
     "description": "Get a single diffusion",
-    "lineNumber": 32,
+    "lineNumber": 34,
     "params": [
       {
         "nullable": null,
@@ -2001,7 +2001,7 @@
     "importPath": "plurishing-backend/src/components/diffusions/diffusions.controller.js",
     "importStyle": "{createDiffusion}",
     "description": "Create a single diffusion",
-    "lineNumber": 44,
+    "lineNumber": 46,
     "params": [
       {
         "nullable": null,
@@ -2039,7 +2039,7 @@
     "importPath": "plurishing-backend/src/components/diffusions/diffusions.controller.js",
     "importStyle": "{updateDiffusion}",
     "description": "Update a single diffusion",
-    "lineNumber": 83,
+    "lineNumber": 89,
     "params": [
       {
         "nullable": null,
@@ -2077,7 +2077,7 @@
     "importPath": "plurishing-backend/src/components/diffusions/diffusions.controller.js",
     "importStyle": "{deleteDiffusion}",
     "description": "Delete a single diffusion",
-    "lineNumber": 100,
+    "lineNumber": 106,
     "params": [
       {
         "nullable": null,
@@ -3857,6 +3857,73 @@
   {
     "__docId__": 140,
     "kind": "file",
+    "name": "src/releasers/dynamicpublication/dynamicpublication.controller.js",
+    "content": "import {dal as montageDal} from '../../components/montages';\nimport {fetchMontageDependencies} from '../../utils/data';\n\nimport web from '../web';\nimport epub from '../epub';\n\nexport const release = (diffusion) => {\n  return new Promise ((resolve, reject) => {\n    // get related montage\n    montageDal.getMontage({id: diffusion.montage_id})\n      .then(montage => {\n        // fetch montage dependencies\n        return fetchMontageDependencies(montage);\n      })\n      // register all release operations to perform\n      .then(data => {\n        const targets = diffusion.parameters.targets;\n        const operations = targets.map(targetId => {\n          switch(targetId) {\n\n            case 'web':\n              return web(data, diffusion);\n\n            case 'epub':\n              return epub(data, diffusion, 'dynamic');\n\n            default:\n              return Promise.resolve();\n          }\n        });\n        // execute\n        return Promise.all(operations);\n      })\n      .then(resolve)\n      .catch(reject);\n  });\n};\n",
+    "static": true,
+    "longname": "/Users/rawbin/Documents/Projets/collaborations/ensad-publishing/prototype/plurishing-backend/src/releasers/dynamicpublication/dynamicpublication.controller.js",
+    "access": null,
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 141,
+    "kind": "function",
+    "name": "release",
+    "memberof": "src/releasers/dynamicpublication/dynamicpublication.controller.js",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "src/releasers/dynamicpublication/dynamicpublication.controller.js~release",
+    "access": null,
+    "export": true,
+    "importPath": "plurishing-backend/src/releasers/dynamicpublication/dynamicpublication.controller.js",
+    "importStyle": "{release}",
+    "description": null,
+    "lineNumber": 7,
+    "undocument": true
+  },
+  {
+    "__docId__": 142,
+    "kind": "file",
+    "name": "src/releasers/dynamicpublication/index.js",
+    "content": "export * as controller from './dynamicpublication.controller';\n",
+    "static": true,
+    "longname": "/Users/rawbin/Documents/Projets/collaborations/ensad-publishing/prototype/plurishing-backend/src/releasers/dynamicpublication/index.js",
+    "access": null,
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 143,
+    "kind": "file",
+    "name": "src/releasers/epub/index.js",
+    "content": "\n\nexport default function publish(/* data, diffusion, mode = 'reflowable' */) {\n  return new Promise((resolve) => resolve());\n}\n",
+    "static": true,
+    "longname": "/Users/rawbin/Documents/Projets/collaborations/ensad-publishing/prototype/plurishing-backend/src/releasers/epub/index.js",
+    "access": null,
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 144,
+    "kind": "function",
+    "name": "publish",
+    "memberof": "src/releasers/epub/index.js",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "src/releasers/epub/index.js~publish",
+    "access": null,
+    "export": true,
+    "importPath": "plurishing-backend/src/releasers/epub/index.js",
+    "importStyle": "publish",
+    "description": null,
+    "lineNumber": 3,
+    "undocument": true
+  },
+  {
+    "__docId__": 145,
+    "kind": "file",
     "name": "src/releasers/facebook/facebook.releaser.spec.js",
     "content": "import {expect} from 'chai';\nimport {describe, it} from 'mocha';\n\n// tested functions\nimport {\n  status\n} from './index';\n\ndescribe('facebook releaser', () => {\n  /**\n   * @todo find a way to test the part of the module related to fb api\n   * @body it could be handled by negative statements at least\n   */\n  describe('facebook function', () => {\n    const validParams = {\n      access_token: 'mlkjmljlmjmlkj-dmkml-mlkjmlkj',\n    };\n\n    const validContents = {\n      status: 'hello'\n    };\n\n    it('should return a promise', done => {\n      const fn = status(validContents, validParams).catch();\n      expect(fn).to.be.an.instanceof(Promise);\n      done();\n    });\n\n    it('should reject invalid params shape', done => {\n      const invalidParams = {\n        ...validParams,\n        access_token: undefined\n      };\n      status(validContents, invalidParams)\n        .catch(e => {\n          expect(e).to.be.an('array');\n          done();\n        });\n    });\n\n    it('should reject invalid contents shape', done => {\n      const invalidContents = {\n        ...validContents,\n        message: undefined\n      };\n      status(invalidContents, validParams)\n        .catch(e => {\n          expect(e).to.be.an('array');\n          done();\n        });\n    });\n  });\n});\n",
     "static": true,
@@ -3866,7 +3933,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 141,
+    "__docId__": 146,
     "kind": "file",
     "name": "src/releasers/facebook/index.js",
     "content": "/**\n * Multimodal Publishing utils\n * ===========================\n * facebook releaser\n * ===========================\n * This module publishes content to facebook.\n * @module mpu/releasers/facebook\n */\nimport Ajv from 'ajv';\nimport FB from 'fb';\n\nimport facebookStatusSchema from './facebook.status.schema';\nimport facebookParams from './facebook.parameters.schema';\n\nconst ajv = new Ajv();\n\n/**\n * Sends a personal feed's status message\n * @param {object} contents - the contents to send\n * @param {object} params - connection params (credentials, ...)\n * @return {Promise} promise\n */\nexport function status(contents, params) {\n    return new Promise((resolve, reject) => {\n\n        // validate contents object\n        const contentsValidation = ajv.validate(facebookStatusSchema, contents);\n        if (!contentsValidation) {\n          return reject(ajv.errors);\n        }\n\n        // validate params object\n        const paramsValidation = ajv.validate(facebookParams, params);\n        if (!paramsValidation) {\n          return reject(ajv.errors);\n        }\n\n        const {access_token} = params;\n        FB.setAccessToken(access_token);\n        FB.api('me/feed', 'post', contents, function (res) {\n          if(!res || res.error) {\n            reject(res.error);\n            return;\n          }\n          // console.log('Post Id: ' + res.id);\n          resolve();\n        });\n\n        /**\n         * Version with access token retrieval\n         */\n        // console.log('getting access token');\n        // FB.api('oauth/access_token', {\n        //   ...params,\n        //   grant_type: 'client_credentials'\n        // }, function (res) {\n        //     if(!res || res.error) {\n        //         console.log(!res ? 'error occurred' : res.error);\n        //         return;\n        //     }\n        //     const accessToken = res.access_token;\n        //     console.log('got access token', accessToken);\n        //     FB.setAccessToken(accessToken)\n        //     FB.api('me/feed', 'post', contents, function (res) {\n        //       if(!res || res.error) {\n        //         reject(res.error)\n        //         return;\n        //       }\n        //       // console.log('Post Id: ' + res.id);\n        //       resolve();\n        //     });\n        // });\n\n    });\n}\n",
@@ -3877,7 +3944,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 142,
+    "__docId__": 147,
     "kind": "variable",
     "name": "ajv",
     "memberof": "src/releasers/facebook/index.js",
@@ -3892,7 +3959,7 @@
     "undocument": true
   },
   {
-    "__docId__": 143,
+    "__docId__": 148,
     "kind": "function",
     "name": "status",
     "memberof": "src/releasers/facebook/index.js",
@@ -3938,7 +4005,7 @@
     }
   },
   {
-    "__docId__": 144,
+    "__docId__": 149,
     "kind": "file",
     "name": "src/releasers/mailing/index.js",
     "content": "/**\n * Multimodal Publishing utils\n * ===========================\n * mailing releaser\n * ===========================\n * This module publishes content to mailing.\n * @module mpu/releasers/mailing\n */\nexport mail from './mail';\n\nexport montageToMail from './montageToMail';\n",
@@ -3949,7 +4016,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 145,
+    "__docId__": 150,
     "kind": "file",
     "name": "src/releasers/mailing/mail.js",
     "content": "import sendEmail from '../../utils/mailer';\n\nimport Ajv from 'ajv';\n\nimport mailContentsSchema from './mailing.contents.schema';\nimport paramsSchema from './mailing.parameters.schema';\n\nconst ajv = new Ajv();\n\n/**\n * @param {object} contents - the contents to send\n * @param {object} params - connection params (credentials, ...)\n * @return {Promise} promise\n */\nexport default function mail(contents, params) {\n    return new Promise((resolve, reject) => {\n        // validate contents object\n        const contentsValidation = ajv.validate(mailContentsSchema, contents);\n        if (!contentsValidation) {\n          return reject(ajv.errors);\n        }\n\n        // validate params object\n        const paramsValidation = ajv.validate(paramsSchema, params);\n        if (!paramsValidation) {\n          return reject(ajv.errors);\n        }\n        const {\n          from,\n          to,\n          subject,\n          html\n        } = contents;\n\n        const {\n          smtp_email,\n          smtp_service,\n          smtp_password\n        } = params;\n\n        return sendEmail({\n          from,\n          to, // array\n          subject,\n          html\n        }, {\n          smtpEmail: smtp_email,\n          smtpService: smtp_service,\n          smtpPassword: smtp_password\n        }, console.log);/* eslint no-console : 0 */\n    });\n}\n",
@@ -3960,7 +4027,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 146,
+    "__docId__": 151,
     "kind": "variable",
     "name": "ajv",
     "memberof": "src/releasers/mailing/mail.js",
@@ -3975,7 +4042,7 @@
     "undocument": true
   },
   {
-    "__docId__": 147,
+    "__docId__": 152,
     "kind": "function",
     "name": "mail",
     "memberof": "src/releasers/mailing/mail.js",
@@ -4021,7 +4088,7 @@
     }
   },
   {
-    "__docId__": 148,
+    "__docId__": 153,
     "kind": "file",
     "name": "src/releasers/mailing/maling.releaser.spec.js",
     "content": "",
@@ -4032,7 +4099,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 149,
+    "__docId__": 154,
     "kind": "file",
     "name": "src/releasers/micropublication/index.js",
     "content": "export * as controller from './micropublication.controller';\n",
@@ -4043,7 +4110,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 150,
+    "__docId__": 155,
     "kind": "file",
     "name": "src/releasers/micropublication/micropublication.controller.js",
     "content": "import {resolve as resolvePath} from 'path';\nimport {readFile, remove} from 'fs-extra';\n\nimport {v4 as genId} from 'uuid';\n\nimport {dal as montageDal} from '../../components/montages';\nimport {dal as compositionDal} from '../../components/compositions';\n\nimport  {service as html2img} from '../../services/html2img';\n\nimport {tweet, montageToTweet} from '../twitter';\nimport {mail, montageToMail} from '../mailing';\n\nimport {getConfig} from '../../utils/config';\nconst {\n  twitter_consumer_key,\n  twitter_consumer_secret,\n  twitter_access_token,\n  twitter_access_token_secret,\n\n  smtpService,\n  smtpEmail,\n  smtpPassword,\n  mailingHubEmail\n  // facebook_access_token\n} = getConfig();\n\nconst twitterConfig = {\n consumer_key: twitter_consumer_key,\n consumer_secret: twitter_consumer_secret,\n access_token: twitter_access_token,\n access_token_secret: twitter_access_token_secret\n};\n\nconst mailConfig = {\n  smtp_service: smtpService,\n  smtp_password: smtpPassword,\n  smtp_email: smtpEmail,\n  mailing_hub_email: mailingHubEmail\n};\n\n/**\n * @todo refactor as shared util\n */\nconst renderAbstractAsHtml = composition => {\n  const abstr = composition && composition.metadata.abstract_original;\n  if (abstr) {\n    return `<html>\n    <head>\n      <style>\n        *{background: white; color: black;}\n      </style>\n    </head>\n    <body><p>${abstr}</p></body></html>`;\n  }\n  return '';\n};\n\nexport const release = (diffusion) => {\n  return new Promise ((resolve, reject) => {\n    let montage;\n    let composition;\n    let assets = {};\n    // fetch montage\n    montageDal\n      .getMontage({id: diffusion.montage_id})\n      // fetch composition demendency\n      .then(thatMontage => {\n        montage = thatMontage;\n        const compositionId = montage.data.target_composition_id;\n        return compositionDal.getComposition({id: compositionId});\n      })\n    // fetch resource dependencies\n    .then(thatComposition => {\n      composition = thatComposition;\n      const resources = montage.resources;\n      if (resources) {\n        // do stuff to fetch them\n        /**\n         * @todo implement resource fetching when adding resources images in micropublication\n         */\n      } else {\n        return Promise.resolve();\n      }\n    })\n    // fetch assets dependencies\n    .then(() => {\n      const operations = [];\n      // produce abstract image ?\n      if (montage.data.include_abstract && diffusion.parameters.targets.indexOf('twitter') > -1) {\n        const html = renderAbstractAsHtml(composition);\n        const absPath = __dirname + '/../../../temp/' + genId() + '.jpg';\n        const path = resolvePath(absPath);\n        operations.push(\n          new Promise((reso, rej) => /* eslint promise/param-names : 0 */\n            html2img(html, path, err => {\n              if (err) {\n                return rej(err);\n              } else {\n                readFile(path, 'base64')\n                  .then(base64 => {\n                    assets.abstractImageUri = base64;\n                    return remove(path);\n                  })\n                  .then(reso);\n              }\n            })\n          )\n        );\n      }\n      return Promise.all(operations);\n    })\n    // register release operations to perform\n    .then(() => {\n      // execute\n      const targets = diffusion.parameters.targets;\n      const operations = targets.map(targetId => {\n        let tweetContents;\n        let mailContents;\n        switch(targetId) {\n\n          case 'twitter':\n            tweetContents = montageToTweet(montage, composition, assets);\n            return tweet(tweetContents, twitterConfig);\n\n          case 'mailing':\n            mailContents = montageToMail(montage, composition, assets, mailConfig);\n            return mail(mailContents, mailConfig);\n          case 'facebook':\n          default:\n            return Promise.resolve();\n        }\n      });\n      return Promise.all(operations);\n    })\n    .then(resolve)\n    .catch(reject);\n  });\n};\n",
@@ -4054,7 +4121,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 151,
+    "__docId__": 156,
     "kind": "variable",
     "name": "twitter_consumer_key",
     "memberof": "src/releasers/micropublication/micropublication.controller.js",
@@ -4069,7 +4136,7 @@
     "undocument": true
   },
   {
-    "__docId__": 152,
+    "__docId__": 157,
     "kind": "variable",
     "name": "twitterConfig",
     "memberof": "src/releasers/micropublication/micropublication.controller.js",
@@ -4084,7 +4151,7 @@
     "undocument": true
   },
   {
-    "__docId__": 153,
+    "__docId__": 158,
     "kind": "variable",
     "name": "mailConfig",
     "memberof": "src/releasers/micropublication/micropublication.controller.js",
@@ -4099,7 +4166,7 @@
     "undocument": true
   },
   {
-    "__docId__": 154,
+    "__docId__": 159,
     "kind": "function",
     "name": "renderAbstractAsHtml",
     "memberof": "src/releasers/micropublication/micropublication.controller.js",
@@ -4118,7 +4185,7 @@
     ]
   },
   {
-    "__docId__": 155,
+    "__docId__": 160,
     "kind": "function",
     "name": "release",
     "memberof": "src/releasers/micropublication/micropublication.controller.js",
@@ -4135,7 +4202,89 @@
     "undocument": true
   },
   {
-    "__docId__": 156,
+    "__docId__": 161,
+    "kind": "file",
+    "name": "src/releasers/pdf/index.js",
+    "content": "import {resolve as resolvePath} from 'path';\nimport {readFile} from 'fs-extra';\n/**\n * @todo use proper component to render pdf view\n */\nimport Component from 'plurishing-shared/dist/components/previews/StaticMontagePreview/PreviewContainer';\n\nimport generatePdf from './pdf.generator';\nimport {dal as deliverableDal} from '../../components/deliverables';\n\n\nconst tempDirPath = resolvePath(__dirname + '/../../../temp');\n\n\nexport default function publish(data, diffusion) {\n  return new Promise((resolve, reject) => {\n\n    let deliverable;\n\n    generatePdf({\n      Component,\n      props: data,\n      tempDirPath,\n      outputDirPath: tempDirPath\n    }, pdfPath => {\n      deliverable = {\n        type: 'deliverable',\n        date_produce: new Date().getTime(),\n        diffusion_id: diffusion.id,\n        montage_id: data.montage._id,\n        montage_type: data.montage.metadata.montage_type,\n        montage_title: data.montage.metadata.title,\n        version: diffusion.version,\n        filename: pdfPath.split('/').pop(),\n        mimetype: 'application/pdf'\n      };\n      return readFile(pdfPath)\n        .then(deliverableData => {\n          return deliverableDal.createDeliverable(deliverable, deliverableData);\n        });\n    })\n    .then(resolve)\n    .catch(reject);\n  });\n}\n",
+    "static": true,
+    "longname": "/Users/rawbin/Documents/Projets/collaborations/ensad-publishing/prototype/plurishing-backend/src/releasers/pdf/index.js",
+    "access": null,
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 162,
+    "kind": "variable",
+    "name": "tempDirPath",
+    "memberof": "src/releasers/pdf/index.js",
+    "static": true,
+    "longname": "src/releasers/pdf/index.js~tempDirPath",
+    "access": null,
+    "export": false,
+    "importPath": "plurishing-backend/src/releasers/pdf/index.js",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 12,
+    "undocument": true
+  },
+  {
+    "__docId__": 163,
+    "kind": "function",
+    "name": "publish",
+    "memberof": "src/releasers/pdf/index.js",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "src/releasers/pdf/index.js~publish",
+    "access": null,
+    "export": true,
+    "importPath": "plurishing-backend/src/releasers/pdf/index.js",
+    "importStyle": "publish",
+    "description": null,
+    "lineNumber": 15,
+    "undocument": true
+  },
+  {
+    "__docId__": 164,
+    "kind": "file",
+    "name": "src/releasers/staticpublication/index.js",
+    "content": "export * as controller from './staticpublication.controller';\n",
+    "static": true,
+    "longname": "/Users/rawbin/Documents/Projets/collaborations/ensad-publishing/prototype/plurishing-backend/src/releasers/staticpublication/index.js",
+    "access": null,
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 165,
+    "kind": "file",
+    "name": "src/releasers/staticpublication/staticpublication.controller.js",
+    "content": "import {dal as montageDal} from '../../components/montages';\nimport {fetchMontageDependencies} from '../../utils/data';\n\nimport pdf from '../pdf';\nimport epub from '../epub';\n\nexport const release = (diffusion) => {\n  return new Promise ((resolve, reject) => {\n    // get related montage\n    montageDal.getMontage({id: diffusion.montage_id})\n      .then(montage => {\n        // fetch montage dependencies\n        return fetchMontageDependencies(montage);\n      })\n      // register all release operations to perform\n      .then(data => {\n        const targets = diffusion.parameters.targets;\n        const operations = targets.map(targetId => {\n          switch(targetId) {\n\n            case 'pdf':\n              return pdf(data, diffusion);\n\n            case 'epub':\n              return epub(data, diffusion, 'static');\n\n            default:\n              return Promise.resolve();\n          }\n        });\n        // execute\n        return Promise.all(operations);\n      })\n      .then(resolve)\n      .catch(reject);\n  });\n};\n",
+    "static": true,
+    "longname": "/Users/rawbin/Documents/Projets/collaborations/ensad-publishing/prototype/plurishing-backend/src/releasers/staticpublication/staticpublication.controller.js",
+    "access": null,
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 166,
+    "kind": "function",
+    "name": "release",
+    "memberof": "src/releasers/staticpublication/staticpublication.controller.js",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "src/releasers/staticpublication/staticpublication.controller.js~release",
+    "access": null,
+    "export": true,
+    "importPath": "plurishing-backend/src/releasers/staticpublication/staticpublication.controller.js",
+    "importStyle": "{release}",
+    "description": null,
+    "lineNumber": 7,
+    "undocument": true
+  },
+  {
+    "__docId__": 167,
     "kind": "file",
     "name": "src/releasers/twitter/index.js",
     "content": "/**\n * Multimodal Publishing utils\n * ===========================\n * twitter releaser\n * ===========================\n * This module publishes content to twitter.\n * @module mpu/releasers/twitter\n */\nexport tweet from './tweet';\n\nexport montageToTweet from './montageToTweet';\n",
@@ -4146,7 +4295,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 157,
+    "__docId__": 168,
     "kind": "file",
     "name": "src/releasers/twitter/montageToTweet.js",
     "content": "\n\nconst TEXT_LIMIT = 280;\n\nconst makeText = (title, link, creators) => {\n  const creatorsStr = creators.reduce((str, creator, index) =>\n    str\n    + (creator.given ? creator.given : '')\n    + (creator.given && creator.family ? ' ' : '')\n    + (creator.family ? creator.family : '')\n    + (index === creators.length - 1 ? '' : ' & ')\n    , '');\n\n  const vals = [title, link, creatorsStr];\n  let txt = '';\n  vals.forEach(val => {\n    if (val && (txt + ' ' + val).length <= TEXT_LIMIT) {\n      txt += ' ' + val;\n    }\n  });\n  return txt;\n};\n\n\n\nexport default function montageToTweet (montage, composition, assets) {\n  const {\n    data: {\n      link,\n      include_abstract\n    }\n  } = montage;\n  const {\n    metadata: {\n      title,\n      creators\n    }\n  } = composition;\n\n  const {\n    abstractImageUri\n  } = assets;\n  const status = makeText(title, link, creators);\n  const media = include_abstract && abstractImageUri &&\n          {\n              type: 'image',\n              description: 'abstract image',\n              uri: abstractImageUri\n          };\n  return {\n    status,\n    media\n  };\n}\n",
@@ -4157,7 +4306,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 158,
+    "__docId__": 169,
     "kind": "variable",
     "name": "TEXT_LIMIT",
     "memberof": "src/releasers/twitter/montageToTweet.js",
@@ -4172,7 +4321,7 @@
     "undocument": true
   },
   {
-    "__docId__": 159,
+    "__docId__": 170,
     "kind": "function",
     "name": "makeText",
     "memberof": "src/releasers/twitter/montageToTweet.js",
@@ -4189,7 +4338,7 @@
     "undocument": true
   },
   {
-    "__docId__": 160,
+    "__docId__": 171,
     "kind": "function",
     "name": "montageToTweet",
     "memberof": "src/releasers/twitter/montageToTweet.js",
@@ -4206,7 +4355,7 @@
     "undocument": true
   },
   {
-    "__docId__": 161,
+    "__docId__": 172,
     "kind": "file",
     "name": "src/releasers/twitter/tweet.js",
     "content": "import Ajv from 'ajv';\nimport T from 'twit';\n\nimport tweetContentsSchema from './tweet.contents.schema';\nimport paramsSchema from './twitter.parameters.schema';\n\nconst ajv = new Ajv();\n\n/**\n * @param {object} contents - the contents to send\n * @param {object} params - connection params (credentials, ...)\n * @return {Promise} promise\n */\nexport default function tweet(contents, params) {\n    return new Promise((resolve, reject) => {\n        // validate contents object\n        const contentsValidation = ajv.validate(tweetContentsSchema, contents);\n        if (!contentsValidation) {\n          return reject(ajv.errors);\n        }\n\n        // validate params object\n        const paramsValidation = ajv.validate(paramsSchema, params);\n        if (!paramsValidation) {\n          return reject(ajv.errors);\n        }\n\n        // connect to api\n        const client = new T(params);\n\n        // tweet with media attachment\n        if (contents.media) {\n          // tweet with image media attachment\n          // -> we use the base64 uri provided if any\n          if (contents.media.type === 'image') {\n\n            const {\n              uri,\n              description\n            } = contents.media;\n\n            // ensure the uri is base64 data\n            /**\n             * @todo: fix base64 uri validator to validate base64 images\n             */\n            // const uriValid = isBase64(uri);\n            // if (!uriValid) {\n            //   return reject(new Error());\n            // }\n\n            // post the media to Twitter\n            client.post('media/upload', { media_data: uri }, function (err, data /* , response */) {\n              if (err) {\n                return reject(err);\n              } else {\n                // assign alt text to the media, for use by screen readers and\n                // other text-based presentations and interpreters\n                const mediaIdStr = data.media_id_string;\n                const meta_params = {\n                  media_id: mediaIdStr,\n                  alt_text: {\n                    text: description\n                  }\n                };\n\n                // create metadata for media\n                client.post('media/metadata/create', meta_params, (err/* , data, response */) => {\n                  if (err) {\n                    return reject(err);\n                  } else {\n                    // update contents with proper media\n                    const enrichedContents = {\n                      ...contents,\n                      media: undefined,\n                      media_ids: [mediaIdStr]\n                    };\n                    // eventually tweet\n                    client.post('statuses/update', enrichedContents, (err/* , data, response */) => {\n                      if (err) {\n                        return reject(err);\n                      } else {\n                        return resolve();\n                      }\n                    });\n                  }\n                });\n              }\n            });\n          }\n\n        // case simple tweet\n        } else {\n          client.post('statuses/update', contents, (err/* , data, response */) => {\n            if (err) {\n              reject(err);\n            } else {\n              resolve();\n            }\n          });\n        }\n    });\n}\n",
@@ -4217,7 +4366,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 162,
+    "__docId__": 173,
     "kind": "variable",
     "name": "ajv",
     "memberof": "src/releasers/twitter/tweet.js",
@@ -4232,7 +4381,7 @@
     "undocument": true
   },
   {
-    "__docId__": 163,
+    "__docId__": 174,
     "kind": "function",
     "name": "tweet",
     "memberof": "src/releasers/twitter/tweet.js",
@@ -4278,7 +4427,7 @@
     }
   },
   {
-    "__docId__": 164,
+    "__docId__": 175,
     "kind": "file",
     "name": "src/releasers/twitter/twitter.releaser.spec.js",
     "content": "import {expect} from 'chai';\nimport {describe, it} from 'mocha';\n\n// tested function\nimport {tweet} from './index';\n\ndescribe('twitter releaser', () => {\n  /**\n   * @todo find a way to test the part of the module related to twit api\n   * @body it could be handled by negative statements at least\n   */\n  describe('tweet function', () => {\n    const validParams = {\n      consumer_key: 'coucou',\n      consumer_secret: 'haha',\n      access_token: 'mlkjmljlmjmlkj-dmkml-mlkjmlkj',\n      access_token_secret: 'mlkmljk mlkj mlkj mlkj mlkj mlkjm lkj '\n    };\n\n    const validContents = {\n      status: 'hello'\n    };\n\n    it('should return a promise', done => {\n      const fn = tweet(validContents, validParams).catch();\n      expect(fn).to.be.an.instanceof(Promise);\n      done();\n    });\n\n    it('should reject invalid params shape', done => {\n      const invalidParams = {\n        ...validParams,\n        consumer_key: undefined\n      };\n      tweet(validContents, invalidParams)\n        .catch(e => {\n          expect(e).to.be.an('array');\n          done();\n        });\n    });\n\n    it('should reject invalid contents shape', done => {\n      const invalidContents = {\n        ...validContents,\n        status: undefined\n      };\n      tweet(invalidContents, validParams)\n        .catch(e => {\n          expect(e).to.be.an('array');\n          done();\n        });\n    });\n  });\n});\n",
@@ -4289,7 +4438,35 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 165,
+    "__docId__": 176,
+    "kind": "file",
+    "name": "src/releasers/web/index.js",
+    "content": "\n\n\n\nexport default function publish(/* data, diffusion */) {\n  return new Promise((resolve) => resolve());\n}\n",
+    "static": true,
+    "longname": "/Users/rawbin/Documents/Projets/collaborations/ensad-publishing/prototype/plurishing-backend/src/releasers/web/index.js",
+    "access": null,
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 177,
+    "kind": "function",
+    "name": "publish",
+    "memberof": "src/releasers/web/index.js",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "src/releasers/web/index.js~publish",
+    "access": null,
+    "export": true,
+    "importPath": "plurishing-backend/src/releasers/web/index.js",
+    "importStyle": "publish",
+    "description": null,
+    "lineNumber": 5,
+    "undocument": true
+  },
+  {
+    "__docId__": 178,
     "kind": "file",
     "name": "src/server.js",
     "content": "// import fs from 'fs';\n// import https from 'https';\n/* eslint no-console : 0 */\nimport app from './app';\n\n/**\n * Connect config\n */\nimport {getConfig} from './utils/config';\nconst config = getConfig();\nconst {\n  port\n  // key, csr, cert\n} = config;\n\n/**\n * ===============\n * HTTPS Connection\n * ===============\n */\n\n// /**\n//  * Prepare https certificate\n//  */\n// const options = {\n//   key,\n//   ca: csr,\n//   cert\n// };\n\n// /**\n//  * Launch server\n//  */\n// https.createServer(options, app).listen(port, null, function () {\n//   console.log('Server listening on port %d in %s mode', this.address().port, app.settings.env);\n// });\n\n\n/**\n * ===============\n * HTTP Connection\n * ===============\n */\n\napp.listen(port, null, function () {\n  console.log('Server listening on port %d in %s mode', this.address().port, app.settings.env);\n});\n\n\n\n\n",
@@ -4300,7 +4477,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 166,
+    "__docId__": 179,
     "kind": "variable",
     "name": "config",
     "memberof": "src/server.js",
@@ -4315,7 +4492,7 @@
     "undocument": true
   },
   {
-    "__docId__": 167,
+    "__docId__": 180,
     "kind": "variable",
     "name": "port",
     "memberof": "src/server.js",
@@ -4330,7 +4507,7 @@
     "undocument": true
   },
   {
-    "__docId__": 168,
+    "__docId__": 181,
     "kind": "file",
     "name": "src/services/html2img/html2img.api.js",
     "content": "\n\n/**\n * Plurishing-backend\n * =======\n * Asset api\n */\n\nimport express from 'express';\n\nimport html2img from './html2img.controller';\n\nconst router = new express.Router();\n\nrouter.post('/', html2img);\n\nexport default router;\n",
@@ -4341,7 +4518,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 169,
+    "__docId__": 182,
     "kind": "file",
     "name": "src/services/html2img/html2img.controller.js",
     "content": "import html2img from './html2img.service.js';\nimport {v4 as genId} from 'uuid';\nimport {readFile, remove} from 'fs-extra';\nimport {resolve} from 'path';\n\nconst temp = resolve(__dirname + '/../../../temp/');\n\nexport default function controller (req, res) {\n  const html = req.body.data;\n  const id = genId();\n  const filename = temp + '/' + id + '.jpg';\n  // convert to image\n  html2img(html, filename, err => {\n    if (err) {\n      return res.status(500).send(err);\n    }\n    // read file as base64\n    readFile(filename, 'base64')\n      // send file\n      .then(base64 => res.send(base64))\n      // remove temp file\n      .then(() => remove(filename));\n  });\n}\n",
@@ -4352,7 +4529,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 170,
+    "__docId__": 183,
     "kind": "variable",
     "name": "temp",
     "memberof": "src/services/html2img/html2img.controller.js",
@@ -4367,7 +4544,7 @@
     "undocument": true
   },
   {
-    "__docId__": 171,
+    "__docId__": 184,
     "kind": "function",
     "name": "controller",
     "memberof": "src/services/html2img/html2img.controller.js",
@@ -4384,7 +4561,7 @@
     "undocument": true
   },
   {
-    "__docId__": 172,
+    "__docId__": 185,
     "kind": "file",
     "name": "src/services/html2img/html2img.service.js",
     "content": "import webshot from 'webshot';\n\nexport default (html, path, callback) => {\n  webshot(html, path, {\n    siteType:'html',\n    windowSize: {\n      width: 900,\n      // height: 450\n      height: 50 // setting a mini height to have well formed images\n    },\n    shotSize: {\n      width: 'all',\n      height: 'all'\n    }\n  },\n  (err) => {\n    callback(err);\n  });\n};\n",
@@ -4395,7 +4572,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 173,
+    "__docId__": 186,
     "kind": "function",
     "name": "html2img",
     "memberof": "src/services/html2img/html2img.service.js",
@@ -4412,7 +4589,7 @@
     "undocument": true
   },
   {
-    "__docId__": 174,
+    "__docId__": 187,
     "kind": "file",
     "name": "src/services/html2img/index.js",
     "content": "export router from './html2img.api';\nexport service from './html2img.service';\n",
@@ -4423,7 +4600,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 175,
+    "__docId__": 188,
     "kind": "file",
     "name": "src/utils/config.js",
     "content": "/**\n * Plurishing-backend\n * =======\n * Config utils\n */\nimport configMap from '../../config/config.map';\n\nconst constantify = str => str.replace(/([A-Z])/g, '_$1').toUpperCase();\n\n/**\n * Resolves config retrieval method according to mode ('development' or 'production')\n * Uses json file if in dev, env variables if in prod\n * @return {object} config\n */\nexport function getConfig () {\n  if (process.env.NODE_ENV !== 'production') {\n    return require('../../config/config.dev');/* eslint node/no-unpublished-require : 0 */\n  } else {\n    return configMap.reduce((result, key) => ({\n      ...result,\n      [key]: process.env[constantify(key)]\n    }), {});\n  }\n}\n",
@@ -4434,7 +4611,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 176,
+    "__docId__": 189,
     "kind": "function",
     "name": "constantify",
     "memberof": "src/utils/config.js",
@@ -4451,7 +4628,7 @@
     "undocument": true
   },
   {
-    "__docId__": 177,
+    "__docId__": 190,
     "kind": "function",
     "name": "getConfig",
     "memberof": "src/utils/config.js",
@@ -4475,7 +4652,7 @@
     }
   },
   {
-    "__docId__": 178,
+    "__docId__": 191,
     "kind": "file",
     "name": "src/utils/couchdb.js",
     "content": "\n\n/**\n * Inserts a design document in a couchdb database\n * @param {object} doc\n * @param {object} db\n * @param {string} designName\n * @param {object} design\n * @return {Promise}\n */\nconst insertDesignDocument = (doc, db, designName, design) => {\n  let _rev;\n  if (doc) {\n    _rev = doc._rev;\n  }\n  return db.insertAsync({\n    _rev,\n    ...design\n  }, `_design/${designName}`);\n};\n\n/**\n * Adds a new design to a database\n * @param db {object} the nano-handled database\n * @param designName {string}\n */\nexport const addDesign = (db, designName, design) =>\n    db.getAsync(`_design/${designName}`)\n    // design document exists\n    .then(doc => insertDesignDocument(doc, db, designName, design))\n    // design document does not exist (we don't care about the error)\n    .catch(() => insertDesignDocument(undefined, db, designName, design));\n",
@@ -4486,7 +4663,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 179,
+    "__docId__": 192,
     "kind": "function",
     "name": "insertDesignDocument",
     "memberof": "src/utils/couchdb.js",
@@ -4552,7 +4729,7 @@
     }
   },
   {
-    "__docId__": 180,
+    "__docId__": 193,
     "kind": "function",
     "name": "addDesign",
     "memberof": "src/utils/couchdb.js",
@@ -4590,7 +4767,7 @@
     ]
   },
   {
-    "__docId__": 181,
+    "__docId__": 194,
     "kind": "file",
     "name": "src/utils/crypto.js",
     "content": "/**\n * Plurishing-backend\n * =======\n * Crypto utils\n */\nconst bcrypt = require('bcrypt');\nconst saltRounds = 10;\n\n/**\n * Encodes a string into a crypted hash\n * @param {str} pwd - the string to encoded\n * @return {Promise}\n */\nexport const hash = (pwd) => bcrypt.hash(pwd, saltRounds);\n\n/**\n * Checks whether string matches hash\n * @param {string} pwd\n * @param {string} hash\n * @return {Promise} - resolves with a boolean as parameter\n */\nexport const comparePwd = (pwd, hash) => bcrypt.compare(pwd, hash);\n",
@@ -4601,7 +4778,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 182,
+    "__docId__": 195,
     "kind": "variable",
     "name": "bcrypt",
     "memberof": "src/utils/crypto.js",
@@ -4615,7 +4792,7 @@
     "lineNumber": 6
   },
   {
-    "__docId__": 183,
+    "__docId__": 196,
     "kind": "variable",
     "name": "saltRounds",
     "memberof": "src/utils/crypto.js",
@@ -4630,7 +4807,7 @@
     "undocument": true
   },
   {
-    "__docId__": 184,
+    "__docId__": 197,
     "kind": "function",
     "name": "hash",
     "memberof": "src/utils/crypto.js",
@@ -4666,7 +4843,7 @@
     }
   },
   {
-    "__docId__": 185,
+    "__docId__": 198,
     "kind": "function",
     "name": "comparePwd",
     "memberof": "src/utils/crypto.js",
@@ -4712,7 +4889,52 @@
     }
   },
   {
-    "__docId__": 186,
+    "__docId__": 199,
+    "kind": "file",
+    "name": "src/utils/data.js",
+    "content": "import {dal as compositionDal} from '../components/compositions';\nimport {dal as resourceDal} from '../components/resources';\nimport {dal as assetDal} from '../components/assets';\n\nconst mapify = (collection = [], key = 'id') =>\n  collection.reduce((result, item) => ({\n    ...result,\n    [item[key]]: item/* eslint security/detect-object-injection : 0 */\n  }), {});\n\nexport const fetchMontageDependencies = (montage) => {\n  return new Promise((resolve, reject) => {\n    let compositions;\n    let resources;\n    let assets;\n    // register compositions\n    const compositionsRequirements = montage.data.compositions\n            .map(target => target.target_composition_id)\n            .filter(id => id)\n            .map(id => compositionDal.getComposition({id}));\n    Promise.all(compositionsRequirements)\n      .then(theseCompositions => {\n        compositions = theseCompositions;\n\n        // register resources requirement\n        const resourcesRequirements = compositions.reduce((result, composition) => {\n          return result.concat(composition.resources || []);\n        }, [])\n        .filter(id => id)\n        .map(id => resourceDal.getResource({id}));\n\n        Promise.all(resourcesRequirements)\n          .then(theseResources => {\n            resources = theseResources;\n            const assetsRequirements = resources.reduce((result, resource) => {\n              const assetKeys = Object.keys(resource.data).filter(key => key.indexOf('asset_id') > -1);\n              const assetMentions = assetKeys.map(key =>\n                resource.data[key]);/* eslint security/detect-object-injection : 0 */\n              return result.concat(assetMentions || []);\n            }, [])\n            .filter(id => id)\n            .map(id => assetDal.getAsset({id}));\n\n            Promise.all(assetsRequirements)\n              .then(theseAssets => {\n                assets = theseAssets;\n\n                resolve({\n                  montage,\n                  compositions: mapify(compositions, '_id'),\n                  resources: mapify(resources, '_id'),\n                  assets: mapify(assets, '_id')\n                });\n              })\n              .catch(reject);\n          }).catch(reject);\n      }).catch(reject);\n  });\n};\n",
+    "static": true,
+    "longname": "/Users/rawbin/Documents/Projets/collaborations/ensad-publishing/prototype/plurishing-backend/src/utils/data.js",
+    "access": null,
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 200,
+    "kind": "function",
+    "name": "mapify",
+    "memberof": "src/utils/data.js",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "src/utils/data.js~mapify",
+    "access": null,
+    "export": false,
+    "importPath": "plurishing-backend/src/utils/data.js",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 5,
+    "undocument": true
+  },
+  {
+    "__docId__": 201,
+    "kind": "function",
+    "name": "fetchMontageDependencies",
+    "memberof": "src/utils/data.js",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "src/utils/data.js~fetchMontageDependencies",
+    "access": null,
+    "export": true,
+    "importPath": "plurishing-backend/src/utils/data.js",
+    "importStyle": "{fetchMontageDependencies}",
+    "description": null,
+    "lineNumber": 11,
+    "undocument": true
+  },
+  {
+    "__docId__": 202,
     "kind": "file",
     "name": "src/utils/emails.js",
     "content": "/**\n * Plurishing-backend\n * =======\n * Mailing utils\n */\n\n\nexport const welcomeEmail = (appUrl, user) => ({\n  subject: 'Plurishing - Bienvenue !',\n  html: `\n<h1>Plurishing - bienvenue !</h1>\n<p>\n  Vous avez été ajouté à la liste des utilisateurs de l'application Plurishing. Si vous souhaitez participer,\n  <a\n    href=\"${appUrl}/signup/${user._id}/${user.resetPasswordToken}\"\n  >\n    visitez cette adresse pour y entrer un nouveau mot de passe\n  </a> d'ici 24 heures.\n</p>`\n});\n\nexport const resetPwdEmail = (appUrl, user) => ({\n  subject: 'Plurishing - réinitialisation de votre mot de passe',\n  html: `\n<h1>Plurishing - réinitialisation du mot de passe</h1>\n<p>\n  Vous avez fait une demande de réinitialisation de votre mot de passe pour l'application Plurishing. <a\n    href=\"${appUrl}/signup/${user._id}/${user.resetPasswordToken}\">\n    Visitez cette adresse pour y entrer un nouveau mot de passe\n  </a> d'ici 24 heures.\n</p>`\n});\n",
@@ -4723,7 +4945,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 187,
+    "__docId__": 203,
     "kind": "function",
     "name": "welcomeEmail",
     "memberof": "src/utils/emails.js",
@@ -4739,7 +4961,7 @@
     "lineNumber": 8
   },
   {
-    "__docId__": 188,
+    "__docId__": 204,
     "kind": "function",
     "name": "resetPwdEmail",
     "memberof": "src/utils/emails.js",
@@ -4756,7 +4978,7 @@
     "undocument": true
   },
   {
-    "__docId__": 189,
+    "__docId__": 205,
     "kind": "file",
     "name": "src/utils/errorHandler.js",
     "content": "/**\n * Some utils for managing errors in the right way\n * Taken from the repertory of good practices https://github.com/i0natan/nodebestpractices/\n */\n\n/**\n * Catch unhandled promise rejections\n */\nprocess.on('unhandledRejection', function (reason) {\n  //I just caught an unhandled promise rejection,\n  // since we already have fallback handler for unhandled errors (see below),\n  // let throw and let him handle that\n  throw reason;\n});\n\n/**\n * Catch unhandled exceptions to shut the process gracefully\n */\nprocess.on('uncaughtException', function(error) {\n// process.on('uncaughtException', function(error) {\n   // @todo setup error types system\n   // errorManagement.handler.handleError(error);\n   // if(!errorManagement.handler.isTrustedError(error))\n   throw error;\n});\n\n/**\n * Custom error handling object\n * to be used in a middleware in order to catch all errors\n * and process them here (save them, send a mail to admin, ...)\n */\n// const sendMailToAdminIfCritical = (logger, err) => logger.debug('send email to admin if critical');\n\n// const saveInOpsQueueIfCritical = (logger, err) => logger.debug('saveInOpsQueueIfCritical');\n\nconst determineIfOperationalError = () => false;\n\nexport default function errorHandler(logger){\n    this.handleError = function (error) {\n        return new Promise(resolve => {\n          logger.error(error);\n          // sendMailToAdminIfCritical(logger, error)\n          // saveInOpsQueueIfCritical(logger, error)\n          resolve(determineIfOperationalError(error));\n        });\n    };\n  }\n",
@@ -4767,7 +4989,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 190,
+    "__docId__": 206,
     "kind": "function",
     "name": "determineIfOperationalError",
     "memberof": "src/utils/errorHandler.js",
@@ -4783,7 +5005,7 @@
     "lineNumber": 36
   },
   {
-    "__docId__": 191,
+    "__docId__": 207,
     "kind": "function",
     "name": "errorHandler",
     "memberof": "src/utils/errorHandler.js",
@@ -4800,7 +5022,7 @@
     "undocument": true
   },
   {
-    "__docId__": 192,
+    "__docId__": 208,
     "kind": "file",
     "name": "src/utils/mailer.js",
     "content": "/**\n * Plurishing-backend\n * =======\n * Mailer utils\n */\nimport nodemailer from 'nodemailer';\n\n/**\n * Simulate email sending with ethereal\n */\nexport function sendTestEmail ({\n  from = '\"Fred Foo 👻\" <foo@blurdybloop.com>',\n  to = [],\n  subject = 'Hello ✔',\n  html = '<b>Hello world?</b>'\n}, {\n  smtpHost = 'smtp.ethereal.email',\n  smtpPort = 587\n  // smtpEmail,\n  // smtpService,\n  // smtpPassword,\n}, logger) {\n  return new Promise((resolve, reject) => {\n    // Generate test SMTP service account from ethereal.email\n    // Only needed if you don't have a real mail account for testing\n    nodemailer.createTestAccount((err, account) => {\n      if (err) {\n        return reject(err);\n      }\n      // create reusable transporter object using the default SMTP transport\n      let transporter = nodemailer.createTransport({\n        host: smtpHost,\n        port: smtpPort,\n        secure: false, // true for 465, false for other ports\n        auth: {\n          user: account.user, // generated ethereal user\n          pass: account.pass // generated ethereal password\n        }\n      });\n\n      // setup email data with unicode symbols\n      let mailOptions = {\n        from, // sender address\n        to: to.join(', '), // list of receivers\n        subject, // Subject line\n        html // html body\n      };\n\n      // send mail with defined transport object\n      transporter.sendMail(mailOptions, (error, info) => {\n        if (error) {\n          reject(error);\n          return logger.error(error);\n        }\n        logger.debug('Message sent: %s', info.messageId);\n        // Preview only available when sending through an Ethereal account\n\n        // Message sent: <b658f8ca-6296-ccf4-8306-87d57a0b4321@blurdybloop.com>\n        // Preview URL: https://ethereal.email/message/WaQKMgKddxQDoou...\n        resolve(nodemailer.getTestMessageUrl(info));\n      });\n    });\n  });\n}\n\n/**\n * Sends an email\n * @param {object} data - the data of the email\n * @param {object} config - the config to use\n */\nexport default function sendEmail ({\n  // from = '\"Fred Foo 👻\" <foo@blurdybloop.com>',\n  to = [],\n  subject = 'Hello ✔',\n  html = '<b>Hello world?</b>'\n}, {\n  smtpEmail,\n  smtpService,\n  smtpPassword\n}, logger) {\n  return new Promise((resolve, reject) => {\n    // create reusable transporter object using the default SMTP transport\n    let transporter;\n    if (smtpService === 'Gmail') {\n      const smtp = `smtps://${encodeURIComponent(smtpEmail)}:${encodeURIComponent(smtpPassword)}@smtp.gmail.com:465`;\n      transporter = nodemailer.createTransport(smtp);\n    } else {\n      transporter = nodemailer.createTransport('SMTP', {\n        service: smtpService,\n        auth: {\n          user: smtpEmail,\n          pass: smtpPassword\n        }\n      });\n    }\n\n    // setup email data\n    let mailOptions = {\n      from: smtpEmail, // sender address\n      to: to.join(', '), // list of receivers\n      subject, // Subject line\n      html // html body\n    };\n\n    // send mail with defined transport object\n    transporter.sendMail(mailOptions, (error, info) => {\n      if (error) {\n        reject(error);\n        return logger.error(error);\n      }\n      logger.debug('Message sent: %s', info.messageId);\n      // Message sent: <b658f8ca-6296-ccf4-8306-87d57a0b4321@blurdybloop.com>\n      // Preview URL: https://ethereal.email/message/WaQKMgKddxQDoou...\n      resolve(nodemailer.getTestMessageUrl(info));\n    });\n  });\n}\n",
@@ -4811,7 +5033,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 193,
+    "__docId__": 209,
     "kind": "function",
     "name": "sendTestEmail",
     "memberof": "src/utils/mailer.js",
@@ -4827,7 +5049,7 @@
     "lineNumber": 11
   },
   {
-    "__docId__": 194,
+    "__docId__": 210,
     "kind": "function",
     "name": "sendEmail",
     "memberof": "src/utils/mailer.js",
@@ -4865,7 +5087,7 @@
     ]
   },
   {
-    "__docId__": 195,
+    "__docId__": 211,
     "kind": "file",
     "name": "src/utils/middlewares.js",
     "content": "/**\n * Plurishing-backend\n * =======\n * Custom middlewares for express\n */\nimport errorHandlerObj from './errorHandler';\n\nexport const errorHandler = (err, req, res, next) => {\n  const handler = new errorHandlerObj(req.log);\n  handler.handleError(err).then((isOperationalError) => {\n      if (!isOperationalError) {\n          next(err);\n      } else {\n        throw new Error(err);\n      }\n  });\n};\n",
@@ -4876,7 +5098,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 196,
+    "__docId__": 212,
     "kind": "function",
     "name": "errorHandler",
     "memberof": "src/utils/middlewares.js",
@@ -4893,7 +5115,7 @@
     "undocument": true
   },
   {
-    "__docId__": 197,
+    "__docId__": 213,
     "kind": "file",
     "name": "src/utils/plugDb.js",
     "content": "/**\n * Plurishing-backend\n * =======\n * Couchdb connection script\n */\nconst Promise = require('bluebird');\n\n\nconst config = require('./config').getConfig();\n\n/**\n * Init nano\n */\nconst nano = require('nano')(config.couchdbUri);\n\n/**\n * Specify db name\n */\nvar db = nano.db.use(config.couchdbName);\n\n/**\n * Promisify\n */\nPromise.promisifyAll(db);\n\nexport default db;\n",
@@ -4904,7 +5126,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 198,
+    "__docId__": 214,
     "kind": "variable",
     "name": "Promise",
     "memberof": "src/utils/plugDb.js",
@@ -4918,7 +5140,7 @@
     "lineNumber": 6
   },
   {
-    "__docId__": 199,
+    "__docId__": 215,
     "kind": "variable",
     "name": "config",
     "memberof": "src/utils/plugDb.js",
@@ -4933,7 +5155,7 @@
     "undocument": true
   },
   {
-    "__docId__": 200,
+    "__docId__": 216,
     "kind": "variable",
     "name": "nano",
     "memberof": "src/utils/plugDb.js",
@@ -4947,7 +5169,7 @@
     "lineNumber": 14
   },
   {
-    "__docId__": 201,
+    "__docId__": 217,
     "kind": "variable",
     "name": "db",
     "memberof": "src/utils/plugDb.js",
@@ -4961,7 +5183,7 @@
     "lineNumber": 19
   },
   {
-    "__docId__": 202,
+    "__docId__": 218,
     "kind": "file",
     "name": "src/utils/populateDb.js",
     "content": "/**\n * Plurishing-backend\n * =======\n * Server population script\n */\n/* eslint no-console : 0 */\nimport {hash} from './crypto';\n\nimport db from './plugDb';\n\nconst admin = {\n  type: 'user',\n  name: 'admin',\n  password: 'admin',\n  admin: true,\n  email: 'robin.demourat@protonmail.com'\n};\n\nconst addAdmin = doc => {\n  let _rev;\n  if (doc) {\n    _rev = doc._rev;\n  }\n  hash(admin.password)\n  .then(password =>\n    db.insertAsync({\n      ...admin,\n      _rev,\n      password\n    }, 'admin')\n  )\n  .then(info => {\n    console.log('created admin', info);\n  })\n  .catch(error => {\n    console.log('error while creating admin', error);\n  });\n};\n\ndb.getAsync('admin')\n  .then(addAdmin)\n  .catch(addAdmin);\n",
@@ -4972,7 +5194,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 203,
+    "__docId__": 219,
     "kind": "variable",
     "name": "admin",
     "memberof": "src/utils/populateDb.js",
@@ -4987,7 +5209,7 @@
     "undocument": true
   },
   {
-    "__docId__": 204,
+    "__docId__": 220,
     "kind": "function",
     "name": "addAdmin",
     "memberof": "src/utils/populateDb.js",
@@ -5004,7 +5226,7 @@
     "undocument": true
   },
   {
-    "__docId__": 205,
+    "__docId__": 221,
     "kind": "file",
     "name": "src/utils/schemas.js",
     "content": "import Ajv from 'ajv';\nconst ajv = new Ajv();\n\nexport const dataIsValid = (data, schema) =>\n  new Promise((resolve, reject) => {\n    const valid = ajv.validate(schema, data);\n    if (valid) {\n      resolve(data);\n    } else {\n      reject(ajv.errors);\n    }\n  });\n",
@@ -5015,7 +5237,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 206,
+    "__docId__": 222,
     "kind": "variable",
     "name": "ajv",
     "memberof": "src/utils/schemas.js",
@@ -5030,7 +5252,7 @@
     "undocument": true
   },
   {
-    "__docId__": 207,
+    "__docId__": 223,
     "kind": "function",
     "name": "dataIsValid",
     "memberof": "src/utils/schemas.js",
@@ -5047,7 +5269,7 @@
     "undocument": true
   },
   {
-    "__docId__": 208,
+    "__docId__": 224,
     "kind": "file",
     "name": "src/utils/transformJSON.js",
     "content": "/**\n * Multimodal Publishing utils\n * ===========================\n * transformJSON\n * ===========================\n * This module resolves a data object by transforming it\n * from an input schema to an output schema using\n * a transformation function.\n * @module mpu/helpers/transformJSON\n */\nimport Ajv from 'ajv';\nconst ajv = new Ajv();\n\n/**\n * Retrieves the arguments name of a function\n * @param {function} func - the function to analyse\n * @return {array} arguments - the arguments names\n */\nfunction $args(func) {\n    return (func + '')\n      .replace(/[/][/].*$/mg,'') // strip single-line comments\n      .replace(/\\s+/g, '') // strip white space\n      .replace(/[/][*][^/*]*[*][/]/g, '') // strip multi-line comments\n      .split('){', 1)[0].replace(/^[^(]*[(]/, '') // extract the parameters\n      .replace(/=[^,]+/g, '') // strip any ES6 defaults\n      .split(',').filter(Boolean); // split & filter [\"\"]\n}\n\n/**\n * @param {object|Array} inputData - the original data to convert\n * @param {object} inputSchema - the schema of original data to convert in json-schema\n * @param {object} outputSchema - the schema of the resulting data to convert in json-schema\n * @param {function} transformFunction - a function taking data as argument and returning new data\n * This transform function can :\n * - return a json object resolving with a json object\n * - return a promise resolving with a json object\n * - provide a node-js style callback as second argument\n * @return {Promise} promise\n */\nconst transformJSON = (\n    inputData,\n    inputSchema,\n    outputSchema,\n    transformFunction,\n) =>\n    new Promise(\n        (resolve, reject) => {\n          try{\n            // verify input is valid\n            const inputIsValid = ajv.validate(inputSchema, inputData);\n            if (!inputIsValid) {\n              return reject(ajv.errors);\n            }\n            // check if transform function presents a callback\n            if ($args(transformFunction).length > 1) {\n              // resolve with callback\n              return transformFunction(inputData, (err, output) => {\n                if (err) {\n                  return reject(err);\n                } else {\n                  // apply transform function to input\n                  const outputIsValid = ajv.validate(outputSchema, output);\n                  if (!outputIsValid) {\n                    reject(ajv.errors);\n                  } else {\n                    resolve(output);\n                  }\n                }\n              });\n            }\n            // apply transform function to input\n            const outputTemp = transformFunction(inputData);\n            // if the function has returned a promise resolve it\n            if (outputTemp instanceof Promise) {\n              outputTemp\n                .then(output => {\n                  // verify that output complies to output schema\n                  const outputIsValid = ajv.validate(outputSchema, output);\n                  if (outputIsValid) {\n                    resolve(output);\n                  } else {\n                    // @todo normalize error response\n                    reject(new Error());\n                  }\n                })\n                .catch(e => {\n                  reject(e);\n                });\n            } else {\n              // verify output complies to output schema\n              const outputIsValid = ajv.validate(outputSchema, outputTemp);\n              if (outputIsValid) {\n                resolve(outputTemp);\n              } else {\n                // @todo normalize error response\n                reject(new Error());\n              }\n            }\n          } catch(e) {\n            reject(e);\n          }\n        }\n    );\n\nexport default transformJSON;\n",
@@ -5058,7 +5280,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 209,
+    "__docId__": 225,
     "kind": "variable",
     "name": "ajv",
     "memberof": "src/utils/transformJSON.js",
@@ -5073,7 +5295,7 @@
     "undocument": true
   },
   {
-    "__docId__": 210,
+    "__docId__": 226,
     "kind": "function",
     "name": "$args",
     "memberof": "src/utils/transformJSON.js",
@@ -5109,7 +5331,7 @@
     }
   },
   {
-    "__docId__": 211,
+    "__docId__": 227,
     "kind": "function",
     "name": "transformJSON",
     "memberof": "src/utils/transformJSON.js",
@@ -5176,7 +5398,7 @@
     }
   },
   {
-    "__docId__": 212,
+    "__docId__": 228,
     "kind": "file",
     "name": "src/utils/transformJSON.spec.js",
     "content": "import {expect} from 'chai';\nimport {describe, it} from 'mocha';\n\n// tested function\nimport transformJSON from './transformJSON';\n\ndescribe('transformJSON util', () => {\n\n  // mock data\n  const inputData = {\n    foo: 'hello'\n  };\n  const expectedOutput = {\n    bar: 'hello'\n  };\n\n  // input json schema\n  const inputSchema = {\n    properties: {\n      foo: {\n        type: 'string'\n      }\n    },\n    required: ['foo']\n  };\n\n  // output json schema\n  const outputSchema = {\n    properties: {\n      bar: {\n        type: 'string'\n      }\n    },\n    required: ['bar']\n  };\n\n  // transform function\n  const transform = input => {\n    const output = {...input};\n    const bar = input.foo;\n    delete output.foo;\n    output.bar = bar;\n    return output;\n  };\n  // transform function as a promise\n  const transformAsPromise = input =>\n    new Promise((resolve) => {\n      const output = transform(input);\n      resolve(output);\n    });\n\n  // transform function with callback\n  const transformWithCallback = (input, callback) => {\n    const output = transform(input);\n    callback(null, output);\n  };\n\n  it('should return a promise', done => {\n    const fn = transformJSON(inputData, inputSchema, outputSchema, transform);\n    expect(fn).to.be.an.instanceof(Promise);\n    done();\n  });\n  it('should apply the transform function to input data and resolve with correctly transformed data', done => {\n    transformJSON(inputData, inputSchema, outputSchema, transform)\n      .then(output => {\n        expect(output).to.deep.equal(expectedOutput);\n        done();\n      })\n      .catch();\n  });\n  it('should accept a transform function returning a promise', done => {\n    transformJSON(inputData, inputSchema, outputSchema, transformAsPromise)\n      .then(output => {\n        expect(output).to.deep.equal(expectedOutput);\n        done();\n      })\n      .catch();\n  });\n\n  it('should accept a transform function presenting a callback', done => {\n    transformJSON(inputData, inputSchema, outputSchema, transformWithCallback)\n      .then(output => {\n        expect(output).to.deep.equal(expectedOutput);\n        done();\n      })\n      .catch();\n  });\n\n  it('should require inputData parameter to be a js object', done => {\n    transformJSON(undefined, inputSchema, outputSchema, transform)\n      .catch(e => {\n        expect(e).to.be.an('error');\n        done();\n      });\n  });\n\n  it('should require inputSchema parameter to be a valid json schema', done => {\n    transformJSON(inputData, undefined, outputSchema, transform)\n      .catch(e => {\n        expect(e).to.be.an('error');\n        done();\n      });\n  });\n\n  it('should require outputSchema parameter to be a valid json schema', done => {\n    transformJSON(inputData, inputSchema, undefined, transform)\n      .catch(e => {\n        expect(e).to.be.an('error');\n        done();\n      });\n  });\n\n  it('should reject an input data not complying to input json schema', done => {\n    transformJSON({bar: 'hello'}, inputSchema, outputSchema, transform)\n      .catch(e => {\n        expect(e).to.be.an('array');\n        done();\n      });\n  });\n\n  it('should reject an output data not complying to output json schema', done => {\n    const wrongTransform = input => input;\n    transformJSON({bar: 'hello'}, inputSchema, outputSchema, wrongTransform)\n      .catch(e => {\n        expect(e).to.be.an('array');\n        done();\n      });\n  });\n\n});\n",
@@ -5196,7 +5418,7 @@
   },
   {
     "kind": "packageJSON",
-    "content": "{\n  \"name\": \"plurishing-backend\",\n  \"version\": \"0.0.1\",\n  \"description\": \"Backend handling multimodal publishing\",\n  \"main\": \"index.js\",\n  \"repository\": {\n    \"type\": \"git\",\n    \"url\": \"git+https://github.com/robindemourat/plurishing-backend.git\"\n  },\n  \"author\": \"Robin de Mourat <robin.demourat@gmail.com> (https://github.com/robindemourat)\",\n  \"license\": \"ISC\",\n  \"bugs\": {\n    \"url\": \"https://github.com/robindemourat/plurishing-backend/issues\"\n  },\n  \"homepage\": \"https://github.com/robindemourat/plurishing-backend#readme\",\n  \"engines\": {\n    \"node\": \">=9.2.0\"\n  },\n  \"scripts\": {\n    \"dev\": \"better-npm-run dev\",\n    \"start\": \"pm2 start ecosystem.config.js -i max --attach\",\n    \"monitor\": \"pm2 monit\",\n    \"lint\": \"eslint src tests server\",\n    \"lint:fix\": \"npm run lint -- --fix\",\n    \"populate-db\": \"better-npm-run populate-db\",\n    \"populate-db:dev\": \"better-npm-run populate-db-dev\",\n    \"test\": \"cross-env NODE_ENV=test mocha --compilers js:babel-core/register --R  spec --recursive $(find src -name '*.spec.js')\",\n    \"test:watch\": \"npm run test -- --watch\",\n    \"cov\": \"cross-env NODE_ENV=test nyc npm test && nyc check-coverage --lines 0 --functions 0 --branches 0n && nyc report --reporter=text-lcov\",\n    \"doc\": \"esdoc -c esdoc.json\",\n    \"build\": \"babel src/ -d build/\",\n    \"add-build-to-stage\": \"git add build\",\n    \"add-doc-to-stage\": \"git add doc\",\n    \"deploy:heroku\": \"node setHerokuEnv;git push heroku master\"\n  },\n  \"betterScripts\": {\n    \"dev\": {\n      \"command\": \"nodemon src/server.js  --exec babel-node --config nodemon.json\",\n      \"env\": {\n        \"DEBUG\": \"app:*\",\n        \"NODE_ENV\": \"development\"\n      }\n    },\n    \"populate-db\": {\n      \"command\": \"node build/utils/populateDb.js\",\n      \"env\": {\n        \"DEBUG\": \"app:*\",\n        \"NODE_ENV\": \"maintenance\"\n      }\n    },\n    \"populate-db-dev\": {\n      \"command\": \"babel-node src/utils/populateDb.js\",\n      \"env\": {\n        \"DEBUG\": \"app:*\",\n        \"NODE_ENV\": \"development\"\n      }\n    }\n  },\n  \"pre-commit\": [\n    \"lint\",\n    \"cov\",\n    \"build\",\n    \"doc\",\n    \"add-doc-to-stage\",\n    \"add-build-to-stage\"\n  ],\n  \"dependencies\": {\n    \"ajv\": \"^5.5.2\",\n    \"axios\": \"^0.17.1\",\n    \"babel-runtime\": \"^6.3.19\",\n    \"bcrypt\": \"^1.0.3\",\n    \"better-npm-run\": \"0.0.9\",\n    \"bluebird\": \"^3.5.1\",\n    \"bunyan-debug-stream\": \"^1.0.8\",\n    \"cors\": \"^2.8.1\",\n    \"debug\": \"^2.2.0\",\n    \"express\": \"^4.14.0\",\n    \"express-bunyan-logger\": \"^1.3.2\",\n    \"express-promise\": \"^0.4.0\",\n    \"extract-text-webpack-plugin\": \"^1.0.1\",\n    \"fb\": \"^2.0.0\",\n    \"formidable\": \"^1.1.1\",\n    \"fs-extra\": \"^5.0.0\",\n    \"json-schema-defaults\": \"^0.3.0\",\n    \"json-schema-ref-parser\": \"^4.0.4\",\n    \"jsonwebtoken\": \"^8.1.0\",\n    \"lodash\": \"^4.16.1\",\n    \"lodash-addons\": \"^0.3.1\",\n    \"mime-types\": \"^2.1.17\",\n    \"nano\": \"^6.4.2\",\n    \"nodemailer\": \"^4.4.1\",\n    \"plurishing-schemas\": \"git+https://github.com/robindemourat/plurishing-schemas.git\",\n    \"plurishing-shared\": \"git+https://github.com/robindemourat/plurishing-shared.git\",\n    \"pm2\": \"^2.8.0\",\n    \"react\": \"^16.2.0\",\n    \"react-dom\": \"^16.2.0\",\n    \"twit\": \"^2.2.9\",\n    \"uuid\": \"^3.1.0\",\n    \"webshot\": \"^0.18.0\"\n  },\n  \"devDependencies\": {\n    \"babel-cli\": \"^6.5.1\",\n    \"babel-core\": \"^6.3.17\",\n    \"babel-eslint\": \"^6.0.0-beta.6\",\n    \"babel-loader\": \"^6.2.0\",\n    \"babel-plugin-istanbul\": \"^4.1.1\",\n    \"babel-plugin-transform-class-properties\": \"^6.24.1\",\n    \"babel-plugin-transform-decorators\": \"^6.24.1\",\n    \"babel-plugin-transform-decorators-legacy\": \"^1.3.4\",\n    \"babel-plugin-transform-object-rest-spread\": \"^6.26.0\",\n    \"babel-plugin-transform-runtime\": \"^6.3.13\",\n    \"babel-polyfill\": \"^6.9.0\",\n    \"babel-preset-es2015\": \"^6.3.13\",\n    \"babel-preset-react\": \"^6.24.1\",\n    \"babel-preset-stage-0\": \"^6.3.13\",\n    \"babel-register\": \"^6.3.13\",\n    \"chai\": \"^3.4.1\",\n    \"coveralls\": \"^3.0.0\",\n    \"cross-env\": \"^5.1.1\",\n    \"esdoc\": \"^1.0.4\",\n    \"esdoc-ecmascript-proposal-plugin\": \"^1.0.0\",\n    \"esdoc-publish-markdown-plugin\": \"^1.0.0\",\n    \"eslint\": \"^2.13.1\",\n    \"eslint-config-standard\": \"^5.1.0\",\n    \"eslint-plugin-babel\": \"^3.3.0\",\n    \"eslint-plugin-mocha\": \"^4.11.0\",\n    \"eslint-plugin-node\": \"^5.2.1\",\n    \"eslint-plugin-promise\": \"^1.0.8\",\n    \"eslint-plugin-security\": \"^1.4.0\",\n    \"eslint-plugin-standard\": \"^1.3.1\",\n    \"istanbul\": \"^0.4.5\",\n    \"mocha\": \"^2.2.5\",\n    \"nodemon\": \"^1.8.1\",\n    \"nyc\": \"^11.2.1\",\n    \"pre-commit\": \"^1.2.2\",\n    \"webpack\": \"^1.12.14\"\n  }\n}\n",
+    "content": "{\n  \"name\": \"plurishing-backend\",\n  \"version\": \"0.0.1\",\n  \"description\": \"Backend handling multimodal publishing\",\n  \"main\": \"index.js\",\n  \"repository\": {\n    \"type\": \"git\",\n    \"url\": \"git+https://github.com/robindemourat/plurishing-backend.git\"\n  },\n  \"author\": \"Robin de Mourat <robin.demourat@gmail.com> (https://github.com/robindemourat)\",\n  \"license\": \"ISC\",\n  \"bugs\": {\n    \"url\": \"https://github.com/robindemourat/plurishing-backend/issues\"\n  },\n  \"homepage\": \"https://github.com/robindemourat/plurishing-backend#readme\",\n  \"engines\": {\n    \"node\": \">=9.2.0\"\n  },\n  \"scripts\": {\n    \"dev\": \"better-npm-run dev\",\n    \"start\": \"pm2 start ecosystem.config.js -i max --attach\",\n    \"monitor\": \"pm2 monit\",\n    \"lint\": \"eslint src tests server\",\n    \"lint:fix\": \"npm run lint -- --fix\",\n    \"populate-db\": \"better-npm-run populate-db\",\n    \"populate-db:dev\": \"better-npm-run populate-db-dev\",\n    \"test\": \"cross-env NODE_ENV=test mocha --compilers js:babel-core/register --R  spec --recursive $(find src -name '*.spec.js')\",\n    \"test:watch\": \"npm run test -- --watch\",\n    \"cov\": \"cross-env NODE_ENV=test nyc npm test && nyc check-coverage --lines 0 --functions 0 --branches 0n && nyc report --reporter=text-lcov\",\n    \"doc\": \"esdoc -c esdoc.json\",\n    \"build\": \"babel src/ -d build/\",\n    \"add-build-to-stage\": \"git add build\",\n    \"add-doc-to-stage\": \"git add doc\",\n    \"deploy:heroku\": \"node setHerokuEnv;git push heroku master\"\n  },\n  \"betterScripts\": {\n    \"dev\": {\n      \"command\": \"nodemon src/server.js  --exec babel-node --config nodemon.json\",\n      \"env\": {\n        \"DEBUG\": \"app:*\",\n        \"NODE_ENV\": \"development\"\n      }\n    },\n    \"populate-db\": {\n      \"command\": \"node build/utils/populateDb.js\",\n      \"env\": {\n        \"DEBUG\": \"app:*\",\n        \"NODE_ENV\": \"maintenance\"\n      }\n    },\n    \"populate-db-dev\": {\n      \"command\": \"babel-node src/utils/populateDb.js\",\n      \"env\": {\n        \"DEBUG\": \"app:*\",\n        \"NODE_ENV\": \"development\"\n      }\n    }\n  },\n  \"pre-commit\": [\n    \"lint\",\n    \"cov\",\n    \"build\",\n    \"doc\",\n    \"add-doc-to-stage\",\n    \"add-build-to-stage\"\n  ],\n  \"dependencies\": {\n    \"ajv\": \"^5.5.2\",\n    \"axios\": \"^0.17.1\",\n    \"babel-runtime\": \"^6.3.19\",\n    \"bcrypt\": \"^1.0.3\",\n    \"better-npm-run\": \"0.0.9\",\n    \"bluebird\": \"^3.5.1\",\n    \"bunyan-debug-stream\": \"^1.0.8\",\n    \"cors\": \"^2.8.1\",\n    \"debug\": \"^2.2.0\",\n    \"express\": \"^4.14.0\",\n    \"express-bunyan-logger\": \"^1.3.2\",\n    \"express-promise\": \"^0.4.0\",\n    \"extract-text-webpack-plugin\": \"^1.0.1\",\n    \"fb\": \"^2.0.0\",\n    \"formidable\": \"^1.1.1\",\n    \"fs-extra\": \"^5.0.0\",\n    \"json-schema-defaults\": \"^0.3.0\",\n    \"json-schema-ref-parser\": \"^4.0.4\",\n    \"jsonwebtoken\": \"^8.1.0\",\n    \"lodash\": \"^4.16.1\",\n    \"lodash-addons\": \"^0.3.1\",\n    \"mime-types\": \"^2.1.17\",\n    \"nano\": \"^6.4.2\",\n    \"nodemailer\": \"^4.4.1\",\n    \"plurishing-schemas\": \"git+https://github.com/robindemourat/plurishing-schemas.git\",\n    \"plurishing-shared\": \"git+https://github.com/robindemourat/plurishing-shared.git\",\n    \"pm2\": \"^2.8.0\",\n    \"prince\": \"^1.4.7\",\n    \"react\": \"^16.2.0\",\n    \"react-dom\": \"^16.2.0\",\n    \"twit\": \"^2.2.9\",\n    \"uuid\": \"^3.1.0\",\n    \"webshot\": \"^0.18.0\"\n  },\n  \"devDependencies\": {\n    \"babel-cli\": \"^6.5.1\",\n    \"babel-core\": \"^6.3.17\",\n    \"babel-eslint\": \"^6.0.0-beta.6\",\n    \"babel-loader\": \"^6.2.0\",\n    \"babel-plugin-istanbul\": \"^4.1.1\",\n    \"babel-plugin-transform-class-properties\": \"^6.24.1\",\n    \"babel-plugin-transform-decorators\": \"^6.24.1\",\n    \"babel-plugin-transform-decorators-legacy\": \"^1.3.4\",\n    \"babel-plugin-transform-object-rest-spread\": \"^6.26.0\",\n    \"babel-plugin-transform-runtime\": \"^6.3.13\",\n    \"babel-polyfill\": \"^6.9.0\",\n    \"babel-preset-es2015\": \"^6.3.13\",\n    \"babel-preset-react\": \"^6.24.1\",\n    \"babel-preset-stage-0\": \"^6.3.13\",\n    \"babel-register\": \"^6.3.13\",\n    \"chai\": \"^3.4.1\",\n    \"coveralls\": \"^3.0.0\",\n    \"cross-env\": \"^5.1.1\",\n    \"esdoc\": \"^1.0.4\",\n    \"esdoc-ecmascript-proposal-plugin\": \"^1.0.0\",\n    \"esdoc-publish-markdown-plugin\": \"^1.0.0\",\n    \"eslint\": \"^2.13.1\",\n    \"eslint-config-standard\": \"^5.1.0\",\n    \"eslint-plugin-babel\": \"^3.3.0\",\n    \"eslint-plugin-mocha\": \"^4.11.0\",\n    \"eslint-plugin-node\": \"^5.2.1\",\n    \"eslint-plugin-promise\": \"^1.0.8\",\n    \"eslint-plugin-security\": \"^1.4.0\",\n    \"eslint-plugin-standard\": \"^1.3.1\",\n    \"istanbul\": \"^0.4.5\",\n    \"mocha\": \"^2.2.5\",\n    \"nodemon\": \"^1.8.1\",\n    \"nyc\": \"^11.2.1\",\n    \"pre-commit\": \"^1.2.2\",\n    \"webpack\": \"^1.12.14\"\n  }\n}\n",
     "longname": "/Users/rawbin/Documents/Projets/collaborations/ensad-publishing/prototype/plurishing-backend/package.json",
     "name": "package.json",
     "static": true,
