@@ -4,32 +4,42 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var cov_1kvp7cgsoq = function () {
-  var path = '/Users/rawbin/Documents/Projets/collaborations/ensad-publishing/prototype/plurishing-backend/src/services/html2img/html2img.api.js',
-      hash = '967c06d719e3838c50ab92683494fe272b17316a',
+var cov_14m8mz51ty = function () {
+  var path = '/Users/rawbin/Documents/Projets/collaborations/ensad-publishing/prototype/plurishing-backend/src/services/data-provider/data-provider.api.js',
+      hash = '261a6af1deceae616a97c7c1d3482cd6793acb50',
       global = new Function('return this')(),
       gcv = '__coverage__',
       coverageData = {
-    path: '/Users/rawbin/Documents/Projets/collaborations/ensad-publishing/prototype/plurishing-backend/src/services/html2img/html2img.api.js',
+    path: '/Users/rawbin/Documents/Projets/collaborations/ensad-publishing/prototype/plurishing-backend/src/services/data-provider/data-provider.api.js',
     statementMap: {
       '0': {
         start: {
-          line: 13,
+          line: 12,
           column: 15
         },
         end: {
-          line: 13,
+          line: 12,
           column: 35
         }
       },
       '1': {
+        start: {
+          line: 14,
+          column: 0
+        },
+        end: {
+          line: 14,
+          column: 43
+        }
+      },
+      '2': {
         start: {
           line: 15,
           column: 0
         },
         end: {
           line: 15,
-          column: 27
+          column: 48
         }
       }
     },
@@ -37,7 +47,8 @@ var cov_1kvp7cgsoq = function () {
     branchMap: {},
     s: {
       '0': 0,
-      '1': 0
+      '1': 0,
+      '2': 0
     },
     f: {},
     b: {},
@@ -52,26 +63,25 @@ var cov_1kvp7cgsoq = function () {
   coverageData.hash = hash;
   return coverage[path] = coverageData;
 }();
-
 /**
  * Plurishing-backend
  * =======
- * Html to image api
+ * Data provider api
  */
 
 var _express = require('express');
 
 var _express2 = _interopRequireDefault(_express);
 
-var _html2img = require('./html2img.controller');
-
-var _html2img2 = _interopRequireDefault(_html2img);
+var _dataProvider = require('./data-provider.controller');
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var router = (cov_1kvp7cgsoq.s[0]++, new _express2.default.Router());
+var router = (cov_14m8mz51ty.s[0]++, new _express2.default.Router());
 
-cov_1kvp7cgsoq.s[1]++;
-router.post('/', _html2img2.default);
+cov_14m8mz51ty.s[1]++;
+router.get('/montage/:id', _dataProvider.getMontageData);
+cov_14m8mz51ty.s[2]++;
+router.get('/asset/:id', _dataProvider.getAssetAttachmentUrl);
 
 exports.default = router;

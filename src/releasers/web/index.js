@@ -1,7 +1,19 @@
+import {post} from 'axios';
+
+import {getConfig} from '../../utils/config';
+import {hash} from '../../utils/crypto';
+const {
+  websiteBuilderUri,
+  secret
+} = getConfig();
 
 
 
-
-export default function publish(/* data, diffusion */) {
-  return new Promise((resolve) => resolve());
+export default function publish(data, diffusion) {
+  return hash(secret)
+          .then(pwd => {
+            const endpoint = `${websiteBuilderUri}/update`;
+            // send new data
+            return post(endpoint, {data, diffusion, pwd});
+          });
 }

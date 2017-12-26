@@ -3,7 +3,7 @@
 /**
  * Plurishing-backend
  * =======
- * Asset api
+ * Html to image api
  */
 
 import express from 'express';

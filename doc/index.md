@@ -777,6 +777,16 @@ Sends a personal feed's status message
 | Name | Type | Attribute | Description |
 | --- | --- | --- | --- |
 
+## `getAssetAttachmentUrl()`
+
+| Name | Type | Attribute | Description |
+| --- | --- | --- | --- |
+
+## `getMontageData()`
+
+| Name | Type | Attribute | Description |
+| --- | --- | --- | --- |
+
 ## `controller()`
 
 | Name | Type | Attribute | Description |

@@ -29,6 +29,7 @@ import {api as users} from './components/users';
 import {api as auth} from './components/auth';
 
 import {router as html2img} from './services/html2img';
+import {router as dataProvider} from './services/data-provider';
 
 
 /**
@@ -80,10 +81,19 @@ app.get('/', (req, res) => {
 export default app;
 
 /**
+ * UNPROTECTED ROUTES
+ */
+
+/**
  * Static asset files
  */
 const assetsPath = resolve(`${__dirname}/../assets`);
 app.use('/assets', express.static(assetsPath));
+
+/**
+ * Open data provider
+ */
+app.use('/services/data-provider', dataProvider);
 
 
 /**

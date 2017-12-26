@@ -6,7 +6,7 @@ Object.defineProperty(exports, "__esModule", {
 
 var cov_2145knos0z = function () {
   var path = '/Users/rawbin/Documents/Projets/collaborations/ensad-publishing/prototype/plurishing-backend/src/app.js',
-      hash = '8f087f2a94aaaeee9ae3e7bf73bf88946ce9b4ec',
+      hash = '12d1cd4f3ef45ec8e06a6356853f43ec2591ca9f',
       global = new Function('return this')(),
       gcv = '__coverage__',
       coverageData = {
@@ -14,271 +14,281 @@ var cov_2145knos0z = function () {
     statementMap: {
       '0': {
         start: {
-          line: 40,
+          line: 41,
           column: 15
         },
         end: {
-          line: 40,
+          line: 41,
           column: 26
         }
       },
       '1': {
         start: {
-          line: 41,
+          line: 42,
           column: 17
         },
         end: {
-          line: 41,
+          line: 42,
           column: 23
         }
       },
       '2': {
         start: {
-          line: 46,
+          line: 47,
           column: 12
         },
         end: {
-          line: 46,
+          line: 47,
           column: 21
         }
       },
       '3': {
         start: {
-          line: 51,
+          line: 52,
           column: 0
         },
         end: {
-          line: 51,
+          line: 52,
           column: 67
         }
       },
       '4': {
         start: {
-          line: 52,
+          line: 53,
           column: 0
         },
         end: {
-          line: 52,
+          line: 53,
           column: 27
         }
       },
       '5': {
         start: {
-          line: 53,
+          line: 54,
           column: 0
         },
         end: {
-          line: 53,
+          line: 54,
           column: 16
         }
       },
       '6': {
         start: {
-          line: 54,
+          line: 55,
           column: 0
         },
         end: {
-          line: 54,
+          line: 55,
           column: 38
         }
       },
       '7': {
         start: {
-          line: 55,
+          line: 56,
           column: 0
         },
         end: {
-          line: 66,
+          line: 67,
           column: 4
         }
       },
       '8': {
         start: {
-          line: 71,
+          line: 72,
           column: 0
         },
         end: {
-          line: 71,
+          line: 72,
           column: 31
         }
       },
       '9': {
         start: {
-          line: 76,
+          line: 77,
           column: 0
         },
         end: {
-          line: 78,
+          line: 79,
           column: 3
         }
       },
       '10': {
         start: {
-          line: 77,
+          line: 78,
           column: 2
         },
         end: {
-          line: 77,
+          line: 78,
           column: 77
         }
       },
       '11': {
         start: {
-          line: 85,
+          line: 90,
           column: 19
         },
         end: {
-          line: 85,
+          line: 90,
           column: 52
         }
       },
       '12': {
         start: {
-          line: 86,
+          line: 91,
           column: 0
         },
         end: {
-          line: 86,
+          line: 91,
           column: 47
         }
       },
       '13': {
         start: {
-          line: 92,
-          column: 18
+          line: 96,
+          column: 0
         },
         end: {
-          line: 92,
-          column: 34
+          line: 96,
+          column: 49
         }
       },
       '14': {
         start: {
-          line: 97,
-          column: 0
+          line: 102,
+          column: 18
         },
         end: {
-          line: 97,
-          column: 25
+          line: 102,
+          column: 34
         }
       },
       '15': {
         start: {
-          line: 111,
+          line: 107,
           column: 0
         },
         end: {
-          line: 111,
-          column: 31
+          line: 107,
+          column: 25
         }
       },
       '16': {
         start: {
-          line: 112,
+          line: 121,
           column: 0
         },
         end: {
-          line: 112,
-          column: 33
+          line: 121,
+          column: 31
         }
       },
       '17': {
         start: {
-          line: 113,
+          line: 122,
           column: 0
         },
         end: {
-          line: 113,
-          column: 39
+          line: 122,
+          column: 33
         }
       },
       '18': {
         start: {
-          line: 114,
+          line: 123,
           column: 0
         },
         end: {
-          line: 114,
-          column: 45
+          line: 123,
+          column: 39
         }
       },
       '19': {
         start: {
-          line: 115,
+          line: 124,
           column: 0
         },
         end: {
-          line: 115,
-          column: 41
+          line: 124,
+          column: 45
         }
       },
       '20': {
         start: {
-          line: 116,
+          line: 125,
           column: 0
         },
         end: {
-          line: 116,
-          column: 37
+          line: 125,
+          column: 41
         }
       },
       '21': {
         start: {
-          line: 117,
+          line: 126,
           column: 0
         },
         end: {
-          line: 117,
-          column: 45
+          line: 126,
+          column: 37
         }
       },
       '22': {
         start: {
-          line: 122,
+          line: 127,
           column: 0
         },
         end: {
-          line: 122,
-          column: 27
+          line: 127,
+          column: 45
         }
       },
       '23': {
         start: {
-          line: 127,
-          column: 22
+          line: 132,
+          column: 0
         },
         end: {
-          line: 127,
-          column: 38
+          line: 132,
+          column: 27
         }
       },
       '24': {
         start: {
-          line: 129,
-          column: 0
+          line: 137,
+          column: 22
         },
         end: {
-          line: 129,
-          column: 41
+          line: 137,
+          column: 38
         }
       },
       '25': {
         start: {
-          line: 131,
+          line: 139,
           column: 0
         },
         end: {
-          line: 131,
-          column: 36
+          line: 139,
+          column: 41
         }
       },
       '26': {
         start: {
-          line: 136,
+          line: 141,
           column: 0
         },
         end: {
-          line: 136,
+          line: 141,
+          column: 36
+        }
+      },
+      '27': {
+        start: {
+          line: 146,
+          column: 0
+        },
+        end: {
+          line: 146,
           column: 22
         }
       }
@@ -288,25 +298,25 @@ var cov_2145knos0z = function () {
         name: '(anonymous_0)',
         decl: {
           start: {
-            line: 76,
+            line: 77,
             column: 13
           },
           end: {
-            line: 76,
+            line: 77,
             column: 14
           }
         },
         loc: {
           start: {
-            line: 76,
+            line: 77,
             column: 27
           },
           end: {
-            line: 78,
+            line: 79,
             column: 1
           }
         },
-        line: 76
+        line: 77
       }
     },
     branchMap: {},
@@ -337,7 +347,8 @@ var cov_2145knos0z = function () {
       '23': 0,
       '24': 0,
       '25': 0,
-      '26': 0
+      '26': 0,
+      '27': 0
     },
     f: {
       '0': 0
@@ -415,6 +426,8 @@ var _auth = require('./components/auth');
 
 var _html2img = require('./services/html2img');
 
+var _dataProvider = require('./services/data-provider');
+
 var _config = require('./utils/config');
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
@@ -476,6 +489,10 @@ app.get('/', function (req, res) {
 exports.default = app;
 
 /**
+ * UNPROTECTED ROUTES
+ */
+
+/**
  * Static asset files
  */
 
@@ -484,14 +501,20 @@ cov_2145knos0z.s[12]++;
 app.use('/assets', _express2.default.static(assetsPath));
 
 /**
+ * Open data provider
+ */
+cov_2145knos0z.s[13]++;
+app.use('/services/data-provider', _dataProvider.router);
+
+/**
  * Create API router
  */
-var apiRoutes = (cov_2145knos0z.s[13]++, _express2.default.Router());
+var apiRoutes = (cov_2145knos0z.s[14]++, _express2.default.Router());
 
 /**
  * No-token authentication-related routes
  */
-cov_2145knos0z.s[14]++;
+cov_2145knos0z.s[15]++;
 apiRoutes.use('/', _auth.api);
 
 /**
@@ -506,40 +529,40 @@ apiRoutes.use('/', _auth.api);
 /**
  * Protected api routes
  */
-cov_2145knos0z.s[15]++;
-apiRoutes.use('/users', _users.api);
 cov_2145knos0z.s[16]++;
-apiRoutes.use('/assets', _assets.api);
+apiRoutes.use('/users', _users.api);
 cov_2145knos0z.s[17]++;
-apiRoutes.use('/resources', _resources.api);
+apiRoutes.use('/assets', _assets.api);
 cov_2145knos0z.s[18]++;
-apiRoutes.use('/compositions', _compositions.api);
+apiRoutes.use('/resources', _resources.api);
 cov_2145knos0z.s[19]++;
-apiRoutes.use('/diffusions', _diffusions.api);
+apiRoutes.use('/compositions', _compositions.api);
 cov_2145knos0z.s[20]++;
-apiRoutes.use('/montages', _montages.api);
+apiRoutes.use('/diffusions', _diffusions.api);
 cov_2145knos0z.s[21]++;
+apiRoutes.use('/montages', _montages.api);
+cov_2145knos0z.s[22]++;
 apiRoutes.use('/deliverables', _deliverables.api);
 
 /**
  * Connect the api router to the app
  */
-cov_2145knos0z.s[22]++;
+cov_2145knos0z.s[23]++;
 app.use('/api', apiRoutes);
 
 /**
  * SERVICES router
  */
-var serviceRoutes = (cov_2145knos0z.s[23]++, _express2.default.Router());
-
-cov_2145knos0z.s[24]++;
-serviceRoutes.use('/html2img', _html2img.router);
+var serviceRoutes = (cov_2145knos0z.s[24]++, _express2.default.Router());
 
 cov_2145knos0z.s[25]++;
+serviceRoutes.use('/html2img', _html2img.router);
+
+cov_2145knos0z.s[26]++;
 app.use('/services', serviceRoutes);
 
 /**
  * Connect error handler
  */
-cov_2145knos0z.s[26]++;
+cov_2145knos0z.s[27]++;
 app.use(_middlewares.errorHandler);

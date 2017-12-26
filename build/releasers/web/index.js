@@ -1,103 +1,121 @@
-"use strict";
+'use strict';
 
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _promise = require("babel-runtime/core-js/promise");
-
-var _promise2 = _interopRequireDefault(_promise);
-
 var cov_2jw51gk9sd = function () {
-  var path = "/Users/rawbin/Documents/Projets/collaborations/ensad-publishing/prototype/plurishing-backend/src/releasers/web/index.js",
-      hash = "873e3417ba20e1464a47a9a34a66a67292caeb71",
+  var path = '/Users/rawbin/Documents/Projets/collaborations/ensad-publishing/prototype/plurishing-backend/src/releasers/web/index.js',
+      hash = '35ec2b0106300a23eae98fa72cf926c5f55acb12',
       global = new Function('return this')(),
-      gcv = "__coverage__",
+      gcv = '__coverage__',
       coverageData = {
-    path: "/Users/rawbin/Documents/Projets/collaborations/ensad-publishing/prototype/plurishing-backend/src/releasers/web/index.js",
+    path: '/Users/rawbin/Documents/Projets/collaborations/ensad-publishing/prototype/plurishing-backend/src/releasers/web/index.js',
     statementMap: {
-      "0": {
+      '0': {
         start: {
-          line: 6,
+          line: 8,
+          column: 4
+        },
+        end: {
+          line: 8,
+          column: 15
+        }
+      },
+      '1': {
+        start: {
+          line: 13,
           column: 2
         },
         end: {
-          line: 6,
-          column: 45
+          line: 18,
+          column: 13
         }
       },
-      "1": {
+      '2': {
         start: {
-          line: 6,
-          column: 34
+          line: 15,
+          column: 29
         },
         end: {
-          line: 6,
-          column: 43
+          line: 15,
+          column: 58
+        }
+      },
+      '3': {
+        start: {
+          line: 17,
+          column: 12
+        },
+        end: {
+          line: 17,
+          column: 58
         }
       }
     },
     fnMap: {
-      "0": {
-        name: "publish",
+      '0': {
+        name: 'publish',
         decl: {
           start: {
-            line: 5,
+            line: 12,
             column: 24
           },
           end: {
-            line: 5,
+            line: 12,
             column: 31
           }
         },
         loc: {
           start: {
-            line: 5,
-            column: 55
+            line: 12,
+            column: 49
           },
           end: {
-            line: 7,
+            line: 19,
             column: 1
           }
         },
-        line: 5
+        line: 12
       },
-      "1": {
-        name: "(anonymous_1)",
+      '1': {
+        name: '(anonymous_1)',
         decl: {
           start: {
-            line: 6,
-            column: 21
+            line: 14,
+            column: 16
           },
           end: {
-            line: 6,
-            column: 22
+            line: 14,
+            column: 17
           }
         },
         loc: {
           start: {
-            line: 6,
-            column: 34
+            line: 14,
+            column: 23
           },
           end: {
-            line: 6,
-            column: 43
+            line: 18,
+            column: 11
           }
         },
-        line: 6
+        line: 14
       }
     },
     branchMap: {},
     s: {
-      "0": 0,
-      "1": 0
+      '0': 0,
+      '1': 0,
+      '2': 0,
+      '3': 0
     },
     f: {
-      "0": 0,
-      "1": 0
+      '0': 0,
+      '1': 0
     },
     b: {},
-    _coverageSchema: "332fd63041d2c1bcb487cc26dd0d5f7d97098a6c"
+    _coverageSchema: '332fd63041d2c1bcb487cc26dd0d5f7d97098a6c'
   },
       coverage = global[gcv] || (global[gcv] = {});
 
@@ -111,15 +129,26 @@ var cov_2jw51gk9sd = function () {
 
 exports.default = publish;
 
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+var _axios = require('axios');
 
-function publish() /* data, diffusion */{
+var _config = require('../../utils/config');
+
+var _crypto = require('../../utils/crypto');
+
+var _ref = (cov_2jw51gk9sd.s[0]++, (0, _config.getConfig)()),
+    websiteBuilderUri = _ref.websiteBuilderUri,
+    secret = _ref.secret;
+
+function publish(data, diffusion) {
   cov_2jw51gk9sd.f[0]++;
-  cov_2jw51gk9sd.s[0]++;
+  cov_2jw51gk9sd.s[1]++;
 
-  return new _promise2.default(function (resolve) {
+  return (0, _crypto.hash)(secret).then(function (pwd) {
     cov_2jw51gk9sd.f[1]++;
-    cov_2jw51gk9sd.s[1]++;
-    return resolve();
+
+    var endpoint = (cov_2jw51gk9sd.s[2]++, websiteBuilderUri + '/update');
+    // send new data
+    cov_2jw51gk9sd.s[3]++;
+    return (0, _axios.post)(endpoint, { data: data, diffusion: diffusion, pwd: pwd });
   });
 }
