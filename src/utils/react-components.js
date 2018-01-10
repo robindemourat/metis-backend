@@ -16,7 +16,7 @@ export class TranslationsProvider extends Component {
   })
 
   /**
-   * @todo hook translation provider key to server-side translations
+   * @todo this is a hook for a translation provider for server-side rendering
    */
   t = key => key;
 
