@@ -18,6 +18,8 @@ export default function generatePdf ({
       <TranslationsProvider>
         <Component
           {...props}
+          renderingMode="pdf"
+          getAssetUri={asset => `${tempDirPath}/${asset._id}/${asset.filename}`}
         />
       </TranslationsProvider>
     );
