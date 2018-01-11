@@ -98,7 +98,7 @@ export const getAssetAttachment = ({
  */
 export const createAsset = (asset, data) => {
   const {filename} = asset;
-  const mimeType = lookup(filename);
+  const mimeType = lookup(filename) || 'application/octet-stream';
   // validate data
   return dataIsValid(asset, schema)
   // create document

@@ -19,7 +19,7 @@ var _promise2 = _interopRequireDefault(_promise);
 
 var cov_2hhud5wwfm = function () {
   var path = '/Users/rawbin/Documents/Projets/collaborations/ensad-publishing/prototype/plurishing-backend/src/components/assets/assets.dal.js',
-      hash = '369d1e8915d03f189f77db62f52828eb536d34a3',
+      hash = '21e91f1fab34d41b170397be7227107bcf199c21',
       global = new Function('return this')(),
       gcv = '__coverage__',
       coverageData = {
@@ -252,7 +252,7 @@ var cov_2hhud5wwfm = function () {
         },
         end: {
           line: 101,
-          column: 35
+          column: 65
         }
       },
       '23': {
@@ -1328,6 +1328,39 @@ var cov_2hhud5wwfm = function () {
       '4': {
         loc: {
           start: {
+            line: 101,
+            column: 19
+          },
+          end: {
+            line: 101,
+            column: 65
+          }
+        },
+        type: 'binary-expr',
+        locations: [{
+          start: {
+            line: 101,
+            column: 19
+          },
+          end: {
+            line: 101,
+            column: 35
+          }
+        }, {
+          start: {
+            line: 101,
+            column: 39
+          },
+          end: {
+            line: 101,
+            column: 65
+          }
+        }],
+        line: 101
+      },
+      '5': {
+        loc: {
+          start: {
             line: 129,
             column: 10
           },
@@ -1358,7 +1391,7 @@ var cov_2hhud5wwfm = function () {
         }],
         line: 129
       },
-      '5': {
+      '6': {
         loc: {
           start: {
             line: 164,
@@ -1391,7 +1424,7 @@ var cov_2hhud5wwfm = function () {
         }],
         line: 164
       },
-      '6': {
+      '7': {
         loc: {
           start: {
             line: 166,
@@ -1424,7 +1457,7 @@ var cov_2hhud5wwfm = function () {
         }],
         line: 166
       },
-      '7': {
+      '8': {
         loc: {
           start: {
             line: 169,
@@ -1457,7 +1490,7 @@ var cov_2hhud5wwfm = function () {
         }],
         line: 169
       },
-      '8': {
+      '9': {
         loc: {
           start: {
             line: 194,
@@ -1583,7 +1616,8 @@ var cov_2hhud5wwfm = function () {
       '5': [0, 0],
       '6': [0, 0],
       '7': [0, 0],
-      '8': [0, 0]
+      '8': [0, 0],
+      '9': [0, 0]
     },
     _coverageSchema: '332fd63041d2c1bcb487cc26dd0d5f7d97098a6c'
   },
@@ -1749,7 +1783,7 @@ var createAsset = exports.createAsset = function createAsset(asset, data) {
   var _ref4 = (cov_2hhud5wwfm.s[21]++, asset),
       filename = _ref4.filename;
 
-  var mimeType = (cov_2hhud5wwfm.s[22]++, (0, _mimeTypes.lookup)(filename));
+  var mimeType = (cov_2hhud5wwfm.s[22]++, (cov_2hhud5wwfm.b[4][0]++, (0, _mimeTypes.lookup)(filename)) || (cov_2hhud5wwfm.b[4][1]++, 'application/octet-stream'));
   // validate data
   cov_2hhud5wwfm.s[23]++;
   return (0, _schemas.dataIsValid)(asset, _plurishingSchemas.Asset)
@@ -1793,12 +1827,12 @@ var createAsset = exports.createAsset = function createAsset(asset, data) {
         cov_2hhud5wwfm.s[28]++;
 
         if (err) {
-          cov_2hhud5wwfm.b[4][0]++;
+          cov_2hhud5wwfm.b[5][0]++;
           cov_2hhud5wwfm.s[29]++;
 
           reject(err);
         } else {
-          cov_2hhud5wwfm.b[4][1]++;
+          cov_2hhud5wwfm.b[5][1]++;
           cov_2hhud5wwfm.s[30]++;
 
           resolve(body);
@@ -1842,14 +1876,14 @@ var updateAsset = exports.updateAsset = function updateAsset(assetId, _ref6, att
   }).then(function (asset) {
     cov_2hhud5wwfm.f[20]++;
 
-    var previousAttachment = (cov_2hhud5wwfm.s[35]++, (cov_2hhud5wwfm.b[5][0]++, asset._attachments) && (cov_2hhud5wwfm.b[5][1]++, (0, _keys2.default)(asset._attachments)[0]));
+    var previousAttachment = (cov_2hhud5wwfm.s[35]++, (cov_2hhud5wwfm.b[6][0]++, asset._attachments) && (cov_2hhud5wwfm.b[6][1]++, (0, _keys2.default)(asset._attachments)[0]));
     cov_2hhud5wwfm.s[36]++;
     return new _promise2.default(function (resolve, reject) {
       cov_2hhud5wwfm.f[21]++;
       cov_2hhud5wwfm.s[37]++;
 
       if (previousAttachment) {
-        cov_2hhud5wwfm.b[6][0]++;
+        cov_2hhud5wwfm.b[7][0]++;
         cov_2hhud5wwfm.s[38]++;
 
         _plugDb2.default.attachment.destroy(asset._id, encodeURIComponent(previousAttachment), { rev: asset._rev }, function (err, body) {
@@ -1857,18 +1891,18 @@ var updateAsset = exports.updateAsset = function updateAsset(assetId, _ref6, att
           cov_2hhud5wwfm.s[39]++;
 
           if (err) {
-            cov_2hhud5wwfm.b[7][0]++;
+            cov_2hhud5wwfm.b[8][0]++;
             cov_2hhud5wwfm.s[40]++;
 
             reject(err);
           } else {
-              cov_2hhud5wwfm.b[7][1]++;
+              cov_2hhud5wwfm.b[8][1]++;
               cov_2hhud5wwfm.s[41]++;
               resolve(body);
             }
         });
       } else {
-        cov_2hhud5wwfm.b[6][1]++;
+        cov_2hhud5wwfm.b[7][1]++;
       }
     });
   })
@@ -1904,12 +1938,12 @@ var updateAsset = exports.updateAsset = function updateAsset(assetId, _ref6, att
         cov_2hhud5wwfm.s[45]++;
 
         if (err) {
-          cov_2hhud5wwfm.b[8][0]++;
+          cov_2hhud5wwfm.b[9][0]++;
           cov_2hhud5wwfm.s[46]++;
 
           reject(err);
         } else {
-          cov_2hhud5wwfm.b[8][1]++;
+          cov_2hhud5wwfm.b[9][1]++;
           cov_2hhud5wwfm.s[47]++;
 
           resolve(body);

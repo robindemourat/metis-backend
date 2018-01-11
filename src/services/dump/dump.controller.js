@@ -2,8 +2,10 @@
 
 import archiver from 'archiver';
 import {ensureDir, remove, writeFile, readFile} from 'fs-extra';
-import {createWriteStream} from 'fs';
+import {createWriteStream, createReadStream} from 'fs';
+import unzipper from 'unzipper';
 import {resolve as resolvePath} from 'path';
+import formidable from 'formidable';
 
 import {dal as assetDal} from '../../components/assets';
 import {dal as resourceDal} from '../../components/resources';
@@ -144,11 +146,130 @@ export const downloadAllData = (req, res) =>
     .then(file => {
       return res.end(file, 'binary');
     })
+    .then(resolve)
     .catch(reject);
   });
 
+const clearAllData = () =>
+    assetDal.getAssets({})
+      .then(assets =>
+        Promise.all(assets.map(asset => assetDal.deleteAsset({_id: asset._id})))
+      )
+      .then(() => resourceDal.getResources({}))
+      .then(resources =>
+        Promise.all(resources.map(resource => resourceDal.deleteResource({_id: resource._id})))
+      )
+      .then(() => compositionDal.getCompositions({}))
+      .then(compositions =>
+        Promise.all(compositions.map(composition => compositionDal.deleteComposition({_id: composition._id})))
+      )
+      .then(() => montageDal.getMontages({}))
+      .then(montages =>
+        Promise.all(montages.map(montage => montageDal.deleteMontage({_id: montage._id})))
+      )
+      .then(() => diffusionDal.getDiffusions({}))
+      .then(diffusions =>
+        Promise.all(diffusions.map(diffusion => diffusionDal.deleteDiffusion({_id: diffusion._id})))
+      )
+      .then(() => deliverableDal.getDeliverables({}))
+      .then(deliverables =>
+        Promise.all(deliverables.map(deliverable => deliverableDal.deleteDeliverable({_id: deliverable._id})))
+      );
+
 export const uploadData = (req, res) =>
-  res.json(['uploaded']);
+  // remove dump folder as we are going to replace it
+  remove(dumpFolder)
+    // clear all previous data
+    .then(() => clearAllData())
+    // store the zip dump file in temp dir
+    .then(() => {
+      return new Promise((resolve, reject) => {
+        const form = new formidable.IncomingForm({
+          uploadDir : tempFolder,
+          // multiples : true,
+          keepExtensions : true
+        });
+
+        form.on('error', function(err){
+          return reject(err);
+        });
+
+
+        form.parse(req, function(err, fields, files) {
+          if (err) {
+            return reject(err);
+          } else {
+            const attachmentPath = files.file.path;
+            return resolve(attachmentPath);
+          }
+        });
+      });
+    })
+    // unzip file to dump folder
+    .then(attachmentPath =>
+        createReadStream(attachmentPath)
+        .pipe(unzipper.Extract({path: dumpFolder}))
+        .promise()
+    )
+    // load data
+    .then(() => readFile(`${dumpFolder}data/data.json`, 'utf8'))
+    .then(raw =>
+      new Promise((resolve, reject) => {
+        try {
+          const data = JSON.parse(raw);
+          resolve(data);
+        } catch (e) {
+          reject(e);
+        }
+      })
+    )
+    // create all objects
+    .then(data => {
+      const cleanRev = doc => {
+        delete doc._rev;
+        if (doc.type === 'asset' || doc.type === 'deliverable') {
+          // delete attachment
+          delete doc._attachments;
+        }
+        return doc;
+      };
+      const operations = [
+        ...data.assets.map(asset => {
+          const fileName = asset.filename;
+          const attachmentPath = `${dumpFolder}assets/${fileName}`;
+          return readFile(attachmentPath)
+                  .then(data => assetDal.createAsset(cleanRev(asset), data));
+        }),
+        ...data.resources.map(resource =>
+          resourceDal.createResource(cleanRev(resource))
+        ),
+        ...data.compositions.map(composition =>
+          compositionDal.createComposition(cleanRev(composition))
+        ),
+        ...data.montages.map(montage =>
+          montageDal.createMontage(cleanRev(montage))
+        ),
+        ...data.diffusions.map(diffusion =>
+          diffusionDal.createDiffusion(cleanRev(diffusion))
+        ),
+        ...data.deliverables.map(deliverable => {
+          const fileName = deliverable.filename;
+          const attachmentPath = `${dumpFolder}deliverables/${fileName}`;
+          return readFile(attachmentPath)
+                  .then(data => deliverableDal.createDeliverable(cleanRev(deliverable), data));
+        })
+      ];
+
+      return Promise.all(operations);
+    })
+    .then(() => res.json({status: 'ok'}))
+    .catch(e => {
+      res.status(500).send(e);
+    });
 
 export const deleteAllData = (req, res) =>
-  res.json(['deleted']);
+  clearAllData()
+    .then(() => {
+      return res.json({status: 'ok'});
+    })
+    .catch(e => res.status(500).send(e));

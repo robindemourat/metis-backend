@@ -792,6 +792,11 @@ Sends a personal feed's status message
 | Name | Type | Attribute | Description |
 | --- | --- | --- | --- |
 
+## `clearAllData()`
+
+| Name | Type | Attribute | Description |
+| --- | --- | --- | --- |
+
 ## `uploadData()`
 
 | Name | Type | Attribute | Description |
