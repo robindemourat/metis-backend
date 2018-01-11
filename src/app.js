@@ -30,6 +30,7 @@ import {api as auth} from './components/auth';
 
 import {router as html2img} from './services/html2img';
 import {router as dataProvider} from './services/data-provider';
+import {router as dumpProvider} from './services/dump';
 
 
 /**
@@ -137,6 +138,7 @@ app.use('/api', apiRoutes);
 const serviceRoutes = express.Router();
 
 serviceRoutes.use('/html2img', html2img);
+serviceRoutes.use('/dump', dumpProvider);
 
 app.use('/services', serviceRoutes);
 

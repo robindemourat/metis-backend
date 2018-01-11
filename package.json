@@ -66,6 +66,7 @@
   ],
   "dependencies": {
     "ajv": "^5.5.2",
+    "archiver": "^2.1.1",
     "axios": "^0.17.1",
     "babel-runtime": "^6.3.19",
     "bcrypt": "^1.0.3",
@@ -94,6 +95,7 @@
     "pm2": "^2.8.0",
     "prince": "^1.4.7",
     "react": "^16.2.0",
+    "react-citeproc": "^0.1.7",
     "react-dom": "^16.2.0",
     "twit": "^2.2.9",
     "uuid": "^3.1.0",

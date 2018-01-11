@@ -74,7 +74,7 @@ Gets a asset with a specific id or email
 
 ## `getAssetAttachment(parameters: object): Promise`
 
-Gets a asset with a specific id or email
+Gets a asset with a specific id or filename
 
 | Name | Type | Attribute | Description |
 | --- | --- | --- | --- |
@@ -787,6 +787,21 @@ Sends a personal feed's status message
 | Name | Type | Attribute | Description |
 | --- | --- | --- | --- |
 
+## `downloadAllData()`
+
+| Name | Type | Attribute | Description |
+| --- | --- | --- | --- |
+
+## `uploadData()`
+
+| Name | Type | Attribute | Description |
+| --- | --- | --- | --- |
+
+## `deleteAllData()`
+
+| Name | Type | Attribute | Description |
+| --- | --- | --- | --- |
+
 ## `controller()`
 
 | Name | Type | Attribute | Description |
@@ -876,13 +891,6 @@ Custom error handling object to be used in a middleware in order to catch all er
 | --- | --- | --- | --- |
 
 ## `errorHandler()`
-
-| Name | Type | Attribute | Description |
-| --- | --- | --- | --- |
-
-## `sendTestEmail()`
-
-Simulate email sending with ethereal
 
 | Name | Type | Attribute | Description |
 | --- | --- | --- | --- |

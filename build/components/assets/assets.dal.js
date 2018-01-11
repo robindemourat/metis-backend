@@ -1703,7 +1703,7 @@ var getAsset = exports.getAsset = function getAsset(_ref2) {
 };
 
 /**
- * Gets a asset with a specific id or email
+ * Gets a asset with a specific id or filename
  * @param {object} parameters
  * @return {Promise}
  */

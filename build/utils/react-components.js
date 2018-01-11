@@ -250,7 +250,7 @@ var TranslationsProvider = exports.TranslationsProvider = (_temp = _class = func
   }
 
   /**
-   * @todo hook translation provider key to server-side translations
+   * @todo this is a hook for a translation provider for server-side rendering
    */
 
 

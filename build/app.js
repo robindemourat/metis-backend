@@ -6,7 +6,7 @@ Object.defineProperty(exports, "__esModule", {
 
 var cov_2145knos0z = function () {
   var path = '/Users/rawbin/Documents/Projets/collaborations/ensad-publishing/prototype/plurishing-backend/src/app.js',
-      hash = '12d1cd4f3ef45ec8e06a6356853f43ec2591ca9f',
+      hash = '7275be64707b4c4673fb7bfcab521fefd9fd4bc4',
       global = new Function('return this')(),
       gcv = '__coverage__',
       coverageData = {
@@ -14,261 +14,261 @@ var cov_2145knos0z = function () {
     statementMap: {
       '0': {
         start: {
-          line: 41,
+          line: 42,
           column: 15
         },
         end: {
-          line: 41,
+          line: 42,
           column: 26
         }
       },
       '1': {
         start: {
-          line: 42,
+          line: 43,
           column: 17
         },
         end: {
-          line: 42,
+          line: 43,
           column: 23
         }
       },
       '2': {
         start: {
-          line: 47,
+          line: 48,
           column: 12
         },
         end: {
-          line: 47,
+          line: 48,
           column: 21
         }
       },
       '3': {
         start: {
-          line: 52,
+          line: 53,
           column: 0
         },
         end: {
-          line: 52,
+          line: 53,
           column: 67
         }
       },
       '4': {
         start: {
-          line: 53,
+          line: 54,
           column: 0
         },
         end: {
-          line: 53,
+          line: 54,
           column: 27
         }
       },
       '5': {
         start: {
-          line: 54,
+          line: 55,
           column: 0
         },
         end: {
-          line: 54,
+          line: 55,
           column: 16
         }
       },
       '6': {
         start: {
-          line: 55,
+          line: 56,
           column: 0
         },
         end: {
-          line: 55,
+          line: 56,
           column: 38
         }
       },
       '7': {
         start: {
-          line: 56,
+          line: 57,
           column: 0
         },
         end: {
-          line: 67,
+          line: 68,
           column: 4
         }
       },
       '8': {
         start: {
-          line: 72,
+          line: 73,
           column: 0
         },
         end: {
-          line: 72,
+          line: 73,
           column: 31
         }
       },
       '9': {
         start: {
-          line: 77,
+          line: 78,
           column: 0
         },
         end: {
-          line: 79,
+          line: 80,
           column: 3
         }
       },
       '10': {
         start: {
-          line: 78,
+          line: 79,
           column: 2
         },
         end: {
-          line: 78,
+          line: 79,
           column: 77
         }
       },
       '11': {
         start: {
-          line: 90,
+          line: 91,
           column: 19
         },
         end: {
-          line: 90,
+          line: 91,
           column: 52
         }
       },
       '12': {
         start: {
-          line: 91,
+          line: 92,
           column: 0
         },
         end: {
-          line: 91,
+          line: 92,
           column: 47
         }
       },
       '13': {
         start: {
-          line: 96,
+          line: 97,
           column: 0
         },
         end: {
-          line: 96,
+          line: 97,
           column: 49
         }
       },
       '14': {
         start: {
-          line: 102,
+          line: 103,
           column: 18
         },
         end: {
-          line: 102,
+          line: 103,
           column: 34
         }
       },
       '15': {
         start: {
-          line: 107,
+          line: 108,
           column: 0
         },
         end: {
-          line: 107,
+          line: 108,
           column: 25
         }
       },
       '16': {
         start: {
-          line: 121,
+          line: 122,
           column: 0
         },
         end: {
-          line: 121,
+          line: 122,
           column: 31
         }
       },
       '17': {
         start: {
-          line: 122,
+          line: 123,
           column: 0
         },
         end: {
-          line: 122,
+          line: 123,
           column: 33
         }
       },
       '18': {
         start: {
-          line: 123,
+          line: 124,
           column: 0
         },
         end: {
-          line: 123,
+          line: 124,
           column: 39
         }
       },
       '19': {
         start: {
-          line: 124,
+          line: 125,
           column: 0
         },
         end: {
-          line: 124,
+          line: 125,
           column: 45
         }
       },
       '20': {
         start: {
-          line: 125,
+          line: 126,
           column: 0
         },
         end: {
-          line: 125,
+          line: 126,
           column: 41
         }
       },
       '21': {
         start: {
-          line: 126,
+          line: 127,
           column: 0
         },
         end: {
-          line: 126,
+          line: 127,
           column: 37
         }
       },
       '22': {
         start: {
-          line: 127,
+          line: 128,
           column: 0
         },
         end: {
-          line: 127,
+          line: 128,
           column: 45
         }
       },
       '23': {
         start: {
-          line: 132,
+          line: 133,
           column: 0
         },
         end: {
-          line: 132,
+          line: 133,
           column: 27
         }
       },
       '24': {
         start: {
-          line: 137,
+          line: 138,
           column: 22
         },
         end: {
-          line: 137,
+          line: 138,
           column: 38
         }
       },
       '25': {
         start: {
-          line: 139,
+          line: 140,
           column: 0
         },
         end: {
-          line: 139,
+          line: 140,
           column: 41
         }
       },
@@ -279,16 +279,26 @@ var cov_2145knos0z = function () {
         },
         end: {
           line: 141,
-          column: 36
+          column: 41
         }
       },
       '27': {
         start: {
-          line: 146,
+          line: 143,
           column: 0
         },
         end: {
-          line: 146,
+          line: 143,
+          column: 36
+        }
+      },
+      '28': {
+        start: {
+          line: 148,
+          column: 0
+        },
+        end: {
+          line: 148,
           column: 22
         }
       }
@@ -298,25 +308,25 @@ var cov_2145knos0z = function () {
         name: '(anonymous_0)',
         decl: {
           start: {
-            line: 77,
+            line: 78,
             column: 13
           },
           end: {
-            line: 77,
+            line: 78,
             column: 14
           }
         },
         loc: {
           start: {
-            line: 77,
+            line: 78,
             column: 27
           },
           end: {
-            line: 79,
+            line: 80,
             column: 1
           }
         },
-        line: 77
+        line: 78
       }
     },
     branchMap: {},
@@ -348,7 +358,8 @@ var cov_2145knos0z = function () {
       '24': 0,
       '25': 0,
       '26': 0,
-      '27': 0
+      '27': 0,
+      '28': 0
     },
     f: {
       '0': 0
@@ -427,6 +438,8 @@ var _auth = require('./components/auth');
 var _html2img = require('./services/html2img');
 
 var _dataProvider = require('./services/data-provider');
+
+var _dump = require('./services/dump');
 
 var _config = require('./utils/config');
 
@@ -557,12 +570,14 @@ var serviceRoutes = (cov_2145knos0z.s[24]++, _express2.default.Router());
 
 cov_2145knos0z.s[25]++;
 serviceRoutes.use('/html2img', _html2img.router);
-
 cov_2145knos0z.s[26]++;
+serviceRoutes.use('/dump', _dump.router);
+
+cov_2145knos0z.s[27]++;
 app.use('/services', serviceRoutes);
 
 /**
  * Connect error handler
  */
-cov_2145knos0z.s[27]++;
+cov_2145knos0z.s[28]++;
 app.use(_middlewares.errorHandler);
