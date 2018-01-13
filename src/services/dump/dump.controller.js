@@ -41,8 +41,10 @@ export const downloadAllData = (req, res) =>
               filename: asset.filename
             })
             .then(attachment => {
-              const path = `${dumpFolder}/assets/${asset.filename}`;
-              return writeFile(path, attachment.data, 'binary');
+              const folderPath = `${dumpFolder}/assets/${asset._id}`;
+              const path = `${folderPath}/${asset.filename}`;
+              return ensureDir(folderPath)
+                      .then(() => writeFile(path, attachment.data, 'binary'));
             })
             .then(resolve2)
             .catch(reject2);
@@ -81,8 +83,10 @@ export const downloadAllData = (req, res) =>
               filename: deliverable.filename
             })
             .then(attachment => {
-              const path = `${dumpFolder}/deliverables/${deliverable.filename}`;
-              return writeFile(path, attachment.data, 'binary');
+              const folderPath = `${dumpFolder}/deliverables/${deliverable._id}`;
+              const path = `${folderPath}/${deliverable.filename}`;
+              return ensureDir(folderPath)
+                      .then(() => writeFile(path, attachment.data, 'binary'));
             })
             .then(resolve2)
             .catch(reject2);
@@ -236,7 +240,7 @@ export const uploadData = (req, res) =>
       const operations = [
         ...data.assets.map(asset => {
           const fileName = asset.filename;
-          const attachmentPath = `${dumpFolder}assets/${fileName}`;
+          const attachmentPath = `${dumpFolder}assets/${asset._id}/${fileName}`;
           return readFile(attachmentPath)
                   .then(data => assetDal.createAsset(cleanRev(asset), data));
         }),
@@ -254,7 +258,7 @@ export const uploadData = (req, res) =>
         ),
         ...data.deliverables.map(deliverable => {
           const fileName = deliverable.filename;
-          const attachmentPath = `${dumpFolder}deliverables/${fileName}`;
+          const attachmentPath = `${dumpFolder}deliverables/${deliverable._id}/${fileName}`;
           return readFile(attachmentPath)
                   .then(data => deliverableDal.createDeliverable(cleanRev(deliverable), data));
         })
