@@ -1,12 +1,70 @@
 import {dal as compositionDal} from '../components/compositions';
 import {dal as resourceDal} from '../components/resources';
 import {dal as assetDal} from '../components/assets';
+import {
+  readFile,
+  remove,
+  ensureDir,
+  writeFile
+} from 'fs-extra';
+import {resolve as resolvePath} from 'path';
 
-const mapify = (collection = [], key = 'id') =>
-  collection.reduce((result, item) => ({
-    ...result,
-    [item[key]]: item/* eslint security/detect-object-injection : 0 */
-  }), {});
+const assetsFolder = resolvePath(__dirname + '/../../assets');
+const tempFolder = resolvePath(__dirname + '/../../temp');
+const tempAssetsFolder = resolvePath(`${tempFolder}/assets`);
+
+export const mountLocalAssets = assets =>
+  new Promise((resolve, reject) => {
+    // should return getAssetUri function ie : asset => `${tempDirPath}/${asset._id}/${asset.filename}`
+    return remove(tempAssetsFolder)
+            .then(() => ensureDir(tempAssetsFolder))
+            .then(() => {
+              const toResolve = assets.map(asset => {
+                return ensureDir(`${tempAssetsFolder}/${asset._id}`)
+                  .then(() => {
+                    return assetDal
+                        .getAssetAttachment({id: asset._id, filename: asset.filename});
+                  })
+                  .then(({data}) => {
+                    return writeFile(`${tempAssetsFolder}/${asset._id}/${asset.filename}`, data);
+                  });
+              });
+              return Promise.all(toResolve);
+            })
+            .then(() => {
+              const getAssetUri = asset => `${tempAssetsFolder}/${asset._id}/${asset.filename}`;
+              resolve(getAssetUri);
+            })
+            .catch(reject);
+  });
+
+export const unmountLocalAssets = (/*assets*/) =>
+  new Promise((resolve, reject) => {
+    // removing all assets
+    return remove(tempAssetsFolder).then(resolve).catch(reject);
+    // targeting only specific assets
+    // const toResolve = assets.map(asset => {
+    //   const folder = `${tempAssetsFolder}/${asset._id}`;
+    //   return remove(folder)
+    // });
+    // return Promise.all(toResolve)
+  });
+
+export const fetchCitationData = () =>
+  new Promise((resolve, reject) => {
+    let citationStyle;
+    let citationLocale;
+    readFile(`${assetsFolder}/apa.csl`, 'utf8')
+          .then(str => {
+            citationStyle = str;
+            return readFile(`${assetsFolder}/english-locale.xml`, 'utf8');
+          })
+          .then(str => {
+            citationLocale = str;
+            resolve({citationStyle, citationLocale});
+          })
+          .catch(reject);
+  });
 
 export const fetchMontageDependencies = (montage) => {
   return new Promise((resolve, reject) => {
@@ -47,9 +105,12 @@ export const fetchMontageDependencies = (montage) => {
 
                 resolve({
                   montage,
-                  compositions: mapify(compositions, '_id'),
-                  resources: mapify(resources, '_id'),
-                  assets: mapify(assets, '_id')
+                  compositions: compositions,
+                  resources: resources,
+                  assets: assets
+                  // compositions: mapify(compositions, '_id'),
+                  // resources: mapify(resources, '_id'),
+                  // assets: mapify(assets, '_id')
                 });
               })
               .catch(reject);

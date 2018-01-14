@@ -866,7 +866,17 @@ Checks whether string matches hash
 | pwd | string |  |
 | hash | string |  |
 
-## `mapify()`
+## `mountLocalAssets()`
+
+| Name | Type | Attribute | Description |
+| --- | --- | --- | --- |
+
+## `unmountLocalAssets()`
+
+| Name | Type | Attribute | Description |
+| --- | --- | --- | --- |
+
+## `fetchCitationData()`
 
 | Name | Type | Attribute | Description |
 | --- | --- | --- | --- |

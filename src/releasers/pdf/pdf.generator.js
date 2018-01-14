@@ -10,16 +10,25 @@ export default function generatePdf ({
   Component,
   props,
   outputDirPath,
-  tempDirPath
+  tempDirPath,
+  citationStyle,
+  citationLocale,
+  getAssetUri,
+  styles = ''
 }, onFileGenerated) {
   return new Promise((resolve, reject) => {
 
     const str = ReactDOMServer.renderToStaticMarkup(
       <TranslationsProvider>
+        <style>
+          {styles}
+        </style>
         <Component
           {...props}
           renderingMode="pdf"
-          getAssetUri={asset => `${tempDirPath}/${asset._id}/${asset.filename}`}
+          getAssetUri={getAssetUri}
+          citationStyle={citationStyle}
+          citationLocale={citationLocale}
         />
       </TranslationsProvider>
     );
