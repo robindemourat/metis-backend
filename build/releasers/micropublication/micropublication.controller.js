@@ -11,7 +11,7 @@ var _promise2 = _interopRequireDefault(_promise);
 
 var cov_27caz4pvrq = function () {
   var path = '/Users/rawbin/Documents/Projets/collaborations/ensad-publishing/prototype/plurishing-backend/src/releasers/micropublication/micropublication.controller.js',
-      hash = '140c0479b880a15708effd554da492e4370a0883',
+      hash = 'a370b35bbfe67576b07c347c3e33f8a9ce473806',
       global = new Function('return this')(),
       gcv = '__coverage__',
       coverageData = {
@@ -103,7 +103,7 @@ var cov_27caz4pvrq = function () {
           column: 23
         },
         end: {
-          line: 139,
+          line: 140,
           column: 1
         }
       },
@@ -113,7 +113,7 @@ var cov_27caz4pvrq = function () {
           column: 2
         },
         end: {
-          line: 138,
+          line: 139,
           column: 5
         }
       },
@@ -133,7 +133,7 @@ var cov_27caz4pvrq = function () {
           column: 4
         },
         end: {
-          line: 137,
+          line: 138,
           column: 19
         }
       },
@@ -349,81 +349,81 @@ var cov_27caz4pvrq = function () {
       },
       '33': {
         start: {
-          line: 117,
+          line: 118,
           column: 25
         },
         end: {
-          line: 133,
+          line: 134,
           column: 8
         }
       },
       '34': {
         start: {
-          line: 120,
+          line: 121,
           column: 8
         },
         end: {
-          line: 132,
+          line: 133,
           column: 9
         }
       },
       '35': {
         start: {
-          line: 123,
+          line: 124,
           column: 12
         },
         end: {
-          line: 123,
+          line: 124,
           column: 73
         }
       },
       '36': {
         start: {
-          line: 124,
+          line: 125,
           column: 12
         },
         end: {
-          line: 124,
+          line: 125,
           column: 55
         }
       },
       '37': {
         start: {
-          line: 127,
+          line: 128,
           column: 12
         },
         end: {
-          line: 127,
+          line: 128,
           column: 83
         }
       },
       '38': {
         start: {
-          line: 128,
+          line: 129,
           column: 12
         },
         end: {
-          line: 128,
+          line: 129,
           column: 50
         }
       },
       '39': {
         start: {
-          line: 131,
+          line: 132,
           column: 12
         },
         end: {
-          line: 131,
+          line: 132,
           column: 37
         }
       },
       '40': {
         start: {
-          line: 134,
+          line: 135,
           column: 6
         },
         end: {
-          line: 134,
+          line: 135,
           column: 37
         }
       }
@@ -471,7 +471,7 @@ var cov_27caz4pvrq = function () {
             column: 38
           },
           end: {
-            line: 139,
+            line: 140,
             column: 1
           }
         },
@@ -495,7 +495,7 @@ var cov_27caz4pvrq = function () {
             column: 43
           },
           end: {
-            line: 138,
+            line: 139,
             column: 3
           }
         },
@@ -663,7 +663,7 @@ var cov_27caz4pvrq = function () {
             column: 16
           },
           end: {
-            line: 135,
+            line: 136,
             column: 5
           }
         },
@@ -673,25 +673,25 @@ var cov_27caz4pvrq = function () {
         name: '(anonymous_10)',
         decl: {
           start: {
-            line: 117,
+            line: 118,
             column: 37
           },
           end: {
-            line: 117,
+            line: 118,
             column: 38
           }
         },
         loc: {
           start: {
-            line: 117,
+            line: 118,
             column: 49
           },
           end: {
-            line: 133,
+            line: 134,
             column: 7
           }
         },
-        line: 117
+        line: 118
       }
     },
     branchMap: {
@@ -896,41 +896,32 @@ var cov_27caz4pvrq = function () {
       '6': {
         loc: {
           start: {
-            line: 120,
+            line: 121,
             column: 8
           },
           end: {
-            line: 132,
+            line: 133,
             column: 9
           }
         },
         type: 'switch',
         locations: [{
           start: {
-            line: 122,
+            line: 123,
             column: 10
           },
           end: {
-            line: 124,
+            line: 125,
             column: 55
           }
         }, {
           start: {
-            line: 126,
+            line: 127,
             column: 10
           },
           end: {
-            line: 128,
+            line: 129,
             column: 50
-          }
-        }, {
-          start: {
-            line: 129,
-            column: 10
-          },
-          end: {
-            line: 129,
-            column: 26
           }
         }, {
           start: {
@@ -938,11 +929,20 @@ var cov_27caz4pvrq = function () {
             column: 10
           },
           end: {
+            line: 130,
+            column: 26
+          }
+        }, {
+          start: {
             line: 131,
+            column: 10
+          },
+          end: {
+            line: 132,
             column: 37
           }
         }],
-        line: 120
+        line: 121
       }
     },
     s: {
@@ -1188,6 +1188,7 @@ var release = exports.release = function release(diffusion) {
 
       // execute
       var targets = (cov_27caz4pvrq.s[32]++, diffusion.parameters.targets);
+
       var operations = (cov_27caz4pvrq.s[33]++, targets.map(function (targetId) {
         cov_27caz4pvrq.f[10]++;
 

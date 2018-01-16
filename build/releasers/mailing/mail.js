@@ -10,7 +10,7 @@ var _promise2 = _interopRequireDefault(_promise);
 
 var cov_y9jyc396 = function () {
   var path = '/Users/rawbin/Documents/Projets/collaborations/ensad-publishing/prototype/plurishing-backend/src/releasers/mailing/mail.js',
-      hash = 'b0b5e3b48b1ae97c382d6175e8fbe41fb7582019',
+      hash = '6fed0dba8c20f1fb2ceb9a8ea1217192dbd58391',
       global = new Function('return this')(),
       gcv = '__coverage__',
       coverageData = {
@@ -32,7 +32,7 @@ var cov_y9jyc396 = function () {
           column: 4
         },
         end: {
-          line: 51,
+          line: 53,
           column: 7
         }
       },
@@ -122,8 +122,8 @@ var cov_y9jyc396 = function () {
           column: 8
         },
         end: {
-          line: 50,
-          column: 24
+          line: 52,
+          column: 23
         }
       }
     },
@@ -146,7 +146,7 @@ var cov_y9jyc396 = function () {
             column: 47
           },
           end: {
-            line: 52,
+            line: 54,
             column: 1
           }
         },
@@ -170,7 +170,7 @@ var cov_y9jyc396 = function () {
             column: 44
           },
           end: {
-            line: 51,
+            line: 53,
             column: 5
           }
         },
@@ -350,7 +350,7 @@ function mail(contents, params) {
     cov_y9jyc396.s[10]++;
 
 
-    return (0, _mailer2.default)({
+    (0, _mailer2.default)({
       from: from,
       to: to, // array
       subject: subject,
@@ -359,6 +359,7 @@ function mail(contents, params) {
       smtpEmail: smtp_email,
       smtpService: smtp_service,
       smtpPassword: smtp_password
-    }, console.log); /* eslint no-console : 0 */
+    }, console.log) /* eslint no-console : 0 */
+    .then(resolve).catch(reject);
   });
 }

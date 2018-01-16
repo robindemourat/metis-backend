@@ -38,7 +38,7 @@ export default function mail(contents, params) {
           smtp_password
         } = params;
 
-        return sendEmail({
+        sendEmail({
           from,
           to, // array
           subject,
@@ -47,6 +47,8 @@ export default function mail(contents, params) {
           smtpEmail: smtp_email,
           smtpService: smtp_service,
           smtpPassword: smtp_password
-        }, console.log);/* eslint no-console : 0 */
+        }, console.log)/* eslint no-console : 0 */
+        .then(resolve)
+        .catch(reject);
     });
 }

@@ -114,6 +114,7 @@ export const release = (diffusion) => {
     .then(() => {
       // execute
       const targets = diffusion.parameters.targets;
+
       const operations = targets.map(targetId => {
         let tweetContents;
         let mailContents;

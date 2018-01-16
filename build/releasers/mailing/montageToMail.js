@@ -6,7 +6,7 @@ Object.defineProperty(exports, "__esModule", {
 
 var cov_211w85fik5 = function () {
   var path = '/Users/rawbin/Documents/Projets/collaborations/ensad-publishing/prototype/plurishing-backend/src/releasers/mailing/montageToMail.js',
-      hash = 'f4c8c1b7bede8894705fc3daab15a257e5a3a3e3',
+      hash = '11ba66c83756a47fb479e60aad417fe2e9ed55a1',
       global = new Function('return this')(),
       gcv = '__coverage__',
       coverageData = {
@@ -35,30 +35,40 @@ var cov_211w85fik5 = function () {
       '2': {
         start: {
           line: 9,
-          column: 16
+          column: 14
         },
         end: {
           line: 9,
-          column: 117
+          column: 115
         }
       },
       '3': {
         start: {
           line: 10,
-          column: 22
+          column: 2
         },
         end: {
           line: 10,
-          column: 75
+          column: 48
         }
       },
       '4': {
         start: {
           line: 11,
+          column: 22
+        },
+        end: {
+          line: 11,
+          column: 85
+        }
+      },
+      '5': {
+        start: {
+          line: 12,
           column: 2
         },
         end: {
-          line: 20,
+          line: 21,
           column: 4
         }
       }
@@ -82,7 +92,7 @@ var cov_211w85fik5 = function () {
             column: 100
           },
           end: {
-            line: 21,
+            line: 22,
             column: 1
           }
         },
@@ -118,31 +128,31 @@ var cov_211w85fik5 = function () {
         loc: {
           start: {
             line: 9,
-            column: 16
+            column: 14
           },
           end: {
             line: 9,
-            column: 117
+            column: 115
           }
         },
         type: 'cond-expr',
         locations: [{
           start: {
             line: 9,
-            column: 66
+            column: 64
           },
           end: {
             line: 9,
-            column: 88
+            column: 86
           }
         }, {
           start: {
             line: 9,
-            column: 91
+            column: 89
           },
           end: {
             line: 9,
-            column: 117
+            column: 115
           }
         }],
         line: 9
@@ -151,43 +161,76 @@ var cov_211w85fik5 = function () {
         loc: {
           start: {
             line: 10,
-            column: 22
+            column: 10
           },
           end: {
             line: 10,
-            column: 75
+            column: 47
+          }
+        },
+        type: 'cond-expr',
+        locations: [{
+          start: {
+            line: 10,
+            column: 25
+          },
+          end: {
+            line: 10,
+            column: 30
+          }
+        }, {
+          start: {
+            line: 10,
+            column: 33
+          },
+          end: {
+            line: 10,
+            column: 47
+          }
+        }],
+        line: 10
+      },
+      '2': {
+        loc: {
+          start: {
+            line: 11,
+            column: 22
+          },
+          end: {
+            line: 11,
+            column: 85
           }
         },
         type: 'binary-expr',
         locations: [{
           start: {
-            line: 10,
+            line: 11,
             column: 22
           },
           end: {
-            line: 10,
+            line: 11,
             column: 60
           }
         }, {
           start: {
-            line: 10,
+            line: 11,
             column: 64
           },
           end: {
-            line: 10,
+            line: 11,
             column: 69
           }
         }, {
           start: {
-            line: 10,
+            line: 11,
             column: 73
           },
           end: {
-            line: 10,
-            column: 75
+            line: 11,
+            column: 85
           }
         }],
-        line: 10
+        line: 11
       }
     },
     s: {
@@ -195,7 +238,8 @@ var cov_211w85fik5 = function () {
       '1': 0,
       '2': 0,
       '3': 0,
-      '4': 0
+      '4': 0,
+      '5': 0
     },
     f: {
       '0': 0,
@@ -203,7 +247,8 @@ var cov_211w85fik5 = function () {
     },
     b: {
       '0': [0, 0],
-      '1': [0, 0, 0]
+      '1': [0, 0],
+      '2': [0, 0, 0]
     },
     _coverageSchema: '332fd63041d2c1bcb487cc26dd0d5f7d97098a6c'
   },
@@ -246,8 +291,10 @@ function montageToMail(montage, composition, asset, _ref) {
     return _react2.default.createElement(_MicropublicationMail2.default, { montage: montage, composition: composition });
   };
   var title = (cov_211w85fik5.s[2]++, '[Plurishing] ' + montage.metadata.title.length ? (cov_211w85fik5.b[0][0]++, montage.metadata.title) : (cov_211w85fik5.b[0][1]++, composition.metadata.title));
-  var previewText = (cov_211w85fik5.s[3]++, (cov_211w85fik5.b[1][0]++, composition.metadata.abstract_original) || (cov_211w85fik5.b[1][1]++, title) || (cov_211w85fik5.b[1][2]++, ''));
-  cov_211w85fik5.s[4]++;
+  cov_211w85fik5.s[3]++;
+  title = title.length ? (cov_211w85fik5.b[1][0]++, title) : (cov_211w85fik5.b[1][1]++, '[Plurishing]');
+  var previewText = (cov_211w85fik5.s[4]++, (cov_211w85fik5.b[2][0]++, composition.metadata.abstract_original) || (cov_211w85fik5.b[2][1]++, title) || (cov_211w85fik5.b[2][2]++, 'Plurishing'));
+  cov_211w85fik5.s[5]++;
   return {
     from: '"Plurishing \uD83D\uDC7B" <' + smtp_email + '>',
     to: [mailing_hub_email],

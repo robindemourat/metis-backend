@@ -134,7 +134,8 @@ export const createDeliverable = (deliverable, data) => {
         }
       );
     });
-  });
+  })
+  .catch(e => Promise.reject(e));
 };
 
 /**

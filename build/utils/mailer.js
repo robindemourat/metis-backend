@@ -10,7 +10,7 @@ var _promise2 = _interopRequireDefault(_promise);
 
 var cov_1ja850s5z1 = function () {
   var path = '/Users/rawbin/Documents/Projets/collaborations/ensad-publishing/prototype/plurishing-backend/src/utils/mailer.js',
-      hash = '42931cd0e36eeae1a382d622576c38de1dcb7ea1',
+      hash = 'de2f21ca315807ed40f34b1c623cf7f8b05d82c5',
       global = new Function('return this')(),
       gcv = '__coverage__',
       coverageData = {
@@ -22,7 +22,7 @@ var cov_1ja850s5z1 = function () {
           column: 2
         },
         end: {
-          line: 58,
+          line: 59,
           column: 5
         }
       },
@@ -82,7 +82,7 @@ var cov_1ja850s5z1 = function () {
           column: 4
         },
         end: {
-          line: 57,
+          line: 58,
           column: 7
         }
       },
@@ -118,22 +118,12 @@ var cov_1ja850s5z1 = function () {
       },
       '10': {
         start: {
-          line: 53,
+          line: 57,
           column: 6
         },
         end: {
-          line: 53,
-          column: 55
-        }
-      },
-      '11': {
-        start: {
-          line: 56,
-          column: 6
-        },
-        end: {
-          line: 56,
-          column: 50
+          line: 57,
+          column: 27
         }
       }
     },
@@ -156,7 +146,7 @@ var cov_1ja850s5z1 = function () {
             column: 11
           },
           end: {
-            line: 59,
+            line: 60,
             column: 1
           }
         },
@@ -180,7 +170,7 @@ var cov_1ja850s5z1 = function () {
             column: 42
           },
           end: {
-            line: 58,
+            line: 59,
             column: 3
           }
         },
@@ -204,7 +194,7 @@ var cov_1ja850s5z1 = function () {
             column: 55
           },
           end: {
-            line: 57,
+            line: 58,
             column: 5
           }
         },
@@ -362,8 +352,7 @@ var cov_1ja850s5z1 = function () {
       '7': 0,
       '8': 0,
       '9': 0,
-      '10': 0,
-      '11': 0
+      '10': 0
     },
     f: {
       '0': 0,
@@ -469,12 +458,12 @@ function sendEmail(_ref, _ref2, logger) {
       } else {
         cov_1ja850s5z1.b[4][1]++;
       }
-      cov_1ja850s5z1.s[10]++;
-      logger.debug('Message sent: %s', info.messageId);
+      // logger.debug('Message sent: %s', info.messageId);
       // Message sent: <b658f8ca-6296-ccf4-8306-87d57a0b4321@blurdybloop.com>
       // Preview URL: https://ethereal.email/message/WaQKMgKddxQDoou...
-      cov_1ja850s5z1.s[11]++;
-      resolve(_nodemailer2.default.getTestMessageUrl(info));
+      // return resolve(nodemailer.getTestMessageUrl(info));
+      cov_1ja850s5z1.s[10]++;
+      return resolve(info);
     });
   });
 }

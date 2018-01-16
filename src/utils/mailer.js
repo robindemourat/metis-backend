@@ -50,10 +50,11 @@ export default function sendEmail ({
         reject(error);
         return logger.error(error);
       }
-      logger.debug('Message sent: %s', info.messageId);
+      // logger.debug('Message sent: %s', info.messageId);
       // Message sent: <b658f8ca-6296-ccf4-8306-87d57a0b4321@blurdybloop.com>
       // Preview URL: https://ethereal.email/message/WaQKMgKddxQDoou...
-      resolve(nodemailer.getTestMessageUrl(info));
+      // return resolve(nodemailer.getTestMessageUrl(info));
+      return resolve(info);
     });
   });
 }

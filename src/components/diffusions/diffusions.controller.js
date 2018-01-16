@@ -60,7 +60,6 @@ export const createDiffusion = (req, res) => {
   .then(diffusion => res.json(diffusion))
   // launch diffusion operations
   .then(() => {
-
     switch(diff.montage_type) {
       case 'micropublication':
         return micropublicationController.release({...diff, _id: diffId});
@@ -73,13 +72,13 @@ export const createDiffusion = (req, res) => {
     }
   })
   // success
-  .then(() =>
-    updateDiffusionDAL(diffId, {...diff, status: 'success'})
-  )
+  .then(() => {
+    return updateDiffusionDAL(diffId, {...diff, status: 'success'});
+  })
   // error
-  .catch(() =>
-    updateDiffusionDAL(diffId, {...diff, status: 'error'})
-  );
+  .catch(() => {
+    updateDiffusionDAL(diffId, {...diff, status: 'error'});
+  });
 };
 
 /**
