@@ -567,8 +567,8 @@ function publish(data, diffusion) {
 
         deliverable = {
           type: 'deliverable',
-          date_produce: new Date().getTime(),
-          diffusion_id: diffusion.id,
+          date_produced: new Date().getTime(),
+          diffusion_id: diffusion._id,
           montage_id: data.montage._id,
           montage_type: data.montage.metadata.montage_type,
           montage_title: data.montage.metadata.title,

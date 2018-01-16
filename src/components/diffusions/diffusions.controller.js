@@ -60,13 +60,14 @@ export const createDiffusion = (req, res) => {
   .then(diffusion => res.json(diffusion))
   // launch diffusion operations
   .then(() => {
+
     switch(diff.montage_type) {
       case 'micropublication':
-        return micropublicationController.release(diff);
+        return micropublicationController.release({...diff, _id: diffId});
       case 'static':
-        return staticpublicationController.release(diff);
+        return staticpublicationController.release({...diff, _id: diffId});
       case 'dynamic':
-        return dynamicpublicationController.release(diff);
+        return dynamicpublicationController.release({...diff, _id: diffId});
       default:
         return Promise.resolve();
     }
