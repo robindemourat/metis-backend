@@ -27,7 +27,8 @@ export default function montageToTweet (montage, composition, assets) {
   const {
     data: {
       link,
-      include_abstract
+      include_abstract,
+      attached_assets
     }
   } = montage;
   const {
@@ -41,12 +42,27 @@ export default function montageToTweet (montage, composition, assets) {
     abstractImageUri
   } = assets;
   const status = makeText(title, link, creators);
-  const media = include_abstract && abstractImageUri &&
-          {
+  const media = (include_abstract && abstractImageUri) ?
+          [{
               type: 'image',
               description: 'abstract image',
               uri: abstractImageUri
-          };
+          }] : [];
+  if (attached_assets) {
+    attached_assets.forEach(citation => {
+      const {image_asset_id} = citation;
+      /**
+       * @todo investigate possible security issue
+       * @body security linter throws a warning for the following line
+       */
+      const uri = assets[image_asset_id].base64;/* eslint security/detect-object-injection : 0 */
+      media.push({
+        type: 'image',
+        description: 'attached image',
+        uri
+      });
+    });
+  }
   return {
     status,
     media

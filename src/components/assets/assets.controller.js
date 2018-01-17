@@ -46,6 +46,7 @@ export const getAsset = (req, res) =>
  */
 export const getAssetAttachment = (req, res) => {
   getAssetAttachmentDAL({
+    ...req.query,
     id: req.params.id,
     filename: req.params.filename
   })

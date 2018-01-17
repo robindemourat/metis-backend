@@ -6,7 +6,7 @@ Object.defineProperty(exports, "__esModule", {
 
 var cov_oq6l14t8s = function () {
   var path = '/Users/rawbin/Documents/Projets/collaborations/ensad-publishing/prototype/plurishing-backend/src/releasers/twitter/montageToTweet.js',
-      hash = 'e53f2ad50528df0662e270f643ddf31e13d48256',
+      hash = 'ca8a88554eb21cb352f26684d40d9fafcf25eca5',
       global = new Function('return this')(),
       gcv = '__coverage__',
       coverageData = {
@@ -114,61 +114,111 @@ var cov_oq6l14t8s = function () {
       },
       '10': {
         start: {
-          line: 32,
+          line: 33,
           column: 6
         },
         end: {
-          line: 32,
+          line: 33,
           column: 13
         }
       },
       '11': {
         start: {
-          line: 38,
+          line: 39,
           column: 6
         },
         end: {
-          line: 38,
+          line: 39,
           column: 17
         }
       },
       '12': {
         start: {
-          line: 42,
+          line: 43,
           column: 6
         },
         end: {
-          line: 42,
+          line: 43,
           column: 12
         }
       },
       '13': {
         start: {
-          line: 43,
+          line: 44,
           column: 17
         },
         end: {
-          line: 43,
+          line: 44,
           column: 48
         }
       },
       '14': {
         start: {
-          line: 44,
+          line: 45,
           column: 16
         },
         end: {
-          line: 49,
-          column: 11
+          line: 50,
+          column: 17
         }
       },
       '15': {
         start: {
-          line: 50,
+          line: 51,
           column: 2
         },
         end: {
+          line: 65,
+          column: 3
+        }
+      },
+      '16': {
+        start: {
+          line: 52,
+          column: 4
+        },
+        end: {
+          line: 64,
+          column: 7
+        }
+      },
+      '17': {
+        start: {
           line: 53,
+          column: 31
+        },
+        end: {
+          line: 53,
+          column: 39
+        }
+      },
+      '18': {
+        start: {
+          line: 58,
+          column: 18
+        },
+        end: {
+          line: 58,
+          column: 47
+        }
+      },
+      '19': {
+        start: {
+          line: 59,
+          column: 6
+        },
+        end: {
+          line: 63,
+          column: 9
+        }
+      },
+      '20': {
+        start: {
+          line: 66,
+          column: 2
+        },
+        end: {
+          line: 69,
           column: 4
         }
       }
@@ -264,11 +314,35 @@ var cov_oq6l14t8s = function () {
             column: 70
           },
           end: {
-            line: 54,
+            line: 70,
             column: 1
           }
         },
         line: 26
+      },
+      '4': {
+        name: '(anonymous_4)',
+        decl: {
+          start: {
+            line: 52,
+            column: 28
+          },
+          end: {
+            line: 52,
+            column: 29
+          }
+        },
+        loc: {
+          start: {
+            line: 52,
+            column: 40
+          },
+          end: {
+            line: 64,
+            column: 5
+          }
+        },
+        line: 52
       }
     },
     branchMap: {
@@ -506,44 +580,101 @@ var cov_oq6l14t8s = function () {
       '7': {
         loc: {
           start: {
-            line: 44,
+            line: 45,
             column: 16
           },
           end: {
-            line: 49,
-            column: 11
+            line: 50,
+            column: 17
+          }
+        },
+        type: 'cond-expr',
+        locations: [{
+          start: {
+            line: 46,
+            column: 10
+          },
+          end: {
+            line: 50,
+            column: 12
+          }
+        }, {
+          start: {
+            line: 50,
+            column: 15
+          },
+          end: {
+            line: 50,
+            column: 17
+          }
+        }],
+        line: 45
+      },
+      '8': {
+        loc: {
+          start: {
+            line: 45,
+            column: 17
+          },
+          end: {
+            line: 45,
+            column: 53
           }
         },
         type: 'binary-expr',
         locations: [{
           start: {
-            line: 44,
-            column: 16
+            line: 45,
+            column: 17
           },
           end: {
-            line: 44,
-            column: 32
-          }
-        }, {
-          start: {
-            line: 44,
-            column: 36
-          },
-          end: {
-            line: 44,
-            column: 52
+            line: 45,
+            column: 33
           }
         }, {
           start: {
             line: 45,
-            column: 10
+            column: 37
           },
           end: {
-            line: 49,
-            column: 11
+            line: 45,
+            column: 53
           }
         }],
-        line: 44
+        line: 45
+      },
+      '9': {
+        loc: {
+          start: {
+            line: 51,
+            column: 2
+          },
+          end: {
+            line: 65,
+            column: 3
+          }
+        },
+        type: 'if',
+        locations: [{
+          start: {
+            line: 51,
+            column: 2
+          },
+          end: {
+            line: 65,
+            column: 3
+          }
+        }, {
+          start: {
+            line: 51,
+            column: 2
+          },
+          end: {
+            line: 65,
+            column: 3
+          }
+        }],
+        line: 51
       }
     },
     s: {
@@ -562,13 +693,19 @@ var cov_oq6l14t8s = function () {
       '12': 0,
       '13': 0,
       '14': 0,
-      '15': 0
+      '15': 0,
+      '16': 0,
+      '17': 0,
+      '18': 0,
+      '19': 0,
+      '20': 0
     },
     f: {
       '0': 0,
       '1': 0,
       '2': 0,
-      '3': 0
+      '3': 0,
+      '4': 0
     },
     b: {
       '0': [0, 0],
@@ -578,7 +715,9 @@ var cov_oq6l14t8s = function () {
       '4': [0, 0],
       '5': [0, 0],
       '6': [0, 0],
-      '7': [0, 0, 0]
+      '7': [0, 0],
+      '8': [0, 0],
+      '9': [0, 0]
     },
     _coverageSchema: '332fd63041d2c1bcb487cc26dd0d5f7d97098a6c'
   },
@@ -633,7 +772,8 @@ function montageToTweet(montage, composition, assets) {
   var _ref = (cov_oq6l14t8s.s[10]++, montage),
       _ref$data = _ref.data,
       link = _ref$data.link,
-      include_abstract = _ref$data.include_abstract;
+      include_abstract = _ref$data.include_abstract,
+      attached_assets = _ref$data.attached_assets;
 
   var _ref2 = (cov_oq6l14t8s.s[11]++, composition),
       _ref2$metadata = _ref2.metadata,
@@ -644,12 +784,39 @@ function montageToTweet(montage, composition, assets) {
       abstractImageUri = _ref3.abstractImageUri;
 
   var status = (cov_oq6l14t8s.s[13]++, makeText(title, link, creators));
-  var media = (cov_oq6l14t8s.s[14]++, (cov_oq6l14t8s.b[7][0]++, include_abstract) && (cov_oq6l14t8s.b[7][1]++, abstractImageUri) && (cov_oq6l14t8s.b[7][2]++, {
+  var media = (cov_oq6l14t8s.s[14]++, (cov_oq6l14t8s.b[8][0]++, include_abstract) && (cov_oq6l14t8s.b[8][1]++, abstractImageUri) ? (cov_oq6l14t8s.b[7][0]++, [{
     type: 'image',
     description: 'abstract image',
     uri: abstractImageUri
-  }));
+  }]) : (cov_oq6l14t8s.b[7][1]++, []));
   cov_oq6l14t8s.s[15]++;
+  if (attached_assets) {
+    cov_oq6l14t8s.b[9][0]++;
+    cov_oq6l14t8s.s[16]++;
+
+    attached_assets.forEach(function (citation) {
+      cov_oq6l14t8s.f[4]++;
+
+      var _ref4 = (cov_oq6l14t8s.s[17]++, citation),
+          image_asset_id = _ref4.image_asset_id;
+      /**
+       * @todo investigate possible security issue
+       * @body security linter throws a warning for the following line
+       */
+
+
+      var uri = (cov_oq6l14t8s.s[18]++, assets[image_asset_id].base64); /* eslint security/detect-object-injection : 0 */
+      cov_oq6l14t8s.s[19]++;
+      media.push({
+        type: 'image',
+        description: 'attached image',
+        uri: uri
+      });
+    });
+  } else {
+    cov_oq6l14t8s.b[9][1]++;
+  }
+  cov_oq6l14t8s.s[20]++;
   return {
     status: status,
     media: media

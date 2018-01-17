@@ -77,14 +77,18 @@ export const getAsset = ({
  */
 export const getAssetAttachment = ({
   id,
-  filename
+  filename,
+  encoding
 }) =>
   new Promise((resolve, reject) => {
     db.attachment.get(id, filename, (err, body) => {
       if (err) {
         reject(err);
       } else {
-        resolve({data: body, mimetype: lookup(filename)});
+        const content = encoding === 'base64' ?
+          Buffer.from(body, 'binary').toString('base64')
+          : body;
+        resolve({data: content, mimetype: lookup(filename)});
       }
     });
   });

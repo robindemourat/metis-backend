@@ -1,3 +1,5 @@
+/* eslint  promise/param-names : 0 */
+
 import Ajv from 'ajv';
 import T from 'twit';
 
@@ -30,64 +32,71 @@ export default function tweet(contents, params) {
 
         // tweet with media attachment
         if (contents.media) {
-          // tweet with image media attachment
-          // -> we use the base64 uri provided if any
-          if (contents.media.type === 'image') {
+          const mediaIds = [];
+          const toResolve = contents.media.map(media =>
+            new Promise((reso, rej) => {
+              // -> we use the base64 uri provided if any
+              if (media.type === 'image') {
+                const {
+                  uri,
+                  description
+                } = media;
 
-            const {
-              uri,
-              description
-            } = contents.media;
+                // ensure the uri is base64 data
+                /**
+                 * @todo: fix base64 uri validator to validate base64 images
+                 */
+                // const uriValid = isBase64(uri);
+                // if (!uriValid) {
+                //   return reject(new Error());
+                // }
 
-            // ensure the uri is base64 data
-            /**
-             * @todo: fix base64 uri validator to validate base64 images
-             */
-            // const uriValid = isBase64(uri);
-            // if (!uriValid) {
-            //   return reject(new Error());
-            // }
-
-            // post the media to Twitter
-            client.post('media/upload', { media_data: uri }, function (err, data /* , response */) {
-              if (err) {
-                return reject(err);
-              } else {
-                // assign alt text to the media, for use by screen readers and
-                // other text-based presentations and interpreters
-                const mediaIdStr = data.media_id_string;
-                const meta_params = {
-                  media_id: mediaIdStr,
-                  alt_text: {
-                    text: description
-                  }
-                };
-
-                // create metadata for media
-                client.post('media/metadata/create', meta_params, (err/* , data, response */) => {
+                // post the media to Twitter
+                client.post('media/upload', { media_data: uri }, function (err, data /* , response */) {
                   if (err) {
-                    return reject(err);
+                    return rej(err);
                   } else {
-                    // update contents with proper media
-                    const enrichedContents = {
-                      ...contents,
-                      media: undefined,
-                      media_ids: [mediaIdStr]
+                    // assign alt text to the media, for use by screen readers and
+                    // other text-based presentations and interpreters
+                    const mediaIdStr = data.media_id_string;
+                    const meta_params = {
+                      media_id: mediaIdStr,
+                      alt_text: {
+                        text: description
+                      }
                     };
-                    // eventually tweet
-                    client.post('statuses/update', enrichedContents, (err/* , data, response */) => {
+
+                    // create metadata for media
+                    client.post('media/metadata/create', meta_params, (err/* , data, response */) => {
                       if (err) {
-                        return reject(err);
+                        return rej(err);
                       } else {
-                        return resolve();
+                        mediaIds.push(mediaIdStr);
+                        reso();
                       }
                     });
                   }
                 });
               }
+            })
+          );
+          Promise.all(toResolve)
+            .then(() => {
+              // update contents with proper media
+              const enrichedContents = {
+                ...contents,
+                media: undefined,
+                media_ids: [mediaIds]
+              };
+              // eventually tweet
+              client.post('statuses/update', enrichedContents, (err/* , data, response */) => {
+                if (err) {
+                  return reject(err);
+                } else {
+                  return resolve();
+                }
+              });
             });
-          }
-
         // case simple tweet
         } else {
           client.post('statuses/update', contents, (err/* , data, response */) => {

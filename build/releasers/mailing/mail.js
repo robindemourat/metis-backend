@@ -359,7 +359,7 @@ function mail(contents, params) {
       smtpEmail: smtp_email,
       smtpService: smtp_service,
       smtpPassword: smtp_password
-    }, console.log) /* eslint no-console : 0 */
+    }, console) /* eslint no-console : 0 */
     .then(resolve).catch(reject);
   });
 }

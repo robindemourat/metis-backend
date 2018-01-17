@@ -6,7 +6,7 @@ Object.defineProperty(exports, "__esModule", {
 
 var cov_211w85fik5 = function () {
   var path = '/Users/rawbin/Documents/Projets/collaborations/ensad-publishing/prototype/plurishing-backend/src/releasers/mailing/montageToMail.js',
-      hash = '11ba66c83756a47fb479e60aad417fe2e9ed55a1',
+      hash = 'e8cf79b70133d875d1676ebbb463868ee95c1100',
       global = new Function('return this')(),
       gcv = '__coverage__',
       coverageData = {
@@ -19,7 +19,7 @@ var cov_211w85fik5 = function () {
         },
         end: {
           line: 8,
-          column: 86
+          column: 102
         }
       },
       '1': {
@@ -29,7 +29,7 @@ var cov_211w85fik5 = function () {
         },
         end: {
           line: 8,
-          column: 85
+          column: 101
         }
       },
       '2': {
@@ -89,7 +89,7 @@ var cov_211w85fik5 = function () {
         loc: {
           start: {
             line: 7,
-            column: 100
+            column: 101
           },
           end: {
             line: 22,
@@ -117,7 +117,7 @@ var cov_211w85fik5 = function () {
           },
           end: {
             line: 8,
-            column: 85
+            column: 101
           }
         },
         line: 8
@@ -279,7 +279,7 @@ var _oyVey2 = _interopRequireDefault(_oyVey);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-function montageToMail(montage, composition, asset, _ref) {
+function montageToMail(montage, composition, assets, _ref) {
   var smtp_email = _ref.smtp_email,
       mailing_hub_email = _ref.mailing_hub_email;
   cov_211w85fik5.f[0]++;
@@ -288,7 +288,7 @@ function montageToMail(montage, composition, asset, _ref) {
   var Template = function Template() {
     cov_211w85fik5.f[1]++;
     cov_211w85fik5.s[1]++;
-    return _react2.default.createElement(_MicropublicationMail2.default, { montage: montage, composition: composition });
+    return _react2.default.createElement(_MicropublicationMail2.default, { montage: montage, composition: composition, assets: assets });
   };
   var title = (cov_211w85fik5.s[2]++, '[Plurishing] ' + montage.metadata.title.length ? (cov_211w85fik5.b[0][0]++, montage.metadata.title) : (cov_211w85fik5.b[0][1]++, composition.metadata.title));
   cov_211w85fik5.s[3]++;

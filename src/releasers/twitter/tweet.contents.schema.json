@@ -11,25 +11,29 @@
             "description": "the tweet status"
         },
         "media": {
-          "type": "object",
-          "description": "a media to attach to the tweet",
-          "properties": {
-            "type": {
-              "type": "string",
-              "description": "the type of media to attach to the tweet",
-              "enum": ["image"]
-            },
-            "description": {
-              "type": "string",
-              "description": "a description/alt text for the media"
-            },
-            "uri": {
-              "type": "string",
-              "description": "the uri of the media if appropriate"
-            },
-            "path": {
-              "type": "string",
-              "description": "the absolute path of the media to attach if appropriate"
+          "type": "array",
+          "description": "media objects to attach to the tweet",
+          "items": {
+            "type": "object",
+            "description": "a media object to attach to the tweet",
+            "properties": {
+              "type": {
+                "type": "string",
+                "description": "the type of media to attach to the tweet",
+                "enum": ["image"]
+              },
+              "description": {
+                "type": "string",
+                "description": "a description/alt text for the media"
+              },
+              "uri": {
+                "type": "string",
+                "description": "the uri of the media if appropriate"
+              },
+              "path": {
+                "type": "string",
+                "description": "the absolute path of the media to attach if appropriate"
+              }
             }
           }
         }

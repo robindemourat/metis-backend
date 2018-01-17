@@ -1,8 +1,10 @@
+/* eslint security/detect-object-injection : 0 */
 import {resolve as resolvePath} from 'path';
 import {readFile, remove} from 'fs-extra';
 
 import {v4 as genId} from 'uuid';
 
+import {dal as assetDal} from '../../components/assets';
 import {dal as montageDal} from '../../components/montages';
 import {dal as compositionDal} from '../../components/compositions';
 
@@ -21,7 +23,9 @@ const {
   smtpService,
   smtpEmail,
   smtpPassword,
-  mailingHubEmail
+  mailingHubEmail,
+
+  serverUri
   // facebook_access_token
 } = getConfig();
 
@@ -108,6 +112,36 @@ export const release = (diffusion) => {
           )
         );
       }
+      if (montage.data.attached_assets && montage.data.attached_assets.length) {
+        montage.data.attached_assets.forEach(citation => {
+          const {image_asset_id: imageAssetId} = citation;
+          operations.push(
+            new Promise((reso, rej) => { /* eslint promise/param-names : 0 */
+              let asset;
+              assetDal.getAsset({
+                id: imageAssetId
+              })
+              .then(ass => {
+                asset = ass;
+                return assetDal.getAssetAttachment({
+                  id: ass._id,
+                  filename: ass.filename,
+                  encoding: 'base64'
+                });
+              })
+              .then(resp => {
+                assets[imageAssetId] = {
+                  url: `${serverUri}/api/assets/${asset._id}/${asset.filename}`,
+                  base64: resp.data
+                };
+                return Promise.resolve();
+              })
+              .then(reso)
+              .catch(rej);
+            })
+          );
+        });
+      }
       return Promise.all(operations);
     })
     // register release operations to perform
@@ -118,14 +152,17 @@ export const release = (diffusion) => {
       const operations = targets.map(targetId => {
         let tweetContents;
         let mailContents;
+        const urledAssets = Object.keys(assets).reduce((total, key) => ({
+          ...total,
+          [key]: assets[key].url
+        }), {});
         switch(targetId) {
-
           case 'twitter':
             tweetContents = montageToTweet(montage, composition, assets);
             return tweet(tweetContents, twitterConfig);
 
           case 'mailing':
-            mailContents = montageToMail(montage, composition, assets, mailConfig);
+            mailContents = montageToMail(montage, composition, urledAssets, mailConfig);
             return mail(mailContents, mailConfig);
           case 'facebook':
           default:
