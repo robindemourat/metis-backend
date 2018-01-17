@@ -654,7 +654,7 @@
     "__docId__": 26,
     "kind": "file",
     "name": "src/components/auth/auth.controller.js",
-    "content": "/**\n * Plurishing-backend\n * =======\n * Authentification routes handler\n */\n\nimport jwt from 'jsonwebtoken'; // used to create, sign, and verify tokens\nimport {comparePwd} from '../../utils/crypto';\nimport sendEmail from '../../utils/mailer';\nimport {resetPwdEmail} from '../../utils/emails';\n\n/**\n * @todo avoid this horizontal dependency\n */\nimport {dal as usersDAL} from '../users';\n\nimport {\n  getConfig\n} from '../../utils/config';\nconst config = getConfig();\n\nconst {\n  // smtpPort,\n  // smtpHost,\n  smtpEmail,\n  smtpService,\n  smtpPassword,\n  backofficeBaseUri\n} = config;\nconst mailConfig = {\n  // smtpPort,\n  // smtpHost,\n  smtpEmail,\n  smtpService,\n  smtpPassword\n};\n\n/**\n * Builds a jwt token with user data in payload\n * @param {object} user - the user data to build the token with\n * @param {string} secret - the app secret to use to encode the token\n * @param {number} expiresIn - expiration delay of the token\n * @return {string} token\n * note : 86400 == expires in 24 hours\n */\nconst buildToken = (user, secret, expiresIn = 86400) => {\n  const payload = {\n    admin: user.admin,\n    userid: user._id\n  };\n  const token = jwt.sign(payload, secret, {\n    expiresIn\n  });\n  return token;\n};\n/**\n * Handle login attempt from a user\n * @todo write everything in promise style\n * @todo normalize behaviors for error res\n * @param {object} req - the request\n * @param {object} res - the resource\n */\nexport const login = (req, res) => {\n  // find the user\n  usersDAL.getUser({\n    email: req.body.email\n  })\n  // then check his credentials\n  .then(user => {\n    if (!user) {\n      return res.json({ success: false, message: 'Authentication failed. User not found.' });\n    } else if (user) {\n      const pwd = req.body.password;\n      const hash = user.password;\n      comparePwd(pwd, hash)\n        .then(correct => {\n          if (correct) {\n              // if user is found and password is right\n              // create a token\n            const token = buildToken(user, req.app.get('superSecret'));\n            res.json({\n              success: true,\n              message: 'Enjoy your token!',\n              user: Object.assign({}, user, {password: undefined}),\n              token: token\n            });\n          } else {\n            res.status(422).json({ success: false, message: 'Authentication failed. Wrong password.' });\n          }\n        })\n        .catch(e => {\n          res.status(422).json({ success: false, message: 'Authentication failed. Error with password.', error: e });\n        });\n    }\n  })\n  .catch(error => res.status(500).json({ success: false, message: 'Issue with database.', error }));\n};\n\n/**\n * Handle signup request from a user\n * Note: for this cms users creation is protected (admins only)\n * so signup is just the process of activating an account and setting a first password\n * @param {object} req - the request\n * @param {object} res - the resource\n */\nexport const signup = (req, res) => {\n  // find the user\n  usersDAL.getUser({\n    id: req.body.id\n  })\n  .then(user => {\n    if (!user) {\n      res.json({ success: false, message: 'Authentication failed. User not found.' });\n    } else if (user) {\n      const token = req.body.token || req.param('token') || req.headers['x-access-token'];\n      // decode token\n      if (token) {\n        // verifies secret and checks exp\n        jwt.verify(token, req.app.get('superSecret'), (err) => {\n          if (err) {\n            return res.json({ success: false, message: 'Failed to authenticate signup token.' });\n          } else {\n\n            // create a new login token\n            const newToken = buildToken(user, req.app.get('superSecret'));\n            // delete temporary token\n            // user.resetPasswordToken = undefined;\n\n            usersDAL.updateUser(user._id, user)\n              .then(() => {\n                res.json({\n                  success: true,\n                  message: 'Enjoy your token!',\n                  user, // : Object.assign({}, user, {password: undefined, resetPasswordToken: undefined}),\n                  token: newToken\n                });\n              })\n              .catch(e => {\n                res.status(500).send({\n                  success: false,\n                  message: 'Error while updating user with new data',\n                  error: e\n                });\n              });\n          }\n        });\n      } else {\n        // if there is no token\n        // return an error\n        return res.status(403).send({\n          success: false,\n          message: 'No signup token provided.'\n        });\n      }\n    }\n  });\n};\n\n/**\n * Handle password reset request from a user\n * @todo write everything in promise style\n * @param {object} req - the request\n * @param {object} res - the resource\n */\nexport const resetPassword = (req, res) => {\n  const body = req.body;\n  const email = body.email;\n  if (email) {\n    usersDAL.getUser({\n      email: email\n    })\n    .then(user => {\n      if (user) {\n        // create a token\n        const token = buildToken(user, req.app.get('superSecret'));\n        user.resetPasswordToken = token;\n\n        usersDAL.updateUser(user._id, user)\n        .then(() => {\n          const appUrl = backofficeBaseUri;\n          const {html, subject} = resetPwdEmail(appUrl, user);\n\n          return sendEmail({\n            subject,\n            html,\n            to: [email]\n          }, mailConfig, req.log);\n        })\n        .then(() => {\n          res.json({message: 'request sent'});\n        })\n        .catch(e => res.status(500).send({error: e, message: 'mail failed'}));\n      } else {\n        res.status(404).json({message: 'user not found'});\n      }\n    })\n    .catch(error => res.status(500).json({message: 'error in db', error}));\n  } else {\n    res.status(422).json({message: 'no email in request'});\n  }\n};\n",
+    "content": "/**\n * Plurishing-backend\n * =======\n * Authentification routes handler\n */\n\nimport jwt from 'jsonwebtoken'; // used to create, sign, and verify tokens\nimport {comparePwd} from '../../utils/crypto';\nimport sendEmail from '../../utils/mailer';\nimport {resetPwdEmail} from '../../utils/emails';\n\n/**\n * @todo avoid this horizontal dependency\n */\nimport {dal as usersDAL} from '../users';\n\nimport {\n  getConfig\n} from '../../utils/config';\nconst config = getConfig();\n\nconst {\n  // smtpPort,\n  // smtpHost,\n  smtpEmail,\n  smtpService,\n  smtpPassword,\n  backofficeBaseUri\n} = config;\nconst mailConfig = {\n  // smtpPort,\n  // smtpHost,\n  smtpEmail,\n  smtpService,\n  smtpPassword\n};\n\n/**\n * Builds a jwt token with user data in payload\n * @param {object} user - the user data to build the token with\n * @param {string} secret - the app secret to use to encode the token\n * @param {number} expiresIn - expiration delay of the token\n * @return {string} token\n * note : 86400 == expires in 24 hours\n */\nconst buildToken = (user, secret, expiresIn = 86400) => {\n  const payload = {\n    admin: user.admin,\n    userid: user._id\n  };\n  const token = jwt.sign(payload, secret, {\n    expiresIn\n  });\n  return token;\n};\n/**\n * Handle login attempt from a user\n * @todo write everything in promise style\n * @todo normalize behaviors for error res\n * @param {object} req - the request\n * @param {object} res - the resource\n */\nexport const login = (req, res) => {\n  // find the user\n  usersDAL.getUser({\n    email: req.body.email\n  })\n  // then check his credentials\n  .then(user => {\n    if (!user) {\n      return res.json({ success: false, message: 'Authentication failed. User not found.' });\n    } else if (user) {\n      const pwd = req.body.password;\n      const hash = user.password;\n      comparePwd(pwd, hash)\n        .then(correct => {\n          if (correct) {\n              // if user is found and password is right\n              // create a token\n            const token = buildToken(user, req.app.get('superSecret'));\n            res.json({\n              success: true,\n              message: 'Enjoy your token!',\n              user: Object.assign({}, user, {password: undefined}),\n              token: token\n            });\n          } else {\n            res.status(422).json({ success: false, message: 'Authentication failed. Wrong password.' });\n          }\n        })\n        .catch(e => {\n          res.status(422).json({ success: false, message: 'Authentication failed. Error with password.', error: e });\n        });\n    }\n  })\n  .catch(error => {\n    res.status(404).json({ success: false, message: 'No match.', error });\n  });\n};\n\n/**\n * Handle signup request from a user\n * Note: for this cms users creation is protected (admins only)\n * so signup is just the process of activating an account and setting a first password\n * @param {object} req - the request\n * @param {object} res - the resource\n */\nexport const signup = (req, res) => {\n  // find the user\n  usersDAL.getUser({\n    id: req.body.id\n  })\n  .then(user => {\n    if (!user) {\n      res.json({ success: false, message: 'Authentication failed. User not found.' });\n    } else if (user) {\n      const token = req.body.token || req.param('token') || req.headers['x-access-token'];\n      // decode token\n      if (token) {\n        // verifies secret and checks exp\n        jwt.verify(token, req.app.get('superSecret'), (err) => {\n          if (err) {\n            return res.json({ success: false, message: 'Failed to authenticate signup token.' });\n          } else {\n\n            // create a new login token\n            const newToken = buildToken(user, req.app.get('superSecret'));\n            // delete temporary token\n            // user.resetPasswordToken = undefined;\n\n            usersDAL.updateUser(user._id, user)\n              .then(() => {\n                res.json({\n                  success: true,\n                  message: 'Enjoy your token!',\n                  user, // : Object.assign({}, user, {password: undefined, resetPasswordToken: undefined}),\n                  token: newToken\n                });\n              })\n              .catch(e => {\n                res.status(500).send({\n                  success: false,\n                  message: 'Error while updating user with new data',\n                  error: e\n                });\n              });\n          }\n        });\n      } else {\n        // if there is no token\n        // return an error\n        return res.status(403).send({\n          success: false,\n          message: 'No signup token provided.'\n        });\n      }\n    }\n  });\n};\n\n/**\n * Handle password reset request from a user\n * @todo write everything in promise style\n * @param {object} req - the request\n * @param {object} res - the resource\n */\nexport const resetPassword = (req, res) => {\n  const body = req.body;\n  const email = body.email;\n  if (email) {\n    usersDAL.getUser({\n      email: email\n    })\n    .then(user => {\n      if (user) {\n        // create a token\n        const token = buildToken(user, req.app.get('superSecret'));\n        user.resetPasswordToken = token;\n\n        usersDAL.updateUser(user._id, user)\n        .then(() => {\n          const appUrl = backofficeBaseUri;\n          const {html, subject} = resetPwdEmail(appUrl, user);\n\n          return sendEmail({\n            subject,\n            html,\n            to: [email]\n          }, mailConfig, req.log);\n        })\n        .then(() => {\n          res.json({message: 'request sent'});\n        })\n        .catch(e => res.status(500).send({error: e, message: 'mail failed'}));\n      } else {\n        res.status(404).json({message: 'user not found'});\n      }\n    })\n    .catch(error => res.status(500).json({message: 'error in db', error}));\n  } else {\n    res.status(422).json({message: 'no email in request'});\n  }\n};\n",
     "static": true,
     "longname": "/Users/rawbin/Documents/Projets/collaborations/ensad-publishing/prototype/plurishing-backend/src/components/auth/auth.controller.js",
     "access": null,
@@ -818,7 +818,7 @@
     "importPath": "plurishing-backend/src/components/auth/auth.controller.js",
     "importStyle": "{signup}",
     "description": "Handle signup request from a user\nNote: for this cms users creation is protected (admins only)\nso signup is just the process of activating an account and setting a first password",
-    "lineNumber": 106,
+    "lineNumber": 108,
     "params": [
       {
         "nullable": null,
@@ -856,7 +856,7 @@
     "importPath": "plurishing-backend/src/components/auth/auth.controller.js",
     "importStyle": "{resetPassword}",
     "description": "Handle password reset request from a user",
-    "lineNumber": 165,
+    "lineNumber": 167,
     "todo": [
       "write everything in promise style"
     ],
@@ -5522,7 +5522,7 @@
     "__docId__": 241,
     "kind": "file",
     "name": "src/utils/populateDb.js",
-    "content": "/**\n * Plurishing-backend\n * =======\n * Server population script\n */\n/* eslint no-console : 0 */\nimport {hash} from './crypto';\n\nimport db from './plugDb';\n\nconst admin = {\n  type: 'user',\n  name: 'admin',\n  password: 'admin',\n  admin: true,\n  email: 'robin.demourat@protonmail.com'\n};\n\nconst addAdmin = doc => {\n  let _rev;\n  if (doc) {\n    _rev = doc._rev;\n  }\n  hash(admin.password)\n  .then(password =>\n    db.insertAsync({\n      ...admin,\n      _rev,\n      password\n    }, 'admin')\n  )\n  .then(info => {\n    console.log('created admin', info);\n  })\n  .catch(error => {\n    console.log('error while creating admin', error);\n  });\n};\n\ndb.getAsync('admin')\n  .then(addAdmin)\n  .catch(addAdmin);\n",
+    "content": "/**\n * Plurishing-backend\n * =======\n * Server population script\n */\n/* eslint no-console : 0 */\nimport {hash} from './crypto';\n\nimport db from './plugDb';\n\nimport {getConfig} from './config';\nconst {adminPassword, adminEmail} = getConfig();\n\n// admin object\nconst admin = {\n  type: 'user',\n  name: 'admin',\n  password: adminPassword,\n  admin: true,\n  email: adminEmail\n};\n\nconst addAdmin = doc => {\n  let _rev;\n  if (doc) {\n    _rev = doc._rev;\n  }\n  hash(admin.password)\n  .then(password =>\n    db.insertAsync({\n      ...admin,\n      _rev,\n      password\n    }, 'admin')\n  )\n  .then(info => {\n    console.info('created admin', info);\n  })\n  .catch(error => {\n    console.info('error while creating admin', error);\n  });\n};\n\n// create or update admin\ndb.getAsync('admin')\n  .then(addAdmin)\n  .catch(addAdmin);\n",
     "static": true,
     "longname": "/Users/rawbin/Documents/Projets/collaborations/ensad-publishing/prototype/plurishing-backend/src/utils/populateDb.js",
     "access": null,
@@ -5531,6 +5531,21 @@
   },
   {
     "__docId__": 242,
+    "kind": "variable",
+    "name": "adminPassword",
+    "memberof": "src/utils/populateDb.js",
+    "static": true,
+    "longname": "src/utils/populateDb.js~adminPassword",
+    "access": null,
+    "export": false,
+    "importPath": "plurishing-backend/src/utils/populateDb.js",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 12,
+    "undocument": true
+  },
+  {
+    "__docId__": 243,
     "kind": "variable",
     "name": "admin",
     "memberof": "src/utils/populateDb.js",
@@ -5541,11 +5556,11 @@
     "importPath": "plurishing-backend/src/utils/populateDb.js",
     "importStyle": null,
     "description": null,
-    "lineNumber": 11,
+    "lineNumber": 15,
     "undocument": true
   },
   {
-    "__docId__": 243,
+    "__docId__": 244,
     "kind": "function",
     "name": "addAdmin",
     "memberof": "src/utils/populateDb.js",
@@ -5558,11 +5573,11 @@
     "importPath": "plurishing-backend/src/utils/populateDb.js",
     "importStyle": null,
     "description": null,
-    "lineNumber": 19,
+    "lineNumber": 23,
     "undocument": true
   },
   {
-    "__docId__": 244,
+    "__docId__": 245,
     "kind": "file",
     "name": "src/utils/schemas.js",
     "content": "import Ajv from 'ajv';\nconst ajv = new Ajv();\n\nexport const dataIsValid = (data, schema) =>\n  new Promise((resolve, reject) => {\n    const valid = ajv.validate(schema, data);\n    if (valid) {\n      resolve(data);\n    } else {\n      reject(ajv.errors);\n    }\n  });\n",
@@ -5573,7 +5588,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 245,
+    "__docId__": 246,
     "kind": "variable",
     "name": "ajv",
     "memberof": "src/utils/schemas.js",
@@ -5588,7 +5603,7 @@
     "undocument": true
   },
   {
-    "__docId__": 246,
+    "__docId__": 247,
     "kind": "function",
     "name": "dataIsValid",
     "memberof": "src/utils/schemas.js",
@@ -5605,7 +5620,7 @@
     "undocument": true
   },
   {
-    "__docId__": 247,
+    "__docId__": 248,
     "kind": "file",
     "name": "src/utils/transformJSON.js",
     "content": "/**\n * Multimodal Publishing utils\n * ===========================\n * transformJSON\n * ===========================\n * This module resolves a data object by transforming it\n * from an input schema to an output schema using\n * a transformation function.\n * @module mpu/helpers/transformJSON\n */\nimport Ajv from 'ajv';\nconst ajv = new Ajv();\n\n/**\n * Retrieves the arguments name of a function\n * @param {function} func - the function to analyse\n * @return {array} arguments - the arguments names\n */\nfunction $args(func) {\n    return (func + '')\n      .replace(/[/][/].*$/mg,'') // strip single-line comments\n      .replace(/\\s+/g, '') // strip white space\n      .replace(/[/][*][^/*]*[*][/]/g, '') // strip multi-line comments\n      .split('){', 1)[0].replace(/^[^(]*[(]/, '') // extract the parameters\n      .replace(/=[^,]+/g, '') // strip any ES6 defaults\n      .split(',').filter(Boolean); // split & filter [\"\"]\n}\n\n/**\n * @param {object|Array} inputData - the original data to convert\n * @param {object} inputSchema - the schema of original data to convert in json-schema\n * @param {object} outputSchema - the schema of the resulting data to convert in json-schema\n * @param {function} transformFunction - a function taking data as argument and returning new data\n * This transform function can :\n * - return a json object resolving with a json object\n * - return a promise resolving with a json object\n * - provide a node-js style callback as second argument\n * @return {Promise} promise\n */\nconst transformJSON = (\n    inputData,\n    inputSchema,\n    outputSchema,\n    transformFunction,\n) =>\n    new Promise(\n        (resolve, reject) => {\n          try{\n            // verify input is valid\n            const inputIsValid = ajv.validate(inputSchema, inputData);\n            if (!inputIsValid) {\n              return reject(ajv.errors);\n            }\n            // check if transform function presents a callback\n            if ($args(transformFunction).length > 1) {\n              // resolve with callback\n              return transformFunction(inputData, (err, output) => {\n                if (err) {\n                  return reject(err);\n                } else {\n                  // apply transform function to input\n                  const outputIsValid = ajv.validate(outputSchema, output);\n                  if (!outputIsValid) {\n                    reject(ajv.errors);\n                  } else {\n                    resolve(output);\n                  }\n                }\n              });\n            }\n            // apply transform function to input\n            const outputTemp = transformFunction(inputData);\n            // if the function has returned a promise resolve it\n            if (outputTemp instanceof Promise) {\n              outputTemp\n                .then(output => {\n                  // verify that output complies to output schema\n                  const outputIsValid = ajv.validate(outputSchema, output);\n                  if (outputIsValid) {\n                    resolve(output);\n                  } else {\n                    // @todo normalize error response\n                    reject(new Error());\n                  }\n                })\n                .catch(e => {\n                  reject(e);\n                });\n            } else {\n              // verify output complies to output schema\n              const outputIsValid = ajv.validate(outputSchema, outputTemp);\n              if (outputIsValid) {\n                resolve(outputTemp);\n              } else {\n                // @todo normalize error response\n                reject(new Error());\n              }\n            }\n          } catch(e) {\n            reject(e);\n          }\n        }\n    );\n\nexport default transformJSON;\n",
@@ -5616,7 +5631,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 248,
+    "__docId__": 249,
     "kind": "variable",
     "name": "ajv",
     "memberof": "src/utils/transformJSON.js",
@@ -5631,7 +5646,7 @@
     "undocument": true
   },
   {
-    "__docId__": 249,
+    "__docId__": 250,
     "kind": "function",
     "name": "$args",
     "memberof": "src/utils/transformJSON.js",
@@ -5667,7 +5682,7 @@
     }
   },
   {
-    "__docId__": 250,
+    "__docId__": 251,
     "kind": "function",
     "name": "transformJSON",
     "memberof": "src/utils/transformJSON.js",
@@ -5734,7 +5749,7 @@
     }
   },
   {
-    "__docId__": 251,
+    "__docId__": 252,
     "kind": "file",
     "name": "src/utils/transformJSON.spec.js",
     "content": "import {expect} from 'chai';\nimport {describe, it} from 'mocha';\n\n// tested function\nimport transformJSON from './transformJSON';\n\ndescribe('transformJSON util', () => {\n\n  // mock data\n  const inputData = {\n    foo: 'hello'\n  };\n  const expectedOutput = {\n    bar: 'hello'\n  };\n\n  // input json schema\n  const inputSchema = {\n    properties: {\n      foo: {\n        type: 'string'\n      }\n    },\n    required: ['foo']\n  };\n\n  // output json schema\n  const outputSchema = {\n    properties: {\n      bar: {\n        type: 'string'\n      }\n    },\n    required: ['bar']\n  };\n\n  // transform function\n  const transform = input => {\n    const output = {...input};\n    const bar = input.foo;\n    delete output.foo;\n    output.bar = bar;\n    return output;\n  };\n  // transform function as a promise\n  const transformAsPromise = input =>\n    new Promise((resolve) => {\n      const output = transform(input);\n      resolve(output);\n    });\n\n  // transform function with callback\n  const transformWithCallback = (input, callback) => {\n    const output = transform(input);\n    callback(null, output);\n  };\n\n  it('should return a promise', done => {\n    const fn = transformJSON(inputData, inputSchema, outputSchema, transform);\n    expect(fn).to.be.an.instanceof(Promise);\n    done();\n  });\n  it('should apply the transform function to input data and resolve with correctly transformed data', done => {\n    transformJSON(inputData, inputSchema, outputSchema, transform)\n      .then(output => {\n        expect(output).to.deep.equal(expectedOutput);\n        done();\n      })\n      .catch();\n  });\n  it('should accept a transform function returning a promise', done => {\n    transformJSON(inputData, inputSchema, outputSchema, transformAsPromise)\n      .then(output => {\n        expect(output).to.deep.equal(expectedOutput);\n        done();\n      })\n      .catch();\n  });\n\n  it('should accept a transform function presenting a callback', done => {\n    transformJSON(inputData, inputSchema, outputSchema, transformWithCallback)\n      .then(output => {\n        expect(output).to.deep.equal(expectedOutput);\n        done();\n      })\n      .catch();\n  });\n\n  it('should require inputData parameter to be a js object', done => {\n    transformJSON(undefined, inputSchema, outputSchema, transform)\n      .catch(e => {\n        expect(e).to.be.an('error');\n        done();\n      });\n  });\n\n  it('should require inputSchema parameter to be a valid json schema', done => {\n    transformJSON(inputData, undefined, outputSchema, transform)\n      .catch(e => {\n        expect(e).to.be.an('error');\n        done();\n      });\n  });\n\n  it('should require outputSchema parameter to be a valid json schema', done => {\n    transformJSON(inputData, inputSchema, undefined, transform)\n      .catch(e => {\n        expect(e).to.be.an('error');\n        done();\n      });\n  });\n\n  it('should reject an input data not complying to input json schema', done => {\n    transformJSON({bar: 'hello'}, inputSchema, outputSchema, transform)\n      .catch(e => {\n        expect(e).to.be.an('array');\n        done();\n      });\n  });\n\n  it('should reject an output data not complying to output json schema', done => {\n    const wrongTransform = input => input;\n    transformJSON({bar: 'hello'}, inputSchema, outputSchema, wrongTransform)\n      .catch(e => {\n        expect(e).to.be.an('array');\n        done();\n      });\n  });\n\n});\n",
@@ -5746,7 +5761,7 @@
   },
   {
     "kind": "index",
-    "content": "\n\n# Development\n\nInstall couchdb and run it locally :\n\n```\nbrew services start couchdb\n```\n\n# DB backup and restore\n\nBackup:\n```\nbash couchdb-backup.sh -b -H 127.0.0.1 -d my-db -f dumpedDB.json -u admin -p password\n```\n\n\nRestore:\n```\nbash couchdb-backup.sh -r -H 127.0.0.1 -d my-db -f dumpedDB.json -u admin -p password\n```\n\n\n```\nUsage: ./couchdb-backup.sh [-b|-r] -H <COUCHDB_HOST> -d <DB_NAME> -f <BACKUP_FILE> [-u <username>] [-p <password>] [-P <port>] [-l <lines>] [-t <threads>] [-a <import_attempts>]\n  -b   Run script in BACKUP mode.\n  -r   Run script in RESTORE mode.\n  -H   CouchDB Hostname or IP. Can be provided with or without 'http(s)://'\n  -d   CouchDB Database name to backup/restore.\n  -f   File to Backup-to/Restore-from.\n  -P   Provide a port number for CouchDB [Default: 5984]\n  -u   Provide a username for auth against CouchDB [Default: blank]\n         -- can also set with 'COUCHDB_USER' environment var\n  -p   Provide a password for auth against CouchDB [Default: blank]\n         -- can also set with 'COUCHDB_PASS' environment var\n  -l   Number of lines (documents) to Restore at a time. [Default: 5000] (Restore Only)\n  -t   Number of CPU threads to use when parsing data [Default: nProcs-1] (Backup Only)\n  -a   Number of times to Attempt import before failing [Default: 3] (Restore Only)\n  -c   Create DB on demand, if they are not listed.\n  -q   Run in quiet mode. Suppress output, except for errors and warnings.\n  -z   Compress output file (Backup Only)\n  -T   Add datetime stamp to output file name (Backup Only)\n  -V   Display version information.\n  -h   Display usage information.\n\nExample: ./couchdb-backup.sh -b -H 127.0.0.1 -d mydb -f dumpedDB.json -u admin -p password\n```\n\n\nSee https://github.com/danielebailo/couchdb-dump for more information.\n",
+    "content": "Plurishing-server\n===\n\n\n\n\n# Scripts\n\n```\n# run in dev mode (dev config, hot reloading)\nnpm run dev\n\n# run in prod mod\nnpm run start\n\n# monitor processes and error in prod mode (with pm2)\nnpm run monitor\n\n# lint code\nnpm run lint\n\n# lint code while applying autofixes\nnpm run lint:fix\n\n# bootstrap admin user (dev mode)\nnpm run populate-db:dev\n\n# bootstrap admin user (prod mode)\nnpm run populate-db\n\n# run tests with mocha\nnpm run test\n\n# run tests with mocha and rerun when source is modified\nnpm run test:watch\n\n# check test coverage\nnpm run cov\n\n# build automated documentation with esdoc\nnpm run doc\n\n# build code for production (with babel)\nnpm run build\n\n# deploy to heroku (push and set env variables)\nnpm run deploy:heroku\n```\n\n# Development\n\nInstall couchdb and run it locally :\n\n```\nbrew services start couchdb\n```\n\n# DB backup and restore\n\nBackup:\n```\nbash couchdb-backup.sh -b -H 127.0.0.1 -d my-db -f dumpedDB.json -u admin -p password\n```\n\n\nRestore:\n```\nbash couchdb-backup.sh -r -H 127.0.0.1 -d my-db -f dumpedDB.json -u admin -p password\n```\n\n\n```\nUsage: ./couchdb-backup.sh [-b|-r] -H <COUCHDB_HOST> -d <DB_NAME> -f <BACKUP_FILE> [-u <username>] [-p <password>] [-P <port>] [-l <lines>] [-t <threads>] [-a <import_attempts>]\n  -b   Run script in BACKUP mode.\n  -r   Run script in RESTORE mode.\n  -H   CouchDB Hostname or IP. Can be provided with or without 'http(s)://'\n  -d   CouchDB Database name to backup/restore.\n  -f   File to Backup-to/Restore-from.\n  -P   Provide a port number for CouchDB [Default: 5984]\n  -u   Provide a username for auth against CouchDB [Default: blank]\n         -- can also set with 'COUCHDB_USER' environment var\n  -p   Provide a password for auth against CouchDB [Default: blank]\n         -- can also set with 'COUCHDB_PASS' environment var\n  -l   Number of lines (documents) to Restore at a time. [Default: 5000] (Restore Only)\n  -t   Number of CPU threads to use when parsing data [Default: nProcs-1] (Backup Only)\n  -a   Number of times to Attempt import before failing [Default: 3] (Restore Only)\n  -c   Create DB on demand, if they are not listed.\n  -q   Run in quiet mode. Suppress output, except for errors and warnings.\n  -z   Compress output file (Backup Only)\n  -T   Add datetime stamp to output file name (Backup Only)\n  -V   Display version information.\n  -h   Display usage information.\n\nExample: ./couchdb-backup.sh -b -H 127.0.0.1 -d mydb -f dumpedDB.json -u admin -p password\n```\n\n\nSee https://github.com/danielebailo/couchdb-dump for more information.\n",
     "longname": "/Users/rawbin/Documents/Projets/collaborations/ensad-publishing/prototype/plurishing-backend/README.md",
     "name": "./README.md",
     "static": true,

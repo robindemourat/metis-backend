@@ -5,9 +5,16 @@ module.exports = {
   couchdbUri: "http://localhost:5984",
   couchdbName: "plurishing",
 
+
+  serverUri: "http://localhost:3001",
+
+
   backofficeBaseUri: "http://localhost:3000",
 
   websiteBuilderUri: '',
+
+  adminPassword: "xxxx",
+  adminEmail: "lala-toto@gmail.com",
 
 
   smtpService: "Gmail",

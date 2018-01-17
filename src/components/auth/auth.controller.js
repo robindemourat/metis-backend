@@ -93,7 +93,9 @@ export const login = (req, res) => {
         });
     }
   })
-  .catch(error => res.status(500).json({ success: false, message: 'Issue with database.', error }));
+  .catch(error => {
+    res.status(404).json({ success: false, message: 'No match.', error });
+  });
 };
 
 /**

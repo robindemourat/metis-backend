@@ -8,12 +8,16 @@ import {hash} from './crypto';
 
 import db from './plugDb';
 
+import {getConfig} from './config';
+const {adminPassword, adminEmail} = getConfig();
+
+// admin object
 const admin = {
   type: 'user',
   name: 'admin',
-  password: 'admin',
+  password: adminPassword,
   admin: true,
-  email: 'robin.demourat@protonmail.com'
+  email: adminEmail
 };
 
 const addAdmin = doc => {
@@ -30,13 +34,14 @@ const addAdmin = doc => {
     }, 'admin')
   )
   .then(info => {
-    console.log('created admin', info);
+    console.info('created admin', info);
   })
   .catch(error => {
-    console.log('error while creating admin', error);
+    console.info('error while creating admin', error);
   });
 };
 
+// create or update admin
 db.getAsync('admin')
   .then(addAdmin)
   .catch(addAdmin);

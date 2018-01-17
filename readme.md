@@ -1,4 +1,51 @@
+Plurishing-server
+===
 
+
+
+
+# Scripts
+
+```
+# run in dev mode (dev config, hot reloading)
+npm run dev
+
+# run in prod mod
+npm run start
+
+# monitor processes and error in prod mode (with pm2)
+npm run monitor
+
+# lint code
+npm run lint
+
+# lint code while applying autofixes
+npm run lint:fix
+
+# bootstrap admin user (dev mode)
+npm run populate-db:dev
+
+# bootstrap admin user (prod mode)
+npm run populate-db
+
+# run tests with mocha
+npm run test
+
+# run tests with mocha and rerun when source is modified
+npm run test:watch
+
+# check test coverage
+npm run cov
+
+# build automated documentation with esdoc
+npm run doc
+
+# build code for production (with babel)
+npm run build
+
+# deploy to heroku (push and set env variables)
+npm run deploy:heroku
+```
 
 # Development
 
