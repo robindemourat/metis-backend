@@ -10,7 +10,7 @@ process.on('unhandledRejection', function (reason) {
   //I just caught an unhandled promise rejection,
   // since we already have fallback handler for unhandled errors (see below),
   // let throw and let him handle that
-  throw reason;
+  // throw reason;
 });
 
 /**

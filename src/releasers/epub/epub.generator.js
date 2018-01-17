@@ -8,6 +8,10 @@ import {TranslationsProvider} from '../../utils/react-components';/* eslint no-u
 import DecoratedComposition from 'plurishing-shared/dist/components/views/static/DecoratedComposition';
 
 
+import EpubNoteContentPointer from 'plurishing-shared/dist/components/views/static/EpubNoteContentPointer';
+import EpubNotePointerPointer from 'plurishing-shared/dist/components/views/static/EpubNotePointerPointer';
+import EpubLink from 'plurishing-shared/dist/components/views/static/EpubLink';
+
 const buildAuthors = creators =>
   creators.reduce((total, creator, index) => {
       let s = total + creator.given + ' ' + creator.family;
@@ -24,7 +28,8 @@ const renderComposition = (parameters, {
   compositions,
   citationLocale,
   citationStyle,
-  getAssetUri
+  getAssetUri,
+  index
 }) => {
 
   const {target_composition_id} = parameters;
@@ -42,12 +47,16 @@ const renderComposition = (parameters, {
             getAssetUri={getAssetUri}
             citationStyle={citationStyle}
             citationLocale={citationLocale}
+            Link={EpubLink}
+            NoteContentPointer={EpubNoteContentPointer}
+            NotePointerPointer={EpubNotePointerPointer}
         />
       </TranslationsProvider>
     );
     return {
         title: composition.metadata.title,
         author: buildAuthors(composition.metadata.creators), // Optional
+        filename: `composition-${index}`,
         data: html
     };
   }
@@ -82,12 +91,13 @@ export default function generateEpub ({
       // publisher: "Macmillan & Co.", // optional
       content: [
           ...montage.data.compositions
-            .map(compositionCitation => renderComposition(compositionCitation, {
+            .map((compositionCitation, index) => renderComposition(compositionCitation, {
               ...props,
               renderingMode,
               citationStyle,
               citationLocale,
-              getAssetUri
+              getAssetUri,
+              index
             }))
             .filter(comp => comp)
       ],

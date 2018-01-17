@@ -10,7 +10,7 @@ var _promise2 = _interopRequireDefault(_promise);
 
 var cov_d6ri34dec = function () {
   var path = '/Users/rawbin/Documents/Projets/collaborations/ensad-publishing/prototype/plurishing-backend/src/utils/errorHandler.js',
-      hash = '41bb11d8699170faa7477a7fe35817741a67c65c',
+      hash = '1804d41c146d998ca25c21038fc2e8e0fbbe70a2',
       global = new Function('return this')(),
       gcv = '__coverage__',
       coverageData = {
@@ -28,16 +28,6 @@ var cov_d6ri34dec = function () {
       },
       '1': {
         start: {
-          line: 13,
-          column: 2
-        },
-        end: {
-          line: 13,
-          column: 15
-        }
-      },
-      '2': {
-        start: {
           line: 19,
           column: 0
         },
@@ -46,7 +36,7 @@ var cov_d6ri34dec = function () {
           column: 3
         }
       },
-      '3': {
+      '2': {
         start: {
           line: 24,
           column: 3
@@ -56,7 +46,7 @@ var cov_d6ri34dec = function () {
           column: 15
         }
       },
-      '4': {
+      '3': {
         start: {
           line: 36,
           column: 36
@@ -66,7 +56,7 @@ var cov_d6ri34dec = function () {
           column: 47
         }
       },
-      '5': {
+      '4': {
         start: {
           line: 36,
           column: 42
@@ -76,7 +66,7 @@ var cov_d6ri34dec = function () {
           column: 47
         }
       },
-      '6': {
+      '5': {
         start: {
           line: 39,
           column: 4
@@ -86,7 +76,7 @@ var cov_d6ri34dec = function () {
           column: 6
         }
       },
-      '7': {
+      '6': {
         start: {
           line: 40,
           column: 8
@@ -96,7 +86,7 @@ var cov_d6ri34dec = function () {
           column: 11
         }
       },
-      '8': {
+      '7': {
         start: {
           line: 41,
           column: 10
@@ -106,7 +96,7 @@ var cov_d6ri34dec = function () {
           column: 30
         }
       },
-      '9': {
+      '8': {
         start: {
           line: 44,
           column: 10
@@ -273,8 +263,7 @@ var cov_d6ri34dec = function () {
       '5': 0,
       '6': 0,
       '7': 0,
-      '8': 0,
-      '9': 0
+      '8': 0
     },
     f: {
       '0': 0,
@@ -311,22 +300,21 @@ cov_d6ri34dec.s[0]++;
  * Catch unhandled promise rejections
  */
 process.on('unhandledRejection', function (reason) {
-  cov_d6ri34dec.f[0]++;
-  cov_d6ri34dec.s[1]++;
-
   //I just caught an unhandled promise rejection,
   // since we already have fallback handler for unhandled errors (see below),
   // let throw and let him handle that
-  throw reason;
+  // throw reason;
+
+  cov_d6ri34dec.f[0]++;
 });
 
 /**
  * Catch unhandled exceptions to shut the process gracefully
  */
-cov_d6ri34dec.s[2]++;
+cov_d6ri34dec.s[1]++;
 process.on('uncaughtException', function (error) {
   cov_d6ri34dec.f[1]++;
-  cov_d6ri34dec.s[3]++;
+  cov_d6ri34dec.s[2]++;
 
   // process.on('uncaughtException', function(error) {
   // @todo setup error types system
@@ -344,29 +332,29 @@ process.on('uncaughtException', function (error) {
 
 // const saveInOpsQueueIfCritical = (logger, err) => logger.debug('saveInOpsQueueIfCritical');
 
-cov_d6ri34dec.s[4]++;
+cov_d6ri34dec.s[3]++;
 var determineIfOperationalError = function determineIfOperationalError() {
   cov_d6ri34dec.f[2]++;
-  cov_d6ri34dec.s[5]++;
+  cov_d6ri34dec.s[4]++;
   return false;
 };
 
 function errorHandler(logger) {
   cov_d6ri34dec.f[3]++;
-  cov_d6ri34dec.s[6]++;
+  cov_d6ri34dec.s[5]++;
 
   this.handleError = function (error) {
     cov_d6ri34dec.f[4]++;
-    cov_d6ri34dec.s[7]++;
+    cov_d6ri34dec.s[6]++;
 
     return new _promise2.default(function (resolve) {
       cov_d6ri34dec.f[5]++;
-      cov_d6ri34dec.s[8]++;
+      cov_d6ri34dec.s[7]++;
 
       logger.error(error);
       // sendMailToAdminIfCritical(logger, error)
       // saveInOpsQueueIfCritical(logger, error)
-      cov_d6ri34dec.s[9]++;
+      cov_d6ri34dec.s[8]++;
       resolve(determineIfOperationalError(error));
     });
   };

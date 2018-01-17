@@ -4,9 +4,13 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _extends2 = require('babel-runtime/helpers/extends');
+var _defineProperty2 = require('babel-runtime/helpers/defineProperty');
 
-var _extends3 = _interopRequireDefault(_extends2);
+var _defineProperty3 = _interopRequireDefault(_defineProperty2);
+
+var _extends3 = require('babel-runtime/helpers/extends');
+
+var _extends4 = _interopRequireDefault(_extends3);
 
 var _promise = require('babel-runtime/core-js/promise');
 
@@ -14,7 +18,7 @@ var _promise2 = _interopRequireDefault(_promise);
 
 var cov_kdrnqpj18 = function () {
   var path = '/Users/rawbin/Documents/Projets/collaborations/ensad-publishing/prototype/plurishing-backend/src/releasers/pdf/pdf.generator.js',
-      hash = 'e6429f1b7cbda1e68d873936d303cbae77ad2736',
+      hash = '316927910a27f96ded80a9e28445846becdc6ab9',
       global = new Function('return this')(),
       gcv = '__coverage__',
       coverageData = {
@@ -22,101 +26,101 @@ var cov_kdrnqpj18 = function () {
     statementMap: {
       '0': {
         start: {
-          line: 19,
+          line: 23,
           column: 2
         },
         end: {
-          line: 54,
+          line: 62,
           column: 5
         }
       },
       '1': {
         start: {
-          line: 21,
+          line: 25,
           column: 16
         },
         end: {
-          line: 34,
+          line: 42,
           column: 5
         }
       },
       '2': {
         start: {
-          line: 37,
+          line: 45,
           column: 15
         },
         end: {
-          line: 37,
+          line: 45,
           column: 27
         }
       },
       '3': {
         start: {
-          line: 38,
+          line: 46,
           column: 21
         },
         end: {
-          line: 38,
+          line: 46,
           column: 48
         }
       },
       '4': {
         start: {
-          line: 39,
+          line: 47,
           column: 20
         },
         end: {
-          line: 39,
+          line: 47,
           column: 46
         }
       },
       '5': {
         start: {
-          line: 40,
+          line: 48,
           column: 4
+        },
+        end: {
+          line: 61,
+          column: 21
+        }
+      },
+      '6': {
+        start: {
+          line: 50,
+          column: 8
         },
         end: {
           line: 53,
           column: 21
         }
       },
-      '6': {
-        start: {
-          line: 42,
-          column: 8
-        },
-        end: {
-          line: 45,
-          column: 21
-        }
-      },
       '7': {
         start: {
-          line: 48,
+          line: 56,
           column: 8
         },
         end: {
-          line: 48,
+          line: 56,
           column: 40
         }
       },
       '8': {
         start: {
-          line: 50,
+          line: 58,
           column: 18
         },
         end: {
-          line: 50,
+          line: 58,
           column: 34
         }
       },
       '9': {
         start: {
-          line: 51,
+          line: 59,
           column: 18
         },
         end: {
-          line: 51,
+          line: 59,
           column: 33
         }
       }
@@ -126,171 +130,171 @@ var cov_kdrnqpj18 = function () {
         name: 'generatePdf',
         decl: {
           start: {
-            line: 9,
+            line: 13,
             column: 24
           },
           end: {
-            line: 9,
+            line: 13,
             column: 35
           }
         },
         loc: {
           start: {
-            line: 18,
+            line: 22,
             column: 20
           },
           end: {
-            line: 55,
+            line: 63,
             column: 1
           }
         },
-        line: 18
+        line: 22
       },
       '1': {
         name: '(anonymous_1)',
         decl: {
           start: {
-            line: 19,
+            line: 23,
             column: 21
           },
           end: {
-            line: 19,
+            line: 23,
             column: 22
           }
         },
         loc: {
           start: {
-            line: 19,
+            line: 23,
             column: 42
           },
           end: {
-            line: 54,
+            line: 62,
             column: 3
           }
         },
-        line: 19
+        line: 23
       },
       '2': {
         name: '(anonymous_2)',
         decl: {
           start: {
-            line: 41,
+            line: 49,
             column: 12
           },
           end: {
-            line: 41,
+            line: 49,
             column: 13
           }
         },
         loc: {
           start: {
-            line: 41,
+            line: 49,
             column: 18
           },
           end: {
-            line: 46,
+            line: 54,
             column: 7
           }
         },
-        line: 41
+        line: 49
       },
       '3': {
         name: '(anonymous_3)',
         decl: {
           start: {
-            line: 47,
+            line: 55,
             column: 12
           },
           end: {
-            line: 47,
+            line: 55,
             column: 13
           }
         },
         loc: {
           start: {
-            line: 47,
+            line: 55,
             column: 18
           },
           end: {
-            line: 49,
+            line: 57,
             column: 7
           }
         },
-        line: 47
+        line: 55
       },
       '4': {
         name: '(anonymous_4)',
         decl: {
           start: {
-            line: 50,
+            line: 58,
             column: 12
           },
           end: {
-            line: 50,
+            line: 58,
             column: 13
           }
         },
         loc: {
           start: {
-            line: 50,
+            line: 58,
             column: 18
           },
           end: {
-            line: 50,
+            line: 58,
             column: 34
           }
         },
-        line: 50
+        line: 58
       },
       '5': {
         name: '(anonymous_5)',
         decl: {
           start: {
-            line: 51,
+            line: 59,
             column: 12
           },
           end: {
-            line: 51,
+            line: 59,
             column: 13
           }
         },
         loc: {
           start: {
-            line: 51,
+            line: 59,
             column: 18
           },
           end: {
-            line: 51,
+            line: 59,
             column: 33
           }
         },
-        line: 51
+        line: 59
       }
     },
     branchMap: {
       '0': {
         loc: {
           start: {
-            line: 17,
+            line: 21,
             column: 2
           },
           end: {
-            line: 17,
+            line: 21,
             column: 13
           }
         },
         type: 'default-arg',
         locations: [{
           start: {
-            line: 17,
+            line: 21,
             column: 11
           },
           end: {
-            line: 17,
+            line: 21,
             column: 13
           }
         }],
-        line: 17
+        line: 21
       }
     },
     s: {
@@ -347,6 +351,18 @@ var _prince = require('prince');
 
 var _prince2 = _interopRequireDefault(_prince);
 
+var _PdfNoteContentPointer = require('plurishing-shared/dist/components/views/static/PdfNoteContentPointer');
+
+var _PdfNoteContentPointer2 = _interopRequireDefault(_PdfNoteContentPointer);
+
+var _PdfNotePointerPointer = require('plurishing-shared/dist/components/views/static/PdfNotePointerPointer');
+
+var _PdfNotePointerPointer2 = _interopRequireDefault(_PdfNotePointerPointer);
+
+var _PdfLink = require('plurishing-shared/dist/components/views/static/PdfLink');
+
+var _PdfLink2 = _interopRequireDefault(_PdfLink);
+
 var _reactComponents = require('../../utils/react-components');
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
@@ -378,12 +394,15 @@ function generatePdf(_ref, onFileGenerated) {
         null,
         styles
       ),
-      _react2.default.createElement(Component, (0, _extends3.default)({}, props, {
+      _react2.default.createElement(Component, (0, _extends4.default)({}, props, (0, _defineProperty3.default)({
         renderingMode: 'pdf',
         getAssetUri: getAssetUri,
         citationStyle: citationStyle,
-        citationLocale: citationLocale
-      }))
+        citationLocale: citationLocale,
+        Link: _PdfLink2.default,
+        NoteContentPointer: _PdfNoteContentPointer2.default,
+        NotePointerPointer: _PdfNotePointerPointer2.default
+      }, 'Link', _PdfLink2.default)))
     )));
 
     var id = (cov_kdrnqpj18.s[2]++, (0, _uuid.v4)());

@@ -4,6 +4,10 @@ import {v4 as generateId} from 'uuid';
 import {writeFile, remove} from 'fs-extra';
 import Prince from 'prince';
 
+import PdfNoteContentPointer from 'plurishing-shared/dist/components/views/static/PdfNoteContentPointer';
+import PdfNotePointerPointer from 'plurishing-shared/dist/components/views/static/PdfNotePointerPointer';
+import PdfLink from 'plurishing-shared/dist/components/views/static/PdfLink';
+
 import {TranslationsProvider} from '../../utils/react-components';/* eslint no-unused-vars : 0 */
 
 export default function generatePdf ({
@@ -29,6 +33,10 @@ export default function generatePdf ({
           getAssetUri={getAssetUri}
           citationStyle={citationStyle}
           citationLocale={citationLocale}
+          Link={PdfLink}
+          NoteContentPointer={PdfNoteContentPointer}
+          NotePointerPointer={PdfNotePointerPointer}
+          Link={PdfLink}
         />
       </TranslationsProvider>
     );
