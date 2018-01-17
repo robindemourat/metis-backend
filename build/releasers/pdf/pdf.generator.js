@@ -18,7 +18,7 @@ var _promise2 = _interopRequireDefault(_promise);
 
 var cov_kdrnqpj18 = function () {
   var path = '/Users/rawbin/Documents/Projets/collaborations/ensad-publishing/prototype/plurishing-backend/src/releasers/pdf/pdf.generator.js',
-      hash = '316927910a27f96ded80a9e28445846becdc6ab9',
+      hash = 'fd2005abc084483b90f99be9e003410ef6856d02',
       global = new Function('return this')(),
       gcv = '__coverage__',
       coverageData = {
@@ -71,7 +71,7 @@ var cov_kdrnqpj18 = function () {
         },
         end: {
           line: 47,
-          column: 46
+          column: 48
         }
       },
       '5': {
@@ -407,7 +407,7 @@ function generatePdf(_ref, onFileGenerated) {
 
     var id = (cov_kdrnqpj18.s[2]++, (0, _uuid.v4)());
     var tempHtml = (cov_kdrnqpj18.s[3]++, tempDirPath + '/' + id + '.html');
-    var tempPdf = (cov_kdrnqpj18.s[4]++, tempDirPath + '/' + id + '.pdf');
+    var tempPdf = (cov_kdrnqpj18.s[4]++, outputDirPath + '/' + id + '.pdf');
     cov_kdrnqpj18.s[5]++;
     (0, _fsExtra.writeFile)(tempHtml, str).then(function () {
       cov_kdrnqpj18.f[2]++;

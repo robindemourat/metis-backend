@@ -44,7 +44,7 @@ export default function generatePdf ({
 
     const id = generateId();
     const tempHtml = `${tempDirPath}/${id}.html`;
-    const tempPdf = `${tempDirPath}/${id}.pdf`;
+    const tempPdf = `${outputDirPath}/${id}.pdf`;
     writeFile(tempHtml, str)
       .then(() => {
         return Prince()

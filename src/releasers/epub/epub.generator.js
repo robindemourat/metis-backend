@@ -4,13 +4,20 @@ import {v4 as generateId} from 'uuid';
 import {writeFile, remove} from 'fs-extra';
 import Epub from 'epub-gen';
 
-import {TranslationsProvider} from '../../utils/react-components';/* eslint no-unused-vars : 0 */
 import DecoratedComposition from 'plurishing-shared/dist/components/views/static/DecoratedComposition';
-
 
 import EpubNoteContentPointer from 'plurishing-shared/dist/components/views/static/EpubNoteContentPointer';
 import EpubNotePointerPointer from 'plurishing-shared/dist/components/views/static/EpubNotePointerPointer';
 import EpubLink from 'plurishing-shared/dist/components/views/static/EpubLink';
+import StandaloneCover from 'plurishing-shared/dist/components/views/static/StandaloneCover';
+
+import {TranslationsProvider} from '../../utils/react-components';/* eslint no-unused-vars : 0 */
+
+import html2img from '../../services/html2img/html2img.service';
+
+import {resolve as resolvePath} from 'path';
+
+const tempFolder = resolvePath(`${__dirname}/../../../temp/`);
 
 const buildAuthors = creators =>
   creators.reduce((total, creator, index) => {
@@ -62,6 +69,16 @@ const renderComposition = (parameters, {
   }
 };
 
+const generateCoverHtml = (montage, renderingMode, styles) => {
+  return ReactDOMServer.renderToStaticMarkup(
+      <StandaloneCover
+        styles={styles}
+        montage={montage}
+        renderingMode={renderingMode}
+      />
+    );
+};
+
 export default function generateEpub ({
   // Component,
   props,
@@ -85,31 +102,41 @@ export default function generateEpub ({
       montage.data.css[`${renderingMode}_css_code`]
     ].join('\n\n');
 
-    const options = {
-      title: metadata.title,
-      author: buildAuthors(metadata.creators),
-      // publisher: "Macmillan & Co.", // optional
-      content: [
-          ...montage.data.compositions
-            .map((compositionCitation, index) => renderComposition(compositionCitation, {
-              ...props,
-              renderingMode,
-              citationStyle,
-              citationLocale,
-              getAssetUri,
-              index
-            }))
-            .filter(comp => comp)
-      ],
-      css
-    };
+    const coverHTML = generateCoverHtml(montage, renderingMode, styles);
+    const coverFilePath = `${tempFolder}/${generateId()}.jpg`;
 
-    const outputPath = outputDirPath + '/test.epub';
-    return new Epub(options, outputPath).promise
-            .then(() => {
-              onFileGenerated(outputPath);
-              resolve(outputPath);
-            })
-            .catch(reject);
+    html2img(coverHTML, coverFilePath, err => {
+      if (err) {
+        reject(err);
+      } else {
+        const options = {
+          title: metadata.title,
+          author: buildAuthors(metadata.creators),
+          cover: coverFilePath,
+          // publisher: "Macmillan & Co.", // optional
+          content: [
+              ...montage.data.compositions
+                .map((compositionCitation, index) => renderComposition(compositionCitation, {
+                  ...props,
+                  renderingMode,
+                  citationStyle,
+                  citationLocale,
+                  getAssetUri,
+                  index
+                }))
+                .filter(comp => comp)
+          ],
+          css
+        };
+
+        const outputPath = `${outputDirPath}/${montage._id}.epub`;
+        return new Epub(options, outputPath).promise
+                .then(() => {
+                  onFileGenerated(outputPath);
+                  resolve(outputPath);
+                })
+                .catch(reject);
+      }
+    });
   });
 }

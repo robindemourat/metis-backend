@@ -6,7 +6,7 @@ Object.defineProperty(exports, "__esModule", {
 
 var cov_2qi3fx3eqm = function () {
   var path = '/Users/rawbin/Documents/Projets/collaborations/ensad-publishing/prototype/plurishing-backend/src/services/html2img/html2img.service.js',
-      hash = '32cfa1d5c462ac4eb0fda103bf06660f35deec39',
+      hash = 'b604cfba3a9a7cbd991e902b06b1dc767f422dd1',
       global = new Function('return this')(),
       gcv = '__coverage__',
       coverageData = {
@@ -49,7 +49,7 @@ var cov_2qi3fx3eqm = function () {
         loc: {
           start: {
             line: 3,
-            column: 41
+            column: 47
           },
           end: {
             line: 19,
@@ -105,12 +105,6 @@ var cov_2qi3fx3eqm = function () {
   return coverage[path] = coverageData;
 }();
 
-var _webshot = require('webshot');
-
-var _webshot2 = _interopRequireDefault(_webshot);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
 exports.default = function (html, path, callback) {
   cov_2qi3fx3eqm.f[0]++;
   cov_2qi3fx3eqm.s[0]++;
@@ -133,3 +127,9 @@ exports.default = function (html, path, callback) {
     callback(err);
   });
 };
+
+var _webshot = require('webshot');
+
+var _webshot2 = _interopRequireDefault(_webshot);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }

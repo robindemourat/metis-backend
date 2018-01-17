@@ -6,23 +6,23 @@
 /**
  * Catch unhandled promise rejections
  */
-process.on('unhandledRejection', function (reason) {
+// process.on('unhandledRejection', function (reason) {
   //I just caught an unhandled promise rejection,
   // since we already have fallback handler for unhandled errors (see below),
   // let throw and let him handle that
   // throw reason;
-});
+// });
 
 /**
  * Catch unhandled exceptions to shut the process gracefully
  */
-process.on('uncaughtException', function(error) {
+// process.on('uncaughtException', function(error) {
 // process.on('uncaughtException', function(error) {
    // @todo setup error types system
    // errorManagement.handler.handleError(error);
    // if(!errorManagement.handler.isTrustedError(error))
-   throw error;
-});
+   // throw error;
+// });
 
 /**
  * Custom error handling object

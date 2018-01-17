@@ -1,6 +1,6 @@
 import webshot from 'webshot';
 
-export default (html, path, callback) => {
+export default function (html, path, callback) {
   webshot(html, path, {
     siteType:'html',
     windowSize: {
@@ -16,4 +16,4 @@ export default (html, path, callback) => {
   (err) => {
     callback(err);
   });
-};
+}
