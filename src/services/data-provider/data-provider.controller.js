@@ -12,7 +12,7 @@ export const getAssetAttachmentUrl = (req, res) => {
             return assetDal.getAssetAttachment({
               id,
               filename: asset.filename
-            })
+            });
           })
           .then(({data, mimetype}) => {
             res.writeHead(200, {'Content-Type': mimetype});

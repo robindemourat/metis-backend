@@ -14,7 +14,7 @@ var _promise2 = _interopRequireDefault(_promise);
 
 var cov_1c0qoqgg8e = function () {
   var path = '/Users/rawbin/Documents/Projets/collaborations/ensad-publishing/prototype/plurishing-backend/src/releasers/twitter/tweet.js',
-      hash = '496bb04b75b3ef9e735733445a39517fd4c5ee18',
+      hash = '905f372f9ed684760470fb8fe64ef3d32f7ce6f0',
       global = new Function('return this')(),
       gcv = '__coverage__',
       coverageData = {
@@ -36,7 +36,7 @@ var cov_1c0qoqgg8e = function () {
           column: 4
         },
         end: {
-          line: 110,
+          line: 111,
           column: 7
         }
       },
@@ -116,7 +116,7 @@ var cov_1c0qoqgg8e = function () {
           column: 8
         },
         end: {
-          line: 109,
+          line: 110,
           column: 9
         }
       },
@@ -267,7 +267,7 @@ var cov_1c0qoqgg8e = function () {
         },
         end: {
           line: 75,
-          column: 31
+          column: 38
         }
       },
       '25': {
@@ -276,8 +276,8 @@ var cov_1c0qoqgg8e = function () {
           column: 10
         },
         end: {
-          line: 99,
-          column: 15
+          line: 100,
+          column: 27
         }
       },
       '26': {
@@ -332,41 +332,41 @@ var cov_1c0qoqgg8e = function () {
       },
       '31': {
         start: {
-          line: 102,
+          line: 103,
           column: 10
+        },
+        end: {
+          line: 109,
+          column: 13
+        }
+      },
+      '32': {
+        start: {
+          line: 104,
+          column: 12
         },
         end: {
           line: 108,
           column: 13
         }
       },
-      '32': {
-        start: {
-          line: 103,
-          column: 12
-        },
-        end: {
-          line: 107,
-          column: 13
-        }
-      },
       '33': {
         start: {
-          line: 104,
+          line: 105,
           column: 14
         },
         end: {
-          line: 104,
+          line: 105,
           column: 26
         }
       },
       '34': {
         start: {
-          line: 106,
+          line: 107,
           column: 14
         },
         end: {
-          line: 106,
+          line: 107,
           column: 24
         }
       }
@@ -390,7 +390,7 @@ var cov_1c0qoqgg8e = function () {
             column: 48
           },
           end: {
-            line: 111,
+            line: 112,
             column: 1
           }
         },
@@ -414,7 +414,7 @@ var cov_1c0qoqgg8e = function () {
             column: 44
           },
           end: {
-            line: 110,
+            line: 111,
             column: 5
           }
         },
@@ -568,25 +568,25 @@ var cov_1c0qoqgg8e = function () {
         name: '(anonymous_8)',
         decl: {
           start: {
-            line: 102,
+            line: 103,
             column: 51
           },
           end: {
-            line: 102,
+            line: 103,
             column: 52
           }
         },
         loc: {
           start: {
-            line: 102,
+            line: 103,
             column: 82
           },
           end: {
-            line: 108,
+            line: 109,
             column: 11
           }
         },
-        line: 102
+        line: 103
       }
     },
     branchMap: {
@@ -663,7 +663,7 @@ var cov_1c0qoqgg8e = function () {
             column: 8
           },
           end: {
-            line: 109,
+            line: 110,
             column: 9
           }
         },
@@ -674,7 +674,7 @@ var cov_1c0qoqgg8e = function () {
             column: 8
           },
           end: {
-            line: 109,
+            line: 110,
             column: 9
           }
         }, {
@@ -683,7 +683,7 @@ var cov_1c0qoqgg8e = function () {
             column: 8
           },
           end: {
-            line: 109,
+            line: 110,
             column: 9
           }
         }],
@@ -824,35 +824,35 @@ var cov_1c0qoqgg8e = function () {
       '7': {
         loc: {
           start: {
-            line: 103,
+            line: 104,
             column: 12
           },
           end: {
-            line: 107,
+            line: 108,
             column: 13
           }
         },
         type: 'if',
         locations: [{
           start: {
-            line: 103,
+            line: 104,
             column: 12
           },
           end: {
-            line: 107,
+            line: 108,
             column: 13
           }
         }, {
           start: {
-            line: 103,
+            line: 104,
             column: 12
           },
           end: {
-            line: 107,
+            line: 108,
             column: 13
           }
         }],
-        line: 103
+        line: 104
       }
     },
     s: {
@@ -1059,7 +1059,7 @@ function tweet(contents, params) {
 
                     mediaIds.push(mediaIdStr);
                     cov_1c0qoqgg8e.s[24]++;
-                    reso();
+                    return reso();
                   }
                 });
               }
@@ -1076,7 +1076,7 @@ function tweet(contents, params) {
         // update contents with proper media
         var enrichedContents = (cov_1c0qoqgg8e.s[26]++, (0, _extends3.default)({}, contents, {
           media: undefined,
-          media_ids: [mediaIds]
+          media_ids: mediaIds
         }));
         // eventually tweet
         cov_1c0qoqgg8e.s[27]++;
@@ -1096,7 +1096,7 @@ function tweet(contents, params) {
             return resolve();
           }
         });
-      });
+      }).catch(reject);
       // case simple tweet
     } else {
       cov_1c0qoqgg8e.b[2][1]++;

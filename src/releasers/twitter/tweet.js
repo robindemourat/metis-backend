@@ -97,7 +97,7 @@ export default function tweet(contents, params) {
                 }
               });
             })
-            .catch(reject)
+            .catch(reject);
         // case simple tweet
         } else {
           client.post('statuses/update', contents, (err/* , data, response */) => {
