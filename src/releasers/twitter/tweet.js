@@ -72,7 +72,7 @@ export default function tweet(contents, params) {
                         return rej(err);
                       } else {
                         mediaIds.push(mediaIdStr);
-                        reso();
+                        return reso();
                       }
                     });
                   }
@@ -86,7 +86,7 @@ export default function tweet(contents, params) {
               const enrichedContents = {
                 ...contents,
                 media: undefined,
-                media_ids: [mediaIds]
+                media_ids: mediaIds
               };
               // eventually tweet
               client.post('statuses/update', enrichedContents, (err/* , data, response */) => {
@@ -96,7 +96,8 @@ export default function tweet(contents, params) {
                   return resolve();
                 }
               });
-            });
+            })
+            .catch(reject)
         // case simple tweet
         } else {
           client.post('statuses/update', contents, (err/* , data, response */) => {
