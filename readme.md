@@ -5,225 +5,6 @@ Plurishing-server is the main backend application used to run the `plurishing` e
 
 The app is an express app allowing to interact with a `couchdb` database storing different types of objects relating to the experiment, and also to provide some microservices used by other applications.
 
-# API
-
-## Authentification-related routes
-
-```
-POST /request-password-reset
-```
-
-```
-POST /sign-up
-```
-
-```
-POST /login
-```
-
-## Interface to the database documents
-
-```
-GET /api/users/
-```
-
-```
-GET /api/users/:id
-```
-
-```
-POST /api/users/:id
-```
-
-```
-PUT /api/users/:id
-```
-
-```
-DELETE /api/users/:id
-```
-
-```
-POST /api/users/change-password
-```
-
-### Assets
-
-```
-GET /api/assets/
-```
-
-```
-GET /api/assets/:id
-```
-
-```
-POST /api/assets/:id
-```
-
-```
-PUT /api/assets/:id
-```
-
-```
-DELETE /api/assets/:id
-```
-
-```
-GET /api/assets/:id/:filename
-```
-
-### Resources
-
-```
-GET /api/resources/
-```
-
-```
-GET /api/resources/:id
-```
-
-```
-POST /api/resources/:id
-```
-
-```
-PUT /api/resources/:id
-```
-
-```
-DELETE /api/resources/:id
-```
-
-### Compositions
-
-```
-GET /api/compositions/
-```
-
-```
-GET /api/compositions/:id
-```
-
-```
-POST /api/compositions/:id
-```
-
-```
-PUT /api/compositions/:id
-```
-
-```
-DELETE /api/compositions/:id
-```
-
-
-### Montages (assemblages of compositions)
-
-```
-GET /api/montages/
-```
-
-```
-GET /api/montages/:id
-```
-
-```
-POST /api/montages/:id
-```
-
-```
-PUT /api/montages/:id
-```
-
-```
-DELETE /api/montages/:id
-```
-
-### Diffusions of montages
-
-```
-GET /api/diffusions/
-```
-
-```
-GET /api/diffusions/:id
-```
-
-```
-POST /api/diffusions/:id
-```
-
-```
-PUT /api/diffusions/:id
-```
-
-```
-DELETE /api/diffusions/:id
-```
-
-### Deliverables (static generated files)
-
-```
-GET /api/deliverables/
-```
-
-```
-GET /api/deliverables/:id
-```
-
-```
-POST /api/deliverables/:id
-```
-
-```
-PUT /api/deliverables/:id
-```
-
-```
-DELETE /api/deliverables/:id
-```
-
-```
-GET /api/deliverables/:id/:filename
-```
-
-
-## Microservices
-
-### Html to Image generator
-
-```
-POST /services/html2img
-```
-
-### Global operations on the database (dump-related)
-
-```
-GET /dump/
-```
-
-```
-POST /dump/
-```
-
-```
-DELETE /dump/
-```
-
-### Unprotected data provider
-
-These routes do not require authentification.
-
-```
-GET /services/data-provider/montage/:id
-```
-
-```
-GET /services/data-provider/asset/:id
-```
-
-
 # Installation
 
 ```
@@ -291,5 +72,479 @@ npm run build
 
 # deploy to heroku (push and set env variables)
 npm run deploy:heroku
+```
+
+# Application endpoints
+
+## Authentification-related routes
+
+### Signup
+
+###### DESCRIPTION
+
+###### HTTP REQUEST
+
+```
+POST /sign-up
+```
+
+
+### Login
+
+###### DESCRIPTION
+
+###### HTTP REQUEST
+
+```
+POST /login
+```
+
+### Password reset
+
+###### DESCRIPTION
+
+###### HTTP REQUEST
+
+```
+POST /request-password-reset
+```
+
+## Interface to the database documents
+
+### Get all users
+
+###### DESCRIPTION
+
+###### HTTP REQUEST
+
+```
+GET /api/users/
+```
+
+### Get a specific user
+
+###### DESCRIPTION
+
+###### HTTP REQUEST
+
+```
+GET /api/users/:id
+```
+
+### Create user
+
+###### DESCRIPTION
+
+###### HTTP REQUEST
+
+```
+POST /api/users/:id
+```
+
+### Update user
+
+###### DESCRIPTION
+
+###### HTTP REQUEST
+
+```
+PUT /api/users/:id
+```
+
+### Delete user
+
+###### DESCRIPTION
+
+###### HTTP REQUEST
+
+```
+DELETE /api/users/:id
+```
+
+### Change password
+
+###### DESCRIPTION
+
+###### HTTP REQUEST
+
+```
+POST /api/users/change-password
+```
+
+### Assets
+
+### Get all assets
+
+###### DESCRIPTION
+
+###### HTTP REQUEST
+
+```
+GET /api/assets/
+```
+
+### Get specific asset
+
+###### DESCRIPTION
+
+###### HTTP REQUEST
+
+```
+GET /api/assets/:id
+```
+
+### Create asset
+
+###### DESCRIPTION
+
+###### HTTP REQUEST
+
+```
+POST /api/assets/:id
+```
+
+### Update asset
+
+###### DESCRIPTION
+
+###### HTTP REQUEST
+
+```
+PUT /api/assets/:id
+```
+
+### Delete asset
+
+###### DESCRIPTION
+
+###### HTTP REQUEST
+
+```
+DELETE /api/assets/:id
+```
+
+### Get asset attached file
+
+###### DESCRIPTION
+
+###### HTTP REQUEST
+
+```
+GET /api/assets/:id/:filename
+```
+
+### Resources
+
+### Get all resources
+
+###### DESCRIPTION
+
+###### HTTP REQUEST
+
+```
+GET /api/resources/
+```
+
+### Get specific resource
+
+###### DESCRIPTION
+
+###### HTTP REQUEST
+
+```
+GET /api/resources/:id
+```
+
+### Create resource
+
+###### DESCRIPTION
+
+###### HTTP REQUEST
+
+```
+POST /api/resources/:id
+```
+
+### Update resource
+
+###### DESCRIPTION
+
+###### HTTP REQUEST
+
+```
+PUT /api/resources/:id
+```
+
+### Delete resource
+
+###### DESCRIPTION
+
+###### HTTP REQUEST
+
+```
+DELETE /api/resources/:id
+```
+
+### Compositions
+
+### Get all compositions
+
+###### DESCRIPTION
+
+###### HTTP REQUEST
+
+```
+GET /api/compositions/
+```
+
+### Get a specific composition
+
+###### DESCRIPTION
+
+###### HTTP REQUEST
+
+```
+GET /api/compositions/:id
+```
+
+### Create composition
+
+###### DESCRIPTION
+
+###### HTTP REQUEST
+
+```
+POST /api/compositions/:id
+```
+
+### Create composition
+
+###### DESCRIPTION
+
+###### HTTP REQUEST
+
+```
+PUT /api/compositions/:id
+```
+
+### Update composition
+
+###### DESCRIPTION
+
+###### HTTP REQUEST
+
+```
+DELETE /api/compositions/:id
+```
+
+
+### Montages (assemblages of compositions)
+
+### Get all montages
+
+###### DESCRIPTION
+
+###### HTTP REQUEST
+
+```
+GET /api/montages/
+```
+
+### Get specific montage
+
+###### DESCRIPTION
+
+###### HTTP REQUEST
+
+```
+GET /api/montages/:id
+```
+
+### Create montage
+
+###### DESCRIPTION
+
+###### HTTP REQUEST
+
+```
+POST /api/montages/:id
+```
+
+### Update montage
+
+###### DESCRIPTION
+
+###### HTTP REQUEST
+
+```
+PUT /api/montages/:id
+```
+
+### Delete montage
+
+###### DESCRIPTION
+
+###### HTTP REQUEST
+
+```
+DELETE /api/montages/:id
+```
+
+### Diffusions of montages
+
+### Get all diffusions
+
+###### DESCRIPTION
+
+###### HTTP REQUEST
+
+```
+GET /api/diffusions/
+```
+
+### Get a specific diffusion
+
+###### DESCRIPTION
+
+###### HTTP REQUEST
+
+```
+GET /api/diffusions/:id
+```
+
+### Create diffusion
+
+###### DESCRIPTION
+
+###### HTTP REQUEST
+
+```
+POST /api/diffusions/:id
+```
+
+### Update diffusion
+
+###### DESCRIPTION
+
+###### HTTP REQUEST
+
+```
+PUT /api/diffusions/:id
+```
+
+### Delete diffusion
+
+###### DESCRIPTION
+
+###### HTTP REQUEST
+
+```
+DELETE /api/diffusions/:id
+```
+
+### Deliverables (static generated files)
+
+### Get all deliverables
+
+###### DESCRIPTION
+
+###### HTTP REQUEST
+
+```
+GET /api/deliverables/
+```
+
+### Get a specific deliverable
+
+###### DESCRIPTION
+
+###### HTTP REQUEST
+
+```
+GET /api/deliverables/:id
+```
+
+### Create deliverable
+
+###### DESCRIPTION
+
+###### HTTP REQUEST
+
+```
+POST /api/deliverables/:id
+```
+
+### Update deliverable
+
+###### DESCRIPTION
+
+###### HTTP REQUEST
+
+```
+PUT /api/deliverables/:id
+```
+
+### Delete deliverable
+
+###### DESCRIPTION
+
+###### HTTP REQUEST
+
+```
+DELETE /api/deliverables/:id
+```
+
+### Get deliverable attachment file
+
+###### DESCRIPTION
+
+###### HTTP REQUEST
+
+```
+GET /api/deliverables/:id/:filename
+```
+
+## Microservices
+
+### Html to Image generator
+
+###### DESCRIPTION
+
+###### HTTP REQUEST
+
+```
+POST /services/html2img
+```
+
+### Global operations on the database (dump-related)
+
+#### Download zip dump
+
+###### DESCRIPTION
+
+###### HTTP REQUEST
+
+```
+GET /dump/
+```
+
+#### Reinitialize data with a zip dump
+
+###### DESCRIPTION
+
+###### HTTP REQUEST
+
+```
+POST /dump/
+```
+
+#### Delete all content data
+
+###### DESCRIPTION
+
+###### HTTP REQUEST
+
+```
+DELETE /dump/
 ```
 
