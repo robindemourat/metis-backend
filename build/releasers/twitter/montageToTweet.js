@@ -6,7 +6,7 @@ Object.defineProperty(exports, "__esModule", {
 
 var cov_oq6l14t8s = function () {
   var path = '/Users/rawbin/Documents/Projets/collaborations/ensad-publishing/prototype/plurishing-backend/src/releasers/twitter/montageToTweet.js',
-      hash = 'ca8a88554eb21cb352f26684d40d9fafcf25eca5',
+      hash = '6626af425300342bd0d336e2e432d1405efcfb93',
       global = new Function('return this')(),
       gcv = '__coverage__',
       coverageData = {
@@ -168,57 +168,67 @@ var cov_oq6l14t8s = function () {
           column: 2
         },
         end: {
-          line: 65,
+          line: 70,
           column: 3
         }
       },
       '16': {
         start: {
-          line: 52,
-          column: 4
+          line: 53,
+          column: 18
         },
         end: {
-          line: 64,
-          column: 7
+          line: 53,
+          column: 53
         }
       },
       '17': {
         start: {
-          line: 53,
-          column: 31
+          line: 57,
+          column: 4
         },
         end: {
-          line: 53,
-          column: 39
+          line: 69,
+          column: 7
         }
       },
       '18': {
         start: {
           line: 58,
-          column: 18
+          column: 31
         },
         end: {
           line: 58,
-          column: 47
+          column: 39
         }
       },
       '19': {
         start: {
-          line: 59,
-          column: 6
+          line: 63,
+          column: 18
         },
         end: {
           line: 63,
-          column: 9
+          column: 47
         }
       },
       '20': {
         start: {
-          line: 66,
+          line: 64,
+          column: 6
+        },
+        end: {
+          line: 68,
+          column: 9
+        }
+      },
+      '21': {
+        start: {
+          line: 71,
           column: 2
         },
         end: {
-          line: 69,
+          line: 74,
           column: 4
         }
       }
@@ -314,7 +324,7 @@ var cov_oq6l14t8s = function () {
             column: 70
           },
           end: {
-            line: 70,
+            line: 75,
             column: 1
           }
         },
@@ -324,25 +334,25 @@ var cov_oq6l14t8s = function () {
         name: '(anonymous_4)',
         decl: {
           start: {
-            line: 52,
-            column: 28
+            line: 57,
+            column: 44
           },
           end: {
-            line: 52,
-            column: 29
+            line: 57,
+            column: 45
           }
         },
         loc: {
           start: {
-            line: 52,
-            column: 40
+            line: 57,
+            column: 56
           },
           end: {
-            line: 64,
+            line: 69,
             column: 5
           }
         },
-        line: 52
+        line: 57
       }
     },
     branchMap: {
@@ -650,7 +660,7 @@ var cov_oq6l14t8s = function () {
             column: 2
           },
           end: {
-            line: 65,
+            line: 70,
             column: 3
           }
         },
@@ -661,7 +671,7 @@ var cov_oq6l14t8s = function () {
             column: 2
           },
           end: {
-            line: 65,
+            line: 70,
             column: 3
           }
         }, {
@@ -670,11 +680,44 @@ var cov_oq6l14t8s = function () {
             column: 2
           },
           end: {
-            line: 65,
+            line: 70,
             column: 3
           }
         }],
         line: 51
+      },
+      '10': {
+        loc: {
+          start: {
+            line: 53,
+            column: 18
+          },
+          end: {
+            line: 53,
+            column: 53
+          }
+        },
+        type: 'cond-expr',
+        locations: [{
+          start: {
+            line: 53,
+            column: 33
+          },
+          end: {
+            line: 53,
+            column: 49
+          }
+        }, {
+          start: {
+            line: 53,
+            column: 52
+          },
+          end: {
+            line: 53,
+            column: 53
+          }
+        }],
+        line: 53
       }
     },
     s: {
@@ -698,7 +741,8 @@ var cov_oq6l14t8s = function () {
       '17': 0,
       '18': 0,
       '19': 0,
-      '20': 0
+      '20': 0,
+      '21': 0
     },
     f: {
       '0': 0,
@@ -717,7 +761,8 @@ var cov_oq6l14t8s = function () {
       '6': [0, 0],
       '7': [0, 0],
       '8': [0, 0],
-      '9': [0, 0]
+      '9': [0, 0],
+      '10': [0, 0]
     },
     _coverageSchema: '332fd63041d2c1bcb487cc26dd0d5f7d97098a6c'
   },
@@ -792,12 +837,17 @@ function montageToTweet(montage, composition, assets) {
   cov_oq6l14t8s.s[15]++;
   if (attached_assets) {
     cov_oq6l14t8s.b[9][0]++;
-    cov_oq6l14t8s.s[16]++;
 
-    attached_assets.forEach(function (citation) {
+    // limit to first 4 medias (limit of twitter)
+    var limit = (cov_oq6l14t8s.s[16]++, media.length ? (cov_oq6l14t8s.b[10][0]++, 4 - media.length) : (cov_oq6l14t8s.b[10][1]++, 4));
+    /**
+     * @todo it should be explicited somewhere/at some point in ui that twitter accepts max 4 images
+     */
+    cov_oq6l14t8s.s[17]++;
+    attached_assets.slice(0, limit).forEach(function (citation) {
       cov_oq6l14t8s.f[4]++;
 
-      var _ref4 = (cov_oq6l14t8s.s[17]++, citation),
+      var _ref4 = (cov_oq6l14t8s.s[18]++, citation),
           image_asset_id = _ref4.image_asset_id;
       /**
        * @todo investigate possible security issue
@@ -805,8 +855,8 @@ function montageToTweet(montage, composition, assets) {
        */
 
 
-      var uri = (cov_oq6l14t8s.s[18]++, assets[image_asset_id].base64); /* eslint security/detect-object-injection : 0 */
-      cov_oq6l14t8s.s[19]++;
+      var uri = (cov_oq6l14t8s.s[19]++, assets[image_asset_id].base64); /* eslint security/detect-object-injection : 0 */
+      cov_oq6l14t8s.s[20]++;
       media.push({
         type: 'image',
         description: 'attached image',
@@ -816,7 +866,7 @@ function montageToTweet(montage, composition, assets) {
   } else {
     cov_oq6l14t8s.b[9][1]++;
   }
-  cov_oq6l14t8s.s[20]++;
+  cov_oq6l14t8s.s[21]++;
   return {
     status: status,
     media: media

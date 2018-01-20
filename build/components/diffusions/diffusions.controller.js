@@ -15,7 +15,7 @@ var _extends3 = _interopRequireDefault(_extends2);
 
 var cov_1pp8drd87p = function () {
   var path = '/Users/rawbin/Documents/Projets/collaborations/ensad-publishing/prototype/plurishing-backend/src/components/diffusions/diffusions.controller.js',
-      hash = '1ead73b1a2b9ed81a6769a626d6f2a8c150c556f',
+      hash = '7410fae56d45405165d953229d7d249f78125c55',
       global = new Function('return this')(),
       gcv = '__coverage__',
       coverageData = {
@@ -67,7 +67,7 @@ var cov_1pp8drd87p = function () {
           column: 31
         },
         end: {
-          line: 82,
+          line: 78,
           column: 1
         }
       },
@@ -87,8 +87,8 @@ var cov_1pp8drd87p = function () {
           column: 2
         },
         end: {
-          line: 81,
-          column: 5
+          line: 77,
+          column: 71
         }
       },
       '7': {
@@ -173,81 +173,81 @@ var cov_1pp8drd87p = function () {
       },
       '15': {
         start: {
-          line: 76,
-          column: 4
+          line: 75,
+          column: 14
         },
         end: {
-          line: 76,
-          column: 68
+          line: 75,
+          column: 70
         }
       },
       '16': {
         start: {
-          line: 80,
-          column: 4
+          line: 77,
+          column: 15
         },
         end: {
-          line: 80,
-          column: 59
+          line: 77,
+          column: 69
         }
       },
       '17': {
         start: {
-          line: 89,
+          line: 85,
           column: 31
         },
         end: {
-          line: 99,
+          line: 95,
           column: 3
         }
       },
       '18': {
         start: {
-          line: 90,
+          line: 86,
           column: 2
         },
         end: {
-          line: 99,
+          line: 95,
           column: 3
         }
       },
       '19': {
         start: {
-          line: 97,
+          line: 93,
           column: 20
         },
         end: {
-          line: 97,
+          line: 93,
           column: 41
         }
       },
       '20': {
         start: {
-          line: 98,
+          line: 94,
           column: 23
         },
         end: {
-          line: 98,
+          line: 94,
           column: 42
         }
       },
       '21': {
         start: {
-          line: 106,
+          line: 102,
           column: 31
         },
         end: {
-          line: 107,
+          line: 103,
           column: 52
         }
       },
       '22': {
         start: {
-          line: 107,
+          line: 103,
           column: 2
         },
         end: {
-          line: 107,
+          line: 103,
           column: 52
         }
       }
@@ -319,7 +319,7 @@ var cov_1pp8drd87p = function () {
             column: 45
           },
           end: {
-            line: 82,
+            line: 78,
             column: 1
           }
         },
@@ -415,8 +415,8 @@ var cov_1pp8drd87p = function () {
             column: 14
           },
           end: {
-            line: 77,
-            column: 3
+            line: 75,
+            column: 70
           }
         },
         line: 75
@@ -425,121 +425,121 @@ var cov_1pp8drd87p = function () {
         name: '(anonymous_7)',
         decl: {
           start: {
-            line: 79,
+            line: 77,
             column: 9
           },
           end: {
-            line: 79,
+            line: 77,
             column: 10
           }
         },
         loc: {
           start: {
-            line: 79,
+            line: 77,
             column: 15
           },
           end: {
-            line: 81,
-            column: 3
+            line: 77,
+            column: 69
           }
         },
-        line: 79
+        line: 77
       },
       '8': {
         name: '(anonymous_8)',
         decl: {
           start: {
-            line: 89,
+            line: 85,
             column: 31
           },
           end: {
-            line: 89,
+            line: 85,
             column: 32
           }
         },
         loc: {
           start: {
-            line: 90,
+            line: 86,
             column: 2
           },
           end: {
-            line: 99,
+            line: 95,
             column: 3
           }
         },
-        line: 90
+        line: 86
       },
       '9': {
         name: '(anonymous_9)',
         decl: {
           start: {
-            line: 97,
+            line: 93,
             column: 10
           },
           end: {
-            line: 97,
+            line: 93,
             column: 11
           }
         },
         loc: {
           start: {
-            line: 97,
+            line: 93,
             column: 20
           },
           end: {
-            line: 97,
+            line: 93,
             column: 41
           }
         },
-        line: 97
+        line: 93
       },
       '10': {
         name: '(anonymous_10)',
         decl: {
           start: {
-            line: 98,
+            line: 94,
             column: 10
           },
           end: {
-            line: 98,
+            line: 94,
             column: 11
           }
         },
         loc: {
           start: {
-            line: 98,
+            line: 94,
             column: 23
           },
           end: {
-            line: 98,
+            line: 94,
             column: 42
           }
         },
-        line: 98
+        line: 94
       },
       '11': {
         name: '(anonymous_11)',
         decl: {
           start: {
-            line: 106,
+            line: 102,
             column: 31
           },
           end: {
-            line: 106,
+            line: 102,
             column: 32
           }
         },
         loc: {
           start: {
-            line: 107,
+            line: 103,
             column: 2
           },
           end: {
-            line: 107,
+            line: 103,
             column: 52
           }
         },
-        line: 107
+        line: 103
       }
     },
     branchMap: {
@@ -753,15 +753,13 @@ var createDiffusion = exports.createDiffusion = function createDiffusion(req, re
   .then(function () {
     cov_1pp8drd87p.f[6]++;
     cov_1pp8drd87p.s[15]++;
-
     return (0, _diffusions.updateDiffusion)(diffId, (0, _extends3.default)({}, diff, { status: 'success' }));
   })
   // error
   .catch(function () {
     cov_1pp8drd87p.f[7]++;
     cov_1pp8drd87p.s[16]++;
-
-    (0, _diffusions.updateDiffusion)(diffId, (0, _extends3.default)({}, diff, { status: 'error' }));
+    return (0, _diffusions.updateDiffusion)(diffId, (0, _extends3.default)({}, diff, { status: 'error' }));
   });
 };
 

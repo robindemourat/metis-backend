@@ -23,7 +23,7 @@ var _promise2 = _interopRequireDefault(_promise);
 
 var cov_27caz4pvrq = function () {
   var path = '/Users/rawbin/Documents/Projets/collaborations/ensad-publishing/prototype/plurishing-backend/src/releasers/micropublication/micropublication.controller.js',
-      hash = '039da8065ad8b1363db50a274199133a27082d0a',
+      hash = '59cbab491e69a33db506b0cafd86aa6850e3c15f',
       global = new Function('return this')(),
       gcv = '__coverage__',
       coverageData = {
@@ -115,7 +115,7 @@ var cov_27caz4pvrq = function () {
           column: 23
         },
         end: {
-          line: 177,
+          line: 178,
           column: 1
         }
       },
@@ -125,7 +125,7 @@ var cov_27caz4pvrq = function () {
           column: 2
         },
         end: {
-          line: 176,
+          line: 177,
           column: 5
         }
       },
@@ -145,7 +145,7 @@ var cov_27caz4pvrq = function () {
           column: 4
         },
         end: {
-          line: 175,
+          line: 176,
           column: 19
         }
       },
@@ -455,7 +455,7 @@ var cov_27caz4pvrq = function () {
           column: 25
         },
         end: {
-          line: 171,
+          line: 172,
           column: 8
         }
       },
@@ -485,7 +485,7 @@ var cov_27caz4pvrq = function () {
           column: 8
         },
         end: {
-          line: 170,
+          line: 171,
           column: 9
         }
       },
@@ -531,21 +531,21 @@ var cov_27caz4pvrq = function () {
       },
       '50': {
         start: {
-          line: 169,
+          line: 170,
           column: 12
         },
         end: {
-          line: 169,
+          line: 170,
           column: 37
         }
       },
       '51': {
         start: {
-          line: 172,
+          line: 173,
           column: 6
         },
         end: {
-          line: 172,
+          line: 173,
           column: 37
         }
       }
@@ -593,7 +593,7 @@ var cov_27caz4pvrq = function () {
             column: 38
           },
           end: {
-            line: 177,
+            line: 178,
             column: 1
           }
         },
@@ -617,7 +617,7 @@ var cov_27caz4pvrq = function () {
             column: 43
           },
           end: {
-            line: 176,
+            line: 177,
             column: 3
           }
         },
@@ -881,7 +881,7 @@ var cov_27caz4pvrq = function () {
             column: 16
           },
           end: {
-            line: 173,
+            line: 174,
             column: 5
           }
         },
@@ -905,7 +905,7 @@ var cov_27caz4pvrq = function () {
             column: 49
           },
           end: {
-            line: 171,
+            line: 172,
             column: 7
           }
         },
@@ -1208,7 +1208,7 @@ var cov_27caz4pvrq = function () {
             column: 8
           },
           end: {
-            line: 170,
+            line: 171,
             column: 9
           }
         },
@@ -1233,20 +1233,20 @@ var cov_27caz4pvrq = function () {
           }
         }, {
           start: {
-            line: 167,
-            column: 10
-          },
-          end: {
-            line: 167,
-            column: 26
-          }
-        }, {
-          start: {
             line: 168,
             column: 10
           },
           end: {
+            line: 168,
+            column: 26
+          }
+        }, {
+          start: {
             line: 169,
+            column: 10
+          },
+          end: {
+            line: 170,
             column: 37
           }
         }],
@@ -1593,6 +1593,7 @@ var release = exports.release = function release(diffusion) {
             mailContents = (0, _mailing.montageToMail)(montage, composition, urledAssets, mailConfig);
             cov_27caz4pvrq.s[49]++;
             return (0, _mailing.mail)(mailContents, mailConfig);
+
           case 'facebook':
             cov_27caz4pvrq.b[8][2]++;
 

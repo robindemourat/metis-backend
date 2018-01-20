@@ -10,7 +10,7 @@ var _promise2 = _interopRequireDefault(_promise);
 
 var cov_1ea3uoml1a = function () {
   var path = '/Users/rawbin/Documents/Projets/collaborations/ensad-publishing/prototype/plurishing-backend/src/releasers/epub/index.js',
-      hash = '228db1efcc0b1e55f1a5429c1c95fea69549583f',
+      hash = '099e60045d8e4110a352a5dbd6ae3a60aaffe23a',
       global = new Function('return this')(),
       gcv = '__coverage__',
       coverageData = {
@@ -42,7 +42,7 @@ var cov_1ea3uoml1a = function () {
           column: 2
         },
         end: {
-          line: 68,
+          line: 71,
           column: 5
         }
       },
@@ -52,7 +52,7 @@ var cov_1ea3uoml1a = function () {
           column: 4
         },
         end: {
-          line: 67,
+          line: 70,
           column: 19
         }
       },
@@ -62,127 +62,87 @@ var cov_1ea3uoml1a = function () {
           column: 6
         },
         end: {
-          line: 32,
+          line: 35,
           column: 8
         }
       },
       '5': {
         start: {
-          line: 27,
+          line: 33,
           column: 8
         },
         end: {
-          line: 31,
-          column: 32
+          line: 33,
+          column: 37
         }
       },
       '6': {
         start: {
-          line: 28,
-          column: 23
+          line: 36,
+          column: 6
         },
         end: {
-          line: 28,
-          column: 32
+          line: 36,
+          column: 33
         }
       },
       '7': {
         start: {
-          line: 29,
-          column: 24
+          line: 39,
+          column: 46
         },
         end: {
-          line: 29,
-          column: 52
+          line: 39,
+          column: 58
         }
       },
       '8': {
         start: {
-          line: 30,
-          column: 10
+          line: 40,
+          column: 6
         },
         end: {
-          line: 30,
-          column: 58
+          line: 66,
+          column: 9
         }
       },
       '9': {
         start: {
-          line: 31,
-          column: 15
+          line: 51,
+          column: 8
         },
         end: {
-          line: 31,
-          column: 32
+          line: 61,
+          column: 10
         }
       },
       '10': {
         start: {
-          line: 33,
-          column: 6
+          line: 62,
+          column: 8
         },
         end: {
-          line: 33,
-          column: 33
+          line: 65,
+          column: 13
         }
       },
       '11': {
         start: {
-          line: 36,
-          column: 46
+          line: 64,
+          column: 12
         },
         end: {
-          line: 36,
-          column: 58
+          line: 64,
+          column: 82
         }
       },
       '12': {
         start: {
-          line: 37,
-          column: 6
-        },
-        end: {
-          line: 63,
-          column: 9
-        }
-      },
-      '13': {
-        start: {
-          line: 48,
-          column: 8
-        },
-        end: {
-          line: 58,
-          column: 10
-        }
-      },
-      '14': {
-        start: {
-          line: 59,
-          column: 8
-        },
-        end: {
-          line: 62,
-          column: 13
-        }
-      },
-      '15': {
-        start: {
-          line: 61,
-          column: 12
-        },
-        end: {
-          line: 61,
-          column: 82
-        }
-      },
-      '16': {
-        start: {
-          line: 65,
+          line: 68,
           column: 16
         },
         end: {
-          line: 65,
+          line: 68,
           column: 47
         }
       }
@@ -206,7 +166,7 @@ var cov_1ea3uoml1a = function () {
             column: 66
           },
           end: {
-            line: 69,
+            line: 72,
             column: 1
           }
         },
@@ -230,7 +190,7 @@ var cov_1ea3uoml1a = function () {
             column: 42
           },
           end: {
-            line: 68,
+            line: 71,
             column: 3
           }
         },
@@ -254,7 +214,7 @@ var cov_1ea3uoml1a = function () {
             column: 16
           },
           end: {
-            line: 34,
+            line: 37,
             column: 5
           }
         },
@@ -278,7 +238,7 @@ var cov_1ea3uoml1a = function () {
             column: 29
           },
           end: {
-            line: 32,
+            line: 35,
             column: 7
           }
         },
@@ -288,97 +248,97 @@ var cov_1ea3uoml1a = function () {
         name: '(anonymous_4)',
         decl: {
           start: {
-            line: 35,
+            line: 38,
             column: 10
           },
           end: {
-            line: 35,
+            line: 38,
             column: 11
           }
         },
         loc: {
           start: {
-            line: 35,
+            line: 38,
             column: 26
           },
           end: {
-            line: 64,
+            line: 67,
             column: 5
           }
         },
-        line: 35
+        line: 38
       },
       '5': {
         name: '(anonymous_5)',
         decl: {
           start: {
-            line: 47,
+            line: 50,
             column: 9
           },
           end: {
-            line: 47,
+            line: 50,
             column: 10
           }
         },
         loc: {
           start: {
-            line: 47,
+            line: 50,
             column: 21
           },
           end: {
-            line: 63,
+            line: 66,
             column: 7
           }
         },
-        line: 47
+        line: 50
       },
       '6': {
         name: '(anonymous_6)',
         decl: {
           start: {
-            line: 60,
+            line: 63,
             column: 16
           },
           end: {
-            line: 60,
+            line: 63,
             column: 17
           }
         },
         loc: {
           start: {
-            line: 60,
+            line: 63,
             column: 35
           },
           end: {
-            line: 62,
+            line: 65,
             column: 11
           }
         },
-        line: 60
+        line: 63
       },
       '7': {
         name: '(anonymous_7)',
         decl: {
           start: {
-            line: 65,
+            line: 68,
             column: 10
           },
           end: {
-            line: 65,
+            line: 68,
             column: 11
           }
         },
         loc: {
           start: {
-            line: 65,
+            line: 68,
             column: 16
           },
           end: {
-            line: 65,
+            line: 68,
             column: 47
           }
         },
-        line: 65
+        line: 68
       }
     },
     branchMap: {
@@ -405,39 +365,6 @@ var cov_1ea3uoml1a = function () {
           }
         }],
         line: 17
-      },
-      '1': {
-        loc: {
-          start: {
-            line: 27,
-            column: 8
-          },
-          end: {
-            line: 31,
-            column: 32
-          }
-        },
-        type: 'if',
-        locations: [{
-          start: {
-            line: 27,
-            column: 8
-          },
-          end: {
-            line: 31,
-            column: 32
-          }
-        }, {
-          start: {
-            line: 27,
-            column: 8
-          },
-          end: {
-            line: 31,
-            column: 32
-          }
-        }],
-        line: 27
       }
     },
     s: {
@@ -453,11 +380,7 @@ var cov_1ea3uoml1a = function () {
       '9': 0,
       '10': 0,
       '11': 0,
-      '12': 0,
-      '13': 0,
-      '14': 0,
-      '15': 0,
-      '16': 0
+      '12': 0
     },
     f: {
       '0': 0,
@@ -470,8 +393,7 @@ var cov_1ea3uoml1a = function () {
       '7': 0
     },
     b: {
-      '0': [0],
-      '1': [0, 0]
+      '0': [0]
     },
     _coverageSchema: '332fd63041d2c1bcb487cc26dd0d5f7d97098a6c'
   },
@@ -527,29 +449,25 @@ function publish(data, diffusion) {
         cov_1ea3uoml1a.f[3]++;
         cov_1ea3uoml1a.s[5]++;
 
-        if (asset.mimetype.indexOf('image') > -1) {
-          cov_1ea3uoml1a.b[1][0]++;
-
-          var path = (cov_1ea3uoml1a.s[6]++, fn(asset));
-          var image = (cov_1ea3uoml1a.s[7]++, (0, _fs.readFileSync)(path, 'base64'));
-          cov_1ea3uoml1a.s[8]++;
-          return 'data:' + asset.mimetype + ';base64,' + image;
-        } else {
-            cov_1ea3uoml1a.b[1][1]++;
-            cov_1ea3uoml1a.s[9]++;
-            return fn(asset);
-          }
+        // if (asset.mimetype.indexOf('image') > -1) {
+        //   const path = fn(asset);
+        //   const image = readFileSync(path, 'base64');
+        //   return `data:${asset.mimetype};base64,${image}`;
+        // } else {
+        // console.log(fn(asset))
+        return 'file://' + fn(asset);
+        // }
       };
-      cov_1ea3uoml1a.s[10]++;
+      cov_1ea3uoml1a.s[6]++;
       return (0, _data.fetchCitationData)();
     }).then(function (citationData) {
       cov_1ea3uoml1a.f[4]++;
 
-      var _ref = (cov_1ea3uoml1a.s[11]++, citationData),
+      var _ref = (cov_1ea3uoml1a.s[7]++, citationData),
           citationStyle = _ref.citationStyle,
           citationLocale = _ref.citationLocale;
 
-      cov_1ea3uoml1a.s[12]++;
+      cov_1ea3uoml1a.s[8]++;
 
       return (0, _epub2.default)({
         // Component,
@@ -563,7 +481,7 @@ function publish(data, diffusion) {
         styles: styles
       }, function (epubPath) {
         cov_1ea3uoml1a.f[5]++;
-        cov_1ea3uoml1a.s[13]++;
+        cov_1ea3uoml1a.s[9]++;
 
         deliverable = {
           type: 'deliverable',
@@ -576,17 +494,17 @@ function publish(data, diffusion) {
           filename: epubPath.split('/').pop(),
           mimetype: 'application/epub+zip'
         };
-        cov_1ea3uoml1a.s[14]++;
+        cov_1ea3uoml1a.s[10]++;
         return (0, _fsExtra.readFile)(epubPath).then(function (deliverableData) {
           cov_1ea3uoml1a.f[6]++;
-          cov_1ea3uoml1a.s[15]++;
+          cov_1ea3uoml1a.s[11]++;
 
           return _deliverables.dal.createDeliverable(deliverable, deliverableData);
         });
       });
     }).then(function () {
       cov_1ea3uoml1a.f[7]++;
-      cov_1ea3uoml1a.s[16]++;
+      cov_1ea3uoml1a.s[12]++;
       return (0, _data.unmountLocalAssets)(data.assets);
     }).then(resolve).catch(reject);
   });
