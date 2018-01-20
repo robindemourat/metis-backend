@@ -164,6 +164,7 @@ export const release = (diffusion) => {
           case 'mailing':
             mailContents = montageToMail(montage, composition, urledAssets, mailConfig);
             return mail(mailContents, mailConfig);
+
           case 'facebook':
           default:
             return Promise.resolve();

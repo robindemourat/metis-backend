@@ -72,13 +72,9 @@ export const createDiffusion = (req, res) => {
     }
   })
   // success
-  .then(() => {
-    return updateDiffusionDAL(diffId, {...diff, status: 'success'});
-  })
+  .then(() => updateDiffusionDAL(diffId, {...diff, status: 'success'}))
   // error
-  .catch(() => {
-    updateDiffusionDAL(diffId, {...diff, status: 'error'});
-  });
+  .catch(() => updateDiffusionDAL(diffId, {...diff, status: 'error'}));
 };
 
 /**
