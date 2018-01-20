@@ -31,7 +31,8 @@
     "build": "babel src/ -d build/",
     "add-build-to-stage": "git add build",
     "add-doc-to-stage": "git add doc",
-    "deploy:heroku": "node setHerokuEnv;git push heroku master"
+    "deploy:heroku": "node setHerokuEnv;git push heroku master",
+    "clean": "rm -rf temp;mkdir temp"
   },
   "betterScripts": {
     "dev": {
@@ -75,7 +76,7 @@
     "bunyan-debug-stream": "^1.0.8",
     "cors": "^2.8.1",
     "debug": "^2.2.0",
-    "epub-gen": "0.0.17",
+    "epub-gen": "0.0.16",
     "express": "^4.14.0",
     "express-bunyan-logger": "^1.3.2",
     "express-promise": "^0.4.0",
