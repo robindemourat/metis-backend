@@ -49,7 +49,12 @@ export default function montageToTweet (montage, composition, assets) {
               uri: abstractImageUri
           }] : [];
   if (attached_assets) {
-    attached_assets.forEach(citation => {
+    // limit to first 4 medias (limit of twitter)
+    const limit = media.length ? 4 - media.length : 4;
+    /**
+     * @todo it should be explicited somewhere/at some point in ui that twitter accepts max 4 images
+     */
+    attached_assets.slice(0, limit).forEach(citation => {
       const {image_asset_id} = citation;
       /**
        * @todo investigate possible security issue

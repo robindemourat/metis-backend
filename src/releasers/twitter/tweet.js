@@ -30,10 +30,12 @@ export default function tweet(contents, params) {
         // connect to api
         const client = new T(params);
 
+
         // tweet with media attachment
         if (contents.media) {
           const mediaIds = [];
-          const toResolve = contents.media.map(media =>
+          const toResolve = contents.media
+          .map(media =>
             new Promise((reso, rej) => {
               // -> we use the base64 uri provided if any
               if (media.type === 'image') {
