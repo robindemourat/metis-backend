@@ -20,7 +20,7 @@ module.exports = {
   smtpService: "Gmail",
   smtpEmail: "mlkjmlkj.mlk@gmail.com",
   smtpPassword: "xxxxxxxx",
-  mailingHubEmail: "my-diffusion-mail@gmail.com",
+  mailingHubEmail: "my-diffusion-list@gmail.com",
 
   secret: "patéencroute",
 
