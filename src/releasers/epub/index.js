@@ -24,11 +24,14 @@ export default function publish(data, diffusion, mode = 'static') {
     mountLocalAssets(data.assets)
     .then(fn => {
       getAssetUri = asset => {
-        if (asset.mimetype.indexOf('image') > -1) {
-          const path = fn(asset);
-          const image = readFileSync(path, 'base64');
-          return `data:${asset.mimetype};base64,${image}`;
-        } else return fn(asset);
+        // if (asset.mimetype.indexOf('image') > -1) {
+        //   const path = fn(asset);
+        //   const image = readFileSync(path, 'base64');
+        //   return `data:${asset.mimetype};base64,${image}`;
+        // } else {
+        // console.log(fn(asset))
+        return 'file://' + fn(asset);
+        // }
       };
       return fetchCitationData();
     })
