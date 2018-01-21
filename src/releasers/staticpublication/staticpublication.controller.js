@@ -15,6 +15,7 @@ export const release = (diffusion) => {
       // register all release operations to perform
       .then(data => {
         const targets = diffusion.parameters.targets;
+
         const operations = targets.map(targetId => {
           switch(targetId) {
 
