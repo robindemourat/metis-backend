@@ -1,3 +1,5 @@
+/* eslint promise/param-names : 0 */
+
 import {dal as compositionDal} from '../components/compositions';
 import {dal as resourceDal} from '../components/resources';
 import {dal as assetDal} from '../components/assets';
@@ -115,7 +117,6 @@ export const fetchMontageDependencies = (montage) => {
 
                 return assetDal.getAsset({id})
                         .then(asset => {
-                          const ext = asset.filename.split('.').pop();
                           // fetch raw data for text assets
                           if (asset.mimetype.indexOf('text') === 0) {
                             return assetDal.getAssetAttachment({
@@ -127,11 +128,11 @@ export const fetchMontageDependencies = (montage) => {
                                 ...asset,
                                 rawData: attachment.data.toString()
                               });
-                            })
+                            });
                           }
                           return reso(asset);
                         })
-                        .catch(rej)
+                        .catch(rej);
               })
             );
 

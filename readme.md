@@ -21,6 +21,9 @@ cp config/config.dev.sample.js config/config.dev.js
 # setup prod config
 cp config/config.prod.sample.js config/config.prod.js
 # ... fill with your specific prod config
+
+# setup admin user in dev mode
+npm run populate-db:dev
 ```
 
 ## Setup couchdb in development
