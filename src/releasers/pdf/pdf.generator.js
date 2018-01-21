@@ -22,22 +22,29 @@ export default function generatePdf ({
 }, onFileGenerated) {
   return new Promise((resolve, reject) => {
     const str = ReactDOMServer.renderToStaticMarkup(
-      <TranslationsProvider>
-        <style>
-          {styles}
-        </style>
-        <Component
-          {...props}
-          renderingMode="pdf"
-          getAssetUri={getAssetUri}
-          citationStyle={citationStyle}
-          citationLocale={citationLocale}
-          Link={PdfLink}
-          NoteContentPointer={PdfNoteContentPointer}
-          NotePointerPointer={PdfNotePointerPointer}
-          Link={PdfLink}
-        />
-      </TranslationsProvider>
+      <html>
+        <head>
+          <style>
+            {styles}
+          </style>
+        </head>
+        <body>
+          <TranslationsProvider>
+
+            <Component
+              {...props}
+              renderingMode="pdf"
+              getAssetUri={getAssetUri}
+              citationStyle={citationStyle}
+              citationLocale={citationLocale}
+              Link={PdfLink}
+              NoteContentPointer={PdfNoteContentPointer}
+              NotePointerPointer={PdfNotePointerPointer}
+              Link={PdfLink}
+            />
+          </TranslationsProvider>
+        </body>
+      </html>
     );
 
 

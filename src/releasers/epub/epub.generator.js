@@ -11,6 +11,7 @@ import EpubNoteContentPointer from 'plurishing-shared/dist/components/views/stat
 import EpubNotePointerPointer from 'plurishing-shared/dist/components/views/static/EpubNotePointerPointer';
 import EpubLink from 'plurishing-shared/dist/components/views/static/EpubLink';
 import StandaloneCover from 'plurishing-shared/dist/components/views/static/StandaloneCover';
+import Colophon from 'plurishing-shared/dist/components/views/static/Colophon';
 // import Toc from 'plurishing-shared/dist/components/views/static/Toc';
 
 import {TranslationsProvider} from '../../utils/react-components';/* eslint no-unused-vars : 0 */
@@ -128,6 +129,14 @@ export default function generateEpub ({
     //   </TranslationsProvider>
     // );
 
+    const colophonHTML = ReactDOMServer.renderToStaticMarkup(
+      <TranslationsProvider>
+          <Colophon
+              contents={montage.data.colophon}
+          />
+      </TranslationsProvider>
+    );
+
 
     html2img(coverHTML, coverFilePath, err => {
       if (err) {
@@ -156,7 +165,12 @@ export default function generateEpub ({
                   getAssetUri,
                   index
                 }))
-                .filter(comp => comp)
+                .filter(comp => comp),
+              {
+                title: 'Colophon',
+                data: colophonHTML
+                // excludeFromToc: true
+              }
           ],
           css
         };

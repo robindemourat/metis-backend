@@ -18,7 +18,7 @@ var _promise2 = _interopRequireDefault(_promise);
 
 var cov_kdrnqpj18 = function () {
   var path = '/Users/rawbin/Documents/Projets/collaborations/ensad-publishing/prototype/plurishing-backend/src/releasers/pdf/pdf.generator.js',
-      hash = '6abd6740d3541b5035f5eea5d62aa94fd0ca41fa',
+      hash = 'dfb8304ddfef7b18a53951d607753180daef8b93',
       global = new Function('return this')(),
       gcv = '__coverage__',
       coverageData = {
@@ -30,7 +30,7 @@ var cov_kdrnqpj18 = function () {
           column: 2
         },
         end: {
-          line: 61,
+          line: 68,
           column: 5
         }
       },
@@ -40,87 +40,87 @@ var cov_kdrnqpj18 = function () {
           column: 16
         },
         end: {
-          line: 41,
+          line: 48,
           column: 5
         }
       },
       '2': {
         start: {
-          line: 44,
+          line: 51,
           column: 15
         },
         end: {
-          line: 44,
+          line: 51,
           column: 27
         }
       },
       '3': {
         start: {
-          line: 45,
+          line: 52,
           column: 21
         },
         end: {
-          line: 45,
+          line: 52,
           column: 48
         }
       },
       '4': {
         start: {
-          line: 46,
+          line: 53,
           column: 20
         },
         end: {
-          line: 46,
+          line: 53,
           column: 48
         }
       },
       '5': {
         start: {
-          line: 47,
+          line: 54,
           column: 4
         },
         end: {
-          line: 60,
+          line: 67,
           column: 21
         }
       },
       '6': {
         start: {
-          line: 49,
+          line: 56,
           column: 8
         },
         end: {
-          line: 52,
+          line: 59,
           column: 21
         }
       },
       '7': {
         start: {
-          line: 55,
+          line: 62,
           column: 8
         },
         end: {
-          line: 55,
+          line: 62,
           column: 40
         }
       },
       '8': {
         start: {
-          line: 57,
+          line: 64,
           column: 18
         },
         end: {
-          line: 57,
+          line: 64,
           column: 34
         }
       },
       '9': {
         start: {
-          line: 58,
+          line: 65,
           column: 18
         },
         end: {
-          line: 58,
+          line: 65,
           column: 33
         }
       }
@@ -144,7 +144,7 @@ var cov_kdrnqpj18 = function () {
             column: 20
           },
           end: {
-            line: 62,
+            line: 69,
             column: 1
           }
         },
@@ -168,7 +168,7 @@ var cov_kdrnqpj18 = function () {
             column: 42
           },
           end: {
-            line: 61,
+            line: 68,
             column: 3
           }
         },
@@ -178,97 +178,97 @@ var cov_kdrnqpj18 = function () {
         name: '(anonymous_2)',
         decl: {
           start: {
-            line: 48,
+            line: 55,
             column: 12
           },
           end: {
-            line: 48,
+            line: 55,
             column: 13
           }
         },
         loc: {
           start: {
-            line: 48,
+            line: 55,
             column: 18
           },
           end: {
-            line: 53,
+            line: 60,
             column: 7
           }
         },
-        line: 48
+        line: 55
       },
       '3': {
         name: '(anonymous_3)',
         decl: {
           start: {
-            line: 54,
+            line: 61,
             column: 12
           },
           end: {
-            line: 54,
+            line: 61,
             column: 13
           }
         },
         loc: {
           start: {
-            line: 54,
+            line: 61,
             column: 18
           },
           end: {
-            line: 56,
+            line: 63,
             column: 7
           }
         },
-        line: 54
+        line: 61
       },
       '4': {
         name: '(anonymous_4)',
         decl: {
           start: {
-            line: 57,
+            line: 64,
             column: 12
           },
           end: {
-            line: 57,
+            line: 64,
             column: 13
           }
         },
         loc: {
           start: {
-            line: 57,
+            line: 64,
             column: 18
           },
           end: {
-            line: 57,
+            line: 64,
             column: 34
           }
         },
-        line: 57
+        line: 64
       },
       '5': {
         name: '(anonymous_5)',
         decl: {
           start: {
-            line: 58,
+            line: 65,
             column: 12
           },
           end: {
-            line: 58,
+            line: 65,
             column: 13
           }
         },
         loc: {
           start: {
-            line: 58,
+            line: 65,
             column: 18
           },
           end: {
-            line: 58,
+            line: 65,
             column: 33
           }
         },
-        line: 58
+        line: 65
       }
     },
     branchMap: {
@@ -386,22 +386,34 @@ function generatePdf(_ref, onFileGenerated) {
     cov_kdrnqpj18.f[1]++;
 
     var str = (cov_kdrnqpj18.s[1]++, _server2.default.renderToStaticMarkup(_react2.default.createElement(
-      _reactComponents.TranslationsProvider,
+      'html',
       null,
       _react2.default.createElement(
-        'style',
+        'head',
         null,
-        styles
+        _react2.default.createElement(
+          'style',
+          null,
+          styles
+        )
       ),
-      _react2.default.createElement(Component, (0, _extends4.default)({}, props, (0, _defineProperty3.default)({
-        renderingMode: 'pdf',
-        getAssetUri: getAssetUri,
-        citationStyle: citationStyle,
-        citationLocale: citationLocale,
-        Link: _PdfLink2.default,
-        NoteContentPointer: _PdfNoteContentPointer2.default,
-        NotePointerPointer: _PdfNotePointerPointer2.default
-      }, 'Link', _PdfLink2.default)))
+      _react2.default.createElement(
+        'body',
+        null,
+        _react2.default.createElement(
+          _reactComponents.TranslationsProvider,
+          null,
+          _react2.default.createElement(Component, (0, _extends4.default)({}, props, (0, _defineProperty3.default)({
+            renderingMode: 'pdf',
+            getAssetUri: getAssetUri,
+            citationStyle: citationStyle,
+            citationLocale: citationLocale,
+            Link: _PdfLink2.default,
+            NoteContentPointer: _PdfNoteContentPointer2.default,
+            NotePointerPointer: _PdfNotePointerPointer2.default
+          }, 'Link', _PdfLink2.default)))
+        )
+      )
     )));
 
     var id = (cov_kdrnqpj18.s[2]++, (0, _uuid.v4)());
