@@ -76,7 +76,7 @@
     "bunyan-debug-stream": "^1.0.8",
     "cors": "^2.8.1",
     "debug": "^2.2.0",
-    "epub-gen": "0.0.16",
+    "epub-gen": "git+https://github.com/robindemourat/epub-gen.git",
     "express": "^4.14.0",
     "express-bunyan-logger": "^1.3.2",
     "express-promise": "^0.4.0",
