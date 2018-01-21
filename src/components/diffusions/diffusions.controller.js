@@ -47,7 +47,7 @@ export const createDiffusion = (req, res) => {
   // normally diffusion should have a 'waiting' status when provided
   const diff = {
     ...req.body,
-    status: 'processing'
+    status: 'waiting'
   };
   let diffId;
   // create the diffusion
@@ -57,8 +57,13 @@ export const createDiffusion = (req, res) => {
     diffId = id;
     return getDiffusionDAL({id});
   })
-  .then(diffusion => res.json(diffusion))
+  .then(diffusion => res.json(diffusion) && Promise.resolve())
   // launch diffusion operations
+  /**
+   * @todo setup a queue system for diffusions processing
+   * @body in real life a queue system should be put in place so that one diffusion at a time is resolved
+   */
+  .then(() => updateDiffusionDAL(diffId, {...diff, status: 'processing'}))
   .then(() => {
     switch(diff.montage_type) {
       case 'micropublication':
@@ -74,7 +79,7 @@ export const createDiffusion = (req, res) => {
   // success
   .then(() => updateDiffusionDAL(diffId, {...diff, status: 'success'}))
   // error
-  .catch(() => updateDiffusionDAL(diffId, {...diff, status: 'error'}));
+  .catch(() => updateDiffusionDAL(diffId, {...diff, status: 'failure'}));
 };
 
 /**

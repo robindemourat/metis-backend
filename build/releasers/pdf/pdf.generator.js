@@ -18,7 +18,7 @@ var _promise2 = _interopRequireDefault(_promise);
 
 var cov_kdrnqpj18 = function () {
   var path = '/Users/rawbin/Documents/Projets/collaborations/ensad-publishing/prototype/plurishing-backend/src/releasers/pdf/pdf.generator.js',
-      hash = 'fd2005abc084483b90f99be9e003410ef6856d02',
+      hash = '6abd6740d3541b5035f5eea5d62aa94fd0ca41fa',
       global = new Function('return this')(),
       gcv = '__coverage__',
       coverageData = {
@@ -30,97 +30,97 @@ var cov_kdrnqpj18 = function () {
           column: 2
         },
         end: {
-          line: 62,
+          line: 61,
           column: 5
         }
       },
       '1': {
         start: {
-          line: 25,
+          line: 24,
           column: 16
         },
         end: {
-          line: 42,
+          line: 41,
           column: 5
         }
       },
       '2': {
         start: {
-          line: 45,
+          line: 44,
           column: 15
         },
         end: {
-          line: 45,
+          line: 44,
           column: 27
         }
       },
       '3': {
         start: {
-          line: 46,
+          line: 45,
           column: 21
         },
         end: {
-          line: 46,
+          line: 45,
           column: 48
         }
       },
       '4': {
         start: {
-          line: 47,
+          line: 46,
           column: 20
         },
         end: {
-          line: 47,
+          line: 46,
           column: 48
         }
       },
       '5': {
         start: {
-          line: 48,
+          line: 47,
           column: 4
         },
         end: {
-          line: 61,
+          line: 60,
           column: 21
         }
       },
       '6': {
         start: {
-          line: 50,
+          line: 49,
           column: 8
         },
         end: {
-          line: 53,
+          line: 52,
           column: 21
         }
       },
       '7': {
         start: {
-          line: 56,
+          line: 55,
           column: 8
         },
         end: {
-          line: 56,
+          line: 55,
           column: 40
         }
       },
       '8': {
         start: {
-          line: 58,
+          line: 57,
           column: 18
         },
         end: {
-          line: 58,
+          line: 57,
           column: 34
         }
       },
       '9': {
         start: {
-          line: 59,
+          line: 58,
           column: 18
         },
         end: {
-          line: 59,
+          line: 58,
           column: 33
         }
       }
@@ -144,7 +144,7 @@ var cov_kdrnqpj18 = function () {
             column: 20
           },
           end: {
-            line: 63,
+            line: 62,
             column: 1
           }
         },
@@ -168,7 +168,7 @@ var cov_kdrnqpj18 = function () {
             column: 42
           },
           end: {
-            line: 62,
+            line: 61,
             column: 3
           }
         },
@@ -178,97 +178,97 @@ var cov_kdrnqpj18 = function () {
         name: '(anonymous_2)',
         decl: {
           start: {
-            line: 49,
+            line: 48,
             column: 12
           },
           end: {
-            line: 49,
+            line: 48,
             column: 13
           }
         },
         loc: {
           start: {
-            line: 49,
+            line: 48,
             column: 18
           },
           end: {
-            line: 54,
+            line: 53,
             column: 7
           }
         },
-        line: 49
+        line: 48
       },
       '3': {
         name: '(anonymous_3)',
         decl: {
           start: {
-            line: 55,
+            line: 54,
             column: 12
           },
           end: {
-            line: 55,
+            line: 54,
             column: 13
           }
         },
         loc: {
           start: {
-            line: 55,
+            line: 54,
             column: 18
           },
           end: {
-            line: 57,
+            line: 56,
             column: 7
           }
         },
-        line: 55
+        line: 54
       },
       '4': {
         name: '(anonymous_4)',
         decl: {
           start: {
-            line: 58,
+            line: 57,
             column: 12
           },
           end: {
-            line: 58,
+            line: 57,
             column: 13
           }
         },
         loc: {
           start: {
-            line: 58,
+            line: 57,
             column: 18
           },
           end: {
-            line: 58,
+            line: 57,
             column: 34
           }
         },
-        line: 58
+        line: 57
       },
       '5': {
         name: '(anonymous_5)',
         decl: {
           start: {
-            line: 59,
+            line: 58,
             column: 12
           },
           end: {
-            line: 59,
+            line: 58,
             column: 13
           }
         },
         loc: {
           start: {
-            line: 59,
+            line: 58,
             column: 18
           },
           end: {
-            line: 59,
+            line: 58,
             column: 33
           }
         },
-        line: 59
+        line: 58
       }
     },
     branchMap: {
@@ -384,7 +384,6 @@ function generatePdf(_ref, onFileGenerated) {
 
   return new _promise2.default(function (resolve, reject) {
     cov_kdrnqpj18.f[1]++;
-
 
     var str = (cov_kdrnqpj18.s[1]++, _server2.default.renderToStaticMarkup(_react2.default.createElement(
       _reactComponents.TranslationsProvider,

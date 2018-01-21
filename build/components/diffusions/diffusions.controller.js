@@ -15,7 +15,7 @@ var _extends3 = _interopRequireDefault(_extends2);
 
 var cov_1pp8drd87p = function () {
   var path = '/Users/rawbin/Documents/Projets/collaborations/ensad-publishing/prototype/plurishing-backend/src/components/diffusions/diffusions.controller.js',
-      hash = '7410fae56d45405165d953229d7d249f78125c55',
+      hash = '5d4ee078e94da61b0e38ca5c993a86ea4dd22ce9',
       global = new Function('return this')(),
       gcv = '__coverage__',
       coverageData = {
@@ -67,7 +67,7 @@ var cov_1pp8drd87p = function () {
           column: 31
         },
         end: {
-          line: 78,
+          line: 83,
           column: 1
         }
       },
@@ -87,8 +87,8 @@ var cov_1pp8drd87p = function () {
           column: 2
         },
         end: {
-          line: 77,
-          column: 71
+          line: 82,
+          column: 73
         }
       },
       '7': {
@@ -118,136 +118,146 @@ var cov_1pp8drd87p = function () {
         },
         end: {
           line: 60,
-          column: 40
+          column: 61
         }
       },
       '10': {
         start: {
-          line: 63,
-          column: 4
+          line: 66,
+          column: 14
         },
         end: {
-          line: 72,
-          column: 5
+          line: 66,
+          column: 73
         }
       },
       '11': {
         start: {
-          line: 65,
-          column: 8
+          line: 68,
+          column: 4
         },
         end: {
-          line: 65,
-          column: 74
+          line: 77,
+          column: 5
         }
       },
       '12': {
         start: {
-          line: 67,
+          line: 70,
           column: 8
         },
         end: {
-          line: 67,
-          column: 75
+          line: 70,
+          column: 74
         }
       },
       '13': {
         start: {
-          line: 69,
+          line: 72,
           column: 8
         },
         end: {
-          line: 69,
-          column: 76
+          line: 72,
+          column: 75
         }
       },
       '14': {
         start: {
-          line: 71,
+          line: 74,
           column: 8
         },
         end: {
-          line: 71,
-          column: 33
+          line: 74,
+          column: 76
         }
       },
       '15': {
         start: {
-          line: 75,
-          column: 14
+          line: 76,
+          column: 8
         },
         end: {
-          line: 75,
-          column: 70
+          line: 76,
+          column: 33
         }
       },
       '16': {
         start: {
-          line: 77,
-          column: 15
+          line: 80,
+          column: 14
         },
         end: {
-          line: 77,
-          column: 69
+          line: 80,
+          column: 70
         }
       },
       '17': {
         start: {
-          line: 85,
-          column: 31
+          line: 82,
+          column: 15
         },
         end: {
-          line: 95,
-          column: 3
+          line: 82,
+          column: 71
         }
       },
       '18': {
         start: {
-          line: 86,
-          column: 2
+          line: 90,
+          column: 31
         },
         end: {
-          line: 95,
+          line: 100,
           column: 3
         }
       },
       '19': {
         start: {
-          line: 93,
-          column: 20
+          line: 91,
+          column: 2
         },
         end: {
-          line: 93,
-          column: 41
+          line: 100,
+          column: 3
         }
       },
       '20': {
         start: {
-          line: 94,
-          column: 23
+          line: 98,
+          column: 20
         },
         end: {
-          line: 94,
-          column: 42
+          line: 98,
+          column: 41
         }
       },
       '21': {
         start: {
-          line: 102,
-          column: 31
+          line: 99,
+          column: 23
         },
         end: {
-          line: 103,
-          column: 52
+          line: 99,
+          column: 42
         }
       },
       '22': {
         start: {
-          line: 103,
+          line: 107,
+          column: 31
+        },
+        end: {
+          line: 108,
+          column: 52
+        }
+      },
+      '23': {
+        start: {
+          line: 108,
           column: 2
         },
         end: {
-          line: 103,
+          line: 108,
           column: 52
         }
       }
@@ -319,7 +329,7 @@ var cov_1pp8drd87p = function () {
             column: 45
           },
           end: {
-            line: 78,
+            line: 83,
             column: 1
           }
         },
@@ -368,7 +378,7 @@ var cov_1pp8drd87p = function () {
           },
           end: {
             line: 60,
-            column: 40
+            column: 61
           }
         },
         line: 60
@@ -377,222 +387,279 @@ var cov_1pp8drd87p = function () {
         name: '(anonymous_5)',
         decl: {
           start: {
-            line: 62,
+            line: 66,
             column: 8
           },
           end: {
-            line: 62,
+            line: 66,
             column: 9
           }
         },
         loc: {
           start: {
-            line: 62,
+            line: 66,
             column: 14
           },
           end: {
-            line: 73,
-            column: 3
+            line: 66,
+            column: 73
           }
         },
-        line: 62
+        line: 66
       },
       '6': {
         name: '(anonymous_6)',
         decl: {
           start: {
-            line: 75,
+            line: 67,
             column: 8
           },
           end: {
-            line: 75,
+            line: 67,
             column: 9
           }
         },
         loc: {
           start: {
-            line: 75,
+            line: 67,
             column: 14
           },
           end: {
-            line: 75,
-            column: 70
+            line: 78,
+            column: 3
           }
         },
-        line: 75
+        line: 67
       },
       '7': {
         name: '(anonymous_7)',
         decl: {
           start: {
-            line: 77,
-            column: 9
+            line: 80,
+            column: 8
           },
           end: {
-            line: 77,
-            column: 10
+            line: 80,
+            column: 9
           }
         },
         loc: {
           start: {
-            line: 77,
-            column: 15
+            line: 80,
+            column: 14
           },
           end: {
-            line: 77,
-            column: 69
+            line: 80,
+            column: 70
           }
         },
-        line: 77
+        line: 80
       },
       '8': {
         name: '(anonymous_8)',
         decl: {
           start: {
-            line: 85,
-            column: 31
+            line: 82,
+            column: 9
           },
           end: {
-            line: 85,
-            column: 32
+            line: 82,
+            column: 10
           }
         },
         loc: {
           start: {
-            line: 86,
-            column: 2
+            line: 82,
+            column: 15
           },
           end: {
-            line: 95,
-            column: 3
+            line: 82,
+            column: 71
           }
         },
-        line: 86
+        line: 82
       },
       '9': {
         name: '(anonymous_9)',
         decl: {
           start: {
-            line: 93,
-            column: 10
-          },
-          end: {
-            line: 93,
-            column: 11
-          }
-        },
-        loc: {
-          start: {
-            line: 93,
-            column: 20
-          },
-          end: {
-            line: 93,
-            column: 41
-          }
-        },
-        line: 93
-      },
-      '10': {
-        name: '(anonymous_10)',
-        decl: {
-          start: {
-            line: 94,
-            column: 10
-          },
-          end: {
-            line: 94,
-            column: 11
-          }
-        },
-        loc: {
-          start: {
-            line: 94,
-            column: 23
-          },
-          end: {
-            line: 94,
-            column: 42
-          }
-        },
-        line: 94
-      },
-      '11': {
-        name: '(anonymous_11)',
-        decl: {
-          start: {
-            line: 102,
+            line: 90,
             column: 31
           },
           end: {
-            line: 102,
+            line: 90,
             column: 32
           }
         },
         loc: {
           start: {
-            line: 103,
+            line: 91,
             column: 2
           },
           end: {
-            line: 103,
+            line: 100,
+            column: 3
+          }
+        },
+        line: 91
+      },
+      '10': {
+        name: '(anonymous_10)',
+        decl: {
+          start: {
+            line: 98,
+            column: 10
+          },
+          end: {
+            line: 98,
+            column: 11
+          }
+        },
+        loc: {
+          start: {
+            line: 98,
+            column: 20
+          },
+          end: {
+            line: 98,
+            column: 41
+          }
+        },
+        line: 98
+      },
+      '11': {
+        name: '(anonymous_11)',
+        decl: {
+          start: {
+            line: 99,
+            column: 10
+          },
+          end: {
+            line: 99,
+            column: 11
+          }
+        },
+        loc: {
+          start: {
+            line: 99,
+            column: 23
+          },
+          end: {
+            line: 99,
+            column: 42
+          }
+        },
+        line: 99
+      },
+      '12': {
+        name: '(anonymous_12)',
+        decl: {
+          start: {
+            line: 107,
+            column: 31
+          },
+          end: {
+            line: 107,
+            column: 32
+          }
+        },
+        loc: {
+          start: {
+            line: 108,
+            column: 2
+          },
+          end: {
+            line: 108,
             column: 52
           }
         },
-        line: 103
+        line: 108
       }
     },
     branchMap: {
       '0': {
         loc: {
           start: {
-            line: 63,
+            line: 60,
+            column: 21
+          },
+          end: {
+            line: 60,
+            column: 61
+          }
+        },
+        type: 'binary-expr',
+        locations: [{
+          start: {
+            line: 60,
+            column: 21
+          },
+          end: {
+            line: 60,
+            column: 40
+          }
+        }, {
+          start: {
+            line: 60,
+            column: 44
+          },
+          end: {
+            line: 60,
+            column: 61
+          }
+        }],
+        line: 60
+      },
+      '1': {
+        loc: {
+          start: {
+            line: 68,
             column: 4
           },
           end: {
-            line: 72,
+            line: 77,
             column: 5
           }
         },
         type: 'switch',
         locations: [{
           start: {
-            line: 64,
+            line: 69,
             column: 6
           },
           end: {
-            line: 65,
+            line: 70,
             column: 74
           }
         }, {
           start: {
-            line: 66,
+            line: 71,
             column: 6
           },
           end: {
-            line: 67,
+            line: 72,
             column: 75
           }
         }, {
           start: {
-            line: 68,
+            line: 73,
             column: 6
           },
           end: {
-            line: 69,
+            line: 74,
             column: 76
           }
         }, {
           start: {
-            line: 70,
+            line: 75,
             column: 6
           },
           end: {
-            line: 71,
+            line: 76,
             column: 33
           }
         }],
-        line: 63
+        line: 68
       }
     },
     s: {
@@ -618,7 +685,8 @@ var cov_1pp8drd87p = function () {
       '19': 0,
       '20': 0,
       '21': 0,
-      '22': 0
+      '22': 0,
+      '23': 0
     },
     f: {
       '0': 0,
@@ -632,10 +700,12 @@ var cov_1pp8drd87p = function () {
       '8': 0,
       '9': 0,
       '10': 0,
-      '11': 0
+      '11': 0,
+      '12': 0
     },
     b: {
-      '0': [0, 0, 0, 0]
+      '0': [0, 0],
+      '1': [0, 0, 0, 0]
     },
     _coverageSchema: '332fd63041d2c1bcb487cc26dd0d5f7d97098a6c'
   },
@@ -701,7 +771,7 @@ var createDiffusion = exports.createDiffusion = function createDiffusion(req, re
 
   // normally diffusion should have a 'waiting' status when provided
   var diff = (cov_1pp8drd87p.s[5]++, (0, _extends3.default)({}, req.body, {
-    status: 'processing'
+    status: 'waiting'
   }));
   var diffId = void 0;
   // create the diffusion
@@ -719,47 +789,55 @@ var createDiffusion = exports.createDiffusion = function createDiffusion(req, re
   }).then(function (diffusion) {
     cov_1pp8drd87p.f[4]++;
     cov_1pp8drd87p.s[9]++;
-    return res.json(diffusion);
+    return (cov_1pp8drd87p.b[0][0]++, res.json(diffusion)) && (cov_1pp8drd87p.b[0][1]++, _promise2.default.resolve());
   })
   // launch diffusion operations
+  /**
+   * @todo setup a queue system for diffusions processing
+   * @body in real life a queue system should be put in place so that one diffusion at a time is resolved
+   */
   .then(function () {
     cov_1pp8drd87p.f[5]++;
     cov_1pp8drd87p.s[10]++;
+    return (0, _diffusions.updateDiffusion)(diffId, (0, _extends3.default)({}, diff, { status: 'processing' }));
+  }).then(function () {
+    cov_1pp8drd87p.f[6]++;
+    cov_1pp8drd87p.s[11]++;
 
     switch (diff.montage_type) {
       case 'micropublication':
-        cov_1pp8drd87p.b[0][0]++;
-        cov_1pp8drd87p.s[11]++;
+        cov_1pp8drd87p.b[1][0]++;
+        cov_1pp8drd87p.s[12]++;
 
         return _micropublication.controller.release((0, _extends3.default)({}, diff, { _id: diffId }));
       case 'static':
-        cov_1pp8drd87p.b[0][1]++;
-        cov_1pp8drd87p.s[12]++;
+        cov_1pp8drd87p.b[1][1]++;
+        cov_1pp8drd87p.s[13]++;
 
         return _staticpublication.controller.release((0, _extends3.default)({}, diff, { _id: diffId }));
       case 'dynamic':
-        cov_1pp8drd87p.b[0][2]++;
-        cov_1pp8drd87p.s[13]++;
+        cov_1pp8drd87p.b[1][2]++;
+        cov_1pp8drd87p.s[14]++;
 
         return _dynamicpublication.controller.release((0, _extends3.default)({}, diff, { _id: diffId }));
       default:
-        cov_1pp8drd87p.b[0][3]++;
-        cov_1pp8drd87p.s[14]++;
+        cov_1pp8drd87p.b[1][3]++;
+        cov_1pp8drd87p.s[15]++;
 
         return _promise2.default.resolve();
     }
   })
   // success
   .then(function () {
-    cov_1pp8drd87p.f[6]++;
-    cov_1pp8drd87p.s[15]++;
+    cov_1pp8drd87p.f[7]++;
+    cov_1pp8drd87p.s[16]++;
     return (0, _diffusions.updateDiffusion)(diffId, (0, _extends3.default)({}, diff, { status: 'success' }));
   })
   // error
   .catch(function () {
-    cov_1pp8drd87p.f[7]++;
-    cov_1pp8drd87p.s[16]++;
-    return (0, _diffusions.updateDiffusion)(diffId, (0, _extends3.default)({}, diff, { status: 'error' }));
+    cov_1pp8drd87p.f[8]++;
+    cov_1pp8drd87p.s[17]++;
+    return (0, _diffusions.updateDiffusion)(diffId, (0, _extends3.default)({}, diff, { status: 'failure' }));
   });
 };
 
@@ -768,22 +846,22 @@ var createDiffusion = exports.createDiffusion = function createDiffusion(req, re
  * @param {object} req - the request of query
  * @param {object} res - the resource of query
  */
-cov_1pp8drd87p.s[17]++;
+cov_1pp8drd87p.s[18]++;
 var updateDiffusion = exports.updateDiffusion = function updateDiffusion(req, res) {
-  cov_1pp8drd87p.f[8]++;
-  cov_1pp8drd87p.s[18]++;
+  cov_1pp8drd87p.f[9]++;
+  cov_1pp8drd87p.s[19]++;
   return res.json(
   // update the diffusion
   (0, _diffusions.updateDiffusion)(req.params.id, req.body).
   // return the diffusion
   then(function (_ref2) {
     var id = _ref2.id;
-    cov_1pp8drd87p.f[9]++;
-    cov_1pp8drd87p.s[19]++;
-    return (0, _diffusions.getDiffusion)({ id: id });
-  }).then(function (diffusion) {
     cov_1pp8drd87p.f[10]++;
     cov_1pp8drd87p.s[20]++;
+    return (0, _diffusions.getDiffusion)({ id: id });
+  }).then(function (diffusion) {
+    cov_1pp8drd87p.f[11]++;
+    cov_1pp8drd87p.s[21]++;
     return res.json(diffusion);
   }));
 };
@@ -793,9 +871,9 @@ var updateDiffusion = exports.updateDiffusion = function updateDiffusion(req, re
  * @param {object} req - the request of query
  * @param {object} res - the resource of query
  */
-cov_1pp8drd87p.s[21]++;
+cov_1pp8drd87p.s[22]++;
 var deleteDiffusion = exports.deleteDiffusion = function deleteDiffusion(req, res) {
-  cov_1pp8drd87p.f[11]++;
-  cov_1pp8drd87p.s[22]++;
+  cov_1pp8drd87p.f[12]++;
+  cov_1pp8drd87p.s[23]++;
   return res.json((0, _diffusions.deleteDiffusion)({ _id: req.params.id }));
 };

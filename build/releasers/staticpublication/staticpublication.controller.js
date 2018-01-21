@@ -11,7 +11,7 @@ var _promise2 = _interopRequireDefault(_promise);
 
 var cov_12klhr1bjw = function () {
   var path = '/Users/rawbin/Documents/Projets/collaborations/ensad-publishing/prototype/plurishing-backend/src/releasers/staticpublication/staticpublication.controller.js',
-      hash = 'f6fa18485e5e3598e59a86cef63156b867400934',
+      hash = 'd454860ab1b17d52b9593a6edb2b7964052e9469',
       global = new Function('return this')(),
       gcv = '__coverage__',
       coverageData = {
@@ -23,7 +23,7 @@ var cov_12klhr1bjw = function () {
           column: 23
         },
         end: {
-          line: 37,
+          line: 38,
           column: 1
         }
       },
@@ -33,7 +33,7 @@ var cov_12klhr1bjw = function () {
           column: 2
         },
         end: {
-          line: 36,
+          line: 37,
           column: 5
         }
       },
@@ -43,7 +43,7 @@ var cov_12klhr1bjw = function () {
           column: 4
         },
         end: {
-          line: 35,
+          line: 36,
           column: 21
         }
       },
@@ -69,61 +69,61 @@ var cov_12klhr1bjw = function () {
       },
       '5': {
         start: {
-          line: 18,
+          line: 19,
           column: 27
         },
         end: {
-          line: 30,
+          line: 31,
           column: 10
         }
       },
       '6': {
         start: {
-          line: 19,
+          line: 20,
           column: 10
         },
         end: {
-          line: 29,
+          line: 30,
           column: 11
         }
       },
       '7': {
         start: {
-          line: 22,
+          line: 23,
           column: 14
         },
         end: {
-          line: 22,
+          line: 23,
           column: 42
         }
       },
       '8': {
         start: {
-          line: 25,
+          line: 26,
           column: 14
         },
         end: {
-          line: 25,
+          line: 26,
           column: 53
         }
       },
       '9': {
         start: {
-          line: 28,
+          line: 29,
           column: 14
         },
         end: {
-          line: 28,
+          line: 29,
           column: 39
         }
       },
       '10': {
         start: {
-          line: 32,
+          line: 33,
           column: 8
         },
         end: {
-          line: 32,
+          line: 33,
           column: 39
         }
       }
@@ -147,7 +147,7 @@ var cov_12klhr1bjw = function () {
             column: 38
           },
           end: {
-            line: 37,
+            line: 38,
             column: 1
           }
         },
@@ -171,7 +171,7 @@ var cov_12klhr1bjw = function () {
             column: 43
           },
           end: {
-            line: 36,
+            line: 37,
             column: 3
           }
         },
@@ -219,7 +219,7 @@ var cov_12klhr1bjw = function () {
             column: 20
           },
           end: {
-            line: 33,
+            line: 34,
             column: 7
           }
         },
@@ -229,69 +229,69 @@ var cov_12klhr1bjw = function () {
         name: '(anonymous_4)',
         decl: {
           start: {
-            line: 18,
+            line: 19,
             column: 39
           },
           end: {
-            line: 18,
+            line: 19,
             column: 40
           }
         },
         loc: {
           start: {
-            line: 18,
+            line: 19,
             column: 51
           },
           end: {
-            line: 30,
+            line: 31,
             column: 9
           }
         },
-        line: 18
+        line: 19
       }
     },
     branchMap: {
       '0': {
         loc: {
           start: {
-            line: 19,
+            line: 20,
             column: 10
           },
           end: {
-            line: 29,
+            line: 30,
             column: 11
           }
         },
         type: 'switch',
         locations: [{
           start: {
-            line: 21,
+            line: 22,
             column: 12
           },
           end: {
-            line: 22,
+            line: 23,
             column: 42
           }
         }, {
           start: {
-            line: 24,
+            line: 25,
             column: 12
           },
           end: {
-            line: 25,
+            line: 26,
             column: 53
           }
         }, {
           start: {
-            line: 27,
+            line: 28,
             column: 12
           },
           end: {
-            line: 28,
+            line: 29,
             column: 39
           }
         }],
-        line: 19
+        line: 20
       }
     },
     s: {
@@ -365,6 +365,7 @@ var release = exports.release = function release(diffusion) {
       cov_12klhr1bjw.f[3]++;
 
       var targets = (cov_12klhr1bjw.s[4]++, diffusion.parameters.targets);
+
       var operations = (cov_12klhr1bjw.s[5]++, targets.map(function (targetId) {
         cov_12klhr1bjw.f[4]++;
         cov_12klhr1bjw.s[6]++;
