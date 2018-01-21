@@ -110,7 +110,30 @@ export const fetchMontageDependencies = (montage) => {
                 return result.concat(parseData(resource.data)) ;
               }, [])
             .filter(id => id)
-            .map(id => assetDal.getAsset({id}));
+            .map(id =>
+              new Promise((reso, rej) => {
+
+                return assetDal.getAsset({id})
+                        .then(asset => {
+                          const ext = asset.filename.split('.').pop();
+                          // fetch raw data for text assets
+                          if (asset.mimetype.indexOf('text') === 0) {
+                            return assetDal.getAssetAttachment({
+                              id,
+                              filename: asset.filename
+                            })
+                            .then(attachment => {
+                              return reso({
+                                ...asset,
+                                rawData: attachment.data.toString()
+                              });
+                            })
+                          }
+                          return reso(asset);
+                        })
+                        .catch(rej)
+              })
+            );
 
 
             Promise.all(assetsRequirements)
