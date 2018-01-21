@@ -13,6 +13,8 @@ git clone https://github.com/robindemourat/plurishing-backend
 cd plurishing-backend
 # install dependencies
 npm install
+# install precommit dependency
+npm install precommit
 # setup dev config
 cp config/config.dev.sample.js config/config.dev.js
 # ... fill with your specific dev config
