@@ -90,19 +90,32 @@ export const fetchMontageDependencies = (montage) => {
         Promise.all(resourcesRequirements)
           .then(theseResources => {
             resources = theseResources;
-            const assetsRequirements = resources.reduce((result, resource) => {
-              const assetKeys = Object.keys(resource.data).filter(key => key.indexOf('asset_id') > -1);
-              const assetMentions = assetKeys.map(key =>
-                resource.data[key]);/* eslint security/detect-object-injection : 0 */
-              return result.concat(assetMentions || []);
-            }, [])
+            const parseData = data =>
+              Object.keys(data).reduce((result, key) => {
+                  if (key.indexOf('asset_id') > -1) {
+                    return result.concat(data[key]); /* eslint security/detect-object-injection : 0 */
+                  }
+                  return result;
+                }, []);
+
+            // register assets requirement as a list of assets ids
+            const assetsRequirements = resources
+              .reduce((result, resource) => {
+                if (Array.isArray(resource.data)) {
+                  return result.concat(resource.data.reduce((result2, item) => {
+                    return result2.concat(parseData(item));
+                  }, []));
+
+                }
+                return result.concat(parseData(resource.data)) ;
+              }, [])
             .filter(id => id)
             .map(id => assetDal.getAsset({id}));
+
 
             Promise.all(assetsRequirements)
               .then(theseAssets => {
                 assets = theseAssets;
-
                 resolve({
                   montage,
                   compositions: compositions,
