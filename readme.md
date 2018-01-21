@@ -7,6 +7,10 @@ The app is an express app allowing to interact with a `couchdb` database storing
 
 # Installation
 
+You have to install [PrinceXMl](https://www.princexml.com/) bin on your server machine in addition to the node app.
+
+Once you have Prince installed, here is the procedure for the server installation:
+
 ```
 # clone repo
 git clone https://github.com/robindemourat/plurishing-backend
@@ -78,6 +82,12 @@ npm run build
 # deploy to heroku (push and set env variables)
 npm run deploy:heroku
 ```
+
+# Deployment
+
+Please note you have to set a series of env variables in production mode.
+
+
 
 # Application endpoints
 
