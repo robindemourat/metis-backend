@@ -1,5 +1,6 @@
 import React from 'react'; /* eslint no-unused-vars : 0 */
 import ReactDOMServer from 'react-dom/server';
+import PropTypes from 'prop-types';
 import {v4 as generateId} from 'uuid';
 import {writeFile, remove} from 'fs-extra';
 import Epub from 'epub-gen';
@@ -10,6 +11,7 @@ import EpubNoteContentPointer from 'plurishing-shared/dist/components/views/stat
 import EpubNotePointerPointer from 'plurishing-shared/dist/components/views/static/EpubNotePointerPointer';
 import EpubLink from 'plurishing-shared/dist/components/views/static/EpubLink';
 import StandaloneCover from 'plurishing-shared/dist/components/views/static/StandaloneCover';
+// import Toc from 'plurishing-shared/dist/components/views/static/Toc';
 
 import {TranslationsProvider} from '../../utils/react-components';/* eslint no-unused-vars : 0 */
 
@@ -20,13 +22,21 @@ import {resolve as resolvePath} from 'path';
 const tempFolder = resolvePath(`${__dirname}/../../../temp/`);
 
 const buildAuthors = creators =>
-  creators.reduce((total, creator, index) => {
-      let s = total + creator.given + ' ' + creator.family;
-      if (s < index - 1) {
-        s += ', ';
-      }
-      return s;
-    }, '');
+  creators.map(creator => `${creator.given} ${creator.family}`)
+    .join(', ');
+
+
+// class LinkProvider extends React.Component{
+//   static childContextTypes = {
+//     Link: PropTypes.func
+//   }
+//   getChildContext = () => ({
+//     Link: EpubLink,
+//   })
+//   render(){
+//     return this.props.children;
+//   }
+// }
 
 const renderComposition = (parameters, {
   renderingMode,
@@ -62,7 +72,7 @@ const renderComposition = (parameters, {
     );
     return {
         title: composition.metadata.title,
-        author: buildAuthors(composition.metadata.creators), // Optional
+        // author: buildAuthors(composition.metadata.creators), // Optional
         filename: `composition-${index}`,
         data: html
     };
@@ -92,6 +102,7 @@ export default function generateEpub ({
 }, onFileGenerated) {
   return new Promise((resolve, reject) => {
     const montage = props.montage;
+    const compositions= props.compositions;
     const metadata = montage.metadata;
 
     const renderingMode = mode === 'static' ? 'epub-reflowable' : 'epub-fixed';
@@ -105,6 +116,19 @@ export default function generateEpub ({
     const coverHTML = generateCoverHtml(montage, renderingMode, styles);
     const coverFilePath = `${tempFolder}/${generateId()}.jpg`;
 
+    // console.log('will render toc html');
+    // const ToCHtml = ReactDOMServer.renderToStaticMarkup(
+    //   <TranslationsProvider>
+    //       <LinkProvider>
+    //         <Toc
+    //             montage={montage}
+    //             compositions={compositions}
+    //         />
+    //       </LinkProvider>
+    //   </TranslationsProvider>
+    // );
+
+
     html2img(coverHTML, coverFilePath, err => {
       if (err) {
         reject(err);
@@ -113,8 +137,16 @@ export default function generateEpub ({
           title: metadata.title,
           author: buildAuthors(metadata.creators),
           cover: coverFilePath,
+          appendChapterTitles: false,
+          tocTitle: 'Table des matières',
           // publisher: "Macmillan & Co.", // optional
           content: [
+              // custom toc component if needed
+              // {
+              //   title: 'Table des matières',
+              //   excludeFromToc: true,
+              //   data: ToCHtml
+              // },
               ...montage.data.compositions
                 .map((compositionCitation, index) => renderComposition(compositionCitation, {
                   ...props,

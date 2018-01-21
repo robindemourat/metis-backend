@@ -10,8 +10,7 @@ import Component from 'plurishing-shared/dist/components/previews/StaticMontageP
 
 import {
   fetchCitationData,
-  mountLocalAssets,
-  unmountLocalAssets
+  mountLocalAssets
 } from '../../utils/data';
 
 import generatePdf from './pdf.generator';
@@ -63,7 +62,6 @@ export default function publish(data, diffusion) {
           });
       });
     })
-    .then(() => unmountLocalAssets(data.assets))
     .then(resolve)
     .catch(reject);
   });

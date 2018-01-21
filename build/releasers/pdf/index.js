@@ -10,7 +10,7 @@ var _promise2 = _interopRequireDefault(_promise);
 
 var cov_2kf36xu05y = function () {
   var path = '/Users/rawbin/Documents/Projets/collaborations/ensad-publishing/prototype/plurishing-backend/src/releasers/pdf/index.js',
-      hash = '216d0212bfb88c9683a50a35a97ed8f69b5fa59a',
+      hash = '71a1a95203fcb4678f15cc157882ca5a70a4dcbe',
       global = new Function('return this')(),
       gcv = '__coverage__',
       coverageData = {
@@ -18,122 +18,112 @@ var cov_2kf36xu05y = function () {
     statementMap: {
       '0': {
         start: {
-          line: 21,
+          line: 20,
           column: 20
         },
         end: {
-          line: 21,
+          line: 20,
           column: 61
         }
       },
       '1': {
         start: {
-          line: 22,
+          line: 21,
           column: 15
         },
         end: {
-          line: 22,
+          line: 21,
           column: 119
         }
       },
       '2': {
         start: {
-          line: 26,
+          line: 25,
           column: 2
         },
         end: {
-          line: 69,
+          line: 67,
           column: 5
         }
       },
       '3': {
         start: {
-          line: 32,
+          line: 31,
           column: 4
         },
         end: {
-          line: 68,
+          line: 66,
           column: 19
         }
       },
       '4': {
         start: {
-          line: 34,
+          line: 33,
           column: 6
         },
         end: {
-          line: 34,
+          line: 33,
           column: 23
         }
       },
       '5': {
         start: {
-          line: 35,
+          line: 34,
           column: 6
         },
         end: {
-          line: 35,
+          line: 34,
           column: 33
         }
       },
       '6': {
         start: {
-          line: 38,
+          line: 37,
           column: 46
         },
         end: {
-          line: 38,
+          line: 37,
           column: 58
         }
       },
       '7': {
         start: {
-          line: 39,
+          line: 38,
           column: 6
         },
         end: {
-          line: 64,
+          line: 63,
           column: 9
         }
       },
       '8': {
         start: {
-          line: 49,
+          line: 48,
           column: 8
         },
         end: {
-          line: 59,
+          line: 58,
           column: 10
         }
       },
       '9': {
         start: {
-          line: 60,
+          line: 59,
           column: 8
         },
         end: {
-          line: 63,
+          line: 62,
           column: 13
         }
       },
       '10': {
         start: {
-          line: 62,
+          line: 61,
           column: 12
         },
         end: {
-          line: 62,
+          line: 61,
           column: 82
-        }
-      },
-      '11': {
-        start: {
-          line: 66,
-          column: 16
-        },
-        end: {
-          line: 66,
-          column: 47
         }
       }
     },
@@ -142,169 +132,145 @@ var cov_2kf36xu05y = function () {
         name: 'publish',
         decl: {
           start: {
-            line: 25,
+            line: 24,
             column: 24
           },
           end: {
-            line: 25,
+            line: 24,
             column: 31
           }
         },
         loc: {
           start: {
-            line: 25,
+            line: 24,
             column: 49
           },
           end: {
-            line: 70,
+            line: 68,
             column: 1
           }
         },
-        line: 25
+        line: 24
       },
       '1': {
         name: '(anonymous_1)',
         decl: {
           start: {
-            line: 26,
+            line: 25,
             column: 21
           },
           end: {
-            line: 26,
+            line: 25,
             column: 22
           }
         },
         loc: {
           start: {
-            line: 26,
+            line: 25,
             column: 42
           },
           end: {
-            line: 69,
+            line: 67,
             column: 3
           }
         },
-        line: 26
+        line: 25
       },
       '2': {
         name: '(anonymous_2)',
         decl: {
           start: {
-            line: 33,
+            line: 32,
             column: 10
           },
           end: {
-            line: 33,
+            line: 32,
             column: 11
           }
         },
         loc: {
           start: {
-            line: 33,
+            line: 32,
             column: 16
           },
           end: {
-            line: 36,
+            line: 35,
             column: 5
           }
         },
-        line: 33
+        line: 32
       },
       '3': {
         name: '(anonymous_3)',
         decl: {
           start: {
-            line: 37,
+            line: 36,
             column: 10
           },
           end: {
-            line: 37,
+            line: 36,
             column: 11
           }
         },
         loc: {
           start: {
-            line: 37,
+            line: 36,
             column: 26
           },
           end: {
-            line: 65,
+            line: 64,
             column: 5
           }
         },
-        line: 37
+        line: 36
       },
       '4': {
         name: '(anonymous_4)',
         decl: {
           start: {
-            line: 48,
+            line: 47,
             column: 9
           },
           end: {
-            line: 48,
+            line: 47,
             column: 10
           }
         },
         loc: {
           start: {
-            line: 48,
+            line: 47,
             column: 20
           },
           end: {
-            line: 64,
+            line: 63,
             column: 7
           }
         },
-        line: 48
+        line: 47
       },
       '5': {
         name: '(anonymous_5)',
         decl: {
           start: {
-            line: 61,
+            line: 60,
             column: 16
           },
           end: {
-            line: 61,
+            line: 60,
             column: 17
           }
         },
         loc: {
           start: {
-            line: 61,
+            line: 60,
             column: 35
           },
           end: {
-            line: 63,
+            line: 62,
             column: 11
           }
         },
-        line: 61
-      },
-      '6': {
-        name: '(anonymous_6)',
-        decl: {
-          start: {
-            line: 66,
-            column: 10
-          },
-          end: {
-            line: 66,
-            column: 11
-          }
-        },
-        loc: {
-          start: {
-            line: 66,
-            column: 16
-          },
-          end: {
-            line: 66,
-            column: 47
-          }
-        },
-        line: 66
+        line: 60
       }
     },
     branchMap: {},
@@ -319,8 +285,7 @@ var cov_2kf36xu05y = function () {
       '7': 0,
       '8': 0,
       '9': 0,
-      '10': 0,
-      '11': 0
+      '10': 0
     },
     f: {
       '0': 0,
@@ -328,8 +293,7 @@ var cov_2kf36xu05y = function () {
       '2': 0,
       '3': 0,
       '4': 0,
-      '5': 0,
-      '6': 0
+      '5': 0
     },
     b: {},
     _coverageSchema: '332fd63041d2c1bcb487cc26dd0d5f7d97098a6c'
@@ -434,10 +398,6 @@ function publish(data, diffusion) {
           return _deliverables.dal.createDeliverable(deliverable, deliverableData);
         });
       });
-    }).then(function () {
-      cov_2kf36xu05y.f[6]++;
-      cov_2kf36xu05y.s[11]++;
-      return (0, _data.unmountLocalAssets)(data.assets);
     }).then(resolve).catch(reject);
   });
 }

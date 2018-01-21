@@ -7,8 +7,7 @@ import {dal as deliverableDal} from '../../components/deliverables';
 
 import {
   fetchCitationData,
-  mountLocalAssets,
-  unmountLocalAssets
+  mountLocalAssets
 } from '../../utils/data';
 
 const tempDirPath = resolvePath(__dirname + '/../../../temp');
@@ -65,7 +64,6 @@ export default function publish(data, diffusion, mode = 'static') {
           });
       });
     })
-    .then(() => unmountLocalAssets(data.assets))
     .then(resolve)
     .catch(reject);
   });
