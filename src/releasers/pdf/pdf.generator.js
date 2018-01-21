@@ -21,7 +21,6 @@ export default function generatePdf ({
   styles = ''
 }, onFileGenerated) {
   return new Promise((resolve, reject) => {
-
     const str = ReactDOMServer.renderToStaticMarkup(
       <TranslationsProvider>
         <style>
