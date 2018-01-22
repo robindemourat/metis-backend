@@ -1,15 +1,44 @@
 Metis-server
 ===
 
-Metis-server is the main backend application used to run the `metis` experimental plateform for multimodal publishing.
+`metis-server` is the main backend application used to run the `metis` experimental plateform for multimodal publishing.
 
-The app is an express app allowing to interact with a `couchdb` database storing different types of objects relating to the experiment, and also to provide some microservices used by other applications.
+It is an express app allowing to interact with a `couchdb` database storing different types of objects relating to the experiment, and also to provide some microservices used by other applications.
 
 # Installation
 
+## Install prince xml
+
 You have to install [PrinceXMl](https://www.princexml.com/) bin on your server machine in addition to the node app.
 
-Once you have Prince installed, here is the procedure for the server installation:
+## Setup couchdb in development
+
+The app is configured to use [`couchdb`](http://couchdb.apache.org/) technology as database. Please refer to the [installation page](http://docs.couchdb.org/en/1.6.1/install/) of couchdb.
+
+You have then to run a couchdb instance. On a mac os equipped with `brew`, it is done this way :
+
+```bash
+brew services start couchdb
+```
+
+Once this is done, head to [http://localhost:5984/_utils](http://localhost:5984/_utils) to access couchdb futon interface, and create a database called `metis`.
+
+## Setup API credentials
+
+### Setup an SMTP email account access
+
+You will be asked to provide an email address and password to use for sending emails from the platform. Be sure to create a specific email account for this. For now the app has been tested successfully with a `gmail` account, using other services/methods has not been tested.
+
+### Setup a twitter API access
+
+You will be asked to provide twitter API credentials in order to be able to send tweets from the plateforme.
+
+* go to [Twitter applications homepage](https://apps.twitter.com/)
+* click on `create a new app` and fill related form
+* go to your new application page, then to the `Keys and Access Tokens` tab
+* generate consumer key, consumer secret, access token, access token secret. Keep these values for later.
+
+## Clone repo, install dependencies, setup config
 
 ```
 # clone repo
@@ -30,38 +59,28 @@ cp config/config.prod.sample.js config/config.prod.js
 npm run populate-db:dev
 ```
 
-## Setup couchdb in development
-
-The app is configured to use [`couchdb`](http://couchdb.apache.org/) technology as database.
-
-To have the app working, you must install couchdb and run it locally. On a mac, it is done this way :
-
-```
-brew services start couchdb
-```
-
 # Development and usage
 
 ```
 # run in dev mode (dev config, hot reloading)
 npm run dev
 
-# run in prod mod
+# run in prod mod (using pm2)
 npm run start
 
-# monitor processes and error in prod mode (with pm2)
+# monitor processes and error in prod mode (using pm2)
 npm run monitor
 
-# lint code
+# lint code (see package.json .eslintrc for details)
 npm run lint
 
 # lint code while applying autofixes
 npm run lint:fix
 
-# bootstrap admin user (dev mode)
+# bootstrap an admin superuser (dev mode)
 npm run populate-db:dev
 
-# bootstrap admin user (prod mode)
+# bootstrap an admin superuser (prod mode)
 npm run populate-db
 
 # run tests with mocha
@@ -70,10 +89,10 @@ npm run test
 # run tests with mocha and rerun when source is modified
 npm run test:watch
 
-# check test coverage
+# check test coverage (with istanbul/nyc)
 npm run cov
 
-# build automated documentation with esdoc
+# build automated documentation (with esdoc)
 npm run doc
 
 # build code for production (with babel)
@@ -85,17 +104,54 @@ npm run deploy:heroku
 
 # Deployment
 
+As it uses some experimental es6 and es7 features in its source code, code must be transpiled to plain javascript in production mode. This is done with `npm run build`.
+
+## Environment variables
+
 Please note you have to set a series of env variables in production mode.
 
+The list of env variables necessary to run the app in production mode is visible in `config/config.map.js`. Each variable name must be converted to constant notation convention (i.e. `backofficeBaseUri` becomes `BACKOFFICE_BASE_URI`).
+
+Here is the list of env variables that must be set :
+
+```bash
+BACKOFFICE_BASE_URI # uri of the frontend backoffice app
+
+WEBSITE_BUILDER_URI # uri of the backend server responsible of building web montages
+
+SERVER_URI # server intance own uri (used to build links)
+
+MAILING_HUB_EMAIL # target email (e.g. mailing-list email) for sending group emails
+
+SMTP_SERVICE # email service
+
+SMTP_EMAIL # email address
+
+SMTP_PASSWORD # email password
+
+SECRET # application secret, must be identical with the one of the backend server responsible of building web
+
+PORT # port to serve the application to
+
+TWITTER_CONSUMER_KEY # see https://apps.twitter.com/
+
+TWITTER_CONSUMER_SECRET # see https://apps.twitter.com/
+
+TWITTER_ACCESS_TOKEN # see https://apps.twitter.com/
+
+TWITTER_ACCESS_TOKEN_SECRET # see https://apps.twitter.com/
+```
 
 
 # Application endpoints
+
+Here is a brief overview of the various API endpoints provided by the app.
 
 ## Authentification-related routes
 
 ### Signup
 
-###### DESCRIPTION
+As new users must be created first, this routes allows to setup for the first time a new user token.
 
 ###### HTTP REQUEST
 
@@ -103,10 +159,22 @@ Please note you have to set a series of env variables in production mode.
 POST /sign-up
 ```
 
+###### PROTECTION
+
+This route requires to provide a valid normal access token.
+
+###### SUCCESS RESPONSE
+
+```
+{
+  success: true,
+  message: 'Enjoy your token!',
+  user: {}, // user object
+  token: 'xxx' // access token
+}
+```
 
 ### Login
-
-###### DESCRIPTION
 
 ###### HTTP REQUEST
 
@@ -114,9 +182,22 @@ POST /sign-up
 POST /login
 ```
 
-### Password reset
+###### PROTECTION
 
-###### DESCRIPTION
+This route is not protected.
+
+###### SUCCESS RESPONSE
+
+```
+{
+  success: true,
+  message: 'Enjoy your token!',
+  user: {}, // user object
+  token: 'xxx' // access token
+}
+```
+
+### Password reset
 
 ###### HTTP REQUEST
 
@@ -124,11 +205,22 @@ POST /login
 POST /request-password-reset
 ```
 
+###### PROTECTION
+
+This route is not protected.
+
+###### SUCCESS RESPONSE
+
+```
+{
+  success: true,
+  message: 'request sent'
+}
+```
+
 ## Interface to the database documents
 
 ### Get all users
-
-###### DESCRIPTION
 
 ###### HTTP REQUEST
 
@@ -136,9 +228,19 @@ POST /request-password-reset
 GET /api/users/
 ```
 
-### Get a specific user
+###### PROTECTION
 
-###### DESCRIPTION
+This route requires to provide a valid admin access token.
+
+###### SUCCESS RESPONSE
+
+```
+[{
+  // ... each user document
+}]
+```
+
+### Get a specific user
 
 ###### HTTP REQUEST
 
@@ -146,9 +248,23 @@ GET /api/users/
 GET /api/users/:id
 ```
 
-### Create user
+###### PROTECTION
 
-###### DESCRIPTION
+This route requires to provide a valid admin access token or normal (if user asking the change is the same as the target user) access token.
+
+###### SUCCESS RESPONSE
+
+```
+{
+  // ... specific user document
+}
+```
+
+###### PROTECTION
+
+This route requires to provide a valid admin access token or normal (if user asking the change is the same as the target user) access token.
+
+### Create user
 
 ###### HTTP REQUEST
 
@@ -156,9 +272,19 @@ GET /api/users/:id
 POST /api/users/:id
 ```
 
-### Update user
+###### PROTECTION
 
-###### DESCRIPTION
+This route requires to provide a valid admin access token.
+
+###### SUCCESS RESPONSE
+
+```
+[{
+  // ... each user document
+}]
+```
+
+### Update user
 
 ###### HTTP REQUEST
 
@@ -166,9 +292,21 @@ POST /api/users/:id
 PUT /api/users/:id
 ```
 
-### Delete user
+###### PROTECTION
 
-###### DESCRIPTION
+This route requires to provide a valid admin access token or normal (if user asking the change is the same as the target user) access token.
+
+###### SUCCESS RESPONSE
+
+```
+{
+  "ok":true,
+  "id":"b808806f9b9857fbac84c7d16f08b00b",// id of the updated document
+  "rev":"3-dc5222aadab5839766e7fc936ad6edf7"// rev of the updated document
+}
+```
+
+### Delete user
 
 ###### HTTP REQUEST
 
@@ -176,9 +314,21 @@ PUT /api/users/:id
 DELETE /api/users/:id
 ```
 
-### Change password
+###### PROTECTION
 
-###### DESCRIPTION
+This route requires to provide a valid admin access token.
+
+###### SUCCESS RESPONSE
+
+```
+{
+  "ok":true,
+  "id":"b808806f9b9857fbac84c7d16f08a206", // deleted document id
+  "rev":"3-03cb90b46f463ad51b50ef2e78b75436" // deleted document rev
+}
+```
+
+### Change password
 
 ###### HTTP REQUEST
 
@@ -186,11 +336,21 @@ DELETE /api/users/:id
 POST /api/users/change-password
 ```
 
+###### PROTECTION
+
+This route requires to provide a valid normal access token.
+
+###### SUCCESS RESPONSE
+
+```
+{
+  // updated user
+}
+```
+
 ### Assets
 
 ### Get all assets
-
-###### DESCRIPTION
 
 ###### HTTP REQUEST
 
@@ -198,9 +358,19 @@ POST /api/users/change-password
 GET /api/assets/
 ```
 
-### Get specific asset
+###### PROTECTION
 
-###### DESCRIPTION
+This route requires to provide a valid normal access token.
+
+###### SUCCESS RESPONSE
+
+```
+[{
+  // ... each document
+}]
+```
+
+### Get specific asset
 
 ###### HTTP REQUEST
 
@@ -208,9 +378,19 @@ GET /api/assets/
 GET /api/assets/:id
 ```
 
-### Create asset
+###### PROTECTION
 
-###### DESCRIPTION
+This route requires to provide a valid normal access token.
+
+###### SUCCESS RESPONSE
+
+```
+{
+  // ... specific asset document
+}
+```
+
+### Create asset
 
 ###### HTTP REQUEST
 
@@ -218,9 +398,19 @@ GET /api/assets/:id
 POST /api/assets/:id
 ```
 
-### Update asset
+###### SUCCESS RESPONSE
 
-###### DESCRIPTION
+```
+[{
+  // ... updated list of assets
+}]
+```
+
+###### PROTECTION
+
+This route requires to provide a valid normal access token.
+
+### Update asset
 
 ###### HTTP REQUEST
 
@@ -228,9 +418,19 @@ POST /api/assets/:id
 PUT /api/assets/:id
 ```
 
-### Delete asset
+###### PROTECTION
 
-###### DESCRIPTION
+This route requires to provide a valid normal access token.
+
+###### SUCCESS RESPONSE
+
+```
+{
+  // ... updated asset document
+}
+```
+
+### Delete asset
 
 ###### HTTP REQUEST
 
@@ -238,9 +438,21 @@ PUT /api/assets/:id
 DELETE /api/assets/:id
 ```
 
-### Get asset attached file
+###### SUCCESS RESPONSE
 
-###### DESCRIPTION
+```
+{
+  ok: true,
+  id: '',// id of the deleted document
+  rev: '',// rev of the deleted document
+}
+```
+
+###### PROTECTION
+
+This route requires to provide a valid normal access token.
+
+### Get asset attached file
 
 ###### HTTP REQUEST
 
@@ -248,11 +460,19 @@ DELETE /api/assets/:id
 GET /api/assets/:id/:filename
 ```
 
+###### PROTECTION
+
+This route is not protected.
+
+###### SUCCESS RESPONSE
+
+```
+binary data of the asset attachment
+```
+
 ### Resources
 
 ### Get all resources
-
-###### DESCRIPTION
 
 ###### HTTP REQUEST
 
@@ -260,9 +480,19 @@ GET /api/assets/:id/:filename
 GET /api/resources/
 ```
 
-### Get specific resource
+###### PROTECTION
 
-###### DESCRIPTION
+This route requires to provide a valid normal access token.
+
+###### SUCCESS RESPONSE
+
+```
+[{
+  // ... each document
+}]
+```
+
+### Get specific resource
 
 ###### HTTP REQUEST
 
@@ -270,9 +500,19 @@ GET /api/resources/
 GET /api/resources/:id
 ```
 
-### Create resource
+###### PROTECTION
 
-###### DESCRIPTION
+This route requires to provide a valid normal access token.
+
+###### SUCCESS RESPONSE
+
+```
+{
+  // ... specific resource document
+}
+```
+
+### Create resource
 
 ###### HTTP REQUEST
 
@@ -280,9 +520,23 @@ GET /api/resources/:id
 POST /api/resources/:id
 ```
 
-### Update resource
+###### PROTECTION
 
-###### DESCRIPTION
+This route requires to provide a valid normal access token.
+
+###### SUCCESS RESPONSE
+
+```
+{
+  // ... new resource document
+}
+```
+
+###### PROTECTION
+
+This route requires to provide a valid normal access token.
+
+### Update resource
 
 ###### HTTP REQUEST
 
@@ -290,9 +544,19 @@ POST /api/resources/:id
 PUT /api/resources/:id
 ```
 
-### Delete resource
+###### SUCCESS RESPONSE
 
-###### DESCRIPTION
+```
+{
+  // ... updated resource document
+}
+```
+
+###### PROTECTION
+
+This route requires to provide a valid normal access token.
+
+### Delete resource
 
 ###### HTTP REQUEST
 
@@ -300,11 +564,23 @@ PUT /api/resources/:id
 DELETE /api/resources/:id
 ```
 
+###### PROTECTION
+
+This route requires to provide a valid normal access token.
+
+###### SUCCESS RESPONSE
+
+```
+{
+  ok: true,
+  id: '',// id of the deleted document
+  rev: '',// rev of the deleted document
+}
+```
+
 ### Compositions
 
 ### Get all compositions
-
-###### DESCRIPTION
 
 ###### HTTP REQUEST
 
@@ -312,9 +588,19 @@ DELETE /api/resources/:id
 GET /api/compositions/
 ```
 
-### Get a specific composition
+###### PROTECTION
 
-###### DESCRIPTION
+This route requires to provide a valid normal access token.
+
+###### SUCCESS RESPONSE
+
+```
+[{
+  // ... list of all documents
+}]
+```
+
+### Get a specific composition
 
 ###### HTTP REQUEST
 
@@ -322,9 +608,19 @@ GET /api/compositions/
 GET /api/compositions/:id
 ```
 
-### Create composition
+###### PROTECTION
 
-###### DESCRIPTION
+This route requires to provide a valid normal access token.
+
+###### SUCCESS RESPONSE
+
+```
+{
+  // ... specific composition document
+}
+```
+
+### Create composition
 
 ###### HTTP REQUEST
 
@@ -332,9 +628,19 @@ GET /api/compositions/:id
 POST /api/compositions/:id
 ```
 
-### Create composition
+###### PROTECTION
 
-###### DESCRIPTION
+This route requires to provide a valid normal access token.
+
+###### SUCCESS RESPONSE
+
+```
+{
+  // ... new composition document
+}
+```
+
+### Update composition
 
 ###### HTTP REQUEST
 
@@ -342,9 +648,19 @@ POST /api/compositions/:id
 PUT /api/compositions/:id
 ```
 
-### Update composition
+###### PROTECTION
 
-###### DESCRIPTION
+This route requires to provide a valid normal access token.
+
+###### SUCCESS RESPONSE
+
+```
+{
+  // ... updated composition document
+}
+```
+
+### Delete composition
 
 ###### HTTP REQUEST
 
@@ -352,12 +668,23 @@ PUT /api/compositions/:id
 DELETE /api/compositions/:id
 ```
 
+###### PROTECTION
+
+This route requires to provide a valid normal access token.
+
+###### SUCCESS RESPONSE
+
+```
+{
+  ok: true,
+  id: '',// id of the deleted document
+  rev: '',// rev of the deleted document
+}
+```
 
 ### Montages (assemblages of compositions)
 
 ### Get all montages
-
-###### DESCRIPTION
 
 ###### HTTP REQUEST
 
@@ -365,9 +692,19 @@ DELETE /api/compositions/:id
 GET /api/montages/
 ```
 
-### Get specific montage
+###### SUCCESS RESPONSE
 
-###### DESCRIPTION
+```
+[{
+  // ... list of documents
+}]
+```
+
+###### PROTECTION
+
+This route requires to provide a valid normal access token.
+
+### Get specific montage
 
 ###### HTTP REQUEST
 
@@ -375,9 +712,19 @@ GET /api/montages/
 GET /api/montages/:id
 ```
 
-### Create montage
+###### PROTECTION
 
-###### DESCRIPTION
+This route requires to provide a valid normal access token.
+
+###### SUCCESS RESPONSE
+
+```
+{
+  // ... specific montage document
+}
+```
+
+### Create montage
 
 ###### HTTP REQUEST
 
@@ -385,9 +732,19 @@ GET /api/montages/:id
 POST /api/montages/:id
 ```
 
-### Update montage
+###### PROTECTION
 
-###### DESCRIPTION
+This route requires to provide a valid normal access token.
+
+###### SUCCESS RESPONSE
+
+```
+{
+  // ... new montage document
+}
+```
+
+### Update montage
 
 ###### HTTP REQUEST
 
@@ -395,9 +752,19 @@ POST /api/montages/:id
 PUT /api/montages/:id
 ```
 
-### Delete montage
+###### SUCCESS RESPONSE
 
-###### DESCRIPTION
+```
+{
+  // ... updated montage document
+}
+```
+
+###### PROTECTION
+
+This route requires to provide a valid normal access token.
+
+### Delete montage
 
 ###### HTTP REQUEST
 
@@ -405,11 +772,23 @@ PUT /api/montages/:id
 DELETE /api/montages/:id
 ```
 
+###### SUCCESS RESPONSE
+
+```
+{
+  ok: true,
+  id: '',// id of the deleted document
+  rev: '',// rev of the deleted document
+}
+```
+
+###### PROTECTION
+
+This route requires to provide a valid normal access token.
+
 ### Diffusions of montages
 
 ### Get all diffusions
-
-###### DESCRIPTION
 
 ###### HTTP REQUEST
 
@@ -417,9 +796,19 @@ DELETE /api/montages/:id
 GET /api/diffusions/
 ```
 
-### Get a specific diffusion
+###### PROTECTION
 
-###### DESCRIPTION
+This route requires to provide a valid normal access token.
+
+###### SUCCESS RESPONSE
+
+```
+[{
+  // ... list of documents
+}]
+```
+
+### Get a specific diffusion
 
 ###### HTTP REQUEST
 
@@ -427,9 +816,19 @@ GET /api/diffusions/
 GET /api/diffusions/:id
 ```
 
-### Create diffusion
+###### PROTECTION
 
-###### DESCRIPTION
+This route requires to provide a valid normal access token.
+
+###### SUCCESS RESPONSE
+
+```
+{
+  // ... specific diffusion document
+}
+```
+
+### Create diffusion
 
 ###### HTTP REQUEST
 
@@ -437,9 +836,19 @@ GET /api/diffusions/:id
 POST /api/diffusions/:id
 ```
 
-### Update diffusion
+###### PROTECTION
 
-###### DESCRIPTION
+This route requires to provide a valid normal access token.
+
+###### SUCCESS RESPONSE
+
+```
+{
+  // ... new diffusion document
+}
+```
+
+### Update diffusion
 
 ###### HTTP REQUEST
 
@@ -447,9 +856,19 @@ POST /api/diffusions/:id
 PUT /api/diffusions/:id
 ```
 
-### Delete diffusion
+###### SUCCESS RESPONSE
 
-###### DESCRIPTION
+```
+{
+  // ... updated diffusion document
+}
+```
+
+###### PROTECTION
+
+This route requires to provide a valid normal access token.
+
+### Delete diffusion
 
 ###### HTTP REQUEST
 
@@ -457,11 +876,24 @@ PUT /api/diffusions/:id
 DELETE /api/diffusions/:id
 ```
 
+
+###### SUCCESS RESPONSE
+
+```
+{
+  ok: true,
+  id: '',// id of the deleted document
+  rev: '',// rev of the deleted document
+}
+```
+
+###### PROTECTION
+
+This route requires to provide a valid normal access token.
+
 ### Deliverables (static generated files)
 
 ### Get all deliverables
-
-###### DESCRIPTION
 
 ###### HTTP REQUEST
 
@@ -469,9 +901,19 @@ DELETE /api/diffusions/:id
 GET /api/deliverables/
 ```
 
-### Get a specific deliverable
+###### PROTECTION
 
-###### DESCRIPTION
+This route requires to provide a valid normal access token.
+
+###### SUCCESS RESPONSE
+
+```
+[{
+  // ... list of deliverable documents
+}]
+```
+
+### Get a specific deliverable
 
 ###### HTTP REQUEST
 
@@ -479,9 +921,19 @@ GET /api/deliverables/
 GET /api/deliverables/:id
 ```
 
-### Create deliverable
+###### PROTECTION
 
-###### DESCRIPTION
+This route requires to provide a valid normal access token.
+
+###### SUCCESS RESPONSE
+
+```
+{
+  // ... specific deliverable document
+}
+```
+
+### Create deliverable
 
 ###### HTTP REQUEST
 
@@ -489,9 +941,19 @@ GET /api/deliverables/:id
 POST /api/deliverables/:id
 ```
 
-### Update deliverable
+###### PROTECTION
 
-###### DESCRIPTION
+This route requires to provide a valid normal access token.
+
+###### SUCCESS RESPONSE
+
+```
+{
+  // ... new deliverable document
+}
+```
+
+### Update deliverable
 
 ###### HTTP REQUEST
 
@@ -499,9 +961,19 @@ POST /api/deliverables/:id
 PUT /api/deliverables/:id
 ```
 
-### Delete deliverable
+###### SUCCESS RESPONSE
 
-###### DESCRIPTION
+```
+{
+  // ... updated deliverable document
+}
+```
+
+###### PROTECTION
+
+This route requires to provide a valid normal access token.
+
+### Delete deliverable
 
 ###### HTTP REQUEST
 
@@ -509,9 +981,22 @@ PUT /api/deliverables/:id
 DELETE /api/deliverables/:id
 ```
 
-### Get deliverable attachment file
 
-###### DESCRIPTION
+###### SUCCESS RESPONSE
+
+```
+{
+  ok: true,
+  id: '',// id of the deleted document
+  rev: '',// rev of the deleted document
+}
+```
+
+###### PROTECTION
+
+This route requires to provide a valid normal access token.
+
+### Get deliverable attachment file
 
 ###### HTTP REQUEST
 
@@ -519,11 +1004,19 @@ DELETE /api/deliverables/:id
 GET /api/deliverables/:id/:filename
 ```
 
+###### SUCCESS RESPONSE
+
+```
+binary data of the attachment
+```
+
+###### PROTECTION
+
+This route requires to provide a valid normal access token.
+
 ## Microservices
 
 ### Html to Image generator
-
-###### DESCRIPTION
 
 ###### HTTP REQUEST
 
@@ -531,11 +1024,19 @@ GET /api/deliverables/:id/:filename
 POST /services/html2img
 ```
 
+###### PROTECTION
+
+This route requires to provide a valid normal access token.
+
+###### SUCCESS RESPONSE
+
+```
+binary image data
+```
+
 ### Global operations on the database (dump-related)
 
 #### Download zip dump
-
-###### DESCRIPTION
 
 ###### HTTP REQUEST
 
@@ -543,9 +1044,17 @@ POST /services/html2img
 GET /dump/
 ```
 
-#### Reinitialize data with a zip dump
+###### SUCCESS RESPONSE
 
-###### DESCRIPTION
+```
+binary zip data
+```
+
+###### PROTECTION
+
+This route requires to provide a valid normal access token.
+
+#### Reinitialize data with a zip dump
 
 ###### HTTP REQUEST
 
@@ -553,9 +1062,19 @@ GET /dump/
 POST /dump/
 ```
 
-#### Delete all content data
+###### PROTECTION
 
-###### DESCRIPTION
+This route requires to provide a valid normal access token.
+
+###### SUCCESS RESPONSE
+
+```
+{
+  status: 'ok'
+}
+```
+
+#### Delete all content data
 
 ###### HTTP REQUEST
 
@@ -563,7 +1082,57 @@ POST /dump/
 DELETE /dump/
 ```
 
+###### PROTECTION
 
+This route requires to provide a valid normal access token.
+
+###### SUCCESS RESPONSE
+
+```
+{
+  status: 'ok'
+}
+```
+
+### Public data provider
+
+#### Publicly get montage data
+
+###### HTTP REQUEST
+
+```
+POST /services/data-provider/montage/:id
+```
+
+###### PROTECTION
+
+This route is not protected.
+
+###### SUCCESS RESPONSE
+
+```
+{
+  // ... montage data
+}
+```
+
+#### Publicly get asset attachment
+
+###### HTTP REQUEST
+
+```
+POST /services/data-provider/asset/:id
+```
+
+###### PROTECTION
+
+This route is not protected.
+
+###### SUCCESS RESPONSE
+
+```
+binary data of the asset attachment
+```
 
 ## Dependencies
 
