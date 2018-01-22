@@ -1,8 +1,9 @@
 /**
- * Metis-backend
- * =======
- * Asset data access layer
+ * This module provides couchdb database operations managers
+ * for the assets component.
+ * @module metis-backend/components/assets
  */
+
 import {lookup} from 'mime-types';
 
 import db from '../../utils/plugDb';

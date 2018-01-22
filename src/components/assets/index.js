@@ -1,3 +1,8 @@
+/**
+ * This module provides an entrypoint to the assets component of the applications
+ * @module metis-backend/components/assets
+ */
+
 // user-related db views
 export design from './assets.design';
 // view controller

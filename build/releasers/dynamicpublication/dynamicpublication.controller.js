@@ -11,7 +11,7 @@ var _promise2 = _interopRequireDefault(_promise);
 
 var cov_299pylb3r1 = function () {
   var path = '/Users/rawbin/Documents/Projets/collaborations/ensad-publishing/prototype/metis-backend/src/releasers/dynamicpublication/dynamicpublication.controller.js',
-      hash = 'cfe0c3dae4f289298b293de0b17f23ab81b26722',
+      hash = '6c3268821aaee7bf4226da46e0201703a2033577',
       global = new Function('return this')(),
       gcv = '__coverage__',
       coverageData = {
@@ -19,101 +19,101 @@ var cov_299pylb3r1 = function () {
     statementMap: {
       '0': {
         start: {
-          line: 6,
+          line: 12,
           column: 23
         },
         end: {
-          line: 33,
+          line: 39,
           column: 1
         }
       },
       '1': {
         start: {
-          line: 7,
+          line: 13,
           column: 2
         },
         end: {
-          line: 32,
+          line: 38,
           column: 5
         }
       },
       '2': {
         start: {
-          line: 9,
+          line: 15,
           column: 4
         },
         end: {
-          line: 31,
+          line: 37,
           column: 21
         }
       },
       '3': {
         start: {
-          line: 12,
+          line: 18,
           column: 8
         },
         end: {
-          line: 12,
+          line: 18,
           column: 49
         }
       },
       '4': {
         start: {
-          line: 16,
+          line: 22,
           column: 24
         },
         end: {
-          line: 16,
+          line: 22,
           column: 52
         }
       },
       '5': {
         start: {
-          line: 17,
+          line: 23,
           column: 27
         },
         end: {
-          line: 26,
+          line: 32,
           column: 10
         }
       },
       '6': {
         start: {
-          line: 18,
+          line: 24,
           column: 10
         },
         end: {
-          line: 25,
+          line: 31,
           column: 11
         }
       },
       '7': {
         start: {
-          line: 21,
+          line: 27,
           column: 14
         },
         end: {
-          line: 21,
+          line: 27,
           column: 42
         }
       },
       '8': {
         start: {
-          line: 24,
+          line: 30,
           column: 14
         },
         end: {
-          line: 24,
+          line: 30,
           column: 39
         }
       },
       '9': {
         start: {
-          line: 28,
+          line: 34,
           column: 8
         },
         end: {
-          line: 28,
+          line: 34,
           column: 39
         }
       }
@@ -123,156 +123,156 @@ var cov_299pylb3r1 = function () {
         name: '(anonymous_0)',
         decl: {
           start: {
-            line: 6,
+            line: 12,
             column: 23
           },
           end: {
-            line: 6,
+            line: 12,
             column: 24
           }
         },
         loc: {
           start: {
-            line: 6,
+            line: 12,
             column: 38
           },
           end: {
-            line: 33,
+            line: 39,
             column: 1
           }
         },
-        line: 6
+        line: 12
       },
       '1': {
         name: '(anonymous_1)',
         decl: {
           start: {
-            line: 7,
+            line: 13,
             column: 22
           },
           end: {
-            line: 7,
+            line: 13,
             column: 23
           }
         },
         loc: {
           start: {
-            line: 7,
+            line: 13,
             column: 43
           },
           end: {
-            line: 32,
+            line: 38,
             column: 3
           }
         },
-        line: 7
+        line: 13
       },
       '2': {
         name: '(anonymous_2)',
         decl: {
           start: {
-            line: 10,
+            line: 16,
             column: 12
           },
           end: {
-            line: 10,
+            line: 16,
             column: 13
           }
         },
         loc: {
           start: {
-            line: 10,
+            line: 16,
             column: 23
           },
           end: {
-            line: 13,
+            line: 19,
             column: 7
           }
         },
-        line: 10
+        line: 16
       },
       '3': {
         name: '(anonymous_3)',
         decl: {
           start: {
-            line: 15,
+            line: 21,
             column: 12
           },
           end: {
-            line: 15,
+            line: 21,
             column: 13
           }
         },
         loc: {
           start: {
-            line: 15,
+            line: 21,
             column: 20
           },
           end: {
-            line: 29,
+            line: 35,
             column: 7
           }
         },
-        line: 15
+        line: 21
       },
       '4': {
         name: '(anonymous_4)',
         decl: {
           start: {
-            line: 17,
+            line: 23,
             column: 39
           },
           end: {
-            line: 17,
+            line: 23,
             column: 40
           }
         },
         loc: {
           start: {
-            line: 17,
+            line: 23,
             column: 51
           },
           end: {
-            line: 26,
+            line: 32,
             column: 9
           }
         },
-        line: 17
+        line: 23
       }
     },
     branchMap: {
       '0': {
         loc: {
           start: {
-            line: 18,
+            line: 24,
             column: 10
           },
           end: {
-            line: 25,
+            line: 31,
             column: 11
           }
         },
         type: 'switch',
         locations: [{
           start: {
-            line: 20,
+            line: 26,
             column: 12
           },
           end: {
-            line: 21,
+            line: 27,
             column: 42
           }
         }, {
           start: {
-            line: 23,
+            line: 29,
             column: 12
           },
           end: {
-            line: 24,
+            line: 30,
             column: 39
           }
         }],
-        line: 18
+        line: 24
       }
     },
     s: {
@@ -307,7 +307,11 @@ var cov_299pylb3r1 = function () {
 
   coverageData.hash = hash;
   return coverage[path] = coverageData;
-}();
+}(); /**
+      * This module a function for releasing a dynamic publication through
+      * one or several formats/channels
+      * @module metis-backend/releasers/dynamicpublication
+      */
 
 var _montages = require('../../components/montages');
 

@@ -107,9 +107,9 @@ var cov_27gbb8n6e2 = function () {
   coverageData.hash = hash;
   return coverage[path] = coverageData;
 }(); /**
-      * Metis-backend
-      * =======
-      * Deliverable api
+      * This module provides route indexes between uri patterns and controllers
+      * for the deliverables objects.
+      * @module metis-backend/components/deliverables
       */
 
 var _express = require('express');

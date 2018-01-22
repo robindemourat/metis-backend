@@ -1,8 +1,9 @@
 /**
- * Metis-backend
- * =======
- * Config utils
+ * This module exports a function providing the proper configuration object
+ * regarding process mode (production or development)
+ * @module metis-backend/utils/config
  */
+
 import configMap from '../../config/config.map';
 
 const constantify = str => str.replace(/([A-Z])/g, '_$1').toUpperCase();

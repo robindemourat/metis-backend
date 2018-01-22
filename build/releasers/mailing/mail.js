@@ -10,7 +10,7 @@ var _promise2 = _interopRequireDefault(_promise);
 
 var cov_21bj8dgq32 = function () {
   var path = '/Users/rawbin/Documents/Projets/collaborations/ensad-publishing/prototype/metis-backend/src/releasers/mailing/mail.js',
-      hash = '0bdb461d85823299f8bf623dfaf86f1ee6f59388',
+      hash = '3e27b85e4876edf2110cdd40e89c48ce421916dc',
       global = new Function('return this')(),
       gcv = '__coverage__',
       coverageData = {
@@ -18,111 +18,111 @@ var cov_21bj8dgq32 = function () {
     statementMap: {
       '0': {
         start: {
-          line: 8,
+          line: 16,
           column: 12
         },
         end: {
-          line: 8,
+          line: 16,
           column: 21
         }
       },
       '1': {
         start: {
-          line: 16,
+          line: 24,
           column: 4
         },
         end: {
-          line: 53,
+          line: 61,
           column: 7
         }
       },
       '2': {
         start: {
-          line: 18,
+          line: 26,
           column: 35
         },
         end: {
-          line: 18,
+          line: 26,
           column: 77
         }
       },
       '3': {
         start: {
-          line: 19,
+          line: 27,
           column: 8
         },
         end: {
-          line: 21,
+          line: 29,
           column: 9
         }
       },
       '4': {
         start: {
-          line: 20,
+          line: 28,
           column: 10
         },
         end: {
-          line: 20,
+          line: 28,
           column: 36
         }
       },
       '5': {
         start: {
-          line: 24,
+          line: 32,
           column: 33
         },
         end: {
-          line: 24,
+          line: 32,
           column: 67
         }
       },
       '6': {
         start: {
-          line: 25,
+          line: 33,
           column: 8
         },
         end: {
-          line: 27,
+          line: 35,
           column: 9
         }
       },
       '7': {
         start: {
-          line: 26,
+          line: 34,
           column: 10
         },
         end: {
-          line: 26,
+          line: 34,
           column: 36
         }
       },
       '8': {
         start: {
-          line: 33,
+          line: 41,
           column: 12
         },
         end: {
-          line: 33,
+          line: 41,
           column: 20
         }
       },
       '9': {
         start: {
-          line: 39,
+          line: 47,
           column: 12
         },
         end: {
-          line: 39,
+          line: 47,
           column: 18
         }
       },
       '10': {
         start: {
-          line: 41,
+          line: 49,
           column: 8
         },
         end: {
-          line: 52,
+          line: 60,
           column: 23
         }
       }
@@ -132,117 +132,117 @@ var cov_21bj8dgq32 = function () {
         name: 'mail',
         decl: {
           start: {
-            line: 15,
+            line: 23,
             column: 24
           },
           end: {
-            line: 15,
+            line: 23,
             column: 28
           }
         },
         loc: {
           start: {
-            line: 15,
+            line: 23,
             column: 47
           },
           end: {
-            line: 54,
+            line: 62,
             column: 1
           }
         },
-        line: 15
+        line: 23
       },
       '1': {
         name: '(anonymous_1)',
         decl: {
           start: {
-            line: 16,
+            line: 24,
             column: 23
           },
           end: {
-            line: 16,
+            line: 24,
             column: 24
           }
         },
         loc: {
           start: {
-            line: 16,
+            line: 24,
             column: 44
           },
           end: {
-            line: 53,
+            line: 61,
             column: 5
           }
         },
-        line: 16
+        line: 24
       }
     },
     branchMap: {
       '0': {
         loc: {
           start: {
-            line: 19,
+            line: 27,
             column: 8
           },
           end: {
-            line: 21,
+            line: 29,
             column: 9
           }
         },
         type: 'if',
         locations: [{
           start: {
-            line: 19,
+            line: 27,
             column: 8
           },
           end: {
-            line: 21,
+            line: 29,
             column: 9
           }
         }, {
           start: {
-            line: 19,
+            line: 27,
             column: 8
           },
           end: {
-            line: 21,
+            line: 29,
             column: 9
           }
         }],
-        line: 19
+        line: 27
       },
       '1': {
         loc: {
           start: {
-            line: 25,
+            line: 33,
             column: 8
           },
           end: {
-            line: 27,
+            line: 35,
             column: 9
           }
         },
         type: 'if',
         locations: [{
           start: {
-            line: 25,
+            line: 33,
             column: 8
           },
           end: {
-            line: 27,
+            line: 35,
             column: 9
           }
         }, {
           start: {
-            line: 25,
+            line: 33,
             column: 8
           },
           end: {
-            line: 27,
+            line: 35,
             column: 9
           }
         }],
-        line: 25
+        line: 33
       }
     },
     s: {
@@ -276,7 +276,15 @@ var cov_21bj8dgq32 = function () {
 
   coverageData.hash = hash;
   return coverage[path] = coverageData;
-}();
+}(); /**
+      * This module provides a function that sends a mail formatted from a micropublication montage.
+      * @module metis-backend/releasers/mailing
+      */
+
+/**
+ * @todo reformat mailing releaser to simplify it and directly use the sendEmail util in controller
+ */
+
 
 exports.default = mail;
 

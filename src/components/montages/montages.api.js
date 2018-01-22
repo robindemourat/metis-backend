@@ -1,7 +1,7 @@
 /**
- * Metis-backend
- * =======
- * Montage api
+ * This module provides route indexes between uri patterns and controllers
+ * for the montages objects.
+ * @module metis-backend/components/montages
  */
 
 import express from 'express';

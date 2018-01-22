@@ -6,7 +6,7 @@ Object.defineProperty(exports, "__esModule", {
 
 var cov_165j2qnbw3 = function () {
   var path = '/Users/rawbin/Documents/Projets/collaborations/ensad-publishing/prototype/metis-backend/src/releasers/mailing/montageToMail.js',
-      hash = 'd54555d1b7945f6916cb9275887d5a3b86ef8b2c',
+      hash = 'f265864851897da54ddf8248229426e9fcc26bed',
       global = new Function('return this')(),
       gcv = '__coverage__',
       coverageData = {
@@ -14,61 +14,61 @@ var cov_165j2qnbw3 = function () {
     statementMap: {
       '0': {
         start: {
-          line: 8,
+          line: 13,
           column: 19
         },
         end: {
-          line: 8,
+          line: 13,
           column: 102
         }
       },
       '1': {
         start: {
-          line: 8,
+          line: 13,
           column: 26
         },
         end: {
-          line: 8,
+          line: 13,
           column: 101
         }
       },
       '2': {
         start: {
-          line: 9,
+          line: 14,
           column: 14
         },
         end: {
-          line: 9,
+          line: 14,
           column: 110
         }
       },
       '3': {
         start: {
-          line: 10,
+          line: 15,
           column: 2
         },
         end: {
-          line: 10,
+          line: 15,
           column: 43
         }
       },
       '4': {
         start: {
-          line: 11,
+          line: 16,
           column: 22
         },
         end: {
-          line: 11,
+          line: 16,
           column: 80
         }
       },
       '5': {
         start: {
-          line: 12,
+          line: 17,
           column: 2
         },
         end: {
-          line: 21,
+          line: 26,
           column: 4
         }
       }
@@ -78,159 +78,159 @@ var cov_165j2qnbw3 = function () {
         name: 'montageToMail',
         decl: {
           start: {
-            line: 7,
+            line: 12,
             column: 24
           },
           end: {
-            line: 7,
+            line: 12,
             column: 37
           }
         },
         loc: {
           start: {
-            line: 7,
+            line: 12,
             column: 101
           },
           end: {
-            line: 22,
+            line: 27,
             column: 1
           }
         },
-        line: 7
+        line: 12
       },
       '1': {
         name: '(anonymous_1)',
         decl: {
           start: {
-            line: 8,
+            line: 13,
             column: 19
           },
           end: {
-            line: 8,
+            line: 13,
             column: 20
           }
         },
         loc: {
           start: {
-            line: 8,
+            line: 13,
             column: 26
           },
           end: {
-            line: 8,
+            line: 13,
             column: 101
           }
         },
-        line: 8
+        line: 13
       }
     },
     branchMap: {
       '0': {
         loc: {
           start: {
-            line: 9,
+            line: 14,
             column: 14
           },
           end: {
-            line: 9,
+            line: 14,
             column: 110
           }
         },
         type: 'cond-expr',
         locations: [{
           start: {
-            line: 9,
+            line: 14,
             column: 59
           },
           end: {
-            line: 9,
+            line: 14,
             column: 81
           }
         }, {
           start: {
-            line: 9,
+            line: 14,
             column: 84
           },
           end: {
-            line: 9,
+            line: 14,
             column: 110
           }
         }],
-        line: 9
+        line: 14
       },
       '1': {
         loc: {
           start: {
-            line: 10,
+            line: 15,
             column: 10
           },
           end: {
-            line: 10,
+            line: 15,
             column: 42
           }
         },
         type: 'cond-expr',
         locations: [{
           start: {
-            line: 10,
+            line: 15,
             column: 25
           },
           end: {
-            line: 10,
+            line: 15,
             column: 30
           }
         }, {
           start: {
-            line: 10,
+            line: 15,
             column: 33
           },
           end: {
-            line: 10,
+            line: 15,
             column: 42
           }
         }],
-        line: 10
+        line: 15
       },
       '2': {
         loc: {
           start: {
-            line: 11,
+            line: 16,
             column: 22
           },
           end: {
-            line: 11,
+            line: 16,
             column: 80
           }
         },
         type: 'binary-expr',
         locations: [{
           start: {
-            line: 11,
+            line: 16,
             column: 22
           },
           end: {
-            line: 11,
+            line: 16,
             column: 60
           }
         }, {
           start: {
-            line: 11,
+            line: 16,
             column: 64
           },
           end: {
-            line: 11,
+            line: 16,
             column: 69
           }
         }, {
           start: {
-            line: 11,
+            line: 16,
             column: 73
           },
           end: {
-            line: 11,
+            line: 16,
             column: 80
           }
         }],
-        line: 11
+        line: 16
       }
     },
     s: {
@@ -260,7 +260,12 @@ var cov_165j2qnbw3 = function () {
 
   coverageData.hash = hash;
   return coverage[path] = coverageData;
-}(); /* eslint no-unused-vars : 0 */
+}(); /**
+      * This module provides a function that converts a micropublication  montage to an email representation.
+      * @module metis-backend/releasers/email
+      */
+
+/* eslint no-unused-vars : 0 */
 
 
 exports.default = montageToMail;

@@ -415,11 +415,11 @@ var cov_rq5wbngxv = function () {
 
   coverageData.hash = hash;
   return coverage[path] = coverageData;
-}(); // /**
-//  * Metis-backend
-//  * =======
-//  * Montages component controller
-//  */
+}(); /**
+      * This module provides express request handlers
+      * for the montages component.
+      * @module metis-backend/components/montages
+      */
 
 var _montages = require('./montages.dal');
 

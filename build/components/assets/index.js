@@ -28,7 +28,12 @@ var cov_2hx032i4ka = function () {
 
   coverageData.hash = hash;
   return coverage[path] = coverageData;
-}(); // user-related db views
+}(); /**
+      * This module provides an entrypoint to the assets component of the applications
+      * @module metis-backend/components/assets
+      */
+
+// user-related db views
 
 
 var _assets = require('./assets.design');

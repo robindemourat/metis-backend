@@ -14,7 +14,7 @@ var _extends4 = _interopRequireDefault(_extends3);
 
 var cov_2sv4ofhmc = function () {
   var path = '/Users/rawbin/Documents/Projets/collaborations/ensad-publishing/prototype/metis-backend/src/utils/config.js',
-      hash = '1b0a0634021cfd64eac53735a062b92a184ba870',
+      hash = 'e32745558b4f4537bd8d5963a7a96ce01b4cf6e2',
       global = new Function('return this')(),
       gcv = '__coverage__',
       coverageData = {
@@ -22,61 +22,61 @@ var cov_2sv4ofhmc = function () {
     statementMap: {
       '0': {
         start: {
-          line: 8,
+          line: 9,
           column: 20
         },
         end: {
-          line: 8,
+          line: 9,
           column: 71
         }
       },
       '1': {
         start: {
-          line: 8,
+          line: 9,
           column: 27
         },
         end: {
-          line: 8,
+          line: 9,
           column: 71
         }
       },
       '2': {
         start: {
-          line: 16,
+          line: 17,
           column: 2
         },
         end: {
-          line: 23,
+          line: 24,
           column: 3
         }
       },
       '3': {
         start: {
-          line: 17,
+          line: 18,
           column: 4
         },
         end: {
-          line: 17,
+          line: 18,
           column: 46
         }
       },
       '4': {
         start: {
-          line: 19,
+          line: 20,
           column: 4
         },
         end: {
-          line: 22,
+          line: 23,
           column: 12
         }
       },
       '5': {
         start: {
-          line: 19,
+          line: 20,
           column: 46
         },
         end: {
-          line: 22,
+          line: 23,
           column: 5
         }
       }
@@ -86,108 +86,108 @@ var cov_2sv4ofhmc = function () {
         name: '(anonymous_0)',
         decl: {
           start: {
-            line: 8,
+            line: 9,
             column: 20
           },
           end: {
-            line: 8,
+            line: 9,
             column: 21
           }
         },
         loc: {
           start: {
-            line: 8,
+            line: 9,
             column: 27
           },
           end: {
-            line: 8,
+            line: 9,
             column: 71
           }
         },
-        line: 8
+        line: 9
       },
       '1': {
         name: 'getConfig',
         decl: {
           start: {
-            line: 15,
+            line: 16,
             column: 16
           },
           end: {
-            line: 15,
+            line: 16,
             column: 25
           }
         },
         loc: {
           start: {
-            line: 15,
+            line: 16,
             column: 29
           },
           end: {
-            line: 24,
+            line: 25,
             column: 1
           }
         },
-        line: 15
+        line: 16
       },
       '2': {
         name: '(anonymous_2)',
         decl: {
           start: {
-            line: 19,
+            line: 20,
             column: 28
           },
           end: {
-            line: 19,
+            line: 20,
             column: 29
           }
         },
         loc: {
           start: {
-            line: 19,
+            line: 20,
             column: 46
           },
           end: {
-            line: 22,
+            line: 23,
             column: 5
           }
         },
-        line: 19
+        line: 20
       }
     },
     branchMap: {
       '0': {
         loc: {
           start: {
-            line: 16,
+            line: 17,
             column: 2
           },
           end: {
-            line: 23,
+            line: 24,
             column: 3
           }
         },
         type: 'if',
         locations: [{
           start: {
-            line: 16,
+            line: 17,
             column: 2
           },
           end: {
-            line: 23,
+            line: 24,
             column: 3
           }
         }, {
           start: {
-            line: 16,
+            line: 17,
             column: 2
           },
           end: {
-            line: 23,
+            line: 24,
             column: 3
           }
         }],
-        line: 16
+        line: 17
       }
     },
     s: {
@@ -217,11 +217,10 @@ var cov_2sv4ofhmc = function () {
   coverageData.hash = hash;
   return coverage[path] = coverageData;
 }(); /**
-      * Metis-backend
-      * =======
-      * Config utils
+      * This module exports a function providing the proper configuration object
+      * regarding process mode (production or development)
+      * @module metis-backend/utils/config
       */
-
 
 exports.getConfig = getConfig;
 

@@ -28,7 +28,11 @@ var cov_2625nk6gu6 = function () {
 
   coverageData.hash = hash;
   return coverage[path] = coverageData;
-}();
+}(); /**
+      * This module provides an entrypoint to the static publication releaser
+      * @module metis-backend/releasers/staticpublication
+      */
+
 
 var _staticpublication = require('./staticpublication.controller');
 

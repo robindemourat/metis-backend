@@ -1,8 +1,9 @@
 /**
- * Metis-backend
- * =======
- * Dump api
+ * This module provides route indexes between uri patterns and controllers
+ * for the dump service.
+ * @module metis-backend/services/dump
  */
+
 
 import express from 'express';
 

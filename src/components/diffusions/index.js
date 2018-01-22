@@ -1,3 +1,8 @@
+/**
+ * This module provides an entrypoint to the diffusions component of the applications
+ * @module metis-backend/components/diffusions
+ */
+
 // diffusion-related db views
 export design from './diffusions.design';
 // view controller

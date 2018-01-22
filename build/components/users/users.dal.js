@@ -1207,9 +1207,9 @@ var cov_2ek24ycndq = function () {
   coverageData.hash = hash;
   return coverage[path] = coverageData;
 }(); /**
-      * Metis-backend
-      * =======
-      * User data access layer
+      * This module provides couchdb database operations managers
+      * for the users component.
+      * @module metis-backend/components/users
       */
 
 var _plugDb = require('../../utils/plugDb');

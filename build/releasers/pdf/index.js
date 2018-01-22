@@ -10,7 +10,7 @@ var _promise2 = _interopRequireDefault(_promise);
 
 var cov_2aw47nrw3o = function () {
   var path = '/Users/rawbin/Documents/Projets/collaborations/ensad-publishing/prototype/metis-backend/src/releasers/pdf/index.js',
-      hash = 'cf646c79bf6014728523215097676bbed6e3c806',
+      hash = '044c4df5d4702be46b65c43b00bf90e83408d30d',
       global = new Function('return this')(),
       gcv = '__coverage__',
       coverageData = {
@@ -18,111 +18,111 @@ var cov_2aw47nrw3o = function () {
     statementMap: {
       '0': {
         start: {
-          line: 20,
+          line: 25,
           column: 20
         },
         end: {
-          line: 20,
+          line: 25,
           column: 61
         }
       },
       '1': {
         start: {
-          line: 21,
+          line: 26,
           column: 15
         },
         end: {
-          line: 21,
+          line: 26,
           column: 114
         }
       },
       '2': {
         start: {
-          line: 25,
+          line: 30,
           column: 2
         },
         end: {
-          line: 67,
+          line: 72,
           column: 5
         }
       },
       '3': {
         start: {
-          line: 31,
+          line: 36,
           column: 4
         },
         end: {
-          line: 66,
+          line: 71,
           column: 19
         }
       },
       '4': {
         start: {
-          line: 33,
+          line: 38,
           column: 6
         },
         end: {
-          line: 33,
+          line: 38,
           column: 23
         }
       },
       '5': {
         start: {
-          line: 34,
+          line: 39,
           column: 6
         },
         end: {
-          line: 34,
+          line: 39,
           column: 33
         }
       },
       '6': {
         start: {
-          line: 37,
+          line: 42,
           column: 46
         },
         end: {
-          line: 37,
+          line: 42,
           column: 58
         }
       },
       '7': {
         start: {
-          line: 38,
+          line: 43,
           column: 6
         },
         end: {
-          line: 63,
+          line: 68,
           column: 9
         }
       },
       '8': {
         start: {
-          line: 48,
+          line: 53,
           column: 8
         },
         end: {
-          line: 58,
+          line: 63,
           column: 10
         }
       },
       '9': {
         start: {
-          line: 59,
+          line: 64,
           column: 8
         },
         end: {
-          line: 62,
+          line: 67,
           column: 13
         }
       },
       '10': {
         start: {
-          line: 61,
+          line: 66,
           column: 12
         },
         end: {
-          line: 61,
+          line: 66,
           column: 82
         }
       }
@@ -132,145 +132,145 @@ var cov_2aw47nrw3o = function () {
         name: 'publish',
         decl: {
           start: {
-            line: 24,
+            line: 29,
             column: 24
           },
           end: {
-            line: 24,
+            line: 29,
             column: 31
           }
         },
         loc: {
           start: {
-            line: 24,
+            line: 29,
             column: 49
           },
           end: {
-            line: 68,
+            line: 73,
             column: 1
           }
         },
-        line: 24
+        line: 29
       },
       '1': {
         name: '(anonymous_1)',
         decl: {
           start: {
-            line: 25,
+            line: 30,
             column: 21
           },
           end: {
-            line: 25,
+            line: 30,
             column: 22
           }
         },
         loc: {
           start: {
-            line: 25,
+            line: 30,
             column: 42
           },
           end: {
-            line: 67,
+            line: 72,
             column: 3
           }
         },
-        line: 25
+        line: 30
       },
       '2': {
         name: '(anonymous_2)',
         decl: {
           start: {
-            line: 32,
+            line: 37,
             column: 10
           },
           end: {
-            line: 32,
+            line: 37,
             column: 11
           }
         },
         loc: {
           start: {
-            line: 32,
+            line: 37,
             column: 16
           },
           end: {
-            line: 35,
+            line: 40,
             column: 5
           }
         },
-        line: 32
+        line: 37
       },
       '3': {
         name: '(anonymous_3)',
         decl: {
           start: {
-            line: 36,
+            line: 41,
             column: 10
           },
           end: {
-            line: 36,
+            line: 41,
             column: 11
           }
         },
         loc: {
           start: {
-            line: 36,
+            line: 41,
             column: 26
           },
           end: {
-            line: 64,
+            line: 69,
             column: 5
           }
         },
-        line: 36
+        line: 41
       },
       '4': {
         name: '(anonymous_4)',
         decl: {
           start: {
-            line: 47,
+            line: 52,
             column: 9
           },
           end: {
-            line: 47,
+            line: 52,
             column: 10
           }
         },
         loc: {
           start: {
-            line: 47,
+            line: 52,
             column: 20
           },
           end: {
-            line: 63,
+            line: 68,
             column: 7
           }
         },
-        line: 47
+        line: 52
       },
       '5': {
         name: '(anonymous_5)',
         decl: {
           start: {
-            line: 60,
+            line: 65,
             column: 16
           },
           end: {
-            line: 60,
+            line: 65,
             column: 17
           }
         },
         loc: {
           start: {
-            line: 60,
+            line: 65,
             column: 35
           },
           end: {
-            line: 62,
+            line: 67,
             column: 11
           }
         },
-        line: 60
+        line: 65
       }
     },
     branchMap: {},
@@ -306,7 +306,10 @@ var cov_2aw47nrw3o = function () {
 
   coverageData.hash = hash;
   return coverage[path] = coverageData;
-}();
+}(); /**
+      * This module provides an entrypoint to the pdf publication releaser
+      * @module metis-backend/releasers/pdf
+      */
 
 /**
  * @todo use proper component to render pdf view

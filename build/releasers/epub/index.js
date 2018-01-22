@@ -10,7 +10,7 @@ var _promise2 = _interopRequireDefault(_promise);
 
 var cov_2kshggfa6t = function () {
   var path = '/Users/rawbin/Documents/Projets/collaborations/ensad-publishing/prototype/metis-backend/src/releasers/epub/index.js',
-      hash = '56dfb5a188063a1493c1763a2fc91229be8d59f9',
+      hash = '9d6e102cb1ec75d33498a2702445536d588ab296',
       global = new Function('return this')(),
       gcv = '__coverage__',
       coverageData = {
@@ -18,121 +18,121 @@ var cov_2kshggfa6t = function () {
     statementMap: {
       '0': {
         start: {
-          line: 13,
+          line: 18,
           column: 20
         },
         end: {
-          line: 13,
+          line: 18,
           column: 61
         }
       },
       '1': {
         start: {
-          line: 14,
+          line: 19,
           column: 15
         },
         end: {
-          line: 14,
+          line: 19,
           column: 114
         }
       },
       '2': {
         start: {
-          line: 17,
+          line: 22,
           column: 2
         },
         end: {
-          line: 69,
+          line: 74,
           column: 5
         }
       },
       '3': {
         start: {
-          line: 23,
+          line: 28,
           column: 4
         },
         end: {
-          line: 68,
+          line: 73,
           column: 19
         }
       },
       '4': {
         start: {
-          line: 25,
+          line: 30,
           column: 6
         },
         end: {
-          line: 34,
+          line: 39,
           column: 8
         }
       },
       '5': {
         start: {
-          line: 32,
+          line: 37,
           column: 8
         },
         end: {
-          line: 32,
+          line: 37,
           column: 37
         }
       },
       '6': {
         start: {
-          line: 35,
+          line: 40,
           column: 6
         },
         end: {
-          line: 35,
+          line: 40,
           column: 33
         }
       },
       '7': {
         start: {
-          line: 38,
+          line: 43,
           column: 46
         },
         end: {
-          line: 38,
+          line: 43,
           column: 58
         }
       },
       '8': {
         start: {
-          line: 39,
+          line: 44,
           column: 6
         },
         end: {
-          line: 65,
+          line: 70,
           column: 9
         }
       },
       '9': {
         start: {
-          line: 50,
+          line: 55,
           column: 8
         },
         end: {
-          line: 60,
+          line: 65,
           column: 10
         }
       },
       '10': {
         start: {
-          line: 61,
+          line: 66,
           column: 8
         },
         end: {
-          line: 64,
+          line: 69,
           column: 13
         }
       },
       '11': {
         start: {
-          line: 63,
+          line: 68,
           column: 12
         },
         end: {
-          line: 63,
+          line: 68,
           column: 82
         }
       }
@@ -142,195 +142,195 @@ var cov_2kshggfa6t = function () {
         name: 'publish',
         decl: {
           start: {
-            line: 16,
+            line: 21,
             column: 24
           },
           end: {
-            line: 16,
+            line: 21,
             column: 31
           }
         },
         loc: {
           start: {
-            line: 16,
+            line: 21,
             column: 84
           },
           end: {
-            line: 70,
+            line: 75,
             column: 1
           }
         },
-        line: 16
+        line: 21
       },
       '1': {
         name: '(anonymous_1)',
         decl: {
           start: {
-            line: 17,
+            line: 22,
             column: 21
           },
           end: {
-            line: 17,
+            line: 22,
             column: 22
           }
         },
         loc: {
           start: {
-            line: 17,
+            line: 22,
             column: 42
           },
           end: {
-            line: 69,
+            line: 74,
             column: 3
           }
         },
-        line: 17
+        line: 22
       },
       '2': {
         name: '(anonymous_2)',
         decl: {
           start: {
-            line: 24,
+            line: 29,
             column: 10
           },
           end: {
-            line: 24,
+            line: 29,
             column: 11
           }
         },
         loc: {
           start: {
-            line: 24,
+            line: 29,
             column: 16
           },
           end: {
-            line: 36,
+            line: 41,
             column: 5
           }
         },
-        line: 24
+        line: 29
       },
       '3': {
         name: '(anonymous_3)',
         decl: {
           start: {
-            line: 25,
+            line: 30,
             column: 20
           },
           end: {
-            line: 25,
+            line: 30,
             column: 21
           }
         },
         loc: {
           start: {
-            line: 25,
+            line: 30,
             column: 29
           },
           end: {
-            line: 34,
+            line: 39,
             column: 7
           }
         },
-        line: 25
+        line: 30
       },
       '4': {
         name: '(anonymous_4)',
         decl: {
           start: {
-            line: 37,
+            line: 42,
             column: 10
           },
           end: {
-            line: 37,
+            line: 42,
             column: 11
           }
         },
         loc: {
           start: {
-            line: 37,
+            line: 42,
             column: 26
           },
           end: {
-            line: 66,
+            line: 71,
             column: 5
           }
         },
-        line: 37
+        line: 42
       },
       '5': {
         name: '(anonymous_5)',
         decl: {
           start: {
-            line: 49,
+            line: 54,
             column: 9
           },
           end: {
-            line: 49,
+            line: 54,
             column: 10
           }
         },
         loc: {
           start: {
-            line: 49,
+            line: 54,
             column: 21
           },
           end: {
-            line: 65,
+            line: 70,
             column: 7
           }
         },
-        line: 49
+        line: 54
       },
       '6': {
         name: '(anonymous_6)',
         decl: {
           start: {
-            line: 62,
+            line: 67,
             column: 16
           },
           end: {
-            line: 62,
+            line: 67,
             column: 17
           }
         },
         loc: {
           start: {
-            line: 62,
+            line: 67,
             column: 35
           },
           end: {
-            line: 64,
+            line: 69,
             column: 11
           }
         },
-        line: 62
+        line: 67
       }
     },
     branchMap: {
       '0': {
         loc: {
           start: {
-            line: 16,
+            line: 21,
             column: 49
           },
           end: {
-            line: 16,
+            line: 21,
             column: 82
           }
         },
         type: 'default-arg',
         locations: [{
           start: {
-            line: 16,
+            line: 21,
             column: 65
           },
           end: {
-            line: 16,
+            line: 21,
             column: 82
           }
         }],
-        line: 16
+        line: 21
       }
     },
     s: {
@@ -369,7 +369,10 @@ var cov_2kshggfa6t = function () {
 
   coverageData.hash = hash;
   return coverage[path] = coverageData;
-}();
+}(); /**
+      * This module provides an entrypoint to the epub publication releaser
+      * @module metis-backend/releasers/epub
+      */
 
 exports.default = publish;
 

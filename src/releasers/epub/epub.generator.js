@@ -1,3 +1,8 @@
+/**
+ * This module a function that produces a epub static file thanks to the epub-gen module.
+ * @module metis-backend/releasers/epub
+ */
+
 import React from 'react'; /* eslint no-unused-vars : 0 */
 import ReactDOMServer from 'react-dom/server';
 import PropTypes from 'prop-types';

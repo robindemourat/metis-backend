@@ -1,4 +1,7 @@
-
+/**
+ * This module exports utilitary functions for interacting with couchdb
+ * @module metis-backend/utils/couchdb
+ */
 
 /**
  * Inserts a design document in a couchdb database

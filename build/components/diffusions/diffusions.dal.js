@@ -602,9 +602,9 @@ var cov_n9cb1kmrd = function () {
   coverageData.hash = hash;
   return coverage[path] = coverageData;
 }(); /**
-      * Metis-backend
-      * =======
-      * Diffusion data access layer
+      * This module provides couchdb database operations managers
+      * for the diffusions component.
+      * @module metis-backend/components/diffusions
       */
 
 var _plugDb = require('../../utils/plugDb');

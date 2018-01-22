@@ -1,8 +1,8 @@
 /**
- * Metis-backend
- * =======
- * Couchdb connection script
+ * This module handles the setup of couchdb driver for the app
+ * @module metis-backend/utils/plugDb
  */
+
 const Promise = require('bluebird');
 
 

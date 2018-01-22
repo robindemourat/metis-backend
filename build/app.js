@@ -6,7 +6,7 @@ Object.defineProperty(exports, "__esModule", {
 
 var cov_2q2jexkalk = function () {
   var path = '/Users/rawbin/Documents/Projets/collaborations/ensad-publishing/prototype/metis-backend/src/app.js',
-      hash = 'e8525c99057c231947284869471d09c73ba82577',
+      hash = '04cb1b7981ab8a08bab877591e76eb8754f4ea6a',
       global = new Function('return this')(),
       gcv = '__coverage__',
       coverageData = {
@@ -14,301 +14,301 @@ var cov_2q2jexkalk = function () {
     statementMap: {
       '0': {
         start: {
-          line: 42,
+          line: 43,
           column: 15
         },
         end: {
-          line: 42,
+          line: 43,
           column: 26
         }
       },
       '1': {
         start: {
-          line: 43,
+          line: 44,
           column: 17
         },
         end: {
-          line: 43,
+          line: 44,
           column: 23
         }
       },
       '2': {
         start: {
-          line: 48,
+          line: 49,
           column: 12
         },
         end: {
-          line: 48,
+          line: 49,
           column: 21
         }
       },
       '3': {
         start: {
-          line: 53,
+          line: 54,
           column: 0
         },
         end: {
-          line: 53,
+          line: 54,
           column: 67
         }
       },
       '4': {
         start: {
-          line: 54,
+          line: 55,
           column: 0
         },
         end: {
-          line: 54,
+          line: 55,
           column: 27
         }
       },
       '5': {
         start: {
-          line: 55,
+          line: 56,
           column: 0
         },
         end: {
-          line: 55,
+          line: 56,
           column: 16
         }
       },
       '6': {
         start: {
-          line: 56,
+          line: 57,
           column: 0
         },
         end: {
-          line: 56,
+          line: 57,
           column: 38
         }
       },
       '7': {
         start: {
-          line: 57,
+          line: 58,
           column: 0
         },
         end: {
-          line: 68,
+          line: 69,
           column: 4
         }
       },
       '8': {
         start: {
-          line: 73,
+          line: 74,
           column: 0
         },
         end: {
-          line: 73,
+          line: 74,
           column: 31
         }
       },
       '9': {
         start: {
-          line: 78,
+          line: 79,
           column: 0
         },
         end: {
-          line: 80,
+          line: 81,
           column: 3
         }
       },
       '10': {
         start: {
-          line: 79,
+          line: 80,
           column: 2
         },
         end: {
-          line: 79,
+          line: 80,
           column: 77
         }
       },
       '11': {
         start: {
-          line: 91,
+          line: 92,
           column: 19
         },
         end: {
-          line: 91,
+          line: 92,
           column: 52
         }
       },
       '12': {
         start: {
-          line: 92,
+          line: 93,
           column: 0
         },
         end: {
-          line: 92,
+          line: 93,
           column: 47
         }
       },
       '13': {
         start: {
-          line: 97,
+          line: 98,
           column: 0
         },
         end: {
-          line: 97,
+          line: 98,
           column: 49
         }
       },
       '14': {
         start: {
-          line: 103,
+          line: 104,
           column: 18
         },
         end: {
-          line: 103,
+          line: 104,
           column: 34
         }
       },
       '15': {
         start: {
-          line: 108,
+          line: 109,
           column: 0
         },
         end: {
-          line: 108,
+          line: 109,
           column: 25
         }
       },
       '16': {
         start: {
-          line: 114,
+          line: 115,
           column: 0
         },
         end: {
-          line: 114,
+          line: 115,
           column: 33
         }
       },
       '17': {
         start: {
-          line: 120,
+          line: 121,
           column: 0
         },
         end: {
-          line: 120,
+          line: 121,
           column: 38
         }
       },
       '18': {
         start: {
-          line: 125,
+          line: 126,
           column: 0
         },
         end: {
-          line: 125,
+          line: 126,
           column: 31
         }
       },
       '19': {
         start: {
-          line: 126,
+          line: 127,
           column: 0
         },
         end: {
-          line: 126,
+          line: 127,
           column: 39
         }
       },
       '20': {
         start: {
-          line: 127,
+          line: 128,
           column: 0
         },
         end: {
-          line: 127,
+          line: 128,
           column: 45
         }
       },
       '21': {
         start: {
-          line: 128,
+          line: 129,
           column: 0
         },
         end: {
-          line: 128,
+          line: 129,
           column: 41
         }
       },
       '22': {
         start: {
-          line: 129,
+          line: 130,
           column: 0
         },
         end: {
-          line: 129,
+          line: 130,
           column: 37
         }
       },
       '23': {
         start: {
-          line: 130,
+          line: 131,
           column: 0
         },
         end: {
-          line: 130,
+          line: 131,
           column: 45
         }
       },
       '24': {
         start: {
-          line: 135,
+          line: 136,
           column: 0
         },
         end: {
-          line: 135,
+          line: 136,
           column: 27
         }
       },
       '25': {
         start: {
-          line: 140,
+          line: 141,
           column: 22
         },
         end: {
-          line: 140,
+          line: 141,
           column: 38
         }
       },
       '26': {
         start: {
-          line: 142,
+          line: 143,
           column: 0
         },
         end: {
-          line: 142,
+          line: 143,
           column: 41
         }
       },
       '27': {
         start: {
-          line: 143,
+          line: 144,
           column: 0
         },
         end: {
-          line: 143,
+          line: 144,
           column: 41
         }
       },
       '28': {
         start: {
-          line: 145,
+          line: 146,
           column: 0
         },
         end: {
-          line: 145,
+          line: 146,
           column: 36
         }
       },
       '29': {
         start: {
-          line: 150,
+          line: 151,
           column: 0
         },
         end: {
-          line: 150,
+          line: 151,
           column: 22
         }
       }
@@ -318,25 +318,25 @@ var cov_2q2jexkalk = function () {
         name: '(anonymous_0)',
         decl: {
           start: {
-            line: 78,
+            line: 79,
             column: 13
           },
           end: {
-            line: 78,
+            line: 79,
             column: 14
           }
         },
         loc: {
           start: {
-            line: 78,
+            line: 79,
             column: 27
           },
           end: {
-            line: 80,
+            line: 81,
             column: 1
           }
         },
-        line: 78
+        line: 79
       }
     },
     branchMap: {},
@@ -389,7 +389,8 @@ var cov_2q2jexkalk = function () {
 }(); /**
       * Metis-backend
       * =======
-      * Application entrypoint
+      * This is the main application file.
+      * It exports an express application.
       */
 
 /**

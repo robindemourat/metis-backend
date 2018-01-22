@@ -1,4 +1,11 @@
 /**
+ * This module provides express request handlers
+ * for the auth component.
+ * @module metis-backend/components/auth
+ */
+
+
+/**
  * Metis-backend
  * =======
  * Authentification routes handler

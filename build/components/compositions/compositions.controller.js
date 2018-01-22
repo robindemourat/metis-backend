@@ -415,11 +415,11 @@ var cov_117uvz14id = function () {
 
   coverageData.hash = hash;
   return coverage[path] = coverageData;
-}(); // /**
-//  * Metis-backend
-//  * =======
-//  * Compositions component controller
-//  */
+}(); /**
+      * This module provides express request handlers
+      * for the compositions component.
+      * @module metis-backend/components/compositions
+      */
 
 var _compositions = require('./compositions.dal');
 

@@ -27,7 +27,7 @@ var _inherits3 = _interopRequireDefault(_inherits2);
 
 var cov_2hdibkdkhy = function () {
   var path = '/Users/rawbin/Documents/Projets/collaborations/ensad-publishing/prototype/metis-backend/src/utils/react-components.js',
-      hash = '34f5ce9ca378a95e1cede8693c60f0b24f0f8dd9',
+      hash = 'd58c36c864396cd49a07b53241b0195795658f9f',
       global = new Function('return this')(),
       gcv = '__coverage__',
       coverageData = {
@@ -35,51 +35,51 @@ var cov_2hdibkdkhy = function () {
     statementMap: {
       '0': {
         start: {
-          line: 11,
+          line: 18,
           column: 4
         },
         end: {
-          line: 11,
+          line: 18,
           column: 17
         }
       },
       '1': {
         start: {
-          line: 14,
+          line: 21,
           column: 27
         },
         end: {
-          line: 16,
+          line: 23,
           column: 3
         }
       },
       '2': {
         start: {
-          line: 21,
+          line: 28,
           column: 13
         },
         end: {
-          line: 21,
+          line: 28,
           column: 16
         }
       },
       '3': {
         start: {
-          line: 25,
+          line: 32,
           column: 23
         },
         end: {
-          line: 25,
+          line: 32,
           column: 33
         }
       },
       '4': {
         start: {
-          line: 26,
+          line: 33,
           column: 4
         },
         end: {
-          line: 30,
+          line: 37,
           column: 6
         }
       }
@@ -89,97 +89,97 @@ var cov_2hdibkdkhy = function () {
         name: '(anonymous_0)',
         decl: {
           start: {
-            line: 10,
+            line: 17,
             column: 2
           },
           end: {
-            line: 10,
+            line: 17,
             column: 3
           }
         },
         loc: {
           start: {
-            line: 10,
+            line: 17,
             column: 21
           },
           end: {
-            line: 12,
+            line: 19,
             column: 3
           }
         },
-        line: 10
+        line: 17
       },
       '1': {
         name: '(anonymous_1)',
         decl: {
           start: {
-            line: 14,
+            line: 21,
             column: 20
           },
           end: {
-            line: 14,
+            line: 21,
             column: 21
           }
         },
         loc: {
           start: {
-            line: 14,
+            line: 21,
             column: 27
           },
           end: {
-            line: 16,
+            line: 23,
             column: 3
           }
         },
-        line: 14
+        line: 21
       },
       '2': {
         name: '(anonymous_2)',
         decl: {
           start: {
-            line: 21,
+            line: 28,
             column: 6
           },
           end: {
-            line: 21,
+            line: 28,
             column: 7
           }
         },
         loc: {
           start: {
-            line: 21,
+            line: 28,
             column: 13
           },
           end: {
-            line: 21,
+            line: 28,
             column: 16
           }
         },
-        line: 21
+        line: 28
       },
       '3': {
         name: '(anonymous_3)',
         decl: {
           start: {
-            line: 24,
+            line: 31,
             column: 2
-          },
-          end: {
-            line: 24,
-            column: 3
-          }
-        },
-        loc: {
-          start: {
-            line: 24,
-            column: 11
           },
           end: {
             line: 31,
             column: 3
           }
         },
-        line: 24
+        loc: {
+          start: {
+            line: 31,
+            column: 11
+          },
+          end: {
+            line: 38,
+            column: 3
+          }
+        },
+        line: 31
       }
     },
     branchMap: {},
@@ -209,7 +209,13 @@ var cov_2hdibkdkhy = function () {
   return coverage[path] = coverageData;
 }();
 
-var _class, _temp; /* eslint no-unused-vars : 0 */
+var _class, _temp; /**
+                    * This module provides react components to be used
+                    * severside to render montages.
+                    * @module metis-backend/utils/react-components
+                    */
+
+/* eslint no-unused-vars : 0 */
 
 
 var _react = require('react');

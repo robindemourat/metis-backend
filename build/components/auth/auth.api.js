@@ -6,7 +6,7 @@ Object.defineProperty(exports, "__esModule", {
 
 var cov_17sznndkpe = function () {
   var path = '/Users/rawbin/Documents/Projets/collaborations/ensad-publishing/prototype/metis-backend/src/components/auth/auth.api.js',
-      hash = '1388b049d55341571463fa63703fa4965f5ed339',
+      hash = 'b740a6bb85eb7d29401b29b874aede515d9f29c6',
       global = new Function('return this')(),
       gcv = '__coverage__',
       coverageData = {
@@ -14,51 +14,51 @@ var cov_17sznndkpe = function () {
     statementMap: {
       '0': {
         start: {
-          line: 9,
+          line: 15,
           column: 15
         },
         end: {
-          line: 9,
+          line: 15,
           column: 35
         }
       },
       '1': {
         start: {
-          line: 11,
+          line: 17,
           column: 0
         },
         end: {
-          line: 11,
+          line: 17,
           column: 54
         }
       },
       '2': {
         start: {
-          line: 12,
+          line: 18,
           column: 0
         },
         end: {
-          line: 12,
+          line: 18,
           column: 32
         }
       },
       '3': {
         start: {
-          line: 13,
+          line: 19,
           column: 0
         },
         end: {
-          line: 13,
+          line: 19,
           column: 29
         }
       },
       '4': {
         start: {
-          line: 14,
+          line: 20,
           column: 0
         },
         end: {
-          line: 14,
+          line: 20,
           column: 7
         }
       }
@@ -84,7 +84,11 @@ var cov_17sznndkpe = function () {
 
   coverageData.hash = hash;
   return coverage[path] = coverageData;
-}();
+}(); /**
+      * This module provides route indexes between uri patterns and controllers
+      * for the auth-related operations.
+      * @module metis-backend/components/auth
+      */
 
 var _express = require('express');
 

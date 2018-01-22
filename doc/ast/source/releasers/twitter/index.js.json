@@ -1,28 +1,28 @@
 {
   "type": "File",
   "start": 0,
-  "end": 276,
+  "end": 202,
   "loc": {
     "start": {
       "line": 1,
       "column": 0
     },
     "end": {
-      "line": 12,
+      "line": 8,
       "column": 0
     }
   },
   "program": {
     "type": "Program",
     "start": 0,
-    "end": 276,
+    "end": 202,
     "loc": {
       "start": {
         "line": 1,
         "column": 0
       },
       "end": {
-        "line": 12,
+        "line": 8,
         "column": 0
       }
     },
@@ -30,44 +30,44 @@
     "body": [
       {
         "type": "ExportNamedDeclaration",
-        "start": 199,
-        "end": 227,
+        "start": 125,
+        "end": 153,
         "loc": {
           "start": {
-            "line": 9,
+            "line": 5,
             "column": 0
           },
           "end": {
-            "line": 9,
+            "line": 5,
             "column": 28
           }
         },
         "specifiers": [
           {
             "type": "ExportDefaultSpecifier",
-            "start": 206,
-            "end": 211,
+            "start": 132,
+            "end": 137,
             "loc": {
               "start": {
-                "line": 9,
+                "line": 5,
                 "column": 7
               },
               "end": {
-                "line": 9,
+                "line": 5,
                 "column": 12
               }
             },
             "exported": {
               "type": "Identifier",
-              "start": 206,
-              "end": 211,
+              "start": 132,
+              "end": 137,
               "loc": {
                 "start": {
-                  "line": 9,
+                  "line": 5,
                   "column": 7
                 },
                 "end": {
-                  "line": 9,
+                  "line": 5,
                   "column": 12
                 },
                 "identifierName": "tweet"
@@ -80,15 +80,15 @@
         ],
         "source": {
           "type": "StringLiteral",
-          "start": 217,
-          "end": 226,
+          "start": 143,
+          "end": 152,
           "loc": {
             "start": {
-              "line": 9,
+              "line": 5,
               "column": 18
             },
             "end": {
-              "line": 9,
+              "line": 5,
               "column": 27
             }
           },
@@ -101,16 +101,16 @@
         "leadingComments": [
           {
             "type": "CommentBlock",
-            "value": "*\n * Multimodal Publishing utils\n * ===========================\n * twitter releaser\n * ===========================\n * This module publishes content to twitter.\n * @module mpu/releasers/twitter\n ",
+            "value": "*\n * This module provides an entrypoint to the twitter publication releaser\n * @module metis-backend/releasers/twitter\n ",
             "start": 0,
-            "end": 198,
+            "end": 124,
             "loc": {
               "start": {
                 "line": 1,
                 "column": 0
               },
               "end": {
-                "line": 8,
+                "line": 4,
                 "column": 3
               }
             }
@@ -119,44 +119,44 @@
       },
       {
         "type": "ExportNamedDeclaration",
-        "start": 229,
-        "end": 275,
+        "start": 155,
+        "end": 201,
         "loc": {
           "start": {
-            "line": 11,
+            "line": 7,
             "column": 0
           },
           "end": {
-            "line": 11,
+            "line": 7,
             "column": 46
           }
         },
         "specifiers": [
           {
             "type": "ExportDefaultSpecifier",
-            "start": 236,
-            "end": 250,
+            "start": 162,
+            "end": 176,
             "loc": {
               "start": {
-                "line": 11,
+                "line": 7,
                 "column": 7
               },
               "end": {
-                "line": 11,
+                "line": 7,
                 "column": 21
               }
             },
             "exported": {
               "type": "Identifier",
-              "start": 236,
-              "end": 250,
+              "start": 162,
+              "end": 176,
               "loc": {
                 "start": {
-                  "line": 11,
+                  "line": 7,
                   "column": 7
                 },
                 "end": {
-                  "line": 11,
+                  "line": 7,
                   "column": 21
                 },
                 "identifierName": "montageToTweet"
@@ -167,15 +167,15 @@
         ],
         "source": {
           "type": "StringLiteral",
-          "start": 256,
-          "end": 274,
+          "start": 182,
+          "end": 200,
           "loc": {
             "start": {
-              "line": 11,
+              "line": 7,
               "column": 27
             },
             "end": {
-              "line": 11,
+              "line": 7,
               "column": 45
             }
           },
@@ -192,16 +192,16 @@
   "comments": [
     {
       "type": "CommentBlock",
-      "value": "*\n * Multimodal Publishing utils\n * ===========================\n * twitter releaser\n * ===========================\n * This module publishes content to twitter.\n * @module mpu/releasers/twitter\n ",
+      "value": "*\n * This module provides an entrypoint to the twitter publication releaser\n * @module metis-backend/releasers/twitter\n ",
       "start": 0,
-      "end": 198,
+      "end": 124,
       "loc": {
         "start": {
           "line": 1,
           "column": 0
         },
         "end": {
-          "line": 8,
+          "line": 4,
           "column": 3
         }
       }
@@ -210,16 +210,16 @@
   "tokens": [
     {
       "type": "CommentBlock",
-      "value": "*\n * Multimodal Publishing utils\n * ===========================\n * twitter releaser\n * ===========================\n * This module publishes content to twitter.\n * @module mpu/releasers/twitter\n ",
+      "value": "*\n * This module provides an entrypoint to the twitter publication releaser\n * @module metis-backend/releasers/twitter\n ",
       "start": 0,
-      "end": 198,
+      "end": 124,
       "loc": {
         "start": {
           "line": 1,
           "column": 0
         },
         "end": {
-          "line": 8,
+          "line": 4,
           "column": 3
         }
       }
@@ -239,15 +239,15 @@
         "updateContext": null
       },
       "value": "export",
-      "start": 199,
-      "end": 205,
+      "start": 125,
+      "end": 131,
       "loc": {
         "start": {
-          "line": 9,
+          "line": 5,
           "column": 0
         },
         "end": {
-          "line": 9,
+          "line": 5,
           "column": 6
         }
       }
@@ -265,15 +265,15 @@
         "binop": null
       },
       "value": "tweet",
-      "start": 206,
-      "end": 211,
+      "start": 132,
+      "end": 137,
       "loc": {
         "start": {
-          "line": 9,
+          "line": 5,
           "column": 7
         },
         "end": {
-          "line": 9,
+          "line": 5,
           "column": 12
         }
       }
@@ -291,15 +291,15 @@
         "binop": null
       },
       "value": "from",
-      "start": 212,
-      "end": 216,
+      "start": 138,
+      "end": 142,
       "loc": {
         "start": {
-          "line": 9,
+          "line": 5,
           "column": 13
         },
         "end": {
-          "line": 9,
+          "line": 5,
           "column": 17
         }
       }
@@ -318,15 +318,15 @@
         "updateContext": null
       },
       "value": "./tweet",
-      "start": 217,
-      "end": 226,
+      "start": 143,
+      "end": 152,
       "loc": {
         "start": {
-          "line": 9,
+          "line": 5,
           "column": 18
         },
         "end": {
-          "line": 9,
+          "line": 5,
           "column": 27
         }
       }
@@ -344,15 +344,15 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 226,
-      "end": 227,
+      "start": 152,
+      "end": 153,
       "loc": {
         "start": {
-          "line": 9,
+          "line": 5,
           "column": 27
         },
         "end": {
-          "line": 9,
+          "line": 5,
           "column": 28
         }
       }
@@ -372,15 +372,15 @@
         "updateContext": null
       },
       "value": "export",
-      "start": 229,
-      "end": 235,
+      "start": 155,
+      "end": 161,
       "loc": {
         "start": {
-          "line": 11,
+          "line": 7,
           "column": 0
         },
         "end": {
-          "line": 11,
+          "line": 7,
           "column": 6
         }
       }
@@ -398,15 +398,15 @@
         "binop": null
       },
       "value": "montageToTweet",
-      "start": 236,
-      "end": 250,
+      "start": 162,
+      "end": 176,
       "loc": {
         "start": {
-          "line": 11,
+          "line": 7,
           "column": 7
         },
         "end": {
-          "line": 11,
+          "line": 7,
           "column": 21
         }
       }
@@ -424,15 +424,15 @@
         "binop": null
       },
       "value": "from",
-      "start": 251,
-      "end": 255,
+      "start": 177,
+      "end": 181,
       "loc": {
         "start": {
-          "line": 11,
+          "line": 7,
           "column": 22
         },
         "end": {
-          "line": 11,
+          "line": 7,
           "column": 26
         }
       }
@@ -451,15 +451,15 @@
         "updateContext": null
       },
       "value": "./montageToTweet",
-      "start": 256,
-      "end": 274,
+      "start": 182,
+      "end": 200,
       "loc": {
         "start": {
-          "line": 11,
+          "line": 7,
           "column": 27
         },
         "end": {
-          "line": 11,
+          "line": 7,
           "column": 45
         }
       }
@@ -477,15 +477,15 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 274,
-      "end": 275,
+      "start": 200,
+      "end": 201,
       "loc": {
         "start": {
-          "line": 11,
+          "line": 7,
           "column": 45
         },
         "end": {
-          "line": 11,
+          "line": 7,
           "column": 46
         }
       }
@@ -503,15 +503,15 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 276,
-      "end": 276,
+      "start": 202,
+      "end": 202,
       "loc": {
         "start": {
-          "line": 12,
+          "line": 8,
           "column": 0
         },
         "end": {
-          "line": 12,
+          "line": 8,
           "column": 0
         }
       }

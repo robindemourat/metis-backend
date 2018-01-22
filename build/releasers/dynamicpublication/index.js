@@ -28,7 +28,10 @@ var cov_1ot9886tvr = function () {
 
   coverageData.hash = hash;
   return coverage[path] = coverageData;
-}();
+}(); /**
+      * This module provides an entrypoint to the dynamic publication releaser
+      * @module metis-backend/releasers/dynamicpublication
+      */
 
 var _dynamicpublication = require('./dynamicpublication.controller');
 

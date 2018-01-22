@@ -28,7 +28,10 @@ var cov_izqdnzm4g = function () {
 
   coverageData.hash = hash;
   return coverage[path] = coverageData;
-}();
+}(); /**
+      * This module provides an entrypoint to the data-provider service of the application
+      * @module metis-backend/services/data-provider
+      */
 
 var _dataProvider = require('./data-provider.api');
 

@@ -29,6 +29,12 @@ var cov_27ust8wb5w = function () {
   return coverage[path] = coverageData;
 }();
 
+/**
+ * This module provides couchdb designs
+ * for the deliverables component.
+ * @module metis-backend/components/deliverables
+ */
+
 exports.default = {
   "views": {
     "by_filename": {

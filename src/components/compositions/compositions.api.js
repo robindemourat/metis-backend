@@ -1,7 +1,7 @@
 /**
- * Metis-backend
- * =======
- * Composition api
+ * This module provides route indexes between uri patterns and controllers
+ * for the compositions objects.
+ * @module metis-backend/components/compositions
  */
 
 import express from 'express';

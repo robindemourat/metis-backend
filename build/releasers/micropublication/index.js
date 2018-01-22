@@ -28,7 +28,10 @@ var cov_vatc9t1um = function () {
 
   coverageData.hash = hash;
   return coverage[path] = coverageData;
-}();
+}(); /**
+      * This module provides an entrypoint to the micro publication releaser
+      * @module metis-backend/releasers/micropublication
+      */
 
 var _micropublication = require('./micropublication.controller');
 

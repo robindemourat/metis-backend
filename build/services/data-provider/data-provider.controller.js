@@ -7,7 +7,7 @@ exports.getMontageData = exports.getAssetAttachment = undefined;
 
 var cov_22dzt85ga1 = function () {
   var path = '/Users/rawbin/Documents/Projets/collaborations/ensad-publishing/prototype/metis-backend/src/services/data-provider/data-provider.controller.js',
-      hash = 'ec3f69cb75899ce59026455d3218e127e6de4a36',
+      hash = '68a6d249b9b3ced338ee22ac971ead076f4f64d1',
       global = new Function('return this')(),
       gcv = '__coverage__',
       coverageData = {
@@ -15,131 +15,131 @@ var cov_22dzt85ga1 = function () {
     statementMap: {
       '0': {
         start: {
-          line: 8,
+          line: 13,
           column: 34
         },
         end: {
-          line: 22,
+          line: 27,
           column: 1
         }
       },
       '1': {
         start: {
-          line: 9,
+          line: 14,
           column: 13
         },
         end: {
-          line: 9,
+          line: 14,
           column: 26
         }
       },
       '2': {
         start: {
-          line: 10,
+          line: 15,
           column: 2
         },
         end: {
-          line: 21,
+          line: 26,
           column: 47
         }
       },
       '3': {
         start: {
-          line: 12,
+          line: 17,
           column: 12
         },
         end: {
-          line: 15,
+          line: 20,
           column: 15
         }
       },
       '4': {
         start: {
-          line: 18,
+          line: 23,
           column: 12
         },
         end: {
-          line: 18,
+          line: 23,
           column: 59
         }
       },
       '5': {
         start: {
-          line: 19,
+          line: 24,
           column: 12
         },
         end: {
-          line: 19,
+          line: 24,
           column: 36
         }
       },
       '6': {
         start: {
-          line: 21,
+          line: 26,
           column: 22
         },
         end: {
-          line: 21,
+          line: 26,
           column: 45
         }
       },
       '7': {
         start: {
-          line: 25,
+          line: 30,
           column: 30
         },
         end: {
-          line: 37,
+          line: 42,
           column: 1
         }
       },
       '8': {
         start: {
-          line: 26,
+          line: 31,
           column: 13
         },
         end: {
-          line: 26,
+          line: 31,
           column: 26
         }
       },
       '9': {
         start: {
-          line: 27,
+          line: 32,
           column: 2
         },
         end: {
-          line: 36,
+          line: 41,
           column: 43
         }
       },
       '10': {
         start: {
-          line: 30,
+          line: 35,
           column: 8
         },
         end: {
-          line: 30,
+          line: 35,
           column: 49
         }
       },
       '11': {
         start: {
-          line: 34,
+          line: 39,
           column: 8
         },
         end: {
-          line: 34,
+          line: 39,
           column: 30
         }
       },
       '12': {
         start: {
-          line: 36,
+          line: 41,
           column: 18
         },
         end: {
-          line: 36,
+          line: 41,
           column: 41
         }
       }
@@ -149,193 +149,193 @@ var cov_22dzt85ga1 = function () {
         name: '(anonymous_0)',
         decl: {
           start: {
-            line: 8,
+            line: 13,
             column: 34
           },
           end: {
-            line: 8,
+            line: 13,
             column: 35
           }
         },
         loc: {
           start: {
-            line: 8,
+            line: 13,
             column: 48
           },
           end: {
-            line: 22,
+            line: 27,
             column: 1
           }
         },
-        line: 8
+        line: 13
       },
       '1': {
         name: '(anonymous_1)',
         decl: {
           start: {
-            line: 11,
+            line: 16,
             column: 16
           },
           end: {
-            line: 11,
+            line: 16,
             column: 17
           }
         },
         loc: {
           start: {
-            line: 11,
+            line: 16,
             column: 25
           },
           end: {
-            line: 16,
+            line: 21,
             column: 11
           }
         },
-        line: 11
+        line: 16
       },
       '2': {
         name: '(anonymous_2)',
         decl: {
           start: {
-            line: 17,
+            line: 22,
             column: 16
           },
           end: {
-            line: 17,
+            line: 22,
             column: 17
           }
         },
         loc: {
           start: {
-            line: 17,
+            line: 22,
             column: 38
           },
           end: {
-            line: 20,
+            line: 25,
             column: 11
           }
         },
-        line: 17
+        line: 22
       },
       '3': {
         name: '(anonymous_3)',
         decl: {
           start: {
-            line: 21,
+            line: 26,
             column: 17
           },
           end: {
-            line: 21,
+            line: 26,
             column: 18
           }
         },
         loc: {
           start: {
-            line: 21,
+            line: 26,
             column: 22
           },
           end: {
-            line: 21,
+            line: 26,
             column: 45
           }
         },
-        line: 21
+        line: 26
       },
       '4': {
         name: '(anonymous_4)',
         decl: {
           start: {
-            line: 25,
+            line: 30,
             column: 30
           },
           end: {
-            line: 25,
+            line: 30,
             column: 31
           }
         },
         loc: {
           start: {
-            line: 25,
+            line: 30,
             column: 44
           },
           end: {
-            line: 37,
+            line: 42,
             column: 1
           }
         },
-        line: 25
+        line: 30
       },
       '5': {
         name: '(anonymous_5)',
         decl: {
           start: {
-            line: 28,
+            line: 33,
             column: 12
           },
           end: {
-            line: 28,
+            line: 33,
             column: 13
           }
         },
         loc: {
           start: {
-            line: 28,
+            line: 33,
             column: 23
           },
           end: {
-            line: 31,
-            column: 7
-          }
-        },
-        line: 28
-      },
-      '6': {
-        name: '(anonymous_6)',
-        decl: {
-          start: {
-            line: 33,
-            column: 12
-          },
-          end: {
-            line: 33,
-            column: 13
-          }
-        },
-        loc: {
-          start: {
-            line: 33,
-            column: 20
-          },
-          end: {
-            line: 35,
+            line: 36,
             column: 7
           }
         },
         line: 33
       },
+      '6': {
+        name: '(anonymous_6)',
+        decl: {
+          start: {
+            line: 38,
+            column: 12
+          },
+          end: {
+            line: 38,
+            column: 13
+          }
+        },
+        loc: {
+          start: {
+            line: 38,
+            column: 20
+          },
+          end: {
+            line: 40,
+            column: 7
+          }
+        },
+        line: 38
+      },
       '7': {
         name: '(anonymous_7)',
         decl: {
           start: {
-            line: 36,
+            line: 41,
             column: 13
           },
           end: {
-            line: 36,
+            line: 41,
             column: 14
           }
         },
         loc: {
           start: {
-            line: 36,
+            line: 41,
             column: 18
           },
           end: {
-            line: 36,
+            line: 41,
             column: 41
           }
         },
-        line: 36
+        line: 41
       }
     },
     branchMap: {},
@@ -375,7 +375,11 @@ var cov_22dzt85ga1 = function () {
 
   coverageData.hash = hash;
   return coverage[path] = coverageData;
-}();
+}(); /**
+      * This module provides express request handlers
+      * for the data provider services.
+      * @module metis-backend/services/data provider
+      */
 
 var _montages = require('../../components/montages');
 

@@ -1,3 +1,8 @@
+/**
+ * This module provides an entrypoint to the users component of the applications
+ * @module metis-backend/components/users
+ */
+
 // user-related db views
 export design from './users.design';
 // view controller

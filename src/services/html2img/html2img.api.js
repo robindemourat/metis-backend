@@ -1,10 +1,9 @@
-
-
 /**
- * Metis-backend
- * =======
- * Html to image api
+ * This module provides route indexes between uri patterns and controllers
+ * for the html2img service.
+ * @module metis-backend/services/html2img
  */
+
 
 import express from 'express';
 

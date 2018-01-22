@@ -717,11 +717,11 @@ var cov_911ccnkco = function () {
 
   coverageData.hash = hash;
   return coverage[path] = coverageData;
-}(); // /**
-//  * Metis-backend
-//  * =======
-//  * Diffusions component controller
-//  */
+}(); /**
+      * This module provides express request handlers
+      * for the diffusions component.
+      * @module metis-backend/components/diffusions
+      */
 
 var _diffusions = require('./diffusions.dal');
 

@@ -1,7 +1,7 @@
 {
   "type": "File",
   "start": 0,
-  "end": 504,
+  "end": 562,
   "loc": {
     "start": {
       "line": 1,
@@ -15,7 +15,7 @@
   "program": {
     "type": "Program",
     "start": 0,
-    "end": 504,
+    "end": 562,
     "loc": {
       "start": {
         "line": 1,
@@ -30,8 +30,8 @@
     "body": [
       {
         "type": "VariableDeclaration",
-        "start": 52,
-        "end": 85,
+        "start": 110,
+        "end": 143,
         "loc": {
           "start": {
             "line": 6,
@@ -45,8 +45,8 @@
         "declarations": [
           {
             "type": "VariableDeclarator",
-            "start": 58,
-            "end": 84,
+            "start": 116,
+            "end": 142,
             "loc": {
               "start": {
                 "line": 6,
@@ -59,8 +59,8 @@
             },
             "id": {
               "type": "Identifier",
-              "start": 58,
-              "end": 64,
+              "start": 116,
+              "end": 122,
               "loc": {
                 "start": {
                   "line": 6,
@@ -77,8 +77,8 @@
             },
             "init": {
               "type": "CallExpression",
-              "start": 67,
-              "end": 84,
+              "start": 125,
+              "end": 142,
               "loc": {
                 "start": {
                   "line": 6,
@@ -91,8 +91,8 @@
               },
               "callee": {
                 "type": "Identifier",
-                "start": 67,
-                "end": 74,
+                "start": 125,
+                "end": 132,
                 "loc": {
                   "start": {
                     "line": 6,
@@ -109,8 +109,8 @@
               "arguments": [
                 {
                   "type": "StringLiteral",
-                  "start": 75,
-                  "end": 83,
+                  "start": 133,
+                  "end": 141,
                   "loc": {
                     "start": {
                       "line": 6,
@@ -136,16 +136,16 @@
         "leadingComments": [
           {
             "type": "CommentBlock",
-            "value": "*\n * Metis-backend\n * =======\n * Crypto utils\n ",
+            "value": "*\n * This module exports several functions related to encryption\n * @module metis-backend/utils/crypto\n ",
             "start": 0,
-            "end": 51,
+            "end": 108,
             "loc": {
               "start": {
                 "line": 1,
                 "column": 0
               },
               "end": {
-                "line": 5,
+                "line": 4,
                 "column": 3
               }
             }
@@ -154,8 +154,8 @@
       },
       {
         "type": "VariableDeclaration",
-        "start": 86,
-        "end": 108,
+        "start": 144,
+        "end": 166,
         "loc": {
           "start": {
             "line": 7,
@@ -169,8 +169,8 @@
         "declarations": [
           {
             "type": "VariableDeclarator",
-            "start": 92,
-            "end": 107,
+            "start": 150,
+            "end": 165,
             "loc": {
               "start": {
                 "line": 7,
@@ -183,8 +183,8 @@
             },
             "id": {
               "type": "Identifier",
-              "start": 92,
-              "end": 102,
+              "start": 150,
+              "end": 160,
               "loc": {
                 "start": {
                   "line": 7,
@@ -200,8 +200,8 @@
             },
             "init": {
               "type": "NumericLiteral",
-              "start": 105,
-              "end": 107,
+              "start": 163,
+              "end": 165,
               "loc": {
                 "start": {
                   "line": 7,
@@ -225,8 +225,8 @@
           {
             "type": "CommentBlock",
             "value": "*\n * Encodes a string into a crypted hash\n * @param {str} pwd - the string to encoded\n * @return {Promise}\n ",
-            "start": 110,
-            "end": 222,
+            "start": 168,
+            "end": 280,
             "loc": {
               "start": {
                 "line": 9,
@@ -242,8 +242,8 @@
       },
       {
         "type": "ExportNamedDeclaration",
-        "start": 223,
-        "end": 281,
+        "start": 281,
+        "end": 339,
         "loc": {
           "start": {
             "line": 14,
@@ -258,8 +258,8 @@
         "source": null,
         "declaration": {
           "type": "VariableDeclaration",
-          "start": 230,
-          "end": 281,
+          "start": 288,
+          "end": 339,
           "loc": {
             "start": {
               "line": 14,
@@ -273,8 +273,8 @@
           "declarations": [
             {
               "type": "VariableDeclarator",
-              "start": 236,
-              "end": 280,
+              "start": 294,
+              "end": 338,
               "loc": {
                 "start": {
                   "line": 14,
@@ -287,8 +287,8 @@
               },
               "id": {
                 "type": "Identifier",
-                "start": 236,
-                "end": 240,
+                "start": 294,
+                "end": 298,
                 "loc": {
                   "start": {
                     "line": 14,
@@ -305,8 +305,8 @@
               },
               "init": {
                 "type": "ArrowFunctionExpression",
-                "start": 243,
-                "end": 280,
+                "start": 301,
+                "end": 338,
                 "loc": {
                   "start": {
                     "line": 14,
@@ -319,8 +319,8 @@
                 },
                 "id": {
                   "type": "Identifier",
-                  "start": 236,
-                  "end": 240,
+                  "start": 294,
+                  "end": 298,
                   "loc": {
                     "start": {
                       "line": 14,
@@ -341,8 +341,8 @@
                 "params": [
                   {
                     "type": "Identifier",
-                    "start": 244,
-                    "end": 247,
+                    "start": 302,
+                    "end": 305,
                     "loc": {
                       "start": {
                         "line": 14,
@@ -359,8 +359,8 @@
                 ],
                 "body": {
                   "type": "CallExpression",
-                  "start": 252,
-                  "end": 280,
+                  "start": 310,
+                  "end": 338,
                   "loc": {
                     "start": {
                       "line": 14,
@@ -373,8 +373,8 @@
                   },
                   "callee": {
                     "type": "MemberExpression",
-                    "start": 252,
-                    "end": 263,
+                    "start": 310,
+                    "end": 321,
                     "loc": {
                       "start": {
                         "line": 14,
@@ -387,8 +387,8 @@
                     },
                     "object": {
                       "type": "Identifier",
-                      "start": 252,
-                      "end": 258,
+                      "start": 310,
+                      "end": 316,
                       "loc": {
                         "start": {
                           "line": 14,
@@ -404,8 +404,8 @@
                     },
                     "property": {
                       "type": "Identifier",
-                      "start": 259,
-                      "end": 263,
+                      "start": 317,
+                      "end": 321,
                       "loc": {
                         "start": {
                           "line": 14,
@@ -424,8 +424,8 @@
                   "arguments": [
                     {
                       "type": "Identifier",
-                      "start": 264,
-                      "end": 267,
+                      "start": 322,
+                      "end": 325,
                       "loc": {
                         "start": {
                           "line": 14,
@@ -441,8 +441,8 @@
                     },
                     {
                       "type": "Identifier",
-                      "start": 269,
-                      "end": 279,
+                      "start": 327,
+                      "end": 337,
                       "loc": {
                         "start": {
                           "line": 14,
@@ -467,8 +467,8 @@
             {
               "type": "CommentBlock",
               "value": "*\n * Encodes a string into a crypted hash\n * @param {str} pwd - the string to encoded\n * @return {Promise}\n ",
-              "start": 110,
-              "end": 222,
+              "start": 168,
+              "end": 280,
               "loc": {
                 "start": {
                   "line": 9,
@@ -485,8 +485,8 @@
             {
               "type": "CommentBlock",
               "value": "*\n * Checks whether string matches hash\n * @param {string} pwd\n * @param {string} hash\n * @return {Promise} - resolves with a boolean as parameter\n ",
-              "start": 283,
-              "end": 435,
+              "start": 341,
+              "end": 493,
               "loc": {
                 "start": {
                   "line": 16,
@@ -504,8 +504,8 @@
           {
             "type": "CommentBlock",
             "value": "*\n * Encodes a string into a crypted hash\n * @param {str} pwd - the string to encoded\n * @return {Promise}\n ",
-            "start": 110,
-            "end": 222,
+            "start": 168,
+            "end": 280,
             "loc": {
               "start": {
                 "line": 9,
@@ -522,8 +522,8 @@
           {
             "type": "CommentBlock",
             "value": "*\n * Checks whether string matches hash\n * @param {string} pwd\n * @param {string} hash\n * @return {Promise} - resolves with a boolean as parameter\n ",
-            "start": 283,
-            "end": 435,
+            "start": 341,
+            "end": 493,
             "loc": {
               "start": {
                 "line": 16,
@@ -539,8 +539,8 @@
       },
       {
         "type": "ExportNamedDeclaration",
-        "start": 436,
-        "end": 503,
+        "start": 494,
+        "end": 561,
         "loc": {
           "start": {
             "line": 22,
@@ -555,8 +555,8 @@
         "source": null,
         "declaration": {
           "type": "VariableDeclaration",
-          "start": 443,
-          "end": 503,
+          "start": 501,
+          "end": 561,
           "loc": {
             "start": {
               "line": 22,
@@ -570,8 +570,8 @@
           "declarations": [
             {
               "type": "VariableDeclarator",
-              "start": 449,
-              "end": 502,
+              "start": 507,
+              "end": 560,
               "loc": {
                 "start": {
                   "line": 22,
@@ -584,8 +584,8 @@
               },
               "id": {
                 "type": "Identifier",
-                "start": 449,
-                "end": 459,
+                "start": 507,
+                "end": 517,
                 "loc": {
                   "start": {
                     "line": 22,
@@ -602,8 +602,8 @@
               },
               "init": {
                 "type": "ArrowFunctionExpression",
-                "start": 462,
-                "end": 502,
+                "start": 520,
+                "end": 560,
                 "loc": {
                   "start": {
                     "line": 22,
@@ -616,8 +616,8 @@
                 },
                 "id": {
                   "type": "Identifier",
-                  "start": 449,
-                  "end": 459,
+                  "start": 507,
+                  "end": 517,
                   "loc": {
                     "start": {
                       "line": 22,
@@ -638,8 +638,8 @@
                 "params": [
                   {
                     "type": "Identifier",
-                    "start": 463,
-                    "end": 466,
+                    "start": 521,
+                    "end": 524,
                     "loc": {
                       "start": {
                         "line": 22,
@@ -655,8 +655,8 @@
                   },
                   {
                     "type": "Identifier",
-                    "start": 468,
-                    "end": 472,
+                    "start": 526,
+                    "end": 530,
                     "loc": {
                       "start": {
                         "line": 22,
@@ -673,8 +673,8 @@
                 ],
                 "body": {
                   "type": "CallExpression",
-                  "start": 477,
-                  "end": 502,
+                  "start": 535,
+                  "end": 560,
                   "loc": {
                     "start": {
                       "line": 22,
@@ -687,8 +687,8 @@
                   },
                   "callee": {
                     "type": "MemberExpression",
-                    "start": 477,
-                    "end": 491,
+                    "start": 535,
+                    "end": 549,
                     "loc": {
                       "start": {
                         "line": 22,
@@ -701,8 +701,8 @@
                     },
                     "object": {
                       "type": "Identifier",
-                      "start": 477,
-                      "end": 483,
+                      "start": 535,
+                      "end": 541,
                       "loc": {
                         "start": {
                           "line": 22,
@@ -718,8 +718,8 @@
                     },
                     "property": {
                       "type": "Identifier",
-                      "start": 484,
-                      "end": 491,
+                      "start": 542,
+                      "end": 549,
                       "loc": {
                         "start": {
                           "line": 22,
@@ -738,8 +738,8 @@
                   "arguments": [
                     {
                       "type": "Identifier",
-                      "start": 492,
-                      "end": 495,
+                      "start": 550,
+                      "end": 553,
                       "loc": {
                         "start": {
                           "line": 22,
@@ -755,8 +755,8 @@
                     },
                     {
                       "type": "Identifier",
-                      "start": 497,
-                      "end": 501,
+                      "start": 555,
+                      "end": 559,
                       "loc": {
                         "start": {
                           "line": 22,
@@ -781,8 +781,8 @@
             {
               "type": "CommentBlock",
               "value": "*\n * Checks whether string matches hash\n * @param {string} pwd\n * @param {string} hash\n * @return {Promise} - resolves with a boolean as parameter\n ",
-              "start": 283,
-              "end": 435,
+              "start": 341,
+              "end": 493,
               "loc": {
                 "start": {
                   "line": 16,
@@ -801,8 +801,8 @@
           {
             "type": "CommentBlock",
             "value": "*\n * Checks whether string matches hash\n * @param {string} pwd\n * @param {string} hash\n * @return {Promise} - resolves with a boolean as parameter\n ",
-            "start": 283,
-            "end": 435,
+            "start": 341,
+            "end": 493,
             "loc": {
               "start": {
                 "line": 16,
@@ -822,16 +822,16 @@
   "comments": [
     {
       "type": "CommentBlock",
-      "value": "*\n * Metis-backend\n * =======\n * Crypto utils\n ",
+      "value": "*\n * This module exports several functions related to encryption\n * @module metis-backend/utils/crypto\n ",
       "start": 0,
-      "end": 51,
+      "end": 108,
       "loc": {
         "start": {
           "line": 1,
           "column": 0
         },
         "end": {
-          "line": 5,
+          "line": 4,
           "column": 3
         }
       }
@@ -839,8 +839,8 @@
     {
       "type": "CommentBlock",
       "value": "*\n * Encodes a string into a crypted hash\n * @param {str} pwd - the string to encoded\n * @return {Promise}\n ",
-      "start": 110,
-      "end": 222,
+      "start": 168,
+      "end": 280,
       "loc": {
         "start": {
           "line": 9,
@@ -855,8 +855,8 @@
     {
       "type": "CommentBlock",
       "value": "*\n * Checks whether string matches hash\n * @param {string} pwd\n * @param {string} hash\n * @return {Promise} - resolves with a boolean as parameter\n ",
-      "start": 283,
-      "end": 435,
+      "start": 341,
+      "end": 493,
       "loc": {
         "start": {
           "line": 16,
@@ -872,16 +872,16 @@
   "tokens": [
     {
       "type": "CommentBlock",
-      "value": "*\n * Metis-backend\n * =======\n * Crypto utils\n ",
+      "value": "*\n * This module exports several functions related to encryption\n * @module metis-backend/utils/crypto\n ",
       "start": 0,
-      "end": 51,
+      "end": 108,
       "loc": {
         "start": {
           "line": 1,
           "column": 0
         },
         "end": {
-          "line": 5,
+          "line": 4,
           "column": 3
         }
       }
@@ -901,8 +901,8 @@
         "updateContext": null
       },
       "value": "const",
-      "start": 52,
-      "end": 57,
+      "start": 110,
+      "end": 115,
       "loc": {
         "start": {
           "line": 6,
@@ -927,8 +927,8 @@
         "binop": null
       },
       "value": "bcrypt",
-      "start": 58,
-      "end": 64,
+      "start": 116,
+      "end": 122,
       "loc": {
         "start": {
           "line": 6,
@@ -954,8 +954,8 @@
         "updateContext": null
       },
       "value": "=",
-      "start": 65,
-      "end": 66,
+      "start": 123,
+      "end": 124,
       "loc": {
         "start": {
           "line": 6,
@@ -980,8 +980,8 @@
         "binop": null
       },
       "value": "require",
-      "start": 67,
-      "end": 74,
+      "start": 125,
+      "end": 132,
       "loc": {
         "start": {
           "line": 6,
@@ -1005,8 +1005,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 74,
-      "end": 75,
+      "start": 132,
+      "end": 133,
       "loc": {
         "start": {
           "line": 6,
@@ -1032,8 +1032,8 @@
         "updateContext": null
       },
       "value": "bcrypt",
-      "start": 75,
-      "end": 83,
+      "start": 133,
+      "end": 141,
       "loc": {
         "start": {
           "line": 6,
@@ -1057,8 +1057,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 83,
-      "end": 84,
+      "start": 141,
+      "end": 142,
       "loc": {
         "start": {
           "line": 6,
@@ -1083,8 +1083,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 84,
-      "end": 85,
+      "start": 142,
+      "end": 143,
       "loc": {
         "start": {
           "line": 6,
@@ -1111,8 +1111,8 @@
         "updateContext": null
       },
       "value": "const",
-      "start": 86,
-      "end": 91,
+      "start": 144,
+      "end": 149,
       "loc": {
         "start": {
           "line": 7,
@@ -1137,8 +1137,8 @@
         "binop": null
       },
       "value": "saltRounds",
-      "start": 92,
-      "end": 102,
+      "start": 150,
+      "end": 160,
       "loc": {
         "start": {
           "line": 7,
@@ -1164,8 +1164,8 @@
         "updateContext": null
       },
       "value": "=",
-      "start": 103,
-      "end": 104,
+      "start": 161,
+      "end": 162,
       "loc": {
         "start": {
           "line": 7,
@@ -1191,8 +1191,8 @@
         "updateContext": null
       },
       "value": 10,
-      "start": 105,
-      "end": 107,
+      "start": 163,
+      "end": 165,
       "loc": {
         "start": {
           "line": 7,
@@ -1217,8 +1217,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 107,
-      "end": 108,
+      "start": 165,
+      "end": 166,
       "loc": {
         "start": {
           "line": 7,
@@ -1233,8 +1233,8 @@
     {
       "type": "CommentBlock",
       "value": "*\n * Encodes a string into a crypted hash\n * @param {str} pwd - the string to encoded\n * @return {Promise}\n ",
-      "start": 110,
-      "end": 222,
+      "start": 168,
+      "end": 280,
       "loc": {
         "start": {
           "line": 9,
@@ -1261,8 +1261,8 @@
         "updateContext": null
       },
       "value": "export",
-      "start": 223,
-      "end": 229,
+      "start": 281,
+      "end": 287,
       "loc": {
         "start": {
           "line": 14,
@@ -1289,8 +1289,8 @@
         "updateContext": null
       },
       "value": "const",
-      "start": 230,
-      "end": 235,
+      "start": 288,
+      "end": 293,
       "loc": {
         "start": {
           "line": 14,
@@ -1315,8 +1315,8 @@
         "binop": null
       },
       "value": "hash",
-      "start": 236,
-      "end": 240,
+      "start": 294,
+      "end": 298,
       "loc": {
         "start": {
           "line": 14,
@@ -1342,8 +1342,8 @@
         "updateContext": null
       },
       "value": "=",
-      "start": 241,
-      "end": 242,
+      "start": 299,
+      "end": 300,
       "loc": {
         "start": {
           "line": 14,
@@ -1367,8 +1367,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 243,
-      "end": 244,
+      "start": 301,
+      "end": 302,
       "loc": {
         "start": {
           "line": 14,
@@ -1393,8 +1393,8 @@
         "binop": null
       },
       "value": "pwd",
-      "start": 244,
-      "end": 247,
+      "start": 302,
+      "end": 305,
       "loc": {
         "start": {
           "line": 14,
@@ -1418,8 +1418,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 247,
-      "end": 248,
+      "start": 305,
+      "end": 306,
       "loc": {
         "start": {
           "line": 14,
@@ -1444,8 +1444,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 249,
-      "end": 251,
+      "start": 307,
+      "end": 309,
       "loc": {
         "start": {
           "line": 14,
@@ -1470,8 +1470,8 @@
         "binop": null
       },
       "value": "bcrypt",
-      "start": 252,
-      "end": 258,
+      "start": 310,
+      "end": 316,
       "loc": {
         "start": {
           "line": 14,
@@ -1496,8 +1496,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 258,
-      "end": 259,
+      "start": 316,
+      "end": 317,
       "loc": {
         "start": {
           "line": 14,
@@ -1522,8 +1522,8 @@
         "binop": null
       },
       "value": "hash",
-      "start": 259,
-      "end": 263,
+      "start": 317,
+      "end": 321,
       "loc": {
         "start": {
           "line": 14,
@@ -1547,8 +1547,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 263,
-      "end": 264,
+      "start": 321,
+      "end": 322,
       "loc": {
         "start": {
           "line": 14,
@@ -1573,8 +1573,8 @@
         "binop": null
       },
       "value": "pwd",
-      "start": 264,
-      "end": 267,
+      "start": 322,
+      "end": 325,
       "loc": {
         "start": {
           "line": 14,
@@ -1599,8 +1599,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 267,
-      "end": 268,
+      "start": 325,
+      "end": 326,
       "loc": {
         "start": {
           "line": 14,
@@ -1625,8 +1625,8 @@
         "binop": null
       },
       "value": "saltRounds",
-      "start": 269,
-      "end": 279,
+      "start": 327,
+      "end": 337,
       "loc": {
         "start": {
           "line": 14,
@@ -1650,8 +1650,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 279,
-      "end": 280,
+      "start": 337,
+      "end": 338,
       "loc": {
         "start": {
           "line": 14,
@@ -1676,8 +1676,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 280,
-      "end": 281,
+      "start": 338,
+      "end": 339,
       "loc": {
         "start": {
           "line": 14,
@@ -1692,8 +1692,8 @@
     {
       "type": "CommentBlock",
       "value": "*\n * Checks whether string matches hash\n * @param {string} pwd\n * @param {string} hash\n * @return {Promise} - resolves with a boolean as parameter\n ",
-      "start": 283,
-      "end": 435,
+      "start": 341,
+      "end": 493,
       "loc": {
         "start": {
           "line": 16,
@@ -1720,8 +1720,8 @@
         "updateContext": null
       },
       "value": "export",
-      "start": 436,
-      "end": 442,
+      "start": 494,
+      "end": 500,
       "loc": {
         "start": {
           "line": 22,
@@ -1748,8 +1748,8 @@
         "updateContext": null
       },
       "value": "const",
-      "start": 443,
-      "end": 448,
+      "start": 501,
+      "end": 506,
       "loc": {
         "start": {
           "line": 22,
@@ -1774,8 +1774,8 @@
         "binop": null
       },
       "value": "comparePwd",
-      "start": 449,
-      "end": 459,
+      "start": 507,
+      "end": 517,
       "loc": {
         "start": {
           "line": 22,
@@ -1801,8 +1801,8 @@
         "updateContext": null
       },
       "value": "=",
-      "start": 460,
-      "end": 461,
+      "start": 518,
+      "end": 519,
       "loc": {
         "start": {
           "line": 22,
@@ -1826,8 +1826,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 462,
-      "end": 463,
+      "start": 520,
+      "end": 521,
       "loc": {
         "start": {
           "line": 22,
@@ -1852,8 +1852,8 @@
         "binop": null
       },
       "value": "pwd",
-      "start": 463,
-      "end": 466,
+      "start": 521,
+      "end": 524,
       "loc": {
         "start": {
           "line": 22,
@@ -1878,8 +1878,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 466,
-      "end": 467,
+      "start": 524,
+      "end": 525,
       "loc": {
         "start": {
           "line": 22,
@@ -1904,8 +1904,8 @@
         "binop": null
       },
       "value": "hash",
-      "start": 468,
-      "end": 472,
+      "start": 526,
+      "end": 530,
       "loc": {
         "start": {
           "line": 22,
@@ -1929,8 +1929,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 472,
-      "end": 473,
+      "start": 530,
+      "end": 531,
       "loc": {
         "start": {
           "line": 22,
@@ -1955,8 +1955,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 474,
-      "end": 476,
+      "start": 532,
+      "end": 534,
       "loc": {
         "start": {
           "line": 22,
@@ -1981,8 +1981,8 @@
         "binop": null
       },
       "value": "bcrypt",
-      "start": 477,
-      "end": 483,
+      "start": 535,
+      "end": 541,
       "loc": {
         "start": {
           "line": 22,
@@ -2007,8 +2007,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 483,
-      "end": 484,
+      "start": 541,
+      "end": 542,
       "loc": {
         "start": {
           "line": 22,
@@ -2033,8 +2033,8 @@
         "binop": null
       },
       "value": "compare",
-      "start": 484,
-      "end": 491,
+      "start": 542,
+      "end": 549,
       "loc": {
         "start": {
           "line": 22,
@@ -2058,8 +2058,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 491,
-      "end": 492,
+      "start": 549,
+      "end": 550,
       "loc": {
         "start": {
           "line": 22,
@@ -2084,8 +2084,8 @@
         "binop": null
       },
       "value": "pwd",
-      "start": 492,
-      "end": 495,
+      "start": 550,
+      "end": 553,
       "loc": {
         "start": {
           "line": 22,
@@ -2110,8 +2110,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 495,
-      "end": 496,
+      "start": 553,
+      "end": 554,
       "loc": {
         "start": {
           "line": 22,
@@ -2136,8 +2136,8 @@
         "binop": null
       },
       "value": "hash",
-      "start": 497,
-      "end": 501,
+      "start": 555,
+      "end": 559,
       "loc": {
         "start": {
           "line": 22,
@@ -2161,8 +2161,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 501,
-      "end": 502,
+      "start": 559,
+      "end": 560,
       "loc": {
         "start": {
           "line": 22,
@@ -2187,8 +2187,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 502,
-      "end": 503,
+      "start": 560,
+      "end": 561,
       "loc": {
         "start": {
           "line": 22,
@@ -2213,8 +2213,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 504,
-      "end": 504,
+      "start": 562,
+      "end": 562,
       "loc": {
         "start": {
           "line": 23,

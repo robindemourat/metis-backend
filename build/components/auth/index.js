@@ -28,7 +28,10 @@ var cov_50cae31er = function () {
 
   coverageData.hash = hash;
   return coverage[path] = coverageData;
-}();
+}(); /**
+      * This module provides an entrypoint to the auth component of the applications
+      * @module metis-backend/components/auth
+      */
 
 var _auth = require('./auth.controller');
 

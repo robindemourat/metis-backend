@@ -1,3 +1,9 @@
+/**
+ * This module provides main service function
+ * for the html2img service.
+ * @module metis-backend/services/html2img
+ */
+
 import webshot from 'webshot';
 
 export default function (html, path, callback) {

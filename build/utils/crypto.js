@@ -150,10 +150,10 @@ var cov_30hjr3eoc = function () {
 }();
 
 /**
- * Metis-backend
- * =======
- * Crypto utils
+ * This module exports several functions related to encryption
+ * @module metis-backend/utils/crypto
  */
+
 var bcrypt = (cov_30hjr3eoc.s[0]++, require('bcrypt'));
 var saltRounds = (cov_30hjr3eoc.s[1]++, 10);
 

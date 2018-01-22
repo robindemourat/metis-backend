@@ -1,7 +1,7 @@
 /**
- * Metis-backend
- * =======
- * User data access layer
+ * This module provides couchdb database operations managers
+ * for the users component.
+ * @module metis-backend/components/users
  */
 
 import db from '../../utils/plugDb';

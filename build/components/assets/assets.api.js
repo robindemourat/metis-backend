@@ -118,9 +118,9 @@ var cov_tnxaix1zt = function () {
   coverageData.hash = hash;
   return coverage[path] = coverageData;
 }(); /**
-      * Metis-backend
-      * =======
-      * Asset api
+      * This module provides route indexes between uri patterns and controllers
+      * for the assets objects.
+      * @module metis-backend/components/assets
       */
 
 var _express = require('express');

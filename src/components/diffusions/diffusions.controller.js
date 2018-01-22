@@ -1,8 +1,8 @@
-// /**
-//  * Metis-backend
-//  * =======
-//  * Diffusions component controller
-//  */
+/**
+ * This module provides express request handlers
+ * for the diffusions component.
+ * @module metis-backend/components/diffusions
+ */
 
 import {
   getDiffusions as getDiffusionsDAL,

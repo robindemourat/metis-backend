@@ -96,9 +96,9 @@ var cov_513kyso2p = function () {
   coverageData.hash = hash;
   return coverage[path] = coverageData;
 }(); /**
-      * Metis-backend
-      * =======
-      * Montage api
+      * This module provides route indexes between uri patterns and controllers
+      * for the montages objects.
+      * @module metis-backend/components/montages
       */
 
 var _express = require('express');

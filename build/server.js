@@ -2,7 +2,7 @@
 
 var cov_fd9w2gpym = function () {
   var path = '/Users/rawbin/Documents/Projets/collaborations/ensad-publishing/prototype/metis-backend/src/server.js',
-      hash = 'db9479bfce5117c22bafc56dbb2251108858e78d',
+      hash = 'ddc28d1a6e40b3f94e6b4f6daad7fd7a70721993',
       global = new Function('return this')(),
       gcv = '__coverage__',
       coverageData = {
@@ -10,41 +10,41 @@ var cov_fd9w2gpym = function () {
     statementMap: {
       '0': {
         start: {
-          line: 10,
+          line: 17,
           column: 15
         },
         end: {
-          line: 10,
+          line: 17,
           column: 26
         }
       },
       '1': {
         start: {
-          line: 14,
+          line: 21,
           column: 4
         },
         end: {
-          line: 14,
+          line: 21,
           column: 10
         }
       },
       '2': {
         start: {
-          line: 45,
+          line: 52,
           column: 0
         },
         end: {
-          line: 47,
+          line: 54,
           column: 3
         }
       },
       '3': {
         start: {
-          line: 46,
+          line: 53,
           column: 2
         },
         end: {
-          line: 46,
+          line: 53,
           column: 95
         }
       }
@@ -54,25 +54,25 @@ var cov_fd9w2gpym = function () {
         name: '(anonymous_0)',
         decl: {
           start: {
-            line: 45,
+            line: 52,
             column: 23
           },
           end: {
-            line: 45,
+            line: 52,
             column: 24
           }
         },
         loc: {
           start: {
-            line: 45,
+            line: 52,
             column: 35
           },
           end: {
-            line: 47,
+            line: 54,
             column: 1
           }
         },
-        line: 45
+        line: 52
       }
     },
     branchMap: {},
@@ -96,7 +96,14 @@ var cov_fd9w2gpym = function () {
 
   coverageData.hash = hash;
   return coverage[path] = coverageData;
-}(); // import fs from 'fs';
+}(); /**
+      * Metis-backend
+      * =======
+      * This is the application entrypoint.
+      * It starts an express app listening at specified port.
+      */
+
+// import fs from 'fs';
 // import https from 'https';
 /* eslint no-console : 0 */
 

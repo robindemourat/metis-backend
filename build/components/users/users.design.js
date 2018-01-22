@@ -29,6 +29,12 @@ var cov_19pzf4gpza = function () {
   return coverage[path] = coverageData;
 }();
 
+/**
+ * This module provides couchdb designs
+ * for the users component.
+ * @module metis-backend/components/users
+ */
+
 exports.default = {
   "views": {
     "by_email_and_password": {

@@ -1,3 +1,9 @@
+/**
+ * This module provides couchdb designs
+ * for the montages component.
+ * @module metis-backend/components/montages
+ */
+
 export default {
   "views": {
     "by_id": {

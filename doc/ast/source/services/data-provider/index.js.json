@@ -1,28 +1,28 @@
 {
   "type": "File",
   "start": 0,
-  "end": 42,
+  "end": 185,
   "loc": {
     "start": {
       "line": 1,
       "column": 0
     },
     "end": {
-      "line": 2,
+      "line": 7,
       "column": 0
     }
   },
   "program": {
     "type": "Program",
     "start": 0,
-    "end": 42,
+    "end": 185,
     "loc": {
       "start": {
         "line": 1,
         "column": 0
       },
       "end": {
-        "line": 2,
+        "line": 7,
         "column": 0
       }
     },
@@ -30,63 +30,65 @@
     "body": [
       {
         "type": "ExportNamedDeclaration",
-        "start": 0,
-        "end": 41,
+        "start": 143,
+        "end": 184,
         "loc": {
           "start": {
-            "line": 1,
+            "line": 6,
             "column": 0
           },
           "end": {
-            "line": 1,
+            "line": 6,
             "column": 41
           }
         },
         "specifiers": [
           {
             "type": "ExportDefaultSpecifier",
-            "start": 7,
-            "end": 13,
+            "start": 150,
+            "end": 156,
             "loc": {
               "start": {
-                "line": 1,
+                "line": 6,
                 "column": 7
               },
               "end": {
-                "line": 1,
+                "line": 6,
                 "column": 13
               }
             },
             "exported": {
               "type": "Identifier",
-              "start": 7,
-              "end": 13,
+              "start": 150,
+              "end": 156,
               "loc": {
                 "start": {
-                  "line": 1,
+                  "line": 6,
                   "column": 7
                 },
                 "end": {
-                  "line": 1,
+                  "line": 6,
                   "column": 13
                 },
                 "identifierName": "router"
               },
-              "name": "router"
-            }
+              "name": "router",
+              "leadingComments": null
+            },
+            "leadingComments": null
           }
         ],
         "source": {
           "type": "StringLiteral",
-          "start": 19,
-          "end": 40,
+          "start": 162,
+          "end": 183,
           "loc": {
             "start": {
-              "line": 1,
+              "line": 6,
               "column": 19
             },
             "end": {
-              "line": 1,
+              "line": 6,
               "column": 40
             }
           },
@@ -95,13 +97,64 @@
             "raw": "'./data-provider.api'"
           },
           "value": "./data-provider.api"
-        }
+        },
+        "leadingComments": [
+          {
+            "type": "CommentBlock",
+            "value": "*\n * This module provides an entrypoint to the data-provider service of the application\n * @module metis-backend/services/data-provider\n ",
+            "start": 0,
+            "end": 141,
+            "loc": {
+              "start": {
+                "line": 1,
+                "column": 0
+              },
+              "end": {
+                "line": 4,
+                "column": 3
+              }
+            }
+          }
+        ]
       }
     ],
     "directives": []
   },
-  "comments": [],
+  "comments": [
+    {
+      "type": "CommentBlock",
+      "value": "*\n * This module provides an entrypoint to the data-provider service of the application\n * @module metis-backend/services/data-provider\n ",
+      "start": 0,
+      "end": 141,
+      "loc": {
+        "start": {
+          "line": 1,
+          "column": 0
+        },
+        "end": {
+          "line": 4,
+          "column": 3
+        }
+      }
+    }
+  ],
   "tokens": [
+    {
+      "type": "CommentBlock",
+      "value": "*\n * This module provides an entrypoint to the data-provider service of the application\n * @module metis-backend/services/data-provider\n ",
+      "start": 0,
+      "end": 141,
+      "loc": {
+        "start": {
+          "line": 1,
+          "column": 0
+        },
+        "end": {
+          "line": 4,
+          "column": 3
+        }
+      }
+    },
     {
       "type": {
         "label": "export",
@@ -117,15 +170,15 @@
         "updateContext": null
       },
       "value": "export",
-      "start": 0,
-      "end": 6,
+      "start": 143,
+      "end": 149,
       "loc": {
         "start": {
-          "line": 1,
+          "line": 6,
           "column": 0
         },
         "end": {
-          "line": 1,
+          "line": 6,
           "column": 6
         }
       }
@@ -143,15 +196,15 @@
         "binop": null
       },
       "value": "router",
-      "start": 7,
-      "end": 13,
+      "start": 150,
+      "end": 156,
       "loc": {
         "start": {
-          "line": 1,
+          "line": 6,
           "column": 7
         },
         "end": {
-          "line": 1,
+          "line": 6,
           "column": 13
         }
       }
@@ -169,15 +222,15 @@
         "binop": null
       },
       "value": "from",
-      "start": 14,
-      "end": 18,
+      "start": 157,
+      "end": 161,
       "loc": {
         "start": {
-          "line": 1,
+          "line": 6,
           "column": 14
         },
         "end": {
-          "line": 1,
+          "line": 6,
           "column": 18
         }
       }
@@ -196,15 +249,15 @@
         "updateContext": null
       },
       "value": "./data-provider.api",
-      "start": 19,
-      "end": 40,
+      "start": 162,
+      "end": 183,
       "loc": {
         "start": {
-          "line": 1,
+          "line": 6,
           "column": 19
         },
         "end": {
-          "line": 1,
+          "line": 6,
           "column": 40
         }
       }
@@ -222,15 +275,15 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 40,
-      "end": 41,
+      "start": 183,
+      "end": 184,
       "loc": {
         "start": {
-          "line": 1,
+          "line": 6,
           "column": 40
         },
         "end": {
-          "line": 1,
+          "line": 6,
           "column": 41
         }
       }
@@ -248,15 +301,15 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 42,
-      "end": 42,
+      "start": 185,
+      "end": 185,
       "loc": {
         "start": {
-          "line": 2,
+          "line": 7,
           "column": 0
         },
         "end": {
-          "line": 2,
+          "line": 7,
           "column": 0
         }
       }

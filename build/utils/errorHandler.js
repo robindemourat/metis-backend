@@ -10,7 +10,7 @@ var _promise2 = _interopRequireDefault(_promise);
 
 var cov_2dnul4qubi = function () {
   var path = '/Users/rawbin/Documents/Projets/collaborations/ensad-publishing/prototype/metis-backend/src/utils/errorHandler.js',
-      hash = '7d7e2381c4ac6b33f7305abb9dacf4f5313aa473',
+      hash = '1eb45ac625929235ad49e5e470ea263c810a90e9',
       global = new Function('return this')(),
       gcv = '__coverage__',
       coverageData = {
@@ -42,77 +42,77 @@ var cov_2dnul4qubi = function () {
           column: 0
         },
         end: {
-          line: 26,
+          line: 28,
           column: 3
         }
       },
       '3': {
         start: {
-          line: 25,
+          line: 27,
           column: 3
         },
         end: {
-          line: 25,
+          line: 27,
           column: 15
         }
       },
       '4': {
         start: {
-          line: 37,
+          line: 39,
           column: 36
         },
         end: {
-          line: 37,
+          line: 39,
           column: 47
         }
       },
       '5': {
         start: {
-          line: 37,
+          line: 39,
           column: 42
         },
         end: {
-          line: 37,
+          line: 39,
           column: 47
         }
       },
       '6': {
         start: {
-          line: 40,
+          line: 42,
           column: 4
         },
         end: {
-          line: 47,
+          line: 49,
           column: 6
         }
       },
       '7': {
         start: {
-          line: 41,
+          line: 43,
           column: 8
         },
         end: {
-          line: 46,
+          line: 48,
           column: 11
         }
       },
       '8': {
         start: {
-          line: 42,
+          line: 44,
           column: 10
         },
         end: {
-          line: 42,
+          line: 44,
           column: 30
         }
       },
       '9': {
         start: {
-          line: 45,
+          line: 47,
           column: 10
         },
         end: {
-          line: 45,
+          line: 47,
           column: 54
         }
       }
@@ -160,7 +160,7 @@ var cov_2dnul4qubi = function () {
             column: 48
           },
           end: {
-            line: 26,
+            line: 28,
             column: 1
           }
         },
@@ -170,97 +170,97 @@ var cov_2dnul4qubi = function () {
         name: '(anonymous_2)',
         decl: {
           start: {
-            line: 37,
+            line: 39,
             column: 36
           },
           end: {
-            line: 37,
+            line: 39,
             column: 37
           }
         },
         loc: {
           start: {
-            line: 37,
+            line: 39,
             column: 42
           },
           end: {
-            line: 37,
+            line: 39,
             column: 47
           }
         },
-        line: 37
+        line: 39
       },
       '3': {
         name: 'errorHandler',
         decl: {
           start: {
-            line: 39,
+            line: 41,
             column: 24
           },
           end: {
-            line: 39,
+            line: 41,
             column: 36
           }
         },
         loc: {
           start: {
-            line: 39,
+            line: 41,
             column: 44
           },
           end: {
-            line: 48,
+            line: 50,
             column: 3
           }
         },
-        line: 39
+        line: 41
       },
       '4': {
         name: '(anonymous_4)',
         decl: {
           start: {
-            line: 40,
+            line: 42,
             column: 23
           },
           end: {
-            line: 40,
+            line: 42,
             column: 24
           }
         },
         loc: {
           start: {
-            line: 40,
+            line: 42,
             column: 40
           },
           end: {
-            line: 47,
+            line: 49,
             column: 5
           }
         },
-        line: 40
+        line: 42
       },
       '5': {
         name: '(anonymous_5)',
         decl: {
           start: {
-            line: 41,
+            line: 43,
             column: 27
           },
           end: {
-            line: 41,
+            line: 43,
             column: 28
           }
         },
         loc: {
           start: {
-            line: 41,
+            line: 43,
             column: 38
           },
           end: {
-            line: 46,
+            line: 48,
             column: 9
           }
         },
-        line: 41
+        line: 43
       }
     },
     branchMap: {},
@@ -329,7 +329,9 @@ process.on('uncaughtException', function (error) {
   cov_2dnul4qubi.f[1]++;
   cov_2dnul4qubi.s[3]++;
 
-  // @todo setup error types system
+  /*
+   * @todo setup error types system
+   */
   // errorManagement.handler.handleError(error);
   // if(!errorManagement.handler.isTrustedError(error))
   // console.log(error, error.trace);

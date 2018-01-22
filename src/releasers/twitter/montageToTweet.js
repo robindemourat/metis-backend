@@ -1,4 +1,8 @@
-
+/**
+ * This module provides a function that formats a micropublication montage
+ * into a tweet-compatible representation
+ * @module metis-backend/releasers/twitter
+ */
 
 const TEXT_LIMIT = 280;
 

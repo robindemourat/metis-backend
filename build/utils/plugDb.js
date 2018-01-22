@@ -87,10 +87,10 @@ var cov_2d4sihlqgn = function () {
 }();
 
 /**
- * Metis-backend
- * =======
- * Couchdb connection script
+ * This module handles the setup of couchdb driver for the app
+ * @module metis-backend/utils/plugDb
  */
+
 var Promise = (cov_2d4sihlqgn.s[0]++, require('bluebird'));
 
 var config = (cov_2d4sihlqgn.s[1]++, require('./config').getConfig());

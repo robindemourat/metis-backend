@@ -18,7 +18,7 @@ var _promise2 = _interopRequireDefault(_promise);
 
 var cov_l44h4nr0x = function () {
   var path = '/Users/rawbin/Documents/Projets/collaborations/ensad-publishing/prototype/metis-backend/src/releasers/pdf/pdf.generator.js',
-      hash = 'f860a2a96c3d8f9827286119761a88f5dc56377d',
+      hash = '71a4cfa2a43fc9fcc1e7dd57174f15f545f25d0b',
       global = new Function('return this')(),
       gcv = '__coverage__',
       coverageData = {
@@ -26,101 +26,101 @@ var cov_l44h4nr0x = function () {
     statementMap: {
       '0': {
         start: {
-          line: 23,
+          line: 28,
           column: 2
         },
         end: {
-          line: 68,
+          line: 73,
           column: 5
         }
       },
       '1': {
         start: {
-          line: 24,
+          line: 29,
           column: 16
         },
         end: {
-          line: 48,
+          line: 53,
           column: 5
         }
       },
       '2': {
         start: {
-          line: 51,
+          line: 56,
           column: 15
         },
         end: {
-          line: 51,
+          line: 56,
           column: 27
         }
       },
       '3': {
         start: {
-          line: 52,
+          line: 57,
           column: 21
         },
         end: {
-          line: 52,
+          line: 57,
           column: 48
         }
       },
       '4': {
         start: {
-          line: 53,
+          line: 58,
           column: 20
         },
         end: {
-          line: 53,
+          line: 58,
           column: 48
         }
       },
       '5': {
         start: {
-          line: 54,
+          line: 59,
           column: 4
         },
         end: {
-          line: 67,
+          line: 72,
           column: 21
         }
       },
       '6': {
         start: {
-          line: 56,
+          line: 61,
           column: 8
         },
         end: {
-          line: 59,
+          line: 64,
           column: 21
         }
       },
       '7': {
         start: {
-          line: 62,
+          line: 67,
           column: 8
         },
         end: {
-          line: 62,
+          line: 67,
           column: 40
         }
       },
       '8': {
         start: {
-          line: 64,
+          line: 69,
           column: 18
         },
         end: {
-          line: 64,
+          line: 69,
           column: 34
         }
       },
       '9': {
         start: {
-          line: 65,
+          line: 70,
           column: 18
         },
         end: {
-          line: 65,
+          line: 70,
           column: 33
         }
       }
@@ -130,171 +130,171 @@ var cov_l44h4nr0x = function () {
         name: 'generatePdf',
         decl: {
           start: {
-            line: 13,
+            line: 18,
             column: 24
           },
           end: {
-            line: 13,
+            line: 18,
             column: 35
           }
         },
         loc: {
           start: {
-            line: 22,
+            line: 27,
             column: 20
           },
           end: {
-            line: 69,
+            line: 74,
             column: 1
           }
         },
-        line: 22
+        line: 27
       },
       '1': {
         name: '(anonymous_1)',
         decl: {
           start: {
-            line: 23,
+            line: 28,
             column: 21
           },
           end: {
-            line: 23,
+            line: 28,
             column: 22
           }
         },
         loc: {
           start: {
-            line: 23,
+            line: 28,
             column: 42
           },
           end: {
-            line: 68,
+            line: 73,
             column: 3
           }
         },
-        line: 23
+        line: 28
       },
       '2': {
         name: '(anonymous_2)',
         decl: {
           start: {
-            line: 55,
+            line: 60,
             column: 12
           },
           end: {
-            line: 55,
+            line: 60,
             column: 13
           }
         },
         loc: {
           start: {
-            line: 55,
+            line: 60,
             column: 18
           },
           end: {
-            line: 60,
+            line: 65,
             column: 7
           }
         },
-        line: 55
+        line: 60
       },
       '3': {
         name: '(anonymous_3)',
         decl: {
           start: {
-            line: 61,
+            line: 66,
             column: 12
           },
           end: {
-            line: 61,
+            line: 66,
             column: 13
           }
         },
         loc: {
           start: {
-            line: 61,
+            line: 66,
             column: 18
           },
           end: {
-            line: 63,
+            line: 68,
             column: 7
           }
         },
-        line: 61
+        line: 66
       },
       '4': {
         name: '(anonymous_4)',
         decl: {
           start: {
-            line: 64,
+            line: 69,
             column: 12
           },
           end: {
-            line: 64,
+            line: 69,
             column: 13
           }
         },
         loc: {
           start: {
-            line: 64,
+            line: 69,
             column: 18
           },
           end: {
-            line: 64,
+            line: 69,
             column: 34
           }
         },
-        line: 64
+        line: 69
       },
       '5': {
         name: '(anonymous_5)',
         decl: {
           start: {
-            line: 65,
+            line: 70,
             column: 12
           },
           end: {
-            line: 65,
+            line: 70,
             column: 13
           }
         },
         loc: {
           start: {
-            line: 65,
+            line: 70,
             column: 18
           },
           end: {
-            line: 65,
+            line: 70,
             column: 33
           }
         },
-        line: 65
+        line: 70
       }
     },
     branchMap: {
       '0': {
         loc: {
           start: {
-            line: 21,
+            line: 26,
             column: 2
           },
           end: {
-            line: 21,
+            line: 26,
             column: 13
           }
         },
         type: 'default-arg',
         locations: [{
           start: {
-            line: 21,
+            line: 26,
             column: 11
           },
           end: {
-            line: 21,
+            line: 26,
             column: 13
           }
         }],
-        line: 21
+        line: 26
       }
     },
     s: {
@@ -330,7 +330,12 @@ var cov_l44h4nr0x = function () {
 
   coverageData.hash = hash;
   return coverage[path] = coverageData;
-}(); /* eslint no-unused-vars : 0 */
+}(); /**
+      * This module a function that produces a pdf static file thanks to PrinceXML technology.
+      * @module metis-backend/releasers/pdf
+      */
+
+/* eslint no-unused-vars : 0 */
 
 
 exports.default = generatePdf;

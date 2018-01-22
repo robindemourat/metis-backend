@@ -29,6 +29,12 @@ var cov_1p1hamecqy = function () {
   return coverage[path] = coverageData;
 }();
 
+/**
+ * This module provides couchdb designs
+ * for the assets component.
+ * @module metis-backend/components/assets
+ */
+
 exports.default = {
   "views": {
     "by_filename": {

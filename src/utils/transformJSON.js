@@ -1,13 +1,10 @@
 /**
- * Multimodal Publishing utils
- * ===========================
- * transformJSON
- * ===========================
  * This module resolves a data object by transforming it
  * from an input schema to an output schema using
  * a transformation function.
- * @module mpu/helpers/transformJSON
+ * @module metis-backend/utils/transformJSON
  */
+
 import Ajv from 'ajv';
 const ajv = new Ajv();
 

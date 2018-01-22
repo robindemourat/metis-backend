@@ -1,28 +1,28 @@
 {
   "type": "File",
   "start": 0,
-  "end": 74,
+  "end": 204,
   "loc": {
     "start": {
       "line": 1,
       "column": 0
     },
     "end": {
-      "line": 3,
+      "line": 8,
       "column": 0
     }
   },
   "program": {
     "type": "Program",
     "start": 0,
-    "end": 74,
+    "end": 204,
     "loc": {
       "start": {
         "line": 1,
         "column": 0
       },
       "end": {
-        "line": 3,
+        "line": 8,
         "column": 0
       }
     },
@@ -30,63 +30,65 @@
     "body": [
       {
         "type": "ExportNamedDeclaration",
-        "start": 0,
-        "end": 43,
+        "start": 130,
+        "end": 173,
         "loc": {
           "start": {
-            "line": 1,
+            "line": 6,
             "column": 0
           },
           "end": {
-            "line": 1,
+            "line": 6,
             "column": 43
           }
         },
         "specifiers": [
           {
             "type": "ExportDefaultSpecifier",
-            "start": 7,
-            "end": 17,
+            "start": 137,
+            "end": 147,
             "loc": {
               "start": {
-                "line": 1,
+                "line": 6,
                 "column": 7
               },
               "end": {
-                "line": 1,
+                "line": 6,
                 "column": 17
               }
             },
             "exported": {
               "type": "Identifier",
-              "start": 7,
-              "end": 17,
+              "start": 137,
+              "end": 147,
               "loc": {
                 "start": {
-                  "line": 1,
+                  "line": 6,
                   "column": 7
                 },
                 "end": {
-                  "line": 1,
+                  "line": 6,
                   "column": 17
                 },
                 "identifierName": "controller"
               },
-              "name": "controller"
-            }
+              "name": "controller",
+              "leadingComments": null
+            },
+            "leadingComments": null
           }
         ],
         "source": {
           "type": "StringLiteral",
-          "start": 23,
-          "end": 42,
+          "start": 153,
+          "end": 172,
           "loc": {
             "start": {
-              "line": 1,
+              "line": 6,
               "column": 23
             },
             "end": {
-              "line": 1,
+              "line": 6,
               "column": 42
             }
           },
@@ -95,48 +97,66 @@
             "raw": "'./auth.controller'"
           },
           "value": "./auth.controller"
-        }
+        },
+        "leadingComments": [
+          {
+            "type": "CommentBlock",
+            "value": "*\n * This module provides an entrypoint to the auth component of the applications\n * @module metis-backend/components/auth\n ",
+            "start": 0,
+            "end": 128,
+            "loc": {
+              "start": {
+                "line": 1,
+                "column": 0
+              },
+              "end": {
+                "line": 4,
+                "column": 3
+              }
+            }
+          }
+        ]
       },
       {
         "type": "ExportNamedDeclaration",
-        "start": 44,
-        "end": 73,
+        "start": 174,
+        "end": 203,
         "loc": {
           "start": {
-            "line": 2,
+            "line": 7,
             "column": 0
           },
           "end": {
-            "line": 2,
+            "line": 7,
             "column": 29
           }
         },
         "specifiers": [
           {
             "type": "ExportDefaultSpecifier",
-            "start": 51,
-            "end": 54,
+            "start": 181,
+            "end": 184,
             "loc": {
               "start": {
-                "line": 2,
+                "line": 7,
                 "column": 7
               },
               "end": {
-                "line": 2,
+                "line": 7,
                 "column": 10
               }
             },
             "exported": {
               "type": "Identifier",
-              "start": 51,
-              "end": 54,
+              "start": 181,
+              "end": 184,
               "loc": {
                 "start": {
-                  "line": 2,
+                  "line": 7,
                   "column": 7
                 },
                 "end": {
-                  "line": 2,
+                  "line": 7,
                   "column": 10
                 },
                 "identifierName": "api"
@@ -147,15 +167,15 @@
         ],
         "source": {
           "type": "StringLiteral",
-          "start": 60,
-          "end": 72,
+          "start": 190,
+          "end": 202,
           "loc": {
             "start": {
-              "line": 2,
+              "line": 7,
               "column": 16
             },
             "end": {
-              "line": 2,
+              "line": 7,
               "column": 28
             }
           },
@@ -169,8 +189,41 @@
     ],
     "directives": []
   },
-  "comments": [],
+  "comments": [
+    {
+      "type": "CommentBlock",
+      "value": "*\n * This module provides an entrypoint to the auth component of the applications\n * @module metis-backend/components/auth\n ",
+      "start": 0,
+      "end": 128,
+      "loc": {
+        "start": {
+          "line": 1,
+          "column": 0
+        },
+        "end": {
+          "line": 4,
+          "column": 3
+        }
+      }
+    }
+  ],
   "tokens": [
+    {
+      "type": "CommentBlock",
+      "value": "*\n * This module provides an entrypoint to the auth component of the applications\n * @module metis-backend/components/auth\n ",
+      "start": 0,
+      "end": 128,
+      "loc": {
+        "start": {
+          "line": 1,
+          "column": 0
+        },
+        "end": {
+          "line": 4,
+          "column": 3
+        }
+      }
+    },
     {
       "type": {
         "label": "export",
@@ -186,15 +239,15 @@
         "updateContext": null
       },
       "value": "export",
-      "start": 0,
-      "end": 6,
+      "start": 130,
+      "end": 136,
       "loc": {
         "start": {
-          "line": 1,
+          "line": 6,
           "column": 0
         },
         "end": {
-          "line": 1,
+          "line": 6,
           "column": 6
         }
       }
@@ -212,15 +265,15 @@
         "binop": null
       },
       "value": "controller",
-      "start": 7,
-      "end": 17,
+      "start": 137,
+      "end": 147,
       "loc": {
         "start": {
-          "line": 1,
+          "line": 6,
           "column": 7
         },
         "end": {
-          "line": 1,
+          "line": 6,
           "column": 17
         }
       }
@@ -238,15 +291,15 @@
         "binop": null
       },
       "value": "from",
-      "start": 18,
-      "end": 22,
+      "start": 148,
+      "end": 152,
       "loc": {
         "start": {
-          "line": 1,
+          "line": 6,
           "column": 18
         },
         "end": {
-          "line": 1,
+          "line": 6,
           "column": 22
         }
       }
@@ -265,15 +318,15 @@
         "updateContext": null
       },
       "value": "./auth.controller",
-      "start": 23,
-      "end": 42,
+      "start": 153,
+      "end": 172,
       "loc": {
         "start": {
-          "line": 1,
+          "line": 6,
           "column": 23
         },
         "end": {
-          "line": 1,
+          "line": 6,
           "column": 42
         }
       }
@@ -291,15 +344,15 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 42,
-      "end": 43,
+      "start": 172,
+      "end": 173,
       "loc": {
         "start": {
-          "line": 1,
+          "line": 6,
           "column": 42
         },
         "end": {
-          "line": 1,
+          "line": 6,
           "column": 43
         }
       }
@@ -319,15 +372,15 @@
         "updateContext": null
       },
       "value": "export",
-      "start": 44,
-      "end": 50,
+      "start": 174,
+      "end": 180,
       "loc": {
         "start": {
-          "line": 2,
+          "line": 7,
           "column": 0
         },
         "end": {
-          "line": 2,
+          "line": 7,
           "column": 6
         }
       }
@@ -345,15 +398,15 @@
         "binop": null
       },
       "value": "api",
-      "start": 51,
-      "end": 54,
+      "start": 181,
+      "end": 184,
       "loc": {
         "start": {
-          "line": 2,
+          "line": 7,
           "column": 7
         },
         "end": {
-          "line": 2,
+          "line": 7,
           "column": 10
         }
       }
@@ -371,15 +424,15 @@
         "binop": null
       },
       "value": "from",
-      "start": 55,
-      "end": 59,
+      "start": 185,
+      "end": 189,
       "loc": {
         "start": {
-          "line": 2,
+          "line": 7,
           "column": 11
         },
         "end": {
-          "line": 2,
+          "line": 7,
           "column": 15
         }
       }
@@ -398,15 +451,15 @@
         "updateContext": null
       },
       "value": "./auth.api",
-      "start": 60,
-      "end": 72,
+      "start": 190,
+      "end": 202,
       "loc": {
         "start": {
-          "line": 2,
+          "line": 7,
           "column": 16
         },
         "end": {
-          "line": 2,
+          "line": 7,
           "column": 28
         }
       }
@@ -424,15 +477,15 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 72,
-      "end": 73,
+      "start": 202,
+      "end": 203,
       "loc": {
         "start": {
-          "line": 2,
+          "line": 7,
           "column": 28
         },
         "end": {
-          "line": 2,
+          "line": 7,
           "column": 29
         }
       }
@@ -450,15 +503,15 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 74,
-      "end": 74,
+      "start": 204,
+      "end": 204,
       "loc": {
         "start": {
-          "line": 3,
+          "line": 8,
           "column": 0
         },
         "end": {
-          "line": 3,
+          "line": 8,
           "column": 0
         }
       }

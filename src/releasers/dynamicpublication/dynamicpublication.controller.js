@@ -1,3 +1,9 @@
+/**
+ * This module a function for releasing a dynamic publication through
+ * one or several formats/channels
+ * @module metis-backend/releasers/dynamicpublication
+ */
+
 import {dal as montageDal} from '../../components/montages';
 import {fetchMontageDependencies} from '../../utils/data';
 

@@ -1,3 +1,9 @@
+/**
+ * This module provides couchdb designs
+ * for the users component.
+ * @module metis-backend/components/users
+ */
+
 export default {
   "views": {
     "by_email_and_password": {

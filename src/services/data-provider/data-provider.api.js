@@ -1,9 +1,9 @@
-
 /**
- * Metis-backend
- * =======
- * Data provider api
+ * This module provides route indexes between uri patterns and controllers
+ * for the data provider service.
+ * @module metis-backend/services/data-provider
  */
+
 
 import express from 'express';
 

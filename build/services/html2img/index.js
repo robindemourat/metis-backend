@@ -28,7 +28,10 @@ var cov_2pt5amb0v = function () {
 
   coverageData.hash = hash;
   return coverage[path] = coverageData;
-}();
+}(); /**
+      * This module provides an entrypoint to the html2img service of the application
+      * @module metis-backend/services/html2img
+      */
 
 var _html2img = require('./html2img.api');
 

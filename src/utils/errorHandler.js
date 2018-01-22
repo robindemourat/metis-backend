@@ -18,7 +18,9 @@ process.on('unhandledRejection', function (reason) {
  * Catch unhandled exceptions to shut the process gracefully
  */
 process.on('uncaughtException', function(error) {
-   // @todo setup error types system
+   /*
+    * @todo setup error types system
+    */
    // errorManagement.handler.handleError(error);
    // if(!errorManagement.handler.isTrustedError(error))
    // console.log(error, error.trace);

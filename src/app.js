@@ -1,7 +1,8 @@
 /**
  * Metis-backend
  * =======
- * Application entrypoint
+ * This is the main application file.
+ * It exports an express application.
  */
 import express from 'express';
 import cors from 'cors';

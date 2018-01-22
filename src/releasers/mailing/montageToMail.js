@@ -1,3 +1,8 @@
+/**
+ * This module provides a function that converts a micropublication  montage to an email representation.
+ * @module metis-backend/releasers/email
+ */
+
 /* eslint no-unused-vars : 0 */
 import React from 'react';
 import MailContent from 'metis-shared/dist/components/views/micro/MicropublicationMail';

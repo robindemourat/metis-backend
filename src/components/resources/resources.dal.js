@@ -1,7 +1,7 @@
 /**
- * Metis-backend
- * =======
- * Resource data access layer
+ * This module provides couchdb database operations managers
+ * for the resources component.
+ * @module metis-backend/components/resources
  */
 
 import db from '../../utils/plugDb';

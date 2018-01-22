@@ -1,3 +1,8 @@
+/**
+ * This module provides an entrypoint to the resources component of the applications
+ * @module metis-backend/components/resources
+ */
+
 // resource-related db views
 export design from './resources.design';
 // view controller

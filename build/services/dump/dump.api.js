@@ -6,7 +6,7 @@ Object.defineProperty(exports, "__esModule", {
 
 var cov_1hotq6qzgt = function () {
   var path = '/Users/rawbin/Documents/Projets/collaborations/ensad-publishing/prototype/metis-backend/src/services/dump/dump.api.js',
-      hash = '1f74b3c1e931a348c3cdde79c2c429bf0a1c0369',
+      hash = 'e8de93f38d4af111d52613bb2b5a4e31f3c3b732',
       global = new Function('return this')(),
       gcv = '__coverage__',
       coverageData = {
@@ -14,41 +14,41 @@ var cov_1hotq6qzgt = function () {
     statementMap: {
       '0': {
         start: {
-          line: 15,
+          line: 16,
           column: 15
         },
         end: {
-          line: 15,
+          line: 16,
           column: 35
         }
       },
       '1': {
         start: {
-          line: 17,
+          line: 18,
           column: 0
         },
         end: {
-          line: 17,
+          line: 18,
           column: 33
         }
       },
       '2': {
         start: {
-          line: 18,
+          line: 19,
           column: 0
         },
         end: {
-          line: 18,
+          line: 19,
           column: 29
         }
       },
       '3': {
         start: {
-          line: 19,
+          line: 20,
           column: 0
         },
         end: {
-          line: 19,
+          line: 20,
           column: 34
         }
       }
@@ -74,9 +74,9 @@ var cov_1hotq6qzgt = function () {
   coverageData.hash = hash;
   return coverage[path] = coverageData;
 }(); /**
-      * Metis-backend
-      * =======
-      * Dump api
+      * This module provides route indexes between uri patterns and controllers
+      * for the dump service.
+      * @module metis-backend/services/dump
       */
 
 var _express = require('express');

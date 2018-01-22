@@ -1,3 +1,8 @@
+/**
+ * This module provides express request handlers
+ * for the data provider services.
+ * @module metis-backend/services/data provider
+ */
 
 import {dal as montageDal} from '../../components/montages';
 import {dal as assetDal} from '../../components/assets';

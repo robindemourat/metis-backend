@@ -1,7 +1,7 @@
 /**
- * Metis-backend
- * =======
- * User api
+ * This module provides route indexes between uri patterns and controllers
+ * for the users objects.
+ * @module metis-backend/components/users
  */
 
 import express from 'express';

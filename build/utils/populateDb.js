@@ -6,7 +6,7 @@ var _extends3 = _interopRequireDefault(_extends2);
 
 var cov_29bl13sckc = function () {
   var path = '/Users/rawbin/Documents/Projets/collaborations/ensad-publishing/prototype/metis-backend/src/utils/populateDb.js',
-      hash = '5c193ca435961a0f84d4167f867fd446fb82ba47',
+      hash = '2e1cb7770839cb26acf71f680ab18d5e3dda0b55',
       global = new Function('return this')(),
       gcv = '__coverage__',
       coverageData = {
@@ -14,101 +14,101 @@ var cov_29bl13sckc = function () {
     statementMap: {
       '0': {
         start: {
-          line: 12,
+          line: 11,
           column: 36
         },
         end: {
-          line: 12,
+          line: 11,
           column: 47
         }
       },
       '1': {
         start: {
-          line: 15,
+          line: 14,
           column: 14
         },
         end: {
-          line: 21,
+          line: 20,
           column: 1
         }
       },
       '2': {
         start: {
-          line: 23,
+          line: 22,
           column: 17
         },
         end: {
-          line: 42,
+          line: 41,
           column: 1
         }
       },
       '3': {
         start: {
-          line: 25,
+          line: 24,
           column: 2
         },
         end: {
-          line: 27,
+          line: 26,
           column: 3
         }
       },
       '4': {
         start: {
-          line: 26,
+          line: 25,
           column: 4
         },
         end: {
-          line: 26,
+          line: 25,
           column: 20
         }
       },
       '5': {
         start: {
-          line: 28,
+          line: 27,
           column: 2
         },
         end: {
-          line: 41,
+          line: 40,
           column: 5
         }
       },
       '6': {
         start: {
-          line: 30,
+          line: 29,
           column: 4
         },
         end: {
-          line: 34,
+          line: 33,
           column: 15
         }
       },
       '7': {
         start: {
-          line: 37,
+          line: 36,
           column: 4
         },
         end: {
-          line: 37,
+          line: 36,
           column: 40
         }
       },
       '8': {
         start: {
-          line: 40,
+          line: 39,
           column: 4
         },
         end: {
-          line: 40,
+          line: 39,
           column: 54
         }
       },
       '9': {
         start: {
-          line: 45,
+          line: 44,
           column: 0
         },
         end: {
-          line: 47,
+          line: 46,
           column: 19
         }
       }
@@ -118,132 +118,132 @@ var cov_29bl13sckc = function () {
         name: '(anonymous_0)',
         decl: {
           start: {
-            line: 23,
+            line: 22,
             column: 17
           },
           end: {
-            line: 23,
+            line: 22,
             column: 18
           }
         },
         loc: {
           start: {
-            line: 23,
+            line: 22,
             column: 24
           },
           end: {
-            line: 42,
+            line: 41,
             column: 1
           }
         },
-        line: 23
+        line: 22
       },
       '1': {
         name: '(anonymous_1)',
         decl: {
           start: {
-            line: 29,
+            line: 28,
             column: 8
           },
           end: {
-            line: 29,
+            line: 28,
             column: 9
           }
         },
         loc: {
           start: {
-            line: 30,
+            line: 29,
             column: 4
           },
           end: {
-            line: 34,
+            line: 33,
             column: 15
           }
         },
-        line: 30
+        line: 29
       },
       '2': {
         name: '(anonymous_2)',
         decl: {
           start: {
-            line: 36,
+            line: 35,
             column: 8
           },
           end: {
-            line: 36,
+            line: 35,
             column: 9
           }
         },
         loc: {
           start: {
-            line: 36,
+            line: 35,
             column: 16
           },
           end: {
-            line: 38,
+            line: 37,
             column: 3
           }
         },
-        line: 36
+        line: 35
       },
       '3': {
         name: '(anonymous_3)',
         decl: {
           start: {
-            line: 39,
+            line: 38,
             column: 9
           },
           end: {
-            line: 39,
+            line: 38,
             column: 10
           }
         },
         loc: {
           start: {
-            line: 39,
+            line: 38,
             column: 18
           },
           end: {
-            line: 41,
+            line: 40,
             column: 3
           }
         },
-        line: 39
+        line: 38
       }
     },
     branchMap: {
       '0': {
         loc: {
           start: {
-            line: 25,
+            line: 24,
             column: 2
           },
           end: {
-            line: 27,
+            line: 26,
             column: 3
           }
         },
         type: 'if',
         locations: [{
           start: {
-            line: 25,
+            line: 24,
             column: 2
           },
           end: {
-            line: 27,
+            line: 26,
             column: 3
           }
         }, {
           start: {
-            line: 25,
+            line: 24,
             column: 2
           },
           end: {
-            line: 27,
+            line: 26,
             column: 3
           }
         }],
-        line: 25
+        line: 24
       }
     },
     s: {
@@ -278,10 +278,9 @@ var cov_29bl13sckc = function () {
   coverageData.hash = hash;
   return coverage[path] = coverageData;
 }(); /**
-      * Metis-backend
-      * =======
-      * Server population script
+      * This script creates an admin superuser in application's database
       */
+
 /* eslint no-console : 0 */
 
 

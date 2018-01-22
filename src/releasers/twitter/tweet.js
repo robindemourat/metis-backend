@@ -1,4 +1,8 @@
 /* eslint  promise/param-names : 0 */
+/**
+ * This module provides a function that tweets some contents thanks to some params.
+ * @module metis-backend/releasers/twitter
+ */
 
 import Ajv from 'ajv';
 import T from 'twit';

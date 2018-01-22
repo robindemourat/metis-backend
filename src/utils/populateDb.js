@@ -1,8 +1,7 @@
 /**
- * Metis-backend
- * =======
- * Server population script
+ * This script creates an admin superuser in application's database
  */
+
 /* eslint no-console : 0 */
 import {hash} from './crypto';
 

@@ -1,4 +1,11 @@
 /* eslint security/detect-object-injection : 0 */
+
+/**
+ * This module a function for releasing a micro publication through
+ * one or several formats/channels
+ * @module metis-backend/releasers/micropublication
+ */
+
 import {resolve as resolvePath} from 'path';
 import {readFile, remove} from 'fs-extra';
 

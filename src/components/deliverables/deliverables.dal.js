@@ -1,8 +1,9 @@
 /**
- * Metis-backend
- * =======
- * Deliverable data access layer
+ * This module provides couchdb database operations managers
+ * for the deliverables component.
+ * @module metis-backend/components/deliverables
  */
+
 import {lookup} from 'mime-types';
 
 import db from '../../utils/plugDb';

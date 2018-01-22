@@ -28,7 +28,12 @@ var cov_1pesz8xaxz = function () {
 
   coverageData.hash = hash;
   return coverage[path] = coverageData;
-}(); // diffusion-related db views
+}(); /**
+      * This module provides an entrypoint to the diffusions component of the applications
+      * @module metis-backend/components/diffusions
+      */
+
+// diffusion-related db views
 
 
 var _diffusions = require('./diffusions.design');

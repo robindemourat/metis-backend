@@ -6,7 +6,7 @@ Object.defineProperty(exports, "__esModule", {
 
 var cov_26femfauz7 = function () {
   var path = '/Users/rawbin/Documents/Projets/collaborations/ensad-publishing/prototype/metis-backend/src/releasers/web/index.js',
-      hash = '5ee92afd62c34e82f97f5b697b75fc1f6516d581',
+      hash = '3afd59ebbb077fb807429190f74f6778489efea8',
       global = new Function('return this')(),
       gcv = '__coverage__',
       coverageData = {
@@ -14,41 +14,41 @@ var cov_26femfauz7 = function () {
     statementMap: {
       '0': {
         start: {
-          line: 8,
+          line: 13,
           column: 4
         },
         end: {
-          line: 8,
+          line: 13,
           column: 15
         }
       },
       '1': {
         start: {
-          line: 13,
+          line: 18,
           column: 2
         },
         end: {
-          line: 18,
+          line: 23,
           column: 13
         }
       },
       '2': {
         start: {
-          line: 15,
+          line: 20,
           column: 29
         },
         end: {
-          line: 15,
+          line: 20,
           column: 58
         }
       },
       '3': {
         start: {
-          line: 17,
+          line: 22,
           column: 12
         },
         end: {
-          line: 17,
+          line: 22,
           column: 58
         }
       }
@@ -58,49 +58,49 @@ var cov_26femfauz7 = function () {
         name: 'publish',
         decl: {
           start: {
-            line: 12,
+            line: 17,
             column: 24
           },
           end: {
-            line: 12,
+            line: 17,
             column: 31
           }
         },
         loc: {
           start: {
-            line: 12,
+            line: 17,
             column: 49
           },
           end: {
-            line: 19,
+            line: 24,
             column: 1
           }
         },
-        line: 12
+        line: 17
       },
       '1': {
         name: '(anonymous_1)',
         decl: {
           start: {
-            line: 14,
+            line: 19,
             column: 16
           },
           end: {
-            line: 14,
+            line: 19,
             column: 17
           }
         },
         loc: {
           start: {
-            line: 14,
+            line: 19,
             column: 23
           },
           end: {
-            line: 18,
+            line: 23,
             column: 11
           }
         },
-        line: 14
+        line: 19
       }
     },
     branchMap: {},
@@ -125,7 +125,10 @@ var cov_26femfauz7 = function () {
 
   coverageData.hash = hash;
   return coverage[path] = coverageData;
-}();
+}(); /**
+      * This module provides an entrypoint to the web publication releaser
+      * @module metis-backend/releasers/web
+      */
 
 exports.default = publish;
 

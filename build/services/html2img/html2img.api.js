@@ -6,7 +6,7 @@ Object.defineProperty(exports, "__esModule", {
 
 var cov_e9761zju0 = function () {
   var path = '/Users/rawbin/Documents/Projets/collaborations/ensad-publishing/prototype/metis-backend/src/services/html2img/html2img.api.js',
-      hash = '5baae529d2625cacaac0d176ef4e0c42238447a7',
+      hash = '06da24bb527f6479238203f6f385bebced168f14',
       global = new Function('return this')(),
       gcv = '__coverage__',
       coverageData = {
@@ -14,21 +14,21 @@ var cov_e9761zju0 = function () {
     statementMap: {
       '0': {
         start: {
-          line: 13,
+          line: 12,
           column: 15
         },
         end: {
-          line: 13,
+          line: 12,
           column: 35
         }
       },
       '1': {
         start: {
-          line: 15,
+          line: 14,
           column: 0
         },
         end: {
-          line: 15,
+          line: 14,
           column: 27
         }
       }
@@ -51,13 +51,11 @@ var cov_e9761zju0 = function () {
 
   coverageData.hash = hash;
   return coverage[path] = coverageData;
-}();
-
-/**
- * Metis-backend
- * =======
- * Html to image api
- */
+}(); /**
+      * This module provides route indexes between uri patterns and controllers
+      * for the html2img service.
+      * @module metis-backend/services/html2img
+      */
 
 var _express = require('express');
 

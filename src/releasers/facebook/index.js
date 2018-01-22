@@ -1,10 +1,6 @@
 /**
- * Multimodal Publishing utils
- * ===========================
- * facebook releaser
- * ===========================
- * This module publishes content to facebook.
- * @module mpu/releasers/facebook
+ * This module provides an entrypoint to the facebook publication releaser
+ * @module metis-backend/releasers/facebook
  */
 import Ajv from 'ajv';
 import FB from 'fb';

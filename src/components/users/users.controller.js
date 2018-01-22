@@ -1,8 +1,9 @@
-// /**
-//  * Metis-backend
-//  * =======
-//  * Users component controller
-//  */
+/**
+ * This module provides express request handlers
+ * for the users component.
+ * @module metis-backend/components/users
+ */
+
 import jwt from 'jsonwebtoken'; // used to create, sign, and verify tokens
 
 import {hash} from '../../utils/crypto';

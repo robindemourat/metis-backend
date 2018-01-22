@@ -1,3 +1,8 @@
+/**
+ * This module provides an entrypoint to the web publication releaser
+ * @module metis-backend/releasers/web
+ */
+
 import {post} from 'axios';
 
 import {getConfig} from '../../utils/config';

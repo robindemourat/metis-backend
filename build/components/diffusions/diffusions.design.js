@@ -29,6 +29,12 @@ var cov_xnxbkn6pw = function () {
   return coverage[path] = coverageData;
 }();
 
+/**
+ * This module provides couchdb designs
+ * for the diffusions component.
+ * @module metis-backend/components/diffusions
+ */
+
 exports.default = {
   "views": {
     "by_id": {

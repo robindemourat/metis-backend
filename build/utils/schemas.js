@@ -11,7 +11,7 @@ var _promise2 = _interopRequireDefault(_promise);
 
 var cov_24nqgqlxou = function () {
   var path = '/Users/rawbin/Documents/Projets/collaborations/ensad-publishing/prototype/metis-backend/src/utils/schemas.js',
-      hash = '69c80b755405a7b46df6b21115f2e5ac31ba8dae',
+      hash = '65c769d1f3255968e670701f81f6e804833da29a',
       global = new Function('return this')(),
       gcv = '__coverage__',
       coverageData = {
@@ -19,71 +19,71 @@ var cov_24nqgqlxou = function () {
     statementMap: {
       '0': {
         start: {
-          line: 2,
+          line: 8,
           column: 12
         },
         end: {
-          line: 2,
+          line: 8,
           column: 21
         }
       },
       '1': {
         start: {
-          line: 4,
+          line: 10,
           column: 27
         },
         end: {
-          line: 12,
+          line: 18,
           column: 4
         }
       },
       '2': {
         start: {
-          line: 5,
+          line: 11,
           column: 2
         },
         end: {
-          line: 12,
+          line: 18,
           column: 4
         }
       },
       '3': {
         start: {
-          line: 6,
+          line: 12,
           column: 18
         },
         end: {
-          line: 6,
+          line: 12,
           column: 44
         }
       },
       '4': {
         start: {
-          line: 7,
+          line: 13,
           column: 4
         },
         end: {
-          line: 11,
+          line: 17,
           column: 5
         }
       },
       '5': {
         start: {
-          line: 8,
+          line: 14,
           column: 6
         },
         end: {
-          line: 8,
+          line: 14,
           column: 20
         }
       },
       '6': {
         start: {
-          line: 10,
+          line: 16,
           column: 6
         },
         end: {
-          line: 10,
+          line: 16,
           column: 25
         }
       }
@@ -93,84 +93,84 @@ var cov_24nqgqlxou = function () {
         name: '(anonymous_0)',
         decl: {
           start: {
-            line: 4,
+            line: 10,
             column: 27
           },
           end: {
-            line: 4,
+            line: 10,
             column: 28
           }
         },
         loc: {
           start: {
-            line: 5,
+            line: 11,
             column: 2
           },
           end: {
-            line: 12,
+            line: 18,
             column: 4
           }
         },
-        line: 5
+        line: 11
       },
       '1': {
         name: '(anonymous_1)',
         decl: {
           start: {
-            line: 5,
+            line: 11,
             column: 14
           },
           end: {
-            line: 5,
+            line: 11,
             column: 15
           }
         },
         loc: {
           start: {
-            line: 5,
+            line: 11,
             column: 35
           },
           end: {
-            line: 12,
+            line: 18,
             column: 3
           }
         },
-        line: 5
+        line: 11
       }
     },
     branchMap: {
       '0': {
         loc: {
           start: {
-            line: 7,
+            line: 13,
             column: 4
           },
           end: {
-            line: 11,
+            line: 17,
             column: 5
           }
         },
         type: 'if',
         locations: [{
           start: {
-            line: 7,
+            line: 13,
             column: 4
           },
           end: {
-            line: 11,
+            line: 17,
             column: 5
           }
         }, {
           start: {
-            line: 7,
+            line: 13,
             column: 4
           },
           end: {
-            line: 11,
+            line: 17,
             column: 5
           }
         }],
-        line: 7
+        line: 13
       }
     },
     s: {
@@ -199,7 +199,11 @@ var cov_24nqgqlxou = function () {
 
   coverageData.hash = hash;
   return coverage[path] = coverageData;
-}();
+}(); /**
+      * This module exports a function handling json-schema object
+      * validation as a promise
+      * @module metis-backend/utils/schemas
+      */
 
 var _ajv = require('ajv');
 

@@ -11,7 +11,7 @@ var _extends3 = _interopRequireDefault(_extends2);
 
 var cov_t8ysli5rw = function () {
   var path = "/Users/rawbin/Documents/Projets/collaborations/ensad-publishing/prototype/metis-backend/src/utils/couchdb.js",
-      hash = "84f598e151972581409987594d544d1a6668b3f4",
+      hash = "ac6113546dae206c8452bb012db9df5fdc2d2c6a",
       global = new Function('return this')(),
       gcv = "__coverage__",
       coverageData = {
@@ -19,81 +19,81 @@ var cov_t8ysli5rw = function () {
     statementMap: {
       "0": {
         start: {
-          line: 11,
+          line: 14,
           column: 29
         },
         end: {
-          line: 20,
+          line: 23,
           column: 1
         }
       },
       "1": {
         start: {
-          line: 13,
+          line: 16,
           column: 2
         },
         end: {
-          line: 15,
+          line: 18,
           column: 3
         }
       },
       "2": {
         start: {
-          line: 14,
+          line: 17,
           column: 4
         },
         end: {
-          line: 14,
+          line: 17,
           column: 20
         }
       },
       "3": {
         start: {
-          line: 16,
+          line: 19,
           column: 2
         },
         end: {
-          line: 19,
+          line: 22,
           column: 30
         }
       },
       "4": {
         start: {
-          line: 27,
+          line: 30,
           column: 25
         },
         end: {
-          line: 32,
+          line: 35,
           column: 73
         }
       },
       "5": {
         start: {
-          line: 28,
+          line: 31,
           column: 4
         },
         end: {
-          line: 32,
+          line: 35,
           column: 73
         }
       },
       "6": {
         start: {
-          line: 30,
+          line: 33,
           column: 17
         },
         end: {
-          line: 30,
+          line: 33,
           column: 66
         }
       },
       "7": {
         start: {
-          line: 32,
+          line: 35,
           column: 17
         },
         end: {
-          line: 32,
+          line: 35,
           column: 72
         }
       }
@@ -103,132 +103,132 @@ var cov_t8ysli5rw = function () {
         name: "(anonymous_0)",
         decl: {
           start: {
-            line: 11,
+            line: 14,
             column: 29
           },
           end: {
-            line: 11,
+            line: 14,
             column: 30
           }
         },
         loc: {
           start: {
-            line: 11,
+            line: 14,
             column: 62
           },
           end: {
-            line: 20,
+            line: 23,
             column: 1
           }
         },
-        line: 11
+        line: 14
       },
       "1": {
         name: "(anonymous_1)",
         decl: {
           start: {
-            line: 27,
+            line: 30,
             column: 25
           },
           end: {
-            line: 27,
+            line: 30,
             column: 26
           }
         },
         loc: {
           start: {
-            line: 28,
+            line: 31,
             column: 4
           },
           end: {
-            line: 32,
+            line: 35,
             column: 73
           }
         },
-        line: 28
+        line: 31
       },
       "2": {
         name: "(anonymous_2)",
         decl: {
           start: {
-            line: 30,
+            line: 33,
             column: 10
           },
           end: {
-            line: 30,
+            line: 33,
             column: 11
           }
         },
         loc: {
           start: {
-            line: 30,
+            line: 33,
             column: 17
           },
           end: {
-            line: 30,
+            line: 33,
             column: 66
           }
         },
-        line: 30
+        line: 33
       },
       "3": {
         name: "(anonymous_3)",
         decl: {
           start: {
-            line: 32,
+            line: 35,
             column: 11
           },
           end: {
-            line: 32,
+            line: 35,
             column: 12
           }
         },
         loc: {
           start: {
-            line: 32,
+            line: 35,
             column: 17
           },
           end: {
-            line: 32,
+            line: 35,
             column: 72
           }
         },
-        line: 32
+        line: 35
       }
     },
     branchMap: {
       "0": {
         loc: {
           start: {
-            line: 13,
+            line: 16,
             column: 2
           },
           end: {
-            line: 15,
+            line: 18,
             column: 3
           }
         },
         type: "if",
         locations: [{
           start: {
-            line: 13,
+            line: 16,
             column: 2
           },
           end: {
-            line: 15,
+            line: 18,
             column: 3
           }
         }, {
           start: {
-            line: 13,
+            line: 16,
             column: 2
           },
           end: {
-            line: 15,
+            line: 18,
             column: 3
           }
         }],
-        line: 13
+        line: 16
       }
     },
     s: {
@@ -265,7 +265,10 @@ var cov_t8ysli5rw = function () {
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 cov_t8ysli5rw.s[0]++;
-
+/**
+ * This module exports utilitary functions for interacting with couchdb
+ * @module metis-backend/utils/couchdb
+ */
 
 /**
  * Inserts a design document in a couchdb database

@@ -28,7 +28,12 @@ var cov_ib43t4xzf = function () {
 
   coverageData.hash = hash;
   return coverage[path] = coverageData;
-}(); // user-related db views
+}(); /**
+      * This module provides an entrypoint to the deliverables component of the applications
+      * @module metis-backend/components/deliverables
+      */
+
+// user-related db views
 
 
 var _deliverables = require('./deliverables.design');

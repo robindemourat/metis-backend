@@ -29,6 +29,12 @@ var cov_2n7z3ivi3a = function () {
   return coverage[path] = coverageData;
 }();
 
+/**
+ * This module provides couchdb designs
+ * for the compositions component.
+ * @module metis-backend/components/compositions
+ */
+
 exports.default = {
   "views": {
     "by_id": {

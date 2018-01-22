@@ -1,28 +1,28 @@
 {
   "type": "File",
   "start": 0,
-  "end": 299,
+  "end": 445,
   "loc": {
     "start": {
       "line": 1,
       "column": 0
     },
     "end": {
-      "line": 9,
+      "line": 14,
       "column": 0
     }
   },
   "program": {
     "type": "Program",
     "start": 0,
-    "end": 299,
+    "end": 445,
     "loc": {
       "start": {
         "line": 1,
         "column": 0
       },
       "end": {
-        "line": 9,
+        "line": 14,
         "column": 0
       }
     },
@@ -30,44 +30,44 @@
     "body": [
       {
         "type": "ExportNamedDeclaration",
-        "start": 32,
-        "end": 75,
+        "start": 178,
+        "end": 221,
         "loc": {
           "start": {
-            "line": 2,
+            "line": 7,
             "column": 0
           },
           "end": {
-            "line": 2,
+            "line": 7,
             "column": 43
           }
         },
         "specifiers": [
           {
             "type": "ExportDefaultSpecifier",
-            "start": 39,
-            "end": 45,
+            "start": 185,
+            "end": 191,
             "loc": {
               "start": {
-                "line": 2,
+                "line": 7,
                 "column": 7
               },
               "end": {
-                "line": 2,
+                "line": 7,
                 "column": 13
               }
             },
             "exported": {
               "type": "Identifier",
-              "start": 39,
-              "end": 45,
+              "start": 185,
+              "end": 191,
               "loc": {
                 "start": {
-                  "line": 2,
+                  "line": 7,
                   "column": 7
                 },
                 "end": {
-                  "line": 2,
+                  "line": 7,
                   "column": 13
                 },
                 "identifierName": "design"
@@ -80,15 +80,15 @@
         ],
         "source": {
           "type": "StringLiteral",
-          "start": 51,
-          "end": 74,
+          "start": 197,
+          "end": 220,
           "loc": {
             "start": {
-              "line": 2,
+              "line": 7,
               "column": 19
             },
             "end": {
-              "line": 2,
+              "line": 7,
               "column": 42
             }
           },
@@ -100,17 +100,33 @@
         },
         "leadingComments": [
           {
-            "type": "CommentLine",
-            "value": " composition-related db views",
+            "type": "CommentBlock",
+            "value": "*\n * This module provides an entrypoint to the compositions component of the applications\n * @module metis-backend/components/compositions\n ",
             "start": 0,
-            "end": 31,
+            "end": 144,
             "loc": {
               "start": {
                 "line": 1,
                 "column": 0
               },
               "end": {
-                "line": 1,
+                "line": 4,
+                "column": 3
+              }
+            }
+          },
+          {
+            "type": "CommentLine",
+            "value": " composition-related db views",
+            "start": 146,
+            "end": 177,
+            "loc": {
+              "start": {
+                "line": 6,
+                "column": 0
+              },
+              "end": {
+                "line": 6,
                 "column": 31
               }
             }
@@ -120,15 +136,15 @@
           {
             "type": "CommentLine",
             "value": " view controller",
-            "start": 76,
-            "end": 94,
+            "start": 222,
+            "end": 240,
             "loc": {
               "start": {
-                "line": 3,
+                "line": 8,
                 "column": 0
               },
               "end": {
-                "line": 3,
+                "line": 8,
                 "column": 18
               }
             }
@@ -137,44 +153,44 @@
       },
       {
         "type": "ExportNamedDeclaration",
-        "start": 95,
-        "end": 151,
+        "start": 241,
+        "end": 297,
         "loc": {
           "start": {
-            "line": 4,
+            "line": 9,
             "column": 0
           },
           "end": {
-            "line": 4,
+            "line": 9,
             "column": 56
           }
         },
         "specifiers": [
           {
             "type": "ExportNamespaceSpecifier",
-            "start": 102,
-            "end": 117,
+            "start": 248,
+            "end": 263,
             "loc": {
               "start": {
-                "line": 4,
+                "line": 9,
                 "column": 7
               },
               "end": {
-                "line": 4,
+                "line": 9,
                 "column": 22
               }
             },
             "exported": {
               "type": "Identifier",
-              "start": 107,
-              "end": 117,
+              "start": 253,
+              "end": 263,
               "loc": {
                 "start": {
-                  "line": 4,
+                  "line": 9,
                   "column": 12
                 },
                 "end": {
-                  "line": 4,
+                  "line": 9,
                   "column": 22
                 },
                 "identifierName": "controller"
@@ -187,15 +203,15 @@
         ],
         "source": {
           "type": "StringLiteral",
-          "start": 123,
-          "end": 150,
+          "start": 269,
+          "end": 296,
           "loc": {
             "start": {
-              "line": 4,
+              "line": 9,
               "column": 28
             },
             "end": {
-              "line": 4,
+              "line": 9,
               "column": 55
             }
           },
@@ -209,15 +225,15 @@
           {
             "type": "CommentLine",
             "value": " view controller",
-            "start": 76,
-            "end": 94,
+            "start": 222,
+            "end": 240,
             "loc": {
               "start": {
-                "line": 3,
+                "line": 8,
                 "column": 0
               },
               "end": {
-                "line": 3,
+                "line": 8,
                 "column": 18
               }
             }
@@ -227,15 +243,15 @@
           {
             "type": "CommentLine",
             "value": " database abstraction layer operations",
-            "start": 152,
-            "end": 192,
+            "start": 298,
+            "end": 338,
             "loc": {
               "start": {
-                "line": 5,
+                "line": 10,
                 "column": 0
               },
               "end": {
-                "line": 5,
+                "line": 10,
                 "column": 40
               }
             }
@@ -244,44 +260,44 @@
       },
       {
         "type": "ExportNamedDeclaration",
-        "start": 193,
-        "end": 235,
+        "start": 339,
+        "end": 381,
         "loc": {
           "start": {
-            "line": 6,
+            "line": 11,
             "column": 0
           },
           "end": {
-            "line": 6,
+            "line": 11,
             "column": 42
           }
         },
         "specifiers": [
           {
             "type": "ExportNamespaceSpecifier",
-            "start": 200,
-            "end": 208,
+            "start": 346,
+            "end": 354,
             "loc": {
               "start": {
-                "line": 6,
+                "line": 11,
                 "column": 7
               },
               "end": {
-                "line": 6,
+                "line": 11,
                 "column": 15
               }
             },
             "exported": {
               "type": "Identifier",
-              "start": 205,
-              "end": 208,
+              "start": 351,
+              "end": 354,
               "loc": {
                 "start": {
-                  "line": 6,
+                  "line": 11,
                   "column": 12
                 },
                 "end": {
-                  "line": 6,
+                  "line": 11,
                   "column": 15
                 },
                 "identifierName": "dal"
@@ -294,15 +310,15 @@
         ],
         "source": {
           "type": "StringLiteral",
-          "start": 214,
-          "end": 234,
+          "start": 360,
+          "end": 380,
           "loc": {
             "start": {
-              "line": 6,
+              "line": 11,
               "column": 21
             },
             "end": {
-              "line": 6,
+              "line": 11,
               "column": 41
             }
           },
@@ -316,15 +332,15 @@
           {
             "type": "CommentLine",
             "value": " database abstraction layer operations",
-            "start": 152,
-            "end": 192,
+            "start": 298,
+            "end": 338,
             "loc": {
               "start": {
-                "line": 5,
+                "line": 10,
                 "column": 0
               },
               "end": {
-                "line": 5,
+                "line": 10,
                 "column": 40
               }
             }
@@ -334,15 +350,15 @@
           {
             "type": "CommentLine",
             "value": " api / routes bindings",
-            "start": 236,
-            "end": 260,
+            "start": 382,
+            "end": 406,
             "loc": {
               "start": {
-                "line": 7,
+                "line": 12,
                 "column": 0
               },
               "end": {
-                "line": 7,
+                "line": 12,
                 "column": 24
               }
             }
@@ -351,44 +367,44 @@
       },
       {
         "type": "ExportNamedDeclaration",
-        "start": 261,
-        "end": 298,
+        "start": 407,
+        "end": 444,
         "loc": {
           "start": {
-            "line": 8,
+            "line": 13,
             "column": 0
           },
           "end": {
-            "line": 8,
+            "line": 13,
             "column": 37
           }
         },
         "specifiers": [
           {
             "type": "ExportDefaultSpecifier",
-            "start": 268,
-            "end": 271,
+            "start": 414,
+            "end": 417,
             "loc": {
               "start": {
-                "line": 8,
+                "line": 13,
                 "column": 7
               },
               "end": {
-                "line": 8,
+                "line": 13,
                 "column": 10
               }
             },
             "exported": {
               "type": "Identifier",
-              "start": 268,
-              "end": 271,
+              "start": 414,
+              "end": 417,
               "loc": {
                 "start": {
-                  "line": 8,
+                  "line": 13,
                   "column": 7
                 },
                 "end": {
-                  "line": 8,
+                  "line": 13,
                   "column": 10
                 },
                 "identifierName": "api"
@@ -401,15 +417,15 @@
         ],
         "source": {
           "type": "StringLiteral",
-          "start": 277,
-          "end": 297,
+          "start": 423,
+          "end": 443,
           "loc": {
             "start": {
-              "line": 8,
+              "line": 13,
               "column": 16
             },
             "end": {
-              "line": 8,
+              "line": 13,
               "column": 36
             }
           },
@@ -423,15 +439,15 @@
           {
             "type": "CommentLine",
             "value": " api / routes bindings",
-            "start": 236,
-            "end": 260,
+            "start": 382,
+            "end": 406,
             "loc": {
               "start": {
-                "line": 7,
+                "line": 12,
                 "column": 0
               },
               "end": {
-                "line": 7,
+                "line": 12,
                 "column": 24
               }
             }
@@ -443,17 +459,33 @@
   },
   "comments": [
     {
-      "type": "CommentLine",
-      "value": " composition-related db views",
+      "type": "CommentBlock",
+      "value": "*\n * This module provides an entrypoint to the compositions component of the applications\n * @module metis-backend/components/compositions\n ",
       "start": 0,
-      "end": 31,
+      "end": 144,
       "loc": {
         "start": {
           "line": 1,
           "column": 0
         },
         "end": {
-          "line": 1,
+          "line": 4,
+          "column": 3
+        }
+      }
+    },
+    {
+      "type": "CommentLine",
+      "value": " composition-related db views",
+      "start": 146,
+      "end": 177,
+      "loc": {
+        "start": {
+          "line": 6,
+          "column": 0
+        },
+        "end": {
+          "line": 6,
           "column": 31
         }
       }
@@ -461,15 +493,15 @@
     {
       "type": "CommentLine",
       "value": " view controller",
-      "start": 76,
-      "end": 94,
+      "start": 222,
+      "end": 240,
       "loc": {
         "start": {
-          "line": 3,
+          "line": 8,
           "column": 0
         },
         "end": {
-          "line": 3,
+          "line": 8,
           "column": 18
         }
       }
@@ -477,15 +509,15 @@
     {
       "type": "CommentLine",
       "value": " database abstraction layer operations",
-      "start": 152,
-      "end": 192,
+      "start": 298,
+      "end": 338,
       "loc": {
         "start": {
-          "line": 5,
+          "line": 10,
           "column": 0
         },
         "end": {
-          "line": 5,
+          "line": 10,
           "column": 40
         }
       }
@@ -493,15 +525,15 @@
     {
       "type": "CommentLine",
       "value": " api / routes bindings",
-      "start": 236,
-      "end": 260,
+      "start": 382,
+      "end": 406,
       "loc": {
         "start": {
-          "line": 7,
+          "line": 12,
           "column": 0
         },
         "end": {
-          "line": 7,
+          "line": 12,
           "column": 24
         }
       }
@@ -509,17 +541,33 @@
   ],
   "tokens": [
     {
-      "type": "CommentLine",
-      "value": " composition-related db views",
+      "type": "CommentBlock",
+      "value": "*\n * This module provides an entrypoint to the compositions component of the applications\n * @module metis-backend/components/compositions\n ",
       "start": 0,
-      "end": 31,
+      "end": 144,
       "loc": {
         "start": {
           "line": 1,
           "column": 0
         },
         "end": {
-          "line": 1,
+          "line": 4,
+          "column": 3
+        }
+      }
+    },
+    {
+      "type": "CommentLine",
+      "value": " composition-related db views",
+      "start": 146,
+      "end": 177,
+      "loc": {
+        "start": {
+          "line": 6,
+          "column": 0
+        },
+        "end": {
+          "line": 6,
           "column": 31
         }
       }
@@ -539,15 +587,15 @@
         "updateContext": null
       },
       "value": "export",
-      "start": 32,
-      "end": 38,
+      "start": 178,
+      "end": 184,
       "loc": {
         "start": {
-          "line": 2,
+          "line": 7,
           "column": 0
         },
         "end": {
-          "line": 2,
+          "line": 7,
           "column": 6
         }
       }
@@ -565,15 +613,15 @@
         "binop": null
       },
       "value": "design",
-      "start": 39,
-      "end": 45,
+      "start": 185,
+      "end": 191,
       "loc": {
         "start": {
-          "line": 2,
+          "line": 7,
           "column": 7
         },
         "end": {
-          "line": 2,
+          "line": 7,
           "column": 13
         }
       }
@@ -591,15 +639,15 @@
         "binop": null
       },
       "value": "from",
-      "start": 46,
-      "end": 50,
+      "start": 192,
+      "end": 196,
       "loc": {
         "start": {
-          "line": 2,
+          "line": 7,
           "column": 14
         },
         "end": {
-          "line": 2,
+          "line": 7,
           "column": 18
         }
       }
@@ -618,15 +666,15 @@
         "updateContext": null
       },
       "value": "./compositions.design",
-      "start": 51,
-      "end": 74,
+      "start": 197,
+      "end": 220,
       "loc": {
         "start": {
-          "line": 2,
+          "line": 7,
           "column": 19
         },
         "end": {
-          "line": 2,
+          "line": 7,
           "column": 42
         }
       }
@@ -644,15 +692,15 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 74,
-      "end": 75,
+      "start": 220,
+      "end": 221,
       "loc": {
         "start": {
-          "line": 2,
+          "line": 7,
           "column": 42
         },
         "end": {
-          "line": 2,
+          "line": 7,
           "column": 43
         }
       }
@@ -660,15 +708,15 @@
     {
       "type": "CommentLine",
       "value": " view controller",
-      "start": 76,
-      "end": 94,
+      "start": 222,
+      "end": 240,
       "loc": {
         "start": {
-          "line": 3,
+          "line": 8,
           "column": 0
         },
         "end": {
-          "line": 3,
+          "line": 8,
           "column": 18
         }
       }
@@ -688,15 +736,15 @@
         "updateContext": null
       },
       "value": "export",
-      "start": 95,
-      "end": 101,
+      "start": 241,
+      "end": 247,
       "loc": {
         "start": {
-          "line": 4,
+          "line": 9,
           "column": 0
         },
         "end": {
-          "line": 4,
+          "line": 9,
           "column": 6
         }
       }
@@ -715,15 +763,15 @@
         "updateContext": null
       },
       "value": "*",
-      "start": 102,
-      "end": 103,
+      "start": 248,
+      "end": 249,
       "loc": {
         "start": {
-          "line": 4,
+          "line": 9,
           "column": 7
         },
         "end": {
-          "line": 4,
+          "line": 9,
           "column": 8
         }
       }
@@ -741,15 +789,15 @@
         "binop": null
       },
       "value": "as",
-      "start": 104,
-      "end": 106,
+      "start": 250,
+      "end": 252,
       "loc": {
         "start": {
-          "line": 4,
+          "line": 9,
           "column": 9
         },
         "end": {
-          "line": 4,
+          "line": 9,
           "column": 11
         }
       }
@@ -767,15 +815,15 @@
         "binop": null
       },
       "value": "controller",
-      "start": 107,
-      "end": 117,
+      "start": 253,
+      "end": 263,
       "loc": {
         "start": {
-          "line": 4,
+          "line": 9,
           "column": 12
         },
         "end": {
-          "line": 4,
+          "line": 9,
           "column": 22
         }
       }
@@ -793,15 +841,15 @@
         "binop": null
       },
       "value": "from",
-      "start": 118,
-      "end": 122,
+      "start": 264,
+      "end": 268,
       "loc": {
         "start": {
-          "line": 4,
+          "line": 9,
           "column": 23
         },
         "end": {
-          "line": 4,
+          "line": 9,
           "column": 27
         }
       }
@@ -820,15 +868,15 @@
         "updateContext": null
       },
       "value": "./compositions.controller",
-      "start": 123,
-      "end": 150,
+      "start": 269,
+      "end": 296,
       "loc": {
         "start": {
-          "line": 4,
+          "line": 9,
           "column": 28
         },
         "end": {
-          "line": 4,
+          "line": 9,
           "column": 55
         }
       }
@@ -846,15 +894,15 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 150,
-      "end": 151,
+      "start": 296,
+      "end": 297,
       "loc": {
         "start": {
-          "line": 4,
+          "line": 9,
           "column": 55
         },
         "end": {
-          "line": 4,
+          "line": 9,
           "column": 56
         }
       }
@@ -862,15 +910,15 @@
     {
       "type": "CommentLine",
       "value": " database abstraction layer operations",
-      "start": 152,
-      "end": 192,
+      "start": 298,
+      "end": 338,
       "loc": {
         "start": {
-          "line": 5,
+          "line": 10,
           "column": 0
         },
         "end": {
-          "line": 5,
+          "line": 10,
           "column": 40
         }
       }
@@ -890,15 +938,15 @@
         "updateContext": null
       },
       "value": "export",
-      "start": 193,
-      "end": 199,
+      "start": 339,
+      "end": 345,
       "loc": {
         "start": {
-          "line": 6,
+          "line": 11,
           "column": 0
         },
         "end": {
-          "line": 6,
+          "line": 11,
           "column": 6
         }
       }
@@ -917,15 +965,15 @@
         "updateContext": null
       },
       "value": "*",
-      "start": 200,
-      "end": 201,
+      "start": 346,
+      "end": 347,
       "loc": {
         "start": {
-          "line": 6,
+          "line": 11,
           "column": 7
         },
         "end": {
-          "line": 6,
+          "line": 11,
           "column": 8
         }
       }
@@ -943,15 +991,15 @@
         "binop": null
       },
       "value": "as",
-      "start": 202,
-      "end": 204,
+      "start": 348,
+      "end": 350,
       "loc": {
         "start": {
-          "line": 6,
+          "line": 11,
           "column": 9
         },
         "end": {
-          "line": 6,
+          "line": 11,
           "column": 11
         }
       }
@@ -969,15 +1017,15 @@
         "binop": null
       },
       "value": "dal",
-      "start": 205,
-      "end": 208,
+      "start": 351,
+      "end": 354,
       "loc": {
         "start": {
-          "line": 6,
+          "line": 11,
           "column": 12
         },
         "end": {
-          "line": 6,
+          "line": 11,
           "column": 15
         }
       }
@@ -995,15 +1043,15 @@
         "binop": null
       },
       "value": "from",
-      "start": 209,
-      "end": 213,
+      "start": 355,
+      "end": 359,
       "loc": {
         "start": {
-          "line": 6,
+          "line": 11,
           "column": 16
         },
         "end": {
-          "line": 6,
+          "line": 11,
           "column": 20
         }
       }
@@ -1022,15 +1070,15 @@
         "updateContext": null
       },
       "value": "./compositions.dal",
-      "start": 214,
-      "end": 234,
+      "start": 360,
+      "end": 380,
       "loc": {
         "start": {
-          "line": 6,
+          "line": 11,
           "column": 21
         },
         "end": {
-          "line": 6,
+          "line": 11,
           "column": 41
         }
       }
@@ -1048,15 +1096,15 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 234,
-      "end": 235,
+      "start": 380,
+      "end": 381,
       "loc": {
         "start": {
-          "line": 6,
+          "line": 11,
           "column": 41
         },
         "end": {
-          "line": 6,
+          "line": 11,
           "column": 42
         }
       }
@@ -1064,15 +1112,15 @@
     {
       "type": "CommentLine",
       "value": " api / routes bindings",
-      "start": 236,
-      "end": 260,
+      "start": 382,
+      "end": 406,
       "loc": {
         "start": {
-          "line": 7,
+          "line": 12,
           "column": 0
         },
         "end": {
-          "line": 7,
+          "line": 12,
           "column": 24
         }
       }
@@ -1092,15 +1140,15 @@
         "updateContext": null
       },
       "value": "export",
-      "start": 261,
-      "end": 267,
+      "start": 407,
+      "end": 413,
       "loc": {
         "start": {
-          "line": 8,
+          "line": 13,
           "column": 0
         },
         "end": {
-          "line": 8,
+          "line": 13,
           "column": 6
         }
       }
@@ -1118,15 +1166,15 @@
         "binop": null
       },
       "value": "api",
-      "start": 268,
-      "end": 271,
+      "start": 414,
+      "end": 417,
       "loc": {
         "start": {
-          "line": 8,
+          "line": 13,
           "column": 7
         },
         "end": {
-          "line": 8,
+          "line": 13,
           "column": 10
         }
       }
@@ -1144,15 +1192,15 @@
         "binop": null
       },
       "value": "from",
-      "start": 272,
-      "end": 276,
+      "start": 418,
+      "end": 422,
       "loc": {
         "start": {
-          "line": 8,
+          "line": 13,
           "column": 11
         },
         "end": {
-          "line": 8,
+          "line": 13,
           "column": 15
         }
       }
@@ -1171,15 +1219,15 @@
         "updateContext": null
       },
       "value": "./compositions.api",
-      "start": 277,
-      "end": 297,
+      "start": 423,
+      "end": 443,
       "loc": {
         "start": {
-          "line": 8,
+          "line": 13,
           "column": 16
         },
         "end": {
-          "line": 8,
+          "line": 13,
           "column": 36
         }
       }
@@ -1197,15 +1245,15 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 297,
-      "end": 298,
+      "start": 443,
+      "end": 444,
       "loc": {
         "start": {
-          "line": 8,
+          "line": 13,
           "column": 36
         },
         "end": {
-          "line": 8,
+          "line": 13,
           "column": 37
         }
       }
@@ -1223,15 +1271,15 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 299,
-      "end": 299,
+      "start": 445,
+      "end": 445,
       "loc": {
         "start": {
-          "line": 9,
+          "line": 14,
           "column": 0
         },
         "end": {
-          "line": 9,
+          "line": 14,
           "column": 0
         }
       }

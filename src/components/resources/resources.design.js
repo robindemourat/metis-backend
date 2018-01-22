@@ -1,3 +1,9 @@
+/**
+ * This module provides couchdb designs
+ * for the resources component.
+ * @module metis-backend/components/resources
+ */
+
 export default {
   "views": {
     "by_id": {

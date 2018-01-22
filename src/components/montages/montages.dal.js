@@ -1,7 +1,7 @@
 /**
- * Metis-backend
- * =======
- * Montage data access layer
+ * This module provides couchdb database operations managers
+ * for the montages component.
+ * @module metis-backend/components/montages
  */
 
 import db from '../../utils/plugDb';

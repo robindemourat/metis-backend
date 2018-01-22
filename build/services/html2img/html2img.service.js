@@ -6,7 +6,7 @@ Object.defineProperty(exports, "__esModule", {
 
 var cov_1rwoz7jvgf = function () {
   var path = '/Users/rawbin/Documents/Projets/collaborations/ensad-publishing/prototype/metis-backend/src/services/html2img/html2img.service.js',
-      hash = '2240ad9cdc0f584516638b0e3cc00f0c55984b8d',
+      hash = 'ff049b9de80c076504efe59b249dabc1ce1f34c8',
       global = new Function('return this')(),
       gcv = '__coverage__',
       coverageData = {
@@ -14,21 +14,21 @@ var cov_1rwoz7jvgf = function () {
     statementMap: {
       '0': {
         start: {
-          line: 4,
+          line: 10,
           column: 2
         },
         end: {
-          line: 18,
+          line: 24,
           column: 5
         }
       },
       '1': {
         start: {
-          line: 17,
+          line: 23,
           column: 4
         },
         end: {
-          line: 17,
+          line: 23,
           column: 18
         }
       }
@@ -38,49 +38,49 @@ var cov_1rwoz7jvgf = function () {
         name: '(anonymous_0)',
         decl: {
           start: {
-            line: 3,
+            line: 9,
             column: 15
           },
           end: {
-            line: 3,
+            line: 9,
             column: 16
           }
         },
         loc: {
           start: {
-            line: 3,
+            line: 9,
             column: 47
           },
           end: {
-            line: 19,
+            line: 25,
             column: 1
           }
         },
-        line: 3
+        line: 9
       },
       '1': {
         name: '(anonymous_1)',
         decl: {
           start: {
-            line: 16,
+            line: 22,
             column: 2
           },
           end: {
-            line: 16,
+            line: 22,
             column: 3
           }
         },
         loc: {
           start: {
-            line: 16,
+            line: 22,
             column: 11
           },
           end: {
-            line: 18,
+            line: 24,
             column: 3
           }
         },
-        line: 16
+        line: 22
       }
     },
     branchMap: {},
@@ -103,7 +103,11 @@ var cov_1rwoz7jvgf = function () {
 
   coverageData.hash = hash;
   return coverage[path] = coverageData;
-}();
+}(); /**
+      * This module provides main service function
+      * for the html2img service.
+      * @module metis-backend/services/html2img
+      */
 
 exports.default = function (html, path, callback) {
   cov_1rwoz7jvgf.f[0]++;

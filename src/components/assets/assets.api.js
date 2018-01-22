@@ -1,7 +1,7 @@
 /**
- * Metis-backend
- * =======
- * Asset api
+ * This module provides route indexes between uri patterns and controllers
+ * for the assets objects.
+ * @module metis-backend/components/assets
  */
 
 import express from 'express';

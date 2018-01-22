@@ -1,3 +1,9 @@
+/**
+ * This module provides couchdb designs
+ * for the compositions component.
+ * @module metis-backend/components/compositions
+ */
+
 export default {
   "views": {
     "by_id": {

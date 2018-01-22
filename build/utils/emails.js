@@ -6,7 +6,7 @@ Object.defineProperty(exports, "__esModule", {
 
 var cov_1bws6n3jsa = function () {
   var path = '/Users/rawbin/Documents/Projets/collaborations/ensad-publishing/prototype/metis-backend/src/utils/emails.js',
-      hash = '477fc30a6b6cb3ad25d1e2101b9f0fe14a931945',
+      hash = 'cf993980cf7e0f757ec18ca0282124acabccfbda',
       global = new Function('return this')(),
       gcv = '__coverage__',
       coverageData = {
@@ -14,41 +14,41 @@ var cov_1bws6n3jsa = function () {
     statementMap: {
       '0': {
         start: {
-          line: 8,
+          line: 6,
           column: 28
         },
         end: {
-          line: 20,
+          line: 18,
           column: 2
         }
       },
       '1': {
         start: {
-          line: 8,
+          line: 6,
           column: 47
         },
         end: {
-          line: 20,
+          line: 18,
           column: 1
         }
       },
       '2': {
         start: {
-          line: 22,
+          line: 20,
           column: 29
         },
         end: {
-          line: 32,
+          line: 30,
           column: 2
         }
       },
       '3': {
         start: {
-          line: 22,
+          line: 20,
           column: 48
         },
         end: {
-          line: 32,
+          line: 30,
           column: 1
         }
       }
@@ -58,49 +58,49 @@ var cov_1bws6n3jsa = function () {
         name: '(anonymous_0)',
         decl: {
           start: {
-            line: 8,
+            line: 6,
             column: 28
           },
           end: {
-            line: 8,
+            line: 6,
             column: 29
           }
         },
         loc: {
           start: {
-            line: 8,
+            line: 6,
             column: 47
           },
           end: {
-            line: 20,
+            line: 18,
             column: 1
           }
         },
-        line: 8
+        line: 6
       },
       '1': {
         name: '(anonymous_1)',
         decl: {
           start: {
-            line: 22,
+            line: 20,
             column: 29
           },
           end: {
-            line: 22,
+            line: 20,
             column: 30
           }
         },
         loc: {
           start: {
-            line: 22,
+            line: 20,
             column: 48
           },
           end: {
-            line: 32,
+            line: 30,
             column: 1
           }
         },
-        line: 22
+        line: 20
       }
     },
     branchMap: {},
@@ -129,9 +129,8 @@ var cov_1bws6n3jsa = function () {
 
 cov_1bws6n3jsa.s[0]++;
 /**
- * Metis-backend
- * =======
- * Mailing utils
+ * This module provides basic email templates (i.e. for auth-related email messages)
+ * @module metis-backend/utils/emails
  */
 
 var welcomeEmail = exports.welcomeEmail = function welcomeEmail(appUrl, user) {

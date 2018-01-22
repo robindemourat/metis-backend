@@ -1,3 +1,8 @@
+/**
+ * This module provides an entrypoint to the pdf publication releaser
+ * @module metis-backend/releasers/pdf
+ */
+
 import {resolve as resolvePath} from 'path';
 import {readFile} from 'fs-extra';
 import {readFileSync} from 'fs';

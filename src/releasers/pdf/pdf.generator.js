@@ -1,3 +1,8 @@
+/**
+ * This module a function that produces a pdf static file thanks to PrinceXML technology.
+ * @module metis-backend/releasers/pdf
+ */
+
 import React from 'react'; /* eslint no-unused-vars : 0 */
 import ReactDOMServer from 'react-dom/server';
 import {v4 as generateId} from 'uuid';

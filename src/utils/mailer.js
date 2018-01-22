@@ -1,7 +1,7 @@
 /**
- * Metis-backend
- * =======
- * Mailer utils
+ * This module provides a function to send an email through smtp
+ * thanks to the nodemailer lib.
+ * @module metis-backend/utils/mailer
  */
 import nodemailer from 'nodemailer';
 

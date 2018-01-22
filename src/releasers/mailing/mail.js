@@ -1,3 +1,11 @@
+/**
+ * This module provides a function that sends a mail formatted from a micropublication montage.
+ * @module metis-backend/releasers/mailing
+ */
+
+/**
+ * @todo reformat mailing releaser to simplify it and directly use the sendEmail util in controller
+ */
 import sendEmail from '../../utils/mailer';
 
 import Ajv from 'ajv';

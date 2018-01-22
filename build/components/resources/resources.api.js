@@ -96,9 +96,9 @@ var cov_6aw7kere = function () {
   coverageData.hash = hash;
   return coverage[path] = coverageData;
 }(); /**
-      * Metis-backend
-      * =======
-      * Resource api
+      * This module provides route indexes between uri patterns and controllers
+      * for the resources objects.
+      * @module metis-backend/components/resources
       */
 
 var _express = require('express');

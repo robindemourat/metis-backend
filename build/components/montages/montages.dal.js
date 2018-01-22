@@ -602,9 +602,9 @@ var cov_j8p5ej56a = function () {
   coverageData.hash = hash;
   return coverage[path] = coverageData;
 }(); /**
-      * Metis-backend
-      * =======
-      * Montage data access layer
+      * This module provides couchdb database operations managers
+      * for the montages component.
+      * @module metis-backend/components/montages
       */
 
 var _plugDb = require('../../utils/plugDb');

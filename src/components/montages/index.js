@@ -1,3 +1,8 @@
+/**
+ * This module provides an entrypoint to the montages component of the applications
+ * @module metis-backend/components/montages
+ */
+
 // montage-related db views
 export design from './montages.design';
 // view controller

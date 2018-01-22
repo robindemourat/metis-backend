@@ -28,7 +28,12 @@ var cov_k1c8u749d = function () {
 
   coverageData.hash = hash;
   return coverage[path] = coverageData;
-}(); // user-related db views
+}(); /**
+      * This module provides an entrypoint to the users component of the applications
+      * @module metis-backend/components/users
+      */
+
+// user-related db views
 
 
 var _users = require('./users.design');

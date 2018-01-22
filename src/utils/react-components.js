@@ -1,3 +1,10 @@
+/**
+ * This module provides react components to be used
+ * severside to render montages.
+ * @module metis-backend/utils/react-components
+ */
+
+
 import React, {Component} from 'react';/* eslint no-unused-vars : 0 */
 import PropTypes from 'prop-types';
 

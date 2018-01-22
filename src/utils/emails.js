@@ -1,9 +1,7 @@
 /**
- * Metis-backend
- * =======
- * Mailing utils
+ * This module provides basic email templates (i.e. for auth-related email messages)
+ * @module metis-backend/utils/emails
  */
-
 
 export const welcomeEmail = (appUrl, user) => ({
   subject: 'Metis - Bienvenue !',

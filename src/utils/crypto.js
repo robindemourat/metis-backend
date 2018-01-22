@@ -1,8 +1,8 @@
 /**
- * Metis-backend
- * =======
- * Crypto utils
+ * This module exports several functions related to encryption
+ * @module metis-backend/utils/crypto
  */
+
 const bcrypt = require('bcrypt');
 const saltRounds = 10;
 

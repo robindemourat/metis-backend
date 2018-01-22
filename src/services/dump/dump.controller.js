@@ -1,4 +1,9 @@
 /* eslint promise/param-names : 0 */
+/**
+ * This module provides express request handlers
+ * for the dump service.
+ * @module metis-backend/services/dump
+ */
 
 import archiver from 'archiver';
 import {ensureDir, remove, writeFile, readFile} from 'fs-extra';

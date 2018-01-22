@@ -1,8 +1,8 @@
-// /**
-//  * Metis-backend
-//  * =======
-//  * Montages component controller
-//  */
+/**
+ * This module provides express request handlers
+ * for the montages component.
+ * @module metis-backend/components/montages
+ */
 
 import {
   getMontages as getMontagesDAL,

@@ -10,7 +10,7 @@ var _promise2 = _interopRequireDefault(_promise);
 
 var cov_3tm42evqp = function () {
   var path = '/Users/rawbin/Documents/Projets/collaborations/ensad-publishing/prototype/metis-backend/src/releasers/facebook/index.js',
-      hash = '35a70929fc8db06b4fbb8566267094138050225a',
+      hash = 'ac5f08284357e4fa6d203bec3dea5218d8c4ea60',
       global = new Function('return this')(),
       gcv = '__coverage__',
       coverageData = {
@@ -18,151 +18,151 @@ var cov_3tm42evqp = function () {
     statementMap: {
       '0': {
         start: {
-          line: 15,
+          line: 11,
           column: 12
         },
         end: {
-          line: 15,
+          line: 11,
           column: 21
         }
       },
       '1': {
         start: {
-          line: 24,
+          line: 20,
           column: 4
         },
         end: {
-          line: 74,
+          line: 70,
           column: 7
         }
       },
       '2': {
         start: {
-          line: 27,
+          line: 23,
           column: 35
         },
         end: {
-          line: 27,
+          line: 23,
           column: 79
         }
       },
       '3': {
         start: {
-          line: 28,
+          line: 24,
           column: 8
         },
         end: {
-          line: 30,
+          line: 26,
           column: 9
         }
       },
       '4': {
         start: {
-          line: 29,
+          line: 25,
           column: 10
         },
         end: {
-          line: 29,
+          line: 25,
           column: 36
         }
       },
       '5': {
         start: {
-          line: 33,
+          line: 29,
           column: 33
         },
         end: {
-          line: 33,
+          line: 29,
           column: 69
         }
       },
       '6': {
         start: {
-          line: 34,
+          line: 30,
           column: 8
         },
         end: {
-          line: 36,
+          line: 32,
           column: 9
         }
       },
       '7': {
         start: {
-          line: 35,
+          line: 31,
           column: 10
         },
         end: {
-          line: 35,
+          line: 31,
           column: 36
         }
       },
       '8': {
         start: {
-          line: 38,
+          line: 34,
           column: 31
         },
         end: {
-          line: 38,
+          line: 34,
           column: 37
         }
       },
       '9': {
         start: {
-          line: 39,
+          line: 35,
           column: 8
         },
         end: {
-          line: 39,
+          line: 35,
           column: 40
         }
       },
       '10': {
         start: {
-          line: 40,
+          line: 36,
           column: 8
         },
         end: {
-          line: 47,
+          line: 43,
           column: 11
         }
       },
       '11': {
         start: {
-          line: 41,
+          line: 37,
           column: 10
         },
         end: {
-          line: 44,
+          line: 40,
           column: 11
         }
       },
       '12': {
         start: {
-          line: 42,
+          line: 38,
           column: 12
         },
         end: {
-          line: 42,
+          line: 38,
           column: 30
         }
       },
       '13': {
         start: {
-          line: 43,
+          line: 39,
           column: 12
         },
         end: {
-          line: 43,
+          line: 39,
           column: 19
         }
       },
       '14': {
         start: {
-          line: 46,
+          line: 42,
           column: 10
         },
         end: {
-          line: 46,
+          line: 42,
           column: 20
         }
       }
@@ -172,207 +172,207 @@ var cov_3tm42evqp = function () {
         name: 'status',
         decl: {
           start: {
-            line: 23,
+            line: 19,
             column: 16
           },
           end: {
-            line: 23,
+            line: 19,
             column: 22
           }
         },
         loc: {
           start: {
-            line: 23,
+            line: 19,
             column: 41
           },
           end: {
-            line: 75,
+            line: 71,
             column: 1
           }
         },
-        line: 23
+        line: 19
       },
       '1': {
         name: '(anonymous_1)',
         decl: {
           start: {
-            line: 24,
+            line: 20,
             column: 23
           },
           end: {
-            line: 24,
+            line: 20,
             column: 24
           }
         },
         loc: {
           start: {
-            line: 24,
+            line: 20,
             column: 44
           },
           end: {
-            line: 74,
+            line: 70,
             column: 5
           }
         },
-        line: 24
+        line: 20
       },
       '2': {
         name: '(anonymous_2)',
         decl: {
           start: {
-            line: 40,
+            line: 36,
             column: 44
           },
           end: {
-            line: 40,
+            line: 36,
             column: 45
           }
         },
         loc: {
           start: {
-            line: 40,
+            line: 36,
             column: 59
           },
           end: {
-            line: 47,
+            line: 43,
             column: 9
           }
         },
-        line: 40
+        line: 36
       }
     },
     branchMap: {
       '0': {
         loc: {
           start: {
-            line: 28,
+            line: 24,
             column: 8
           },
           end: {
-            line: 30,
+            line: 26,
             column: 9
           }
         },
         type: 'if',
         locations: [{
           start: {
-            line: 28,
+            line: 24,
             column: 8
           },
           end: {
-            line: 30,
+            line: 26,
             column: 9
           }
         }, {
           start: {
-            line: 28,
+            line: 24,
             column: 8
           },
           end: {
-            line: 30,
+            line: 26,
             column: 9
           }
         }],
-        line: 28
+        line: 24
       },
       '1': {
         loc: {
           start: {
-            line: 34,
+            line: 30,
             column: 8
           },
           end: {
-            line: 36,
+            line: 32,
             column: 9
           }
         },
         type: 'if',
         locations: [{
           start: {
-            line: 34,
+            line: 30,
             column: 8
           },
           end: {
-            line: 36,
+            line: 32,
             column: 9
           }
         }, {
           start: {
-            line: 34,
+            line: 30,
             column: 8
           },
           end: {
-            line: 36,
+            line: 32,
             column: 9
           }
         }],
-        line: 34
+        line: 30
       },
       '2': {
         loc: {
           start: {
-            line: 41,
+            line: 37,
             column: 10
           },
           end: {
-            line: 44,
+            line: 40,
             column: 11
           }
         },
         type: 'if',
         locations: [{
           start: {
-            line: 41,
+            line: 37,
             column: 10
           },
           end: {
-            line: 44,
+            line: 40,
             column: 11
           }
         }, {
           start: {
-            line: 41,
+            line: 37,
             column: 10
           },
           end: {
-            line: 44,
+            line: 40,
             column: 11
           }
         }],
-        line: 41
+        line: 37
       },
       '3': {
         loc: {
           start: {
-            line: 41,
+            line: 37,
             column: 13
           },
           end: {
-            line: 41,
+            line: 37,
             column: 30
           }
         },
         type: 'binary-expr',
         locations: [{
           start: {
-            line: 41,
+            line: 37,
             column: 13
           },
           end: {
-            line: 41,
+            line: 37,
             column: 17
           }
         }, {
           start: {
-            line: 41,
+            line: 37,
             column: 21
           },
           end: {
-            line: 41,
+            line: 37,
             column: 30
           }
         }],
-        line: 41
+        line: 37
       }
     },
     s: {
@@ -414,12 +414,8 @@ var cov_3tm42evqp = function () {
   coverageData.hash = hash;
   return coverage[path] = coverageData;
 }(); /**
-      * Multimodal Publishing utils
-      * ===========================
-      * facebook releaser
-      * ===========================
-      * This module publishes content to facebook.
-      * @module mpu/releasers/facebook
+      * This module provides an entrypoint to the facebook publication releaser
+      * @module metis-backend/releasers/facebook
       */
 
 

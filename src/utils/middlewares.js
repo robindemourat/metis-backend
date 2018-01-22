@@ -1,7 +1,6 @@
 /**
- * Metis-backend
- * =======
- * Custom middlewares for express
+ * This module provides useful express middlewares.
+ * @module metis-backend/utils/middlewares
  */
 import jwt from 'jsonwebtoken'; // used to create, sign, and verify tokens
 

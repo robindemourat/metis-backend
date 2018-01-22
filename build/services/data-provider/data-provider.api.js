@@ -62,12 +62,11 @@ var cov_sv81ouu9l = function () {
 
   coverageData.hash = hash;
   return coverage[path] = coverageData;
-}();
-/**
- * Metis-backend
- * =======
- * Data provider api
- */
+}(); /**
+      * This module provides route indexes between uri patterns and controllers
+      * for the data provider service.
+      * @module metis-backend/services/data-provider
+      */
 
 var _express = require('express');
 

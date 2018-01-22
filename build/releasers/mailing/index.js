@@ -29,12 +29,8 @@ var cov_1xy25d9b11 = function () {
   coverageData.hash = hash;
   return coverage[path] = coverageData;
 }(); /**
-      * Multimodal Publishing utils
-      * ===========================
-      * mailing releaser
-      * ===========================
-      * This module publishes content to mailing.
-      * @module mpu/releasers/mailing
+      * This module provides an entrypoint to the mailing publication releaser
+      * @module metis-backend/releasers/mailing
       */
 
 

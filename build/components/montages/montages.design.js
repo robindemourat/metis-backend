@@ -29,6 +29,12 @@ var cov_1oj0sz1gqm = function () {
   return coverage[path] = coverageData;
 }();
 
+/**
+ * This module provides couchdb designs
+ * for the montages component.
+ * @module metis-backend/components/montages
+ */
+
 exports.default = {
   "views": {
     "by_id": {

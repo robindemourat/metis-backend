@@ -1,8 +1,8 @@
-// /**
-//  * Metis-backend
-//  * =======
-//  * Resources component controller
-//  */
+/**
+ * This module provides express request handlers
+ * for the resources component.
+ * @module metis-backend/components/resources
+ */
 
 import {
   getResources as getResourcesDAL,

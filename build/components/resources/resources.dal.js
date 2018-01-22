@@ -602,9 +602,9 @@ var cov_25lcvfvez9 = function () {
   coverageData.hash = hash;
   return coverage[path] = coverageData;
 }(); /**
-      * Metis-backend
-      * =======
-      * Resource data access layer
+      * This module provides couchdb database operations managers
+      * for the resources component.
+      * @module metis-backend/components/resources
       */
 
 var _plugDb = require('../../utils/plugDb');

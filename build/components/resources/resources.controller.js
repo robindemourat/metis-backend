@@ -415,11 +415,11 @@ var cov_200y1aktnw = function () {
 
   coverageData.hash = hash;
   return coverage[path] = coverageData;
-}(); // /**
-//  * Metis-backend
-//  * =======
-//  * Resources component controller
-//  */
+}(); /**
+      * This module provides express request handlers
+      * for the resources component.
+      * @module metis-backend/components/resources
+      */
 
 var _resources = require('./resources.dal');
 

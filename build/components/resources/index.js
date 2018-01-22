@@ -28,7 +28,12 @@ var cov_27khnowlb3 = function () {
 
   coverageData.hash = hash;
   return coverage[path] = coverageData;
-}(); // resource-related db views
+}(); /**
+      * This module provides an entrypoint to the resources component of the applications
+      * @module metis-backend/components/resources
+      */
+
+// resource-related db views
 
 
 var _resources = require('./resources.design');

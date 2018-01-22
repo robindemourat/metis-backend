@@ -377,9 +377,9 @@ var cov_1896xs7o4i = function () {
   coverageData.hash = hash;
   return coverage[path] = coverageData;
 }(); /**
-      * Metis-backend
-      * =======
-      * Mailer utils
+      * This module provides a function to send an email through smtp
+      * thanks to the nodemailer lib.
+      * @module metis-backend/utils/mailer
       */
 
 

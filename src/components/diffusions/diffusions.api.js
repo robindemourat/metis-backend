@@ -1,9 +1,8 @@
 /**
- * Metis-backend
- * =======
- * Diffusion api
+ * This module provides route indexes between uri patterns and controllers
+ * for the diffusions objects.
+ * @module metis-backend/components/diffusions
  */
-
 import express from 'express';
 
 import {

@@ -6,7 +6,7 @@ Object.defineProperty(exports, "__esModule", {
 
 var cov_2hrr04exqb = function () {
   var path = '/Users/rawbin/Documents/Projets/collaborations/ensad-publishing/prototype/metis-backend/src/components/diffusions/diffusions.api.js',
-      hash = 'd402ee9773ffff6c761e6daba705e374d1cd329e',
+      hash = '4e0e6ea885b1620ce64a30c6c9855232a9f7e53b',
       global = new Function('return this')(),
       gcv = '__coverage__',
       coverageData = {
@@ -14,61 +14,61 @@ var cov_2hrr04exqb = function () {
     statementMap: {
       '0': {
         start: {
-          line: 17,
+          line: 16,
           column: 15
         },
         end: {
-          line: 17,
+          line: 16,
           column: 35
         }
       },
       '1': {
         start: {
-          line: 19,
+          line: 18,
           column: 0
         },
         end: {
-          line: 19,
+          line: 18,
           column: 31
         }
       },
       '2': {
         start: {
-          line: 20,
+          line: 19,
           column: 0
         },
         end: {
-          line: 20,
+          line: 19,
           column: 33
         }
       },
       '3': {
         start: {
-          line: 21,
+          line: 20,
           column: 0
         },
         end: {
-          line: 21,
+          line: 20,
           column: 34
         }
       },
       '4': {
         start: {
-          line: 22,
+          line: 21,
           column: 0
         },
         end: {
-          line: 22,
+          line: 21,
           column: 36
         }
       },
       '5': {
         start: {
-          line: 23,
+          line: 22,
           column: 0
         },
         end: {
-          line: 23,
+          line: 22,
           column: 39
         }
       }
@@ -96,10 +96,11 @@ var cov_2hrr04exqb = function () {
   coverageData.hash = hash;
   return coverage[path] = coverageData;
 }(); /**
-      * Metis-backend
-      * =======
-      * Diffusion api
+      * This module provides route indexes between uri patterns and controllers
+      * for the diffusions objects.
+      * @module metis-backend/components/diffusions
       */
+
 
 var _express = require('express');
 

@@ -602,9 +602,9 @@ var cov_vgwyx12ia = function () {
   coverageData.hash = hash;
   return coverage[path] = coverageData;
 }(); /**
-      * Metis-backend
-      * =======
-      * Composition data access layer
+      * This module provides couchdb database operations managers
+      * for the compositions component.
+      * @module metis-backend/components/compositions
       */
 
 var _plugDb = require('../../utils/plugDb');

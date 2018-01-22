@@ -1,3 +1,8 @@
+/**
+ * This module provides an entrypoint to the deliverables component of the applications
+ * @module metis-backend/components/deliverables
+ */
+
 // user-related db views
 export design from './deliverables.design';
 // view controller

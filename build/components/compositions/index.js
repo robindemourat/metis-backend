@@ -28,7 +28,12 @@ var cov_2b7400jxk3 = function () {
 
   coverageData.hash = hash;
   return coverage[path] = coverageData;
-}(); // composition-related db views
+}(); /**
+      * This module provides an entrypoint to the compositions component of the applications
+      * @module metis-backend/components/compositions
+      */
+
+// composition-related db views
 
 
 var _compositions = require('./compositions.design');

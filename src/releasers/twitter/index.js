@@ -1,10 +1,6 @@
 /**
- * Multimodal Publishing utils
- * ===========================
- * twitter releaser
- * ===========================
- * This module publishes content to twitter.
- * @module mpu/releasers/twitter
+ * This module provides an entrypoint to the twitter publication releaser
+ * @module metis-backend/releasers/twitter
  */
 export tweet from './tweet';
 

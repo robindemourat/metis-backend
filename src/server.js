@@ -1,3 +1,10 @@
+/**
+ * Metis-backend
+ * =======
+ * This is the application entrypoint.
+ * It starts an express app listening at specified port.
+ */
+
 // import fs from 'fs';
 // import https from 'https';
 /* eslint no-console : 0 */

@@ -1,3 +1,9 @@
+/**
+ * This module provides express request handlers
+ * for the html 2 img service.
+ * @module metis-backend/services/html 2 img
+ */
+
 import html2img from './html2img.service.js';
 import {v4 as genId} from 'uuid';
 import {readFile, remove} from 'fs-extra';

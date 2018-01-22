@@ -1,8 +1,9 @@
 /**
- * Metis-backend
- * =======
- * Assets component controller
+ * This module provides express request handlers
+ * for the assets component.
+ * @module metis-backend/components/assets
  */
+
 import {lookup} from 'mime-types';
 import {v4 as generateId} from 'uuid';
 import formidable from 'formidable';

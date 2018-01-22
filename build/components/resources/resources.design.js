@@ -29,6 +29,12 @@ var cov_28x43lhyhg = function () {
   return coverage[path] = coverageData;
 }();
 
+/**
+ * This module provides couchdb designs
+ * for the resources component.
+ * @module metis-backend/components/resources
+ */
+
 exports.default = {
   "views": {
     "by_id": {

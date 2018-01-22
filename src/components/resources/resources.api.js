@@ -1,7 +1,7 @@
 /**
- * Metis-backend
- * =======
- * Resource api
+ * This module provides route indexes between uri patterns and controllers
+ * for the resources objects.
+ * @module metis-backend/components/resources
  */
 
 import express from 'express';

@@ -6,7 +6,7 @@ Object.defineProperty(exports, "__esModule", {
 
 var cov_1qv3v7zld6 = function () {
   var path = '/Users/rawbin/Documents/Projets/collaborations/ensad-publishing/prototype/metis-backend/src/services/html2img/html2img.controller.js',
-      hash = '4217d72e9438ab4f5fa0c0853de700a4574aef0c',
+      hash = '1f44023222825a880453f6da650758e21b5ba0ed',
       global = new Function('return this')(),
       gcv = '__coverage__',
       coverageData = {
@@ -14,101 +14,101 @@ var cov_1qv3v7zld6 = function () {
     statementMap: {
       '0': {
         start: {
-          line: 6,
+          line: 12,
           column: 13
         },
         end: {
-          line: 6,
+          line: 12,
           column: 51
         }
       },
       '1': {
         start: {
-          line: 9,
+          line: 15,
           column: 15
         },
         end: {
-          line: 9,
+          line: 15,
           column: 28
         }
       },
       '2': {
         start: {
-          line: 10,
+          line: 16,
           column: 13
         },
         end: {
-          line: 10,
+          line: 16,
           column: 20
         }
       },
       '3': {
         start: {
-          line: 11,
+          line: 17,
           column: 19
         },
         end: {
-          line: 11,
+          line: 17,
           column: 43
         }
       },
       '4': {
         start: {
-          line: 13,
+          line: 19,
           column: 2
         },
         end: {
-          line: 23,
+          line: 29,
           column: 5
         }
       },
       '5': {
         start: {
-          line: 14,
+          line: 20,
           column: 4
         },
         end: {
-          line: 16,
+          line: 22,
           column: 5
         }
       },
       '6': {
         start: {
-          line: 15,
+          line: 21,
           column: 6
         },
         end: {
-          line: 15,
+          line: 21,
           column: 39
         }
       },
       '7': {
         start: {
-          line: 18,
+          line: 24,
           column: 4
         },
         end: {
-          line: 22,
+          line: 28,
           column: 36
         }
       },
       '8': {
         start: {
-          line: 20,
+          line: 26,
           column: 22
         },
         end: {
-          line: 20,
+          line: 26,
           column: 38
         }
       },
       '9': {
         start: {
-          line: 22,
+          line: 28,
           column: 18
         },
         end: {
-          line: 22,
+          line: 28,
           column: 34
         }
       }
@@ -118,132 +118,132 @@ var cov_1qv3v7zld6 = function () {
         name: 'controller',
         decl: {
           start: {
-            line: 8,
+            line: 14,
             column: 24
           },
           end: {
-            line: 8,
+            line: 14,
             column: 34
           }
         },
         loc: {
           start: {
-            line: 8,
+            line: 14,
             column: 46
           },
           end: {
-            line: 24,
+            line: 30,
             column: 1
           }
         },
-        line: 8
+        line: 14
       },
       '1': {
         name: '(anonymous_1)',
         decl: {
           start: {
-            line: 13,
+            line: 19,
             column: 27
           },
           end: {
-            line: 13,
+            line: 19,
             column: 28
           }
         },
         loc: {
           start: {
-            line: 13,
+            line: 19,
             column: 34
           },
           end: {
-            line: 23,
+            line: 29,
             column: 3
           }
         },
-        line: 13
+        line: 19
       },
       '2': {
         name: '(anonymous_2)',
         decl: {
           start: {
-            line: 20,
+            line: 26,
             column: 12
           },
           end: {
-            line: 20,
+            line: 26,
             column: 13
           }
         },
         loc: {
           start: {
-            line: 20,
+            line: 26,
             column: 22
           },
           end: {
-            line: 20,
+            line: 26,
             column: 38
           }
         },
-        line: 20
+        line: 26
       },
       '3': {
         name: '(anonymous_3)',
         decl: {
           start: {
-            line: 22,
+            line: 28,
             column: 12
           },
           end: {
-            line: 22,
+            line: 28,
             column: 13
           }
         },
         loc: {
           start: {
-            line: 22,
+            line: 28,
             column: 18
           },
           end: {
-            line: 22,
+            line: 28,
             column: 34
           }
         },
-        line: 22
+        line: 28
       }
     },
     branchMap: {
       '0': {
         loc: {
           start: {
-            line: 14,
+            line: 20,
             column: 4
           },
           end: {
-            line: 16,
+            line: 22,
             column: 5
           }
         },
         type: 'if',
         locations: [{
           start: {
-            line: 14,
+            line: 20,
             column: 4
           },
           end: {
-            line: 16,
+            line: 22,
             column: 5
           }
         }, {
           start: {
-            line: 14,
+            line: 20,
             column: 4
           },
           end: {
-            line: 16,
+            line: 22,
             column: 5
           }
         }],
-        line: 14
+        line: 20
       }
     },
     s: {
@@ -277,7 +277,11 @@ var cov_1qv3v7zld6 = function () {
 
   coverageData.hash = hash;
   return coverage[path] = coverageData;
-}();
+}(); /**
+      * This module provides express request handlers
+      * for the html 2 img service.
+      * @module metis-backend/services/html 2 img
+      */
 
 exports.default = controller;
 

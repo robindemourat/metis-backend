@@ -28,7 +28,12 @@ var cov_ehqc8tmf4 = function () {
 
   coverageData.hash = hash;
   return coverage[path] = coverageData;
-}(); // montage-related db views
+}(); /**
+      * This module provides an entrypoint to the montages component of the applications
+      * @module metis-backend/components/montages
+      */
+
+// montage-related db views
 
 
 var _montages = require('./montages.design');

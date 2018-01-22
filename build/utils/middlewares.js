@@ -7,7 +7,7 @@ exports.authenticateWithTokens = exports.errorHandler = undefined;
 
 var cov_wq47vg9ek = function () {
   var path = '/Users/rawbin/Documents/Projets/collaborations/ensad-publishing/prototype/metis-backend/src/utils/middlewares.js',
-      hash = '99692fcd5f532f3607361ec495580426bbed4e78',
+      hash = '831de9ed1ee7a6fa63fb747ca959e44f2e78e060',
       global = new Function('return this')(),
       gcv = '__coverage__',
       coverageData = {
@@ -15,171 +15,171 @@ var cov_wq47vg9ek = function () {
     statementMap: {
       '0': {
         start: {
-          line: 11,
+          line: 10,
           column: 17
         },
         end: {
-          line: 11,
+          line: 10,
           column: 28
         }
       },
       '1': {
         start: {
-          line: 14,
+          line: 13,
           column: 28
         },
         end: {
-          line: 23,
+          line: 22,
           column: 1
         }
       },
       '2': {
         start: {
-          line: 15,
+          line: 14,
           column: 18
         },
         end: {
-          line: 15,
+          line: 14,
           column: 46
         }
       },
       '3': {
         start: {
-          line: 16,
+          line: 15,
           column: 2
         },
         end: {
-          line: 22,
+          line: 21,
           column: 5
         }
       },
       '4': {
         start: {
-          line: 17,
+          line: 16,
           column: 6
         },
         end: {
-          line: 21,
+          line: 20,
           column: 7
         }
       },
       '5': {
         start: {
-          line: 18,
+          line: 17,
           column: 10
         },
         end: {
-          line: 18,
+          line: 17,
           column: 20
         }
       },
       '6': {
         start: {
-          line: 20,
+          line: 19,
           column: 8
         },
         end: {
-          line: 20,
+          line: 19,
           column: 29
         }
       },
       '7': {
         start: {
-          line: 25,
+          line: 24,
           column: 22
         },
         end: {
-          line: 28,
+          line: 27,
           column: 48
         }
       },
       '8': {
         start: {
-          line: 26,
+          line: 25,
           column: 2
         },
         end: {
-          line: 28,
+          line: 27,
           column: 48
         }
       },
       '9': {
         start: {
-          line: 30,
+          line: 29,
           column: 38
         },
         end: {
-          line: 44,
+          line: 43,
           column: 1
         }
       },
       '10': {
         start: {
-          line: 31,
+          line: 30,
           column: 16
         },
         end: {
-          line: 31,
+          line: 30,
           column: 34
         }
       },
       '11': {
         start: {
-          line: 32,
+          line: 31,
           column: 2
         },
         end: {
-          line: 43,
+          line: 42,
           column: 3
         }
       },
       '12': {
         start: {
-          line: 34,
+          line: 33,
           column: 4
-        },
-        end: {
-          line: 40,
-          column: 7
-        }
-      },
-      '13': {
-        start: {
-          line: 35,
-          column: 6
         },
         end: {
           line: 39,
           column: 7
         }
       },
+      '13': {
+        start: {
+          line: 34,
+          column: 6
+        },
+        end: {
+          line: 38,
+          column: 7
+        }
+      },
       '14': {
         start: {
-          line: 36,
+          line: 35,
           column: 8
         },
         end: {
-          line: 36,
+          line: 35,
           column: 48
         }
       },
       '15': {
         start: {
-          line: 38,
+          line: 37,
           column: 8
         },
         end: {
-          line: 38,
+          line: 37,
           column: 15
         }
       },
       '16': {
         start: {
-          line: 42,
+          line: 41,
           column: 4
         },
         end: {
-          line: 42,
+          line: 41,
           column: 44
         }
       }
@@ -189,258 +189,258 @@ var cov_wq47vg9ek = function () {
         name: '(anonymous_0)',
         decl: {
           start: {
-            line: 14,
+            line: 13,
             column: 28
           },
           end: {
-            line: 14,
+            line: 13,
             column: 29
           }
         },
         loc: {
           start: {
-            line: 14,
+            line: 13,
             column: 53
           },
           end: {
-            line: 23,
+            line: 22,
             column: 1
           }
         },
-        line: 14
+        line: 13
       },
       '1': {
         name: '(anonymous_1)',
         decl: {
           start: {
-            line: 16,
+            line: 15,
             column: 32
           },
           end: {
-            line: 16,
+            line: 15,
             column: 33
           }
         },
         loc: {
           start: {
-            line: 16,
+            line: 15,
             column: 56
           },
           end: {
-            line: 22,
+            line: 21,
             column: 3
           }
         },
-        line: 16
+        line: 15
       },
       '2': {
         name: '(anonymous_2)',
         decl: {
           start: {
-            line: 25,
+            line: 24,
             column: 22
           },
           end: {
-            line: 25,
+            line: 24,
             column: 23
           }
         },
         loc: {
           start: {
-            line: 26,
+            line: 25,
             column: 2
           },
           end: {
-            line: 28,
+            line: 27,
             column: 48
           }
         },
-        line: 26
+        line: 25
       },
       '3': {
         name: '(anonymous_3)',
         decl: {
           start: {
-            line: 30,
+            line: 29,
             column: 38
           },
           end: {
-            line: 30,
+            line: 29,
             column: 39
           }
         },
         loc: {
           start: {
-            line: 30,
+            line: 29,
             column: 58
           },
           end: {
-            line: 44,
+            line: 43,
             column: 1
           }
         },
-        line: 30
+        line: 29
       },
       '4': {
         name: '(anonymous_4)',
         decl: {
           start: {
-            line: 34,
+            line: 33,
             column: 30
           },
           end: {
-            line: 34,
+            line: 33,
             column: 31
           }
         },
         loc: {
           start: {
-            line: 34,
+            line: 33,
             column: 45
           },
           end: {
-            line: 40,
+            line: 39,
             column: 5
           }
         },
-        line: 34
+        line: 33
       }
     },
     branchMap: {
       '0': {
         loc: {
           start: {
-            line: 17,
+            line: 16,
             column: 6
           },
           end: {
-            line: 21,
+            line: 20,
             column: 7
           }
         },
         type: 'if',
         locations: [{
           start: {
-            line: 17,
+            line: 16,
             column: 6
           },
           end: {
-            line: 21,
+            line: 20,
             column: 7
           }
         }, {
           start: {
-            line: 17,
+            line: 16,
             column: 6
           },
           end: {
-            line: 21,
+            line: 20,
             column: 7
           }
         }],
-        line: 17
+        line: 16
       },
       '1': {
         loc: {
           start: {
-            line: 26,
+            line: 25,
             column: 2
           },
           end: {
-            line: 28,
+            line: 27,
             column: 48
           }
         },
         type: 'binary-expr',
         locations: [{
           start: {
-            line: 26,
+            line: 25,
             column: 3
           },
           end: {
-            line: 26,
+            line: 25,
             column: 11
           }
         }, {
           start: {
-            line: 26,
+            line: 25,
             column: 15
           },
           end: {
-            line: 26,
+            line: 25,
             column: 29
           }
         }, {
           start: {
-            line: 27,
+            line: 26,
             column: 3
           },
           end: {
-            line: 27,
+            line: 26,
             column: 13
           }
         }, {
           start: {
-            line: 27,
+            line: 26,
             column: 17
           },
           end: {
-            line: 27,
+            line: 26,
             column: 33
           }
         }, {
           start: {
-            line: 28,
+            line: 27,
             column: 3
           },
           end: {
-            line: 28,
+            line: 27,
             column: 14
           }
         }, {
           start: {
-            line: 28,
+            line: 27,
             column: 18
           },
           end: {
-            line: 28,
+            line: 27,
             column: 47
           }
         }],
-        line: 26
+        line: 25
       },
       '2': {
         loc: {
           start: {
-            line: 35,
+            line: 34,
             column: 6
           },
           end: {
-            line: 39,
+            line: 38,
             column: 7
           }
         },
         type: 'if',
         locations: [{
           start: {
-            line: 35,
+            line: 34,
             column: 6
           },
           end: {
-            line: 39,
+            line: 38,
             column: 7
           }
         }, {
           start: {
-            line: 35,
+            line: 34,
             column: 6
           },
           end: {
-            line: 39,
+            line: 38,
             column: 7
           }
         }],
-        line: 35
+        line: 34
       }
     },
     s: {
@@ -485,9 +485,8 @@ var cov_wq47vg9ek = function () {
   coverageData.hash = hash;
   return coverage[path] = coverageData;
 }(); /**
-      * Metis-backend
-      * =======
-      * Custom middlewares for express
+      * This module provides useful express middlewares.
+      * @module metis-backend/utils/middlewares
       */
 // used to create, sign, and verify tokens
 

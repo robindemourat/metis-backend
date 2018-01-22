@@ -1,28 +1,28 @@
 {
   "type": "File",
   "start": 0,
-  "end": 33,
+  "end": 159,
   "loc": {
     "start": {
       "line": 1,
       "column": 0
     },
     "end": {
-      "line": 2,
+      "line": 7,
       "column": 0
     }
   },
   "program": {
     "type": "Program",
     "start": 0,
-    "end": 33,
+    "end": 159,
     "loc": {
       "start": {
         "line": 1,
         "column": 0
       },
       "end": {
-        "line": 2,
+        "line": 7,
         "column": 0
       }
     },
@@ -30,63 +30,65 @@
     "body": [
       {
         "type": "ExportNamedDeclaration",
-        "start": 0,
-        "end": 32,
+        "start": 126,
+        "end": 158,
         "loc": {
           "start": {
-            "line": 1,
+            "line": 6,
             "column": 0
           },
           "end": {
-            "line": 1,
+            "line": 6,
             "column": 32
           }
         },
         "specifiers": [
           {
             "type": "ExportDefaultSpecifier",
-            "start": 7,
-            "end": 13,
+            "start": 133,
+            "end": 139,
             "loc": {
               "start": {
-                "line": 1,
+                "line": 6,
                 "column": 7
               },
               "end": {
-                "line": 1,
+                "line": 6,
                 "column": 13
               }
             },
             "exported": {
               "type": "Identifier",
-              "start": 7,
-              "end": 13,
+              "start": 133,
+              "end": 139,
               "loc": {
                 "start": {
-                  "line": 1,
+                  "line": 6,
                   "column": 7
                 },
                 "end": {
-                  "line": 1,
+                  "line": 6,
                   "column": 13
                 },
                 "identifierName": "router"
               },
-              "name": "router"
-            }
+              "name": "router",
+              "leadingComments": null
+            },
+            "leadingComments": null
           }
         ],
         "source": {
           "type": "StringLiteral",
-          "start": 19,
-          "end": 31,
+          "start": 145,
+          "end": 157,
           "loc": {
             "start": {
-              "line": 1,
+              "line": 6,
               "column": 19
             },
             "end": {
-              "line": 1,
+              "line": 6,
               "column": 31
             }
           },
@@ -95,13 +97,64 @@
             "raw": "'./dump.api'"
           },
           "value": "./dump.api"
-        }
+        },
+        "leadingComments": [
+          {
+            "type": "CommentBlock",
+            "value": "*\n * This module provides an entrypoint to the dump service of the applications\n * @module metis-backend/services/dump\n ",
+            "start": 0,
+            "end": 124,
+            "loc": {
+              "start": {
+                "line": 1,
+                "column": 0
+              },
+              "end": {
+                "line": 4,
+                "column": 3
+              }
+            }
+          }
+        ]
       }
     ],
     "directives": []
   },
-  "comments": [],
+  "comments": [
+    {
+      "type": "CommentBlock",
+      "value": "*\n * This module provides an entrypoint to the dump service of the applications\n * @module metis-backend/services/dump\n ",
+      "start": 0,
+      "end": 124,
+      "loc": {
+        "start": {
+          "line": 1,
+          "column": 0
+        },
+        "end": {
+          "line": 4,
+          "column": 3
+        }
+      }
+    }
+  ],
   "tokens": [
+    {
+      "type": "CommentBlock",
+      "value": "*\n * This module provides an entrypoint to the dump service of the applications\n * @module metis-backend/services/dump\n ",
+      "start": 0,
+      "end": 124,
+      "loc": {
+        "start": {
+          "line": 1,
+          "column": 0
+        },
+        "end": {
+          "line": 4,
+          "column": 3
+        }
+      }
+    },
     {
       "type": {
         "label": "export",
@@ -117,15 +170,15 @@
         "updateContext": null
       },
       "value": "export",
-      "start": 0,
-      "end": 6,
+      "start": 126,
+      "end": 132,
       "loc": {
         "start": {
-          "line": 1,
+          "line": 6,
           "column": 0
         },
         "end": {
-          "line": 1,
+          "line": 6,
           "column": 6
         }
       }
@@ -143,15 +196,15 @@
         "binop": null
       },
       "value": "router",
-      "start": 7,
-      "end": 13,
+      "start": 133,
+      "end": 139,
       "loc": {
         "start": {
-          "line": 1,
+          "line": 6,
           "column": 7
         },
         "end": {
-          "line": 1,
+          "line": 6,
           "column": 13
         }
       }
@@ -169,15 +222,15 @@
         "binop": null
       },
       "value": "from",
-      "start": 14,
-      "end": 18,
+      "start": 140,
+      "end": 144,
       "loc": {
         "start": {
-          "line": 1,
+          "line": 6,
           "column": 14
         },
         "end": {
-          "line": 1,
+          "line": 6,
           "column": 18
         }
       }
@@ -196,15 +249,15 @@
         "updateContext": null
       },
       "value": "./dump.api",
-      "start": 19,
-      "end": 31,
+      "start": 145,
+      "end": 157,
       "loc": {
         "start": {
-          "line": 1,
+          "line": 6,
           "column": 19
         },
         "end": {
-          "line": 1,
+          "line": 6,
           "column": 31
         }
       }
@@ -222,15 +275,15 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 31,
-      "end": 32,
+      "start": 157,
+      "end": 158,
       "loc": {
         "start": {
-          "line": 1,
+          "line": 6,
           "column": 31
         },
         "end": {
-          "line": 1,
+          "line": 6,
           "column": 32
         }
       }
@@ -248,15 +301,15 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 33,
-      "end": 33,
+      "start": 159,
+      "end": 159,
       "loc": {
         "start": {
-          "line": 2,
+          "line": 7,
           "column": 0
         },
         "end": {
-          "line": 2,
+          "line": 7,
           "column": 0
         }
       }

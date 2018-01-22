@@ -28,7 +28,10 @@ var cov_oew5xtq50 = function () {
 
   coverageData.hash = hash;
   return coverage[path] = coverageData;
-}();
+}(); /**
+      * This module provides an entrypoint to the dump service of the applications
+      * @module metis-backend/services/dump
+      */
 
 var _dump = require('./dump.api');
 

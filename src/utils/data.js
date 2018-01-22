@@ -1,4 +1,11 @@
 /* eslint promise/param-names : 0 */
+/**
+ * This module exports several functions related to data management,
+ * especially querying data and static files,
+ * and storing data from db to local temp files.
+ * @module metis-backend/utils/data
+ */
+
 
 import {dal as compositionDal} from '../components/compositions';
 import {dal as resourceDal} from '../components/resources';

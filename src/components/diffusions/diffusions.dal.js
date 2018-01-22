@@ -1,7 +1,7 @@
 /**
- * Metis-backend
- * =======
- * Diffusion data access layer
+ * This module provides couchdb database operations managers
+ * for the diffusions component.
+ * @module metis-backend/components/diffusions
  */
 
 import db from '../../utils/plugDb';

@@ -1,28 +1,28 @@
 {
   "type": "File",
   "start": 0,
-  "end": 62,
+  "end": 196,
   "loc": {
     "start": {
       "line": 1,
       "column": 0
     },
     "end": {
-      "line": 2,
+      "line": 6,
       "column": 0
     }
   },
   "program": {
     "type": "Program",
     "start": 0,
-    "end": 62,
+    "end": 196,
     "loc": {
       "start": {
         "line": 1,
         "column": 0
       },
       "end": {
-        "line": 2,
+        "line": 6,
         "column": 0
       }
     },
@@ -30,63 +30,65 @@
     "body": [
       {
         "type": "ExportNamedDeclaration",
-        "start": 0,
-        "end": 61,
+        "start": 134,
+        "end": 195,
         "loc": {
           "start": {
-            "line": 1,
+            "line": 5,
             "column": 0
           },
           "end": {
-            "line": 1,
+            "line": 5,
             "column": 61
           }
         },
         "specifiers": [
           {
             "type": "ExportNamespaceSpecifier",
-            "start": 7,
-            "end": 22,
+            "start": 141,
+            "end": 156,
             "loc": {
               "start": {
-                "line": 1,
+                "line": 5,
                 "column": 7
               },
               "end": {
-                "line": 1,
+                "line": 5,
                 "column": 22
               }
             },
             "exported": {
               "type": "Identifier",
-              "start": 12,
-              "end": 22,
+              "start": 146,
+              "end": 156,
               "loc": {
                 "start": {
-                  "line": 1,
+                  "line": 5,
                   "column": 12
                 },
                 "end": {
-                  "line": 1,
+                  "line": 5,
                   "column": 22
                 },
                 "identifierName": "controller"
               },
-              "name": "controller"
-            }
+              "name": "controller",
+              "leadingComments": null
+            },
+            "leadingComments": null
           }
         ],
         "source": {
           "type": "StringLiteral",
-          "start": 28,
-          "end": 60,
+          "start": 162,
+          "end": 194,
           "loc": {
             "start": {
-              "line": 1,
+              "line": 5,
               "column": 28
             },
             "end": {
-              "line": 1,
+              "line": 5,
               "column": 60
             }
           },
@@ -95,13 +97,64 @@
             "raw": "'./staticpublication.controller'"
           },
           "value": "./staticpublication.controller"
-        }
+        },
+        "leadingComments": [
+          {
+            "type": "CommentBlock",
+            "value": "*\n * This module provides an entrypoint to the static publication releaser\n * @module metis-backend/releasers/staticpublication\n ",
+            "start": 0,
+            "end": 133,
+            "loc": {
+              "start": {
+                "line": 1,
+                "column": 0
+              },
+              "end": {
+                "line": 4,
+                "column": 3
+              }
+            }
+          }
+        ]
       }
     ],
     "directives": []
   },
-  "comments": [],
+  "comments": [
+    {
+      "type": "CommentBlock",
+      "value": "*\n * This module provides an entrypoint to the static publication releaser\n * @module metis-backend/releasers/staticpublication\n ",
+      "start": 0,
+      "end": 133,
+      "loc": {
+        "start": {
+          "line": 1,
+          "column": 0
+        },
+        "end": {
+          "line": 4,
+          "column": 3
+        }
+      }
+    }
+  ],
   "tokens": [
+    {
+      "type": "CommentBlock",
+      "value": "*\n * This module provides an entrypoint to the static publication releaser\n * @module metis-backend/releasers/staticpublication\n ",
+      "start": 0,
+      "end": 133,
+      "loc": {
+        "start": {
+          "line": 1,
+          "column": 0
+        },
+        "end": {
+          "line": 4,
+          "column": 3
+        }
+      }
+    },
     {
       "type": {
         "label": "export",
@@ -117,15 +170,15 @@
         "updateContext": null
       },
       "value": "export",
-      "start": 0,
-      "end": 6,
+      "start": 134,
+      "end": 140,
       "loc": {
         "start": {
-          "line": 1,
+          "line": 5,
           "column": 0
         },
         "end": {
-          "line": 1,
+          "line": 5,
           "column": 6
         }
       }
@@ -144,15 +197,15 @@
         "updateContext": null
       },
       "value": "*",
-      "start": 7,
-      "end": 8,
+      "start": 141,
+      "end": 142,
       "loc": {
         "start": {
-          "line": 1,
+          "line": 5,
           "column": 7
         },
         "end": {
-          "line": 1,
+          "line": 5,
           "column": 8
         }
       }
@@ -170,15 +223,15 @@
         "binop": null
       },
       "value": "as",
-      "start": 9,
-      "end": 11,
+      "start": 143,
+      "end": 145,
       "loc": {
         "start": {
-          "line": 1,
+          "line": 5,
           "column": 9
         },
         "end": {
-          "line": 1,
+          "line": 5,
           "column": 11
         }
       }
@@ -196,15 +249,15 @@
         "binop": null
       },
       "value": "controller",
-      "start": 12,
-      "end": 22,
+      "start": 146,
+      "end": 156,
       "loc": {
         "start": {
-          "line": 1,
+          "line": 5,
           "column": 12
         },
         "end": {
-          "line": 1,
+          "line": 5,
           "column": 22
         }
       }
@@ -222,15 +275,15 @@
         "binop": null
       },
       "value": "from",
-      "start": 23,
-      "end": 27,
+      "start": 157,
+      "end": 161,
       "loc": {
         "start": {
-          "line": 1,
+          "line": 5,
           "column": 23
         },
         "end": {
-          "line": 1,
+          "line": 5,
           "column": 27
         }
       }
@@ -249,15 +302,15 @@
         "updateContext": null
       },
       "value": "./staticpublication.controller",
-      "start": 28,
-      "end": 60,
+      "start": 162,
+      "end": 194,
       "loc": {
         "start": {
-          "line": 1,
+          "line": 5,
           "column": 28
         },
         "end": {
-          "line": 1,
+          "line": 5,
           "column": 60
         }
       }
@@ -275,15 +328,15 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 60,
-      "end": 61,
+      "start": 194,
+      "end": 195,
       "loc": {
         "start": {
-          "line": 1,
+          "line": 5,
           "column": 60
         },
         "end": {
-          "line": 1,
+          "line": 5,
           "column": 61
         }
       }
@@ -301,15 +354,15 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 62,
-      "end": 62,
+      "start": 196,
+      "end": 196,
       "loc": {
         "start": {
-          "line": 2,
+          "line": 6,
           "column": 0
         },
         "end": {
-          "line": 2,
+          "line": 6,
           "column": 0
         }
       }

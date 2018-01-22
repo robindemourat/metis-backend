@@ -1,7 +1,7 @@
 /**
- * Metis-backend
- * =======
- * Composition data access layer
+ * This module provides couchdb database operations managers
+ * for the compositions component.
+ * @module metis-backend/components/compositions
  */
 
 import db from '../../utils/plugDb';

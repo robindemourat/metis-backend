@@ -888,7 +888,7 @@ Checks whether string matches hash
 
 ## `welcomeEmail()`
 
-Metis-backend ======= Mailing utils
+This module provides basic email templates (i.e. for auth-related email messages)
 
 | Name | Type | Attribute | Description |
 | --- | --- | --- | --- |

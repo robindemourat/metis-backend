@@ -1,10 +1,6 @@
 /**
- * Multimodal Publishing utils
- * ===========================
- * mailing releaser
- * ===========================
- * This module publishes content to mailing.
- * @module mpu/releasers/mailing
+ * This module provides an entrypoint to the mailing publication releaser
+ * @module metis-backend/releasers/mailing
  */
 export mail from './mail';
 
