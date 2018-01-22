@@ -4,13 +4,13 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var cov_1z8pp5qc24 = function () {
-  var path = '/Users/rawbin/Documents/Projets/collaborations/ensad-publishing/prototype/plurishing-backend/src/components/compositions/compositions.api.js',
-      hash = 'c61b233c6aff01e085a30807bf1778819a7773c5',
+var cov_1u17j2ghhe = function () {
+  var path = '/Users/rawbin/Documents/Projets/collaborations/ensad-publishing/prototype/metis-backend/src/components/compositions/compositions.api.js',
+      hash = 'f55266fa7461f5e077edc2c591465b1ca8653419',
       global = new Function('return this')(),
       gcv = '__coverage__',
       coverageData = {
-    path: '/Users/rawbin/Documents/Projets/collaborations/ensad-publishing/prototype/plurishing-backend/src/components/compositions/compositions.api.js',
+    path: '/Users/rawbin/Documents/Projets/collaborations/ensad-publishing/prototype/metis-backend/src/components/compositions/compositions.api.js',
     statementMap: {
       '0': {
         start: {
@@ -96,7 +96,7 @@ var cov_1z8pp5qc24 = function () {
   coverageData.hash = hash;
   return coverage[path] = coverageData;
 }(); /**
-      * Plurishing-backend
+      * Metis-backend
       * =======
       * Composition api
       */
@@ -109,17 +109,17 @@ var _compositions = require('./compositions.controller');
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var router = (cov_1z8pp5qc24.s[0]++, new _express2.default.Router());
+var router = (cov_1u17j2ghhe.s[0]++, new _express2.default.Router());
 
-cov_1z8pp5qc24.s[1]++;
+cov_1u17j2ghhe.s[1]++;
 router.get('/', _compositions.getCompositions);
-cov_1z8pp5qc24.s[2]++;
+cov_1u17j2ghhe.s[2]++;
 router.get('/:id', _compositions.getComposition);
-cov_1z8pp5qc24.s[3]++;
+cov_1u17j2ghhe.s[3]++;
 router.post('/', _compositions.createComposition);
-cov_1z8pp5qc24.s[4]++;
+cov_1u17j2ghhe.s[4]++;
 router.put('/:id', _compositions.updateComposition);
-cov_1z8pp5qc24.s[5]++;
+cov_1u17j2ghhe.s[5]++;
 router.delete('/:id', _compositions.deleteComposition);
 
 exports.default = router;

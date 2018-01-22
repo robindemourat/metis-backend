@@ -8,13 +8,13 @@ var _promise = require('babel-runtime/core-js/promise');
 
 var _promise2 = _interopRequireDefault(_promise);
 
-var cov_1en64zha43 = function () {
-  var path = '/Users/rawbin/Documents/Projets/collaborations/ensad-publishing/prototype/plurishing-backend/src/releasers/facebook/facebook.releaser.spec.js',
-      hash = '70cbc8d9a34197857b4e8214bf7fe5195c567e12',
+var cov_2682p0vrws = function () {
+  var path = '/Users/rawbin/Documents/Projets/collaborations/ensad-publishing/prototype/metis-backend/src/releasers/facebook/facebook.releaser.spec.js',
+      hash = '62b63d09d9f6023e6cc86b90c836594b36c86fa7',
       global = new Function('return this')(),
       gcv = '__coverage__',
       coverageData = {
-    path: '/Users/rawbin/Documents/Projets/collaborations/ensad-publishing/prototype/plurishing-backend/src/releasers/facebook/facebook.releaser.spec.js',
+    path: '/Users/rawbin/Documents/Projets/collaborations/ensad-publishing/prototype/metis-backend/src/releasers/facebook/facebook.releaser.spec.js',
     statementMap: {
       '0': {
         start: {
@@ -421,71 +421,71 @@ var _index = require('./index');
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-cov_1en64zha43.s[0]++;
+cov_2682p0vrws.s[0]++;
 
 
 (0, _mocha.describe)('facebook releaser', function () {
-  cov_1en64zha43.f[0]++;
-  cov_1en64zha43.s[1]++;
+  cov_2682p0vrws.f[0]++;
+  cov_2682p0vrws.s[1]++;
 
   /**
    * @todo find a way to test the part of the module related to fb api
    * @body it could be handled by negative statements at least
    */
   (0, _mocha.describe)('facebook function', function () {
-    cov_1en64zha43.f[1]++;
+    cov_2682p0vrws.f[1]++;
 
-    var validParams = (cov_1en64zha43.s[2]++, {
+    var validParams = (cov_2682p0vrws.s[2]++, {
       access_token: 'mlkjmljlmjmlkj-dmkml-mlkjmlkj'
     });
 
-    var validContents = (cov_1en64zha43.s[3]++, {
+    var validContents = (cov_2682p0vrws.s[3]++, {
       status: 'hello'
     });
 
-    cov_1en64zha43.s[4]++;
+    cov_2682p0vrws.s[4]++;
     (0, _mocha.it)('should return a promise', function (done) {
-      cov_1en64zha43.f[2]++;
+      cov_2682p0vrws.f[2]++;
 
-      var fn = (cov_1en64zha43.s[5]++, (0, _index.status)(validContents, validParams).catch());
-      cov_1en64zha43.s[6]++;
+      var fn = (cov_2682p0vrws.s[5]++, (0, _index.status)(validContents, validParams).catch());
+      cov_2682p0vrws.s[6]++;
       (0, _chai.expect)(fn).to.be.an.instanceof(_promise2.default);
-      cov_1en64zha43.s[7]++;
+      cov_2682p0vrws.s[7]++;
       done();
     });
 
-    cov_1en64zha43.s[8]++;
+    cov_2682p0vrws.s[8]++;
     (0, _mocha.it)('should reject invalid params shape', function (done) {
-      cov_1en64zha43.f[3]++;
+      cov_2682p0vrws.f[3]++;
 
-      var invalidParams = (cov_1en64zha43.s[9]++, (0, _extends3.default)({}, validParams, {
+      var invalidParams = (cov_2682p0vrws.s[9]++, (0, _extends3.default)({}, validParams, {
         access_token: undefined
       }));
-      cov_1en64zha43.s[10]++;
+      cov_2682p0vrws.s[10]++;
       (0, _index.status)(validContents, invalidParams).catch(function (e) {
-        cov_1en64zha43.f[4]++;
-        cov_1en64zha43.s[11]++;
+        cov_2682p0vrws.f[4]++;
+        cov_2682p0vrws.s[11]++;
 
         (0, _chai.expect)(e).to.be.an('array');
-        cov_1en64zha43.s[12]++;
+        cov_2682p0vrws.s[12]++;
         done();
       });
     });
 
-    cov_1en64zha43.s[13]++;
+    cov_2682p0vrws.s[13]++;
     (0, _mocha.it)('should reject invalid contents shape', function (done) {
-      cov_1en64zha43.f[5]++;
+      cov_2682p0vrws.f[5]++;
 
-      var invalidContents = (cov_1en64zha43.s[14]++, (0, _extends3.default)({}, validContents, {
+      var invalidContents = (cov_2682p0vrws.s[14]++, (0, _extends3.default)({}, validContents, {
         message: undefined
       }));
-      cov_1en64zha43.s[15]++;
+      cov_2682p0vrws.s[15]++;
       (0, _index.status)(invalidContents, validParams).catch(function (e) {
-        cov_1en64zha43.f[6]++;
-        cov_1en64zha43.s[16]++;
+        cov_2682p0vrws.f[6]++;
+        cov_2682p0vrws.s[16]++;
 
         (0, _chai.expect)(e).to.be.an('array');
-        cov_1en64zha43.s[17]++;
+        cov_2682p0vrws.s[17]++;
         done();
       });
     });

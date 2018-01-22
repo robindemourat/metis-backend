@@ -17,13 +17,13 @@ var _promise = require('babel-runtime/core-js/promise');
 
 var _promise2 = _interopRequireDefault(_promise);
 
-var cov_ai645p28e = function () {
-  var path = '/Users/rawbin/Documents/Projets/collaborations/ensad-publishing/prototype/plurishing-backend/src/utils/data.js',
-      hash = '8fe6b131b7f62312f219f96246ec7b8dd498a132',
+var cov_1amvx6zirx = function () {
+  var path = '/Users/rawbin/Documents/Projets/collaborations/ensad-publishing/prototype/metis-backend/src/utils/data.js',
+      hash = '6a045f6752f96fe0e5c12411fad1e920d2903b6e',
       global = new Function('return this')(),
       gcv = '__coverage__',
       coverageData = {
-    path: '/Users/rawbin/Documents/Projets/collaborations/ensad-publishing/prototype/plurishing-backend/src/utils/data.js',
+    path: '/Users/rawbin/Documents/Projets/collaborations/ensad-publishing/prototype/metis-backend/src/utils/data.js',
     statementMap: {
       '0': {
         start: {
@@ -1720,67 +1720,67 @@ var _path = require('path');
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var assetsFolder = (cov_ai645p28e.s[0]++, (0, _path.resolve)(__dirname + '/../../assets'));
-var tempFolder = (cov_ai645p28e.s[1]++, (0, _path.resolve)(__dirname + '/../../temp'));
-var tempAssetsFolder = (cov_ai645p28e.s[2]++, (0, _path.resolve)(tempFolder + '/assets'));
+var assetsFolder = (cov_1amvx6zirx.s[0]++, (0, _path.resolve)(__dirname + '/../../assets'));
+var tempFolder = (cov_1amvx6zirx.s[1]++, (0, _path.resolve)(__dirname + '/../../temp'));
+var tempAssetsFolder = (cov_1amvx6zirx.s[2]++, (0, _path.resolve)(tempFolder + '/assets'));
 
-cov_ai645p28e.s[3]++;
+cov_1amvx6zirx.s[3]++;
 var mountLocalAssets = exports.mountLocalAssets = function mountLocalAssets(assets) {
-  cov_ai645p28e.f[0]++;
-  cov_ai645p28e.s[4]++;
+  cov_1amvx6zirx.f[0]++;
+  cov_1amvx6zirx.s[4]++;
   return new _promise2.default(function (resolve, reject) {
-    cov_ai645p28e.f[1]++;
-    cov_ai645p28e.s[5]++;
+    cov_1amvx6zirx.f[1]++;
+    cov_1amvx6zirx.s[5]++;
 
     // should return getAssetUri function ie : asset => `${tempDirPath}/${asset._id}/${asset.filename}`
     return (0, _fsExtra.remove)(tempAssetsFolder).then(function () {
-      cov_ai645p28e.f[2]++;
-      cov_ai645p28e.s[6]++;
+      cov_1amvx6zirx.f[2]++;
+      cov_1amvx6zirx.s[6]++;
       return (0, _fsExtra.ensureDir)(tempAssetsFolder);
     }).then(function () {
-      cov_ai645p28e.f[3]++;
+      cov_1amvx6zirx.f[3]++;
 
-      var toResolve = (cov_ai645p28e.s[7]++, assets.map(function (asset) {
-        cov_ai645p28e.f[4]++;
-        cov_ai645p28e.s[8]++;
+      var toResolve = (cov_1amvx6zirx.s[7]++, assets.map(function (asset) {
+        cov_1amvx6zirx.f[4]++;
+        cov_1amvx6zirx.s[8]++;
 
         return (0, _fsExtra.ensureDir)(tempAssetsFolder + '/' + asset._id).then(function () {
-          cov_ai645p28e.f[5]++;
-          cov_ai645p28e.s[9]++;
+          cov_1amvx6zirx.f[5]++;
+          cov_1amvx6zirx.s[9]++;
 
           return _assets.dal.getAssetAttachment({ id: asset._id, filename: asset.filename });
         }).then(function (_ref) {
           var data = _ref.data;
-          cov_ai645p28e.f[6]++;
-          cov_ai645p28e.s[10]++;
+          cov_1amvx6zirx.f[6]++;
+          cov_1amvx6zirx.s[10]++;
 
           return (0, _fsExtra.writeFile)(tempAssetsFolder + '/' + asset._id + '/' + asset.filename, data);
         });
       }));
-      cov_ai645p28e.s[11]++;
+      cov_1amvx6zirx.s[11]++;
       return _promise2.default.all(toResolve);
     }).then(function () {
-      cov_ai645p28e.f[7]++;
-      cov_ai645p28e.s[12]++;
+      cov_1amvx6zirx.f[7]++;
+      cov_1amvx6zirx.s[12]++;
 
       var getAssetUri = function getAssetUri(asset) {
-        cov_ai645p28e.f[8]++;
-        cov_ai645p28e.s[13]++;
+        cov_1amvx6zirx.f[8]++;
+        cov_1amvx6zirx.s[13]++;
         return tempAssetsFolder + '/' + asset._id + '/' + asset.filename;
       };
-      cov_ai645p28e.s[14]++;
+      cov_1amvx6zirx.s[14]++;
       resolve(getAssetUri);
     }).catch(reject);
   });
 };
 
-cov_ai645p28e.s[15]++;
+cov_1amvx6zirx.s[15]++;
 var unmountLocalAssets = exports.unmountLocalAssets = function unmountLocalAssets() {
-  cov_ai645p28e.f[9]++;
-  cov_ai645p28e.s[16]++;
+  cov_1amvx6zirx.f[9]++;
+  cov_1amvx6zirx.s[16]++;
   return (/*assets*/new _promise2.default(function (resolve, reject) {
-      cov_ai645p28e.f[10]++;
-      cov_ai645p28e.s[17]++;
+      cov_1amvx6zirx.f[10]++;
+      cov_1amvx6zirx.s[17]++;
 
       // removing all assets
       return (0, _fsExtra.remove)(tempAssetsFolder).then(resolve).catch(reject);
@@ -1794,177 +1794,177 @@ var unmountLocalAssets = exports.unmountLocalAssets = function unmountLocalAsset
   );
 };
 
-cov_ai645p28e.s[18]++;
+cov_1amvx6zirx.s[18]++;
 var fetchCitationData = exports.fetchCitationData = function fetchCitationData() {
-  cov_ai645p28e.f[11]++;
-  cov_ai645p28e.s[19]++;
+  cov_1amvx6zirx.f[11]++;
+  cov_1amvx6zirx.s[19]++;
   return new _promise2.default(function (resolve, reject) {
-    cov_ai645p28e.f[12]++;
+    cov_1amvx6zirx.f[12]++;
 
     var citationStyle = void 0;
     var citationLocale = void 0;
-    cov_ai645p28e.s[20]++;
+    cov_1amvx6zirx.s[20]++;
     (0, _fsExtra.readFile)(assetsFolder + '/apa.csl', 'utf8').then(function (str) {
-      cov_ai645p28e.f[13]++;
-      cov_ai645p28e.s[21]++;
+      cov_1amvx6zirx.f[13]++;
+      cov_1amvx6zirx.s[21]++;
 
       citationStyle = str;
-      cov_ai645p28e.s[22]++;
+      cov_1amvx6zirx.s[22]++;
       return (0, _fsExtra.readFile)(assetsFolder + '/english-locale.xml', 'utf8');
     }).then(function (str) {
-      cov_ai645p28e.f[14]++;
-      cov_ai645p28e.s[23]++;
+      cov_1amvx6zirx.f[14]++;
+      cov_1amvx6zirx.s[23]++;
 
       citationLocale = str;
-      cov_ai645p28e.s[24]++;
+      cov_1amvx6zirx.s[24]++;
       resolve({ citationStyle: citationStyle, citationLocale: citationLocale });
     }).catch(reject);
   });
 };
 
-cov_ai645p28e.s[25]++;
+cov_1amvx6zirx.s[25]++;
 var fetchMontageDependencies = exports.fetchMontageDependencies = function fetchMontageDependencies(montage) {
-  cov_ai645p28e.f[15]++;
-  cov_ai645p28e.s[26]++;
+  cov_1amvx6zirx.f[15]++;
+  cov_1amvx6zirx.s[26]++;
 
   return new _promise2.default(function (resolve, reject) {
-    cov_ai645p28e.f[16]++;
+    cov_1amvx6zirx.f[16]++;
 
     var compositions = void 0;
     var resources = void 0;
     var assets = void 0;
     // register compositions
-    var compositionsRequirements = (cov_ai645p28e.s[27]++, montage.data.compositions.map(function (target) {
-      cov_ai645p28e.f[17]++;
-      cov_ai645p28e.s[28]++;
+    var compositionsRequirements = (cov_1amvx6zirx.s[27]++, montage.data.compositions.map(function (target) {
+      cov_1amvx6zirx.f[17]++;
+      cov_1amvx6zirx.s[28]++;
       return target.target_composition_id;
     }).filter(function (id) {
-      cov_ai645p28e.f[18]++;
-      cov_ai645p28e.s[29]++;
+      cov_1amvx6zirx.f[18]++;
+      cov_1amvx6zirx.s[29]++;
       return id;
     }).map(function (id) {
-      cov_ai645p28e.f[19]++;
-      cov_ai645p28e.s[30]++;
+      cov_1amvx6zirx.f[19]++;
+      cov_1amvx6zirx.s[30]++;
       return _compositions.dal.getComposition({ id: id });
     }));
-    cov_ai645p28e.s[31]++;
+    cov_1amvx6zirx.s[31]++;
     _promise2.default.all(compositionsRequirements).then(function (theseCompositions) {
-      cov_ai645p28e.f[20]++;
-      cov_ai645p28e.s[32]++;
+      cov_1amvx6zirx.f[20]++;
+      cov_1amvx6zirx.s[32]++;
 
       compositions = theseCompositions;
 
       // register resources requirement
-      var resourcesRequirements = (cov_ai645p28e.s[33]++, compositions.reduce(function (result, composition) {
-        cov_ai645p28e.f[21]++;
-        cov_ai645p28e.s[34]++;
+      var resourcesRequirements = (cov_1amvx6zirx.s[33]++, compositions.reduce(function (result, composition) {
+        cov_1amvx6zirx.f[21]++;
+        cov_1amvx6zirx.s[34]++;
 
-        return result.concat((cov_ai645p28e.b[0][0]++, composition.resources) || (cov_ai645p28e.b[0][1]++, []));
+        return result.concat((cov_1amvx6zirx.b[0][0]++, composition.resources) || (cov_1amvx6zirx.b[0][1]++, []));
       }, []).filter(function (id) {
-        cov_ai645p28e.f[22]++;
-        cov_ai645p28e.s[35]++;
+        cov_1amvx6zirx.f[22]++;
+        cov_1amvx6zirx.s[35]++;
         return id;
       }).map(function (id) {
-        cov_ai645p28e.f[23]++;
-        cov_ai645p28e.s[36]++;
+        cov_1amvx6zirx.f[23]++;
+        cov_1amvx6zirx.s[36]++;
         return _resources.dal.getResource({ id: id });
       }));
 
-      cov_ai645p28e.s[37]++;
+      cov_1amvx6zirx.s[37]++;
       _promise2.default.all(resourcesRequirements).then(function (theseResources) {
-        cov_ai645p28e.f[24]++;
-        cov_ai645p28e.s[38]++;
+        cov_1amvx6zirx.f[24]++;
+        cov_1amvx6zirx.s[38]++;
 
         resources = theseResources;
-        cov_ai645p28e.s[39]++;
+        cov_1amvx6zirx.s[39]++;
         var parseData = function parseData(data) {
-          cov_ai645p28e.f[25]++;
-          cov_ai645p28e.s[40]++;
+          cov_1amvx6zirx.f[25]++;
+          cov_1amvx6zirx.s[40]++;
           return (0, _keys2.default)(data).reduce(function (result, key) {
-            cov_ai645p28e.f[26]++;
-            cov_ai645p28e.s[41]++;
+            cov_1amvx6zirx.f[26]++;
+            cov_1amvx6zirx.s[41]++;
 
             if (key.indexOf('asset_id') > -1) {
-              cov_ai645p28e.b[1][0]++;
-              cov_ai645p28e.s[42]++;
+              cov_1amvx6zirx.b[1][0]++;
+              cov_1amvx6zirx.s[42]++;
 
               return result.concat(data[key]); /* eslint security/detect-object-injection : 0 */
             } else {
-              cov_ai645p28e.b[1][1]++;
+              cov_1amvx6zirx.b[1][1]++;
             }
-            cov_ai645p28e.s[43]++;
+            cov_1amvx6zirx.s[43]++;
             return result;
           }, []);
         };
 
         // register assets requirement as a list of assets ids
-        var assetsRequirements = (cov_ai645p28e.s[44]++, resources.reduce(function (result, resource) {
-          cov_ai645p28e.f[27]++;
-          cov_ai645p28e.s[45]++;
+        var assetsRequirements = (cov_1amvx6zirx.s[44]++, resources.reduce(function (result, resource) {
+          cov_1amvx6zirx.f[27]++;
+          cov_1amvx6zirx.s[45]++;
 
           if (Array.isArray(resource.data)) {
-            cov_ai645p28e.b[2][0]++;
-            cov_ai645p28e.s[46]++;
+            cov_1amvx6zirx.b[2][0]++;
+            cov_1amvx6zirx.s[46]++;
 
             return result.concat(resource.data.reduce(function (result2, item) {
-              cov_ai645p28e.f[28]++;
-              cov_ai645p28e.s[47]++;
+              cov_1amvx6zirx.f[28]++;
+              cov_1amvx6zirx.s[47]++;
 
               return result2.concat(parseData(item));
             }, []));
           } else {
-            cov_ai645p28e.b[2][1]++;
+            cov_1amvx6zirx.b[2][1]++;
           }
-          cov_ai645p28e.s[48]++;
+          cov_1amvx6zirx.s[48]++;
           return result.concat(parseData(resource.data));
         }, []).filter(function (id) {
-          cov_ai645p28e.f[29]++;
-          cov_ai645p28e.s[49]++;
+          cov_1amvx6zirx.f[29]++;
+          cov_1amvx6zirx.s[49]++;
           return id;
         }).map(function (id) {
-          cov_ai645p28e.f[30]++;
-          cov_ai645p28e.s[50]++;
+          cov_1amvx6zirx.f[30]++;
+          cov_1amvx6zirx.s[50]++;
           return new _promise2.default(function (reso, rej) {
-            cov_ai645p28e.f[31]++;
-            cov_ai645p28e.s[51]++;
+            cov_1amvx6zirx.f[31]++;
+            cov_1amvx6zirx.s[51]++;
 
 
             return _assets.dal.getAsset({ id: id }).then(function (asset) {
-              cov_ai645p28e.f[32]++;
-              cov_ai645p28e.s[52]++;
+              cov_1amvx6zirx.f[32]++;
+              cov_1amvx6zirx.s[52]++;
 
               // fetch raw data for text assets
               if (asset.mimetype.indexOf('text') === 0) {
-                cov_ai645p28e.b[3][0]++;
-                cov_ai645p28e.s[53]++;
+                cov_1amvx6zirx.b[3][0]++;
+                cov_1amvx6zirx.s[53]++;
 
                 return _assets.dal.getAssetAttachment({
                   id: id,
                   filename: asset.filename
                 }).then(function (attachment) {
-                  cov_ai645p28e.f[33]++;
-                  cov_ai645p28e.s[54]++;
+                  cov_1amvx6zirx.f[33]++;
+                  cov_1amvx6zirx.s[54]++;
 
                   return reso((0, _extends3.default)({}, asset, {
                     rawData: attachment.data.toString()
                   }));
                 });
               } else {
-                cov_ai645p28e.b[3][1]++;
+                cov_1amvx6zirx.b[3][1]++;
               }
-              cov_ai645p28e.s[55]++;
+              cov_1amvx6zirx.s[55]++;
               return reso(asset);
             }).catch(rej);
           });
         }));
 
-        cov_ai645p28e.s[56]++;
+        cov_1amvx6zirx.s[56]++;
         _promise2.default.all(assetsRequirements).then(function (theseAssets) {
-          cov_ai645p28e.f[34]++;
-          cov_ai645p28e.s[57]++;
+          cov_1amvx6zirx.f[34]++;
+          cov_1amvx6zirx.s[57]++;
 
           assets = theseAssets;
-          cov_ai645p28e.s[58]++;
+          cov_1amvx6zirx.s[58]++;
           resolve({
             montage: montage,
             compositions: compositions,

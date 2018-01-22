@@ -1,12 +1,12 @@
 /**
- * Plurishing-backend
+ * Metis-backend
  * =======
  * Resource data access layer
  */
 
 import db from '../../utils/plugDb';
 
-import {Resource as schema} from 'plurishing-schemas';
+import {Resource as schema} from 'metis-schemas';
 import design from './resources.design';
 import {addDesign} from '../../utils/couchdb';
 import {dataIsValid} from '../../utils/schemas';

@@ -4,13 +4,13 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var cov_37urekjwo = function () {
-  var path = '/Users/rawbin/Documents/Projets/collaborations/ensad-publishing/prototype/plurishing-backend/src/components/montages/montages.api.js',
-      hash = '6e1e921cefde725be02e6ab99e9fea94d606f5e0',
+var cov_513kyso2p = function () {
+  var path = '/Users/rawbin/Documents/Projets/collaborations/ensad-publishing/prototype/metis-backend/src/components/montages/montages.api.js',
+      hash = '7a8cc6e77c2087e03de226ed30807ff2e0d49244',
       global = new Function('return this')(),
       gcv = '__coverage__',
       coverageData = {
-    path: '/Users/rawbin/Documents/Projets/collaborations/ensad-publishing/prototype/plurishing-backend/src/components/montages/montages.api.js',
+    path: '/Users/rawbin/Documents/Projets/collaborations/ensad-publishing/prototype/metis-backend/src/components/montages/montages.api.js',
     statementMap: {
       '0': {
         start: {
@@ -96,7 +96,7 @@ var cov_37urekjwo = function () {
   coverageData.hash = hash;
   return coverage[path] = coverageData;
 }(); /**
-      * Plurishing-backend
+      * Metis-backend
       * =======
       * Montage api
       */
@@ -109,17 +109,17 @@ var _montages = require('./montages.controller');
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var router = (cov_37urekjwo.s[0]++, new _express2.default.Router());
+var router = (cov_513kyso2p.s[0]++, new _express2.default.Router());
 
-cov_37urekjwo.s[1]++;
+cov_513kyso2p.s[1]++;
 router.get('/', _montages.getMontages);
-cov_37urekjwo.s[2]++;
+cov_513kyso2p.s[2]++;
 router.get('/:id', _montages.getMontage);
-cov_37urekjwo.s[3]++;
+cov_513kyso2p.s[3]++;
 router.post('/', _montages.createMontage);
-cov_37urekjwo.s[4]++;
+cov_513kyso2p.s[4]++;
 router.put('/:id', _montages.updateMontage);
-cov_37urekjwo.s[5]++;
+cov_513kyso2p.s[5]++;
 router.delete('/:id', _montages.deleteMontage);
 
 exports.default = router;

@@ -3,7 +3,7 @@ const fs = require('fs');
 module.exports = {
   port: 3001,
   couchdbUri: "http://localhost:5984",
-  couchdbName: "plurishing",
+  couchdbName: "metis",
 
 
   serverUri: "http://localhost:3001",

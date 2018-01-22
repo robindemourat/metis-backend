@@ -4,13 +4,13 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var cov_1kvp7cgsoq = function () {
-  var path = '/Users/rawbin/Documents/Projets/collaborations/ensad-publishing/prototype/plurishing-backend/src/services/html2img/html2img.api.js',
-      hash = '967c06d719e3838c50ab92683494fe272b17316a',
+var cov_e9761zju0 = function () {
+  var path = '/Users/rawbin/Documents/Projets/collaborations/ensad-publishing/prototype/metis-backend/src/services/html2img/html2img.api.js',
+      hash = '5baae529d2625cacaac0d176ef4e0c42238447a7',
       global = new Function('return this')(),
       gcv = '__coverage__',
       coverageData = {
-    path: '/Users/rawbin/Documents/Projets/collaborations/ensad-publishing/prototype/plurishing-backend/src/services/html2img/html2img.api.js',
+    path: '/Users/rawbin/Documents/Projets/collaborations/ensad-publishing/prototype/metis-backend/src/services/html2img/html2img.api.js',
     statementMap: {
       '0': {
         start: {
@@ -54,7 +54,7 @@ var cov_1kvp7cgsoq = function () {
 }();
 
 /**
- * Plurishing-backend
+ * Metis-backend
  * =======
  * Html to image api
  */
@@ -69,9 +69,9 @@ var _html2img2 = _interopRequireDefault(_html2img);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var router = (cov_1kvp7cgsoq.s[0]++, new _express2.default.Router());
+var router = (cov_e9761zju0.s[0]++, new _express2.default.Router());
 
-cov_1kvp7cgsoq.s[1]++;
+cov_e9761zju0.s[1]++;
 router.post('/', _html2img2.default);
 
 exports.default = router;

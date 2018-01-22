@@ -17,13 +17,13 @@ var _promise = require('babel-runtime/core-js/promise');
 
 var _promise2 = _interopRequireDefault(_promise);
 
-var cov_shizl4dmo = function () {
-  var path = '/Users/rawbin/Documents/Projets/collaborations/ensad-publishing/prototype/plurishing-backend/src/services/dump/dump.controller.js',
-      hash = '818c1ed684d299e8925f850bbd24222045bc9b40',
+var cov_2lh1hksiee = function () {
+  var path = '/Users/rawbin/Documents/Projets/collaborations/ensad-publishing/prototype/metis-backend/src/services/dump/dump.controller.js',
+      hash = '9b2da047388ddc2a453c0b7920a64c4b2e951d8e',
       global = new Function('return this')(),
       gcv = '__coverage__',
       coverageData = {
-    path: '/Users/rawbin/Documents/Projets/collaborations/ensad-publishing/prototype/plurishing-backend/src/services/dump/dump.controller.js',
+    path: '/Users/rawbin/Documents/Projets/collaborations/ensad-publishing/prototype/metis-backend/src/services/dump/dump.controller.js',
     statementMap: {
       '0': {
         start: {
@@ -3397,171 +3397,171 @@ var _deliverables = require('../../components/deliverables');
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var tempFolder = (cov_shizl4dmo.s[0]++, (0, _path.resolve)(__dirname + '/../../../temp/'));
-var dumpFolder = (cov_shizl4dmo.s[1]++, tempFolder + '/dump/');
-var zipDest = (cov_shizl4dmo.s[2]++, tempFolder + '/dump.zip');
+var tempFolder = (cov_2lh1hksiee.s[0]++, (0, _path.resolve)(__dirname + '/../../../temp/'));
+var dumpFolder = (cov_2lh1hksiee.s[1]++, tempFolder + '/dump/');
+var zipDest = (cov_2lh1hksiee.s[2]++, tempFolder + '/dump.zip');
 
-cov_shizl4dmo.s[3]++;
+cov_2lh1hksiee.s[3]++;
 var downloadAllData = exports.downloadAllData = function downloadAllData(req, res) {
-  cov_shizl4dmo.f[0]++;
-  cov_shizl4dmo.s[4]++;
+  cov_2lh1hksiee.f[0]++;
+  cov_2lh1hksiee.s[4]++;
   return new _promise2.default(function (resolve, reject) {
-    cov_shizl4dmo.f[1]++;
+    cov_2lh1hksiee.f[1]++;
 
-    var data = (cov_shizl4dmo.s[5]++, {});
+    var data = (cov_2lh1hksiee.s[5]++, {});
 
     // ensure temp folder structure is set
-    cov_shizl4dmo.s[6]++;
+    cov_2lh1hksiee.s[6]++;
     (0, _fsExtra.remove)(dumpFolder).then(function () {
-      cov_shizl4dmo.f[2]++;
-      cov_shizl4dmo.s[7]++;
+      cov_2lh1hksiee.f[2]++;
+      cov_2lh1hksiee.s[7]++;
       return (0, _fsExtra.ensureDir)(dumpFolder);
     }).then(function () {
-      cov_shizl4dmo.f[3]++;
-      cov_shizl4dmo.s[8]++;
+      cov_2lh1hksiee.f[3]++;
+      cov_2lh1hksiee.s[8]++;
       return (0, _fsExtra.ensureDir)(dumpFolder + '/data');
     }).then(function () {
-      cov_shizl4dmo.f[4]++;
-      cov_shizl4dmo.s[9]++;
+      cov_2lh1hksiee.f[4]++;
+      cov_2lh1hksiee.s[9]++;
       return (0, _fsExtra.ensureDir)(dumpFolder + '/assets');
     }).then(function () {
-      cov_shizl4dmo.f[5]++;
-      cov_shizl4dmo.s[10]++;
+      cov_2lh1hksiee.f[5]++;
+      cov_2lh1hksiee.s[10]++;
       return (0, _fsExtra.ensureDir)(dumpFolder + '/deliverables');
     }).then(function () {
-      cov_shizl4dmo.f[6]++;
-      cov_shizl4dmo.s[11]++;
+      cov_2lh1hksiee.f[6]++;
+      cov_2lh1hksiee.s[11]++;
       return _assets.dal.getAssets({});
     })
     // get assets
     .then(function (assets) {
-      cov_shizl4dmo.f[7]++;
-      cov_shizl4dmo.s[12]++;
+      cov_2lh1hksiee.f[7]++;
+      cov_2lh1hksiee.s[12]++;
 
       data.assets = assets;
       // download assets attachments
-      var attachments = (cov_shizl4dmo.s[13]++, assets.map(function (asset) {
-        cov_shizl4dmo.f[8]++;
-        cov_shizl4dmo.s[14]++;
+      var attachments = (cov_2lh1hksiee.s[13]++, assets.map(function (asset) {
+        cov_2lh1hksiee.f[8]++;
+        cov_2lh1hksiee.s[14]++;
 
         return new _promise2.default(function (resolve2, reject2) {
-          cov_shizl4dmo.f[9]++;
-          cov_shizl4dmo.s[15]++;
+          cov_2lh1hksiee.f[9]++;
+          cov_2lh1hksiee.s[15]++;
 
           _assets.dal.getAssetAttachment({
             id: asset._id,
             filename: asset.filename
           }).then(function (attachment) {
-            cov_shizl4dmo.f[10]++;
+            cov_2lh1hksiee.f[10]++;
 
-            var folderPath = (cov_shizl4dmo.s[16]++, dumpFolder + '/assets/' + asset._id);
-            var path = (cov_shizl4dmo.s[17]++, folderPath + '/' + asset.filename);
-            cov_shizl4dmo.s[18]++;
+            var folderPath = (cov_2lh1hksiee.s[16]++, dumpFolder + '/assets/' + asset._id);
+            var path = (cov_2lh1hksiee.s[17]++, folderPath + '/' + asset.filename);
+            cov_2lh1hksiee.s[18]++;
             return (0, _fsExtra.ensureDir)(folderPath).then(function () {
-              cov_shizl4dmo.f[11]++;
-              cov_shizl4dmo.s[19]++;
+              cov_2lh1hksiee.f[11]++;
+              cov_2lh1hksiee.s[19]++;
               return (0, _fsExtra.writeFile)(path, attachment.data, 'binary');
             });
           }).then(resolve2).catch(reject2);
         });
       }));
-      cov_shizl4dmo.s[20]++;
+      cov_2lh1hksiee.s[20]++;
       return _promise2.default.all(attachments);
     })
     // get other objects
     .then(function () {
-      cov_shizl4dmo.f[12]++;
-      cov_shizl4dmo.s[21]++;
+      cov_2lh1hksiee.f[12]++;
+      cov_2lh1hksiee.s[21]++;
 
       return _resources.dal.getResources({});
     }).then(function (resources) {
-      cov_shizl4dmo.f[13]++;
-      cov_shizl4dmo.s[22]++;
+      cov_2lh1hksiee.f[13]++;
+      cov_2lh1hksiee.s[22]++;
 
       data.resources = resources;
-      cov_shizl4dmo.s[23]++;
+      cov_2lh1hksiee.s[23]++;
       return _compositions.dal.getCompositions({});
     }).then(function (compositions) {
-      cov_shizl4dmo.f[14]++;
-      cov_shizl4dmo.s[24]++;
+      cov_2lh1hksiee.f[14]++;
+      cov_2lh1hksiee.s[24]++;
 
       data.compositions = compositions;
-      cov_shizl4dmo.s[25]++;
+      cov_2lh1hksiee.s[25]++;
       return _montages.dal.getMontages({});
     }).then(function (montages) {
-      cov_shizl4dmo.f[15]++;
-      cov_shizl4dmo.s[26]++;
+      cov_2lh1hksiee.f[15]++;
+      cov_2lh1hksiee.s[26]++;
 
       data.montages = montages;
-      cov_shizl4dmo.s[27]++;
+      cov_2lh1hksiee.s[27]++;
       return _diffusions.dal.getDiffusions({});
     }).then(function (diffusions) {
-      cov_shizl4dmo.f[16]++;
-      cov_shizl4dmo.s[28]++;
+      cov_2lh1hksiee.f[16]++;
+      cov_2lh1hksiee.s[28]++;
 
       data.diffusions = diffusions;
-      cov_shizl4dmo.s[29]++;
+      cov_2lh1hksiee.s[29]++;
       return _deliverables.dal.getDeliverables({});
     })
     // get deliverables
     .then(function (deliverables) {
-      cov_shizl4dmo.f[17]++;
-      cov_shizl4dmo.s[30]++;
+      cov_2lh1hksiee.f[17]++;
+      cov_2lh1hksiee.s[30]++;
 
       data.deliverables = deliverables;
       // download deliverables attachments
-      var attachments = (cov_shizl4dmo.s[31]++, deliverables.map(function (deliverable) {
-        cov_shizl4dmo.f[18]++;
-        cov_shizl4dmo.s[32]++;
+      var attachments = (cov_2lh1hksiee.s[31]++, deliverables.map(function (deliverable) {
+        cov_2lh1hksiee.f[18]++;
+        cov_2lh1hksiee.s[32]++;
 
         return new _promise2.default(function (resolve2, reject2) {
-          cov_shizl4dmo.f[19]++;
-          cov_shizl4dmo.s[33]++;
+          cov_2lh1hksiee.f[19]++;
+          cov_2lh1hksiee.s[33]++;
 
           _deliverables.dal.getDeliverableAttachment({
             id: deliverable._id,
             filename: deliverable.filename
           }).then(function (attachment) {
-            cov_shizl4dmo.f[20]++;
+            cov_2lh1hksiee.f[20]++;
 
-            var folderPath = (cov_shizl4dmo.s[34]++, dumpFolder + '/deliverables/' + deliverable._id);
-            var path = (cov_shizl4dmo.s[35]++, folderPath + '/' + deliverable.filename);
-            cov_shizl4dmo.s[36]++;
+            var folderPath = (cov_2lh1hksiee.s[34]++, dumpFolder + '/deliverables/' + deliverable._id);
+            var path = (cov_2lh1hksiee.s[35]++, folderPath + '/' + deliverable.filename);
+            cov_2lh1hksiee.s[36]++;
             return (0, _fsExtra.ensureDir)(folderPath).then(function () {
-              cov_shizl4dmo.f[21]++;
-              cov_shizl4dmo.s[37]++;
+              cov_2lh1hksiee.f[21]++;
+              cov_2lh1hksiee.s[37]++;
               return (0, _fsExtra.writeFile)(path, attachment.data, 'binary');
             });
           }).then(resolve2).catch(reject2);
         });
       }));
-      cov_shizl4dmo.s[38]++;
+      cov_2lh1hksiee.s[38]++;
       return _promise2.default.all(attachments);
     })
     // write data
     .then(function () {
-      cov_shizl4dmo.f[22]++;
+      cov_2lh1hksiee.f[22]++;
 
-      var dest = (cov_shizl4dmo.s[39]++, dumpFolder + '/data/data.json');
-      cov_shizl4dmo.s[40]++;
+      var dest = (cov_2lh1hksiee.s[39]++, dumpFolder + '/data/data.json');
+      cov_2lh1hksiee.s[40]++;
       return (0, _fsExtra.writeFile)(dest, (0, _stringify2.default)(data), 'utf8');
     })
     // zip file
     .then(function () {
-      cov_shizl4dmo.f[23]++;
-      cov_shizl4dmo.s[41]++;
+      cov_2lh1hksiee.f[23]++;
+      cov_2lh1hksiee.s[41]++;
 
       return new _promise2.default(function (resolve2, reject2) {
-        cov_shizl4dmo.f[24]++;
+        cov_2lh1hksiee.f[24]++;
 
-        var output = (cov_shizl4dmo.s[42]++, (0, _fs.createWriteStream)(zipDest));
-        var archive = (cov_shizl4dmo.s[43]++, (0, _archiver2.default)('zip', {
+        var output = (cov_2lh1hksiee.s[42]++, (0, _fs.createWriteStream)(zipDest));
+        var archive = (cov_2lh1hksiee.s[43]++, (0, _archiver2.default)('zip', {
           zlib: { level: 9 // Sets the compression level.
           } }));
-        cov_shizl4dmo.s[44]++;
+        cov_2lh1hksiee.s[44]++;
         output.on('close', function () {
-          cov_shizl4dmo.f[25]++;
-          cov_shizl4dmo.s[45]++;
+          cov_2lh1hksiee.f[25]++;
+          cov_2lh1hksiee.s[45]++;
 
           // console.log(archive.pointer() + ' total bytes');
           // console.log('archiver has been finalized and the output file descriptor has closed.');
@@ -3571,27 +3571,27 @@ var downloadAllData = exports.downloadAllData = function downloadAllData(req, re
         // This event is fired when the data source is drained no matter what was the data source.
         // It is not part of this library but rather from the NodeJS Stream API.
         // @see: https://nodejs.org/api/stream.html#stream_event_end
-        cov_shizl4dmo.s[46]++;
+        cov_2lh1hksiee.s[46]++;
         output.on('end', function () {
-          cov_shizl4dmo.f[26]++;
-          cov_shizl4dmo.s[47]++;
+          cov_2lh1hksiee.f[26]++;
+          cov_2lh1hksiee.s[47]++;
 
           resolve2();
         });
 
         // good practice to catch warnings (ie stat failures and other non-blocking errors)
-        cov_shizl4dmo.s[48]++;
+        cov_2lh1hksiee.s[48]++;
         archive.on('warning', function (err) {
-          cov_shizl4dmo.f[27]++;
-          cov_shizl4dmo.s[49]++;
+          cov_2lh1hksiee.f[27]++;
+          cov_2lh1hksiee.s[49]++;
 
           if (err.code === 'ENOENT') {
             // log warning
 
-            cov_shizl4dmo.b[0][0]++;
+            cov_2lh1hksiee.b[0][0]++;
           } else {
-            cov_shizl4dmo.b[0][1]++;
-            cov_shizl4dmo.s[50]++;
+            cov_2lh1hksiee.b[0][1]++;
+            cov_2lh1hksiee.s[50]++;
 
             // throw error
             reject2(err);
@@ -3599,165 +3599,165 @@ var downloadAllData = exports.downloadAllData = function downloadAllData(req, re
         });
 
         // good practice to catch this error explicitly
-        cov_shizl4dmo.s[51]++;
+        cov_2lh1hksiee.s[51]++;
         archive.on('error', function (err) {
-          cov_shizl4dmo.f[28]++;
-          cov_shizl4dmo.s[52]++;
+          cov_2lh1hksiee.f[28]++;
+          cov_2lh1hksiee.s[52]++;
 
           reject2(err);
         });
 
         // pipe archive data to the file
-        cov_shizl4dmo.s[53]++;
+        cov_2lh1hksiee.s[53]++;
         archive.pipe(output);
 
         // add folder to archive
-        cov_shizl4dmo.s[54]++;
+        cov_2lh1hksiee.s[54]++;
         archive.directory(dumpFolder, false);
-        cov_shizl4dmo.s[55]++;
+        cov_2lh1hksiee.s[55]++;
         archive.finalize();
       });
     }).then(function () {
-      cov_shizl4dmo.f[29]++;
-      cov_shizl4dmo.s[56]++;
+      cov_2lh1hksiee.f[29]++;
+      cov_2lh1hksiee.s[56]++;
 
       return (0, _fsExtra.readFile)(zipDest);
     })
     // return zip
     .then(function (file) {
-      cov_shizl4dmo.f[30]++;
-      cov_shizl4dmo.s[57]++;
+      cov_2lh1hksiee.f[30]++;
+      cov_2lh1hksiee.s[57]++;
 
       return res.end(file, 'binary');
     }).then(resolve).catch(reject);
   });
 };
 
-cov_shizl4dmo.s[58]++;
+cov_2lh1hksiee.s[58]++;
 var clearAllData = function clearAllData() {
-  cov_shizl4dmo.f[31]++;
-  cov_shizl4dmo.s[59]++;
+  cov_2lh1hksiee.f[31]++;
+  cov_2lh1hksiee.s[59]++;
   return _assets.dal.getAssets({}).then(function (assets) {
-    cov_shizl4dmo.f[32]++;
-    cov_shizl4dmo.s[60]++;
+    cov_2lh1hksiee.f[32]++;
+    cov_2lh1hksiee.s[60]++;
     return _promise2.default.all(assets.map(function (asset) {
-      cov_shizl4dmo.f[33]++;
-      cov_shizl4dmo.s[61]++;
+      cov_2lh1hksiee.f[33]++;
+      cov_2lh1hksiee.s[61]++;
       return _assets.dal.deleteAsset({ _id: asset._id });
     }));
   }).then(function () {
-    cov_shizl4dmo.f[34]++;
-    cov_shizl4dmo.s[62]++;
+    cov_2lh1hksiee.f[34]++;
+    cov_2lh1hksiee.s[62]++;
     return _resources.dal.getResources({});
   }).then(function (resources) {
-    cov_shizl4dmo.f[35]++;
-    cov_shizl4dmo.s[63]++;
+    cov_2lh1hksiee.f[35]++;
+    cov_2lh1hksiee.s[63]++;
     return _promise2.default.all(resources.map(function (resource) {
-      cov_shizl4dmo.f[36]++;
-      cov_shizl4dmo.s[64]++;
+      cov_2lh1hksiee.f[36]++;
+      cov_2lh1hksiee.s[64]++;
       return _resources.dal.deleteResource({ _id: resource._id });
     }));
   }).then(function () {
-    cov_shizl4dmo.f[37]++;
-    cov_shizl4dmo.s[65]++;
+    cov_2lh1hksiee.f[37]++;
+    cov_2lh1hksiee.s[65]++;
     return _compositions.dal.getCompositions({});
   }).then(function (compositions) {
-    cov_shizl4dmo.f[38]++;
-    cov_shizl4dmo.s[66]++;
+    cov_2lh1hksiee.f[38]++;
+    cov_2lh1hksiee.s[66]++;
     return _promise2.default.all(compositions.map(function (composition) {
-      cov_shizl4dmo.f[39]++;
-      cov_shizl4dmo.s[67]++;
+      cov_2lh1hksiee.f[39]++;
+      cov_2lh1hksiee.s[67]++;
       return _compositions.dal.deleteComposition({ _id: composition._id });
     }));
   }).then(function () {
-    cov_shizl4dmo.f[40]++;
-    cov_shizl4dmo.s[68]++;
+    cov_2lh1hksiee.f[40]++;
+    cov_2lh1hksiee.s[68]++;
     return _montages.dal.getMontages({});
   }).then(function (montages) {
-    cov_shizl4dmo.f[41]++;
-    cov_shizl4dmo.s[69]++;
+    cov_2lh1hksiee.f[41]++;
+    cov_2lh1hksiee.s[69]++;
     return _promise2.default.all(montages.map(function (montage) {
-      cov_shizl4dmo.f[42]++;
-      cov_shizl4dmo.s[70]++;
+      cov_2lh1hksiee.f[42]++;
+      cov_2lh1hksiee.s[70]++;
       return _montages.dal.deleteMontage({ _id: montage._id });
     }));
   }).then(function () {
-    cov_shizl4dmo.f[43]++;
-    cov_shizl4dmo.s[71]++;
+    cov_2lh1hksiee.f[43]++;
+    cov_2lh1hksiee.s[71]++;
     return _diffusions.dal.getDiffusions({});
   }).then(function (diffusions) {
-    cov_shizl4dmo.f[44]++;
-    cov_shizl4dmo.s[72]++;
+    cov_2lh1hksiee.f[44]++;
+    cov_2lh1hksiee.s[72]++;
     return _promise2.default.all(diffusions.map(function (diffusion) {
-      cov_shizl4dmo.f[45]++;
-      cov_shizl4dmo.s[73]++;
+      cov_2lh1hksiee.f[45]++;
+      cov_2lh1hksiee.s[73]++;
       return _diffusions.dal.deleteDiffusion({ _id: diffusion._id });
     }));
   }).then(function () {
-    cov_shizl4dmo.f[46]++;
-    cov_shizl4dmo.s[74]++;
+    cov_2lh1hksiee.f[46]++;
+    cov_2lh1hksiee.s[74]++;
     return _deliverables.dal.getDeliverables({});
   }).then(function (deliverables) {
-    cov_shizl4dmo.f[47]++;
-    cov_shizl4dmo.s[75]++;
+    cov_2lh1hksiee.f[47]++;
+    cov_2lh1hksiee.s[75]++;
     return _promise2.default.all(deliverables.map(function (deliverable) {
-      cov_shizl4dmo.f[48]++;
-      cov_shizl4dmo.s[76]++;
+      cov_2lh1hksiee.f[48]++;
+      cov_2lh1hksiee.s[76]++;
       return _deliverables.dal.deleteDeliverable({ _id: deliverable._id });
     }));
   });
 };
 
-cov_shizl4dmo.s[77]++;
+cov_2lh1hksiee.s[77]++;
 var uploadData = exports.uploadData = function uploadData(req, res) {
-  cov_shizl4dmo.f[49]++;
-  cov_shizl4dmo.s[78]++;
+  cov_2lh1hksiee.f[49]++;
+  cov_2lh1hksiee.s[78]++;
   return (
     // remove dump folder as we are going to replace it
     (0, _fsExtra.remove)(dumpFolder)
     // clear all previous data
     .then(function () {
-      cov_shizl4dmo.f[50]++;
-      cov_shizl4dmo.s[79]++;
+      cov_2lh1hksiee.f[50]++;
+      cov_2lh1hksiee.s[79]++;
       return clearAllData();
     })
     // store the zip dump file in temp dir
     .then(function () {
-      cov_shizl4dmo.f[51]++;
-      cov_shizl4dmo.s[80]++;
+      cov_2lh1hksiee.f[51]++;
+      cov_2lh1hksiee.s[80]++;
 
       return new _promise2.default(function (resolve, reject) {
-        cov_shizl4dmo.f[52]++;
+        cov_2lh1hksiee.f[52]++;
 
-        var form = (cov_shizl4dmo.s[81]++, new _formidable2.default.IncomingForm({
+        var form = (cov_2lh1hksiee.s[81]++, new _formidable2.default.IncomingForm({
           uploadDir: tempFolder,
           // multiples : true,
           keepExtensions: true
         }));
 
-        cov_shizl4dmo.s[82]++;
+        cov_2lh1hksiee.s[82]++;
         form.on('error', function (err) {
-          cov_shizl4dmo.f[53]++;
-          cov_shizl4dmo.s[83]++;
+          cov_2lh1hksiee.f[53]++;
+          cov_2lh1hksiee.s[83]++;
 
           return reject(err);
         });
 
-        cov_shizl4dmo.s[84]++;
+        cov_2lh1hksiee.s[84]++;
         form.parse(req, function (err, fields, files) {
-          cov_shizl4dmo.f[54]++;
-          cov_shizl4dmo.s[85]++;
+          cov_2lh1hksiee.f[54]++;
+          cov_2lh1hksiee.s[85]++;
 
           if (err) {
-            cov_shizl4dmo.b[1][0]++;
-            cov_shizl4dmo.s[86]++;
+            cov_2lh1hksiee.b[1][0]++;
+            cov_2lh1hksiee.s[86]++;
 
             return reject(err);
           } else {
-            cov_shizl4dmo.b[1][1]++;
+            cov_2lh1hksiee.b[1][1]++;
 
-            var attachmentPath = (cov_shizl4dmo.s[87]++, files.file.path);
-            cov_shizl4dmo.s[88]++;
+            var attachmentPath = (cov_2lh1hksiee.s[87]++, files.file.path);
+            cov_2lh1hksiee.s[88]++;
             return resolve(attachmentPath);
           }
         });
@@ -3765,28 +3765,28 @@ var uploadData = exports.uploadData = function uploadData(req, res) {
     })
     // unzip file to dump folder
     .then(function (attachmentPath) {
-      cov_shizl4dmo.f[55]++;
-      cov_shizl4dmo.s[89]++;
+      cov_2lh1hksiee.f[55]++;
+      cov_2lh1hksiee.s[89]++;
       return (0, _fs.createReadStream)(attachmentPath).pipe(_unzipper2.default.Extract({ path: dumpFolder })).promise();
     })
     // load data
     .then(function () {
-      cov_shizl4dmo.f[56]++;
-      cov_shizl4dmo.s[90]++;
+      cov_2lh1hksiee.f[56]++;
+      cov_2lh1hksiee.s[90]++;
       return (0, _fsExtra.readFile)(dumpFolder + 'data/data.json', 'utf8');
     }).then(function (raw) {
-      cov_shizl4dmo.f[57]++;
-      cov_shizl4dmo.s[91]++;
+      cov_2lh1hksiee.f[57]++;
+      cov_2lh1hksiee.s[91]++;
       return new _promise2.default(function (resolve, reject) {
-        cov_shizl4dmo.f[58]++;
-        cov_shizl4dmo.s[92]++;
+        cov_2lh1hksiee.f[58]++;
+        cov_2lh1hksiee.s[92]++;
 
         try {
-          var data = (cov_shizl4dmo.s[93]++, JSON.parse(raw));
-          cov_shizl4dmo.s[94]++;
+          var data = (cov_2lh1hksiee.s[93]++, JSON.parse(raw));
+          cov_2lh1hksiee.s[94]++;
           resolve(data);
         } catch (e) {
-          cov_shizl4dmo.s[95]++;
+          cov_2lh1hksiee.s[95]++;
 
           reject(e);
         }
@@ -3794,94 +3794,94 @@ var uploadData = exports.uploadData = function uploadData(req, res) {
     })
     // create all objects
     .then(function (data) {
-      cov_shizl4dmo.f[59]++;
-      cov_shizl4dmo.s[96]++;
+      cov_2lh1hksiee.f[59]++;
+      cov_2lh1hksiee.s[96]++;
 
       var cleanRev = function cleanRev(doc) {
-        cov_shizl4dmo.f[60]++;
-        cov_shizl4dmo.s[97]++;
+        cov_2lh1hksiee.f[60]++;
+        cov_2lh1hksiee.s[97]++;
 
         delete doc._rev;
-        cov_shizl4dmo.s[98]++;
-        if ((cov_shizl4dmo.b[3][0]++, doc.type === 'asset') || (cov_shizl4dmo.b[3][1]++, doc.type === 'deliverable')) {
-          cov_shizl4dmo.b[2][0]++;
-          cov_shizl4dmo.s[99]++;
+        cov_2lh1hksiee.s[98]++;
+        if ((cov_2lh1hksiee.b[3][0]++, doc.type === 'asset') || (cov_2lh1hksiee.b[3][1]++, doc.type === 'deliverable')) {
+          cov_2lh1hksiee.b[2][0]++;
+          cov_2lh1hksiee.s[99]++;
 
           // delete attachment
           delete doc._attachments;
         } else {
-          cov_shizl4dmo.b[2][1]++;
+          cov_2lh1hksiee.b[2][1]++;
         }
-        cov_shizl4dmo.s[100]++;
+        cov_2lh1hksiee.s[100]++;
         return doc;
       };
-      var operations = (cov_shizl4dmo.s[101]++, [].concat((0, _toConsumableArray3.default)(data.assets.map(function (asset) {
-        cov_shizl4dmo.f[61]++;
+      var operations = (cov_2lh1hksiee.s[101]++, [].concat((0, _toConsumableArray3.default)(data.assets.map(function (asset) {
+        cov_2lh1hksiee.f[61]++;
 
-        var fileName = (cov_shizl4dmo.s[102]++, asset.filename);
-        var attachmentPath = (cov_shizl4dmo.s[103]++, dumpFolder + 'assets/' + asset._id + '/' + fileName);
-        cov_shizl4dmo.s[104]++;
+        var fileName = (cov_2lh1hksiee.s[102]++, asset.filename);
+        var attachmentPath = (cov_2lh1hksiee.s[103]++, dumpFolder + 'assets/' + asset._id + '/' + fileName);
+        cov_2lh1hksiee.s[104]++;
         return (0, _fsExtra.readFile)(attachmentPath).then(function (data) {
-          cov_shizl4dmo.f[62]++;
-          cov_shizl4dmo.s[105]++;
+          cov_2lh1hksiee.f[62]++;
+          cov_2lh1hksiee.s[105]++;
           return _assets.dal.createAsset(cleanRev(asset), data);
         });
       })), (0, _toConsumableArray3.default)(data.resources.map(function (resource) {
-        cov_shizl4dmo.f[63]++;
-        cov_shizl4dmo.s[106]++;
+        cov_2lh1hksiee.f[63]++;
+        cov_2lh1hksiee.s[106]++;
         return _resources.dal.createResource(cleanRev(resource));
       })), (0, _toConsumableArray3.default)(data.compositions.map(function (composition) {
-        cov_shizl4dmo.f[64]++;
-        cov_shizl4dmo.s[107]++;
+        cov_2lh1hksiee.f[64]++;
+        cov_2lh1hksiee.s[107]++;
         return _compositions.dal.createComposition(cleanRev(composition));
       })), (0, _toConsumableArray3.default)(data.montages.map(function (montage) {
-        cov_shizl4dmo.f[65]++;
-        cov_shizl4dmo.s[108]++;
+        cov_2lh1hksiee.f[65]++;
+        cov_2lh1hksiee.s[108]++;
         return _montages.dal.createMontage(cleanRev(montage));
       })), (0, _toConsumableArray3.default)(data.diffusions.map(function (diffusion) {
-        cov_shizl4dmo.f[66]++;
-        cov_shizl4dmo.s[109]++;
+        cov_2lh1hksiee.f[66]++;
+        cov_2lh1hksiee.s[109]++;
         return _diffusions.dal.createDiffusion(cleanRev(diffusion));
       })), (0, _toConsumableArray3.default)(data.deliverables.map(function (deliverable) {
-        cov_shizl4dmo.f[67]++;
+        cov_2lh1hksiee.f[67]++;
 
-        var fileName = (cov_shizl4dmo.s[110]++, deliverable.filename);
-        var attachmentPath = (cov_shizl4dmo.s[111]++, dumpFolder + 'deliverables/' + deliverable._id + '/' + fileName);
-        cov_shizl4dmo.s[112]++;
+        var fileName = (cov_2lh1hksiee.s[110]++, deliverable.filename);
+        var attachmentPath = (cov_2lh1hksiee.s[111]++, dumpFolder + 'deliverables/' + deliverable._id + '/' + fileName);
+        cov_2lh1hksiee.s[112]++;
         return (0, _fsExtra.readFile)(attachmentPath).then(function (data) {
-          cov_shizl4dmo.f[68]++;
-          cov_shizl4dmo.s[113]++;
+          cov_2lh1hksiee.f[68]++;
+          cov_2lh1hksiee.s[113]++;
           return _deliverables.dal.createDeliverable(cleanRev(deliverable), data);
         });
       }))));
 
-      cov_shizl4dmo.s[114]++;
+      cov_2lh1hksiee.s[114]++;
       return _promise2.default.all(operations);
     }).then(function () {
-      cov_shizl4dmo.f[69]++;
-      cov_shizl4dmo.s[115]++;
+      cov_2lh1hksiee.f[69]++;
+      cov_2lh1hksiee.s[115]++;
       return res.json({ status: 'ok' });
     }).catch(function (e) {
-      cov_shizl4dmo.f[70]++;
-      cov_shizl4dmo.s[116]++;
+      cov_2lh1hksiee.f[70]++;
+      cov_2lh1hksiee.s[116]++;
 
       res.status(500).send(e);
     })
   );
 };
 
-cov_shizl4dmo.s[117]++;
+cov_2lh1hksiee.s[117]++;
 var deleteAllData = exports.deleteAllData = function deleteAllData(req, res) {
-  cov_shizl4dmo.f[71]++;
-  cov_shizl4dmo.s[118]++;
+  cov_2lh1hksiee.f[71]++;
+  cov_2lh1hksiee.s[118]++;
   return clearAllData().then(function () {
-    cov_shizl4dmo.f[72]++;
-    cov_shizl4dmo.s[119]++;
+    cov_2lh1hksiee.f[72]++;
+    cov_2lh1hksiee.s[119]++;
 
     return res.json({ status: 'ok' });
   }).catch(function (e) {
-    cov_shizl4dmo.f[73]++;
-    cov_shizl4dmo.s[120]++;
+    cov_2lh1hksiee.f[73]++;
+    cov_2lh1hksiee.s[120]++;
     return res.status(500).send(e);
   });
 };

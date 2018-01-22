@@ -16,13 +16,13 @@ var _promise = require('babel-runtime/core-js/promise');
 
 var _promise2 = _interopRequireDefault(_promise);
 
-var cov_2iqzemf91b = function () {
-  var path = '/Users/rawbin/Documents/Projets/collaborations/ensad-publishing/prototype/plurishing-backend/src/releasers/epub/epub.generator.js',
-      hash = 'd30e6b4572c9368b2d937288111e58b3843dfa8d',
+var cov_4tx7ly2x9 = function () {
+  var path = '/Users/rawbin/Documents/Projets/collaborations/ensad-publishing/prototype/metis-backend/src/releasers/epub/epub.generator.js',
+      hash = '95d031b0f3a7c94d87925351012d19590a37a157',
       global = new Function('return this')(),
       gcv = '__coverage__',
       coverageData = {
-    path: '/Users/rawbin/Documents/Projets/collaborations/ensad-publishing/prototype/plurishing-backend/src/releasers/epub/epub.generator.js',
+    path: '/Users/rawbin/Documents/Projets/collaborations/ensad-publishing/prototype/metis-backend/src/releasers/epub/epub.generator.js',
     statementMap: {
       '0': {
         start: {
@@ -790,7 +790,7 @@ var cov_2iqzemf91b = function () {
   return coverage[path] = coverageData;
 }(); /* eslint no-unused-vars : 0 */
 
-// import Toc from 'plurishing-shared/dist/components/views/static/Toc';
+// import Toc from 'metis-shared/dist/components/views/static/Toc';
 
 /* eslint no-unused-vars : 0 */
 
@@ -816,27 +816,27 @@ var _epubGen = require('epub-gen');
 
 var _epubGen2 = _interopRequireDefault(_epubGen);
 
-var _DecoratedComposition = require('plurishing-shared/dist/components/views/static/DecoratedComposition');
+var _DecoratedComposition = require('metis-shared/dist/components/views/static/DecoratedComposition');
 
 var _DecoratedComposition2 = _interopRequireDefault(_DecoratedComposition);
 
-var _EpubNoteContentPointer = require('plurishing-shared/dist/components/views/static/EpubNoteContentPointer');
+var _EpubNoteContentPointer = require('metis-shared/dist/components/views/static/EpubNoteContentPointer');
 
 var _EpubNoteContentPointer2 = _interopRequireDefault(_EpubNoteContentPointer);
 
-var _EpubNotePointerPointer = require('plurishing-shared/dist/components/views/static/EpubNotePointerPointer');
+var _EpubNotePointerPointer = require('metis-shared/dist/components/views/static/EpubNotePointerPointer');
 
 var _EpubNotePointerPointer2 = _interopRequireDefault(_EpubNotePointerPointer);
 
-var _EpubLink = require('plurishing-shared/dist/components/views/static/EpubLink');
+var _EpubLink = require('metis-shared/dist/components/views/static/EpubLink');
 
 var _EpubLink2 = _interopRequireDefault(_EpubLink);
 
-var _StandaloneCover = require('plurishing-shared/dist/components/views/static/StandaloneCover');
+var _StandaloneCover = require('metis-shared/dist/components/views/static/StandaloneCover');
 
 var _StandaloneCover2 = _interopRequireDefault(_StandaloneCover);
 
-var _Colophon = require('plurishing-shared/dist/components/views/static/Colophon');
+var _Colophon = require('metis-shared/dist/components/views/static/Colophon');
 
 var _Colophon2 = _interopRequireDefault(_Colophon);
 
@@ -850,15 +850,15 @@ var _path = require('path');
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var tempFolder = (cov_2iqzemf91b.s[0]++, (0, _path.resolve)(__dirname + '/../../../temp/'));
+var tempFolder = (cov_4tx7ly2x9.s[0]++, (0, _path.resolve)(__dirname + '/../../../temp/'));
 
-cov_2iqzemf91b.s[1]++;
+cov_4tx7ly2x9.s[1]++;
 var buildAuthors = function buildAuthors(creators) {
-  cov_2iqzemf91b.f[0]++;
-  cov_2iqzemf91b.s[2]++;
+  cov_4tx7ly2x9.f[0]++;
+  cov_4tx7ly2x9.s[2]++;
   return creators.map(function (creator) {
-    cov_2iqzemf91b.f[1]++;
-    cov_2iqzemf91b.s[3]++;
+    cov_4tx7ly2x9.f[1]++;
+    cov_4tx7ly2x9.s[3]++;
     return creator.given + ' ' + creator.family;
   }).join(', ');
 };
@@ -875,7 +875,7 @@ var buildAuthors = function buildAuthors(creators) {
 //   }
 // }
 
-cov_2iqzemf91b.s[4]++;
+cov_4tx7ly2x9.s[4]++;
 var renderComposition = function renderComposition(parameters, _ref) {
   var renderingMode = _ref.renderingMode,
       assets = _ref.assets,
@@ -885,22 +885,22 @@ var renderComposition = function renderComposition(parameters, _ref) {
       citationStyle = _ref.citationStyle,
       getAssetUri = _ref.getAssetUri,
       index = _ref.index;
-  cov_2iqzemf91b.f[2]++;
+  cov_4tx7ly2x9.f[2]++;
 
-  var _ref2 = (cov_2iqzemf91b.s[5]++, parameters),
+  var _ref2 = (cov_4tx7ly2x9.s[5]++, parameters),
       target_composition_id = _ref2.target_composition_id;
 
-  var composition = (cov_2iqzemf91b.s[6]++, compositions.find(function (comp) {
-    cov_2iqzemf91b.f[3]++;
-    cov_2iqzemf91b.s[7]++;
+  var composition = (cov_4tx7ly2x9.s[6]++, compositions.find(function (comp) {
+    cov_4tx7ly2x9.f[3]++;
+    cov_4tx7ly2x9.s[7]++;
     return comp._id === target_composition_id;
   }));
 
-  cov_2iqzemf91b.s[8]++;
+  cov_4tx7ly2x9.s[8]++;
   if (composition) {
-    cov_2iqzemf91b.b[0][0]++;
+    cov_4tx7ly2x9.b[0][0]++;
 
-    var html = (cov_2iqzemf91b.s[9]++, _server2.default.renderToStaticMarkup(_react2.default.createElement(
+    var html = (cov_4tx7ly2x9.s[9]++, _server2.default.renderToStaticMarkup(_react2.default.createElement(
       _reactComponents.TranslationsProvider,
       null,
       _react2.default.createElement(_DecoratedComposition2.default, {
@@ -917,7 +917,7 @@ var renderComposition = function renderComposition(parameters, _ref) {
         NotePointerPointer: _EpubNotePointerPointer2.default
       })
     )));
-    cov_2iqzemf91b.s[10]++;
+    cov_4tx7ly2x9.s[10]++;
     return {
       title: composition.metadata.title,
       // author: buildAuthors(composition.metadata.creators), // Optional
@@ -925,14 +925,14 @@ var renderComposition = function renderComposition(parameters, _ref) {
       data: html
     };
   } else {
-    cov_2iqzemf91b.b[0][1]++;
+    cov_4tx7ly2x9.b[0][1]++;
   }
 };
 
-cov_2iqzemf91b.s[11]++;
+cov_4tx7ly2x9.s[11]++;
 var generateCoverHtml = function generateCoverHtml(montage, renderingMode, styles) {
-  cov_2iqzemf91b.f[4]++;
-  cov_2iqzemf91b.s[12]++;
+  cov_4tx7ly2x9.f[4]++;
+  cov_4tx7ly2x9.s[12]++;
 
   return _server2.default.renderToStaticMarkup(_react2.default.createElement(_StandaloneCover2.default, {
     styles: styles,
@@ -949,24 +949,24 @@ function generateEpub(_ref3, onFileGenerated) {
       citationStyle = _ref3.citationStyle,
       getAssetUri = _ref3.getAssetUri,
       _ref3$styles = _ref3.styles,
-      styles = _ref3$styles === undefined ? (cov_2iqzemf91b.b[1][0]++, '') : _ref3$styles,
+      styles = _ref3$styles === undefined ? (cov_4tx7ly2x9.b[1][0]++, '') : _ref3$styles,
       renderingMode = _ref3.renderingMode;
-  cov_2iqzemf91b.f[5]++;
-  cov_2iqzemf91b.s[13]++;
+  cov_4tx7ly2x9.f[5]++;
+  cov_4tx7ly2x9.s[13]++;
 
   return new _promise2.default(function (resolve, reject) {
-    cov_2iqzemf91b.f[6]++;
+    cov_4tx7ly2x9.f[6]++;
 
-    var montage = (cov_2iqzemf91b.s[14]++, props.montage);
-    var compositions = (cov_2iqzemf91b.s[15]++, props.compositions);
-    var metadata = (cov_2iqzemf91b.s[16]++, montage.metadata);
+    var montage = (cov_4tx7ly2x9.s[14]++, props.montage);
+    var compositions = (cov_4tx7ly2x9.s[15]++, props.compositions);
+    var metadata = (cov_4tx7ly2x9.s[16]++, montage.metadata);
 
-    var css = (cov_2iqzemf91b.s[17]++, [styles,
+    var css = (cov_4tx7ly2x9.s[17]++, [styles,
     // montage-specific css code
     montage.data.css.shared_css_code, montage.data.css[renderingMode + '_css_code']].join('\n\n'));
 
-    var coverHTML = (cov_2iqzemf91b.s[18]++, generateCoverHtml(montage, renderingMode, styles));
-    var coverFilePath = (cov_2iqzemf91b.s[19]++, tempFolder + '/' + (0, _uuid.v4)() + '.jpg');
+    var coverHTML = (cov_4tx7ly2x9.s[18]++, generateCoverHtml(montage, renderingMode, styles));
+    var coverFilePath = (cov_4tx7ly2x9.s[19]++, tempFolder + '/' + (0, _uuid.v4)() + '.jpg');
 
     // console.log('will render toc html');
     // const ToCHtml = ReactDOMServer.renderToStaticMarkup(
@@ -980,7 +980,7 @@ function generateEpub(_ref3, onFileGenerated) {
     //   </TranslationsProvider>
     // );
 
-    var colophonHTML = (cov_2iqzemf91b.s[20]++, _server2.default.renderToStaticMarkup(_react2.default.createElement(
+    var colophonHTML = (cov_4tx7ly2x9.s[20]++, _server2.default.renderToStaticMarkup(_react2.default.createElement(
       _reactComponents.TranslationsProvider,
       null,
       _react2.default.createElement(_Colophon2.default, {
@@ -988,30 +988,30 @@ function generateEpub(_ref3, onFileGenerated) {
       })
     )));
 
-    cov_2iqzemf91b.s[21]++;
+    cov_4tx7ly2x9.s[21]++;
     (0, _html2img2.default)(coverHTML, coverFilePath, function (err) {
-      cov_2iqzemf91b.f[7]++;
-      cov_2iqzemf91b.s[22]++;
+      cov_4tx7ly2x9.f[7]++;
+      cov_4tx7ly2x9.s[22]++;
 
       if (err) {
-        cov_2iqzemf91b.b[2][0]++;
-        cov_2iqzemf91b.s[23]++;
+        cov_4tx7ly2x9.b[2][0]++;
+        cov_4tx7ly2x9.s[23]++;
 
         reject(err);
       } else {
-        cov_2iqzemf91b.b[2][1]++;
+        cov_4tx7ly2x9.b[2][1]++;
 
-        var options = (cov_2iqzemf91b.s[24]++, {
+        var options = (cov_4tx7ly2x9.s[24]++, {
           title: metadata.title,
           author: buildAuthors(metadata.creators),
           cover: coverFilePath,
           appendChapterTitles: false,
-          layout: renderingMode === 'epub-reflowable' ? (cov_2iqzemf91b.b[3][0]++, 'reflowable') : (cov_2iqzemf91b.b[3][1]++, 'fixed'),
+          layout: renderingMode === 'epub-reflowable' ? (cov_4tx7ly2x9.b[3][0]++, 'reflowable') : (cov_4tx7ly2x9.b[3][1]++, 'fixed'),
           tocTitle: 'Table des matières',
           // publisher: "Macmillan & Co.", // optional
           content: [].concat((0, _toConsumableArray3.default)(montage.data.compositions.map(function (compositionCitation, index) {
-            cov_2iqzemf91b.f[8]++;
-            cov_2iqzemf91b.s[25]++;
+            cov_4tx7ly2x9.f[8]++;
+            cov_4tx7ly2x9.s[25]++;
             return renderComposition(compositionCitation, (0, _extends3.default)({}, props, {
               renderingMode: renderingMode,
               citationStyle: citationStyle,
@@ -1020,8 +1020,8 @@ function generateEpub(_ref3, onFileGenerated) {
               index: index
             }));
           }).filter(function (comp) {
-            cov_2iqzemf91b.f[9]++;
-            cov_2iqzemf91b.s[26]++;
+            cov_4tx7ly2x9.f[9]++;
+            cov_4tx7ly2x9.s[26]++;
             return comp;
           })), [{
             title: 'Colophon',
@@ -1031,14 +1031,14 @@ function generateEpub(_ref3, onFileGenerated) {
           css: css
         });
 
-        var outputPath = (cov_2iqzemf91b.s[27]++, outputDirPath + '/' + montage._id + '.epub');
-        cov_2iqzemf91b.s[28]++;
+        var outputPath = (cov_4tx7ly2x9.s[27]++, outputDirPath + '/' + montage._id + '.epub');
+        cov_4tx7ly2x9.s[28]++;
         return new _epubGen2.default(options, outputPath).promise.then(function () {
-          cov_2iqzemf91b.f[10]++;
-          cov_2iqzemf91b.s[29]++;
+          cov_4tx7ly2x9.f[10]++;
+          cov_4tx7ly2x9.s[29]++;
 
           onFileGenerated(outputPath);
-          cov_2iqzemf91b.s[30]++;
+          cov_4tx7ly2x9.s[30]++;
           resolve(outputPath);
         }).catch(reject);
       }

@@ -8,13 +8,13 @@ var _promise = require('babel-runtime/core-js/promise');
 
 var _promise2 = _interopRequireDefault(_promise);
 
-var cov_d6ri34dec = function () {
-  var path = '/Users/rawbin/Documents/Projets/collaborations/ensad-publishing/prototype/plurishing-backend/src/utils/errorHandler.js',
-      hash = '87c607b661171b7c433fee980bc7fda10f6f6d23',
+var cov_2dnul4qubi = function () {
+  var path = '/Users/rawbin/Documents/Projets/collaborations/ensad-publishing/prototype/metis-backend/src/utils/errorHandler.js',
+      hash = '7d7e2381c4ac6b33f7305abb9dacf4f5313aa473',
       global = new Function('return this')(),
       gcv = '__coverage__',
       coverageData = {
-    path: '/Users/rawbin/Documents/Projets/collaborations/ensad-publishing/prototype/plurishing-backend/src/utils/errorHandler.js',
+    path: '/Users/rawbin/Documents/Projets/collaborations/ensad-publishing/prototype/metis-backend/src/utils/errorHandler.js',
     statementMap: {
       '0': {
         start: {
@@ -301,7 +301,7 @@ exports.default = errorHandler;
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-cov_d6ri34dec.s[0]++;
+cov_2dnul4qubi.s[0]++;
 /**
  * Some utils for managing errors in the right way
  * Taken from the repertory of good practices https://github.com/i0natan/nodebestpractices/
@@ -311,8 +311,8 @@ cov_d6ri34dec.s[0]++;
  * Catch unhandled promise rejections
  */
 process.on('unhandledRejection', function (reason) {
-  cov_d6ri34dec.f[0]++;
-  cov_d6ri34dec.s[1]++;
+  cov_2dnul4qubi.f[0]++;
+  cov_2dnul4qubi.s[1]++;
 
   // I just caught an unhandled promise rejection,
   // since we already have fallback handler for unhandled errors (see below),
@@ -324,10 +324,10 @@ process.on('unhandledRejection', function (reason) {
 /**
  * Catch unhandled exceptions to shut the process gracefully
  */
-cov_d6ri34dec.s[2]++;
+cov_2dnul4qubi.s[2]++;
 process.on('uncaughtException', function (error) {
-  cov_d6ri34dec.f[1]++;
-  cov_d6ri34dec.s[3]++;
+  cov_2dnul4qubi.f[1]++;
+  cov_2dnul4qubi.s[3]++;
 
   // @todo setup error types system
   // errorManagement.handler.handleError(error);
@@ -345,29 +345,29 @@ process.on('uncaughtException', function (error) {
 
 // const saveInOpsQueueIfCritical = (logger, err) => logger.debug('saveInOpsQueueIfCritical');
 
-cov_d6ri34dec.s[4]++;
+cov_2dnul4qubi.s[4]++;
 var determineIfOperationalError = function determineIfOperationalError() {
-  cov_d6ri34dec.f[2]++;
-  cov_d6ri34dec.s[5]++;
+  cov_2dnul4qubi.f[2]++;
+  cov_2dnul4qubi.s[5]++;
   return false;
 };
 
 function errorHandler(logger) {
-  cov_d6ri34dec.f[3]++;
-  cov_d6ri34dec.s[6]++;
+  cov_2dnul4qubi.f[3]++;
+  cov_2dnul4qubi.s[6]++;
 
   this.handleError = function (error) {
-    cov_d6ri34dec.f[4]++;
-    cov_d6ri34dec.s[7]++;
+    cov_2dnul4qubi.f[4]++;
+    cov_2dnul4qubi.s[7]++;
 
     return new _promise2.default(function (resolve) {
-      cov_d6ri34dec.f[5]++;
-      cov_d6ri34dec.s[8]++;
+      cov_2dnul4qubi.f[5]++;
+      cov_2dnul4qubi.s[8]++;
 
       logger.error(error);
       // sendMailToAdminIfCritical(logger, error)
       // saveInOpsQueueIfCritical(logger, error)
-      cov_d6ri34dec.s[9]++;
+      cov_2dnul4qubi.s[9]++;
       resolve(determineIfOperationalError(error));
     });
   };

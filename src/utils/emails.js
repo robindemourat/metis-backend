@@ -1,16 +1,16 @@
 /**
- * Plurishing-backend
+ * Metis-backend
  * =======
  * Mailing utils
  */
 
 
 export const welcomeEmail = (appUrl, user) => ({
-  subject: 'Plurishing - Bienvenue !',
+  subject: 'Metis - Bienvenue !',
   html: `
-<h1>Plurishing - bienvenue !</h1>
+<h1>Metis - bienvenue !</h1>
 <p>
-  Vous avez été ajouté à la liste des utilisateurs de l'application Plurishing. Si vous souhaitez participer,
+  Vous avez été ajouté à la liste des utilisateurs de l'application Metis. Si vous souhaitez participer,
   <a
     href="${appUrl}/signup/${user._id}/${user.resetPasswordToken}"
   >
@@ -20,11 +20,11 @@ export const welcomeEmail = (appUrl, user) => ({
 });
 
 export const resetPwdEmail = (appUrl, user) => ({
-  subject: 'Plurishing - réinitialisation de votre mot de passe',
+  subject: 'Metis - réinitialisation de votre mot de passe',
   html: `
-<h1>Plurishing - réinitialisation du mot de passe</h1>
+<h1>Metis - réinitialisation du mot de passe</h1>
 <p>
-  Vous avez fait une demande de réinitialisation de votre mot de passe pour l'application Plurishing. <a
+  Vous avez fait une demande de réinitialisation de votre mot de passe pour l'application Metis. <a
     href="${appUrl}/signup/${user._id}/${user.resetPasswordToken}">
     Visitez cette adresse pour y entrer un nouveau mot de passe
   </a> d'ici 24 heures.

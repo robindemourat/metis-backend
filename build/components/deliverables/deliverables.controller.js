@@ -5,13 +5,13 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.deleteDeliverable = exports.updateDeliverable = exports.createDeliverable = exports.getDeliverableAttachment = exports.getDeliverable = exports.getDeliverables = undefined;
 
-var cov_275ilr263g = function () {
-  var path = '/Users/rawbin/Documents/Projets/collaborations/ensad-publishing/prototype/plurishing-backend/src/components/deliverables/deliverables.controller.js',
-      hash = '86485b6faa8eb2edf85e6ad59fb0c030741ce8c4',
+var cov_13dictikxa = function () {
+  var path = '/Users/rawbin/Documents/Projets/collaborations/ensad-publishing/prototype/metis-backend/src/components/deliverables/deliverables.controller.js',
+      hash = '804b4bc6c1f7c2b18264680046f31fbc6ac28523',
       global = new Function('return this')(),
       gcv = '__coverage__',
       coverageData = {
-    path: '/Users/rawbin/Documents/Projets/collaborations/ensad-publishing/prototype/plurishing-backend/src/components/deliverables/deliverables.controller.js',
+    path: '/Users/rawbin/Documents/Projets/collaborations/ensad-publishing/prototype/metis-backend/src/components/deliverables/deliverables.controller.js',
     statementMap: {
       '0': {
         start: {
@@ -904,7 +904,7 @@ var cov_275ilr263g = function () {
   coverageData.hash = hash;
   return coverage[path] = coverageData;
 }(); /**
-      * Plurishing-backend
+      * Metis-backend
       * =======
       * Deliverables component controller
       */
@@ -932,10 +932,10 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
  * @param {object} res - the resource of query
  * @todo add filters handling through req queries
  */
-cov_275ilr263g.s[0]++;
+cov_13dictikxa.s[0]++;
 var getDeliverables = exports.getDeliverables = function getDeliverables(req, res) {
-  cov_275ilr263g.f[0]++;
-  cov_275ilr263g.s[1]++;
+  cov_13dictikxa.f[0]++;
+  cov_13dictikxa.s[1]++;
   return res.json((0, _deliverables.getDeliverables)({}));
 };
 
@@ -944,10 +944,10 @@ var getDeliverables = exports.getDeliverables = function getDeliverables(req, re
  * @param {object} req - the request of query
  * @param {object} res - the resource of query
  */
-cov_275ilr263g.s[2]++;
+cov_13dictikxa.s[2]++;
 var getDeliverable = exports.getDeliverable = function getDeliverable(req, res) {
-  cov_275ilr263g.f[1]++;
-  cov_275ilr263g.s[3]++;
+  cov_13dictikxa.f[1]++;
+  cov_13dictikxa.s[3]++;
   return res.json((0, _deliverables.getDeliverable)({
     id: req.params.id
   }));
@@ -958,10 +958,10 @@ var getDeliverable = exports.getDeliverable = function getDeliverable(req, res) 
  * @param {object} req - the request of query
  * @param {object} res - the resource of query
  */
-cov_275ilr263g.s[4]++;
+cov_13dictikxa.s[4]++;
 var getDeliverableAttachment = exports.getDeliverableAttachment = function getDeliverableAttachment(req, res) {
-  cov_275ilr263g.f[2]++;
-  cov_275ilr263g.s[5]++;
+  cov_13dictikxa.f[2]++;
+  cov_13dictikxa.s[5]++;
 
   (0, _deliverables.getDeliverableAttachment)({
     id: req.params.id,
@@ -969,11 +969,11 @@ var getDeliverableAttachment = exports.getDeliverableAttachment = function getDe
   }).then(function (_ref) {
     var data = _ref.data,
         mimetype = _ref.mimetype;
-    cov_275ilr263g.f[3]++;
-    cov_275ilr263g.s[6]++;
+    cov_13dictikxa.f[3]++;
+    cov_13dictikxa.s[6]++;
 
     res.writeHead(200, { 'Content-Type': mimetype });
-    cov_275ilr263g.s[7]++;
+    cov_13dictikxa.s[7]++;
     res.end(data, 'binary');
   });
 };
@@ -983,50 +983,50 @@ var getDeliverableAttachment = exports.getDeliverableAttachment = function getDe
  * @param {object} req - the request of query
  * @param {object} res - the resource of query
  */
-cov_275ilr263g.s[8]++;
+cov_13dictikxa.s[8]++;
 var createDeliverable = exports.createDeliverable = function createDeliverable(req, res) {
-  cov_275ilr263g.f[4]++;
+  cov_13dictikxa.f[4]++;
 
-  var filename = (cov_275ilr263g.s[9]++, decodeURIComponent(req.params.id));
-  var form = (cov_275ilr263g.s[10]++, new _formidable2.default.IncomingForm({
+  var filename = (cov_13dictikxa.s[9]++, decodeURIComponent(req.params.id));
+  var form = (cov_13dictikxa.s[10]++, new _formidable2.default.IncomingForm({
     uploadDir: (0, _path.resolve)(__dirname + '/../../../temp'),
     // multiples : true,
     keepExtensions: true
   }));
 
-  cov_275ilr263g.s[11]++;
+  cov_13dictikxa.s[11]++;
   form.on('error', function (err) {
-    cov_275ilr263g.f[5]++;
-    cov_275ilr263g.s[12]++;
+    cov_13dictikxa.f[5]++;
+    cov_13dictikxa.s[12]++;
 
     return res.status(500).send(err);
   });
 
-  cov_275ilr263g.s[13]++;
+  cov_13dictikxa.s[13]++;
   form.parse(req, function (err, fields, files) {
-    cov_275ilr263g.f[6]++;
+    cov_13dictikxa.f[6]++;
 
-    var attachmentPath = (cov_275ilr263g.s[14]++, files.file.path);
-    cov_275ilr263g.s[15]++;
+    var attachmentPath = (cov_13dictikxa.s[14]++, files.file.path);
+    cov_13dictikxa.s[15]++;
     (0, _fsExtra.readFile)(attachmentPath).then(function (data) {
-      cov_275ilr263g.f[7]++;
-      cov_275ilr263g.s[16]++;
+      cov_13dictikxa.f[7]++;
+      cov_13dictikxa.s[16]++;
       return (0, _deliverables.createDeliverable)({
         _id: (0, _uuid.v4)(),
         filename: filename,
         type: 'deliverable'
       }, data);
     }).then(function () {
-      cov_275ilr263g.f[8]++;
-      cov_275ilr263g.s[17]++;
+      cov_13dictikxa.f[8]++;
+      cov_13dictikxa.s[17]++;
       return (0, _fsExtra.remove)(attachmentPath);
     }).then(function () {
-      cov_275ilr263g.f[9]++;
-      cov_275ilr263g.s[18]++;
+      cov_13dictikxa.f[9]++;
+      cov_13dictikxa.s[18]++;
       return res.json((0, _deliverables.getDeliverables)({}));
     }).catch(function (e) {
-      cov_275ilr263g.f[10]++;
-      cov_275ilr263g.s[19]++;
+      cov_13dictikxa.f[10]++;
+      cov_13dictikxa.s[19]++;
       return res.status(500).send(e);
     });
   });
@@ -1036,53 +1036,53 @@ var createDeliverable = exports.createDeliverable = function createDeliverable(r
  * @param {object} req - the request of query
  * @param {object} res - the resource of query
  */
-cov_275ilr263g.s[20]++;
+cov_13dictikxa.s[20]++;
 var updateDeliverable = exports.updateDeliverable = function updateDeliverable(req, res) {
-  cov_275ilr263g.f[11]++;
+  cov_13dictikxa.f[11]++;
 
-  var deliverableId = (cov_275ilr263g.s[21]++, req.params.id);
-  var form = (cov_275ilr263g.s[22]++, new _formidable2.default.IncomingForm({
+  var deliverableId = (cov_13dictikxa.s[21]++, req.params.id);
+  var form = (cov_13dictikxa.s[22]++, new _formidable2.default.IncomingForm({
     uploadDir: (0, _path.resolve)(__dirname + '/../../../temp'),
     // multiples : true,
     keepExtensions: true
   }));
 
-  cov_275ilr263g.s[23]++;
+  cov_13dictikxa.s[23]++;
   form.on('error', function (err) {
-    cov_275ilr263g.f[12]++;
-    cov_275ilr263g.s[24]++;
+    cov_13dictikxa.f[12]++;
+    cov_13dictikxa.s[24]++;
 
     return res.status(500).send(err);
   });
 
-  cov_275ilr263g.s[25]++;
+  cov_13dictikxa.s[25]++;
   form.parse(req, function (err, fields, files) {
-    cov_275ilr263g.f[13]++;
+    cov_13dictikxa.f[13]++;
 
-    var attachmentPath = (cov_275ilr263g.s[26]++, files.file.path);
-    var filename = (cov_275ilr263g.s[27]++, files.file.name);
-    var mimetype = (cov_275ilr263g.s[28]++, (0, _mimeTypes.lookup)(filename));
-    cov_275ilr263g.s[29]++;
+    var attachmentPath = (cov_13dictikxa.s[26]++, files.file.path);
+    var filename = (cov_13dictikxa.s[27]++, files.file.name);
+    var mimetype = (cov_13dictikxa.s[28]++, (0, _mimeTypes.lookup)(filename));
+    cov_13dictikxa.s[29]++;
     (0, _fsExtra.readFile)(attachmentPath).then(function (data) {
-      cov_275ilr263g.f[14]++;
-      cov_275ilr263g.s[30]++;
+      cov_13dictikxa.f[14]++;
+      cov_13dictikxa.s[30]++;
       return (0, _deliverables.updateDeliverable)(deliverableId, {
         filename: filename,
         mimetype: mimetype
       }, data);
     }).then(function () {
-      cov_275ilr263g.f[15]++;
-      cov_275ilr263g.s[31]++;
+      cov_13dictikxa.f[15]++;
+      cov_13dictikxa.s[31]++;
       return (0, _fsExtra.remove)(attachmentPath);
     }).then(function () {
-      cov_275ilr263g.f[16]++;
-      cov_275ilr263g.s[32]++;
+      cov_13dictikxa.f[16]++;
+      cov_13dictikxa.s[32]++;
       return res.json((0, _deliverables.getDeliverable)({
         id: deliverableId
       }));
     }).catch(function (e) {
-      cov_275ilr263g.f[17]++;
-      cov_275ilr263g.s[33]++;
+      cov_13dictikxa.f[17]++;
+      cov_13dictikxa.s[33]++;
       return res.status(500).send(e);
     });
   });
@@ -1093,9 +1093,9 @@ var updateDeliverable = exports.updateDeliverable = function updateDeliverable(r
  * @param {object} req - the request of query
  * @param {object} res - the resource of query
  */
-cov_275ilr263g.s[34]++;
+cov_13dictikxa.s[34]++;
 var deleteDeliverable = exports.deleteDeliverable = function deleteDeliverable(req, res) {
-  cov_275ilr263g.f[18]++;
-  cov_275ilr263g.s[35]++;
+  cov_13dictikxa.f[18]++;
+  cov_13dictikxa.s[35]++;
   return res.json((0, _deliverables.deleteDeliverable)({ _id: req.params.id }));
 };

@@ -4,13 +4,13 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var cov_211w85fik5 = function () {
-  var path = '/Users/rawbin/Documents/Projets/collaborations/ensad-publishing/prototype/plurishing-backend/src/releasers/mailing/montageToMail.js',
-      hash = 'e8cf79b70133d875d1676ebbb463868ee95c1100',
+var cov_165j2qnbw3 = function () {
+  var path = '/Users/rawbin/Documents/Projets/collaborations/ensad-publishing/prototype/metis-backend/src/releasers/mailing/montageToMail.js',
+      hash = 'd54555d1b7945f6916cb9275887d5a3b86ef8b2c',
       global = new Function('return this')(),
       gcv = '__coverage__',
       coverageData = {
-    path: '/Users/rawbin/Documents/Projets/collaborations/ensad-publishing/prototype/plurishing-backend/src/releasers/mailing/montageToMail.js',
+    path: '/Users/rawbin/Documents/Projets/collaborations/ensad-publishing/prototype/metis-backend/src/releasers/mailing/montageToMail.js',
     statementMap: {
       '0': {
         start: {
@@ -39,7 +39,7 @@ var cov_211w85fik5 = function () {
         },
         end: {
           line: 9,
-          column: 115
+          column: 110
         }
       },
       '3': {
@@ -49,7 +49,7 @@ var cov_211w85fik5 = function () {
         },
         end: {
           line: 10,
-          column: 48
+          column: 43
         }
       },
       '4': {
@@ -59,7 +59,7 @@ var cov_211w85fik5 = function () {
         },
         end: {
           line: 11,
-          column: 85
+          column: 80
         }
       },
       '5': {
@@ -132,27 +132,27 @@ var cov_211w85fik5 = function () {
           },
           end: {
             line: 9,
-            column: 115
+            column: 110
           }
         },
         type: 'cond-expr',
         locations: [{
           start: {
             line: 9,
-            column: 64
+            column: 59
           },
           end: {
             line: 9,
-            column: 86
+            column: 81
           }
         }, {
           start: {
             line: 9,
-            column: 89
+            column: 84
           },
           end: {
             line: 9,
-            column: 115
+            column: 110
           }
         }],
         line: 9
@@ -165,7 +165,7 @@ var cov_211w85fik5 = function () {
           },
           end: {
             line: 10,
-            column: 47
+            column: 42
           }
         },
         type: 'cond-expr',
@@ -185,7 +185,7 @@ var cov_211w85fik5 = function () {
           },
           end: {
             line: 10,
-            column: 47
+            column: 42
           }
         }],
         line: 10
@@ -198,7 +198,7 @@ var cov_211w85fik5 = function () {
           },
           end: {
             line: 11,
-            column: 85
+            column: 80
           }
         },
         type: 'binary-expr',
@@ -227,7 +227,7 @@ var cov_211w85fik5 = function () {
           },
           end: {
             line: 11,
-            column: 85
+            column: 80
           }
         }],
         line: 11
@@ -269,7 +269,7 @@ var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
 
-var _MicropublicationMail = require('plurishing-shared/dist/components/views/micro/MicropublicationMail');
+var _MicropublicationMail = require('metis-shared/dist/components/views/micro/MicropublicationMail');
 
 var _MicropublicationMail2 = _interopRequireDefault(_MicropublicationMail);
 
@@ -282,21 +282,21 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 function montageToMail(montage, composition, assets, _ref) {
   var smtp_email = _ref.smtp_email,
       mailing_hub_email = _ref.mailing_hub_email;
-  cov_211w85fik5.f[0]++;
-  cov_211w85fik5.s[0]++;
+  cov_165j2qnbw3.f[0]++;
+  cov_165j2qnbw3.s[0]++;
 
   var Template = function Template() {
-    cov_211w85fik5.f[1]++;
-    cov_211w85fik5.s[1]++;
+    cov_165j2qnbw3.f[1]++;
+    cov_165j2qnbw3.s[1]++;
     return _react2.default.createElement(_MicropublicationMail2.default, { montage: montage, composition: composition, assets: assets });
   };
-  var title = (cov_211w85fik5.s[2]++, '[Plurishing] ' + montage.metadata.title.length ? (cov_211w85fik5.b[0][0]++, montage.metadata.title) : (cov_211w85fik5.b[0][1]++, composition.metadata.title));
-  cov_211w85fik5.s[3]++;
-  title = title.length ? (cov_211w85fik5.b[1][0]++, title) : (cov_211w85fik5.b[1][1]++, '[Plurishing]');
-  var previewText = (cov_211w85fik5.s[4]++, (cov_211w85fik5.b[2][0]++, composition.metadata.abstract_original) || (cov_211w85fik5.b[2][1]++, title) || (cov_211w85fik5.b[2][2]++, 'Plurishing'));
-  cov_211w85fik5.s[5]++;
+  var title = (cov_165j2qnbw3.s[2]++, '[Metis] ' + montage.metadata.title.length ? (cov_165j2qnbw3.b[0][0]++, montage.metadata.title) : (cov_165j2qnbw3.b[0][1]++, composition.metadata.title));
+  cov_165j2qnbw3.s[3]++;
+  title = title.length ? (cov_165j2qnbw3.b[1][0]++, title) : (cov_165j2qnbw3.b[1][1]++, '[Metis]');
+  var previewText = (cov_165j2qnbw3.s[4]++, (cov_165j2qnbw3.b[2][0]++, composition.metadata.abstract_original) || (cov_165j2qnbw3.b[2][1]++, title) || (cov_165j2qnbw3.b[2][2]++, 'Metis'));
+  cov_165j2qnbw3.s[5]++;
   return {
-    from: '"Plurishing \uD83D\uDC7B" <' + smtp_email + '>',
+    from: '"Metis \uD83D\uDC7B" <' + smtp_email + '>',
     to: [mailing_hub_email],
     subject: title,
     html: _oyVey2.default.renderTemplate(_react2.default.createElement(Template, null), {

@@ -8,13 +8,13 @@ var _promise = require('babel-runtime/core-js/promise');
 
 var _promise2 = _interopRequireDefault(_promise);
 
-var cov_y9jyc396 = function () {
-  var path = '/Users/rawbin/Documents/Projets/collaborations/ensad-publishing/prototype/plurishing-backend/src/releasers/mailing/mail.js',
-      hash = '6fed0dba8c20f1fb2ceb9a8ea1217192dbd58391',
+var cov_21bj8dgq32 = function () {
+  var path = '/Users/rawbin/Documents/Projets/collaborations/ensad-publishing/prototype/metis-backend/src/releasers/mailing/mail.js',
+      hash = '0bdb461d85823299f8bf623dfaf86f1ee6f59388',
       global = new Function('return this')(),
       gcv = '__coverage__',
       coverageData = {
-    path: '/Users/rawbin/Documents/Projets/collaborations/ensad-publishing/prototype/plurishing-backend/src/releasers/mailing/mail.js',
+    path: '/Users/rawbin/Documents/Projets/collaborations/ensad-publishing/prototype/metis-backend/src/releasers/mailing/mail.js',
     statementMap: {
       '0': {
         start: {
@@ -298,7 +298,7 @@ var _mailingParameters2 = _interopRequireDefault(_mailingParameters);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var ajv = (cov_y9jyc396.s[0]++, new _ajv2.default());
+var ajv = (cov_21bj8dgq32.s[0]++, new _ajv2.default());
 
 /**
  * @param {object} contents - the contents to send
@@ -306,48 +306,48 @@ var ajv = (cov_y9jyc396.s[0]++, new _ajv2.default());
  * @return {Promise} promise
  */
 function mail(contents, params) {
-  cov_y9jyc396.f[0]++;
-  cov_y9jyc396.s[1]++;
+  cov_21bj8dgq32.f[0]++;
+  cov_21bj8dgq32.s[1]++;
 
   return new _promise2.default(function (resolve, reject) {
-    cov_y9jyc396.f[1]++;
+    cov_21bj8dgq32.f[1]++;
 
     // validate contents object
-    var contentsValidation = (cov_y9jyc396.s[2]++, ajv.validate(_mailingContents2.default, contents));
-    cov_y9jyc396.s[3]++;
+    var contentsValidation = (cov_21bj8dgq32.s[2]++, ajv.validate(_mailingContents2.default, contents));
+    cov_21bj8dgq32.s[3]++;
     if (!contentsValidation) {
-      cov_y9jyc396.b[0][0]++;
-      cov_y9jyc396.s[4]++;
+      cov_21bj8dgq32.b[0][0]++;
+      cov_21bj8dgq32.s[4]++;
 
       return reject(ajv.errors);
     } else {
-      cov_y9jyc396.b[0][1]++;
+      cov_21bj8dgq32.b[0][1]++;
     }
 
     // validate params object
-    var paramsValidation = (cov_y9jyc396.s[5]++, ajv.validate(_mailingParameters2.default, params));
-    cov_y9jyc396.s[6]++;
+    var paramsValidation = (cov_21bj8dgq32.s[5]++, ajv.validate(_mailingParameters2.default, params));
+    cov_21bj8dgq32.s[6]++;
     if (!paramsValidation) {
-      cov_y9jyc396.b[1][0]++;
-      cov_y9jyc396.s[7]++;
+      cov_21bj8dgq32.b[1][0]++;
+      cov_21bj8dgq32.s[7]++;
 
       return reject(ajv.errors);
     } else {
-      cov_y9jyc396.b[1][1]++;
+      cov_21bj8dgq32.b[1][1]++;
     }
 
-    var _ref = (cov_y9jyc396.s[8]++, contents),
+    var _ref = (cov_21bj8dgq32.s[8]++, contents),
         from = _ref.from,
         to = _ref.to,
         subject = _ref.subject,
         html = _ref.html;
 
-    var _ref2 = (cov_y9jyc396.s[9]++, params),
+    var _ref2 = (cov_21bj8dgq32.s[9]++, params),
         smtp_email = _ref2.smtp_email,
         smtp_service = _ref2.smtp_service,
         smtp_password = _ref2.smtp_password;
 
-    cov_y9jyc396.s[10]++;
+    cov_21bj8dgq32.s[10]++;
 
 
     (0, _mailer2.default)({

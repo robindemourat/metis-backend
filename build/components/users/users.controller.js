@@ -13,13 +13,13 @@ var _promise = require('babel-runtime/core-js/promise');
 
 var _promise2 = _interopRequireDefault(_promise);
 
-var cov_1wqgru2aqo = function () {
-  var path = '/Users/rawbin/Documents/Projets/collaborations/ensad-publishing/prototype/plurishing-backend/src/components/users/users.controller.js',
-      hash = '9f03ac2184edcc3b714ac49e34b8e400bb76290f',
+var cov_xhh33vcol = function () {
+  var path = '/Users/rawbin/Documents/Projets/collaborations/ensad-publishing/prototype/metis-backend/src/components/users/users.controller.js',
+      hash = '49d52cbd64314883efce54dd4939aceebab713e6',
       global = new Function('return this')(),
       gcv = '__coverage__',
       coverageData = {
-    path: '/Users/rawbin/Documents/Projets/collaborations/ensad-publishing/prototype/plurishing-backend/src/components/users/users.controller.js',
+    path: '/Users/rawbin/Documents/Projets/collaborations/ensad-publishing/prototype/metis-backend/src/components/users/users.controller.js',
     statementMap: {
       '0': {
         start: {
@@ -1973,7 +1973,7 @@ var cov_1wqgru2aqo = function () {
   coverageData.hash = hash;
   return coverage[path] = coverageData;
 }(); // /**
-//  * Plurishing-backend
+//  * Metis-backend
 //  * =======
 //  * Users component controller
 //  */
@@ -1997,16 +1997,16 @@ var _config = require('../../utils/config');
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var config = (cov_1wqgru2aqo.s[0]++, (0, _config.getConfig)());
+var config = (cov_xhh33vcol.s[0]++, (0, _config.getConfig)());
 
-var _ref = (cov_1wqgru2aqo.s[1]++, config),
+var _ref = (cov_xhh33vcol.s[1]++, config),
     smtpEmail = _ref.smtpEmail,
     smtpService = _ref.smtpService,
     smtpPassword = _ref.smtpPassword,
     secret = _ref.secret,
     backofficeBaseUri = _ref.backofficeBaseUri;
 
-var mailConfig = (cov_1wqgru2aqo.s[2]++, {
+var mailConfig = (cov_xhh33vcol.s[2]++, {
   // smtpPort,
   // smtpHost,
   smtpEmail: smtpEmail,
@@ -2014,11 +2014,11 @@ var mailConfig = (cov_1wqgru2aqo.s[2]++, {
   smtpPassword: smtpPassword
 });
 
-cov_1wqgru2aqo.s[3]++;
+cov_xhh33vcol.s[3]++;
 var retrieveToken = function retrieveToken(req) {
-  cov_1wqgru2aqo.f[0]++;
-  cov_1wqgru2aqo.s[4]++;
-  return (cov_1wqgru2aqo.b[0][0]++, req.body.token) || (cov_1wqgru2aqo.b[0][1]++, req.params.token) || (cov_1wqgru2aqo.b[0][2]++, req.headers['x-access-token']);
+  cov_xhh33vcol.f[0]++;
+  cov_xhh33vcol.s[4]++;
+  return (cov_xhh33vcol.b[0][0]++, req.body.token) || (cov_xhh33vcol.b[0][1]++, req.params.token) || (cov_xhh33vcol.b[0][2]++, req.headers['x-access-token']);
 };
 
 /**
@@ -2026,36 +2026,36 @@ var retrieveToken = function retrieveToken(req) {
  * @param {object} req - the request of query
  * @return {Promise} res - resolves if token bearer is an admin
  */
-cov_1wqgru2aqo.s[5]++;
+cov_xhh33vcol.s[5]++;
 var ensureAdmin = function ensureAdmin(req) {
-  cov_1wqgru2aqo.f[1]++;
-  cov_1wqgru2aqo.s[6]++;
+  cov_xhh33vcol.f[1]++;
+  cov_xhh33vcol.s[6]++;
   return new _promise2.default(function (resolve, reject) {
-    cov_1wqgru2aqo.f[2]++;
+    cov_xhh33vcol.f[2]++;
 
-    var token = (cov_1wqgru2aqo.s[7]++, retrieveToken(req));
+    var token = (cov_xhh33vcol.s[7]++, retrieveToken(req));
     // verify that the token data corresponds to the user willing to change the password
-    cov_1wqgru2aqo.s[8]++;
+    cov_xhh33vcol.s[8]++;
     _jsonwebtoken2.default.verify(token, secret, function (err, decoded) {
-      cov_1wqgru2aqo.f[3]++;
-      cov_1wqgru2aqo.s[9]++;
+      cov_xhh33vcol.f[3]++;
+      cov_xhh33vcol.s[9]++;
 
       if (err) {
-        cov_1wqgru2aqo.b[1][0]++;
-        cov_1wqgru2aqo.s[10]++;
+        cov_xhh33vcol.b[1][0]++;
+        cov_xhh33vcol.s[10]++;
 
         reject(err);
       } else {
-          cov_1wqgru2aqo.b[1][1]++;
-          cov_1wqgru2aqo.s[11]++;
+          cov_xhh33vcol.b[1][1]++;
+          cov_xhh33vcol.s[11]++;
           if (decoded.admin) {
-            cov_1wqgru2aqo.b[2][0]++;
-            cov_1wqgru2aqo.s[12]++;
+            cov_xhh33vcol.b[2][0]++;
+            cov_xhh33vcol.s[12]++;
 
             resolve();
           } else {
-            cov_1wqgru2aqo.b[2][1]++;
-            cov_1wqgru2aqo.s[13]++;
+            cov_xhh33vcol.b[2][1]++;
+            cov_xhh33vcol.s[13]++;
 
             reject();
           }
@@ -2069,38 +2069,38 @@ var ensureAdmin = function ensureAdmin(req) {
  * @param {object} req - the request of query
  * @return {Promise} res - resolves if token bearer is an admin or the own user
  */
-cov_1wqgru2aqo.s[14]++;
+cov_xhh33vcol.s[14]++;
 var ensureAdminOrOwn = function ensureAdminOrOwn(req) {
-  cov_1wqgru2aqo.f[4]++;
-  cov_1wqgru2aqo.s[15]++;
+  cov_xhh33vcol.f[4]++;
+  cov_xhh33vcol.s[15]++;
   return new _promise2.default(function (resolve, reject) {
-    cov_1wqgru2aqo.f[5]++;
+    cov_xhh33vcol.f[5]++;
 
-    var token = (cov_1wqgru2aqo.s[16]++, retrieveToken(req));
+    var token = (cov_xhh33vcol.s[16]++, retrieveToken(req));
     // verify that the token data corresponds to the user willing to change the password
-    cov_1wqgru2aqo.s[17]++;
+    cov_xhh33vcol.s[17]++;
     _jsonwebtoken2.default.verify(token, secret, function (err, decoded) {
-      cov_1wqgru2aqo.f[6]++;
+      cov_xhh33vcol.f[6]++;
 
-      var admin = (cov_1wqgru2aqo.s[18]++, decoded.admin);
-      var own = (cov_1wqgru2aqo.s[19]++, decoded.userid === req.params.id);
-      cov_1wqgru2aqo.s[20]++;
+      var admin = (cov_xhh33vcol.s[18]++, decoded.admin);
+      var own = (cov_xhh33vcol.s[19]++, decoded.userid === req.params.id);
+      cov_xhh33vcol.s[20]++;
       if (err) {
-        cov_1wqgru2aqo.b[3][0]++;
-        cov_1wqgru2aqo.s[21]++;
+        cov_xhh33vcol.b[3][0]++;
+        cov_xhh33vcol.s[21]++;
 
         reject(err);
       } else {
-          cov_1wqgru2aqo.b[3][1]++;
-          cov_1wqgru2aqo.s[22]++;
-          if ((cov_1wqgru2aqo.b[5][0]++, admin) || (cov_1wqgru2aqo.b[5][1]++, own)) {
-            cov_1wqgru2aqo.b[4][0]++;
-            cov_1wqgru2aqo.s[23]++;
+          cov_xhh33vcol.b[3][1]++;
+          cov_xhh33vcol.s[22]++;
+          if ((cov_xhh33vcol.b[5][0]++, admin) || (cov_xhh33vcol.b[5][1]++, own)) {
+            cov_xhh33vcol.b[4][0]++;
+            cov_xhh33vcol.s[23]++;
 
             resolve();
           } else {
-            cov_1wqgru2aqo.b[4][1]++;
-            cov_1wqgru2aqo.s[24]++;
+            cov_xhh33vcol.b[4][1]++;
+            cov_xhh33vcol.s[24]++;
 
             reject();
           }
@@ -2115,17 +2115,17 @@ var ensureAdminOrOwn = function ensureAdminOrOwn(req) {
  * @param {object} res - the resource of query
  * @todo add filters handling through req queries
  */
-cov_1wqgru2aqo.s[25]++;
+cov_xhh33vcol.s[25]++;
 var getUsers = exports.getUsers = function getUsers(req, res) {
-  cov_1wqgru2aqo.f[7]++;
-  cov_1wqgru2aqo.s[26]++;
+  cov_xhh33vcol.f[7]++;
+  cov_xhh33vcol.s[26]++;
   return ensureAdmin(req).then(function () {
-    cov_1wqgru2aqo.f[8]++;
-    cov_1wqgru2aqo.s[27]++;
+    cov_xhh33vcol.f[8]++;
+    cov_xhh33vcol.s[27]++;
     return res.json((0, _users.getUsers)({}));
   }).catch(function (error) {
-    cov_1wqgru2aqo.f[9]++;
-    cov_1wqgru2aqo.s[28]++;
+    cov_xhh33vcol.f[9]++;
+    cov_xhh33vcol.s[28]++;
     return res.status(403).json({ message: 'admin only', error: error });
   });
 };
@@ -2135,10 +2135,10 @@ var getUsers = exports.getUsers = function getUsers(req, res) {
  * @param {object} req - the request of query
  * @param {object} res - the resource of query
  */
-cov_1wqgru2aqo.s[29]++;
+cov_xhh33vcol.s[29]++;
 var getUser = exports.getUser = function getUser(req, res) {
-  cov_1wqgru2aqo.f[10]++;
-  cov_1wqgru2aqo.s[30]++;
+  cov_xhh33vcol.f[10]++;
+  cov_xhh33vcol.s[30]++;
   return res.json((0, _users.getUser)({
     id: req.params.id
   }));
@@ -2149,32 +2149,32 @@ var getUser = exports.getUser = function getUser(req, res) {
  * @param {object} req - the request of query
  * @param {object} res - the resource of query
  */
-cov_1wqgru2aqo.s[31]++;
+cov_xhh33vcol.s[31]++;
 var createUser = exports.createUser = function createUser(req, res) {
-  cov_1wqgru2aqo.f[11]++;
-  cov_1wqgru2aqo.s[32]++;
+  cov_xhh33vcol.f[11]++;
+  cov_xhh33vcol.s[32]++;
   return ensureAdmin(req).catch(function (error) {
-    cov_1wqgru2aqo.f[12]++;
-    cov_1wqgru2aqo.s[33]++;
+    cov_xhh33vcol.f[12]++;
+    cov_xhh33vcol.s[33]++;
     return res.status(403).json({ message: 'admin only', error: error });
   })
   // ensure user does not already exists
   .then(function () {
-    cov_1wqgru2aqo.f[13]++;
-    cov_1wqgru2aqo.s[34]++;
+    cov_xhh33vcol.f[13]++;
+    cov_xhh33vcol.s[34]++;
     return (0, _users.getUsers)({ query: { email: req.body.email } });
   }).then(function (users) {
-    cov_1wqgru2aqo.f[14]++;
-    cov_1wqgru2aqo.s[35]++;
+    cov_xhh33vcol.f[14]++;
+    cov_xhh33vcol.s[35]++;
 
     if (users.length) {
-      cov_1wqgru2aqo.b[6][0]++;
-      cov_1wqgru2aqo.s[36]++;
+      cov_xhh33vcol.b[6][0]++;
+      cov_xhh33vcol.s[36]++;
 
       return res.status(403).json({ message: 'email already exists' });
     } else {
-      cov_1wqgru2aqo.b[6][1]++;
-      cov_1wqgru2aqo.s[37]++;
+      cov_xhh33vcol.b[6][1]++;
+      cov_xhh33vcol.s[37]++;
 
       // create user
       return (0, _users.createUser)((0, _extends3.default)({}, req.body, {
@@ -2183,39 +2183,39 @@ var createUser = exports.createUser = function createUser(req, res) {
     }
   }).then(function (_ref2) {
     var id = _ref2.id;
-    cov_1wqgru2aqo.f[15]++;
-    cov_1wqgru2aqo.s[38]++;
+    cov_xhh33vcol.f[15]++;
+    cov_xhh33vcol.s[38]++;
     return (0, _users.getUser)({ id: id });
   }).then(function (user) {
-    cov_1wqgru2aqo.f[16]++;
+    cov_xhh33vcol.f[16]++;
 
     // create a token
-    var payload = (cov_1wqgru2aqo.s[39]++, {
+    var payload = (cov_xhh33vcol.s[39]++, {
       admin: user.admin,
       userid: user._id
     });
-    var token = (cov_1wqgru2aqo.s[40]++, _jsonwebtoken2.default.sign(payload, secret, {
+    var token = (cov_xhh33vcol.s[40]++, _jsonwebtoken2.default.sign(payload, secret, {
       expiresIn: 86400 // expires in 24 hours
     }));
-    cov_1wqgru2aqo.s[41]++;
+    cov_xhh33vcol.s[41]++;
     user.resetPasswordToken = token;
-    cov_1wqgru2aqo.s[42]++;
+    cov_xhh33vcol.s[42]++;
     return (0, _users.updateUser)(user._id, user);
   }).then(function (_ref3) {
     var id = _ref3.id;
-    cov_1wqgru2aqo.f[17]++;
-    cov_1wqgru2aqo.s[43]++;
+    cov_xhh33vcol.f[17]++;
+    cov_xhh33vcol.s[43]++;
     return (0, _users.getUser)({ id: id });
   }).then(function (user) {
-    cov_1wqgru2aqo.f[18]++;
+    cov_xhh33vcol.f[18]++;
 
-    var appUrl = (cov_1wqgru2aqo.s[44]++, backofficeBaseUri);
+    var appUrl = (cov_xhh33vcol.s[44]++, backofficeBaseUri);
 
-    var _ref4 = (cov_1wqgru2aqo.s[45]++, (0, _emails.welcomeEmail)(appUrl, user)),
+    var _ref4 = (cov_xhh33vcol.s[45]++, (0, _emails.welcomeEmail)(appUrl, user)),
         subject = _ref4.subject,
         html = _ref4.html;
 
-    cov_1wqgru2aqo.s[46]++;
+    cov_xhh33vcol.s[46]++;
 
     return (0, _mailer2.default)({
       subject: subject,
@@ -2223,8 +2223,8 @@ var createUser = exports.createUser = function createUser(req, res) {
       to: [user.email]
     }, mailConfig, req.log);
   }).then(function () {
-    cov_1wqgru2aqo.f[19]++;
-    cov_1wqgru2aqo.s[47]++;
+    cov_xhh33vcol.f[19]++;
+    cov_xhh33vcol.s[47]++;
 
     res.json((0, _users.getUsers)({}));
   });
@@ -2235,17 +2235,17 @@ var createUser = exports.createUser = function createUser(req, res) {
  * @param {object} req - the request of query
  * @param {object} res - the resource of query
  */
-cov_1wqgru2aqo.s[48]++;
+cov_xhh33vcol.s[48]++;
 var updateUser = exports.updateUser = function updateUser(req, res) {
-  cov_1wqgru2aqo.f[20]++;
-  cov_1wqgru2aqo.s[49]++;
+  cov_xhh33vcol.f[20]++;
+  cov_xhh33vcol.s[49]++;
   return ensureAdminOrOwn(req).catch(function (error) {
-    cov_1wqgru2aqo.f[21]++;
-    cov_1wqgru2aqo.s[50]++;
+    cov_xhh33vcol.f[21]++;
+    cov_xhh33vcol.s[50]++;
     return res.status(403).json({ message: 'admin only', error: error });
   }).then(function () {
-    cov_1wqgru2aqo.f[22]++;
-    cov_1wqgru2aqo.s[51]++;
+    cov_xhh33vcol.f[22]++;
+    cov_xhh33vcol.s[51]++;
     return res.json((0, _users.updateUser)(req.params.id, req.body // for now we perform a full replace (vs merge with $set)
     ));
   });
@@ -2256,17 +2256,17 @@ var updateUser = exports.updateUser = function updateUser(req, res) {
  * @param {object} req - the request of query
  * @param {object} res - the resource of query
  */
-cov_1wqgru2aqo.s[52]++;
+cov_xhh33vcol.s[52]++;
 var deleteUser = exports.deleteUser = function deleteUser(req, res) {
-  cov_1wqgru2aqo.f[23]++;
-  cov_1wqgru2aqo.s[53]++;
+  cov_xhh33vcol.f[23]++;
+  cov_xhh33vcol.s[53]++;
   return ensureAdmin(req).catch(function (error) {
-    cov_1wqgru2aqo.f[24]++;
-    cov_1wqgru2aqo.s[54]++;
+    cov_xhh33vcol.f[24]++;
+    cov_xhh33vcol.s[54]++;
     return res.status(403).json({ message: 'admin only', error: error });
   }).then(function () {
-    cov_1wqgru2aqo.f[25]++;
-    cov_1wqgru2aqo.s[55]++;
+    cov_xhh33vcol.f[25]++;
+    cov_xhh33vcol.s[55]++;
     return res.json((0, _users.deleteUser)({ _id: req.params.id }));
   });
 };
@@ -2276,36 +2276,36 @@ var deleteUser = exports.deleteUser = function deleteUser(req, res) {
  * @param {object} req - the request of query
  * @param {object} res - the resource of query
  */
-cov_1wqgru2aqo.s[56]++;
+cov_xhh33vcol.s[56]++;
 var changeUserPassword = exports.changeUserPassword = function changeUserPassword(req, res) {
-  cov_1wqgru2aqo.f[26]++;
+  cov_xhh33vcol.f[26]++;
 
-  var _ref5 = (cov_1wqgru2aqo.s[57]++, req.body),
+  var _ref5 = (cov_xhh33vcol.s[57]++, req.body),
       _id = _ref5._id,
       password = _ref5.password;
 
-  var token = (cov_1wqgru2aqo.s[58]++, retrieveToken(req));
+  var token = (cov_xhh33vcol.s[58]++, retrieveToken(req));
   // verify that the token data corresponds to the user willing to change the password
-  cov_1wqgru2aqo.s[59]++;
+  cov_xhh33vcol.s[59]++;
   _jsonwebtoken2.default.verify(token, secret, function (err, decoded) {
-    cov_1wqgru2aqo.f[27]++;
-    cov_1wqgru2aqo.s[60]++;
+    cov_xhh33vcol.f[27]++;
+    cov_xhh33vcol.s[60]++;
 
     if (err) {
-      cov_1wqgru2aqo.b[7][0]++;
-      cov_1wqgru2aqo.s[61]++;
+      cov_xhh33vcol.b[7][0]++;
+      cov_xhh33vcol.s[61]++;
 
       res.status(422).json({ message: 'Invalid token', error: err });
     } else {
-        cov_1wqgru2aqo.b[7][1]++;
-        cov_1wqgru2aqo.s[62]++;
+        cov_xhh33vcol.b[7][1]++;
+        cov_xhh33vcol.s[62]++;
         if (decoded.userid === _id) {
-          cov_1wqgru2aqo.b[8][0]++;
-          cov_1wqgru2aqo.s[63]++;
+          cov_xhh33vcol.b[8][0]++;
+          cov_xhh33vcol.s[63]++;
 
           (0, _crypto.hash)(password).then(function (hash) {
-            cov_1wqgru2aqo.f[28]++;
-            cov_1wqgru2aqo.s[64]++;
+            cov_xhh33vcol.f[28]++;
+            cov_xhh33vcol.s[64]++;
             return (0, _users.updateUser)(
             // get
             _id,
@@ -2315,32 +2315,32 @@ var changeUserPassword = exports.changeUserPassword = function changeUserPasswor
               resetPasswordToken: undefined
             }));
           }).then(function () {
-            cov_1wqgru2aqo.f[29]++;
-            cov_1wqgru2aqo.s[65]++;
+            cov_xhh33vcol.f[29]++;
+            cov_xhh33vcol.s[65]++;
             return (0, _users.getUser)({ query: { id: _id } });
           }).then(function (user) {
-            cov_1wqgru2aqo.f[30]++;
-            cov_1wqgru2aqo.s[66]++;
+            cov_xhh33vcol.f[30]++;
+            cov_xhh33vcol.s[66]++;
 
             if (user) {
-              cov_1wqgru2aqo.b[9][0]++;
-              cov_1wqgru2aqo.s[67]++;
+              cov_xhh33vcol.b[9][0]++;
+              cov_xhh33vcol.s[67]++;
 
               res.json(user);
             } else {
-              cov_1wqgru2aqo.b[9][1]++;
-              cov_1wqgru2aqo.s[68]++;
+              cov_xhh33vcol.b[9][1]++;
+              cov_xhh33vcol.s[68]++;
 
               res.status(404).json({ message: 'user not found' });
             }
           }).catch(function (error) {
-            cov_1wqgru2aqo.f[31]++;
-            cov_1wqgru2aqo.s[69]++;
+            cov_xhh33vcol.f[31]++;
+            cov_xhh33vcol.s[69]++;
             return res.status(500).json({ message: 'error with database.', error: error });
           });
         } else {
-          cov_1wqgru2aqo.b[8][1]++;
-          cov_1wqgru2aqo.s[70]++;
+          cov_xhh33vcol.b[8][1]++;
+          cov_xhh33vcol.s[70]++;
 
           res.status(403).json({ message: 'not allowed to modify password of another user' });
         }

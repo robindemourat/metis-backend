@@ -1,5 +1,5 @@
 /**
- * Plurishing-backend
+ * Metis-backend
  * =======
  * Asset data access layer
  */
@@ -7,7 +7,7 @@ import {lookup} from 'mime-types';
 
 import db from '../../utils/plugDb';
 
-import {Asset as schema} from 'plurishing-schemas';
+import {Asset as schema} from 'metis-schemas';
 
 import design from './assets.design';
 import {addDesign} from '../../utils/couchdb';

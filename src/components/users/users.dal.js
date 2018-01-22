@@ -1,12 +1,12 @@
 /**
- * Plurishing-backend
+ * Metis-backend
  * =======
  * User data access layer
  */
 
 import db from '../../utils/plugDb';
 
-import {User as schema} from 'plurishing-schemas';
+import {User as schema} from 'metis-schemas';
 import design from './users.design';
 import {addDesign} from '../../utils/couchdb';
 import {dataIsValid} from '../../utils/schemas';

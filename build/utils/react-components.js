@@ -25,13 +25,13 @@ var _inherits2 = require('babel-runtime/helpers/inherits');
 
 var _inherits3 = _interopRequireDefault(_inherits2);
 
-var cov_1pf4jfcfd = function () {
-  var path = '/Users/rawbin/Documents/Projets/collaborations/ensad-publishing/prototype/plurishing-backend/src/utils/react-components.js',
-      hash = '301e2a761faa18f4264383b21c57b321b173e367',
+var cov_2hdibkdkhy = function () {
+  var path = '/Users/rawbin/Documents/Projets/collaborations/ensad-publishing/prototype/metis-backend/src/utils/react-components.js',
+      hash = '34f5ce9ca378a95e1cede8693c60f0b24f0f8dd9',
       global = new Function('return this')(),
       gcv = '__coverage__',
       coverageData = {
-    path: '/Users/rawbin/Documents/Projets/collaborations/ensad-publishing/prototype/plurishing-backend/src/utils/react-components.js',
+    path: '/Users/rawbin/Documents/Projets/collaborations/ensad-publishing/prototype/metis-backend/src/utils/react-components.js',
     statementMap: {
       '0': {
         start: {
@@ -227,22 +227,22 @@ var TranslationsProvider = exports.TranslationsProvider = (_temp = _class = func
 
   function TranslationsProvider(props) {
     (0, _classCallCheck3.default)(this, TranslationsProvider);
-    cov_1pf4jfcfd.f[0]++;
-    cov_1pf4jfcfd.s[0]++;
+    cov_2hdibkdkhy.f[0]++;
+    cov_2hdibkdkhy.s[0]++;
 
     var _this = (0, _possibleConstructorReturn3.default)(this, (TranslationsProvider.__proto__ || (0, _getPrototypeOf2.default)(TranslationsProvider)).call(this, props));
 
     _this.getChildContext = function () {
-      cov_1pf4jfcfd.f[1]++;
-      cov_1pf4jfcfd.s[1]++;
+      cov_2hdibkdkhy.f[1]++;
+      cov_2hdibkdkhy.s[1]++;
       return {
         t: _this.t
       };
     };
 
     _this.t = function (key) {
-      cov_1pf4jfcfd.f[2]++;
-      cov_1pf4jfcfd.s[2]++;
+      cov_2hdibkdkhy.f[2]++;
+      cov_2hdibkdkhy.s[2]++;
       return key;
     };
 
@@ -257,12 +257,12 @@ var TranslationsProvider = exports.TranslationsProvider = (_temp = _class = func
   (0, _createClass3.default)(TranslationsProvider, [{
     key: 'render',
     value: function render() {
-      cov_1pf4jfcfd.f[3]++;
+      cov_2hdibkdkhy.f[3]++;
 
-      var _ref2 = (cov_1pf4jfcfd.s[3]++, this.props),
+      var _ref2 = (cov_2hdibkdkhy.s[3]++, this.props),
           children = _ref2.children;
 
-      cov_1pf4jfcfd.s[4]++;
+      cov_2hdibkdkhy.s[4]++;
 
       return _react2.default.createElement(
         'section',

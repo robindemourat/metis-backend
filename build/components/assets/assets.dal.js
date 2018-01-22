@@ -17,13 +17,13 @@ var _promise = require('babel-runtime/core-js/promise');
 
 var _promise2 = _interopRequireDefault(_promise);
 
-var cov_2hhud5wwfm = function () {
-  var path = '/Users/rawbin/Documents/Projets/collaborations/ensad-publishing/prototype/plurishing-backend/src/components/assets/assets.dal.js',
-      hash = '964f41edb235894b63f07cb51bd8f1ed4521dae0',
+var cov_2fn4dh385k = function () {
+  var path = '/Users/rawbin/Documents/Projets/collaborations/ensad-publishing/prototype/metis-backend/src/components/assets/assets.dal.js',
+      hash = '62fe5a4934a5967671288250f8f711578d2febe1',
       global = new Function('return this')(),
       gcv = '__coverage__',
       coverageData = {
-    path: '/Users/rawbin/Documents/Projets/collaborations/ensad-publishing/prototype/plurishing-backend/src/components/assets/assets.dal.js',
+    path: '/Users/rawbin/Documents/Projets/collaborations/ensad-publishing/prototype/metis-backend/src/components/assets/assets.dal.js',
     statementMap: {
       '0': {
         start: {
@@ -1675,7 +1675,7 @@ var cov_2hhud5wwfm = function () {
   coverageData.hash = hash;
   return coverage[path] = coverageData;
 }(); /**
-      * Plurishing-backend
+      * Metis-backend
       * =======
       * Asset data access layer
       */
@@ -1687,7 +1687,7 @@ var _plugDb = require('../../utils/plugDb');
 
 var _plugDb2 = _interopRequireDefault(_plugDb);
 
-var _plurishingSchemas = require('plurishing-schemas');
+var _metisSchemas = require('metis-schemas');
 
 var _assets = require('./assets.design');
 
@@ -1702,7 +1702,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 /**
  * Registering couchdb views related to assets objects
  */
-cov_2hhud5wwfm.s[0]++;
+cov_2fn4dh385k.s[0]++;
 (0, _couchdb.addDesign)(_plugDb2.default, 'assets', _assets2.default);
 
 /**
@@ -1710,50 +1710,50 @@ cov_2hhud5wwfm.s[0]++;
  * @param {object} parameters
  * @return {Promise}
  */
-cov_2hhud5wwfm.s[1]++;
+cov_2fn4dh385k.s[1]++;
 var getAssets = exports.getAssets = function getAssets(_ref) {
   var _ref$query = _ref.query,
-      query = _ref$query === undefined ? (cov_2hhud5wwfm.b[0][0]++, {}) : _ref$query,
+      query = _ref$query === undefined ? (cov_2fn4dh385k.b[0][0]++, {}) : _ref$query,
       _ref$include_docs = _ref.include_docs,
-      include_docs = _ref$include_docs === undefined ? (cov_2hhud5wwfm.b[1][0]++, true) : _ref$include_docs;
-  cov_2hhud5wwfm.f[0]++;
-  cov_2hhud5wwfm.s[2]++;
+      include_docs = _ref$include_docs === undefined ? (cov_2fn4dh385k.b[1][0]++, true) : _ref$include_docs;
+  cov_2fn4dh385k.f[0]++;
+  cov_2fn4dh385k.s[2]++;
 
   if (query.filename) {
-    cov_2hhud5wwfm.b[2][0]++;
-    cov_2hhud5wwfm.s[3]++;
+    cov_2fn4dh385k.b[2][0]++;
+    cov_2fn4dh385k.s[3]++;
 
     return _plugDb2.default.viewAsync('assets', 'by_filename', {
       key: query.filename,
       include_docs: include_docs
     }).then(function (results) {
-      cov_2hhud5wwfm.f[1]++;
-      cov_2hhud5wwfm.s[4]++;
+      cov_2fn4dh385k.f[1]++;
+      cov_2fn4dh385k.s[4]++;
       return new _promise2.default(function (resolve) {
-        cov_2hhud5wwfm.f[2]++;
-        cov_2hhud5wwfm.s[5]++;
+        cov_2fn4dh385k.f[2]++;
+        cov_2fn4dh385k.s[5]++;
         return resolve(results.rows.map(function (doc) {
-          cov_2hhud5wwfm.f[3]++;
-          cov_2hhud5wwfm.s[6]++;
+          cov_2fn4dh385k.f[3]++;
+          cov_2fn4dh385k.s[6]++;
           return doc.doc;
         }));
       });
     });
   } else {
-    cov_2hhud5wwfm.b[2][1]++;
-    cov_2hhud5wwfm.s[7]++;
+    cov_2fn4dh385k.b[2][1]++;
+    cov_2fn4dh385k.s[7]++;
 
     return _plugDb2.default.viewAsync('assets', 'by_filename', {
       include_docs: include_docs
     }).then(function (results) {
-      cov_2hhud5wwfm.f[4]++;
-      cov_2hhud5wwfm.s[8]++;
+      cov_2fn4dh385k.f[4]++;
+      cov_2fn4dh385k.s[8]++;
       return new _promise2.default(function (resolve) {
-        cov_2hhud5wwfm.f[5]++;
-        cov_2hhud5wwfm.s[9]++;
+        cov_2fn4dh385k.f[5]++;
+        cov_2fn4dh385k.s[9]++;
         return resolve(results.rows.map(function (doc) {
-          cov_2hhud5wwfm.f[6]++;
-          cov_2hhud5wwfm.s[10]++;
+          cov_2fn4dh385k.f[6]++;
+          cov_2fn4dh385k.s[10]++;
           return doc.doc;
         }));
       });
@@ -1766,17 +1766,17 @@ var getAssets = exports.getAssets = function getAssets(_ref) {
  * @param {object} parameters
  * @return {Promise}
  */
-cov_2hhud5wwfm.s[11]++;
+cov_2fn4dh385k.s[11]++;
 var getAsset = exports.getAsset = function getAsset(_ref2) {
   var id = _ref2.id;
-  cov_2hhud5wwfm.f[7]++;
-  cov_2hhud5wwfm.s[12]++;
+  cov_2fn4dh385k.f[7]++;
+  cov_2fn4dh385k.s[12]++;
   return _plugDb2.default.getAsync(id).then(function (asset) {
-    cov_2hhud5wwfm.f[8]++;
-    cov_2hhud5wwfm.s[13]++;
+    cov_2fn4dh385k.f[8]++;
+    cov_2fn4dh385k.s[13]++;
     return (
       // verify that data is compliant before returning it
-      (0, _schemas.dataIsValid)(asset, _plurishingSchemas.Asset)
+      (0, _schemas.dataIsValid)(asset, _metisSchemas.Asset)
     );
   });
 };
@@ -1786,31 +1786,31 @@ var getAsset = exports.getAsset = function getAsset(_ref2) {
  * @param {object} parameters
  * @return {Promise}
  */
-cov_2hhud5wwfm.s[14]++;
+cov_2fn4dh385k.s[14]++;
 var getAssetAttachment = exports.getAssetAttachment = function getAssetAttachment(_ref3) {
   var id = _ref3.id,
       filename = _ref3.filename,
       encoding = _ref3.encoding;
-  cov_2hhud5wwfm.f[9]++;
-  cov_2hhud5wwfm.s[15]++;
+  cov_2fn4dh385k.f[9]++;
+  cov_2fn4dh385k.s[15]++;
   return new _promise2.default(function (resolve, reject) {
-    cov_2hhud5wwfm.f[10]++;
-    cov_2hhud5wwfm.s[16]++;
+    cov_2fn4dh385k.f[10]++;
+    cov_2fn4dh385k.s[16]++;
 
     _plugDb2.default.attachment.get(id, filename, function (err, body) {
-      cov_2hhud5wwfm.f[11]++;
-      cov_2hhud5wwfm.s[17]++;
+      cov_2fn4dh385k.f[11]++;
+      cov_2fn4dh385k.s[17]++;
 
       if (err) {
-        cov_2hhud5wwfm.b[3][0]++;
-        cov_2hhud5wwfm.s[18]++;
+        cov_2fn4dh385k.b[3][0]++;
+        cov_2fn4dh385k.s[18]++;
 
         reject(err);
       } else {
-        cov_2hhud5wwfm.b[3][1]++;
+        cov_2fn4dh385k.b[3][1]++;
 
-        var content = (cov_2hhud5wwfm.s[19]++, encoding === 'base64' ? (cov_2hhud5wwfm.b[4][0]++, Buffer.from(body, 'binary').toString('base64')) : (cov_2hhud5wwfm.b[4][1]++, body));
-        cov_2hhud5wwfm.s[20]++;
+        var content = (cov_2fn4dh385k.s[19]++, encoding === 'base64' ? (cov_2fn4dh385k.b[4][0]++, Buffer.from(body, 'binary').toString('base64')) : (cov_2fn4dh385k.b[4][1]++, body));
+        cov_2fn4dh385k.s[20]++;
         resolve({ data: content, mimetype: (0, _mimeTypes.lookup)(filename) });
       }
     });
@@ -1823,39 +1823,39 @@ var getAssetAttachment = exports.getAssetAttachment = function getAssetAttachmen
  * @param {object} data
  * @return {Promise}
  */
-cov_2hhud5wwfm.s[21]++;
+cov_2fn4dh385k.s[21]++;
 var createAsset = exports.createAsset = function createAsset(asset, data) {
-  cov_2hhud5wwfm.f[12]++;
+  cov_2fn4dh385k.f[12]++;
 
-  var _ref4 = (cov_2hhud5wwfm.s[22]++, asset),
+  var _ref4 = (cov_2fn4dh385k.s[22]++, asset),
       filename = _ref4.filename;
 
-  var mimeType = (cov_2hhud5wwfm.s[23]++, (cov_2hhud5wwfm.b[5][0]++, (0, _mimeTypes.lookup)(filename)) || (cov_2hhud5wwfm.b[5][1]++, 'application/octet-stream'));
+  var mimeType = (cov_2fn4dh385k.s[23]++, (cov_2fn4dh385k.b[5][0]++, (0, _mimeTypes.lookup)(filename)) || (cov_2fn4dh385k.b[5][1]++, 'application/octet-stream'));
   // validate data
-  cov_2hhud5wwfm.s[24]++;
-  return (0, _schemas.dataIsValid)(asset, _plurishingSchemas.Asset)
+  cov_2fn4dh385k.s[24]++;
+  return (0, _schemas.dataIsValid)(asset, _metisSchemas.Asset)
   // create document
   .then(function () {
-    cov_2hhud5wwfm.f[13]++;
-    cov_2hhud5wwfm.s[25]++;
+    cov_2fn4dh385k.f[13]++;
+    cov_2fn4dh385k.s[25]++;
     return _plugDb2.default.insertAsync((0, _extends3.default)({}, asset, {
       mimetype: mimeType
     }));
   })
   // add attachment
   .then(function (op) {
-    cov_2hhud5wwfm.f[14]++;
+    cov_2fn4dh385k.f[14]++;
 
-    var _ref5 = (cov_2hhud5wwfm.s[26]++, op),
+    var _ref5 = (cov_2fn4dh385k.s[26]++, op),
         id = _ref5.id,
         rev = _ref5.rev;
 
-    cov_2hhud5wwfm.s[27]++;
+    cov_2fn4dh385k.s[27]++;
 
 
     return new _promise2.default(function (resolve, reject) {
-      cov_2hhud5wwfm.f[15]++;
-      cov_2hhud5wwfm.s[28]++;
+      cov_2fn4dh385k.f[15]++;
+      cov_2fn4dh385k.s[28]++;
 
       _plugDb2.default.attachment.insert(
       // doc id
@@ -1870,17 +1870,17 @@ var createAsset = exports.createAsset = function createAsset(asset, data) {
       { rev: rev },
       // callback
       function (err, body) {
-        cov_2hhud5wwfm.f[16]++;
-        cov_2hhud5wwfm.s[29]++;
+        cov_2fn4dh385k.f[16]++;
+        cov_2fn4dh385k.s[29]++;
 
         if (err) {
-          cov_2hhud5wwfm.b[6][0]++;
-          cov_2hhud5wwfm.s[30]++;
+          cov_2fn4dh385k.b[6][0]++;
+          cov_2fn4dh385k.s[30]++;
 
           reject(err);
         } else {
-          cov_2hhud5wwfm.b[6][1]++;
-          cov_2hhud5wwfm.s[31]++;
+          cov_2fn4dh385k.b[6][1]++;
+          cov_2fn4dh385k.s[31]++;
 
           resolve(body);
         }
@@ -1896,19 +1896,19 @@ var createAsset = exports.createAsset = function createAsset(asset, data) {
  * @param {object} data - attachment data to update
  * @return {Promise}
  */
-cov_2hhud5wwfm.s[32]++;
+cov_2fn4dh385k.s[32]++;
 var updateAsset = exports.updateAsset = function updateAsset(assetId, _ref6, attachmentData) {
   var filename = _ref6.filename,
       mimetype = _ref6.mimetype;
-  cov_2hhud5wwfm.f[17]++;
-  cov_2hhud5wwfm.s[33]++;
+  cov_2fn4dh385k.f[17]++;
+  cov_2fn4dh385k.s[33]++;
 
   // get existing document
   return _plugDb2.default.getAsync(assetId)
   // then update document
   .then(function (asset) {
-    cov_2hhud5wwfm.f[18]++;
-    cov_2hhud5wwfm.s[34]++;
+    cov_2fn4dh385k.f[18]++;
+    cov_2fn4dh385k.s[34]++;
     return _plugDb2.default.insertAsync((0, _extends3.default)({}, asset, {
       filename: filename,
       mimetype: mimetype,
@@ -1917,56 +1917,56 @@ var updateAsset = exports.updateAsset = function updateAsset(assetId, _ref6, att
   })
   // destroy previous attachments
   .then(function () {
-    cov_2hhud5wwfm.f[19]++;
-    cov_2hhud5wwfm.s[35]++;
+    cov_2fn4dh385k.f[19]++;
+    cov_2fn4dh385k.s[35]++;
     return _plugDb2.default.getAsync(assetId);
   }).then(function (asset) {
-    cov_2hhud5wwfm.f[20]++;
+    cov_2fn4dh385k.f[20]++;
 
-    var previousAttachment = (cov_2hhud5wwfm.s[36]++, (cov_2hhud5wwfm.b[7][0]++, asset._attachments) && (cov_2hhud5wwfm.b[7][1]++, (0, _keys2.default)(asset._attachments)[0]));
-    cov_2hhud5wwfm.s[37]++;
+    var previousAttachment = (cov_2fn4dh385k.s[36]++, (cov_2fn4dh385k.b[7][0]++, asset._attachments) && (cov_2fn4dh385k.b[7][1]++, (0, _keys2.default)(asset._attachments)[0]));
+    cov_2fn4dh385k.s[37]++;
     return new _promise2.default(function (resolve, reject) {
-      cov_2hhud5wwfm.f[21]++;
-      cov_2hhud5wwfm.s[38]++;
+      cov_2fn4dh385k.f[21]++;
+      cov_2fn4dh385k.s[38]++;
 
       if (previousAttachment) {
-        cov_2hhud5wwfm.b[8][0]++;
-        cov_2hhud5wwfm.s[39]++;
+        cov_2fn4dh385k.b[8][0]++;
+        cov_2fn4dh385k.s[39]++;
 
         _plugDb2.default.attachment.destroy(asset._id, encodeURIComponent(previousAttachment), { rev: asset._rev }, function (err, body) {
-          cov_2hhud5wwfm.f[22]++;
-          cov_2hhud5wwfm.s[40]++;
+          cov_2fn4dh385k.f[22]++;
+          cov_2fn4dh385k.s[40]++;
 
           if (err) {
-            cov_2hhud5wwfm.b[9][0]++;
-            cov_2hhud5wwfm.s[41]++;
+            cov_2fn4dh385k.b[9][0]++;
+            cov_2fn4dh385k.s[41]++;
 
             reject(err);
           } else {
-              cov_2hhud5wwfm.b[9][1]++;
-              cov_2hhud5wwfm.s[42]++;
+              cov_2fn4dh385k.b[9][1]++;
+              cov_2fn4dh385k.s[42]++;
               resolve(body);
             }
         });
       } else {
-        cov_2hhud5wwfm.b[8][1]++;
+        cov_2fn4dh385k.b[8][1]++;
       }
     });
   })
   // add new attachment
   .then(function (op) {
-    cov_2hhud5wwfm.f[23]++;
+    cov_2fn4dh385k.f[23]++;
 
-    var _ref7 = (cov_2hhud5wwfm.s[43]++, op),
+    var _ref7 = (cov_2fn4dh385k.s[43]++, op),
         id = _ref7.id,
         rev = _ref7.rev;
 
-    cov_2hhud5wwfm.s[44]++;
+    cov_2fn4dh385k.s[44]++;
 
 
     return new _promise2.default(function (resolve, reject) {
-      cov_2hhud5wwfm.f[24]++;
-      cov_2hhud5wwfm.s[45]++;
+      cov_2fn4dh385k.f[24]++;
+      cov_2fn4dh385k.s[45]++;
 
       _plugDb2.default.attachment.insert(
       // doc id
@@ -1981,17 +1981,17 @@ var updateAsset = exports.updateAsset = function updateAsset(assetId, _ref6, att
       { rev: rev },
       // callback
       function (err, body) {
-        cov_2hhud5wwfm.f[25]++;
-        cov_2hhud5wwfm.s[46]++;
+        cov_2fn4dh385k.f[25]++;
+        cov_2fn4dh385k.s[46]++;
 
         if (err) {
-          cov_2hhud5wwfm.b[10][0]++;
-          cov_2hhud5wwfm.s[47]++;
+          cov_2fn4dh385k.b[10][0]++;
+          cov_2fn4dh385k.s[47]++;
 
           reject(err);
         } else {
-          cov_2hhud5wwfm.b[10][1]++;
-          cov_2hhud5wwfm.s[48]++;
+          cov_2fn4dh385k.b[10][1]++;
+          cov_2fn4dh385k.s[48]++;
 
           resolve(body);
         }
@@ -2005,14 +2005,14 @@ var updateAsset = exports.updateAsset = function updateAsset(assetId, _ref6, att
  * @param {object} asset - asset to delete
  * @return {Promise}
  */
-cov_2hhud5wwfm.s[49]++;
+cov_2fn4dh385k.s[49]++;
 var deleteAsset = exports.deleteAsset = function deleteAsset(_ref8) {
   var _id = _ref8._id;
-  cov_2hhud5wwfm.f[26]++;
-  cov_2hhud5wwfm.s[50]++;
+  cov_2fn4dh385k.f[26]++;
+  cov_2fn4dh385k.s[50]++;
   return _plugDb2.default.getAsync(_id).then(function (asset) {
-    cov_2hhud5wwfm.f[27]++;
-    cov_2hhud5wwfm.s[51]++;
+    cov_2fn4dh385k.f[27]++;
+    cov_2fn4dh385k.s[51]++;
     return _plugDb2.default.destroyAsync(_id, asset._rev);
   });
 };

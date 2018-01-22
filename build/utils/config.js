@@ -12,13 +12,13 @@ var _extends3 = require('babel-runtime/helpers/extends');
 
 var _extends4 = _interopRequireDefault(_extends3);
 
-var cov_9vo2xbovf = function () {
-  var path = '/Users/rawbin/Documents/Projets/collaborations/ensad-publishing/prototype/plurishing-backend/src/utils/config.js',
-      hash = '4a5da63620a702b526cfb131c07f3be96d6aae93',
+var cov_2sv4ofhmc = function () {
+  var path = '/Users/rawbin/Documents/Projets/collaborations/ensad-publishing/prototype/metis-backend/src/utils/config.js',
+      hash = '1b0a0634021cfd64eac53735a062b92a184ba870',
       global = new Function('return this')(),
       gcv = '__coverage__',
       coverageData = {
-    path: '/Users/rawbin/Documents/Projets/collaborations/ensad-publishing/prototype/plurishing-backend/src/utils/config.js',
+    path: '/Users/rawbin/Documents/Projets/collaborations/ensad-publishing/prototype/metis-backend/src/utils/config.js',
     statementMap: {
       '0': {
         start: {
@@ -217,7 +217,7 @@ var cov_9vo2xbovf = function () {
   coverageData.hash = hash;
   return coverage[path] = coverageData;
 }(); /**
-      * Plurishing-backend
+      * Metis-backend
       * =======
       * Config utils
       */
@@ -231,12 +231,12 @@ var _config2 = _interopRequireDefault(_config);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-cov_9vo2xbovf.s[0]++;
+cov_2sv4ofhmc.s[0]++;
 
 
 var constantify = function constantify(str) {
-  cov_9vo2xbovf.f[0]++;
-  cov_9vo2xbovf.s[1]++;
+  cov_2sv4ofhmc.f[0]++;
+  cov_2sv4ofhmc.s[1]++;
   return str.replace(/([A-Z])/g, '_$1').toUpperCase();
 };
 
@@ -246,21 +246,21 @@ var constantify = function constantify(str) {
  * @return {object} config
  */
 function getConfig() {
-  cov_9vo2xbovf.f[1]++;
-  cov_9vo2xbovf.s[2]++;
+  cov_2sv4ofhmc.f[1]++;
+  cov_2sv4ofhmc.s[2]++;
 
   if (process.env.NODE_ENV !== 'production') {
-    cov_9vo2xbovf.b[0][0]++;
-    cov_9vo2xbovf.s[3]++;
+    cov_2sv4ofhmc.b[0][0]++;
+    cov_2sv4ofhmc.s[3]++;
 
     return require('../../config/config.dev'); /* eslint node/no-unpublished-require : 0 */
   } else {
-    cov_9vo2xbovf.b[0][1]++;
-    cov_9vo2xbovf.s[4]++;
+    cov_2sv4ofhmc.b[0][1]++;
+    cov_2sv4ofhmc.s[4]++;
 
     return _config2.default.reduce(function (result, key) {
-      cov_9vo2xbovf.f[2]++;
-      cov_9vo2xbovf.s[5]++;
+      cov_2sv4ofhmc.f[2]++;
+      cov_2sv4ofhmc.s[5]++;
       return (0, _extends4.default)({}, result, (0, _defineProperty3.default)({}, key, process.env[constantify(key)]));
     }, {});
   }

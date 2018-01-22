@@ -1,12 +1,12 @@
 /**
- * Plurishing-backend
+ * Metis-backend
  * =======
  * Composition data access layer
  */
 
 import db from '../../utils/plugDb';
 
-import {Composition as schema} from 'plurishing-schemas';
+import {Composition as schema} from 'metis-schemas';
 import design from './compositions.design';
 import {addDesign} from '../../utils/couchdb';
 import {dataIsValid} from '../../utils/schemas';

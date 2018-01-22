@@ -13,13 +13,13 @@ var _promise = require('babel-runtime/core-js/promise');
 
 var _promise2 = _interopRequireDefault(_promise);
 
-var cov_2h66hwxyav = function () {
-  var path = '/Users/rawbin/Documents/Projets/collaborations/ensad-publishing/prototype/plurishing-backend/src/components/users/users.dal.js',
-      hash = 'a295afa8b6d9bc8fbae410317d2fea598b5c5fc5',
+var cov_2ek24ycndq = function () {
+  var path = '/Users/rawbin/Documents/Projets/collaborations/ensad-publishing/prototype/metis-backend/src/components/users/users.dal.js',
+      hash = '57c7fbf4792afb28e00bbc7a63b83ecaf401bbdc',
       global = new Function('return this')(),
       gcv = '__coverage__',
       coverageData = {
-    path: '/Users/rawbin/Documents/Projets/collaborations/ensad-publishing/prototype/plurishing-backend/src/components/users/users.dal.js',
+    path: '/Users/rawbin/Documents/Projets/collaborations/ensad-publishing/prototype/metis-backend/src/components/users/users.dal.js',
     statementMap: {
       '0': {
         start: {
@@ -1207,7 +1207,7 @@ var cov_2h66hwxyav = function () {
   coverageData.hash = hash;
   return coverage[path] = coverageData;
 }(); /**
-      * Plurishing-backend
+      * Metis-backend
       * =======
       * User data access layer
       */
@@ -1216,7 +1216,7 @@ var _plugDb = require('../../utils/plugDb');
 
 var _plugDb2 = _interopRequireDefault(_plugDb);
 
-var _plurishingSchemas = require('plurishing-schemas');
+var _metisSchemas = require('metis-schemas');
 
 var _users = require('./users.design');
 
@@ -1231,7 +1231,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 /**
  * Registering couchdb views related to users objects
  */
-cov_2h66hwxyav.s[0]++;
+cov_2ek24ycndq.s[0]++;
 (0, _couchdb.addDesign)(_plugDb2.default, 'users', _users2.default);
 
 /**
@@ -1239,73 +1239,73 @@ cov_2h66hwxyav.s[0]++;
  * @param {object} parameters
  * @return {Promise}
  */
-cov_2h66hwxyav.s[1]++;
+cov_2ek24ycndq.s[1]++;
 var getUsers = exports.getUsers = function getUsers(_ref) {
   var _ref$query = _ref.query,
-      query = _ref$query === undefined ? (cov_2h66hwxyav.b[0][0]++, {}) : _ref$query,
+      query = _ref$query === undefined ? (cov_2ek24ycndq.b[0][0]++, {}) : _ref$query,
       _ref$include_docs = _ref.include_docs,
-      include_docs = _ref$include_docs === undefined ? (cov_2h66hwxyav.b[1][0]++, true) : _ref$include_docs;
-  cov_2h66hwxyav.f[0]++;
-  cov_2h66hwxyav.s[2]++;
+      include_docs = _ref$include_docs === undefined ? (cov_2ek24ycndq.b[1][0]++, true) : _ref$include_docs;
+  cov_2ek24ycndq.f[0]++;
+  cov_2ek24ycndq.s[2]++;
 
-  if ((cov_2h66hwxyav.b[3][0]++, query.email) && (cov_2h66hwxyav.b[3][1]++, query.password)) {
-    cov_2h66hwxyav.b[2][0]++;
-    cov_2h66hwxyav.s[3]++;
+  if ((cov_2ek24ycndq.b[3][0]++, query.email) && (cov_2ek24ycndq.b[3][1]++, query.password)) {
+    cov_2ek24ycndq.b[2][0]++;
+    cov_2ek24ycndq.s[3]++;
 
     return _plugDb2.default.viewAsync('users', 'by_email_and_password', {
       key: [query.email, query.password],
       include_docs: include_docs
     }).then(function (results) {
-      cov_2h66hwxyav.f[1]++;
-      cov_2h66hwxyav.s[4]++;
+      cov_2ek24ycndq.f[1]++;
+      cov_2ek24ycndq.s[4]++;
       return new _promise2.default(function (resolve) {
-        cov_2h66hwxyav.f[2]++;
-        cov_2h66hwxyav.s[5]++;
+        cov_2ek24ycndq.f[2]++;
+        cov_2ek24ycndq.s[5]++;
         return resolve(results.rows.map(function (doc) {
-          cov_2h66hwxyav.f[3]++;
-          cov_2h66hwxyav.s[6]++;
+          cov_2ek24ycndq.f[3]++;
+          cov_2ek24ycndq.s[6]++;
           return doc.doc;
         }));
       });
     });
   } else {
-      cov_2h66hwxyav.b[2][1]++;
-      cov_2h66hwxyav.s[7]++;
+      cov_2ek24ycndq.b[2][1]++;
+      cov_2ek24ycndq.s[7]++;
       if (query.email) {
-        cov_2h66hwxyav.b[4][0]++;
-        cov_2h66hwxyav.s[8]++;
+        cov_2ek24ycndq.b[4][0]++;
+        cov_2ek24ycndq.s[8]++;
 
         return _plugDb2.default.viewAsync('users', 'by_email', {
           key: query.email,
           include_docs: include_docs
         }).then(function (results) {
-          cov_2h66hwxyav.f[4]++;
-          cov_2h66hwxyav.s[9]++;
+          cov_2ek24ycndq.f[4]++;
+          cov_2ek24ycndq.s[9]++;
           return new _promise2.default(function (resolve) {
-            cov_2h66hwxyav.f[5]++;
-            cov_2h66hwxyav.s[10]++;
+            cov_2ek24ycndq.f[5]++;
+            cov_2ek24ycndq.s[10]++;
             return resolve(results.rows.map(function (doc) {
-              cov_2h66hwxyav.f[6]++;
-              cov_2h66hwxyav.s[11]++;
+              cov_2ek24ycndq.f[6]++;
+              cov_2ek24ycndq.s[11]++;
               return doc.doc;
             }));
           });
         });
       } else {
-        cov_2h66hwxyav.b[4][1]++;
-        cov_2h66hwxyav.s[12]++;
+        cov_2ek24ycndq.b[4][1]++;
+        cov_2ek24ycndq.s[12]++;
 
         return _plugDb2.default.viewAsync('users', 'by_email', {
           include_docs: include_docs
         }).then(function (results) {
-          cov_2h66hwxyav.f[7]++;
-          cov_2h66hwxyav.s[13]++;
+          cov_2ek24ycndq.f[7]++;
+          cov_2ek24ycndq.s[13]++;
           return new _promise2.default(function (resolve) {
-            cov_2h66hwxyav.f[8]++;
-            cov_2h66hwxyav.s[14]++;
+            cov_2ek24ycndq.f[8]++;
+            cov_2ek24ycndq.s[14]++;
             return resolve(results.rows.map(function (doc) {
-              cov_2h66hwxyav.f[9]++;
-              cov_2h66hwxyav.s[15]++;
+              cov_2ek24ycndq.f[9]++;
+              cov_2ek24ycndq.s[15]++;
               return doc.doc;
             }));
           });
@@ -1319,47 +1319,47 @@ var getUsers = exports.getUsers = function getUsers(_ref) {
  * @param {object} parameters
  * @return {Promise}
  */
-cov_2h66hwxyav.s[16]++;
+cov_2ek24ycndq.s[16]++;
 var getUser = exports.getUser = function getUser(_ref2) {
   var id = _ref2.id,
       email = _ref2.email;
-  cov_2h66hwxyav.f[10]++;
-  cov_2h66hwxyav.s[17]++;
+  cov_2ek24ycndq.f[10]++;
+  cov_2ek24ycndq.s[17]++;
 
   if (id) {
-    cov_2h66hwxyav.b[5][0]++;
-    cov_2h66hwxyav.s[18]++;
+    cov_2ek24ycndq.b[5][0]++;
+    cov_2ek24ycndq.s[18]++;
 
     return _plugDb2.default.getAsync(id).then(function (user) {
-      cov_2h66hwxyav.f[11]++;
-      cov_2h66hwxyav.s[19]++;
+      cov_2ek24ycndq.f[11]++;
+      cov_2ek24ycndq.s[19]++;
       return (
         // verify that data is compliant before returning it
-        (0, _schemas.dataIsValid)(user, _plurishingSchemas.User)
+        (0, _schemas.dataIsValid)(user, _metisSchemas.User)
       );
     });
   } else {
-    cov_2h66hwxyav.b[5][1]++;
-    cov_2h66hwxyav.s[20]++;
+    cov_2ek24ycndq.b[5][1]++;
+    cov_2ek24ycndq.s[20]++;
 
     return _plugDb2.default.viewAsync('users', 'by_email', {
       key: email,
       include_docs: true
     }).then(function (result) {
-      cov_2h66hwxyav.f[12]++;
-      cov_2h66hwxyav.s[21]++;
+      cov_2ek24ycndq.f[12]++;
+      cov_2ek24ycndq.s[21]++;
       return new _promise2.default(function (resolve, reject) {
-        cov_2h66hwxyav.f[13]++;
-        cov_2h66hwxyav.s[22]++;
+        cov_2ek24ycndq.f[13]++;
+        cov_2ek24ycndq.s[22]++;
 
-        if ((cov_2h66hwxyav.b[7][0]++, result.rows) && (cov_2h66hwxyav.b[7][1]++, result.rows.length)) {
-          cov_2h66hwxyav.b[6][0]++;
-          cov_2h66hwxyav.s[23]++;
+        if ((cov_2ek24ycndq.b[7][0]++, result.rows) && (cov_2ek24ycndq.b[7][1]++, result.rows.length)) {
+          cov_2ek24ycndq.b[6][0]++;
+          cov_2ek24ycndq.s[23]++;
 
           resolve(result.rows[0].doc);
         } else {
-          cov_2h66hwxyav.b[6][1]++;
-          cov_2h66hwxyav.s[24]++;
+          cov_2ek24ycndq.b[6][1]++;
+          cov_2ek24ycndq.s[24]++;
 
           /**
            * @todo normalize this error
@@ -1376,13 +1376,13 @@ var getUser = exports.getUser = function getUser(_ref2) {
  * @param {object} user
  * @return {Promise}
  */
-cov_2h66hwxyav.s[25]++;
+cov_2ek24ycndq.s[25]++;
 var createUser = exports.createUser = function createUser(user) {
-  cov_2h66hwxyav.f[14]++;
-  cov_2h66hwxyav.s[26]++;
-  return (0, _schemas.dataIsValid)(user, _plurishingSchemas.User).then(function () {
-    cov_2h66hwxyav.f[15]++;
-    cov_2h66hwxyav.s[27]++;
+  cov_2ek24ycndq.f[14]++;
+  cov_2ek24ycndq.s[26]++;
+  return (0, _schemas.dataIsValid)(user, _metisSchemas.User).then(function () {
+    cov_2ek24ycndq.f[15]++;
+    cov_2ek24ycndq.s[27]++;
     return _plugDb2.default.insertAsync(user);
   });
 };
@@ -1393,23 +1393,23 @@ var createUser = exports.createUser = function createUser(user) {
  * @param {object} user - data to update
  * @return {Promise}
  */
-cov_2h66hwxyav.s[28]++;
+cov_2ek24ycndq.s[28]++;
 var updateUser = exports.updateUser = function updateUser(id, user) {
-  cov_2h66hwxyav.f[16]++;
-  cov_2h66hwxyav.s[29]++;
+  cov_2ek24ycndq.f[16]++;
+  cov_2ek24ycndq.s[29]++;
   return (
     // validate
-    (0, _schemas.dataIsValid)(user, _plurishingSchemas.User)
+    (0, _schemas.dataIsValid)(user, _metisSchemas.User)
     // get existing document
     .then(function () {
-      cov_2h66hwxyav.f[17]++;
-      cov_2h66hwxyav.s[30]++;
+      cov_2ek24ycndq.f[17]++;
+      cov_2ek24ycndq.s[30]++;
       return _plugDb2.default.getAsync(id);
     })
     // update with new rev
     .then(function (userDb) {
-      cov_2h66hwxyav.f[18]++;
-      cov_2h66hwxyav.s[31]++;
+      cov_2ek24ycndq.f[18]++;
+      cov_2ek24ycndq.s[31]++;
       return _plugDb2.default.insertAsync((0, _extends3.default)({}, user, {
         _rev: userDb._rev
       }), userDb._id);
@@ -1422,14 +1422,14 @@ var updateUser = exports.updateUser = function updateUser(id, user) {
  * @param {object} user - user to delete
  * @return {Promise}
  */
-cov_2h66hwxyav.s[32]++;
+cov_2ek24ycndq.s[32]++;
 var deleteUser = exports.deleteUser = function deleteUser(_ref3) {
   var _id = _ref3._id;
-  cov_2h66hwxyav.f[19]++;
-  cov_2h66hwxyav.s[33]++;
+  cov_2ek24ycndq.f[19]++;
+  cov_2ek24ycndq.s[33]++;
   return _plugDb2.default.getAsync(_id).then(function (user) {
-    cov_2h66hwxyav.f[20]++;
-    cov_2h66hwxyav.s[34]++;
+    cov_2ek24ycndq.f[20]++;
+    cov_2ek24ycndq.s[34]++;
     return _plugDb2.default.destroyAsync(_id, user._rev);
   });
 };

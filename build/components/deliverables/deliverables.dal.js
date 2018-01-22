@@ -17,13 +17,13 @@ var _promise = require('babel-runtime/core-js/promise');
 
 var _promise2 = _interopRequireDefault(_promise);
 
-var cov_y45hgzcqv = function () {
-  var path = '/Users/rawbin/Documents/Projets/collaborations/ensad-publishing/prototype/plurishing-backend/src/components/deliverables/deliverables.dal.js',
-      hash = 'ef7445caf92b3638c593be2b4a1b0cf12a99974f',
+var cov_1zxibton6j = function () {
+  var path = '/Users/rawbin/Documents/Projets/collaborations/ensad-publishing/prototype/metis-backend/src/components/deliverables/deliverables.dal.js',
+      hash = 'ab32f945b6b573365365144d7a6762d655b41067',
       global = new Function('return this')(),
       gcv = '__coverage__',
       coverageData = {
-    path: '/Users/rawbin/Documents/Projets/collaborations/ensad-publishing/prototype/plurishing-backend/src/components/deliverables/deliverables.dal.js',
+    path: '/Users/rawbin/Documents/Projets/collaborations/ensad-publishing/prototype/metis-backend/src/components/deliverables/deliverables.dal.js',
     statementMap: {
       '0': {
         start: {
@@ -1632,7 +1632,7 @@ var cov_y45hgzcqv = function () {
   coverageData.hash = hash;
   return coverage[path] = coverageData;
 }(); /**
-      * Plurishing-backend
+      * Metis-backend
       * =======
       * Deliverable data access layer
       */
@@ -1644,7 +1644,7 @@ var _plugDb = require('../../utils/plugDb');
 
 var _plugDb2 = _interopRequireDefault(_plugDb);
 
-var _plurishingSchemas = require('plurishing-schemas');
+var _metisSchemas = require('metis-schemas');
 
 var _deliverables = require('./deliverables.design');
 
@@ -1659,7 +1659,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 /**
  * Registering couchdb views related to deliverables objects
  */
-cov_y45hgzcqv.s[0]++;
+cov_1zxibton6j.s[0]++;
 (0, _couchdb.addDesign)(_plugDb2.default, 'deliverables', _deliverables2.default);
 
 /**
@@ -1667,50 +1667,50 @@ cov_y45hgzcqv.s[0]++;
  * @param {object} parameters
  * @return {Promise}
  */
-cov_y45hgzcqv.s[1]++;
+cov_1zxibton6j.s[1]++;
 var getDeliverables = exports.getDeliverables = function getDeliverables(_ref) {
   var _ref$query = _ref.query,
-      query = _ref$query === undefined ? (cov_y45hgzcqv.b[0][0]++, {}) : _ref$query,
+      query = _ref$query === undefined ? (cov_1zxibton6j.b[0][0]++, {}) : _ref$query,
       _ref$include_docs = _ref.include_docs,
-      include_docs = _ref$include_docs === undefined ? (cov_y45hgzcqv.b[1][0]++, true) : _ref$include_docs;
-  cov_y45hgzcqv.f[0]++;
-  cov_y45hgzcqv.s[2]++;
+      include_docs = _ref$include_docs === undefined ? (cov_1zxibton6j.b[1][0]++, true) : _ref$include_docs;
+  cov_1zxibton6j.f[0]++;
+  cov_1zxibton6j.s[2]++;
 
   if (query.filename) {
-    cov_y45hgzcqv.b[2][0]++;
-    cov_y45hgzcqv.s[3]++;
+    cov_1zxibton6j.b[2][0]++;
+    cov_1zxibton6j.s[3]++;
 
     return _plugDb2.default.viewAsync('deliverables', 'by_filename', {
       key: query.filename,
       include_docs: include_docs
     }).then(function (results) {
-      cov_y45hgzcqv.f[1]++;
-      cov_y45hgzcqv.s[4]++;
+      cov_1zxibton6j.f[1]++;
+      cov_1zxibton6j.s[4]++;
       return new _promise2.default(function (resolve) {
-        cov_y45hgzcqv.f[2]++;
-        cov_y45hgzcqv.s[5]++;
+        cov_1zxibton6j.f[2]++;
+        cov_1zxibton6j.s[5]++;
         return resolve(results.rows.map(function (doc) {
-          cov_y45hgzcqv.f[3]++;
-          cov_y45hgzcqv.s[6]++;
+          cov_1zxibton6j.f[3]++;
+          cov_1zxibton6j.s[6]++;
           return doc.doc;
         }));
       });
     });
   } else {
-    cov_y45hgzcqv.b[2][1]++;
-    cov_y45hgzcqv.s[7]++;
+    cov_1zxibton6j.b[2][1]++;
+    cov_1zxibton6j.s[7]++;
 
     return _plugDb2.default.viewAsync('deliverables', 'by_filename', {
       include_docs: include_docs
     }).then(function (results) {
-      cov_y45hgzcqv.f[4]++;
-      cov_y45hgzcqv.s[8]++;
+      cov_1zxibton6j.f[4]++;
+      cov_1zxibton6j.s[8]++;
       return new _promise2.default(function (resolve) {
-        cov_y45hgzcqv.f[5]++;
-        cov_y45hgzcqv.s[9]++;
+        cov_1zxibton6j.f[5]++;
+        cov_1zxibton6j.s[9]++;
         return resolve(results.rows.map(function (doc) {
-          cov_y45hgzcqv.f[6]++;
-          cov_y45hgzcqv.s[10]++;
+          cov_1zxibton6j.f[6]++;
+          cov_1zxibton6j.s[10]++;
           return doc.doc;
         }));
       });
@@ -1723,17 +1723,17 @@ var getDeliverables = exports.getDeliverables = function getDeliverables(_ref) {
  * @param {object} parameters
  * @return {Promise}
  */
-cov_y45hgzcqv.s[11]++;
+cov_1zxibton6j.s[11]++;
 var getDeliverable = exports.getDeliverable = function getDeliverable(_ref2) {
   var id = _ref2.id;
-  cov_y45hgzcqv.f[7]++;
-  cov_y45hgzcqv.s[12]++;
+  cov_1zxibton6j.f[7]++;
+  cov_1zxibton6j.s[12]++;
   return _plugDb2.default.getAsync(id).then(function (deliverable) {
-    cov_y45hgzcqv.f[8]++;
-    cov_y45hgzcqv.s[13]++;
+    cov_1zxibton6j.f[8]++;
+    cov_1zxibton6j.s[13]++;
     return (
       // verify that data is compliant before returning it
-      (0, _schemas.dataIsValid)(deliverable, _plurishingSchemas.Deliverable)
+      (0, _schemas.dataIsValid)(deliverable, _metisSchemas.Deliverable)
     );
   });
 };
@@ -1743,28 +1743,28 @@ var getDeliverable = exports.getDeliverable = function getDeliverable(_ref2) {
  * @param {object} parameters
  * @return {Promise}
  */
-cov_y45hgzcqv.s[14]++;
+cov_1zxibton6j.s[14]++;
 var getDeliverableAttachment = exports.getDeliverableAttachment = function getDeliverableAttachment(_ref3) {
   var id = _ref3.id,
       filename = _ref3.filename;
-  cov_y45hgzcqv.f[9]++;
-  cov_y45hgzcqv.s[15]++;
+  cov_1zxibton6j.f[9]++;
+  cov_1zxibton6j.s[15]++;
   return new _promise2.default(function (resolve, reject) {
-    cov_y45hgzcqv.f[10]++;
-    cov_y45hgzcqv.s[16]++;
+    cov_1zxibton6j.f[10]++;
+    cov_1zxibton6j.s[16]++;
 
     _plugDb2.default.attachment.get(id, filename, function (err, body) {
-      cov_y45hgzcqv.f[11]++;
-      cov_y45hgzcqv.s[17]++;
+      cov_1zxibton6j.f[11]++;
+      cov_1zxibton6j.s[17]++;
 
       if (err) {
-        cov_y45hgzcqv.b[3][0]++;
-        cov_y45hgzcqv.s[18]++;
+        cov_1zxibton6j.b[3][0]++;
+        cov_1zxibton6j.s[18]++;
 
         reject(err);
       } else {
-        cov_y45hgzcqv.b[3][1]++;
-        cov_y45hgzcqv.s[19]++;
+        cov_1zxibton6j.b[3][1]++;
+        cov_1zxibton6j.s[19]++;
 
         resolve({ data: body, mimetype: (0, _mimeTypes.lookup)(filename) });
       }
@@ -1778,39 +1778,39 @@ var getDeliverableAttachment = exports.getDeliverableAttachment = function getDe
  * @param {object} data
  * @return {Promise}
  */
-cov_y45hgzcqv.s[20]++;
+cov_1zxibton6j.s[20]++;
 var createDeliverable = exports.createDeliverable = function createDeliverable(deliverable, data) {
-  cov_y45hgzcqv.f[12]++;
+  cov_1zxibton6j.f[12]++;
 
-  var _ref4 = (cov_y45hgzcqv.s[21]++, deliverable),
+  var _ref4 = (cov_1zxibton6j.s[21]++, deliverable),
       filename = _ref4.filename;
 
-  var mimeType = (cov_y45hgzcqv.s[22]++, (0, _mimeTypes.lookup)(filename));
+  var mimeType = (cov_1zxibton6j.s[22]++, (0, _mimeTypes.lookup)(filename));
   // validate data
-  cov_y45hgzcqv.s[23]++;
-  return (0, _schemas.dataIsValid)(deliverable, _plurishingSchemas.Deliverable)
+  cov_1zxibton6j.s[23]++;
+  return (0, _schemas.dataIsValid)(deliverable, _metisSchemas.Deliverable)
   // create document
   .then(function () {
-    cov_y45hgzcqv.f[13]++;
-    cov_y45hgzcqv.s[24]++;
+    cov_1zxibton6j.f[13]++;
+    cov_1zxibton6j.s[24]++;
     return _plugDb2.default.insertAsync((0, _extends3.default)({}, deliverable, {
       mimetype: mimeType
     }));
   })
   // add attachment
   .then(function (op) {
-    cov_y45hgzcqv.f[14]++;
+    cov_1zxibton6j.f[14]++;
 
-    var _ref5 = (cov_y45hgzcqv.s[25]++, op),
+    var _ref5 = (cov_1zxibton6j.s[25]++, op),
         id = _ref5.id,
         rev = _ref5.rev;
 
-    cov_y45hgzcqv.s[26]++;
+    cov_1zxibton6j.s[26]++;
 
 
     return new _promise2.default(function (resolve, reject) {
-      cov_y45hgzcqv.f[15]++;
-      cov_y45hgzcqv.s[27]++;
+      cov_1zxibton6j.f[15]++;
+      cov_1zxibton6j.s[27]++;
 
       _plugDb2.default.attachment.insert(
       // doc id
@@ -1825,25 +1825,25 @@ var createDeliverable = exports.createDeliverable = function createDeliverable(d
       { rev: rev },
       // callback
       function (err, body) {
-        cov_y45hgzcqv.f[16]++;
-        cov_y45hgzcqv.s[28]++;
+        cov_1zxibton6j.f[16]++;
+        cov_1zxibton6j.s[28]++;
 
         if (err) {
-          cov_y45hgzcqv.b[4][0]++;
-          cov_y45hgzcqv.s[29]++;
+          cov_1zxibton6j.b[4][0]++;
+          cov_1zxibton6j.s[29]++;
 
           reject(err);
         } else {
-          cov_y45hgzcqv.b[4][1]++;
-          cov_y45hgzcqv.s[30]++;
+          cov_1zxibton6j.b[4][1]++;
+          cov_1zxibton6j.s[30]++;
 
           resolve(body);
         }
       });
     });
   }).catch(function (e) {
-    cov_y45hgzcqv.f[17]++;
-    cov_y45hgzcqv.s[31]++;
+    cov_1zxibton6j.f[17]++;
+    cov_1zxibton6j.s[31]++;
     return _promise2.default.reject(e);
   });
 };
@@ -1855,19 +1855,19 @@ var createDeliverable = exports.createDeliverable = function createDeliverable(d
  * @param {object} data - attachment data to update
  * @return {Promise}
  */
-cov_y45hgzcqv.s[32]++;
+cov_1zxibton6j.s[32]++;
 var updateDeliverable = exports.updateDeliverable = function updateDeliverable(deliverableId, _ref6, attachmentData) {
   var filename = _ref6.filename,
       mimetype = _ref6.mimetype;
-  cov_y45hgzcqv.f[18]++;
-  cov_y45hgzcqv.s[33]++;
+  cov_1zxibton6j.f[18]++;
+  cov_1zxibton6j.s[33]++;
 
   // get existing document
   return _plugDb2.default.getAsync(deliverableId)
   // then update document
   .then(function (deliverable) {
-    cov_y45hgzcqv.f[19]++;
-    cov_y45hgzcqv.s[34]++;
+    cov_1zxibton6j.f[19]++;
+    cov_1zxibton6j.s[34]++;
     return _plugDb2.default.insertAsync((0, _extends3.default)({}, deliverable, {
       filename: filename,
       mimetype: mimetype,
@@ -1876,56 +1876,56 @@ var updateDeliverable = exports.updateDeliverable = function updateDeliverable(d
   })
   // destroy previous attachments
   .then(function () {
-    cov_y45hgzcqv.f[20]++;
-    cov_y45hgzcqv.s[35]++;
+    cov_1zxibton6j.f[20]++;
+    cov_1zxibton6j.s[35]++;
     return _plugDb2.default.getAsync(deliverableId);
   }).then(function (deliverable) {
-    cov_y45hgzcqv.f[21]++;
+    cov_1zxibton6j.f[21]++;
 
-    var previousAttachment = (cov_y45hgzcqv.s[36]++, (cov_y45hgzcqv.b[5][0]++, deliverable._attachments) && (cov_y45hgzcqv.b[5][1]++, (0, _keys2.default)(deliverable._attachments)[0]));
-    cov_y45hgzcqv.s[37]++;
+    var previousAttachment = (cov_1zxibton6j.s[36]++, (cov_1zxibton6j.b[5][0]++, deliverable._attachments) && (cov_1zxibton6j.b[5][1]++, (0, _keys2.default)(deliverable._attachments)[0]));
+    cov_1zxibton6j.s[37]++;
     return new _promise2.default(function (resolve, reject) {
-      cov_y45hgzcqv.f[22]++;
-      cov_y45hgzcqv.s[38]++;
+      cov_1zxibton6j.f[22]++;
+      cov_1zxibton6j.s[38]++;
 
       if (previousAttachment) {
-        cov_y45hgzcqv.b[6][0]++;
-        cov_y45hgzcqv.s[39]++;
+        cov_1zxibton6j.b[6][0]++;
+        cov_1zxibton6j.s[39]++;
 
         _plugDb2.default.attachment.destroy(deliverable._id, encodeURIComponent(previousAttachment), { rev: deliverable._rev }, function (err, body) {
-          cov_y45hgzcqv.f[23]++;
-          cov_y45hgzcqv.s[40]++;
+          cov_1zxibton6j.f[23]++;
+          cov_1zxibton6j.s[40]++;
 
           if (err) {
-            cov_y45hgzcqv.b[7][0]++;
-            cov_y45hgzcqv.s[41]++;
+            cov_1zxibton6j.b[7][0]++;
+            cov_1zxibton6j.s[41]++;
 
             reject(err);
           } else {
-              cov_y45hgzcqv.b[7][1]++;
-              cov_y45hgzcqv.s[42]++;
+              cov_1zxibton6j.b[7][1]++;
+              cov_1zxibton6j.s[42]++;
               resolve(body);
             }
         });
       } else {
-        cov_y45hgzcqv.b[6][1]++;
+        cov_1zxibton6j.b[6][1]++;
       }
     });
   })
   // add new attachment
   .then(function (op) {
-    cov_y45hgzcqv.f[24]++;
+    cov_1zxibton6j.f[24]++;
 
-    var _ref7 = (cov_y45hgzcqv.s[43]++, op),
+    var _ref7 = (cov_1zxibton6j.s[43]++, op),
         id = _ref7.id,
         rev = _ref7.rev;
 
-    cov_y45hgzcqv.s[44]++;
+    cov_1zxibton6j.s[44]++;
 
 
     return new _promise2.default(function (resolve, reject) {
-      cov_y45hgzcqv.f[25]++;
-      cov_y45hgzcqv.s[45]++;
+      cov_1zxibton6j.f[25]++;
+      cov_1zxibton6j.s[45]++;
 
       _plugDb2.default.attachment.insert(
       // doc id
@@ -1940,17 +1940,17 @@ var updateDeliverable = exports.updateDeliverable = function updateDeliverable(d
       { rev: rev },
       // callback
       function (err, body) {
-        cov_y45hgzcqv.f[26]++;
-        cov_y45hgzcqv.s[46]++;
+        cov_1zxibton6j.f[26]++;
+        cov_1zxibton6j.s[46]++;
 
         if (err) {
-          cov_y45hgzcqv.b[8][0]++;
-          cov_y45hgzcqv.s[47]++;
+          cov_1zxibton6j.b[8][0]++;
+          cov_1zxibton6j.s[47]++;
 
           reject(err);
         } else {
-          cov_y45hgzcqv.b[8][1]++;
-          cov_y45hgzcqv.s[48]++;
+          cov_1zxibton6j.b[8][1]++;
+          cov_1zxibton6j.s[48]++;
 
           resolve(body);
         }
@@ -1964,14 +1964,14 @@ var updateDeliverable = exports.updateDeliverable = function updateDeliverable(d
  * @param {object} deliverable - deliverable to delete
  * @return {Promise}
  */
-cov_y45hgzcqv.s[49]++;
+cov_1zxibton6j.s[49]++;
 var deleteDeliverable = exports.deleteDeliverable = function deleteDeliverable(_ref8) {
   var _id = _ref8._id;
-  cov_y45hgzcqv.f[27]++;
-  cov_y45hgzcqv.s[50]++;
+  cov_1zxibton6j.f[27]++;
+  cov_1zxibton6j.s[50]++;
   return _plugDb2.default.getAsync(_id).then(function (deliverable) {
-    cov_y45hgzcqv.f[28]++;
-    cov_y45hgzcqv.s[51]++;
+    cov_1zxibton6j.f[28]++;
+    cov_1zxibton6j.s[51]++;
     return _plugDb2.default.destroyAsync(_id, deliverable._rev);
   });
 };

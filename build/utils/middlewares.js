@@ -5,13 +5,13 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.errorHandler = undefined;
 
-var cov_1vclallvzp = function () {
-  var path = '/Users/rawbin/Documents/Projets/collaborations/ensad-publishing/prototype/plurishing-backend/src/utils/middlewares.js',
-      hash = '4270bb738843502cee2a245456a92f9288161fc9',
+var cov_wq47vg9ek = function () {
+  var path = '/Users/rawbin/Documents/Projets/collaborations/ensad-publishing/prototype/metis-backend/src/utils/middlewares.js',
+      hash = '16cbbc6368ee82c0ab0be75d249160184e11378e',
       global = new Function('return this')(),
       gcv = '__coverage__',
       coverageData = {
-    path: '/Users/rawbin/Documents/Projets/collaborations/ensad-publishing/prototype/plurishing-backend/src/utils/middlewares.js',
+    path: '/Users/rawbin/Documents/Projets/collaborations/ensad-publishing/prototype/metis-backend/src/utils/middlewares.js',
     statementMap: {
       '0': {
         start: {
@@ -185,7 +185,7 @@ var cov_1vclallvzp = function () {
   coverageData.hash = hash;
   return coverage[path] = coverageData;
 }(); /**
-      * Plurishing-backend
+      * Metis-backend
       * =======
       * Custom middlewares for express
       */
@@ -197,24 +197,24 @@ var _errorHandler2 = _interopRequireDefault(_errorHandler);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-cov_1vclallvzp.s[0]++;
+cov_wq47vg9ek.s[0]++;
 var errorHandler = exports.errorHandler = function errorHandler(err, req, res, next) {
-  cov_1vclallvzp.f[0]++;
+  cov_wq47vg9ek.f[0]++;
 
-  var handler = (cov_1vclallvzp.s[1]++, new _errorHandler2.default(req.log));
-  cov_1vclallvzp.s[2]++;
+  var handler = (cov_wq47vg9ek.s[1]++, new _errorHandler2.default(req.log));
+  cov_wq47vg9ek.s[2]++;
   handler.handleError(err).then(function (isOperationalError) {
-    cov_1vclallvzp.f[1]++;
-    cov_1vclallvzp.s[3]++;
+    cov_wq47vg9ek.f[1]++;
+    cov_wq47vg9ek.s[3]++;
 
     if (!isOperationalError) {
-      cov_1vclallvzp.b[0][0]++;
-      cov_1vclallvzp.s[4]++;
+      cov_wq47vg9ek.b[0][0]++;
+      cov_wq47vg9ek.s[4]++;
 
       next(err);
     } else {
-      cov_1vclallvzp.b[0][1]++;
-      cov_1vclallvzp.s[5]++;
+      cov_wq47vg9ek.b[0][1]++;
+      cov_wq47vg9ek.s[5]++;
 
       throw new Error(err);
     }

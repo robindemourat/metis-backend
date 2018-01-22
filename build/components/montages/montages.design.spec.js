@@ -4,13 +4,13 @@ var _keys = require('babel-runtime/core-js/object/keys');
 
 var _keys2 = _interopRequireDefault(_keys);
 
-var cov_1qlim675if = function () {
-    var path = '/Users/rawbin/Documents/Projets/collaborations/ensad-publishing/prototype/plurishing-backend/src/components/montages/montages.design.spec.js',
-        hash = 'a0bbaba9afb9d761535d750f085855262fdc1ed6',
+var cov_59os9fqu4 = function () {
+    var path = '/Users/rawbin/Documents/Projets/collaborations/ensad-publishing/prototype/metis-backend/src/components/montages/montages.design.spec.js',
+        hash = '78f917350f135c9e1ccd8f789a0db4dcddebc945',
         global = new Function('return this')(),
         gcv = '__coverage__',
         coverageData = {
-        path: '/Users/rawbin/Documents/Projets/collaborations/ensad-publishing/prototype/plurishing-backend/src/components/montages/montages.design.spec.js',
+        path: '/Users/rawbin/Documents/Projets/collaborations/ensad-publishing/prototype/metis-backend/src/components/montages/montages.design.spec.js',
         statementMap: {
             '0': {
                 start: {
@@ -182,25 +182,25 @@ var _montages2 = _interopRequireDefault(_montages);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-cov_1qlim675if.s[0]++;
+cov_59os9fqu4.s[0]++;
 
 
 describe('Montages couchdb design', function () {
-    cov_1qlim675if.f[0]++;
-    cov_1qlim675if.s[1]++;
+    cov_59os9fqu4.f[0]++;
+    cov_59os9fqu4.s[1]++;
 
     it('should eval each view map as a function', function (done) {
-        cov_1qlim675if.f[1]++;
-        cov_1qlim675if.s[2]++;
+        cov_59os9fqu4.f[1]++;
+        cov_59os9fqu4.s[2]++;
 
         (0, _keys2.default)(_montages2.default.views).forEach(function (id) {
-            cov_1qlim675if.f[2]++;
+            cov_59os9fqu4.f[2]++;
 
-            var view = (cov_1qlim675if.s[3]++, _montages2.default.views[id]);
-            cov_1qlim675if.s[4]++;
+            var view = (cov_59os9fqu4.s[3]++, _montages2.default.views[id]);
+            cov_59os9fqu4.s[4]++;
             (0, _chai.expect)(eval('(' + view.map + ')')).to.be.a('function');
         });
-        cov_1qlim675if.s[5]++;
+        cov_59os9fqu4.s[5]++;
         done();
     });
 });

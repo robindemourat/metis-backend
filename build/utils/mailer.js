@@ -8,13 +8,13 @@ var _promise = require('babel-runtime/core-js/promise');
 
 var _promise2 = _interopRequireDefault(_promise);
 
-var cov_1ja850s5z1 = function () {
-  var path = '/Users/rawbin/Documents/Projets/collaborations/ensad-publishing/prototype/plurishing-backend/src/utils/mailer.js',
-      hash = 'de2f21ca315807ed40f34b1c623cf7f8b05d82c5',
+var cov_1896xs7o4i = function () {
+  var path = '/Users/rawbin/Documents/Projets/collaborations/ensad-publishing/prototype/metis-backend/src/utils/mailer.js',
+      hash = 'd8a842558e625ce1be013139deb81086815a2783',
       global = new Function('return this')(),
       gcv = '__coverage__',
       coverageData = {
-    path: '/Users/rawbin/Documents/Projets/collaborations/ensad-publishing/prototype/plurishing-backend/src/utils/mailer.js',
+    path: '/Users/rawbin/Documents/Projets/collaborations/ensad-publishing/prototype/metis-backend/src/utils/mailer.js',
     statementMap: {
       '0': {
         start: {
@@ -377,7 +377,7 @@ var cov_1ja850s5z1 = function () {
   coverageData.hash = hash;
   return coverage[path] = coverageData;
 }(); /**
-      * Plurishing-backend
+      * Metis-backend
       * =======
       * Mailer utils
       */
@@ -398,32 +398,32 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
  */
 function sendEmail(_ref, _ref2, logger) {
   var _ref$to = _ref.to,
-      to = _ref$to === undefined ? (cov_1ja850s5z1.b[0][0]++, []) : _ref$to,
+      to = _ref$to === undefined ? (cov_1896xs7o4i.b[0][0]++, []) : _ref$to,
       _ref$subject = _ref.subject,
-      subject = _ref$subject === undefined ? (cov_1ja850s5z1.b[1][0]++, 'Hello ✔') : _ref$subject,
+      subject = _ref$subject === undefined ? (cov_1896xs7o4i.b[1][0]++, 'Hello ✔') : _ref$subject,
       _ref$html = _ref.html,
-      html = _ref$html === undefined ? (cov_1ja850s5z1.b[2][0]++, '<b>Hello world?</b>') : _ref$html;
+      html = _ref$html === undefined ? (cov_1896xs7o4i.b[2][0]++, '<b>Hello world?</b>') : _ref$html;
   var smtpEmail = _ref2.smtpEmail,
       smtpService = _ref2.smtpService,
       smtpPassword = _ref2.smtpPassword;
-  cov_1ja850s5z1.f[0]++;
-  cov_1ja850s5z1.s[0]++;
+  cov_1896xs7o4i.f[0]++;
+  cov_1896xs7o4i.s[0]++;
 
   return new _promise2.default(function (resolve, reject) {
-    cov_1ja850s5z1.f[1]++;
+    cov_1896xs7o4i.f[1]++;
 
     // create reusable transporter object using the default SMTP transport
     var transporter = void 0;
-    cov_1ja850s5z1.s[1]++;
+    cov_1896xs7o4i.s[1]++;
     if (smtpService === 'Gmail') {
-      cov_1ja850s5z1.b[3][0]++;
+      cov_1896xs7o4i.b[3][0]++;
 
-      var smtp = (cov_1ja850s5z1.s[2]++, 'smtps://' + encodeURIComponent(smtpEmail) + ':' + encodeURIComponent(smtpPassword) + '@smtp.gmail.com:465');
-      cov_1ja850s5z1.s[3]++;
+      var smtp = (cov_1896xs7o4i.s[2]++, 'smtps://' + encodeURIComponent(smtpEmail) + ':' + encodeURIComponent(smtpPassword) + '@smtp.gmail.com:465');
+      cov_1896xs7o4i.s[3]++;
       transporter = _nodemailer2.default.createTransport(smtp);
     } else {
-      cov_1ja850s5z1.b[3][1]++;
-      cov_1ja850s5z1.s[4]++;
+      cov_1896xs7o4i.b[3][1]++;
+      cov_1896xs7o4i.s[4]++;
 
       transporter = _nodemailer2.default.createTransport('SMTP', {
         service: smtpService,
@@ -435,7 +435,7 @@ function sendEmail(_ref, _ref2, logger) {
     }
 
     // setup email data
-    var mailOptions = (cov_1ja850s5z1.s[5]++, {
+    var mailOptions = (cov_1896xs7o4i.s[5]++, {
       from: smtpEmail, // sender address
       to: to.join(', '), // list of receivers
       subject: subject, // Subject line
@@ -443,26 +443,26 @@ function sendEmail(_ref, _ref2, logger) {
     });
 
     // send mail with defined transport object
-    cov_1ja850s5z1.s[6]++;
+    cov_1896xs7o4i.s[6]++;
     transporter.sendMail(mailOptions, function (error, info) {
-      cov_1ja850s5z1.f[2]++;
-      cov_1ja850s5z1.s[7]++;
+      cov_1896xs7o4i.f[2]++;
+      cov_1896xs7o4i.s[7]++;
 
       if (error) {
-        cov_1ja850s5z1.b[4][0]++;
-        cov_1ja850s5z1.s[8]++;
+        cov_1896xs7o4i.b[4][0]++;
+        cov_1896xs7o4i.s[8]++;
 
         reject(error);
-        cov_1ja850s5z1.s[9]++;
+        cov_1896xs7o4i.s[9]++;
         return logger.error(error);
       } else {
-        cov_1ja850s5z1.b[4][1]++;
+        cov_1896xs7o4i.b[4][1]++;
       }
       // logger.debug('Message sent: %s', info.messageId);
       // Message sent: <b658f8ca-6296-ccf4-8306-87d57a0b4321@blurdybloop.com>
       // Preview URL: https://ethereal.email/message/WaQKMgKddxQDoou...
       // return resolve(nodemailer.getTestMessageUrl(info));
-      cov_1ja850s5z1.s[10]++;
+      cov_1896xs7o4i.s[10]++;
       return resolve(info);
     });
   });

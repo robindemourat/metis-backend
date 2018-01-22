@@ -1,5 +1,5 @@
 /**
- * Plurishing-backend
+ * Metis-backend
  * =======
  * Diffusion api
  */

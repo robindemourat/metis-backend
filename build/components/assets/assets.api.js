@@ -4,13 +4,13 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var cov_yzrnj60pb = function () {
-  var path = '/Users/rawbin/Documents/Projets/collaborations/ensad-publishing/prototype/plurishing-backend/src/components/assets/assets.api.js',
-      hash = 'b028a95a69fdd9b9ccc08d5eb8ca7cd0f879ac3c',
+var cov_tnxaix1zt = function () {
+  var path = '/Users/rawbin/Documents/Projets/collaborations/ensad-publishing/prototype/metis-backend/src/components/assets/assets.api.js',
+      hash = 'f9fad48a6b59c26d6b31accf6d9d702339f3c0de',
       global = new Function('return this')(),
       gcv = '__coverage__',
       coverageData = {
-    path: '/Users/rawbin/Documents/Projets/collaborations/ensad-publishing/prototype/plurishing-backend/src/components/assets/assets.api.js',
+    path: '/Users/rawbin/Documents/Projets/collaborations/ensad-publishing/prototype/metis-backend/src/components/assets/assets.api.js',
     statementMap: {
       '0': {
         start: {
@@ -107,7 +107,7 @@ var cov_yzrnj60pb = function () {
   coverageData.hash = hash;
   return coverage[path] = coverageData;
 }(); /**
-      * Plurishing-backend
+      * Metis-backend
       * =======
       * Asset api
       */
@@ -120,20 +120,20 @@ var _assets = require('./assets.controller');
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var router = (cov_yzrnj60pb.s[0]++, new _express2.default.Router());
+var router = (cov_tnxaix1zt.s[0]++, new _express2.default.Router());
 
-cov_yzrnj60pb.s[1]++;
+cov_tnxaix1zt.s[1]++;
 router.get('/', _assets.getAssets);
-cov_yzrnj60pb.s[2]++;
+cov_tnxaix1zt.s[2]++;
 router.get('/:id', _assets.getAsset);
-cov_yzrnj60pb.s[3]++;
+cov_tnxaix1zt.s[3]++;
 router.get('/:id/:filename', _assets.getAssetAttachment);
 
-cov_yzrnj60pb.s[4]++;
+cov_tnxaix1zt.s[4]++;
 router.post('/:id', _assets.createAsset);
-cov_yzrnj60pb.s[5]++;
+cov_tnxaix1zt.s[5]++;
 router.put('/:id', _assets.updateAsset);
-cov_yzrnj60pb.s[6]++;
+cov_tnxaix1zt.s[6]++;
 router.delete('/:id', _assets.deleteAsset);
 
 exports.default = router;

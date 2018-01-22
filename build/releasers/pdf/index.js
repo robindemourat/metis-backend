@@ -8,13 +8,13 @@ var _promise = require('babel-runtime/core-js/promise');
 
 var _promise2 = _interopRequireDefault(_promise);
 
-var cov_2kf36xu05y = function () {
-  var path = '/Users/rawbin/Documents/Projets/collaborations/ensad-publishing/prototype/plurishing-backend/src/releasers/pdf/index.js',
-      hash = '71a1a95203fcb4678f15cc157882ca5a70a4dcbe',
+var cov_2aw47nrw3o = function () {
+  var path = '/Users/rawbin/Documents/Projets/collaborations/ensad-publishing/prototype/metis-backend/src/releasers/pdf/index.js',
+      hash = 'cf646c79bf6014728523215097676bbed6e3c806',
       global = new Function('return this')(),
       gcv = '__coverage__',
       coverageData = {
-    path: '/Users/rawbin/Documents/Projets/collaborations/ensad-publishing/prototype/plurishing-backend/src/releasers/pdf/index.js',
+    path: '/Users/rawbin/Documents/Projets/collaborations/ensad-publishing/prototype/metis-backend/src/releasers/pdf/index.js',
     statementMap: {
       '0': {
         start: {
@@ -33,7 +33,7 @@ var cov_2kf36xu05y = function () {
         },
         end: {
           line: 21,
-          column: 119
+          column: 114
         }
       },
       '2': {
@@ -321,7 +321,7 @@ var _fsExtra = require('fs-extra');
 
 var _fs = require('fs');
 
-var _PreviewContainer = require('plurishing-shared/dist/components/previews/StaticMontagePreview/PreviewContainer');
+var _PreviewContainer = require('metis-shared/dist/components/previews/StaticMontagePreview/PreviewContainer');
 
 var _PreviewContainer2 = _interopRequireDefault(_PreviewContainer);
 
@@ -335,36 +335,36 @@ var _deliverables = require('../../components/deliverables');
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var tempDirPath = (cov_2kf36xu05y.s[0]++, (0, _path.resolve)(__dirname + '/../../../temp'));
-var styles = (cov_2kf36xu05y.s[1]++, (0, _fs.readFileSync)((0, _path.resolve)(__dirname + '/../../../node_modules/plurishing-shared/dist/style.css'), 'utf8'));
+var tempDirPath = (cov_2aw47nrw3o.s[0]++, (0, _path.resolve)(__dirname + '/../../../temp'));
+var styles = (cov_2aw47nrw3o.s[1]++, (0, _fs.readFileSync)((0, _path.resolve)(__dirname + '/../../../node_modules/metis-shared/dist/style.css'), 'utf8'));
 
 function publish(data, diffusion) {
-  cov_2kf36xu05y.f[0]++;
-  cov_2kf36xu05y.s[2]++;
+  cov_2aw47nrw3o.f[0]++;
+  cov_2aw47nrw3o.s[2]++;
 
   return new _promise2.default(function (resolve, reject) {
-    cov_2kf36xu05y.f[1]++;
+    cov_2aw47nrw3o.f[1]++;
 
 
     var deliverable = void 0;
     var getAssetUri = void 0;
 
-    cov_2kf36xu05y.s[3]++;
+    cov_2aw47nrw3o.s[3]++;
     (0, _data.mountLocalAssets)(data.assets).then(function (fn) {
-      cov_2kf36xu05y.f[2]++;
-      cov_2kf36xu05y.s[4]++;
+      cov_2aw47nrw3o.f[2]++;
+      cov_2aw47nrw3o.s[4]++;
 
       getAssetUri = fn;
-      cov_2kf36xu05y.s[5]++;
+      cov_2aw47nrw3o.s[5]++;
       return (0, _data.fetchCitationData)();
     }).then(function (citationData) {
-      cov_2kf36xu05y.f[3]++;
+      cov_2aw47nrw3o.f[3]++;
 
-      var _ref = (cov_2kf36xu05y.s[6]++, citationData),
+      var _ref = (cov_2aw47nrw3o.s[6]++, citationData),
           citationStyle = _ref.citationStyle,
           citationLocale = _ref.citationLocale;
 
-      cov_2kf36xu05y.s[7]++;
+      cov_2aw47nrw3o.s[7]++;
 
       return (0, _pdf2.default)({
         Component: _PreviewContainer2.default,
@@ -376,8 +376,8 @@ function publish(data, diffusion) {
         getAssetUri: getAssetUri,
         styles: styles
       }, function (pdfPath) {
-        cov_2kf36xu05y.f[4]++;
-        cov_2kf36xu05y.s[8]++;
+        cov_2aw47nrw3o.f[4]++;
+        cov_2aw47nrw3o.s[8]++;
 
         deliverable = {
           type: 'deliverable',
@@ -390,10 +390,10 @@ function publish(data, diffusion) {
           filename: pdfPath.split('/').pop(),
           mimetype: 'application/pdf'
         };
-        cov_2kf36xu05y.s[9]++;
+        cov_2aw47nrw3o.s[9]++;
         return (0, _fsExtra.readFile)(pdfPath).then(function (deliverableData) {
-          cov_2kf36xu05y.f[5]++;
-          cov_2kf36xu05y.s[10]++;
+          cov_2aw47nrw3o.f[5]++;
+          cov_2aw47nrw3o.s[10]++;
 
           return _deliverables.dal.createDeliverable(deliverable, deliverableData);
         });

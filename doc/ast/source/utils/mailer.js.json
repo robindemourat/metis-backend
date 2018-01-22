@@ -1,7 +1,7 @@
 {
   "type": "File",
   "start": 0,
-  "end": 3616,
+  "end": 3611,
   "loc": {
     "start": {
       "line": 1,
@@ -15,7 +15,7 @@
   "program": {
     "type": "Program",
     "start": 0,
-    "end": 3616,
+    "end": 3611,
     "loc": {
       "start": {
         "line": 1,
@@ -30,8 +30,8 @@
     "body": [
       {
         "type": "ImportDeclaration",
-        "start": 57,
-        "end": 93,
+        "start": 52,
+        "end": 88,
         "loc": {
           "start": {
             "line": 6,
@@ -45,8 +45,8 @@
         "specifiers": [
           {
             "type": "ImportDefaultSpecifier",
-            "start": 64,
-            "end": 74,
+            "start": 59,
+            "end": 69,
             "loc": {
               "start": {
                 "line": 6,
@@ -59,8 +59,8 @@
             },
             "local": {
               "type": "Identifier",
-              "start": 64,
-              "end": 74,
+              "start": 59,
+              "end": 69,
               "loc": {
                 "start": {
                   "line": 6,
@@ -80,8 +80,8 @@
         ],
         "source": {
           "type": "StringLiteral",
-          "start": 80,
-          "end": 92,
+          "start": 75,
+          "end": 87,
           "loc": {
             "start": {
               "line": 6,
@@ -101,9 +101,9 @@
         "leadingComments": [
           {
             "type": "CommentBlock",
-            "value": "*\n * Plurishing-backend\n * =======\n * Mailer utils\n ",
+            "value": "*\n * Metis-backend\n * =======\n * Mailer utils\n ",
             "start": 0,
-            "end": 56,
+            "end": 51,
             "loc": {
               "start": {
                 "line": 1,
@@ -120,8 +120,8 @@
           {
             "type": "CommentBlock",
             "value": "*\n * Sends an email\n * @param {object} data - the data of the email\n * @param {object} config - the config to use\n ",
-            "start": 95,
-            "end": 214,
+            "start": 90,
+            "end": 209,
             "loc": {
               "start": {
                 "line": 8,
@@ -137,8 +137,8 @@
       },
       {
         "type": "ExportDefaultDeclaration",
-        "start": 215,
-        "end": 1676,
+        "start": 210,
+        "end": 1671,
         "loc": {
           "start": {
             "line": 13,
@@ -151,8 +151,8 @@
         },
         "declaration": {
           "type": "FunctionDeclaration",
-          "start": 230,
-          "end": 1676,
+          "start": 225,
+          "end": 1671,
           "loc": {
             "start": {
               "line": 13,
@@ -165,8 +165,8 @@
           },
           "id": {
             "type": "Identifier",
-            "start": 239,
-            "end": 248,
+            "start": 234,
+            "end": 243,
             "loc": {
               "start": {
                 "line": 13,
@@ -187,8 +187,8 @@
           "params": [
             {
               "type": "ObjectPattern",
-              "start": 250,
-              "end": 369,
+              "start": 245,
+              "end": 364,
               "loc": {
                 "start": {
                   "line": 13,
@@ -202,8 +202,8 @@
               "properties": [
                 {
                   "type": "ObjectProperty",
-                  "start": 305,
-                  "end": 312,
+                  "start": 300,
+                  "end": 307,
                   "loc": {
                     "start": {
                       "line": 15,
@@ -219,8 +219,8 @@
                   "computed": false,
                   "key": {
                     "type": "Identifier",
-                    "start": 305,
-                    "end": 307,
+                    "start": 300,
+                    "end": 302,
                     "loc": {
                       "start": {
                         "line": 15,
@@ -237,8 +237,8 @@
                   },
                   "value": {
                     "type": "AssignmentPattern",
-                    "start": 305,
-                    "end": 312,
+                    "start": 300,
+                    "end": 307,
                     "loc": {
                       "start": {
                         "line": 15,
@@ -251,8 +251,8 @@
                     },
                     "left": {
                       "type": "Identifier",
-                      "start": 305,
-                      "end": 307,
+                      "start": 300,
+                      "end": 302,
                       "loc": {
                         "start": {
                           "line": 15,
@@ -268,8 +268,8 @@
                     },
                     "right": {
                       "type": "ArrayExpression",
-                      "start": 310,
-                      "end": 312,
+                      "start": 305,
+                      "end": 307,
                       "loc": {
                         "start": {
                           "line": 15,
@@ -288,8 +288,8 @@
                     {
                       "type": "CommentLine",
                       "value": " from = '\"Fred Foo 👻\" <foo@blurdybloop.com>',",
-                      "start": 254,
-                      "end": 302,
+                      "start": 249,
+                      "end": 297,
                       "loc": {
                         "start": {
                           "line": 14,
@@ -308,8 +308,8 @@
                 },
                 {
                   "type": "ObjectProperty",
-                  "start": 316,
-                  "end": 335,
+                  "start": 311,
+                  "end": 330,
                   "loc": {
                     "start": {
                       "line": 16,
@@ -325,8 +325,8 @@
                   "computed": false,
                   "key": {
                     "type": "Identifier",
-                    "start": 316,
-                    "end": 323,
+                    "start": 311,
+                    "end": 318,
                     "loc": {
                       "start": {
                         "line": 16,
@@ -342,8 +342,8 @@
                   },
                   "value": {
                     "type": "AssignmentPattern",
-                    "start": 316,
-                    "end": 335,
+                    "start": 311,
+                    "end": 330,
                     "loc": {
                       "start": {
                         "line": 16,
@@ -356,8 +356,8 @@
                     },
                     "left": {
                       "type": "Identifier",
-                      "start": 316,
-                      "end": 323,
+                      "start": 311,
+                      "end": 318,
                       "loc": {
                         "start": {
                           "line": 16,
@@ -373,8 +373,8 @@
                     },
                     "right": {
                       "type": "StringLiteral",
-                      "start": 326,
-                      "end": 335,
+                      "start": 321,
+                      "end": 330,
                       "loc": {
                         "start": {
                           "line": 16,
@@ -398,8 +398,8 @@
                 },
                 {
                   "type": "ObjectProperty",
-                  "start": 339,
-                  "end": 367,
+                  "start": 334,
+                  "end": 362,
                   "loc": {
                     "start": {
                       "line": 17,
@@ -415,8 +415,8 @@
                   "computed": false,
                   "key": {
                     "type": "Identifier",
-                    "start": 339,
-                    "end": 343,
+                    "start": 334,
+                    "end": 338,
                     "loc": {
                       "start": {
                         "line": 17,
@@ -432,8 +432,8 @@
                   },
                   "value": {
                     "type": "AssignmentPattern",
-                    "start": 339,
-                    "end": 367,
+                    "start": 334,
+                    "end": 362,
                     "loc": {
                       "start": {
                         "line": 17,
@@ -446,8 +446,8 @@
                     },
                     "left": {
                       "type": "Identifier",
-                      "start": 339,
-                      "end": 343,
+                      "start": 334,
+                      "end": 338,
                       "loc": {
                         "start": {
                           "line": 17,
@@ -463,8 +463,8 @@
                     },
                     "right": {
                       "type": "StringLiteral",
-                      "start": 346,
-                      "end": 367,
+                      "start": 341,
+                      "end": 362,
                       "loc": {
                         "start": {
                           "line": 17,
@@ -490,8 +490,8 @@
             },
             {
               "type": "ObjectPattern",
-              "start": 371,
-              "end": 417,
+              "start": 366,
+              "end": 412,
               "loc": {
                 "start": {
                   "line": 18,
@@ -505,8 +505,8 @@
               "properties": [
                 {
                   "type": "ObjectProperty",
-                  "start": 375,
-                  "end": 384,
+                  "start": 370,
+                  "end": 379,
                   "loc": {
                     "start": {
                       "line": 19,
@@ -522,8 +522,8 @@
                   "computed": false,
                   "key": {
                     "type": "Identifier",
-                    "start": 375,
-                    "end": 384,
+                    "start": 370,
+                    "end": 379,
                     "loc": {
                       "start": {
                         "line": 19,
@@ -539,8 +539,8 @@
                   },
                   "value": {
                     "type": "Identifier",
-                    "start": 375,
-                    "end": 384,
+                    "start": 370,
+                    "end": 379,
                     "loc": {
                       "start": {
                         "line": 19,
@@ -560,8 +560,8 @@
                 },
                 {
                   "type": "ObjectProperty",
-                  "start": 388,
-                  "end": 399,
+                  "start": 383,
+                  "end": 394,
                   "loc": {
                     "start": {
                       "line": 20,
@@ -577,8 +577,8 @@
                   "computed": false,
                   "key": {
                     "type": "Identifier",
-                    "start": 388,
-                    "end": 399,
+                    "start": 383,
+                    "end": 394,
                     "loc": {
                       "start": {
                         "line": 20,
@@ -594,8 +594,8 @@
                   },
                   "value": {
                     "type": "Identifier",
-                    "start": 388,
-                    "end": 399,
+                    "start": 383,
+                    "end": 394,
                     "loc": {
                       "start": {
                         "line": 20,
@@ -615,8 +615,8 @@
                 },
                 {
                   "type": "ObjectProperty",
-                  "start": 403,
-                  "end": 415,
+                  "start": 398,
+                  "end": 410,
                   "loc": {
                     "start": {
                       "line": 21,
@@ -632,8 +632,8 @@
                   "computed": false,
                   "key": {
                     "type": "Identifier",
-                    "start": 403,
-                    "end": 415,
+                    "start": 398,
+                    "end": 410,
                     "loc": {
                       "start": {
                         "line": 21,
@@ -649,8 +649,8 @@
                   },
                   "value": {
                     "type": "Identifier",
-                    "start": 403,
-                    "end": 415,
+                    "start": 398,
+                    "end": 410,
                     "loc": {
                       "start": {
                         "line": 21,
@@ -672,8 +672,8 @@
             },
             {
               "type": "Identifier",
-              "start": 419,
-              "end": 425,
+              "start": 414,
+              "end": 420,
               "loc": {
                 "start": {
                   "line": 22,
@@ -690,8 +690,8 @@
           ],
           "body": {
             "type": "BlockStatement",
-            "start": 427,
-            "end": 1676,
+            "start": 422,
+            "end": 1671,
             "loc": {
               "start": {
                 "line": 22,
@@ -705,8 +705,8 @@
             "body": [
               {
                 "type": "ReturnStatement",
-                "start": 431,
-                "end": 1674,
+                "start": 426,
+                "end": 1669,
                 "loc": {
                   "start": {
                     "line": 23,
@@ -719,8 +719,8 @@
                 },
                 "argument": {
                   "type": "NewExpression",
-                  "start": 438,
-                  "end": 1673,
+                  "start": 433,
+                  "end": 1668,
                   "loc": {
                     "start": {
                       "line": 23,
@@ -733,8 +733,8 @@
                   },
                   "callee": {
                     "type": "Identifier",
-                    "start": 442,
-                    "end": 449,
+                    "start": 437,
+                    "end": 444,
                     "loc": {
                       "start": {
                         "line": 23,
@@ -751,8 +751,8 @@
                   "arguments": [
                     {
                       "type": "ArrowFunctionExpression",
-                      "start": 450,
-                      "end": 1672,
+                      "start": 445,
+                      "end": 1667,
                       "loc": {
                         "start": {
                           "line": 23,
@@ -770,8 +770,8 @@
                       "params": [
                         {
                           "type": "Identifier",
-                          "start": 451,
-                          "end": 458,
+                          "start": 446,
+                          "end": 453,
                           "loc": {
                             "start": {
                               "line": 23,
@@ -787,8 +787,8 @@
                         },
                         {
                           "type": "Identifier",
-                          "start": 460,
-                          "end": 466,
+                          "start": 455,
+                          "end": 461,
                           "loc": {
                             "start": {
                               "line": 23,
@@ -805,8 +805,8 @@
                       ],
                       "body": {
                         "type": "BlockStatement",
-                        "start": 471,
-                        "end": 1672,
+                        "start": 466,
+                        "end": 1667,
                         "loc": {
                           "start": {
                             "line": 23,
@@ -820,8 +820,8 @@
                         "body": [
                           {
                             "type": "VariableDeclaration",
-                            "start": 552,
-                            "end": 568,
+                            "start": 547,
+                            "end": 563,
                             "loc": {
                               "start": {
                                 "line": 25,
@@ -835,8 +835,8 @@
                             "declarations": [
                               {
                                 "type": "VariableDeclarator",
-                                "start": 556,
-                                "end": 567,
+                                "start": 551,
+                                "end": 562,
                                 "loc": {
                                   "start": {
                                     "line": 25,
@@ -849,8 +849,8 @@
                                 },
                                 "id": {
                                   "type": "Identifier",
-                                  "start": 556,
-                                  "end": 567,
+                                  "start": 551,
+                                  "end": 562,
                                   "loc": {
                                     "start": {
                                       "line": 25,
@@ -874,8 +874,8 @@
                               {
                                 "type": "CommentLine",
                                 "value": " create reusable transporter object using the default SMTP transport",
-                                "start": 477,
-                                "end": 547,
+                                "start": 472,
+                                "end": 542,
                                 "loc": {
                                   "start": {
                                     "line": 24,
@@ -891,8 +891,8 @@
                           },
                           {
                             "type": "IfStatement",
-                            "start": 573,
-                            "end": 973,
+                            "start": 568,
+                            "end": 968,
                             "loc": {
                               "start": {
                                 "line": 26,
@@ -905,8 +905,8 @@
                             },
                             "test": {
                               "type": "BinaryExpression",
-                              "start": 577,
-                              "end": 600,
+                              "start": 572,
+                              "end": 595,
                               "loc": {
                                 "start": {
                                   "line": 26,
@@ -919,8 +919,8 @@
                               },
                               "left": {
                                 "type": "Identifier",
-                                "start": 577,
-                                "end": 588,
+                                "start": 572,
+                                "end": 583,
                                 "loc": {
                                   "start": {
                                     "line": 26,
@@ -937,8 +937,8 @@
                               "operator": "===",
                               "right": {
                                 "type": "StringLiteral",
-                                "start": 593,
-                                "end": 600,
+                                "start": 588,
+                                "end": 595,
                                 "loc": {
                                   "start": {
                                     "line": 26,
@@ -958,8 +958,8 @@
                             },
                             "consequent": {
                               "type": "BlockStatement",
-                              "start": 602,
-                              "end": 781,
+                              "start": 597,
+                              "end": 776,
                               "loc": {
                                 "start": {
                                   "line": 26,
@@ -973,8 +973,8 @@
                               "body": [
                                 {
                                   "type": "VariableDeclaration",
-                                  "start": 610,
-                                  "end": 721,
+                                  "start": 605,
+                                  "end": 716,
                                   "loc": {
                                     "start": {
                                       "line": 27,
@@ -988,8 +988,8 @@
                                   "declarations": [
                                     {
                                       "type": "VariableDeclarator",
-                                      "start": 616,
-                                      "end": 720,
+                                      "start": 611,
+                                      "end": 715,
                                       "loc": {
                                         "start": {
                                           "line": 27,
@@ -1002,8 +1002,8 @@
                                       },
                                       "id": {
                                         "type": "Identifier",
-                                        "start": 616,
-                                        "end": 620,
+                                        "start": 611,
+                                        "end": 615,
                                         "loc": {
                                           "start": {
                                             "line": 27,
@@ -1019,8 +1019,8 @@
                                       },
                                       "init": {
                                         "type": "TemplateLiteral",
-                                        "start": 623,
-                                        "end": 720,
+                                        "start": 618,
+                                        "end": 715,
                                         "loc": {
                                           "start": {
                                             "line": 27,
@@ -1034,8 +1034,8 @@
                                         "expressions": [
                                           {
                                             "type": "CallExpression",
-                                            "start": 634,
-                                            "end": 663,
+                                            "start": 629,
+                                            "end": 658,
                                             "loc": {
                                               "start": {
                                                 "line": 27,
@@ -1048,8 +1048,8 @@
                                             },
                                             "callee": {
                                               "type": "Identifier",
-                                              "start": 634,
-                                              "end": 652,
+                                              "start": 629,
+                                              "end": 647,
                                               "loc": {
                                                 "start": {
                                                   "line": 27,
@@ -1066,8 +1066,8 @@
                                             "arguments": [
                                               {
                                                 "type": "Identifier",
-                                                "start": 653,
-                                                "end": 662,
+                                                "start": 648,
+                                                "end": 657,
                                                 "loc": {
                                                   "start": {
                                                     "line": 27,
@@ -1085,8 +1085,8 @@
                                           },
                                           {
                                             "type": "CallExpression",
-                                            "start": 667,
-                                            "end": 699,
+                                            "start": 662,
+                                            "end": 694,
                                             "loc": {
                                               "start": {
                                                 "line": 27,
@@ -1099,8 +1099,8 @@
                                             },
                                             "callee": {
                                               "type": "Identifier",
-                                              "start": 667,
-                                              "end": 685,
+                                              "start": 662,
+                                              "end": 680,
                                               "loc": {
                                                 "start": {
                                                   "line": 27,
@@ -1117,8 +1117,8 @@
                                             "arguments": [
                                               {
                                                 "type": "Identifier",
-                                                "start": 686,
-                                                "end": 698,
+                                                "start": 681,
+                                                "end": 693,
                                                 "loc": {
                                                   "start": {
                                                     "line": 27,
@@ -1138,8 +1138,8 @@
                                         "quasis": [
                                           {
                                             "type": "TemplateElement",
-                                            "start": 624,
-                                            "end": 632,
+                                            "start": 619,
+                                            "end": 627,
                                             "loc": {
                                               "start": {
                                                 "line": 27,
@@ -1158,8 +1158,8 @@
                                           },
                                           {
                                             "type": "TemplateElement",
-                                            "start": 664,
-                                            "end": 665,
+                                            "start": 659,
+                                            "end": 660,
                                             "loc": {
                                               "start": {
                                                 "line": 27,
@@ -1178,8 +1178,8 @@
                                           },
                                           {
                                             "type": "TemplateElement",
-                                            "start": 700,
-                                            "end": 719,
+                                            "start": 695,
+                                            "end": 714,
                                             "loc": {
                                               "start": {
                                                 "line": 27,
@@ -1204,8 +1204,8 @@
                                 },
                                 {
                                   "type": "ExpressionStatement",
-                                  "start": 728,
-                                  "end": 775,
+                                  "start": 723,
+                                  "end": 770,
                                   "loc": {
                                     "start": {
                                       "line": 28,
@@ -1218,8 +1218,8 @@
                                   },
                                   "expression": {
                                     "type": "AssignmentExpression",
-                                    "start": 728,
-                                    "end": 774,
+                                    "start": 723,
+                                    "end": 769,
                                     "loc": {
                                       "start": {
                                         "line": 28,
@@ -1233,8 +1233,8 @@
                                     "operator": "=",
                                     "left": {
                                       "type": "Identifier",
-                                      "start": 728,
-                                      "end": 739,
+                                      "start": 723,
+                                      "end": 734,
                                       "loc": {
                                         "start": {
                                           "line": 28,
@@ -1250,8 +1250,8 @@
                                     },
                                     "right": {
                                       "type": "CallExpression",
-                                      "start": 742,
-                                      "end": 774,
+                                      "start": 737,
+                                      "end": 769,
                                       "loc": {
                                         "start": {
                                           "line": 28,
@@ -1264,8 +1264,8 @@
                                       },
                                       "callee": {
                                         "type": "MemberExpression",
-                                        "start": 742,
-                                        "end": 768,
+                                        "start": 737,
+                                        "end": 763,
                                         "loc": {
                                           "start": {
                                             "line": 28,
@@ -1278,8 +1278,8 @@
                                         },
                                         "object": {
                                           "type": "Identifier",
-                                          "start": 742,
-                                          "end": 752,
+                                          "start": 737,
+                                          "end": 747,
                                           "loc": {
                                             "start": {
                                               "line": 28,
@@ -1295,8 +1295,8 @@
                                         },
                                         "property": {
                                           "type": "Identifier",
-                                          "start": 753,
-                                          "end": 768,
+                                          "start": 748,
+                                          "end": 763,
                                           "loc": {
                                             "start": {
                                               "line": 28,
@@ -1315,8 +1315,8 @@
                                       "arguments": [
                                         {
                                           "type": "Identifier",
-                                          "start": 769,
-                                          "end": 773,
+                                          "start": 764,
+                                          "end": 768,
                                           "loc": {
                                             "start": {
                                               "line": 28,
@@ -1339,8 +1339,8 @@
                             },
                             "alternate": {
                               "type": "BlockStatement",
-                              "start": 787,
-                              "end": 973,
+                              "start": 782,
+                              "end": 968,
                               "loc": {
                                 "start": {
                                   "line": 29,
@@ -1354,8 +1354,8 @@
                               "body": [
                                 {
                                   "type": "ExpressionStatement",
-                                  "start": 795,
-                                  "end": 967,
+                                  "start": 790,
+                                  "end": 962,
                                   "loc": {
                                     "start": {
                                       "line": 30,
@@ -1368,8 +1368,8 @@
                                   },
                                   "expression": {
                                     "type": "AssignmentExpression",
-                                    "start": 795,
-                                    "end": 966,
+                                    "start": 790,
+                                    "end": 961,
                                     "loc": {
                                       "start": {
                                         "line": 30,
@@ -1383,8 +1383,8 @@
                                     "operator": "=",
                                     "left": {
                                       "type": "Identifier",
-                                      "start": 795,
-                                      "end": 806,
+                                      "start": 790,
+                                      "end": 801,
                                       "loc": {
                                         "start": {
                                           "line": 30,
@@ -1400,8 +1400,8 @@
                                     },
                                     "right": {
                                       "type": "CallExpression",
-                                      "start": 809,
-                                      "end": 966,
+                                      "start": 804,
+                                      "end": 961,
                                       "loc": {
                                         "start": {
                                           "line": 30,
@@ -1414,8 +1414,8 @@
                                       },
                                       "callee": {
                                         "type": "MemberExpression",
-                                        "start": 809,
-                                        "end": 835,
+                                        "start": 804,
+                                        "end": 830,
                                         "loc": {
                                           "start": {
                                             "line": 30,
@@ -1428,8 +1428,8 @@
                                         },
                                         "object": {
                                           "type": "Identifier",
-                                          "start": 809,
-                                          "end": 819,
+                                          "start": 804,
+                                          "end": 814,
                                           "loc": {
                                             "start": {
                                               "line": 30,
@@ -1445,8 +1445,8 @@
                                         },
                                         "property": {
                                           "type": "Identifier",
-                                          "start": 820,
-                                          "end": 835,
+                                          "start": 815,
+                                          "end": 830,
                                           "loc": {
                                             "start": {
                                               "line": 30,
@@ -1465,8 +1465,8 @@
                                       "arguments": [
                                         {
                                           "type": "StringLiteral",
-                                          "start": 836,
-                                          "end": 842,
+                                          "start": 831,
+                                          "end": 837,
                                           "loc": {
                                             "start": {
                                               "line": 30,
@@ -1485,8 +1485,8 @@
                                         },
                                         {
                                           "type": "ObjectExpression",
-                                          "start": 844,
-                                          "end": 965,
+                                          "start": 839,
+                                          "end": 960,
                                           "loc": {
                                             "start": {
                                               "line": 30,
@@ -1500,8 +1500,8 @@
                                           "properties": [
                                             {
                                               "type": "ObjectProperty",
-                                              "start": 854,
-                                              "end": 874,
+                                              "start": 849,
+                                              "end": 869,
                                               "loc": {
                                                 "start": {
                                                   "line": 31,
@@ -1517,8 +1517,8 @@
                                               "computed": false,
                                               "key": {
                                                 "type": "Identifier",
-                                                "start": 854,
-                                                "end": 861,
+                                                "start": 849,
+                                                "end": 856,
                                                 "loc": {
                                                   "start": {
                                                     "line": 31,
@@ -1534,8 +1534,8 @@
                                               },
                                               "value": {
                                                 "type": "Identifier",
-                                                "start": 863,
-                                                "end": 874,
+                                                "start": 858,
+                                                "end": 869,
                                                 "loc": {
                                                   "start": {
                                                     "line": 31,
@@ -1552,8 +1552,8 @@
                                             },
                                             {
                                               "type": "ObjectProperty",
-                                              "start": 884,
-                                              "end": 957,
+                                              "start": 879,
+                                              "end": 952,
                                               "loc": {
                                                 "start": {
                                                   "line": 32,
@@ -1569,8 +1569,8 @@
                                               "computed": false,
                                               "key": {
                                                 "type": "Identifier",
-                                                "start": 884,
-                                                "end": 888,
+                                                "start": 879,
+                                                "end": 883,
                                                 "loc": {
                                                   "start": {
                                                     "line": 32,
@@ -1586,8 +1586,8 @@
                                               },
                                               "value": {
                                                 "type": "ObjectExpression",
-                                                "start": 890,
-                                                "end": 957,
+                                                "start": 885,
+                                                "end": 952,
                                                 "loc": {
                                                   "start": {
                                                     "line": 32,
@@ -1601,8 +1601,8 @@
                                                 "properties": [
                                                   {
                                                     "type": "ObjectProperty",
-                                                    "start": 902,
-                                                    "end": 917,
+                                                    "start": 897,
+                                                    "end": 912,
                                                     "loc": {
                                                       "start": {
                                                         "line": 33,
@@ -1618,8 +1618,8 @@
                                                     "computed": false,
                                                     "key": {
                                                       "type": "Identifier",
-                                                      "start": 902,
-                                                      "end": 906,
+                                                      "start": 897,
+                                                      "end": 901,
                                                       "loc": {
                                                         "start": {
                                                           "line": 33,
@@ -1635,8 +1635,8 @@
                                                     },
                                                     "value": {
                                                       "type": "Identifier",
-                                                      "start": 908,
-                                                      "end": 917,
+                                                      "start": 903,
+                                                      "end": 912,
                                                       "loc": {
                                                         "start": {
                                                           "line": 33,
@@ -1653,8 +1653,8 @@
                                                   },
                                                   {
                                                     "type": "ObjectProperty",
-                                                    "start": 929,
-                                                    "end": 947,
+                                                    "start": 924,
+                                                    "end": 942,
                                                     "loc": {
                                                       "start": {
                                                         "line": 34,
@@ -1670,8 +1670,8 @@
                                                     "computed": false,
                                                     "key": {
                                                       "type": "Identifier",
-                                                      "start": 929,
-                                                      "end": 933,
+                                                      "start": 924,
+                                                      "end": 928,
                                                       "loc": {
                                                         "start": {
                                                           "line": 34,
@@ -1687,8 +1687,8 @@
                                                     },
                                                     "value": {
                                                       "type": "Identifier",
-                                                      "start": 935,
-                                                      "end": 947,
+                                                      "start": 930,
+                                                      "end": 942,
                                                       "loc": {
                                                         "start": {
                                                           "line": 34,
@@ -1720,8 +1720,8 @@
                               {
                                 "type": "CommentLine",
                                 "value": " setup email data",
-                                "start": 979,
-                                "end": 998,
+                                "start": 974,
+                                "end": 993,
                                 "loc": {
                                   "start": {
                                     "line": 39,
@@ -1737,8 +1737,8 @@
                           },
                           {
                             "type": "VariableDeclaration",
-                            "start": 1003,
-                            "end": 1171,
+                            "start": 998,
+                            "end": 1166,
                             "loc": {
                               "start": {
                                 "line": 40,
@@ -1752,8 +1752,8 @@
                             "declarations": [
                               {
                                 "type": "VariableDeclarator",
-                                "start": 1007,
-                                "end": 1170,
+                                "start": 1002,
+                                "end": 1165,
                                 "loc": {
                                   "start": {
                                     "line": 40,
@@ -1766,8 +1766,8 @@
                                 },
                                 "id": {
                                   "type": "Identifier",
-                                  "start": 1007,
-                                  "end": 1018,
+                                  "start": 1002,
+                                  "end": 1013,
                                   "loc": {
                                     "start": {
                                       "line": 40,
@@ -1784,8 +1784,8 @@
                                 },
                                 "init": {
                                   "type": "ObjectExpression",
-                                  "start": 1021,
-                                  "end": 1170,
+                                  "start": 1016,
+                                  "end": 1165,
                                   "loc": {
                                     "start": {
                                       "line": 40,
@@ -1799,8 +1799,8 @@
                                   "properties": [
                                     {
                                       "type": "ObjectProperty",
-                                      "start": 1029,
-                                      "end": 1044,
+                                      "start": 1024,
+                                      "end": 1039,
                                       "loc": {
                                         "start": {
                                           "line": 41,
@@ -1816,8 +1816,8 @@
                                       "computed": false,
                                       "key": {
                                         "type": "Identifier",
-                                        "start": 1029,
-                                        "end": 1033,
+                                        "start": 1024,
+                                        "end": 1028,
                                         "loc": {
                                           "start": {
                                             "line": 41,
@@ -1833,8 +1833,8 @@
                                       },
                                       "value": {
                                         "type": "Identifier",
-                                        "start": 1035,
-                                        "end": 1044,
+                                        "start": 1030,
+                                        "end": 1039,
                                         "loc": {
                                           "start": {
                                             "line": 41,
@@ -1851,8 +1851,8 @@
                                     },
                                     {
                                       "type": "ObjectProperty",
-                                      "start": 1070,
-                                      "end": 1087,
+                                      "start": 1065,
+                                      "end": 1082,
                                       "loc": {
                                         "start": {
                                           "line": 42,
@@ -1868,8 +1868,8 @@
                                       "computed": false,
                                       "key": {
                                         "type": "Identifier",
-                                        "start": 1070,
-                                        "end": 1072,
+                                        "start": 1065,
+                                        "end": 1067,
                                         "loc": {
                                           "start": {
                                             "line": 42,
@@ -1886,8 +1886,8 @@
                                       },
                                       "value": {
                                         "type": "CallExpression",
-                                        "start": 1074,
-                                        "end": 1087,
+                                        "start": 1069,
+                                        "end": 1082,
                                         "loc": {
                                           "start": {
                                             "line": 42,
@@ -1900,8 +1900,8 @@
                                         },
                                         "callee": {
                                           "type": "MemberExpression",
-                                          "start": 1074,
-                                          "end": 1081,
+                                          "start": 1069,
+                                          "end": 1076,
                                           "loc": {
                                             "start": {
                                               "line": 42,
@@ -1914,8 +1914,8 @@
                                           },
                                           "object": {
                                             "type": "Identifier",
-                                            "start": 1074,
-                                            "end": 1076,
+                                            "start": 1069,
+                                            "end": 1071,
                                             "loc": {
                                               "start": {
                                                 "line": 42,
@@ -1931,8 +1931,8 @@
                                           },
                                           "property": {
                                             "type": "Identifier",
-                                            "start": 1077,
-                                            "end": 1081,
+                                            "start": 1072,
+                                            "end": 1076,
                                             "loc": {
                                               "start": {
                                                 "line": 42,
@@ -1951,8 +1951,8 @@
                                         "arguments": [
                                           {
                                             "type": "StringLiteral",
-                                            "start": 1082,
-                                            "end": 1086,
+                                            "start": 1077,
+                                            "end": 1081,
                                             "loc": {
                                               "start": {
                                                 "line": 42,
@@ -1975,8 +1975,8 @@
                                         {
                                           "type": "CommentLine",
                                           "value": " sender address",
-                                          "start": 1046,
-                                          "end": 1063,
+                                          "start": 1041,
+                                          "end": 1058,
                                           "loc": {
                                             "start": {
                                               "line": 41,
@@ -1992,8 +1992,8 @@
                                     },
                                     {
                                       "type": "ObjectProperty",
-                                      "start": 1116,
-                                      "end": 1123,
+                                      "start": 1111,
+                                      "end": 1118,
                                       "loc": {
                                         "start": {
                                           "line": 43,
@@ -2009,8 +2009,8 @@
                                       "computed": false,
                                       "key": {
                                         "type": "Identifier",
-                                        "start": 1116,
-                                        "end": 1123,
+                                        "start": 1111,
+                                        "end": 1118,
                                         "loc": {
                                           "start": {
                                             "line": 43,
@@ -2027,8 +2027,8 @@
                                       },
                                       "value": {
                                         "type": "Identifier",
-                                        "start": 1116,
-                                        "end": 1123,
+                                        "start": 1111,
+                                        "end": 1118,
                                         "loc": {
                                           "start": {
                                             "line": 43,
@@ -2046,8 +2046,8 @@
                                         {
                                           "type": "CommentLine",
                                           "value": " list of receivers",
-                                          "start": 1089,
-                                          "end": 1109,
+                                          "start": 1084,
+                                          "end": 1104,
                                           "loc": {
                                             "start": {
                                               "line": 42,
@@ -2066,8 +2066,8 @@
                                     },
                                     {
                                       "type": "ObjectProperty",
-                                      "start": 1147,
-                                      "end": 1151,
+                                      "start": 1142,
+                                      "end": 1146,
                                       "loc": {
                                         "start": {
                                           "line": 44,
@@ -2083,8 +2083,8 @@
                                       "computed": false,
                                       "key": {
                                         "type": "Identifier",
-                                        "start": 1147,
-                                        "end": 1151,
+                                        "start": 1142,
+                                        "end": 1146,
                                         "loc": {
                                           "start": {
                                             "line": 44,
@@ -2102,8 +2102,8 @@
                                       },
                                       "value": {
                                         "type": "Identifier",
-                                        "start": 1147,
-                                        "end": 1151,
+                                        "start": 1142,
+                                        "end": 1146,
                                         "loc": {
                                           "start": {
                                             "line": 44,
@@ -2121,8 +2121,8 @@
                                         {
                                           "type": "CommentLine",
                                           "value": " Subject line",
-                                          "start": 1125,
-                                          "end": 1140,
+                                          "start": 1120,
+                                          "end": 1135,
                                           "loc": {
                                             "start": {
                                               "line": 43,
@@ -2139,8 +2139,8 @@
                                         {
                                           "type": "CommentLine",
                                           "value": " html body",
-                                          "start": 1152,
-                                          "end": 1164,
+                                          "start": 1147,
+                                          "end": 1159,
                                           "loc": {
                                             "start": {
                                               "line": 44,
@@ -2167,8 +2167,8 @@
                               {
                                 "type": "CommentLine",
                                 "value": " setup email data",
-                                "start": 979,
-                                "end": 998,
+                                "start": 974,
+                                "end": 993,
                                 "loc": {
                                   "start": {
                                     "line": 39,
@@ -2185,8 +2185,8 @@
                               {
                                 "type": "CommentLine",
                                 "value": " send mail with defined transport object",
-                                "start": 1177,
-                                "end": 1219,
+                                "start": 1172,
+                                "end": 1214,
                                 "loc": {
                                   "start": {
                                     "line": 47,
@@ -2202,8 +2202,8 @@
                           },
                           {
                             "type": "ExpressionStatement",
-                            "start": 1224,
-                            "end": 1668,
+                            "start": 1219,
+                            "end": 1663,
                             "loc": {
                               "start": {
                                 "line": 48,
@@ -2216,8 +2216,8 @@
                             },
                             "expression": {
                               "type": "CallExpression",
-                              "start": 1224,
-                              "end": 1667,
+                              "start": 1219,
+                              "end": 1662,
                               "loc": {
                                 "start": {
                                   "line": 48,
@@ -2230,8 +2230,8 @@
                               },
                               "callee": {
                                 "type": "MemberExpression",
-                                "start": 1224,
-                                "end": 1244,
+                                "start": 1219,
+                                "end": 1239,
                                 "loc": {
                                   "start": {
                                     "line": 48,
@@ -2244,8 +2244,8 @@
                                 },
                                 "object": {
                                   "type": "Identifier",
-                                  "start": 1224,
-                                  "end": 1235,
+                                  "start": 1219,
+                                  "end": 1230,
                                   "loc": {
                                     "start": {
                                       "line": 48,
@@ -2262,8 +2262,8 @@
                                 },
                                 "property": {
                                   "type": "Identifier",
-                                  "start": 1236,
-                                  "end": 1244,
+                                  "start": 1231,
+                                  "end": 1239,
                                   "loc": {
                                     "start": {
                                       "line": 48,
@@ -2283,8 +2283,8 @@
                               "arguments": [
                                 {
                                   "type": "Identifier",
-                                  "start": 1245,
-                                  "end": 1256,
+                                  "start": 1240,
+                                  "end": 1251,
                                   "loc": {
                                     "start": {
                                       "line": 48,
@@ -2300,8 +2300,8 @@
                                 },
                                 {
                                   "type": "ArrowFunctionExpression",
-                                  "start": 1258,
-                                  "end": 1666,
+                                  "start": 1253,
+                                  "end": 1661,
                                   "loc": {
                                     "start": {
                                       "line": 48,
@@ -2319,8 +2319,8 @@
                                   "params": [
                                     {
                                       "type": "Identifier",
-                                      "start": 1259,
-                                      "end": 1264,
+                                      "start": 1254,
+                                      "end": 1259,
                                       "loc": {
                                         "start": {
                                           "line": 48,
@@ -2336,8 +2336,8 @@
                                     },
                                     {
                                       "type": "Identifier",
-                                      "start": 1266,
-                                      "end": 1270,
+                                      "start": 1261,
+                                      "end": 1265,
                                       "loc": {
                                         "start": {
                                           "line": 48,
@@ -2354,8 +2354,8 @@
                                   ],
                                   "body": {
                                     "type": "BlockStatement",
-                                    "start": 1275,
-                                    "end": 1666,
+                                    "start": 1270,
+                                    "end": 1661,
                                     "loc": {
                                       "start": {
                                         "line": 48,
@@ -2369,8 +2369,8 @@
                                     "body": [
                                       {
                                         "type": "IfStatement",
-                                        "start": 1283,
-                                        "end": 1362,
+                                        "start": 1278,
+                                        "end": 1357,
                                         "loc": {
                                           "start": {
                                             "line": 49,
@@ -2383,8 +2383,8 @@
                                         },
                                         "test": {
                                           "type": "Identifier",
-                                          "start": 1287,
-                                          "end": 1292,
+                                          "start": 1282,
+                                          "end": 1287,
                                           "loc": {
                                             "start": {
                                               "line": 49,
@@ -2400,8 +2400,8 @@
                                         },
                                         "consequent": {
                                           "type": "BlockStatement",
-                                          "start": 1294,
-                                          "end": 1362,
+                                          "start": 1289,
+                                          "end": 1357,
                                           "loc": {
                                             "start": {
                                               "line": 49,
@@ -2415,8 +2415,8 @@
                                           "body": [
                                             {
                                               "type": "ExpressionStatement",
-                                              "start": 1304,
-                                              "end": 1318,
+                                              "start": 1299,
+                                              "end": 1313,
                                               "loc": {
                                                 "start": {
                                                   "line": 50,
@@ -2429,8 +2429,8 @@
                                               },
                                               "expression": {
                                                 "type": "CallExpression",
-                                                "start": 1304,
-                                                "end": 1317,
+                                                "start": 1299,
+                                                "end": 1312,
                                                 "loc": {
                                                   "start": {
                                                     "line": 50,
@@ -2443,8 +2443,8 @@
                                                 },
                                                 "callee": {
                                                   "type": "Identifier",
-                                                  "start": 1304,
-                                                  "end": 1310,
+                                                  "start": 1299,
+                                                  "end": 1305,
                                                   "loc": {
                                                     "start": {
                                                       "line": 50,
@@ -2461,8 +2461,8 @@
                                                 "arguments": [
                                                   {
                                                     "type": "Identifier",
-                                                    "start": 1311,
-                                                    "end": 1316,
+                                                    "start": 1306,
+                                                    "end": 1311,
                                                     "loc": {
                                                       "start": {
                                                         "line": 50,
@@ -2481,8 +2481,8 @@
                                             },
                                             {
                                               "type": "ReturnStatement",
-                                              "start": 1327,
-                                              "end": 1354,
+                                              "start": 1322,
+                                              "end": 1349,
                                               "loc": {
                                                 "start": {
                                                   "line": 51,
@@ -2495,8 +2495,8 @@
                                               },
                                               "argument": {
                                                 "type": "CallExpression",
-                                                "start": 1334,
-                                                "end": 1353,
+                                                "start": 1329,
+                                                "end": 1348,
                                                 "loc": {
                                                   "start": {
                                                     "line": 51,
@@ -2509,8 +2509,8 @@
                                                 },
                                                 "callee": {
                                                   "type": "MemberExpression",
-                                                  "start": 1334,
-                                                  "end": 1346,
+                                                  "start": 1329,
+                                                  "end": 1341,
                                                   "loc": {
                                                     "start": {
                                                       "line": 51,
@@ -2523,8 +2523,8 @@
                                                   },
                                                   "object": {
                                                     "type": "Identifier",
-                                                    "start": 1334,
-                                                    "end": 1340,
+                                                    "start": 1329,
+                                                    "end": 1335,
                                                     "loc": {
                                                       "start": {
                                                         "line": 51,
@@ -2540,8 +2540,8 @@
                                                   },
                                                   "property": {
                                                     "type": "Identifier",
-                                                    "start": 1341,
-                                                    "end": 1346,
+                                                    "start": 1336,
+                                                    "end": 1341,
                                                     "loc": {
                                                       "start": {
                                                         "line": 51,
@@ -2560,8 +2560,8 @@
                                                 "arguments": [
                                                   {
                                                     "type": "Identifier",
-                                                    "start": 1347,
-                                                    "end": 1352,
+                                                    "start": 1342,
+                                                    "end": 1347,
                                                     "loc": {
                                                       "start": {
                                                         "line": 51,
@@ -2587,8 +2587,8 @@
                                           {
                                             "type": "CommentLine",
                                             "value": " logger.debug('Message sent: %s', info.messageId);",
-                                            "start": 1369,
-                                            "end": 1421,
+                                            "start": 1364,
+                                            "end": 1416,
                                             "loc": {
                                               "start": {
                                                 "line": 53,
@@ -2603,8 +2603,8 @@
                                           {
                                             "type": "CommentLine",
                                             "value": " Message sent: <b658f8ca-6296-ccf4-8306-87d57a0b4321@blurdybloop.com>",
-                                            "start": 1428,
-                                            "end": 1499,
+                                            "start": 1423,
+                                            "end": 1494,
                                             "loc": {
                                               "start": {
                                                 "line": 54,
@@ -2619,8 +2619,8 @@
                                           {
                                             "type": "CommentLine",
                                             "value": " Preview URL: https://ethereal.email/message/WaQKMgKddxQDoou...",
-                                            "start": 1506,
-                                            "end": 1571,
+                                            "start": 1501,
+                                            "end": 1566,
                                             "loc": {
                                               "start": {
                                                 "line": 55,
@@ -2635,8 +2635,8 @@
                                           {
                                             "type": "CommentLine",
                                             "value": " return resolve(nodemailer.getTestMessageUrl(info));",
-                                            "start": 1578,
-                                            "end": 1632,
+                                            "start": 1573,
+                                            "end": 1627,
                                             "loc": {
                                               "start": {
                                                 "line": 56,
@@ -2652,8 +2652,8 @@
                                       },
                                       {
                                         "type": "ReturnStatement",
-                                        "start": 1639,
-                                        "end": 1660,
+                                        "start": 1634,
+                                        "end": 1655,
                                         "loc": {
                                           "start": {
                                             "line": 57,
@@ -2666,8 +2666,8 @@
                                         },
                                         "argument": {
                                           "type": "CallExpression",
-                                          "start": 1646,
-                                          "end": 1659,
+                                          "start": 1641,
+                                          "end": 1654,
                                           "loc": {
                                             "start": {
                                               "line": 57,
@@ -2680,8 +2680,8 @@
                                           },
                                           "callee": {
                                             "type": "Identifier",
-                                            "start": 1646,
-                                            "end": 1653,
+                                            "start": 1641,
+                                            "end": 1648,
                                             "loc": {
                                               "start": {
                                                 "line": 57,
@@ -2699,8 +2699,8 @@
                                           "arguments": [
                                             {
                                               "type": "Identifier",
-                                              "start": 1654,
-                                              "end": 1658,
+                                              "start": 1649,
+                                              "end": 1653,
                                               "loc": {
                                                 "start": {
                                                   "line": 57,
@@ -2721,8 +2721,8 @@
                                           {
                                             "type": "CommentLine",
                                             "value": " logger.debug('Message sent: %s', info.messageId);",
-                                            "start": 1369,
-                                            "end": 1421,
+                                            "start": 1364,
+                                            "end": 1416,
                                             "loc": {
                                               "start": {
                                                 "line": 53,
@@ -2737,8 +2737,8 @@
                                           {
                                             "type": "CommentLine",
                                             "value": " Message sent: <b658f8ca-6296-ccf4-8306-87d57a0b4321@blurdybloop.com>",
-                                            "start": 1428,
-                                            "end": 1499,
+                                            "start": 1423,
+                                            "end": 1494,
                                             "loc": {
                                               "start": {
                                                 "line": 54,
@@ -2753,8 +2753,8 @@
                                           {
                                             "type": "CommentLine",
                                             "value": " Preview URL: https://ethereal.email/message/WaQKMgKddxQDoou...",
-                                            "start": 1506,
-                                            "end": 1571,
+                                            "start": 1501,
+                                            "end": 1566,
                                             "loc": {
                                               "start": {
                                                 "line": 55,
@@ -2769,8 +2769,8 @@
                                           {
                                             "type": "CommentLine",
                                             "value": " return resolve(nodemailer.getTestMessageUrl(info));",
-                                            "start": 1578,
-                                            "end": 1632,
+                                            "start": 1573,
+                                            "end": 1627,
                                             "loc": {
                                               "start": {
                                                 "line": 56,
@@ -2795,8 +2795,8 @@
                               {
                                 "type": "CommentLine",
                                 "value": " send mail with defined transport object",
-                                "start": 1177,
-                                "end": 1219,
+                                "start": 1172,
+                                "end": 1214,
                                 "loc": {
                                   "start": {
                                     "line": 47,
@@ -2825,8 +2825,8 @@
             {
               "type": "CommentBlock",
               "value": "*\n * Sends an email\n * @param {object} data - the data of the email\n * @param {object} config - the config to use\n ",
-              "start": 95,
-              "end": 214,
+              "start": 90,
+              "end": 209,
               "loc": {
                 "start": {
                   "line": 8,
@@ -2843,8 +2843,8 @@
             {
               "type": "CommentBlock",
               "value": "*\n * Simulate email sending with ethereal\n ",
-              "start": 1679,
-              "end": 1726,
+              "start": 1674,
+              "end": 1721,
               "loc": {
                 "start": {
                   "line": 63,
@@ -2859,8 +2859,8 @@
             {
               "type": "CommentLine",
               "value": " export function sendTestEmail ({",
-              "start": 1727,
-              "end": 1762,
+              "start": 1722,
+              "end": 1757,
               "loc": {
                 "start": {
                   "line": 66,
@@ -2875,8 +2875,8 @@
             {
               "type": "CommentLine",
               "value": "   from = '\"Fred Foo 👻\" <foo@blurdybloop.com>',",
-              "start": 1763,
-              "end": 1813,
+              "start": 1758,
+              "end": 1808,
               "loc": {
                 "start": {
                   "line": 67,
@@ -2891,8 +2891,8 @@
             {
               "type": "CommentLine",
               "value": "   to = [],",
-              "start": 1814,
-              "end": 1827,
+              "start": 1809,
+              "end": 1822,
               "loc": {
                 "start": {
                   "line": 68,
@@ -2907,8 +2907,8 @@
             {
               "type": "CommentLine",
               "value": "   subject = 'Hello ✔',",
-              "start": 1828,
-              "end": 1853,
+              "start": 1823,
+              "end": 1848,
               "loc": {
                 "start": {
                   "line": 69,
@@ -2923,8 +2923,8 @@
             {
               "type": "CommentLine",
               "value": "   html = '<b>Hello world?</b>'",
-              "start": 1854,
-              "end": 1887,
+              "start": 1849,
+              "end": 1882,
               "loc": {
                 "start": {
                   "line": 70,
@@ -2939,8 +2939,8 @@
             {
               "type": "CommentLine",
               "value": " }, {",
-              "start": 1888,
-              "end": 1895,
+              "start": 1883,
+              "end": 1890,
               "loc": {
                 "start": {
                   "line": 71,
@@ -2955,8 +2955,8 @@
             {
               "type": "CommentLine",
               "value": "   smtpHost = 'smtp.ethereal.email',",
-              "start": 1896,
-              "end": 1934,
+              "start": 1891,
+              "end": 1929,
               "loc": {
                 "start": {
                   "line": 72,
@@ -2971,8 +2971,8 @@
             {
               "type": "CommentLine",
               "value": "   smtpPort = 587",
-              "start": 1935,
-              "end": 1954,
+              "start": 1930,
+              "end": 1949,
               "loc": {
                 "start": {
                   "line": 73,
@@ -2987,8 +2987,8 @@
             {
               "type": "CommentLine",
               "value": "   // smtpEmail,",
-              "start": 1955,
-              "end": 1973,
+              "start": 1950,
+              "end": 1968,
               "loc": {
                 "start": {
                   "line": 74,
@@ -3003,8 +3003,8 @@
             {
               "type": "CommentLine",
               "value": "   // smtpService,",
-              "start": 1974,
-              "end": 1994,
+              "start": 1969,
+              "end": 1989,
               "loc": {
                 "start": {
                   "line": 75,
@@ -3019,8 +3019,8 @@
             {
               "type": "CommentLine",
               "value": "   // smtpPassword,",
-              "start": 1995,
-              "end": 2016,
+              "start": 1990,
+              "end": 2011,
               "loc": {
                 "start": {
                   "line": 76,
@@ -3035,8 +3035,8 @@
             {
               "type": "CommentLine",
               "value": " }, logger) {",
-              "start": 2017,
-              "end": 2032,
+              "start": 2012,
+              "end": 2027,
               "loc": {
                 "start": {
                   "line": 77,
@@ -3051,8 +3051,8 @@
             {
               "type": "CommentLine",
               "value": "   return new Promise((resolve, reject) => {",
-              "start": 2033,
-              "end": 2079,
+              "start": 2028,
+              "end": 2074,
               "loc": {
                 "start": {
                   "line": 78,
@@ -3067,8 +3067,8 @@
             {
               "type": "CommentLine",
               "value": "     // Generate test SMTP service account from ethereal.email",
-              "start": 2080,
-              "end": 2144,
+              "start": 2075,
+              "end": 2139,
               "loc": {
                 "start": {
                   "line": 79,
@@ -3083,8 +3083,8 @@
             {
               "type": "CommentLine",
               "value": "     // Only needed if you don't have a real mail account for testing",
-              "start": 2145,
-              "end": 2216,
+              "start": 2140,
+              "end": 2211,
               "loc": {
                 "start": {
                   "line": 80,
@@ -3099,8 +3099,8 @@
             {
               "type": "CommentLine",
               "value": "     nodemailer.createTestAccount((err, account) => {",
-              "start": 2217,
-              "end": 2272,
+              "start": 2212,
+              "end": 2267,
               "loc": {
                 "start": {
                   "line": 81,
@@ -3115,8 +3115,8 @@
             {
               "type": "CommentLine",
               "value": "       if (err) {",
-              "start": 2273,
-              "end": 2292,
+              "start": 2268,
+              "end": 2287,
               "loc": {
                 "start": {
                   "line": 82,
@@ -3131,8 +3131,8 @@
             {
               "type": "CommentLine",
               "value": "         return reject(err);",
-              "start": 2293,
-              "end": 2323,
+              "start": 2288,
+              "end": 2318,
               "loc": {
                 "start": {
                   "line": 83,
@@ -3147,8 +3147,8 @@
             {
               "type": "CommentLine",
               "value": "       }",
-              "start": 2324,
-              "end": 2334,
+              "start": 2319,
+              "end": 2329,
               "loc": {
                 "start": {
                   "line": 84,
@@ -3163,8 +3163,8 @@
             {
               "type": "CommentLine",
               "value": "       // create reusable transporter object using the default SMTP transport",
-              "start": 2335,
-              "end": 2414,
+              "start": 2330,
+              "end": 2409,
               "loc": {
                 "start": {
                   "line": 85,
@@ -3179,8 +3179,8 @@
             {
               "type": "CommentLine",
               "value": "       let transporter = nodemailer.createTransport({",
-              "start": 2415,
-              "end": 2470,
+              "start": 2410,
+              "end": 2465,
               "loc": {
                 "start": {
                   "line": 86,
@@ -3195,8 +3195,8 @@
             {
               "type": "CommentLine",
               "value": "         host: smtpHost,",
-              "start": 2471,
-              "end": 2497,
+              "start": 2466,
+              "end": 2492,
               "loc": {
                 "start": {
                   "line": 87,
@@ -3211,8 +3211,8 @@
             {
               "type": "CommentLine",
               "value": "         port: smtpPort,",
-              "start": 2498,
-              "end": 2524,
+              "start": 2493,
+              "end": 2519,
               "loc": {
                 "start": {
                   "line": 88,
@@ -3227,8 +3227,8 @@
             {
               "type": "CommentLine",
               "value": "         secure: false, // true for 465, false for other ports",
-              "start": 2525,
-              "end": 2589,
+              "start": 2520,
+              "end": 2584,
               "loc": {
                 "start": {
                   "line": 89,
@@ -3243,8 +3243,8 @@
             {
               "type": "CommentLine",
               "value": "         auth: {",
-              "start": 2590,
-              "end": 2608,
+              "start": 2585,
+              "end": 2603,
               "loc": {
                 "start": {
                   "line": 90,
@@ -3259,8 +3259,8 @@
             {
               "type": "CommentLine",
               "value": "           user: account.user, // generated ethereal user",
-              "start": 2609,
-              "end": 2668,
+              "start": 2604,
+              "end": 2663,
               "loc": {
                 "start": {
                   "line": 91,
@@ -3275,8 +3275,8 @@
             {
               "type": "CommentLine",
               "value": "           pass: account.pass // generated ethereal password",
-              "start": 2669,
-              "end": 2731,
+              "start": 2664,
+              "end": 2726,
               "loc": {
                 "start": {
                   "line": 92,
@@ -3291,8 +3291,8 @@
             {
               "type": "CommentLine",
               "value": "         }",
-              "start": 2732,
-              "end": 2744,
+              "start": 2727,
+              "end": 2739,
               "loc": {
                 "start": {
                   "line": 93,
@@ -3307,8 +3307,8 @@
             {
               "type": "CommentLine",
               "value": "       });",
-              "start": 2745,
-              "end": 2757,
+              "start": 2740,
+              "end": 2752,
               "loc": {
                 "start": {
                   "line": 94,
@@ -3323,8 +3323,8 @@
             {
               "type": "CommentLine",
               "value": "       // setup email data with unicode symbols",
-              "start": 2759,
-              "end": 2808,
+              "start": 2754,
+              "end": 2803,
               "loc": {
                 "start": {
                   "line": 96,
@@ -3339,8 +3339,8 @@
             {
               "type": "CommentLine",
               "value": "       let mailOptions = {",
-              "start": 2809,
-              "end": 2837,
+              "start": 2804,
+              "end": 2832,
               "loc": {
                 "start": {
                   "line": 97,
@@ -3355,8 +3355,8 @@
             {
               "type": "CommentLine",
               "value": "         from, // sender address",
-              "start": 2838,
-              "end": 2872,
+              "start": 2833,
+              "end": 2867,
               "loc": {
                 "start": {
                   "line": 98,
@@ -3371,8 +3371,8 @@
             {
               "type": "CommentLine",
               "value": "         to: to.join(', '), // list of receivers",
-              "start": 2873,
-              "end": 2923,
+              "start": 2868,
+              "end": 2918,
               "loc": {
                 "start": {
                   "line": 99,
@@ -3387,8 +3387,8 @@
             {
               "type": "CommentLine",
               "value": "         subject, // Subject line",
-              "start": 2924,
-              "end": 2959,
+              "start": 2919,
+              "end": 2954,
               "loc": {
                 "start": {
                   "line": 100,
@@ -3403,8 +3403,8 @@
             {
               "type": "CommentLine",
               "value": "         html // html body",
-              "start": 2960,
-              "end": 2988,
+              "start": 2955,
+              "end": 2983,
               "loc": {
                 "start": {
                   "line": 101,
@@ -3419,8 +3419,8 @@
             {
               "type": "CommentLine",
               "value": "       };",
-              "start": 2989,
-              "end": 3000,
+              "start": 2984,
+              "end": 2995,
               "loc": {
                 "start": {
                   "line": 102,
@@ -3435,8 +3435,8 @@
             {
               "type": "CommentLine",
               "value": "       // send mail with defined transport object",
-              "start": 3002,
-              "end": 3053,
+              "start": 2997,
+              "end": 3048,
               "loc": {
                 "start": {
                   "line": 104,
@@ -3451,8 +3451,8 @@
             {
               "type": "CommentLine",
               "value": "       transporter.sendMail(mailOptions, (error, info) => {",
-              "start": 3054,
-              "end": 3115,
+              "start": 3049,
+              "end": 3110,
               "loc": {
                 "start": {
                   "line": 105,
@@ -3467,8 +3467,8 @@
             {
               "type": "CommentLine",
               "value": "         if (error) {",
-              "start": 3116,
-              "end": 3139,
+              "start": 3111,
+              "end": 3134,
               "loc": {
                 "start": {
                   "line": 106,
@@ -3483,8 +3483,8 @@
             {
               "type": "CommentLine",
               "value": "           reject(error);",
-              "start": 3140,
-              "end": 3167,
+              "start": 3135,
+              "end": 3162,
               "loc": {
                 "start": {
                   "line": 107,
@@ -3499,8 +3499,8 @@
             {
               "type": "CommentLine",
               "value": "           return logger.error(error);",
-              "start": 3168,
-              "end": 3208,
+              "start": 3163,
+              "end": 3203,
               "loc": {
                 "start": {
                   "line": 108,
@@ -3515,8 +3515,8 @@
             {
               "type": "CommentLine",
               "value": "         }",
-              "start": 3209,
-              "end": 3221,
+              "start": 3204,
+              "end": 3216,
               "loc": {
                 "start": {
                   "line": 109,
@@ -3531,8 +3531,8 @@
             {
               "type": "CommentLine",
               "value": "         logger.debug('Message sent: %s', info.messageId);",
-              "start": 3222,
-              "end": 3282,
+              "start": 3217,
+              "end": 3277,
               "loc": {
                 "start": {
                   "line": 110,
@@ -3547,8 +3547,8 @@
             {
               "type": "CommentLine",
               "value": "         // Preview only available when sending through an Ethereal account",
-              "start": 3283,
-              "end": 3360,
+              "start": 3278,
+              "end": 3355,
               "loc": {
                 "start": {
                   "line": 111,
@@ -3563,8 +3563,8 @@
             {
               "type": "CommentLine",
               "value": "         // Message sent: <b658f8ca-6296-ccf4-8306-87d57a0b4321@blurdybloop.com>",
-              "start": 3362,
-              "end": 3444,
+              "start": 3357,
+              "end": 3439,
               "loc": {
                 "start": {
                   "line": 113,
@@ -3579,8 +3579,8 @@
             {
               "type": "CommentLine",
               "value": "         // Preview URL: https://ethereal.email/message/WaQKMgKddxQDoou...",
-              "start": 3445,
-              "end": 3521,
+              "start": 3440,
+              "end": 3516,
               "loc": {
                 "start": {
                   "line": 114,
@@ -3595,8 +3595,8 @@
             {
               "type": "CommentLine",
               "value": "         resolve(nodemailer.getTestMessageUrl(info));",
-              "start": 3522,
-              "end": 3577,
+              "start": 3517,
+              "end": 3572,
               "loc": {
                 "start": {
                   "line": 115,
@@ -3611,8 +3611,8 @@
             {
               "type": "CommentLine",
               "value": "       });",
-              "start": 3578,
-              "end": 3590,
+              "start": 3573,
+              "end": 3585,
               "loc": {
                 "start": {
                   "line": 116,
@@ -3627,8 +3627,8 @@
             {
               "type": "CommentLine",
               "value": "     });",
-              "start": 3591,
-              "end": 3601,
+              "start": 3586,
+              "end": 3596,
               "loc": {
                 "start": {
                   "line": 117,
@@ -3643,8 +3643,8 @@
             {
               "type": "CommentLine",
               "value": "   });",
-              "start": 3602,
-              "end": 3610,
+              "start": 3597,
+              "end": 3605,
               "loc": {
                 "start": {
                   "line": 118,
@@ -3659,8 +3659,8 @@
             {
               "type": "CommentLine",
               "value": " }",
-              "start": 3611,
-              "end": 3615,
+              "start": 3606,
+              "end": 3610,
               "loc": {
                 "start": {
                   "line": 119,
@@ -3678,8 +3678,8 @@
           {
             "type": "CommentBlock",
             "value": "*\n * Sends an email\n * @param {object} data - the data of the email\n * @param {object} config - the config to use\n ",
-            "start": 95,
-            "end": 214,
+            "start": 90,
+            "end": 209,
             "loc": {
               "start": {
                 "line": 8,
@@ -3696,8 +3696,8 @@
           {
             "type": "CommentBlock",
             "value": "*\n * Simulate email sending with ethereal\n ",
-            "start": 1679,
-            "end": 1726,
+            "start": 1674,
+            "end": 1721,
             "loc": {
               "start": {
                 "line": 63,
@@ -3712,8 +3712,8 @@
           {
             "type": "CommentLine",
             "value": " export function sendTestEmail ({",
-            "start": 1727,
-            "end": 1762,
+            "start": 1722,
+            "end": 1757,
             "loc": {
               "start": {
                 "line": 66,
@@ -3728,8 +3728,8 @@
           {
             "type": "CommentLine",
             "value": "   from = '\"Fred Foo 👻\" <foo@blurdybloop.com>',",
-            "start": 1763,
-            "end": 1813,
+            "start": 1758,
+            "end": 1808,
             "loc": {
               "start": {
                 "line": 67,
@@ -3744,8 +3744,8 @@
           {
             "type": "CommentLine",
             "value": "   to = [],",
-            "start": 1814,
-            "end": 1827,
+            "start": 1809,
+            "end": 1822,
             "loc": {
               "start": {
                 "line": 68,
@@ -3760,8 +3760,8 @@
           {
             "type": "CommentLine",
             "value": "   subject = 'Hello ✔',",
-            "start": 1828,
-            "end": 1853,
+            "start": 1823,
+            "end": 1848,
             "loc": {
               "start": {
                 "line": 69,
@@ -3776,8 +3776,8 @@
           {
             "type": "CommentLine",
             "value": "   html = '<b>Hello world?</b>'",
-            "start": 1854,
-            "end": 1887,
+            "start": 1849,
+            "end": 1882,
             "loc": {
               "start": {
                 "line": 70,
@@ -3792,8 +3792,8 @@
           {
             "type": "CommentLine",
             "value": " }, {",
-            "start": 1888,
-            "end": 1895,
+            "start": 1883,
+            "end": 1890,
             "loc": {
               "start": {
                 "line": 71,
@@ -3808,8 +3808,8 @@
           {
             "type": "CommentLine",
             "value": "   smtpHost = 'smtp.ethereal.email',",
-            "start": 1896,
-            "end": 1934,
+            "start": 1891,
+            "end": 1929,
             "loc": {
               "start": {
                 "line": 72,
@@ -3824,8 +3824,8 @@
           {
             "type": "CommentLine",
             "value": "   smtpPort = 587",
-            "start": 1935,
-            "end": 1954,
+            "start": 1930,
+            "end": 1949,
             "loc": {
               "start": {
                 "line": 73,
@@ -3840,8 +3840,8 @@
           {
             "type": "CommentLine",
             "value": "   // smtpEmail,",
-            "start": 1955,
-            "end": 1973,
+            "start": 1950,
+            "end": 1968,
             "loc": {
               "start": {
                 "line": 74,
@@ -3856,8 +3856,8 @@
           {
             "type": "CommentLine",
             "value": "   // smtpService,",
-            "start": 1974,
-            "end": 1994,
+            "start": 1969,
+            "end": 1989,
             "loc": {
               "start": {
                 "line": 75,
@@ -3872,8 +3872,8 @@
           {
             "type": "CommentLine",
             "value": "   // smtpPassword,",
-            "start": 1995,
-            "end": 2016,
+            "start": 1990,
+            "end": 2011,
             "loc": {
               "start": {
                 "line": 76,
@@ -3888,8 +3888,8 @@
           {
             "type": "CommentLine",
             "value": " }, logger) {",
-            "start": 2017,
-            "end": 2032,
+            "start": 2012,
+            "end": 2027,
             "loc": {
               "start": {
                 "line": 77,
@@ -3904,8 +3904,8 @@
           {
             "type": "CommentLine",
             "value": "   return new Promise((resolve, reject) => {",
-            "start": 2033,
-            "end": 2079,
+            "start": 2028,
+            "end": 2074,
             "loc": {
               "start": {
                 "line": 78,
@@ -3920,8 +3920,8 @@
           {
             "type": "CommentLine",
             "value": "     // Generate test SMTP service account from ethereal.email",
-            "start": 2080,
-            "end": 2144,
+            "start": 2075,
+            "end": 2139,
             "loc": {
               "start": {
                 "line": 79,
@@ -3936,8 +3936,8 @@
           {
             "type": "CommentLine",
             "value": "     // Only needed if you don't have a real mail account for testing",
-            "start": 2145,
-            "end": 2216,
+            "start": 2140,
+            "end": 2211,
             "loc": {
               "start": {
                 "line": 80,
@@ -3952,8 +3952,8 @@
           {
             "type": "CommentLine",
             "value": "     nodemailer.createTestAccount((err, account) => {",
-            "start": 2217,
-            "end": 2272,
+            "start": 2212,
+            "end": 2267,
             "loc": {
               "start": {
                 "line": 81,
@@ -3968,8 +3968,8 @@
           {
             "type": "CommentLine",
             "value": "       if (err) {",
-            "start": 2273,
-            "end": 2292,
+            "start": 2268,
+            "end": 2287,
             "loc": {
               "start": {
                 "line": 82,
@@ -3984,8 +3984,8 @@
           {
             "type": "CommentLine",
             "value": "         return reject(err);",
-            "start": 2293,
-            "end": 2323,
+            "start": 2288,
+            "end": 2318,
             "loc": {
               "start": {
                 "line": 83,
@@ -4000,8 +4000,8 @@
           {
             "type": "CommentLine",
             "value": "       }",
-            "start": 2324,
-            "end": 2334,
+            "start": 2319,
+            "end": 2329,
             "loc": {
               "start": {
                 "line": 84,
@@ -4016,8 +4016,8 @@
           {
             "type": "CommentLine",
             "value": "       // create reusable transporter object using the default SMTP transport",
-            "start": 2335,
-            "end": 2414,
+            "start": 2330,
+            "end": 2409,
             "loc": {
               "start": {
                 "line": 85,
@@ -4032,8 +4032,8 @@
           {
             "type": "CommentLine",
             "value": "       let transporter = nodemailer.createTransport({",
-            "start": 2415,
-            "end": 2470,
+            "start": 2410,
+            "end": 2465,
             "loc": {
               "start": {
                 "line": 86,
@@ -4048,8 +4048,8 @@
           {
             "type": "CommentLine",
             "value": "         host: smtpHost,",
-            "start": 2471,
-            "end": 2497,
+            "start": 2466,
+            "end": 2492,
             "loc": {
               "start": {
                 "line": 87,
@@ -4064,8 +4064,8 @@
           {
             "type": "CommentLine",
             "value": "         port: smtpPort,",
-            "start": 2498,
-            "end": 2524,
+            "start": 2493,
+            "end": 2519,
             "loc": {
               "start": {
                 "line": 88,
@@ -4080,8 +4080,8 @@
           {
             "type": "CommentLine",
             "value": "         secure: false, // true for 465, false for other ports",
-            "start": 2525,
-            "end": 2589,
+            "start": 2520,
+            "end": 2584,
             "loc": {
               "start": {
                 "line": 89,
@@ -4096,8 +4096,8 @@
           {
             "type": "CommentLine",
             "value": "         auth: {",
-            "start": 2590,
-            "end": 2608,
+            "start": 2585,
+            "end": 2603,
             "loc": {
               "start": {
                 "line": 90,
@@ -4112,8 +4112,8 @@
           {
             "type": "CommentLine",
             "value": "           user: account.user, // generated ethereal user",
-            "start": 2609,
-            "end": 2668,
+            "start": 2604,
+            "end": 2663,
             "loc": {
               "start": {
                 "line": 91,
@@ -4128,8 +4128,8 @@
           {
             "type": "CommentLine",
             "value": "           pass: account.pass // generated ethereal password",
-            "start": 2669,
-            "end": 2731,
+            "start": 2664,
+            "end": 2726,
             "loc": {
               "start": {
                 "line": 92,
@@ -4144,8 +4144,8 @@
           {
             "type": "CommentLine",
             "value": "         }",
-            "start": 2732,
-            "end": 2744,
+            "start": 2727,
+            "end": 2739,
             "loc": {
               "start": {
                 "line": 93,
@@ -4160,8 +4160,8 @@
           {
             "type": "CommentLine",
             "value": "       });",
-            "start": 2745,
-            "end": 2757,
+            "start": 2740,
+            "end": 2752,
             "loc": {
               "start": {
                 "line": 94,
@@ -4176,8 +4176,8 @@
           {
             "type": "CommentLine",
             "value": "       // setup email data with unicode symbols",
-            "start": 2759,
-            "end": 2808,
+            "start": 2754,
+            "end": 2803,
             "loc": {
               "start": {
                 "line": 96,
@@ -4192,8 +4192,8 @@
           {
             "type": "CommentLine",
             "value": "       let mailOptions = {",
-            "start": 2809,
-            "end": 2837,
+            "start": 2804,
+            "end": 2832,
             "loc": {
               "start": {
                 "line": 97,
@@ -4208,8 +4208,8 @@
           {
             "type": "CommentLine",
             "value": "         from, // sender address",
-            "start": 2838,
-            "end": 2872,
+            "start": 2833,
+            "end": 2867,
             "loc": {
               "start": {
                 "line": 98,
@@ -4224,8 +4224,8 @@
           {
             "type": "CommentLine",
             "value": "         to: to.join(', '), // list of receivers",
-            "start": 2873,
-            "end": 2923,
+            "start": 2868,
+            "end": 2918,
             "loc": {
               "start": {
                 "line": 99,
@@ -4240,8 +4240,8 @@
           {
             "type": "CommentLine",
             "value": "         subject, // Subject line",
-            "start": 2924,
-            "end": 2959,
+            "start": 2919,
+            "end": 2954,
             "loc": {
               "start": {
                 "line": 100,
@@ -4256,8 +4256,8 @@
           {
             "type": "CommentLine",
             "value": "         html // html body",
-            "start": 2960,
-            "end": 2988,
+            "start": 2955,
+            "end": 2983,
             "loc": {
               "start": {
                 "line": 101,
@@ -4272,8 +4272,8 @@
           {
             "type": "CommentLine",
             "value": "       };",
-            "start": 2989,
-            "end": 3000,
+            "start": 2984,
+            "end": 2995,
             "loc": {
               "start": {
                 "line": 102,
@@ -4288,8 +4288,8 @@
           {
             "type": "CommentLine",
             "value": "       // send mail with defined transport object",
-            "start": 3002,
-            "end": 3053,
+            "start": 2997,
+            "end": 3048,
             "loc": {
               "start": {
                 "line": 104,
@@ -4304,8 +4304,8 @@
           {
             "type": "CommentLine",
             "value": "       transporter.sendMail(mailOptions, (error, info) => {",
-            "start": 3054,
-            "end": 3115,
+            "start": 3049,
+            "end": 3110,
             "loc": {
               "start": {
                 "line": 105,
@@ -4320,8 +4320,8 @@
           {
             "type": "CommentLine",
             "value": "         if (error) {",
-            "start": 3116,
-            "end": 3139,
+            "start": 3111,
+            "end": 3134,
             "loc": {
               "start": {
                 "line": 106,
@@ -4336,8 +4336,8 @@
           {
             "type": "CommentLine",
             "value": "           reject(error);",
-            "start": 3140,
-            "end": 3167,
+            "start": 3135,
+            "end": 3162,
             "loc": {
               "start": {
                 "line": 107,
@@ -4352,8 +4352,8 @@
           {
             "type": "CommentLine",
             "value": "           return logger.error(error);",
-            "start": 3168,
-            "end": 3208,
+            "start": 3163,
+            "end": 3203,
             "loc": {
               "start": {
                 "line": 108,
@@ -4368,8 +4368,8 @@
           {
             "type": "CommentLine",
             "value": "         }",
-            "start": 3209,
-            "end": 3221,
+            "start": 3204,
+            "end": 3216,
             "loc": {
               "start": {
                 "line": 109,
@@ -4384,8 +4384,8 @@
           {
             "type": "CommentLine",
             "value": "         logger.debug('Message sent: %s', info.messageId);",
-            "start": 3222,
-            "end": 3282,
+            "start": 3217,
+            "end": 3277,
             "loc": {
               "start": {
                 "line": 110,
@@ -4400,8 +4400,8 @@
           {
             "type": "CommentLine",
             "value": "         // Preview only available when sending through an Ethereal account",
-            "start": 3283,
-            "end": 3360,
+            "start": 3278,
+            "end": 3355,
             "loc": {
               "start": {
                 "line": 111,
@@ -4416,8 +4416,8 @@
           {
             "type": "CommentLine",
             "value": "         // Message sent: <b658f8ca-6296-ccf4-8306-87d57a0b4321@blurdybloop.com>",
-            "start": 3362,
-            "end": 3444,
+            "start": 3357,
+            "end": 3439,
             "loc": {
               "start": {
                 "line": 113,
@@ -4432,8 +4432,8 @@
           {
             "type": "CommentLine",
             "value": "         // Preview URL: https://ethereal.email/message/WaQKMgKddxQDoou...",
-            "start": 3445,
-            "end": 3521,
+            "start": 3440,
+            "end": 3516,
             "loc": {
               "start": {
                 "line": 114,
@@ -4448,8 +4448,8 @@
           {
             "type": "CommentLine",
             "value": "         resolve(nodemailer.getTestMessageUrl(info));",
-            "start": 3522,
-            "end": 3577,
+            "start": 3517,
+            "end": 3572,
             "loc": {
               "start": {
                 "line": 115,
@@ -4464,8 +4464,8 @@
           {
             "type": "CommentLine",
             "value": "       });",
-            "start": 3578,
-            "end": 3590,
+            "start": 3573,
+            "end": 3585,
             "loc": {
               "start": {
                 "line": 116,
@@ -4480,8 +4480,8 @@
           {
             "type": "CommentLine",
             "value": "     });",
-            "start": 3591,
-            "end": 3601,
+            "start": 3586,
+            "end": 3596,
             "loc": {
               "start": {
                 "line": 117,
@@ -4496,8 +4496,8 @@
           {
             "type": "CommentLine",
             "value": "   });",
-            "start": 3602,
-            "end": 3610,
+            "start": 3597,
+            "end": 3605,
             "loc": {
               "start": {
                 "line": 118,
@@ -4512,8 +4512,8 @@
           {
             "type": "CommentLine",
             "value": " }",
-            "start": 3611,
-            "end": 3615,
+            "start": 3606,
+            "end": 3610,
             "loc": {
               "start": {
                 "line": 119,
@@ -4533,9 +4533,9 @@
   "comments": [
     {
       "type": "CommentBlock",
-      "value": "*\n * Plurishing-backend\n * =======\n * Mailer utils\n ",
+      "value": "*\n * Metis-backend\n * =======\n * Mailer utils\n ",
       "start": 0,
-      "end": 56,
+      "end": 51,
       "loc": {
         "start": {
           "line": 1,
@@ -4550,8 +4550,8 @@
     {
       "type": "CommentBlock",
       "value": "*\n * Sends an email\n * @param {object} data - the data of the email\n * @param {object} config - the config to use\n ",
-      "start": 95,
-      "end": 214,
+      "start": 90,
+      "end": 209,
       "loc": {
         "start": {
           "line": 8,
@@ -4566,8 +4566,8 @@
     {
       "type": "CommentLine",
       "value": " from = '\"Fred Foo 👻\" <foo@blurdybloop.com>',",
-      "start": 254,
-      "end": 302,
+      "start": 249,
+      "end": 297,
       "loc": {
         "start": {
           "line": 14,
@@ -4582,8 +4582,8 @@
     {
       "type": "CommentLine",
       "value": " create reusable transporter object using the default SMTP transport",
-      "start": 477,
-      "end": 547,
+      "start": 472,
+      "end": 542,
       "loc": {
         "start": {
           "line": 24,
@@ -4598,8 +4598,8 @@
     {
       "type": "CommentLine",
       "value": " setup email data",
-      "start": 979,
-      "end": 998,
+      "start": 974,
+      "end": 993,
       "loc": {
         "start": {
           "line": 39,
@@ -4614,8 +4614,8 @@
     {
       "type": "CommentLine",
       "value": " sender address",
-      "start": 1046,
-      "end": 1063,
+      "start": 1041,
+      "end": 1058,
       "loc": {
         "start": {
           "line": 41,
@@ -4630,8 +4630,8 @@
     {
       "type": "CommentLine",
       "value": " list of receivers",
-      "start": 1089,
-      "end": 1109,
+      "start": 1084,
+      "end": 1104,
       "loc": {
         "start": {
           "line": 42,
@@ -4646,8 +4646,8 @@
     {
       "type": "CommentLine",
       "value": " Subject line",
-      "start": 1125,
-      "end": 1140,
+      "start": 1120,
+      "end": 1135,
       "loc": {
         "start": {
           "line": 43,
@@ -4662,8 +4662,8 @@
     {
       "type": "CommentLine",
       "value": " html body",
-      "start": 1152,
-      "end": 1164,
+      "start": 1147,
+      "end": 1159,
       "loc": {
         "start": {
           "line": 44,
@@ -4678,8 +4678,8 @@
     {
       "type": "CommentLine",
       "value": " send mail with defined transport object",
-      "start": 1177,
-      "end": 1219,
+      "start": 1172,
+      "end": 1214,
       "loc": {
         "start": {
           "line": 47,
@@ -4694,8 +4694,8 @@
     {
       "type": "CommentLine",
       "value": " logger.debug('Message sent: %s', info.messageId);",
-      "start": 1369,
-      "end": 1421,
+      "start": 1364,
+      "end": 1416,
       "loc": {
         "start": {
           "line": 53,
@@ -4710,8 +4710,8 @@
     {
       "type": "CommentLine",
       "value": " Message sent: <b658f8ca-6296-ccf4-8306-87d57a0b4321@blurdybloop.com>",
-      "start": 1428,
-      "end": 1499,
+      "start": 1423,
+      "end": 1494,
       "loc": {
         "start": {
           "line": 54,
@@ -4726,8 +4726,8 @@
     {
       "type": "CommentLine",
       "value": " Preview URL: https://ethereal.email/message/WaQKMgKddxQDoou...",
-      "start": 1506,
-      "end": 1571,
+      "start": 1501,
+      "end": 1566,
       "loc": {
         "start": {
           "line": 55,
@@ -4742,8 +4742,8 @@
     {
       "type": "CommentLine",
       "value": " return resolve(nodemailer.getTestMessageUrl(info));",
-      "start": 1578,
-      "end": 1632,
+      "start": 1573,
+      "end": 1627,
       "loc": {
         "start": {
           "line": 56,
@@ -4758,8 +4758,8 @@
     {
       "type": "CommentBlock",
       "value": "*\n * Simulate email sending with ethereal\n ",
-      "start": 1679,
-      "end": 1726,
+      "start": 1674,
+      "end": 1721,
       "loc": {
         "start": {
           "line": 63,
@@ -4774,8 +4774,8 @@
     {
       "type": "CommentLine",
       "value": " export function sendTestEmail ({",
-      "start": 1727,
-      "end": 1762,
+      "start": 1722,
+      "end": 1757,
       "loc": {
         "start": {
           "line": 66,
@@ -4790,8 +4790,8 @@
     {
       "type": "CommentLine",
       "value": "   from = '\"Fred Foo 👻\" <foo@blurdybloop.com>',",
-      "start": 1763,
-      "end": 1813,
+      "start": 1758,
+      "end": 1808,
       "loc": {
         "start": {
           "line": 67,
@@ -4806,8 +4806,8 @@
     {
       "type": "CommentLine",
       "value": "   to = [],",
-      "start": 1814,
-      "end": 1827,
+      "start": 1809,
+      "end": 1822,
       "loc": {
         "start": {
           "line": 68,
@@ -4822,8 +4822,8 @@
     {
       "type": "CommentLine",
       "value": "   subject = 'Hello ✔',",
-      "start": 1828,
-      "end": 1853,
+      "start": 1823,
+      "end": 1848,
       "loc": {
         "start": {
           "line": 69,
@@ -4838,8 +4838,8 @@
     {
       "type": "CommentLine",
       "value": "   html = '<b>Hello world?</b>'",
-      "start": 1854,
-      "end": 1887,
+      "start": 1849,
+      "end": 1882,
       "loc": {
         "start": {
           "line": 70,
@@ -4854,8 +4854,8 @@
     {
       "type": "CommentLine",
       "value": " }, {",
-      "start": 1888,
-      "end": 1895,
+      "start": 1883,
+      "end": 1890,
       "loc": {
         "start": {
           "line": 71,
@@ -4870,8 +4870,8 @@
     {
       "type": "CommentLine",
       "value": "   smtpHost = 'smtp.ethereal.email',",
-      "start": 1896,
-      "end": 1934,
+      "start": 1891,
+      "end": 1929,
       "loc": {
         "start": {
           "line": 72,
@@ -4886,8 +4886,8 @@
     {
       "type": "CommentLine",
       "value": "   smtpPort = 587",
-      "start": 1935,
-      "end": 1954,
+      "start": 1930,
+      "end": 1949,
       "loc": {
         "start": {
           "line": 73,
@@ -4902,8 +4902,8 @@
     {
       "type": "CommentLine",
       "value": "   // smtpEmail,",
-      "start": 1955,
-      "end": 1973,
+      "start": 1950,
+      "end": 1968,
       "loc": {
         "start": {
           "line": 74,
@@ -4918,8 +4918,8 @@
     {
       "type": "CommentLine",
       "value": "   // smtpService,",
-      "start": 1974,
-      "end": 1994,
+      "start": 1969,
+      "end": 1989,
       "loc": {
         "start": {
           "line": 75,
@@ -4934,8 +4934,8 @@
     {
       "type": "CommentLine",
       "value": "   // smtpPassword,",
-      "start": 1995,
-      "end": 2016,
+      "start": 1990,
+      "end": 2011,
       "loc": {
         "start": {
           "line": 76,
@@ -4950,8 +4950,8 @@
     {
       "type": "CommentLine",
       "value": " }, logger) {",
-      "start": 2017,
-      "end": 2032,
+      "start": 2012,
+      "end": 2027,
       "loc": {
         "start": {
           "line": 77,
@@ -4966,8 +4966,8 @@
     {
       "type": "CommentLine",
       "value": "   return new Promise((resolve, reject) => {",
-      "start": 2033,
-      "end": 2079,
+      "start": 2028,
+      "end": 2074,
       "loc": {
         "start": {
           "line": 78,
@@ -4982,8 +4982,8 @@
     {
       "type": "CommentLine",
       "value": "     // Generate test SMTP service account from ethereal.email",
-      "start": 2080,
-      "end": 2144,
+      "start": 2075,
+      "end": 2139,
       "loc": {
         "start": {
           "line": 79,
@@ -4998,8 +4998,8 @@
     {
       "type": "CommentLine",
       "value": "     // Only needed if you don't have a real mail account for testing",
-      "start": 2145,
-      "end": 2216,
+      "start": 2140,
+      "end": 2211,
       "loc": {
         "start": {
           "line": 80,
@@ -5014,8 +5014,8 @@
     {
       "type": "CommentLine",
       "value": "     nodemailer.createTestAccount((err, account) => {",
-      "start": 2217,
-      "end": 2272,
+      "start": 2212,
+      "end": 2267,
       "loc": {
         "start": {
           "line": 81,
@@ -5030,8 +5030,8 @@
     {
       "type": "CommentLine",
       "value": "       if (err) {",
-      "start": 2273,
-      "end": 2292,
+      "start": 2268,
+      "end": 2287,
       "loc": {
         "start": {
           "line": 82,
@@ -5046,8 +5046,8 @@
     {
       "type": "CommentLine",
       "value": "         return reject(err);",
-      "start": 2293,
-      "end": 2323,
+      "start": 2288,
+      "end": 2318,
       "loc": {
         "start": {
           "line": 83,
@@ -5062,8 +5062,8 @@
     {
       "type": "CommentLine",
       "value": "       }",
-      "start": 2324,
-      "end": 2334,
+      "start": 2319,
+      "end": 2329,
       "loc": {
         "start": {
           "line": 84,
@@ -5078,8 +5078,8 @@
     {
       "type": "CommentLine",
       "value": "       // create reusable transporter object using the default SMTP transport",
-      "start": 2335,
-      "end": 2414,
+      "start": 2330,
+      "end": 2409,
       "loc": {
         "start": {
           "line": 85,
@@ -5094,8 +5094,8 @@
     {
       "type": "CommentLine",
       "value": "       let transporter = nodemailer.createTransport({",
-      "start": 2415,
-      "end": 2470,
+      "start": 2410,
+      "end": 2465,
       "loc": {
         "start": {
           "line": 86,
@@ -5110,8 +5110,8 @@
     {
       "type": "CommentLine",
       "value": "         host: smtpHost,",
-      "start": 2471,
-      "end": 2497,
+      "start": 2466,
+      "end": 2492,
       "loc": {
         "start": {
           "line": 87,
@@ -5126,8 +5126,8 @@
     {
       "type": "CommentLine",
       "value": "         port: smtpPort,",
-      "start": 2498,
-      "end": 2524,
+      "start": 2493,
+      "end": 2519,
       "loc": {
         "start": {
           "line": 88,
@@ -5142,8 +5142,8 @@
     {
       "type": "CommentLine",
       "value": "         secure: false, // true for 465, false for other ports",
-      "start": 2525,
-      "end": 2589,
+      "start": 2520,
+      "end": 2584,
       "loc": {
         "start": {
           "line": 89,
@@ -5158,8 +5158,8 @@
     {
       "type": "CommentLine",
       "value": "         auth: {",
-      "start": 2590,
-      "end": 2608,
+      "start": 2585,
+      "end": 2603,
       "loc": {
         "start": {
           "line": 90,
@@ -5174,8 +5174,8 @@
     {
       "type": "CommentLine",
       "value": "           user: account.user, // generated ethereal user",
-      "start": 2609,
-      "end": 2668,
+      "start": 2604,
+      "end": 2663,
       "loc": {
         "start": {
           "line": 91,
@@ -5190,8 +5190,8 @@
     {
       "type": "CommentLine",
       "value": "           pass: account.pass // generated ethereal password",
-      "start": 2669,
-      "end": 2731,
+      "start": 2664,
+      "end": 2726,
       "loc": {
         "start": {
           "line": 92,
@@ -5206,8 +5206,8 @@
     {
       "type": "CommentLine",
       "value": "         }",
-      "start": 2732,
-      "end": 2744,
+      "start": 2727,
+      "end": 2739,
       "loc": {
         "start": {
           "line": 93,
@@ -5222,8 +5222,8 @@
     {
       "type": "CommentLine",
       "value": "       });",
-      "start": 2745,
-      "end": 2757,
+      "start": 2740,
+      "end": 2752,
       "loc": {
         "start": {
           "line": 94,
@@ -5238,8 +5238,8 @@
     {
       "type": "CommentLine",
       "value": "       // setup email data with unicode symbols",
-      "start": 2759,
-      "end": 2808,
+      "start": 2754,
+      "end": 2803,
       "loc": {
         "start": {
           "line": 96,
@@ -5254,8 +5254,8 @@
     {
       "type": "CommentLine",
       "value": "       let mailOptions = {",
-      "start": 2809,
-      "end": 2837,
+      "start": 2804,
+      "end": 2832,
       "loc": {
         "start": {
           "line": 97,
@@ -5270,8 +5270,8 @@
     {
       "type": "CommentLine",
       "value": "         from, // sender address",
-      "start": 2838,
-      "end": 2872,
+      "start": 2833,
+      "end": 2867,
       "loc": {
         "start": {
           "line": 98,
@@ -5286,8 +5286,8 @@
     {
       "type": "CommentLine",
       "value": "         to: to.join(', '), // list of receivers",
-      "start": 2873,
-      "end": 2923,
+      "start": 2868,
+      "end": 2918,
       "loc": {
         "start": {
           "line": 99,
@@ -5302,8 +5302,8 @@
     {
       "type": "CommentLine",
       "value": "         subject, // Subject line",
-      "start": 2924,
-      "end": 2959,
+      "start": 2919,
+      "end": 2954,
       "loc": {
         "start": {
           "line": 100,
@@ -5318,8 +5318,8 @@
     {
       "type": "CommentLine",
       "value": "         html // html body",
-      "start": 2960,
-      "end": 2988,
+      "start": 2955,
+      "end": 2983,
       "loc": {
         "start": {
           "line": 101,
@@ -5334,8 +5334,8 @@
     {
       "type": "CommentLine",
       "value": "       };",
-      "start": 2989,
-      "end": 3000,
+      "start": 2984,
+      "end": 2995,
       "loc": {
         "start": {
           "line": 102,
@@ -5350,8 +5350,8 @@
     {
       "type": "CommentLine",
       "value": "       // send mail with defined transport object",
-      "start": 3002,
-      "end": 3053,
+      "start": 2997,
+      "end": 3048,
       "loc": {
         "start": {
           "line": 104,
@@ -5366,8 +5366,8 @@
     {
       "type": "CommentLine",
       "value": "       transporter.sendMail(mailOptions, (error, info) => {",
-      "start": 3054,
-      "end": 3115,
+      "start": 3049,
+      "end": 3110,
       "loc": {
         "start": {
           "line": 105,
@@ -5382,8 +5382,8 @@
     {
       "type": "CommentLine",
       "value": "         if (error) {",
-      "start": 3116,
-      "end": 3139,
+      "start": 3111,
+      "end": 3134,
       "loc": {
         "start": {
           "line": 106,
@@ -5398,8 +5398,8 @@
     {
       "type": "CommentLine",
       "value": "           reject(error);",
-      "start": 3140,
-      "end": 3167,
+      "start": 3135,
+      "end": 3162,
       "loc": {
         "start": {
           "line": 107,
@@ -5414,8 +5414,8 @@
     {
       "type": "CommentLine",
       "value": "           return logger.error(error);",
-      "start": 3168,
-      "end": 3208,
+      "start": 3163,
+      "end": 3203,
       "loc": {
         "start": {
           "line": 108,
@@ -5430,8 +5430,8 @@
     {
       "type": "CommentLine",
       "value": "         }",
-      "start": 3209,
-      "end": 3221,
+      "start": 3204,
+      "end": 3216,
       "loc": {
         "start": {
           "line": 109,
@@ -5446,8 +5446,8 @@
     {
       "type": "CommentLine",
       "value": "         logger.debug('Message sent: %s', info.messageId);",
-      "start": 3222,
-      "end": 3282,
+      "start": 3217,
+      "end": 3277,
       "loc": {
         "start": {
           "line": 110,
@@ -5462,8 +5462,8 @@
     {
       "type": "CommentLine",
       "value": "         // Preview only available when sending through an Ethereal account",
-      "start": 3283,
-      "end": 3360,
+      "start": 3278,
+      "end": 3355,
       "loc": {
         "start": {
           "line": 111,
@@ -5478,8 +5478,8 @@
     {
       "type": "CommentLine",
       "value": "         // Message sent: <b658f8ca-6296-ccf4-8306-87d57a0b4321@blurdybloop.com>",
-      "start": 3362,
-      "end": 3444,
+      "start": 3357,
+      "end": 3439,
       "loc": {
         "start": {
           "line": 113,
@@ -5494,8 +5494,8 @@
     {
       "type": "CommentLine",
       "value": "         // Preview URL: https://ethereal.email/message/WaQKMgKddxQDoou...",
-      "start": 3445,
-      "end": 3521,
+      "start": 3440,
+      "end": 3516,
       "loc": {
         "start": {
           "line": 114,
@@ -5510,8 +5510,8 @@
     {
       "type": "CommentLine",
       "value": "         resolve(nodemailer.getTestMessageUrl(info));",
-      "start": 3522,
-      "end": 3577,
+      "start": 3517,
+      "end": 3572,
       "loc": {
         "start": {
           "line": 115,
@@ -5526,8 +5526,8 @@
     {
       "type": "CommentLine",
       "value": "       });",
-      "start": 3578,
-      "end": 3590,
+      "start": 3573,
+      "end": 3585,
       "loc": {
         "start": {
           "line": 116,
@@ -5542,8 +5542,8 @@
     {
       "type": "CommentLine",
       "value": "     });",
-      "start": 3591,
-      "end": 3601,
+      "start": 3586,
+      "end": 3596,
       "loc": {
         "start": {
           "line": 117,
@@ -5558,8 +5558,8 @@
     {
       "type": "CommentLine",
       "value": "   });",
-      "start": 3602,
-      "end": 3610,
+      "start": 3597,
+      "end": 3605,
       "loc": {
         "start": {
           "line": 118,
@@ -5574,8 +5574,8 @@
     {
       "type": "CommentLine",
       "value": " }",
-      "start": 3611,
-      "end": 3615,
+      "start": 3606,
+      "end": 3610,
       "loc": {
         "start": {
           "line": 119,
@@ -5591,9 +5591,9 @@
   "tokens": [
     {
       "type": "CommentBlock",
-      "value": "*\n * Plurishing-backend\n * =======\n * Mailer utils\n ",
+      "value": "*\n * Metis-backend\n * =======\n * Mailer utils\n ",
       "start": 0,
-      "end": 56,
+      "end": 51,
       "loc": {
         "start": {
           "line": 1,
@@ -5620,8 +5620,8 @@
         "updateContext": null
       },
       "value": "import",
-      "start": 57,
-      "end": 63,
+      "start": 52,
+      "end": 58,
       "loc": {
         "start": {
           "line": 6,
@@ -5646,8 +5646,8 @@
         "binop": null
       },
       "value": "nodemailer",
-      "start": 64,
-      "end": 74,
+      "start": 59,
+      "end": 69,
       "loc": {
         "start": {
           "line": 6,
@@ -5672,8 +5672,8 @@
         "binop": null
       },
       "value": "from",
-      "start": 75,
-      "end": 79,
+      "start": 70,
+      "end": 74,
       "loc": {
         "start": {
           "line": 6,
@@ -5699,8 +5699,8 @@
         "updateContext": null
       },
       "value": "nodemailer",
-      "start": 80,
-      "end": 92,
+      "start": 75,
+      "end": 87,
       "loc": {
         "start": {
           "line": 6,
@@ -5725,8 +5725,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 92,
-      "end": 93,
+      "start": 87,
+      "end": 88,
       "loc": {
         "start": {
           "line": 6,
@@ -5741,8 +5741,8 @@
     {
       "type": "CommentBlock",
       "value": "*\n * Sends an email\n * @param {object} data - the data of the email\n * @param {object} config - the config to use\n ",
-      "start": 95,
-      "end": 214,
+      "start": 90,
+      "end": 209,
       "loc": {
         "start": {
           "line": 8,
@@ -5769,8 +5769,8 @@
         "updateContext": null
       },
       "value": "export",
-      "start": 215,
-      "end": 221,
+      "start": 210,
+      "end": 216,
       "loc": {
         "start": {
           "line": 13,
@@ -5797,8 +5797,8 @@
         "updateContext": null
       },
       "value": "default",
-      "start": 222,
-      "end": 229,
+      "start": 217,
+      "end": 224,
       "loc": {
         "start": {
           "line": 13,
@@ -5824,8 +5824,8 @@
         "binop": null
       },
       "value": "function",
-      "start": 230,
-      "end": 238,
+      "start": 225,
+      "end": 233,
       "loc": {
         "start": {
           "line": 13,
@@ -5850,8 +5850,8 @@
         "binop": null
       },
       "value": "sendEmail",
-      "start": 239,
-      "end": 248,
+      "start": 234,
+      "end": 243,
       "loc": {
         "start": {
           "line": 13,
@@ -5875,8 +5875,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 249,
-      "end": 250,
+      "start": 244,
+      "end": 245,
       "loc": {
         "start": {
           "line": 13,
@@ -5900,8 +5900,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 250,
-      "end": 251,
+      "start": 245,
+      "end": 246,
       "loc": {
         "start": {
           "line": 13,
@@ -5916,8 +5916,8 @@
     {
       "type": "CommentLine",
       "value": " from = '\"Fred Foo 👻\" <foo@blurdybloop.com>',",
-      "start": 254,
-      "end": 302,
+      "start": 249,
+      "end": 297,
       "loc": {
         "start": {
           "line": 14,
@@ -5942,8 +5942,8 @@
         "binop": null
       },
       "value": "to",
-      "start": 305,
-      "end": 307,
+      "start": 300,
+      "end": 302,
       "loc": {
         "start": {
           "line": 15,
@@ -5969,8 +5969,8 @@
         "updateContext": null
       },
       "value": "=",
-      "start": 308,
-      "end": 309,
+      "start": 303,
+      "end": 304,
       "loc": {
         "start": {
           "line": 15,
@@ -5995,8 +5995,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 310,
-      "end": 311,
+      "start": 305,
+      "end": 306,
       "loc": {
         "start": {
           "line": 15,
@@ -6021,8 +6021,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 311,
-      "end": 312,
+      "start": 306,
+      "end": 307,
       "loc": {
         "start": {
           "line": 15,
@@ -6047,8 +6047,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 312,
-      "end": 313,
+      "start": 307,
+      "end": 308,
       "loc": {
         "start": {
           "line": 15,
@@ -6073,8 +6073,8 @@
         "binop": null
       },
       "value": "subject",
-      "start": 316,
-      "end": 323,
+      "start": 311,
+      "end": 318,
       "loc": {
         "start": {
           "line": 16,
@@ -6100,8 +6100,8 @@
         "updateContext": null
       },
       "value": "=",
-      "start": 324,
-      "end": 325,
+      "start": 319,
+      "end": 320,
       "loc": {
         "start": {
           "line": 16,
@@ -6127,8 +6127,8 @@
         "updateContext": null
       },
       "value": "Hello ✔",
-      "start": 326,
-      "end": 335,
+      "start": 321,
+      "end": 330,
       "loc": {
         "start": {
           "line": 16,
@@ -6153,8 +6153,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 335,
-      "end": 336,
+      "start": 330,
+      "end": 331,
       "loc": {
         "start": {
           "line": 16,
@@ -6179,8 +6179,8 @@
         "binop": null
       },
       "value": "html",
-      "start": 339,
-      "end": 343,
+      "start": 334,
+      "end": 338,
       "loc": {
         "start": {
           "line": 17,
@@ -6206,8 +6206,8 @@
         "updateContext": null
       },
       "value": "=",
-      "start": 344,
-      "end": 345,
+      "start": 339,
+      "end": 340,
       "loc": {
         "start": {
           "line": 17,
@@ -6233,8 +6233,8 @@
         "updateContext": null
       },
       "value": "<b>Hello world?</b>",
-      "start": 346,
-      "end": 367,
+      "start": 341,
+      "end": 362,
       "loc": {
         "start": {
           "line": 17,
@@ -6258,8 +6258,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 368,
-      "end": 369,
+      "start": 363,
+      "end": 364,
       "loc": {
         "start": {
           "line": 18,
@@ -6284,8 +6284,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 369,
-      "end": 370,
+      "start": 364,
+      "end": 365,
       "loc": {
         "start": {
           "line": 18,
@@ -6309,8 +6309,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 371,
-      "end": 372,
+      "start": 366,
+      "end": 367,
       "loc": {
         "start": {
           "line": 18,
@@ -6335,8 +6335,8 @@
         "binop": null
       },
       "value": "smtpEmail",
-      "start": 375,
-      "end": 384,
+      "start": 370,
+      "end": 379,
       "loc": {
         "start": {
           "line": 19,
@@ -6361,8 +6361,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 384,
-      "end": 385,
+      "start": 379,
+      "end": 380,
       "loc": {
         "start": {
           "line": 19,
@@ -6387,8 +6387,8 @@
         "binop": null
       },
       "value": "smtpService",
-      "start": 388,
-      "end": 399,
+      "start": 383,
+      "end": 394,
       "loc": {
         "start": {
           "line": 20,
@@ -6413,8 +6413,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 399,
-      "end": 400,
+      "start": 394,
+      "end": 395,
       "loc": {
         "start": {
           "line": 20,
@@ -6439,8 +6439,8 @@
         "binop": null
       },
       "value": "smtpPassword",
-      "start": 403,
-      "end": 415,
+      "start": 398,
+      "end": 410,
       "loc": {
         "start": {
           "line": 21,
@@ -6464,8 +6464,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 416,
-      "end": 417,
+      "start": 411,
+      "end": 412,
       "loc": {
         "start": {
           "line": 22,
@@ -6490,8 +6490,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 417,
-      "end": 418,
+      "start": 412,
+      "end": 413,
       "loc": {
         "start": {
           "line": 22,
@@ -6516,8 +6516,8 @@
         "binop": null
       },
       "value": "logger",
-      "start": 419,
-      "end": 425,
+      "start": 414,
+      "end": 420,
       "loc": {
         "start": {
           "line": 22,
@@ -6541,8 +6541,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 425,
-      "end": 426,
+      "start": 420,
+      "end": 421,
       "loc": {
         "start": {
           "line": 22,
@@ -6566,8 +6566,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 427,
-      "end": 428,
+      "start": 422,
+      "end": 423,
       "loc": {
         "start": {
           "line": 22,
@@ -6594,8 +6594,8 @@
         "updateContext": null
       },
       "value": "return",
-      "start": 431,
-      "end": 437,
+      "start": 426,
+      "end": 432,
       "loc": {
         "start": {
           "line": 23,
@@ -6622,8 +6622,8 @@
         "updateContext": null
       },
       "value": "new",
-      "start": 438,
-      "end": 441,
+      "start": 433,
+      "end": 436,
       "loc": {
         "start": {
           "line": 23,
@@ -6648,8 +6648,8 @@
         "binop": null
       },
       "value": "Promise",
-      "start": 442,
-      "end": 449,
+      "start": 437,
+      "end": 444,
       "loc": {
         "start": {
           "line": 23,
@@ -6673,8 +6673,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 449,
-      "end": 450,
+      "start": 444,
+      "end": 445,
       "loc": {
         "start": {
           "line": 23,
@@ -6698,8 +6698,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 450,
-      "end": 451,
+      "start": 445,
+      "end": 446,
       "loc": {
         "start": {
           "line": 23,
@@ -6724,8 +6724,8 @@
         "binop": null
       },
       "value": "resolve",
-      "start": 451,
-      "end": 458,
+      "start": 446,
+      "end": 453,
       "loc": {
         "start": {
           "line": 23,
@@ -6750,8 +6750,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 458,
-      "end": 459,
+      "start": 453,
+      "end": 454,
       "loc": {
         "start": {
           "line": 23,
@@ -6776,8 +6776,8 @@
         "binop": null
       },
       "value": "reject",
-      "start": 460,
-      "end": 466,
+      "start": 455,
+      "end": 461,
       "loc": {
         "start": {
           "line": 23,
@@ -6801,8 +6801,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 466,
-      "end": 467,
+      "start": 461,
+      "end": 462,
       "loc": {
         "start": {
           "line": 23,
@@ -6827,8 +6827,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 468,
-      "end": 470,
+      "start": 463,
+      "end": 465,
       "loc": {
         "start": {
           "line": 23,
@@ -6852,8 +6852,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 471,
-      "end": 472,
+      "start": 466,
+      "end": 467,
       "loc": {
         "start": {
           "line": 23,
@@ -6868,8 +6868,8 @@
     {
       "type": "CommentLine",
       "value": " create reusable transporter object using the default SMTP transport",
-      "start": 477,
-      "end": 547,
+      "start": 472,
+      "end": 542,
       "loc": {
         "start": {
           "line": 24,
@@ -6896,8 +6896,8 @@
         "updateContext": null
       },
       "value": "let",
-      "start": 552,
-      "end": 555,
+      "start": 547,
+      "end": 550,
       "loc": {
         "start": {
           "line": 25,
@@ -6922,8 +6922,8 @@
         "binop": null
       },
       "value": "transporter",
-      "start": 556,
-      "end": 567,
+      "start": 551,
+      "end": 562,
       "loc": {
         "start": {
           "line": 25,
@@ -6948,8 +6948,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 567,
-      "end": 568,
+      "start": 562,
+      "end": 563,
       "loc": {
         "start": {
           "line": 25,
@@ -6976,8 +6976,8 @@
         "updateContext": null
       },
       "value": "if",
-      "start": 573,
-      "end": 575,
+      "start": 568,
+      "end": 570,
       "loc": {
         "start": {
           "line": 26,
@@ -7001,8 +7001,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 576,
-      "end": 577,
+      "start": 571,
+      "end": 572,
       "loc": {
         "start": {
           "line": 26,
@@ -7027,8 +7027,8 @@
         "binop": null
       },
       "value": "smtpService",
-      "start": 577,
-      "end": 588,
+      "start": 572,
+      "end": 583,
       "loc": {
         "start": {
           "line": 26,
@@ -7054,8 +7054,8 @@
         "updateContext": null
       },
       "value": "===",
-      "start": 589,
-      "end": 592,
+      "start": 584,
+      "end": 587,
       "loc": {
         "start": {
           "line": 26,
@@ -7081,8 +7081,8 @@
         "updateContext": null
       },
       "value": "Gmail",
-      "start": 593,
-      "end": 600,
+      "start": 588,
+      "end": 595,
       "loc": {
         "start": {
           "line": 26,
@@ -7106,8 +7106,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 600,
-      "end": 601,
+      "start": 595,
+      "end": 596,
       "loc": {
         "start": {
           "line": 26,
@@ -7131,8 +7131,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 602,
-      "end": 603,
+      "start": 597,
+      "end": 598,
       "loc": {
         "start": {
           "line": 26,
@@ -7159,8 +7159,8 @@
         "updateContext": null
       },
       "value": "const",
-      "start": 610,
-      "end": 615,
+      "start": 605,
+      "end": 610,
       "loc": {
         "start": {
           "line": 27,
@@ -7185,8 +7185,8 @@
         "binop": null
       },
       "value": "smtp",
-      "start": 616,
-      "end": 620,
+      "start": 611,
+      "end": 615,
       "loc": {
         "start": {
           "line": 27,
@@ -7212,8 +7212,8 @@
         "updateContext": null
       },
       "value": "=",
-      "start": 621,
-      "end": 622,
+      "start": 616,
+      "end": 617,
       "loc": {
         "start": {
           "line": 27,
@@ -7237,8 +7237,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 623,
-      "end": 624,
+      "start": 618,
+      "end": 619,
       "loc": {
         "start": {
           "line": 27,
@@ -7264,8 +7264,8 @@
         "updateContext": null
       },
       "value": "smtps://",
-      "start": 624,
-      "end": 632,
+      "start": 619,
+      "end": 627,
       "loc": {
         "start": {
           "line": 27,
@@ -7289,8 +7289,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 632,
-      "end": 634,
+      "start": 627,
+      "end": 629,
       "loc": {
         "start": {
           "line": 27,
@@ -7315,8 +7315,8 @@
         "binop": null
       },
       "value": "encodeURIComponent",
-      "start": 634,
-      "end": 652,
+      "start": 629,
+      "end": 647,
       "loc": {
         "start": {
           "line": 27,
@@ -7340,8 +7340,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 652,
-      "end": 653,
+      "start": 647,
+      "end": 648,
       "loc": {
         "start": {
           "line": 27,
@@ -7366,8 +7366,8 @@
         "binop": null
       },
       "value": "smtpEmail",
-      "start": 653,
-      "end": 662,
+      "start": 648,
+      "end": 657,
       "loc": {
         "start": {
           "line": 27,
@@ -7391,8 +7391,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 662,
-      "end": 663,
+      "start": 657,
+      "end": 658,
       "loc": {
         "start": {
           "line": 27,
@@ -7416,8 +7416,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 663,
-      "end": 664,
+      "start": 658,
+      "end": 659,
       "loc": {
         "start": {
           "line": 27,
@@ -7443,8 +7443,8 @@
         "updateContext": null
       },
       "value": ":",
-      "start": 664,
-      "end": 665,
+      "start": 659,
+      "end": 660,
       "loc": {
         "start": {
           "line": 27,
@@ -7468,8 +7468,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 665,
-      "end": 667,
+      "start": 660,
+      "end": 662,
       "loc": {
         "start": {
           "line": 27,
@@ -7494,8 +7494,8 @@
         "binop": null
       },
       "value": "encodeURIComponent",
-      "start": 667,
-      "end": 685,
+      "start": 662,
+      "end": 680,
       "loc": {
         "start": {
           "line": 27,
@@ -7519,8 +7519,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 685,
-      "end": 686,
+      "start": 680,
+      "end": 681,
       "loc": {
         "start": {
           "line": 27,
@@ -7545,8 +7545,8 @@
         "binop": null
       },
       "value": "smtpPassword",
-      "start": 686,
-      "end": 698,
+      "start": 681,
+      "end": 693,
       "loc": {
         "start": {
           "line": 27,
@@ -7570,8 +7570,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 698,
-      "end": 699,
+      "start": 693,
+      "end": 694,
       "loc": {
         "start": {
           "line": 27,
@@ -7595,8 +7595,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 699,
-      "end": 700,
+      "start": 694,
+      "end": 695,
       "loc": {
         "start": {
           "line": 27,
@@ -7622,8 +7622,8 @@
         "updateContext": null
       },
       "value": "@smtp.gmail.com:465",
-      "start": 700,
-      "end": 719,
+      "start": 695,
+      "end": 714,
       "loc": {
         "start": {
           "line": 27,
@@ -7647,8 +7647,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 719,
-      "end": 720,
+      "start": 714,
+      "end": 715,
       "loc": {
         "start": {
           "line": 27,
@@ -7673,8 +7673,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 720,
-      "end": 721,
+      "start": 715,
+      "end": 716,
       "loc": {
         "start": {
           "line": 27,
@@ -7699,8 +7699,8 @@
         "binop": null
       },
       "value": "transporter",
-      "start": 728,
-      "end": 739,
+      "start": 723,
+      "end": 734,
       "loc": {
         "start": {
           "line": 28,
@@ -7726,8 +7726,8 @@
         "updateContext": null
       },
       "value": "=",
-      "start": 740,
-      "end": 741,
+      "start": 735,
+      "end": 736,
       "loc": {
         "start": {
           "line": 28,
@@ -7752,8 +7752,8 @@
         "binop": null
       },
       "value": "nodemailer",
-      "start": 742,
-      "end": 752,
+      "start": 737,
+      "end": 747,
       "loc": {
         "start": {
           "line": 28,
@@ -7778,8 +7778,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 752,
-      "end": 753,
+      "start": 747,
+      "end": 748,
       "loc": {
         "start": {
           "line": 28,
@@ -7804,8 +7804,8 @@
         "binop": null
       },
       "value": "createTransport",
-      "start": 753,
-      "end": 768,
+      "start": 748,
+      "end": 763,
       "loc": {
         "start": {
           "line": 28,
@@ -7829,8 +7829,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 768,
-      "end": 769,
+      "start": 763,
+      "end": 764,
       "loc": {
         "start": {
           "line": 28,
@@ -7855,8 +7855,8 @@
         "binop": null
       },
       "value": "smtp",
-      "start": 769,
-      "end": 773,
+      "start": 764,
+      "end": 768,
       "loc": {
         "start": {
           "line": 28,
@@ -7880,8 +7880,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 773,
-      "end": 774,
+      "start": 768,
+      "end": 769,
       "loc": {
         "start": {
           "line": 28,
@@ -7906,8 +7906,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 774,
-      "end": 775,
+      "start": 769,
+      "end": 770,
       "loc": {
         "start": {
           "line": 28,
@@ -7931,8 +7931,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 780,
-      "end": 781,
+      "start": 775,
+      "end": 776,
       "loc": {
         "start": {
           "line": 29,
@@ -7959,8 +7959,8 @@
         "updateContext": null
       },
       "value": "else",
-      "start": 782,
-      "end": 786,
+      "start": 777,
+      "end": 781,
       "loc": {
         "start": {
           "line": 29,
@@ -7984,8 +7984,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 787,
-      "end": 788,
+      "start": 782,
+      "end": 783,
       "loc": {
         "start": {
           "line": 29,
@@ -8010,8 +8010,8 @@
         "binop": null
       },
       "value": "transporter",
-      "start": 795,
-      "end": 806,
+      "start": 790,
+      "end": 801,
       "loc": {
         "start": {
           "line": 30,
@@ -8037,8 +8037,8 @@
         "updateContext": null
       },
       "value": "=",
-      "start": 807,
-      "end": 808,
+      "start": 802,
+      "end": 803,
       "loc": {
         "start": {
           "line": 30,
@@ -8063,8 +8063,8 @@
         "binop": null
       },
       "value": "nodemailer",
-      "start": 809,
-      "end": 819,
+      "start": 804,
+      "end": 814,
       "loc": {
         "start": {
           "line": 30,
@@ -8089,8 +8089,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 819,
-      "end": 820,
+      "start": 814,
+      "end": 815,
       "loc": {
         "start": {
           "line": 30,
@@ -8115,8 +8115,8 @@
         "binop": null
       },
       "value": "createTransport",
-      "start": 820,
-      "end": 835,
+      "start": 815,
+      "end": 830,
       "loc": {
         "start": {
           "line": 30,
@@ -8140,8 +8140,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 835,
-      "end": 836,
+      "start": 830,
+      "end": 831,
       "loc": {
         "start": {
           "line": 30,
@@ -8167,8 +8167,8 @@
         "updateContext": null
       },
       "value": "SMTP",
-      "start": 836,
-      "end": 842,
+      "start": 831,
+      "end": 837,
       "loc": {
         "start": {
           "line": 30,
@@ -8193,8 +8193,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 842,
-      "end": 843,
+      "start": 837,
+      "end": 838,
       "loc": {
         "start": {
           "line": 30,
@@ -8218,8 +8218,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 844,
-      "end": 845,
+      "start": 839,
+      "end": 840,
       "loc": {
         "start": {
           "line": 30,
@@ -8244,8 +8244,8 @@
         "binop": null
       },
       "value": "service",
-      "start": 854,
-      "end": 861,
+      "start": 849,
+      "end": 856,
       "loc": {
         "start": {
           "line": 31,
@@ -8270,8 +8270,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 861,
-      "end": 862,
+      "start": 856,
+      "end": 857,
       "loc": {
         "start": {
           "line": 31,
@@ -8296,8 +8296,8 @@
         "binop": null
       },
       "value": "smtpService",
-      "start": 863,
-      "end": 874,
+      "start": 858,
+      "end": 869,
       "loc": {
         "start": {
           "line": 31,
@@ -8322,8 +8322,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 874,
-      "end": 875,
+      "start": 869,
+      "end": 870,
       "loc": {
         "start": {
           "line": 31,
@@ -8348,8 +8348,8 @@
         "binop": null
       },
       "value": "auth",
-      "start": 884,
-      "end": 888,
+      "start": 879,
+      "end": 883,
       "loc": {
         "start": {
           "line": 32,
@@ -8374,8 +8374,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 888,
-      "end": 889,
+      "start": 883,
+      "end": 884,
       "loc": {
         "start": {
           "line": 32,
@@ -8399,8 +8399,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 890,
-      "end": 891,
+      "start": 885,
+      "end": 886,
       "loc": {
         "start": {
           "line": 32,
@@ -8425,8 +8425,8 @@
         "binop": null
       },
       "value": "user",
-      "start": 902,
-      "end": 906,
+      "start": 897,
+      "end": 901,
       "loc": {
         "start": {
           "line": 33,
@@ -8451,8 +8451,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 906,
-      "end": 907,
+      "start": 901,
+      "end": 902,
       "loc": {
         "start": {
           "line": 33,
@@ -8477,8 +8477,8 @@
         "binop": null
       },
       "value": "smtpEmail",
-      "start": 908,
-      "end": 917,
+      "start": 903,
+      "end": 912,
       "loc": {
         "start": {
           "line": 33,
@@ -8503,8 +8503,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 917,
-      "end": 918,
+      "start": 912,
+      "end": 913,
       "loc": {
         "start": {
           "line": 33,
@@ -8529,8 +8529,8 @@
         "binop": null
       },
       "value": "pass",
-      "start": 929,
-      "end": 933,
+      "start": 924,
+      "end": 928,
       "loc": {
         "start": {
           "line": 34,
@@ -8555,8 +8555,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 933,
-      "end": 934,
+      "start": 928,
+      "end": 929,
       "loc": {
         "start": {
           "line": 34,
@@ -8581,8 +8581,8 @@
         "binop": null
       },
       "value": "smtpPassword",
-      "start": 935,
-      "end": 947,
+      "start": 930,
+      "end": 942,
       "loc": {
         "start": {
           "line": 34,
@@ -8606,8 +8606,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 956,
-      "end": 957,
+      "start": 951,
+      "end": 952,
       "loc": {
         "start": {
           "line": 35,
@@ -8631,8 +8631,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 964,
-      "end": 965,
+      "start": 959,
+      "end": 960,
       "loc": {
         "start": {
           "line": 36,
@@ -8656,8 +8656,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 965,
-      "end": 966,
+      "start": 960,
+      "end": 961,
       "loc": {
         "start": {
           "line": 36,
@@ -8682,8 +8682,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 966,
-      "end": 967,
+      "start": 961,
+      "end": 962,
       "loc": {
         "start": {
           "line": 36,
@@ -8707,8 +8707,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 972,
-      "end": 973,
+      "start": 967,
+      "end": 968,
       "loc": {
         "start": {
           "line": 37,
@@ -8723,8 +8723,8 @@
     {
       "type": "CommentLine",
       "value": " setup email data",
-      "start": 979,
-      "end": 998,
+      "start": 974,
+      "end": 993,
       "loc": {
         "start": {
           "line": 39,
@@ -8751,8 +8751,8 @@
         "updateContext": null
       },
       "value": "let",
-      "start": 1003,
-      "end": 1006,
+      "start": 998,
+      "end": 1001,
       "loc": {
         "start": {
           "line": 40,
@@ -8777,8 +8777,8 @@
         "binop": null
       },
       "value": "mailOptions",
-      "start": 1007,
-      "end": 1018,
+      "start": 1002,
+      "end": 1013,
       "loc": {
         "start": {
           "line": 40,
@@ -8804,8 +8804,8 @@
         "updateContext": null
       },
       "value": "=",
-      "start": 1019,
-      "end": 1020,
+      "start": 1014,
+      "end": 1015,
       "loc": {
         "start": {
           "line": 40,
@@ -8829,8 +8829,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 1021,
-      "end": 1022,
+      "start": 1016,
+      "end": 1017,
       "loc": {
         "start": {
           "line": 40,
@@ -8855,8 +8855,8 @@
         "binop": null
       },
       "value": "from",
-      "start": 1029,
-      "end": 1033,
+      "start": 1024,
+      "end": 1028,
       "loc": {
         "start": {
           "line": 41,
@@ -8881,8 +8881,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 1033,
-      "end": 1034,
+      "start": 1028,
+      "end": 1029,
       "loc": {
         "start": {
           "line": 41,
@@ -8907,8 +8907,8 @@
         "binop": null
       },
       "value": "smtpEmail",
-      "start": 1035,
-      "end": 1044,
+      "start": 1030,
+      "end": 1039,
       "loc": {
         "start": {
           "line": 41,
@@ -8933,8 +8933,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 1044,
-      "end": 1045,
+      "start": 1039,
+      "end": 1040,
       "loc": {
         "start": {
           "line": 41,
@@ -8949,8 +8949,8 @@
     {
       "type": "CommentLine",
       "value": " sender address",
-      "start": 1046,
-      "end": 1063,
+      "start": 1041,
+      "end": 1058,
       "loc": {
         "start": {
           "line": 41,
@@ -8975,8 +8975,8 @@
         "binop": null
       },
       "value": "to",
-      "start": 1070,
-      "end": 1072,
+      "start": 1065,
+      "end": 1067,
       "loc": {
         "start": {
           "line": 42,
@@ -9001,8 +9001,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 1072,
-      "end": 1073,
+      "start": 1067,
+      "end": 1068,
       "loc": {
         "start": {
           "line": 42,
@@ -9027,8 +9027,8 @@
         "binop": null
       },
       "value": "to",
-      "start": 1074,
-      "end": 1076,
+      "start": 1069,
+      "end": 1071,
       "loc": {
         "start": {
           "line": 42,
@@ -9053,8 +9053,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 1076,
-      "end": 1077,
+      "start": 1071,
+      "end": 1072,
       "loc": {
         "start": {
           "line": 42,
@@ -9079,8 +9079,8 @@
         "binop": null
       },
       "value": "join",
-      "start": 1077,
-      "end": 1081,
+      "start": 1072,
+      "end": 1076,
       "loc": {
         "start": {
           "line": 42,
@@ -9104,8 +9104,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 1081,
-      "end": 1082,
+      "start": 1076,
+      "end": 1077,
       "loc": {
         "start": {
           "line": 42,
@@ -9131,8 +9131,8 @@
         "updateContext": null
       },
       "value": ", ",
-      "start": 1082,
-      "end": 1086,
+      "start": 1077,
+      "end": 1081,
       "loc": {
         "start": {
           "line": 42,
@@ -9156,8 +9156,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 1086,
-      "end": 1087,
+      "start": 1081,
+      "end": 1082,
       "loc": {
         "start": {
           "line": 42,
@@ -9182,8 +9182,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 1087,
-      "end": 1088,
+      "start": 1082,
+      "end": 1083,
       "loc": {
         "start": {
           "line": 42,
@@ -9198,8 +9198,8 @@
     {
       "type": "CommentLine",
       "value": " list of receivers",
-      "start": 1089,
-      "end": 1109,
+      "start": 1084,
+      "end": 1104,
       "loc": {
         "start": {
           "line": 42,
@@ -9224,8 +9224,8 @@
         "binop": null
       },
       "value": "subject",
-      "start": 1116,
-      "end": 1123,
+      "start": 1111,
+      "end": 1118,
       "loc": {
         "start": {
           "line": 43,
@@ -9250,8 +9250,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 1123,
-      "end": 1124,
+      "start": 1118,
+      "end": 1119,
       "loc": {
         "start": {
           "line": 43,
@@ -9266,8 +9266,8 @@
     {
       "type": "CommentLine",
       "value": " Subject line",
-      "start": 1125,
-      "end": 1140,
+      "start": 1120,
+      "end": 1135,
       "loc": {
         "start": {
           "line": 43,
@@ -9292,8 +9292,8 @@
         "binop": null
       },
       "value": "html",
-      "start": 1147,
-      "end": 1151,
+      "start": 1142,
+      "end": 1146,
       "loc": {
         "start": {
           "line": 44,
@@ -9308,8 +9308,8 @@
     {
       "type": "CommentLine",
       "value": " html body",
-      "start": 1152,
-      "end": 1164,
+      "start": 1147,
+      "end": 1159,
       "loc": {
         "start": {
           "line": 44,
@@ -9333,8 +9333,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 1169,
-      "end": 1170,
+      "start": 1164,
+      "end": 1165,
       "loc": {
         "start": {
           "line": 45,
@@ -9359,8 +9359,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 1170,
-      "end": 1171,
+      "start": 1165,
+      "end": 1166,
       "loc": {
         "start": {
           "line": 45,
@@ -9375,8 +9375,8 @@
     {
       "type": "CommentLine",
       "value": " send mail with defined transport object",
-      "start": 1177,
-      "end": 1219,
+      "start": 1172,
+      "end": 1214,
       "loc": {
         "start": {
           "line": 47,
@@ -9401,8 +9401,8 @@
         "binop": null
       },
       "value": "transporter",
-      "start": 1224,
-      "end": 1235,
+      "start": 1219,
+      "end": 1230,
       "loc": {
         "start": {
           "line": 48,
@@ -9427,8 +9427,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 1235,
-      "end": 1236,
+      "start": 1230,
+      "end": 1231,
       "loc": {
         "start": {
           "line": 48,
@@ -9453,8 +9453,8 @@
         "binop": null
       },
       "value": "sendMail",
-      "start": 1236,
-      "end": 1244,
+      "start": 1231,
+      "end": 1239,
       "loc": {
         "start": {
           "line": 48,
@@ -9478,8 +9478,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 1244,
-      "end": 1245,
+      "start": 1239,
+      "end": 1240,
       "loc": {
         "start": {
           "line": 48,
@@ -9504,8 +9504,8 @@
         "binop": null
       },
       "value": "mailOptions",
-      "start": 1245,
-      "end": 1256,
+      "start": 1240,
+      "end": 1251,
       "loc": {
         "start": {
           "line": 48,
@@ -9530,8 +9530,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 1256,
-      "end": 1257,
+      "start": 1251,
+      "end": 1252,
       "loc": {
         "start": {
           "line": 48,
@@ -9555,8 +9555,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 1258,
-      "end": 1259,
+      "start": 1253,
+      "end": 1254,
       "loc": {
         "start": {
           "line": 48,
@@ -9581,8 +9581,8 @@
         "binop": null
       },
       "value": "error",
-      "start": 1259,
-      "end": 1264,
+      "start": 1254,
+      "end": 1259,
       "loc": {
         "start": {
           "line": 48,
@@ -9607,8 +9607,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 1264,
-      "end": 1265,
+      "start": 1259,
+      "end": 1260,
       "loc": {
         "start": {
           "line": 48,
@@ -9633,8 +9633,8 @@
         "binop": null
       },
       "value": "info",
-      "start": 1266,
-      "end": 1270,
+      "start": 1261,
+      "end": 1265,
       "loc": {
         "start": {
           "line": 48,
@@ -9658,8 +9658,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 1270,
-      "end": 1271,
+      "start": 1265,
+      "end": 1266,
       "loc": {
         "start": {
           "line": 48,
@@ -9684,8 +9684,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 1272,
-      "end": 1274,
+      "start": 1267,
+      "end": 1269,
       "loc": {
         "start": {
           "line": 48,
@@ -9709,8 +9709,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 1275,
-      "end": 1276,
+      "start": 1270,
+      "end": 1271,
       "loc": {
         "start": {
           "line": 48,
@@ -9737,8 +9737,8 @@
         "updateContext": null
       },
       "value": "if",
-      "start": 1283,
-      "end": 1285,
+      "start": 1278,
+      "end": 1280,
       "loc": {
         "start": {
           "line": 49,
@@ -9762,8 +9762,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 1286,
-      "end": 1287,
+      "start": 1281,
+      "end": 1282,
       "loc": {
         "start": {
           "line": 49,
@@ -9788,8 +9788,8 @@
         "binop": null
       },
       "value": "error",
-      "start": 1287,
-      "end": 1292,
+      "start": 1282,
+      "end": 1287,
       "loc": {
         "start": {
           "line": 49,
@@ -9813,8 +9813,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 1292,
-      "end": 1293,
+      "start": 1287,
+      "end": 1288,
       "loc": {
         "start": {
           "line": 49,
@@ -9838,8 +9838,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 1294,
-      "end": 1295,
+      "start": 1289,
+      "end": 1290,
       "loc": {
         "start": {
           "line": 49,
@@ -9864,8 +9864,8 @@
         "binop": null
       },
       "value": "reject",
-      "start": 1304,
-      "end": 1310,
+      "start": 1299,
+      "end": 1305,
       "loc": {
         "start": {
           "line": 50,
@@ -9889,8 +9889,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 1310,
-      "end": 1311,
+      "start": 1305,
+      "end": 1306,
       "loc": {
         "start": {
           "line": 50,
@@ -9915,8 +9915,8 @@
         "binop": null
       },
       "value": "error",
-      "start": 1311,
-      "end": 1316,
+      "start": 1306,
+      "end": 1311,
       "loc": {
         "start": {
           "line": 50,
@@ -9940,8 +9940,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 1316,
-      "end": 1317,
+      "start": 1311,
+      "end": 1312,
       "loc": {
         "start": {
           "line": 50,
@@ -9966,8 +9966,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 1317,
-      "end": 1318,
+      "start": 1312,
+      "end": 1313,
       "loc": {
         "start": {
           "line": 50,
@@ -9994,8 +9994,8 @@
         "updateContext": null
       },
       "value": "return",
-      "start": 1327,
-      "end": 1333,
+      "start": 1322,
+      "end": 1328,
       "loc": {
         "start": {
           "line": 51,
@@ -10020,8 +10020,8 @@
         "binop": null
       },
       "value": "logger",
-      "start": 1334,
-      "end": 1340,
+      "start": 1329,
+      "end": 1335,
       "loc": {
         "start": {
           "line": 51,
@@ -10046,8 +10046,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 1340,
-      "end": 1341,
+      "start": 1335,
+      "end": 1336,
       "loc": {
         "start": {
           "line": 51,
@@ -10072,8 +10072,8 @@
         "binop": null
       },
       "value": "error",
-      "start": 1341,
-      "end": 1346,
+      "start": 1336,
+      "end": 1341,
       "loc": {
         "start": {
           "line": 51,
@@ -10097,8 +10097,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 1346,
-      "end": 1347,
+      "start": 1341,
+      "end": 1342,
       "loc": {
         "start": {
           "line": 51,
@@ -10123,8 +10123,8 @@
         "binop": null
       },
       "value": "error",
-      "start": 1347,
-      "end": 1352,
+      "start": 1342,
+      "end": 1347,
       "loc": {
         "start": {
           "line": 51,
@@ -10148,8 +10148,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 1352,
-      "end": 1353,
+      "start": 1347,
+      "end": 1348,
       "loc": {
         "start": {
           "line": 51,
@@ -10174,8 +10174,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 1353,
-      "end": 1354,
+      "start": 1348,
+      "end": 1349,
       "loc": {
         "start": {
           "line": 51,
@@ -10199,8 +10199,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 1361,
-      "end": 1362,
+      "start": 1356,
+      "end": 1357,
       "loc": {
         "start": {
           "line": 52,
@@ -10215,8 +10215,8 @@
     {
       "type": "CommentLine",
       "value": " logger.debug('Message sent: %s', info.messageId);",
-      "start": 1369,
-      "end": 1421,
+      "start": 1364,
+      "end": 1416,
       "loc": {
         "start": {
           "line": 53,
@@ -10231,8 +10231,8 @@
     {
       "type": "CommentLine",
       "value": " Message sent: <b658f8ca-6296-ccf4-8306-87d57a0b4321@blurdybloop.com>",
-      "start": 1428,
-      "end": 1499,
+      "start": 1423,
+      "end": 1494,
       "loc": {
         "start": {
           "line": 54,
@@ -10247,8 +10247,8 @@
     {
       "type": "CommentLine",
       "value": " Preview URL: https://ethereal.email/message/WaQKMgKddxQDoou...",
-      "start": 1506,
-      "end": 1571,
+      "start": 1501,
+      "end": 1566,
       "loc": {
         "start": {
           "line": 55,
@@ -10263,8 +10263,8 @@
     {
       "type": "CommentLine",
       "value": " return resolve(nodemailer.getTestMessageUrl(info));",
-      "start": 1578,
-      "end": 1632,
+      "start": 1573,
+      "end": 1627,
       "loc": {
         "start": {
           "line": 56,
@@ -10291,8 +10291,8 @@
         "updateContext": null
       },
       "value": "return",
-      "start": 1639,
-      "end": 1645,
+      "start": 1634,
+      "end": 1640,
       "loc": {
         "start": {
           "line": 57,
@@ -10317,8 +10317,8 @@
         "binop": null
       },
       "value": "resolve",
-      "start": 1646,
-      "end": 1653,
+      "start": 1641,
+      "end": 1648,
       "loc": {
         "start": {
           "line": 57,
@@ -10342,8 +10342,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 1653,
-      "end": 1654,
+      "start": 1648,
+      "end": 1649,
       "loc": {
         "start": {
           "line": 57,
@@ -10368,8 +10368,8 @@
         "binop": null
       },
       "value": "info",
-      "start": 1654,
-      "end": 1658,
+      "start": 1649,
+      "end": 1653,
       "loc": {
         "start": {
           "line": 57,
@@ -10393,8 +10393,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 1658,
-      "end": 1659,
+      "start": 1653,
+      "end": 1654,
       "loc": {
         "start": {
           "line": 57,
@@ -10419,8 +10419,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 1659,
-      "end": 1660,
+      "start": 1654,
+      "end": 1655,
       "loc": {
         "start": {
           "line": 57,
@@ -10444,8 +10444,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 1665,
-      "end": 1666,
+      "start": 1660,
+      "end": 1661,
       "loc": {
         "start": {
           "line": 58,
@@ -10469,8 +10469,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 1666,
-      "end": 1667,
+      "start": 1661,
+      "end": 1662,
       "loc": {
         "start": {
           "line": 58,
@@ -10495,8 +10495,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 1667,
-      "end": 1668,
+      "start": 1662,
+      "end": 1663,
       "loc": {
         "start": {
           "line": 58,
@@ -10520,8 +10520,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 1671,
-      "end": 1672,
+      "start": 1666,
+      "end": 1667,
       "loc": {
         "start": {
           "line": 59,
@@ -10545,8 +10545,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 1672,
-      "end": 1673,
+      "start": 1667,
+      "end": 1668,
       "loc": {
         "start": {
           "line": 59,
@@ -10571,8 +10571,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 1673,
-      "end": 1674,
+      "start": 1668,
+      "end": 1669,
       "loc": {
         "start": {
           "line": 59,
@@ -10596,8 +10596,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 1675,
-      "end": 1676,
+      "start": 1670,
+      "end": 1671,
       "loc": {
         "start": {
           "line": 60,
@@ -10612,8 +10612,8 @@
     {
       "type": "CommentBlock",
       "value": "*\n * Simulate email sending with ethereal\n ",
-      "start": 1679,
-      "end": 1726,
+      "start": 1674,
+      "end": 1721,
       "loc": {
         "start": {
           "line": 63,
@@ -10628,8 +10628,8 @@
     {
       "type": "CommentLine",
       "value": " export function sendTestEmail ({",
-      "start": 1727,
-      "end": 1762,
+      "start": 1722,
+      "end": 1757,
       "loc": {
         "start": {
           "line": 66,
@@ -10644,8 +10644,8 @@
     {
       "type": "CommentLine",
       "value": "   from = '\"Fred Foo 👻\" <foo@blurdybloop.com>',",
-      "start": 1763,
-      "end": 1813,
+      "start": 1758,
+      "end": 1808,
       "loc": {
         "start": {
           "line": 67,
@@ -10660,8 +10660,8 @@
     {
       "type": "CommentLine",
       "value": "   to = [],",
-      "start": 1814,
-      "end": 1827,
+      "start": 1809,
+      "end": 1822,
       "loc": {
         "start": {
           "line": 68,
@@ -10676,8 +10676,8 @@
     {
       "type": "CommentLine",
       "value": "   subject = 'Hello ✔',",
-      "start": 1828,
-      "end": 1853,
+      "start": 1823,
+      "end": 1848,
       "loc": {
         "start": {
           "line": 69,
@@ -10692,8 +10692,8 @@
     {
       "type": "CommentLine",
       "value": "   html = '<b>Hello world?</b>'",
-      "start": 1854,
-      "end": 1887,
+      "start": 1849,
+      "end": 1882,
       "loc": {
         "start": {
           "line": 70,
@@ -10708,8 +10708,8 @@
     {
       "type": "CommentLine",
       "value": " }, {",
-      "start": 1888,
-      "end": 1895,
+      "start": 1883,
+      "end": 1890,
       "loc": {
         "start": {
           "line": 71,
@@ -10724,8 +10724,8 @@
     {
       "type": "CommentLine",
       "value": "   smtpHost = 'smtp.ethereal.email',",
-      "start": 1896,
-      "end": 1934,
+      "start": 1891,
+      "end": 1929,
       "loc": {
         "start": {
           "line": 72,
@@ -10740,8 +10740,8 @@
     {
       "type": "CommentLine",
       "value": "   smtpPort = 587",
-      "start": 1935,
-      "end": 1954,
+      "start": 1930,
+      "end": 1949,
       "loc": {
         "start": {
           "line": 73,
@@ -10756,8 +10756,8 @@
     {
       "type": "CommentLine",
       "value": "   // smtpEmail,",
-      "start": 1955,
-      "end": 1973,
+      "start": 1950,
+      "end": 1968,
       "loc": {
         "start": {
           "line": 74,
@@ -10772,8 +10772,8 @@
     {
       "type": "CommentLine",
       "value": "   // smtpService,",
-      "start": 1974,
-      "end": 1994,
+      "start": 1969,
+      "end": 1989,
       "loc": {
         "start": {
           "line": 75,
@@ -10788,8 +10788,8 @@
     {
       "type": "CommentLine",
       "value": "   // smtpPassword,",
-      "start": 1995,
-      "end": 2016,
+      "start": 1990,
+      "end": 2011,
       "loc": {
         "start": {
           "line": 76,
@@ -10804,8 +10804,8 @@
     {
       "type": "CommentLine",
       "value": " }, logger) {",
-      "start": 2017,
-      "end": 2032,
+      "start": 2012,
+      "end": 2027,
       "loc": {
         "start": {
           "line": 77,
@@ -10820,8 +10820,8 @@
     {
       "type": "CommentLine",
       "value": "   return new Promise((resolve, reject) => {",
-      "start": 2033,
-      "end": 2079,
+      "start": 2028,
+      "end": 2074,
       "loc": {
         "start": {
           "line": 78,
@@ -10836,8 +10836,8 @@
     {
       "type": "CommentLine",
       "value": "     // Generate test SMTP service account from ethereal.email",
-      "start": 2080,
-      "end": 2144,
+      "start": 2075,
+      "end": 2139,
       "loc": {
         "start": {
           "line": 79,
@@ -10852,8 +10852,8 @@
     {
       "type": "CommentLine",
       "value": "     // Only needed if you don't have a real mail account for testing",
-      "start": 2145,
-      "end": 2216,
+      "start": 2140,
+      "end": 2211,
       "loc": {
         "start": {
           "line": 80,
@@ -10868,8 +10868,8 @@
     {
       "type": "CommentLine",
       "value": "     nodemailer.createTestAccount((err, account) => {",
-      "start": 2217,
-      "end": 2272,
+      "start": 2212,
+      "end": 2267,
       "loc": {
         "start": {
           "line": 81,
@@ -10884,8 +10884,8 @@
     {
       "type": "CommentLine",
       "value": "       if (err) {",
-      "start": 2273,
-      "end": 2292,
+      "start": 2268,
+      "end": 2287,
       "loc": {
         "start": {
           "line": 82,
@@ -10900,8 +10900,8 @@
     {
       "type": "CommentLine",
       "value": "         return reject(err);",
-      "start": 2293,
-      "end": 2323,
+      "start": 2288,
+      "end": 2318,
       "loc": {
         "start": {
           "line": 83,
@@ -10916,8 +10916,8 @@
     {
       "type": "CommentLine",
       "value": "       }",
-      "start": 2324,
-      "end": 2334,
+      "start": 2319,
+      "end": 2329,
       "loc": {
         "start": {
           "line": 84,
@@ -10932,8 +10932,8 @@
     {
       "type": "CommentLine",
       "value": "       // create reusable transporter object using the default SMTP transport",
-      "start": 2335,
-      "end": 2414,
+      "start": 2330,
+      "end": 2409,
       "loc": {
         "start": {
           "line": 85,
@@ -10948,8 +10948,8 @@
     {
       "type": "CommentLine",
       "value": "       let transporter = nodemailer.createTransport({",
-      "start": 2415,
-      "end": 2470,
+      "start": 2410,
+      "end": 2465,
       "loc": {
         "start": {
           "line": 86,
@@ -10964,8 +10964,8 @@
     {
       "type": "CommentLine",
       "value": "         host: smtpHost,",
-      "start": 2471,
-      "end": 2497,
+      "start": 2466,
+      "end": 2492,
       "loc": {
         "start": {
           "line": 87,
@@ -10980,8 +10980,8 @@
     {
       "type": "CommentLine",
       "value": "         port: smtpPort,",
-      "start": 2498,
-      "end": 2524,
+      "start": 2493,
+      "end": 2519,
       "loc": {
         "start": {
           "line": 88,
@@ -10996,8 +10996,8 @@
     {
       "type": "CommentLine",
       "value": "         secure: false, // true for 465, false for other ports",
-      "start": 2525,
-      "end": 2589,
+      "start": 2520,
+      "end": 2584,
       "loc": {
         "start": {
           "line": 89,
@@ -11012,8 +11012,8 @@
     {
       "type": "CommentLine",
       "value": "         auth: {",
-      "start": 2590,
-      "end": 2608,
+      "start": 2585,
+      "end": 2603,
       "loc": {
         "start": {
           "line": 90,
@@ -11028,8 +11028,8 @@
     {
       "type": "CommentLine",
       "value": "           user: account.user, // generated ethereal user",
-      "start": 2609,
-      "end": 2668,
+      "start": 2604,
+      "end": 2663,
       "loc": {
         "start": {
           "line": 91,
@@ -11044,8 +11044,8 @@
     {
       "type": "CommentLine",
       "value": "           pass: account.pass // generated ethereal password",
-      "start": 2669,
-      "end": 2731,
+      "start": 2664,
+      "end": 2726,
       "loc": {
         "start": {
           "line": 92,
@@ -11060,8 +11060,8 @@
     {
       "type": "CommentLine",
       "value": "         }",
-      "start": 2732,
-      "end": 2744,
+      "start": 2727,
+      "end": 2739,
       "loc": {
         "start": {
           "line": 93,
@@ -11076,8 +11076,8 @@
     {
       "type": "CommentLine",
       "value": "       });",
-      "start": 2745,
-      "end": 2757,
+      "start": 2740,
+      "end": 2752,
       "loc": {
         "start": {
           "line": 94,
@@ -11092,8 +11092,8 @@
     {
       "type": "CommentLine",
       "value": "       // setup email data with unicode symbols",
-      "start": 2759,
-      "end": 2808,
+      "start": 2754,
+      "end": 2803,
       "loc": {
         "start": {
           "line": 96,
@@ -11108,8 +11108,8 @@
     {
       "type": "CommentLine",
       "value": "       let mailOptions = {",
-      "start": 2809,
-      "end": 2837,
+      "start": 2804,
+      "end": 2832,
       "loc": {
         "start": {
           "line": 97,
@@ -11124,8 +11124,8 @@
     {
       "type": "CommentLine",
       "value": "         from, // sender address",
-      "start": 2838,
-      "end": 2872,
+      "start": 2833,
+      "end": 2867,
       "loc": {
         "start": {
           "line": 98,
@@ -11140,8 +11140,8 @@
     {
       "type": "CommentLine",
       "value": "         to: to.join(', '), // list of receivers",
-      "start": 2873,
-      "end": 2923,
+      "start": 2868,
+      "end": 2918,
       "loc": {
         "start": {
           "line": 99,
@@ -11156,8 +11156,8 @@
     {
       "type": "CommentLine",
       "value": "         subject, // Subject line",
-      "start": 2924,
-      "end": 2959,
+      "start": 2919,
+      "end": 2954,
       "loc": {
         "start": {
           "line": 100,
@@ -11172,8 +11172,8 @@
     {
       "type": "CommentLine",
       "value": "         html // html body",
-      "start": 2960,
-      "end": 2988,
+      "start": 2955,
+      "end": 2983,
       "loc": {
         "start": {
           "line": 101,
@@ -11188,8 +11188,8 @@
     {
       "type": "CommentLine",
       "value": "       };",
-      "start": 2989,
-      "end": 3000,
+      "start": 2984,
+      "end": 2995,
       "loc": {
         "start": {
           "line": 102,
@@ -11204,8 +11204,8 @@
     {
       "type": "CommentLine",
       "value": "       // send mail with defined transport object",
-      "start": 3002,
-      "end": 3053,
+      "start": 2997,
+      "end": 3048,
       "loc": {
         "start": {
           "line": 104,
@@ -11220,8 +11220,8 @@
     {
       "type": "CommentLine",
       "value": "       transporter.sendMail(mailOptions, (error, info) => {",
-      "start": 3054,
-      "end": 3115,
+      "start": 3049,
+      "end": 3110,
       "loc": {
         "start": {
           "line": 105,
@@ -11236,8 +11236,8 @@
     {
       "type": "CommentLine",
       "value": "         if (error) {",
-      "start": 3116,
-      "end": 3139,
+      "start": 3111,
+      "end": 3134,
       "loc": {
         "start": {
           "line": 106,
@@ -11252,8 +11252,8 @@
     {
       "type": "CommentLine",
       "value": "           reject(error);",
-      "start": 3140,
-      "end": 3167,
+      "start": 3135,
+      "end": 3162,
       "loc": {
         "start": {
           "line": 107,
@@ -11268,8 +11268,8 @@
     {
       "type": "CommentLine",
       "value": "           return logger.error(error);",
-      "start": 3168,
-      "end": 3208,
+      "start": 3163,
+      "end": 3203,
       "loc": {
         "start": {
           "line": 108,
@@ -11284,8 +11284,8 @@
     {
       "type": "CommentLine",
       "value": "         }",
-      "start": 3209,
-      "end": 3221,
+      "start": 3204,
+      "end": 3216,
       "loc": {
         "start": {
           "line": 109,
@@ -11300,8 +11300,8 @@
     {
       "type": "CommentLine",
       "value": "         logger.debug('Message sent: %s', info.messageId);",
-      "start": 3222,
-      "end": 3282,
+      "start": 3217,
+      "end": 3277,
       "loc": {
         "start": {
           "line": 110,
@@ -11316,8 +11316,8 @@
     {
       "type": "CommentLine",
       "value": "         // Preview only available when sending through an Ethereal account",
-      "start": 3283,
-      "end": 3360,
+      "start": 3278,
+      "end": 3355,
       "loc": {
         "start": {
           "line": 111,
@@ -11332,8 +11332,8 @@
     {
       "type": "CommentLine",
       "value": "         // Message sent: <b658f8ca-6296-ccf4-8306-87d57a0b4321@blurdybloop.com>",
-      "start": 3362,
-      "end": 3444,
+      "start": 3357,
+      "end": 3439,
       "loc": {
         "start": {
           "line": 113,
@@ -11348,8 +11348,8 @@
     {
       "type": "CommentLine",
       "value": "         // Preview URL: https://ethereal.email/message/WaQKMgKddxQDoou...",
-      "start": 3445,
-      "end": 3521,
+      "start": 3440,
+      "end": 3516,
       "loc": {
         "start": {
           "line": 114,
@@ -11364,8 +11364,8 @@
     {
       "type": "CommentLine",
       "value": "         resolve(nodemailer.getTestMessageUrl(info));",
-      "start": 3522,
-      "end": 3577,
+      "start": 3517,
+      "end": 3572,
       "loc": {
         "start": {
           "line": 115,
@@ -11380,8 +11380,8 @@
     {
       "type": "CommentLine",
       "value": "       });",
-      "start": 3578,
-      "end": 3590,
+      "start": 3573,
+      "end": 3585,
       "loc": {
         "start": {
           "line": 116,
@@ -11396,8 +11396,8 @@
     {
       "type": "CommentLine",
       "value": "     });",
-      "start": 3591,
-      "end": 3601,
+      "start": 3586,
+      "end": 3596,
       "loc": {
         "start": {
           "line": 117,
@@ -11412,8 +11412,8 @@
     {
       "type": "CommentLine",
       "value": "   });",
-      "start": 3602,
-      "end": 3610,
+      "start": 3597,
+      "end": 3605,
       "loc": {
         "start": {
           "line": 118,
@@ -11428,8 +11428,8 @@
     {
       "type": "CommentLine",
       "value": " }",
-      "start": 3611,
-      "end": 3615,
+      "start": 3606,
+      "end": 3610,
       "loc": {
         "start": {
           "line": 119,
@@ -11454,8 +11454,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 3616,
-      "end": 3616,
+      "start": 3611,
+      "end": 3611,
       "loc": {
         "start": {
           "line": 120,

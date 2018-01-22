@@ -4,13 +4,13 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var cov_n3rl8f84k = function () {
-  var path = '/Users/rawbin/Documents/Projets/collaborations/ensad-publishing/prototype/plurishing-backend/src/services/dump/dump.api.js',
-      hash = '9951445846088c4b160975ac18329094021c9979',
+var cov_1hotq6qzgt = function () {
+  var path = '/Users/rawbin/Documents/Projets/collaborations/ensad-publishing/prototype/metis-backend/src/services/dump/dump.api.js',
+      hash = '1f74b3c1e931a348c3cdde79c2c429bf0a1c0369',
       global = new Function('return this')(),
       gcv = '__coverage__',
       coverageData = {
-    path: '/Users/rawbin/Documents/Projets/collaborations/ensad-publishing/prototype/plurishing-backend/src/services/dump/dump.api.js',
+    path: '/Users/rawbin/Documents/Projets/collaborations/ensad-publishing/prototype/metis-backend/src/services/dump/dump.api.js',
     statementMap: {
       '0': {
         start: {
@@ -74,7 +74,7 @@ var cov_n3rl8f84k = function () {
   coverageData.hash = hash;
   return coverage[path] = coverageData;
 }(); /**
-      * Plurishing-backend
+      * Metis-backend
       * =======
       * Dump api
       */
@@ -87,13 +87,13 @@ var _dump = require('./dump.controller');
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var router = (cov_n3rl8f84k.s[0]++, new _express2.default.Router());
+var router = (cov_1hotq6qzgt.s[0]++, new _express2.default.Router());
 
-cov_n3rl8f84k.s[1]++;
+cov_1hotq6qzgt.s[1]++;
 router.get('/', _dump.downloadAllData);
-cov_n3rl8f84k.s[2]++;
+cov_1hotq6qzgt.s[2]++;
 router.post('/', _dump.uploadData);
-cov_n3rl8f84k.s[3]++;
+cov_1hotq6qzgt.s[3]++;
 router.delete('/', _dump.deleteAllData);
 
 exports.default = router;

@@ -8,13 +8,13 @@ var _extends2 = require('babel-runtime/helpers/extends');
 
 var _extends3 = _interopRequireDefault(_extends2);
 
-var cov_25w5gjgd8m = function () {
-  var path = '/Users/rawbin/Documents/Projets/collaborations/ensad-publishing/prototype/plurishing-backend/src/utils/transformJSON.spec.js',
-      hash = 'c37f8e59ce93d899f40e4ac141abd50abf3241d2',
+var cov_1ciie21idt = function () {
+  var path = '/Users/rawbin/Documents/Projets/collaborations/ensad-publishing/prototype/metis-backend/src/utils/transformJSON.spec.js',
+      hash = '73395dad92c8b84540636638dd1b8608c9c678c5',
       global = new Function('return this')(),
       gcv = '__coverage__',
       coverageData = {
-    path: '/Users/rawbin/Documents/Projets/collaborations/ensad-publishing/prototype/plurishing-backend/src/utils/transformJSON.spec.js',
+    path: '/Users/rawbin/Documents/Projets/collaborations/ensad-publishing/prototype/metis-backend/src/utils/transformJSON.spec.js',
     statementMap: {
       '0': {
         start: {
@@ -1241,23 +1241,23 @@ var _transformJSON2 = _interopRequireDefault(_transformJSON);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-cov_25w5gjgd8m.s[0]++;
+cov_1ciie21idt.s[0]++;
 
 
 (0, _mocha.describe)('transformJSON util', function () {
-  cov_25w5gjgd8m.f[0]++;
+  cov_1ciie21idt.f[0]++;
 
 
   // mock data
-  var inputData = (cov_25w5gjgd8m.s[1]++, {
+  var inputData = (cov_1ciie21idt.s[1]++, {
     foo: 'hello'
   });
-  var expectedOutput = (cov_25w5gjgd8m.s[2]++, {
+  var expectedOutput = (cov_1ciie21idt.s[2]++, {
     bar: 'hello'
   });
 
   // input json schema
-  var inputSchema = (cov_25w5gjgd8m.s[3]++, {
+  var inputSchema = (cov_1ciie21idt.s[3]++, {
     properties: {
       foo: {
         type: 'string'
@@ -1267,7 +1267,7 @@ cov_25w5gjgd8m.s[0]++;
   });
 
   // output json schema
-  var outputSchema = (cov_25w5gjgd8m.s[4]++, {
+  var outputSchema = (cov_1ciie21idt.s[4]++, {
     properties: {
       bar: {
         type: 'string'
@@ -1277,174 +1277,174 @@ cov_25w5gjgd8m.s[0]++;
   });
 
   // transform function
-  cov_25w5gjgd8m.s[5]++;
+  cov_1ciie21idt.s[5]++;
   var transform = function transform(input) {
-    cov_25w5gjgd8m.f[1]++;
+    cov_1ciie21idt.f[1]++;
 
-    var output = (cov_25w5gjgd8m.s[6]++, (0, _extends3.default)({}, input));
-    var bar = (cov_25w5gjgd8m.s[7]++, input.foo);
-    cov_25w5gjgd8m.s[8]++;
+    var output = (cov_1ciie21idt.s[6]++, (0, _extends3.default)({}, input));
+    var bar = (cov_1ciie21idt.s[7]++, input.foo);
+    cov_1ciie21idt.s[8]++;
     delete output.foo;
-    cov_25w5gjgd8m.s[9]++;
+    cov_1ciie21idt.s[9]++;
     output.bar = bar;
-    cov_25w5gjgd8m.s[10]++;
+    cov_1ciie21idt.s[10]++;
     return output;
   };
   // transform function as a promise
-  cov_25w5gjgd8m.s[11]++;
+  cov_1ciie21idt.s[11]++;
   var transformAsPromise = function transformAsPromise(input) {
-    cov_25w5gjgd8m.f[2]++;
-    cov_25w5gjgd8m.s[12]++;
+    cov_1ciie21idt.f[2]++;
+    cov_1ciie21idt.s[12]++;
     return new _promise2.default(function (resolve) {
-      cov_25w5gjgd8m.f[3]++;
+      cov_1ciie21idt.f[3]++;
 
-      var output = (cov_25w5gjgd8m.s[13]++, transform(input));
-      cov_25w5gjgd8m.s[14]++;
+      var output = (cov_1ciie21idt.s[13]++, transform(input));
+      cov_1ciie21idt.s[14]++;
       resolve(output);
     });
   };
 
   // transform function with callback
-  cov_25w5gjgd8m.s[15]++;
+  cov_1ciie21idt.s[15]++;
   var transformWithCallback = function transformWithCallback(input, callback) {
-    cov_25w5gjgd8m.f[4]++;
+    cov_1ciie21idt.f[4]++;
 
-    var output = (cov_25w5gjgd8m.s[16]++, transform(input));
-    cov_25w5gjgd8m.s[17]++;
+    var output = (cov_1ciie21idt.s[16]++, transform(input));
+    cov_1ciie21idt.s[17]++;
     callback(null, output);
   };
 
-  cov_25w5gjgd8m.s[18]++;
+  cov_1ciie21idt.s[18]++;
   (0, _mocha.it)('should return a promise', function (done) {
-    cov_25w5gjgd8m.f[5]++;
+    cov_1ciie21idt.f[5]++;
 
-    var fn = (cov_25w5gjgd8m.s[19]++, (0, _transformJSON2.default)(inputData, inputSchema, outputSchema, transform));
-    cov_25w5gjgd8m.s[20]++;
+    var fn = (cov_1ciie21idt.s[19]++, (0, _transformJSON2.default)(inputData, inputSchema, outputSchema, transform));
+    cov_1ciie21idt.s[20]++;
     (0, _chai.expect)(fn).to.be.an.instanceof(_promise2.default);
-    cov_25w5gjgd8m.s[21]++;
+    cov_1ciie21idt.s[21]++;
     done();
   });
-  cov_25w5gjgd8m.s[22]++;
+  cov_1ciie21idt.s[22]++;
   (0, _mocha.it)('should apply the transform function to input data and resolve with correctly transformed data', function (done) {
-    cov_25w5gjgd8m.f[6]++;
-    cov_25w5gjgd8m.s[23]++;
+    cov_1ciie21idt.f[6]++;
+    cov_1ciie21idt.s[23]++;
 
     (0, _transformJSON2.default)(inputData, inputSchema, outputSchema, transform).then(function (output) {
-      cov_25w5gjgd8m.f[7]++;
-      cov_25w5gjgd8m.s[24]++;
+      cov_1ciie21idt.f[7]++;
+      cov_1ciie21idt.s[24]++;
 
       (0, _chai.expect)(output).to.deep.equal(expectedOutput);
-      cov_25w5gjgd8m.s[25]++;
+      cov_1ciie21idt.s[25]++;
       done();
     }).catch();
   });
-  cov_25w5gjgd8m.s[26]++;
+  cov_1ciie21idt.s[26]++;
   (0, _mocha.it)('should accept a transform function returning a promise', function (done) {
-    cov_25w5gjgd8m.f[8]++;
-    cov_25w5gjgd8m.s[27]++;
+    cov_1ciie21idt.f[8]++;
+    cov_1ciie21idt.s[27]++;
 
     (0, _transformJSON2.default)(inputData, inputSchema, outputSchema, transformAsPromise).then(function (output) {
-      cov_25w5gjgd8m.f[9]++;
-      cov_25w5gjgd8m.s[28]++;
+      cov_1ciie21idt.f[9]++;
+      cov_1ciie21idt.s[28]++;
 
       (0, _chai.expect)(output).to.deep.equal(expectedOutput);
-      cov_25w5gjgd8m.s[29]++;
+      cov_1ciie21idt.s[29]++;
       done();
     }).catch();
   });
 
-  cov_25w5gjgd8m.s[30]++;
+  cov_1ciie21idt.s[30]++;
   (0, _mocha.it)('should accept a transform function presenting a callback', function (done) {
-    cov_25w5gjgd8m.f[10]++;
-    cov_25w5gjgd8m.s[31]++;
+    cov_1ciie21idt.f[10]++;
+    cov_1ciie21idt.s[31]++;
 
     (0, _transformJSON2.default)(inputData, inputSchema, outputSchema, transformWithCallback).then(function (output) {
-      cov_25w5gjgd8m.f[11]++;
-      cov_25w5gjgd8m.s[32]++;
+      cov_1ciie21idt.f[11]++;
+      cov_1ciie21idt.s[32]++;
 
       (0, _chai.expect)(output).to.deep.equal(expectedOutput);
-      cov_25w5gjgd8m.s[33]++;
+      cov_1ciie21idt.s[33]++;
       done();
     }).catch();
   });
 
-  cov_25w5gjgd8m.s[34]++;
+  cov_1ciie21idt.s[34]++;
   (0, _mocha.it)('should require inputData parameter to be a js object', function (done) {
-    cov_25w5gjgd8m.f[12]++;
-    cov_25w5gjgd8m.s[35]++;
+    cov_1ciie21idt.f[12]++;
+    cov_1ciie21idt.s[35]++;
 
     (0, _transformJSON2.default)(undefined, inputSchema, outputSchema, transform).catch(function (e) {
-      cov_25w5gjgd8m.f[13]++;
-      cov_25w5gjgd8m.s[36]++;
+      cov_1ciie21idt.f[13]++;
+      cov_1ciie21idt.s[36]++;
 
       (0, _chai.expect)(e).to.be.an('error');
-      cov_25w5gjgd8m.s[37]++;
+      cov_1ciie21idt.s[37]++;
       done();
     });
   });
 
-  cov_25w5gjgd8m.s[38]++;
+  cov_1ciie21idt.s[38]++;
   (0, _mocha.it)('should require inputSchema parameter to be a valid json schema', function (done) {
-    cov_25w5gjgd8m.f[14]++;
-    cov_25w5gjgd8m.s[39]++;
+    cov_1ciie21idt.f[14]++;
+    cov_1ciie21idt.s[39]++;
 
     (0, _transformJSON2.default)(inputData, undefined, outputSchema, transform).catch(function (e) {
-      cov_25w5gjgd8m.f[15]++;
-      cov_25w5gjgd8m.s[40]++;
+      cov_1ciie21idt.f[15]++;
+      cov_1ciie21idt.s[40]++;
 
       (0, _chai.expect)(e).to.be.an('error');
-      cov_25w5gjgd8m.s[41]++;
+      cov_1ciie21idt.s[41]++;
       done();
     });
   });
 
-  cov_25w5gjgd8m.s[42]++;
+  cov_1ciie21idt.s[42]++;
   (0, _mocha.it)('should require outputSchema parameter to be a valid json schema', function (done) {
-    cov_25w5gjgd8m.f[16]++;
-    cov_25w5gjgd8m.s[43]++;
+    cov_1ciie21idt.f[16]++;
+    cov_1ciie21idt.s[43]++;
 
     (0, _transformJSON2.default)(inputData, inputSchema, undefined, transform).catch(function (e) {
-      cov_25w5gjgd8m.f[17]++;
-      cov_25w5gjgd8m.s[44]++;
+      cov_1ciie21idt.f[17]++;
+      cov_1ciie21idt.s[44]++;
 
       (0, _chai.expect)(e).to.be.an('error');
-      cov_25w5gjgd8m.s[45]++;
+      cov_1ciie21idt.s[45]++;
       done();
     });
   });
 
-  cov_25w5gjgd8m.s[46]++;
+  cov_1ciie21idt.s[46]++;
   (0, _mocha.it)('should reject an input data not complying to input json schema', function (done) {
-    cov_25w5gjgd8m.f[18]++;
-    cov_25w5gjgd8m.s[47]++;
+    cov_1ciie21idt.f[18]++;
+    cov_1ciie21idt.s[47]++;
 
     (0, _transformJSON2.default)({ bar: 'hello' }, inputSchema, outputSchema, transform).catch(function (e) {
-      cov_25w5gjgd8m.f[19]++;
-      cov_25w5gjgd8m.s[48]++;
+      cov_1ciie21idt.f[19]++;
+      cov_1ciie21idt.s[48]++;
 
       (0, _chai.expect)(e).to.be.an('array');
-      cov_25w5gjgd8m.s[49]++;
+      cov_1ciie21idt.s[49]++;
       done();
     });
   });
 
-  cov_25w5gjgd8m.s[50]++;
+  cov_1ciie21idt.s[50]++;
   (0, _mocha.it)('should reject an output data not complying to output json schema', function (done) {
-    cov_25w5gjgd8m.f[20]++;
-    cov_25w5gjgd8m.s[51]++;
+    cov_1ciie21idt.f[20]++;
+    cov_1ciie21idt.s[51]++;
 
     var wrongTransform = function wrongTransform(input) {
-      cov_25w5gjgd8m.f[21]++;
-      cov_25w5gjgd8m.s[52]++;
+      cov_1ciie21idt.f[21]++;
+      cov_1ciie21idt.s[52]++;
       return input;
     };
-    cov_25w5gjgd8m.s[53]++;
+    cov_1ciie21idt.s[53]++;
     (0, _transformJSON2.default)({ bar: 'hello' }, inputSchema, outputSchema, wrongTransform).catch(function (e) {
-      cov_25w5gjgd8m.f[22]++;
-      cov_25w5gjgd8m.s[54]++;
+      cov_1ciie21idt.f[22]++;
+      cov_1ciie21idt.s[54]++;
 
       (0, _chai.expect)(e).to.be.an('array');
-      cov_25w5gjgd8m.s[55]++;
+      cov_1ciie21idt.s[55]++;
       done();
     });
   });

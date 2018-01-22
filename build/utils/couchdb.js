@@ -9,13 +9,13 @@ var _extends2 = require("babel-runtime/helpers/extends");
 
 var _extends3 = _interopRequireDefault(_extends2);
 
-var cov_1q75b6wb9c = function () {
-  var path = "/Users/rawbin/Documents/Projets/collaborations/ensad-publishing/prototype/plurishing-backend/src/utils/couchdb.js",
-      hash = "230dd9fd565e26ffcba08c64f300a7df2fade3eb",
+var cov_t8ysli5rw = function () {
+  var path = "/Users/rawbin/Documents/Projets/collaborations/ensad-publishing/prototype/metis-backend/src/utils/couchdb.js",
+      hash = "84f598e151972581409987594d544d1a6668b3f4",
       global = new Function('return this')(),
       gcv = "__coverage__",
       coverageData = {
-    path: "/Users/rawbin/Documents/Projets/collaborations/ensad-publishing/prototype/plurishing-backend/src/utils/couchdb.js",
+    path: "/Users/rawbin/Documents/Projets/collaborations/ensad-publishing/prototype/metis-backend/src/utils/couchdb.js",
     statementMap: {
       "0": {
         start: {
@@ -264,7 +264,7 @@ var cov_1q75b6wb9c = function () {
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-cov_1q75b6wb9c.s[0]++;
+cov_t8ysli5rw.s[0]++;
 
 
 /**
@@ -276,19 +276,19 @@ cov_1q75b6wb9c.s[0]++;
  * @return {Promise}
  */
 var insertDesignDocument = function insertDesignDocument(doc, db, designName, design) {
-  cov_1q75b6wb9c.f[0]++;
+  cov_t8ysli5rw.f[0]++;
 
   var _rev = void 0;
-  cov_1q75b6wb9c.s[1]++;
+  cov_t8ysli5rw.s[1]++;
   if (doc) {
-    cov_1q75b6wb9c.b[0][0]++;
-    cov_1q75b6wb9c.s[2]++;
+    cov_t8ysli5rw.b[0][0]++;
+    cov_t8ysli5rw.s[2]++;
 
     _rev = doc._rev;
   } else {
-    cov_1q75b6wb9c.b[0][1]++;
+    cov_t8ysli5rw.b[0][1]++;
   }
-  cov_1q75b6wb9c.s[3]++;
+  cov_t8ysli5rw.s[3]++;
   return db.insertAsync((0, _extends3.default)({
     _rev: _rev
   }, design), "_design/" + designName);
@@ -299,21 +299,21 @@ var insertDesignDocument = function insertDesignDocument(doc, db, designName, de
  * @param db {object} the nano-handled database
  * @param designName {string}
  */
-cov_1q75b6wb9c.s[4]++;
+cov_t8ysli5rw.s[4]++;
 var addDesign = exports.addDesign = function addDesign(db, designName, design) {
-  cov_1q75b6wb9c.f[1]++;
-  cov_1q75b6wb9c.s[5]++;
+  cov_t8ysli5rw.f[1]++;
+  cov_t8ysli5rw.s[5]++;
   return db.getAsync("_design/" + designName)
   // design document exists
   .then(function (doc) {
-    cov_1q75b6wb9c.f[2]++;
-    cov_1q75b6wb9c.s[6]++;
+    cov_t8ysli5rw.f[2]++;
+    cov_t8ysli5rw.s[6]++;
     return insertDesignDocument(doc, db, designName, design);
   })
   // design document does not exist (we don't care about the error)
   .catch(function () {
-    cov_1q75b6wb9c.f[3]++;
-    cov_1q75b6wb9c.s[7]++;
+    cov_t8ysli5rw.f[3]++;
+    cov_t8ysli5rw.s[7]++;
     return insertDesignDocument(undefined, db, designName, design);
   });
 };

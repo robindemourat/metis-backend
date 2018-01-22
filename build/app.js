@@ -4,13 +4,13 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var cov_2145knos0z = function () {
-  var path = '/Users/rawbin/Documents/Projets/collaborations/ensad-publishing/prototype/plurishing-backend/src/app.js',
-      hash = '7275be64707b4c4673fb7bfcab521fefd9fd4bc4',
+var cov_2q2jexkalk = function () {
+  var path = '/Users/rawbin/Documents/Projets/collaborations/ensad-publishing/prototype/metis-backend/src/app.js',
+      hash = '5629c7c5fc92fe373cbd8e29afe5a1ce80a8913d',
       global = new Function('return this')(),
       gcv = '__coverage__',
       coverageData = {
-    path: '/Users/rawbin/Documents/Projets/collaborations/ensad-publishing/prototype/plurishing-backend/src/app.js',
+    path: '/Users/rawbin/Documents/Projets/collaborations/ensad-publishing/prototype/metis-backend/src/app.js',
     statementMap: {
       '0': {
         start: {
@@ -376,7 +376,7 @@ var cov_2145knos0z = function () {
   coverageData.hash = hash;
   return coverage[path] = coverageData;
 }(); /**
-      * Plurishing-backend
+      * Metis-backend
       * =======
       * Application entrypoint
       */
@@ -445,9 +445,9 @@ var _config = require('./utils/config');
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var config = (cov_2145knos0z.s[0]++, (0, _config.getConfig)());
+var config = (cov_2q2jexkalk.s[0]++, (0, _config.getConfig)());
 
-var _ref = (cov_2145knos0z.s[1]++, config),
+var _ref = (cov_2q2jexkalk.s[1]++, config),
     secret = _ref.secret;
 
 /**
@@ -455,20 +455,20 @@ var _ref = (cov_2145knos0z.s[1]++, config),
  */
 
 
-var app = (cov_2145knos0z.s[2]++, (0, _express2.default)());
+var app = (cov_2q2jexkalk.s[2]++, (0, _express2.default)());
 
 /**
  * Enhance the app with middlewares
  */
-cov_2145knos0z.s[3]++;
+cov_2q2jexkalk.s[3]++;
 app.use(_bodyParser2.default.urlencoded({ extended: true, limit: "200Mo" }));
-cov_2145knos0z.s[4]++;
+cov_2q2jexkalk.s[4]++;
 app.use(_bodyParser2.default.json()); // use json body parser except when uploading raw files
-cov_2145knos0z.s[5]++;
+cov_2q2jexkalk.s[5]++;
 app.use((0, _cors2.default)());
-cov_2145knos0z.s[6]++;
+cov_2q2jexkalk.s[6]++;
 app.use(require('express-promise')());
-cov_2145knos0z.s[7]++;
+cov_2q2jexkalk.s[7]++;
 app.use((0, _expressBunyanLogger2.default)({
   name: "log",
   streams: [{
@@ -485,16 +485,16 @@ app.use((0, _expressBunyanLogger2.default)({
 /**
  * set secret variable for auth processes
  */
-cov_2145knos0z.s[8]++;
+cov_2q2jexkalk.s[8]++;
 app.set('superSecret', secret);
 
 /**
  * Set a route
  */
-cov_2145knos0z.s[9]++;
+cov_2q2jexkalk.s[9]++;
 app.get('/', function (req, res) {
-  cov_2145knos0z.f[0]++;
-  cov_2145knos0z.s[10]++;
+  cov_2q2jexkalk.f[0]++;
+  cov_2q2jexkalk.s[10]++;
 
   res.send('This is an api. Connect to /api/:whatyouwant to get something.');
 });
@@ -509,25 +509,25 @@ exports.default = app;
  * Static asset files
  */
 
-var assetsPath = (cov_2145knos0z.s[11]++, (0, _path.resolve)(__dirname + '/../assets'));
-cov_2145knos0z.s[12]++;
+var assetsPath = (cov_2q2jexkalk.s[11]++, (0, _path.resolve)(__dirname + '/../assets'));
+cov_2q2jexkalk.s[12]++;
 app.use('/assets', _express2.default.static(assetsPath));
 
 /**
  * Open data provider
  */
-cov_2145knos0z.s[13]++;
+cov_2q2jexkalk.s[13]++;
 app.use('/services/data-provider', _dataProvider.router);
 
 /**
  * Create API router
  */
-var apiRoutes = (cov_2145knos0z.s[14]++, _express2.default.Router());
+var apiRoutes = (cov_2q2jexkalk.s[14]++, _express2.default.Router());
 
 /**
  * No-token authentication-related routes
  */
-cov_2145knos0z.s[15]++;
+cov_2q2jexkalk.s[15]++;
 apiRoutes.use('/', _auth.api);
 
 /**
@@ -542,42 +542,42 @@ apiRoutes.use('/', _auth.api);
 /**
  * Protected api routes
  */
-cov_2145knos0z.s[16]++;
+cov_2q2jexkalk.s[16]++;
 apiRoutes.use('/users', _users.api);
-cov_2145knos0z.s[17]++;
+cov_2q2jexkalk.s[17]++;
 apiRoutes.use('/assets', _assets.api);
-cov_2145knos0z.s[18]++;
+cov_2q2jexkalk.s[18]++;
 apiRoutes.use('/resources', _resources.api);
-cov_2145knos0z.s[19]++;
+cov_2q2jexkalk.s[19]++;
 apiRoutes.use('/compositions', _compositions.api);
-cov_2145knos0z.s[20]++;
+cov_2q2jexkalk.s[20]++;
 apiRoutes.use('/diffusions', _diffusions.api);
-cov_2145knos0z.s[21]++;
+cov_2q2jexkalk.s[21]++;
 apiRoutes.use('/montages', _montages.api);
-cov_2145knos0z.s[22]++;
+cov_2q2jexkalk.s[22]++;
 apiRoutes.use('/deliverables', _deliverables.api);
 
 /**
  * Connect the api router to the app
  */
-cov_2145knos0z.s[23]++;
+cov_2q2jexkalk.s[23]++;
 app.use('/api', apiRoutes);
 
 /**
  * SERVICES router
  */
-var serviceRoutes = (cov_2145knos0z.s[24]++, _express2.default.Router());
+var serviceRoutes = (cov_2q2jexkalk.s[24]++, _express2.default.Router());
 
-cov_2145knos0z.s[25]++;
+cov_2q2jexkalk.s[25]++;
 serviceRoutes.use('/html2img', _html2img.router);
-cov_2145knos0z.s[26]++;
+cov_2q2jexkalk.s[26]++;
 serviceRoutes.use('/dump', _dump.router);
 
-cov_2145knos0z.s[27]++;
+cov_2q2jexkalk.s[27]++;
 app.use('/services', serviceRoutes);
 
 /**
  * Connect error handler
  */
-cov_2145knos0z.s[28]++;
+cov_2q2jexkalk.s[28]++;
 app.use(_middlewares.errorHandler);

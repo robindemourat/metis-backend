@@ -4,13 +4,13 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var cov_1aykob9pcy = function () {
-  var path = '/Users/rawbin/Documents/Projets/collaborations/ensad-publishing/prototype/plurishing-backend/src/utils/crypto.js',
-      hash = 'b79d327f30bb8e0760092174db13346cd9d9812b',
+var cov_30hjr3eoc = function () {
+  var path = '/Users/rawbin/Documents/Projets/collaborations/ensad-publishing/prototype/metis-backend/src/utils/crypto.js',
+      hash = '2585ef147d94180b364f1a14a7b802e65b6efe33',
       global = new Function('return this')(),
       gcv = '__coverage__',
       coverageData = {
-    path: '/Users/rawbin/Documents/Projets/collaborations/ensad-publishing/prototype/plurishing-backend/src/utils/crypto.js',
+    path: '/Users/rawbin/Documents/Projets/collaborations/ensad-publishing/prototype/metis-backend/src/utils/crypto.js',
     statementMap: {
       '0': {
         start: {
@@ -150,22 +150,22 @@ var cov_1aykob9pcy = function () {
 }();
 
 /**
- * Plurishing-backend
+ * Metis-backend
  * =======
  * Crypto utils
  */
-var bcrypt = (cov_1aykob9pcy.s[0]++, require('bcrypt'));
-var saltRounds = (cov_1aykob9pcy.s[1]++, 10);
+var bcrypt = (cov_30hjr3eoc.s[0]++, require('bcrypt'));
+var saltRounds = (cov_30hjr3eoc.s[1]++, 10);
 
 /**
  * Encodes a string into a crypted hash
  * @param {str} pwd - the string to encoded
  * @return {Promise}
  */
-cov_1aykob9pcy.s[2]++;
+cov_30hjr3eoc.s[2]++;
 var hash = exports.hash = function hash(pwd) {
-  cov_1aykob9pcy.f[0]++;
-  cov_1aykob9pcy.s[3]++;
+  cov_30hjr3eoc.f[0]++;
+  cov_30hjr3eoc.s[3]++;
   return bcrypt.hash(pwd, saltRounds);
 };
 
@@ -175,9 +175,9 @@ var hash = exports.hash = function hash(pwd) {
  * @param {string} hash
  * @return {Promise} - resolves with a boolean as parameter
  */
-cov_1aykob9pcy.s[4]++;
+cov_30hjr3eoc.s[4]++;
 var comparePwd = exports.comparePwd = function comparePwd(pwd, hash) {
-  cov_1aykob9pcy.f[1]++;
-  cov_1aykob9pcy.s[5]++;
+  cov_30hjr3eoc.f[1]++;
+  cov_30hjr3eoc.s[5]++;
   return bcrypt.compare(pwd, hash);
 };

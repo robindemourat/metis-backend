@@ -4,13 +4,13 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var cov_2qi3fx3eqm = function () {
-  var path = '/Users/rawbin/Documents/Projets/collaborations/ensad-publishing/prototype/plurishing-backend/src/services/html2img/html2img.service.js',
-      hash = 'b604cfba3a9a7cbd991e902b06b1dc767f422dd1',
+var cov_1rwoz7jvgf = function () {
+  var path = '/Users/rawbin/Documents/Projets/collaborations/ensad-publishing/prototype/metis-backend/src/services/html2img/html2img.service.js',
+      hash = '2240ad9cdc0f584516638b0e3cc00f0c55984b8d',
       global = new Function('return this')(),
       gcv = '__coverage__',
       coverageData = {
-    path: '/Users/rawbin/Documents/Projets/collaborations/ensad-publishing/prototype/plurishing-backend/src/services/html2img/html2img.service.js',
+    path: '/Users/rawbin/Documents/Projets/collaborations/ensad-publishing/prototype/metis-backend/src/services/html2img/html2img.service.js',
     statementMap: {
       '0': {
         start: {
@@ -106,8 +106,8 @@ var cov_2qi3fx3eqm = function () {
 }();
 
 exports.default = function (html, path, callback) {
-  cov_2qi3fx3eqm.f[0]++;
-  cov_2qi3fx3eqm.s[0]++;
+  cov_1rwoz7jvgf.f[0]++;
+  cov_1rwoz7jvgf.s[0]++;
 
   (0, _webshot2.default)(html, path, {
     siteType: 'html',
@@ -121,8 +121,8 @@ exports.default = function (html, path, callback) {
       height: 'all'
     }
   }, function (err) {
-    cov_2qi3fx3eqm.f[1]++;
-    cov_2qi3fx3eqm.s[1]++;
+    cov_1rwoz7jvgf.f[1]++;
+    cov_1rwoz7jvgf.s[1]++;
 
     callback(err);
   });

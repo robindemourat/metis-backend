@@ -4,13 +4,13 @@ var _keys = require('babel-runtime/core-js/object/keys');
 
 var _keys2 = _interopRequireDefault(_keys);
 
-var cov_qrl02b2uj = function () {
-    var path = '/Users/rawbin/Documents/Projets/collaborations/ensad-publishing/prototype/plurishing-backend/src/components/resources/resources.design.spec.js',
-        hash = 'd678d484c467d49f8d8312780b5d035293b32a5b',
+var cov_1ukzqucbo7 = function () {
+    var path = '/Users/rawbin/Documents/Projets/collaborations/ensad-publishing/prototype/metis-backend/src/components/resources/resources.design.spec.js',
+        hash = '79a2b115cbc8a497e82eb4e58c4a904fb33a125c',
         global = new Function('return this')(),
         gcv = '__coverage__',
         coverageData = {
-        path: '/Users/rawbin/Documents/Projets/collaborations/ensad-publishing/prototype/plurishing-backend/src/components/resources/resources.design.spec.js',
+        path: '/Users/rawbin/Documents/Projets/collaborations/ensad-publishing/prototype/metis-backend/src/components/resources/resources.design.spec.js',
         statementMap: {
             '0': {
                 start: {
@@ -182,25 +182,25 @@ var _resources2 = _interopRequireDefault(_resources);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-cov_qrl02b2uj.s[0]++;
+cov_1ukzqucbo7.s[0]++;
 
 
 describe('Resources couchdb design', function () {
-    cov_qrl02b2uj.f[0]++;
-    cov_qrl02b2uj.s[1]++;
+    cov_1ukzqucbo7.f[0]++;
+    cov_1ukzqucbo7.s[1]++;
 
     it('should eval each view map as a function', function (done) {
-        cov_qrl02b2uj.f[1]++;
-        cov_qrl02b2uj.s[2]++;
+        cov_1ukzqucbo7.f[1]++;
+        cov_1ukzqucbo7.s[2]++;
 
         (0, _keys2.default)(_resources2.default.views).forEach(function (id) {
-            cov_qrl02b2uj.f[2]++;
+            cov_1ukzqucbo7.f[2]++;
 
-            var view = (cov_qrl02b2uj.s[3]++, _resources2.default.views[id]);
-            cov_qrl02b2uj.s[4]++;
+            var view = (cov_1ukzqucbo7.s[3]++, _resources2.default.views[id]);
+            cov_1ukzqucbo7.s[4]++;
             (0, _chai.expect)(eval('(' + view.map + ')')).to.be.a('function');
         });
-        cov_qrl02b2uj.s[5]++;
+        cov_1ukzqucbo7.s[5]++;
         done();
     });
 });

@@ -1,5 +1,5 @@
 // /**
-//  * Plurishing-backend
+//  * Metis-backend
 //  * =======
 //  * Resources component controller
 //  */

@@ -16,13 +16,13 @@ var _promise = require('babel-runtime/core-js/promise');
 
 var _promise2 = _interopRequireDefault(_promise);
 
-var cov_kdrnqpj18 = function () {
-  var path = '/Users/rawbin/Documents/Projets/collaborations/ensad-publishing/prototype/plurishing-backend/src/releasers/pdf/pdf.generator.js',
-      hash = 'dfb8304ddfef7b18a53951d607753180daef8b93',
+var cov_l44h4nr0x = function () {
+  var path = '/Users/rawbin/Documents/Projets/collaborations/ensad-publishing/prototype/metis-backend/src/releasers/pdf/pdf.generator.js',
+      hash = 'f860a2a96c3d8f9827286119761a88f5dc56377d',
       global = new Function('return this')(),
       gcv = '__coverage__',
       coverageData = {
-    path: '/Users/rawbin/Documents/Projets/collaborations/ensad-publishing/prototype/plurishing-backend/src/releasers/pdf/pdf.generator.js',
+    path: '/Users/rawbin/Documents/Projets/collaborations/ensad-publishing/prototype/metis-backend/src/releasers/pdf/pdf.generator.js',
     statementMap: {
       '0': {
         start: {
@@ -351,15 +351,15 @@ var _prince = require('prince');
 
 var _prince2 = _interopRequireDefault(_prince);
 
-var _PdfNoteContentPointer = require('plurishing-shared/dist/components/views/static/PdfNoteContentPointer');
+var _PdfNoteContentPointer = require('metis-shared/dist/components/views/static/PdfNoteContentPointer');
 
 var _PdfNoteContentPointer2 = _interopRequireDefault(_PdfNoteContentPointer);
 
-var _PdfNotePointerPointer = require('plurishing-shared/dist/components/views/static/PdfNotePointerPointer');
+var _PdfNotePointerPointer = require('metis-shared/dist/components/views/static/PdfNotePointerPointer');
 
 var _PdfNotePointerPointer2 = _interopRequireDefault(_PdfNotePointerPointer);
 
-var _PdfLink = require('plurishing-shared/dist/components/views/static/PdfLink');
+var _PdfLink = require('metis-shared/dist/components/views/static/PdfLink');
 
 var _PdfLink2 = _interopRequireDefault(_PdfLink);
 
@@ -378,14 +378,14 @@ function generatePdf(_ref, onFileGenerated) {
       citationLocale = _ref.citationLocale,
       getAssetUri = _ref.getAssetUri,
       _ref$styles = _ref.styles,
-      styles = _ref$styles === undefined ? (cov_kdrnqpj18.b[0][0]++, '') : _ref$styles;
-  cov_kdrnqpj18.f[0]++;
-  cov_kdrnqpj18.s[0]++;
+      styles = _ref$styles === undefined ? (cov_l44h4nr0x.b[0][0]++, '') : _ref$styles;
+  cov_l44h4nr0x.f[0]++;
+  cov_l44h4nr0x.s[0]++;
 
   return new _promise2.default(function (resolve, reject) {
-    cov_kdrnqpj18.f[1]++;
+    cov_l44h4nr0x.f[1]++;
 
-    var str = (cov_kdrnqpj18.s[1]++, _server2.default.renderToStaticMarkup(_react2.default.createElement(
+    var str = (cov_l44h4nr0x.s[1]++, _server2.default.renderToStaticMarkup(_react2.default.createElement(
       'html',
       null,
       _react2.default.createElement(
@@ -416,27 +416,27 @@ function generatePdf(_ref, onFileGenerated) {
       )
     )));
 
-    var id = (cov_kdrnqpj18.s[2]++, (0, _uuid.v4)());
-    var tempHtml = (cov_kdrnqpj18.s[3]++, tempDirPath + '/' + id + '.html');
-    var tempPdf = (cov_kdrnqpj18.s[4]++, outputDirPath + '/' + id + '.pdf');
-    cov_kdrnqpj18.s[5]++;
+    var id = (cov_l44h4nr0x.s[2]++, (0, _uuid.v4)());
+    var tempHtml = (cov_l44h4nr0x.s[3]++, tempDirPath + '/' + id + '.html');
+    var tempPdf = (cov_l44h4nr0x.s[4]++, outputDirPath + '/' + id + '.pdf');
+    cov_l44h4nr0x.s[5]++;
     (0, _fsExtra.writeFile)(tempHtml, str).then(function () {
-      cov_kdrnqpj18.f[2]++;
-      cov_kdrnqpj18.s[6]++;
+      cov_l44h4nr0x.f[2]++;
+      cov_l44h4nr0x.s[6]++;
 
       return (0, _prince2.default)().inputs(tempHtml).output(tempPdf).execute();
     }).then(function () {
-      cov_kdrnqpj18.f[3]++;
-      cov_kdrnqpj18.s[7]++;
+      cov_l44h4nr0x.f[3]++;
+      cov_l44h4nr0x.s[7]++;
 
       return onFileGenerated(tempPdf);
     }).then(function () {
-      cov_kdrnqpj18.f[4]++;
-      cov_kdrnqpj18.s[8]++;
+      cov_l44h4nr0x.f[4]++;
+      cov_l44h4nr0x.s[8]++;
       return (0, _fsExtra.remove)(tempHtml);
     }).then(function () {
-      cov_kdrnqpj18.f[5]++;
-      cov_kdrnqpj18.s[9]++;
+      cov_l44h4nr0x.f[5]++;
+      cov_l44h4nr0x.s[9]++;
       return (0, _fsExtra.remove)(tempPdf);
     }).then(resolve).catch(reject);
   });

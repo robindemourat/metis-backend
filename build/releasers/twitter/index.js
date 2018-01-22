@@ -5,13 +5,13 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.montageToTweet = exports.tweet = undefined;
 
-var cov_1xglybftuh = function () {
-  var path = '/Users/rawbin/Documents/Projets/collaborations/ensad-publishing/prototype/plurishing-backend/src/releasers/twitter/index.js',
-      hash = '3335e06439df2af096b0de03450277920f04deb8',
+var cov_1hy90l6eog = function () {
+  var path = '/Users/rawbin/Documents/Projets/collaborations/ensad-publishing/prototype/metis-backend/src/releasers/twitter/index.js',
+      hash = '05f6ec33cf5bd6ef83fa24dbbfb7dd7862171a64',
       global = new Function('return this')(),
       gcv = '__coverage__',
       coverageData = {
-    path: '/Users/rawbin/Documents/Projets/collaborations/ensad-publishing/prototype/plurishing-backend/src/releasers/twitter/index.js',
+    path: '/Users/rawbin/Documents/Projets/collaborations/ensad-publishing/prototype/metis-backend/src/releasers/twitter/index.js',
     statementMap: {},
     fnMap: {},
     branchMap: {},

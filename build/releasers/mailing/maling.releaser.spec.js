@@ -1,12 +1,12 @@
 "use strict";
 
-var cov_fptiknw1t = function () {
-  var path = "/Users/rawbin/Documents/Projets/collaborations/ensad-publishing/prototype/plurishing-backend/src/releasers/mailing/maling.releaser.spec.js",
-      hash = "521bd6e7f210f3c2abc52dc98646e16f108502dc",
+var cov_c05cy37l9 = function () {
+  var path = "/Users/rawbin/Documents/Projets/collaborations/ensad-publishing/prototype/metis-backend/src/releasers/mailing/maling.releaser.spec.js",
+      hash = "a6c5b75039c870410fc8a0a5f978448908f86a15",
       global = new Function('return this')(),
       gcv = "__coverage__",
       coverageData = {
-    path: "/Users/rawbin/Documents/Projets/collaborations/ensad-publishing/prototype/plurishing-backend/src/releasers/mailing/maling.releaser.spec.js",
+    path: "/Users/rawbin/Documents/Projets/collaborations/ensad-publishing/prototype/metis-backend/src/releasers/mailing/maling.releaser.spec.js",
     statementMap: {},
     fnMap: {},
     branchMap: {},

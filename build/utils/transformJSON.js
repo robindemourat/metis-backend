@@ -8,13 +8,13 @@ var _promise = require('babel-runtime/core-js/promise');
 
 var _promise2 = _interopRequireDefault(_promise);
 
-var cov_2bjhso94w5 = function () {
-  var path = '/Users/rawbin/Documents/Projets/collaborations/ensad-publishing/prototype/plurishing-backend/src/utils/transformJSON.js',
-      hash = '5382ff60b3912f8fa5d595c66b573cca67e2d9c3',
+var cov_1aak4odh77 = function () {
+  var path = '/Users/rawbin/Documents/Projets/collaborations/ensad-publishing/prototype/metis-backend/src/utils/transformJSON.js',
+      hash = 'edd99016fbf627509ba21a76fb518d8a5fd0b733',
       global = new Function('return this')(),
       gcv = '__coverage__',
       coverageData = {
-    path: '/Users/rawbin/Documents/Projets/collaborations/ensad-publishing/prototype/plurishing-backend/src/utils/transformJSON.js',
+    path: '/Users/rawbin/Documents/Projets/collaborations/ensad-publishing/prototype/metis-backend/src/utils/transformJSON.js',
     statementMap: {
       '0': {
         start: {
@@ -762,7 +762,7 @@ var _ajv2 = _interopRequireDefault(_ajv);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var ajv = (cov_2bjhso94w5.s[0]++, new _ajv2.default());
+var ajv = (cov_1aak4odh77.s[0]++, new _ajv2.default());
 
 /**
  * Retrieves the arguments name of a function
@@ -770,8 +770,8 @@ var ajv = (cov_2bjhso94w5.s[0]++, new _ajv2.default());
  * @return {array} arguments - the arguments names
  */
 function $args(func) {
-  cov_2bjhso94w5.f[0]++;
-  cov_2bjhso94w5.s[1]++;
+  cov_1aak4odh77.f[0]++;
+  cov_1aak4odh77.s[1]++;
 
   return (func + '').replace(/[/][/].*$/mg, '') // strip single-line comments
   .replace(/\s+/g, '') // strip white space
@@ -792,117 +792,117 @@ function $args(func) {
  * - provide a node-js style callback as second argument
  * @return {Promise} promise
  */
-cov_2bjhso94w5.s[2]++;
+cov_1aak4odh77.s[2]++;
 var transformJSON = function transformJSON(inputData, inputSchema, outputSchema, transformFunction) {
-  cov_2bjhso94w5.f[1]++;
-  cov_2bjhso94w5.s[3]++;
+  cov_1aak4odh77.f[1]++;
+  cov_1aak4odh77.s[3]++;
   return new _promise2.default(function (resolve, reject) {
-    cov_2bjhso94w5.f[2]++;
-    cov_2bjhso94w5.s[4]++;
+    cov_1aak4odh77.f[2]++;
+    cov_1aak4odh77.s[4]++;
 
     try {
       // verify input is valid
-      var inputIsValid = (cov_2bjhso94w5.s[5]++, ajv.validate(inputSchema, inputData));
-      cov_2bjhso94w5.s[6]++;
+      var inputIsValid = (cov_1aak4odh77.s[5]++, ajv.validate(inputSchema, inputData));
+      cov_1aak4odh77.s[6]++;
       if (!inputIsValid) {
-        cov_2bjhso94w5.b[0][0]++;
-        cov_2bjhso94w5.s[7]++;
+        cov_1aak4odh77.b[0][0]++;
+        cov_1aak4odh77.s[7]++;
 
         return reject(ajv.errors);
       } else {
-        cov_2bjhso94w5.b[0][1]++;
+        cov_1aak4odh77.b[0][1]++;
       }
       // check if transform function presents a callback
-      cov_2bjhso94w5.s[8]++;
+      cov_1aak4odh77.s[8]++;
       if ($args(transformFunction).length > 1) {
-        cov_2bjhso94w5.b[1][0]++;
-        cov_2bjhso94w5.s[9]++;
+        cov_1aak4odh77.b[1][0]++;
+        cov_1aak4odh77.s[9]++;
 
         // resolve with callback
         return transformFunction(inputData, function (err, output) {
-          cov_2bjhso94w5.f[3]++;
-          cov_2bjhso94w5.s[10]++;
+          cov_1aak4odh77.f[3]++;
+          cov_1aak4odh77.s[10]++;
 
           if (err) {
-            cov_2bjhso94w5.b[2][0]++;
-            cov_2bjhso94w5.s[11]++;
+            cov_1aak4odh77.b[2][0]++;
+            cov_1aak4odh77.s[11]++;
 
             return reject(err);
           } else {
-            cov_2bjhso94w5.b[2][1]++;
+            cov_1aak4odh77.b[2][1]++;
 
             // apply transform function to input
-            var outputIsValid = (cov_2bjhso94w5.s[12]++, ajv.validate(outputSchema, output));
-            cov_2bjhso94w5.s[13]++;
+            var outputIsValid = (cov_1aak4odh77.s[12]++, ajv.validate(outputSchema, output));
+            cov_1aak4odh77.s[13]++;
             if (!outputIsValid) {
-              cov_2bjhso94w5.b[3][0]++;
-              cov_2bjhso94w5.s[14]++;
+              cov_1aak4odh77.b[3][0]++;
+              cov_1aak4odh77.s[14]++;
 
               reject(ajv.errors);
             } else {
-              cov_2bjhso94w5.b[3][1]++;
-              cov_2bjhso94w5.s[15]++;
+              cov_1aak4odh77.b[3][1]++;
+              cov_1aak4odh77.s[15]++;
 
               resolve(output);
             }
           }
         });
       } else {
-        cov_2bjhso94w5.b[1][1]++;
+        cov_1aak4odh77.b[1][1]++;
       }
       // apply transform function to input
-      var outputTemp = (cov_2bjhso94w5.s[16]++, transformFunction(inputData));
+      var outputTemp = (cov_1aak4odh77.s[16]++, transformFunction(inputData));
       // if the function has returned a promise resolve it
-      cov_2bjhso94w5.s[17]++;
+      cov_1aak4odh77.s[17]++;
       if (outputTemp instanceof _promise2.default) {
-        cov_2bjhso94w5.b[4][0]++;
-        cov_2bjhso94w5.s[18]++;
+        cov_1aak4odh77.b[4][0]++;
+        cov_1aak4odh77.s[18]++;
 
         outputTemp.then(function (output) {
-          cov_2bjhso94w5.f[4]++;
+          cov_1aak4odh77.f[4]++;
 
           // verify that output complies to output schema
-          var outputIsValid = (cov_2bjhso94w5.s[19]++, ajv.validate(outputSchema, output));
-          cov_2bjhso94w5.s[20]++;
+          var outputIsValid = (cov_1aak4odh77.s[19]++, ajv.validate(outputSchema, output));
+          cov_1aak4odh77.s[20]++;
           if (outputIsValid) {
-            cov_2bjhso94w5.b[5][0]++;
-            cov_2bjhso94w5.s[21]++;
+            cov_1aak4odh77.b[5][0]++;
+            cov_1aak4odh77.s[21]++;
 
             resolve(output);
           } else {
-            cov_2bjhso94w5.b[5][1]++;
-            cov_2bjhso94w5.s[22]++;
+            cov_1aak4odh77.b[5][1]++;
+            cov_1aak4odh77.s[22]++;
 
             // @todo normalize error response
             reject(new Error());
           }
         }).catch(function (e) {
-          cov_2bjhso94w5.f[5]++;
-          cov_2bjhso94w5.s[23]++;
+          cov_1aak4odh77.f[5]++;
+          cov_1aak4odh77.s[23]++;
 
           reject(e);
         });
       } else {
-        cov_2bjhso94w5.b[4][1]++;
+        cov_1aak4odh77.b[4][1]++;
 
         // verify output complies to output schema
-        var outputIsValid = (cov_2bjhso94w5.s[24]++, ajv.validate(outputSchema, outputTemp));
-        cov_2bjhso94w5.s[25]++;
+        var outputIsValid = (cov_1aak4odh77.s[24]++, ajv.validate(outputSchema, outputTemp));
+        cov_1aak4odh77.s[25]++;
         if (outputIsValid) {
-          cov_2bjhso94w5.b[6][0]++;
-          cov_2bjhso94w5.s[26]++;
+          cov_1aak4odh77.b[6][0]++;
+          cov_1aak4odh77.s[26]++;
 
           resolve(outputTemp);
         } else {
-          cov_2bjhso94w5.b[6][1]++;
-          cov_2bjhso94w5.s[27]++;
+          cov_1aak4odh77.b[6][1]++;
+          cov_1aak4odh77.s[27]++;
 
           // @todo normalize error response
           reject(new Error());
         }
       }
     } catch (e) {
-      cov_2bjhso94w5.s[28]++;
+      cov_1aak4odh77.s[28]++;
 
       reject(e);
     }

@@ -9,13 +9,13 @@ var _promise = require('babel-runtime/core-js/promise');
 
 var _promise2 = _interopRequireDefault(_promise);
 
-var cov_2mna9o3sx8 = function () {
-  var path = '/Users/rawbin/Documents/Projets/collaborations/ensad-publishing/prototype/plurishing-backend/src/releasers/dynamicpublication/dynamicpublication.controller.js',
-      hash = 'c5e8fd408080419c690ed8b6c0b89800e5db1b3b',
+var cov_299pylb3r1 = function () {
+  var path = '/Users/rawbin/Documents/Projets/collaborations/ensad-publishing/prototype/metis-backend/src/releasers/dynamicpublication/dynamicpublication.controller.js',
+      hash = 'cfe0c3dae4f289298b293de0b17f23ab81b26722',
       global = new Function('return this')(),
       gcv = '__coverage__',
       coverageData = {
-    path: '/Users/rawbin/Documents/Projets/collaborations/ensad-publishing/prototype/plurishing-backend/src/releasers/dynamicpublication/dynamicpublication.controller.js',
+    path: '/Users/rawbin/Documents/Projets/collaborations/ensad-publishing/prototype/metis-backend/src/releasers/dynamicpublication/dynamicpublication.controller.js',
     statementMap: {
       '0': {
         start: {
@@ -319,49 +319,49 @@ var _web2 = _interopRequireDefault(_web);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-cov_2mna9o3sx8.s[0]++;
+cov_299pylb3r1.s[0]++;
 var release = exports.release = function release(diffusion) {
-  cov_2mna9o3sx8.f[0]++;
-  cov_2mna9o3sx8.s[1]++;
+  cov_299pylb3r1.f[0]++;
+  cov_299pylb3r1.s[1]++;
 
   return new _promise2.default(function (resolve, reject) {
-    cov_2mna9o3sx8.f[1]++;
-    cov_2mna9o3sx8.s[2]++;
+    cov_299pylb3r1.f[1]++;
+    cov_299pylb3r1.s[2]++;
 
     // get related montage
     _montages.dal.getMontage({ id: diffusion.montage_id }).then(function (montage) {
-      cov_2mna9o3sx8.f[2]++;
-      cov_2mna9o3sx8.s[3]++;
+      cov_299pylb3r1.f[2]++;
+      cov_299pylb3r1.s[3]++;
 
       // fetch montage dependencies
       return (0, _data.fetchMontageDependencies)(montage);
     })
     // register all release operations to perform
     .then(function (data) {
-      cov_2mna9o3sx8.f[3]++;
+      cov_299pylb3r1.f[3]++;
 
-      var targets = (cov_2mna9o3sx8.s[4]++, diffusion.parameters.targets);
-      var operations = (cov_2mna9o3sx8.s[5]++, targets.map(function (targetId) {
-        cov_2mna9o3sx8.f[4]++;
-        cov_2mna9o3sx8.s[6]++;
+      var targets = (cov_299pylb3r1.s[4]++, diffusion.parameters.targets);
+      var operations = (cov_299pylb3r1.s[5]++, targets.map(function (targetId) {
+        cov_299pylb3r1.f[4]++;
+        cov_299pylb3r1.s[6]++;
 
         switch (targetId) {
 
           case 'web':
-            cov_2mna9o3sx8.b[0][0]++;
-            cov_2mna9o3sx8.s[7]++;
+            cov_299pylb3r1.b[0][0]++;
+            cov_299pylb3r1.s[7]++;
 
             return (0, _web2.default)(data, diffusion);
 
           default:
-            cov_2mna9o3sx8.b[0][1]++;
-            cov_2mna9o3sx8.s[8]++;
+            cov_299pylb3r1.b[0][1]++;
+            cov_299pylb3r1.s[8]++;
 
             return _promise2.default.resolve();
         }
       }));
       // execute
-      cov_2mna9o3sx8.s[9]++;
+      cov_299pylb3r1.s[9]++;
       return _promise2.default.all(operations);
     }).then(resolve).catch(reject);
   });

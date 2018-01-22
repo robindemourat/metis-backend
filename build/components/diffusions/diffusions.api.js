@@ -4,13 +4,13 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var cov_dkgubufbr = function () {
-  var path = '/Users/rawbin/Documents/Projets/collaborations/ensad-publishing/prototype/plurishing-backend/src/components/diffusions/diffusions.api.js',
-      hash = '88d09c23490b58f88bd3342092a36f95a760fc04',
+var cov_2hrr04exqb = function () {
+  var path = '/Users/rawbin/Documents/Projets/collaborations/ensad-publishing/prototype/metis-backend/src/components/diffusions/diffusions.api.js',
+      hash = 'd402ee9773ffff6c761e6daba705e374d1cd329e',
       global = new Function('return this')(),
       gcv = '__coverage__',
       coverageData = {
-    path: '/Users/rawbin/Documents/Projets/collaborations/ensad-publishing/prototype/plurishing-backend/src/components/diffusions/diffusions.api.js',
+    path: '/Users/rawbin/Documents/Projets/collaborations/ensad-publishing/prototype/metis-backend/src/components/diffusions/diffusions.api.js',
     statementMap: {
       '0': {
         start: {
@@ -96,7 +96,7 @@ var cov_dkgubufbr = function () {
   coverageData.hash = hash;
   return coverage[path] = coverageData;
 }(); /**
-      * Plurishing-backend
+      * Metis-backend
       * =======
       * Diffusion api
       */
@@ -109,17 +109,17 @@ var _diffusions = require('./diffusions.controller');
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var router = (cov_dkgubufbr.s[0]++, new _express2.default.Router());
+var router = (cov_2hrr04exqb.s[0]++, new _express2.default.Router());
 
-cov_dkgubufbr.s[1]++;
+cov_2hrr04exqb.s[1]++;
 router.get('/', _diffusions.getDiffusions);
-cov_dkgubufbr.s[2]++;
+cov_2hrr04exqb.s[2]++;
 router.get('/:id', _diffusions.getDiffusion);
-cov_dkgubufbr.s[3]++;
+cov_2hrr04exqb.s[3]++;
 router.post('/', _diffusions.createDiffusion);
-cov_dkgubufbr.s[4]++;
+cov_2hrr04exqb.s[4]++;
 router.put('/:id', _diffusions.updateDiffusion);
-cov_dkgubufbr.s[5]++;
+cov_2hrr04exqb.s[5]++;
 router.delete('/:id', _diffusions.deleteDiffusion);
 
 exports.default = router;

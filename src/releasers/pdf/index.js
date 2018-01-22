@@ -5,7 +5,7 @@ import {readFileSync} from 'fs';
 /**
  * @todo use proper component to render pdf view
  */
-import Component from 'plurishing-shared/dist/components/previews/StaticMontagePreview/PreviewContainer';
+import Component from 'metis-shared/dist/components/previews/StaticMontagePreview/PreviewContainer';
 
 
 import {
@@ -18,7 +18,7 @@ import {dal as deliverableDal} from '../../components/deliverables';
 
 
 const tempDirPath = resolvePath(__dirname + '/../../../temp');
-const styles = readFileSync(resolvePath(__dirname + '/../../../node_modules/plurishing-shared/dist/style.css'), 'utf8');
+const styles = readFileSync(resolvePath(__dirname + '/../../../node_modules/metis-shared/dist/style.css'), 'utf8');
 
 
 export default function publish(data, diffusion) {

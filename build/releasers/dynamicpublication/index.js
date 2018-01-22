@@ -5,13 +5,13 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.controller = undefined;
 
-var cov_1mb3k43l4n = function () {
-  var path = '/Users/rawbin/Documents/Projets/collaborations/ensad-publishing/prototype/plurishing-backend/src/releasers/dynamicpublication/index.js',
-      hash = 'cec263047a51625eb70a2f2acdc6b0385868610b',
+var cov_1ot9886tvr = function () {
+  var path = '/Users/rawbin/Documents/Projets/collaborations/ensad-publishing/prototype/metis-backend/src/releasers/dynamicpublication/index.js',
+      hash = 'fd87afa6f35d542ccbc2118396e290939bb2d68b',
       global = new Function('return this')(),
       gcv = '__coverage__',
       coverageData = {
-    path: '/Users/rawbin/Documents/Projets/collaborations/ensad-publishing/prototype/plurishing-backend/src/releasers/dynamicpublication/index.js',
+    path: '/Users/rawbin/Documents/Projets/collaborations/ensad-publishing/prototype/metis-backend/src/releasers/dynamicpublication/index.js',
     statementMap: {},
     fnMap: {},
     branchMap: {},

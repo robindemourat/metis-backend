@@ -4,13 +4,13 @@ var _keys = require('babel-runtime/core-js/object/keys');
 
 var _keys2 = _interopRequireDefault(_keys);
 
-var cov_1ml11yyf7c = function () {
-    var path = '/Users/rawbin/Documents/Projets/collaborations/ensad-publishing/prototype/plurishing-backend/src/components/assets/assets.design.spec.js',
-        hash = '0303ed2792952cbb975ed57f2fbfd67c7379efe0',
+var cov_1e7gs5lhoj = function () {
+    var path = '/Users/rawbin/Documents/Projets/collaborations/ensad-publishing/prototype/metis-backend/src/components/assets/assets.design.spec.js',
+        hash = '8219e3adcd191ed5e87be6dea51a9a9d4056dd11',
         global = new Function('return this')(),
         gcv = '__coverage__',
         coverageData = {
-        path: '/Users/rawbin/Documents/Projets/collaborations/ensad-publishing/prototype/plurishing-backend/src/components/assets/assets.design.spec.js',
+        path: '/Users/rawbin/Documents/Projets/collaborations/ensad-publishing/prototype/metis-backend/src/components/assets/assets.design.spec.js',
         statementMap: {
             '0': {
                 start: {
@@ -182,25 +182,25 @@ var _assets2 = _interopRequireDefault(_assets);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-cov_1ml11yyf7c.s[0]++;
+cov_1e7gs5lhoj.s[0]++;
 
 
 describe('Assets couchdb design', function () {
-    cov_1ml11yyf7c.f[0]++;
-    cov_1ml11yyf7c.s[1]++;
+    cov_1e7gs5lhoj.f[0]++;
+    cov_1e7gs5lhoj.s[1]++;
 
     it('should eval each view map as a function', function (done) {
-        cov_1ml11yyf7c.f[1]++;
-        cov_1ml11yyf7c.s[2]++;
+        cov_1e7gs5lhoj.f[1]++;
+        cov_1e7gs5lhoj.s[2]++;
 
         (0, _keys2.default)(_assets2.default.views).forEach(function (id) {
-            cov_1ml11yyf7c.f[2]++;
+            cov_1e7gs5lhoj.f[2]++;
 
-            var view = (cov_1ml11yyf7c.s[3]++, _assets2.default.views[id]);
-            cov_1ml11yyf7c.s[4]++;
+            var view = (cov_1e7gs5lhoj.s[3]++, _assets2.default.views[id]);
+            cov_1e7gs5lhoj.s[4]++;
             (0, _chai.expect)(eval('(' + view.map + ')')).to.be.a('function');
         });
-        cov_1ml11yyf7c.s[5]++;
+        cov_1e7gs5lhoj.s[5]++;
         done();
     });
 });

@@ -1,5 +1,5 @@
 module.exports = {
-  backofficeBaseUri: "http://plurishing-backoffice.surge.sh",
+  backofficeBaseUri: "http://metis-backoffice.surge.sh",
 
   websiteBuilderUri: '',
 

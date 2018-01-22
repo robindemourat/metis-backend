@@ -9,13 +9,13 @@ var _extends2 = require('babel-runtime/helpers/extends');
 
 var _extends3 = _interopRequireDefault(_extends2);
 
-var cov_u0pc63r4z = function () {
-  var path = '/Users/rawbin/Documents/Projets/collaborations/ensad-publishing/prototype/plurishing-backend/src/components/montages/montages.controller.js',
-      hash = '5a7673b9309a45188c56ac6efee47a0f4a233a32',
+var cov_rq5wbngxv = function () {
+  var path = '/Users/rawbin/Documents/Projets/collaborations/ensad-publishing/prototype/metis-backend/src/components/montages/montages.controller.js',
+      hash = 'a862879ffb84f31cdd4132a30559e474749f0ba0',
       global = new Function('return this')(),
       gcv = '__coverage__',
       coverageData = {
-    path: '/Users/rawbin/Documents/Projets/collaborations/ensad-publishing/prototype/plurishing-backend/src/components/montages/montages.controller.js',
+    path: '/Users/rawbin/Documents/Projets/collaborations/ensad-publishing/prototype/metis-backend/src/components/montages/montages.controller.js',
     statementMap: {
       '0': {
         start: {
@@ -416,7 +416,7 @@ var cov_u0pc63r4z = function () {
   coverageData.hash = hash;
   return coverage[path] = coverageData;
 }(); // /**
-//  * Plurishing-backend
+//  * Metis-backend
 //  * =======
 //  * Montages component controller
 //  */
@@ -431,10 +431,10 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
  * @param {object} res - the resource of query
  * @todo add filters handling through req queries
  */
-cov_u0pc63r4z.s[0]++;
+cov_rq5wbngxv.s[0]++;
 var getMontages = exports.getMontages = function getMontages(req, res) {
-  cov_u0pc63r4z.f[0]++;
-  cov_u0pc63r4z.s[1]++;
+  cov_rq5wbngxv.f[0]++;
+  cov_rq5wbngxv.s[1]++;
   return res.json((0, _montages.getMontages)({}));
 };
 
@@ -443,10 +443,10 @@ var getMontages = exports.getMontages = function getMontages(req, res) {
  * @param {object} req - the request of query
  * @param {object} res - the resource of query
  */
-cov_u0pc63r4z.s[2]++;
+cov_rq5wbngxv.s[2]++;
 var getMontage = exports.getMontage = function getMontage(req, res) {
-  cov_u0pc63r4z.f[1]++;
-  cov_u0pc63r4z.s[3]++;
+  cov_rq5wbngxv.f[1]++;
+  cov_rq5wbngxv.s[3]++;
   return res.json((0, _montages.getMontage)({
     id: req.params.id
   }));
@@ -457,10 +457,10 @@ var getMontage = exports.getMontage = function getMontage(req, res) {
  * @param {object} req - the request of query
  * @param {object} res - the resource of query
  */
-cov_u0pc63r4z.s[4]++;
+cov_rq5wbngxv.s[4]++;
 var createMontage = exports.createMontage = function createMontage(req, res) {
-  cov_u0pc63r4z.f[2]++;
-  cov_u0pc63r4z.s[5]++;
+  cov_rq5wbngxv.f[2]++;
+  cov_rq5wbngxv.s[5]++;
   return (
     // create the montage
     (0, _montages.createMontage)((0, _extends3.default)({}, req.body, {
@@ -469,12 +469,12 @@ var createMontage = exports.createMontage = function createMontage(req, res) {
     // return the montage
     .then(function (_ref) {
       var id = _ref.id;
-      cov_u0pc63r4z.f[3]++;
-      cov_u0pc63r4z.s[6]++;
+      cov_rq5wbngxv.f[3]++;
+      cov_rq5wbngxv.s[6]++;
       return (0, _montages.getMontage)({ id: id });
     }).then(function (montage) {
-      cov_u0pc63r4z.f[4]++;
-      cov_u0pc63r4z.s[7]++;
+      cov_rq5wbngxv.f[4]++;
+      cov_rq5wbngxv.s[7]++;
       return res.json(montage);
     })
   );
@@ -485,22 +485,22 @@ var createMontage = exports.createMontage = function createMontage(req, res) {
  * @param {object} req - the request of query
  * @param {object} res - the resource of query
  */
-cov_u0pc63r4z.s[8]++;
+cov_rq5wbngxv.s[8]++;
 var updateMontage = exports.updateMontage = function updateMontage(req, res) {
-  cov_u0pc63r4z.f[5]++;
-  cov_u0pc63r4z.s[9]++;
+  cov_rq5wbngxv.f[5]++;
+  cov_rq5wbngxv.s[9]++;
   return res.json(
   // update the montage
   (0, _montages.updateMontage)(req.params.id, req.body).
   // return the montage
   then(function (_ref2) {
     var id = _ref2.id;
-    cov_u0pc63r4z.f[6]++;
-    cov_u0pc63r4z.s[10]++;
+    cov_rq5wbngxv.f[6]++;
+    cov_rq5wbngxv.s[10]++;
     return (0, _montages.getMontage)({ id: id });
   }).then(function (montage) {
-    cov_u0pc63r4z.f[7]++;
-    cov_u0pc63r4z.s[11]++;
+    cov_rq5wbngxv.f[7]++;
+    cov_rq5wbngxv.s[11]++;
     return res.json(montage);
   }));
 };
@@ -510,9 +510,9 @@ var updateMontage = exports.updateMontage = function updateMontage(req, res) {
  * @param {object} req - the request of query
  * @param {object} res - the resource of query
  */
-cov_u0pc63r4z.s[12]++;
+cov_rq5wbngxv.s[12]++;
 var deleteMontage = exports.deleteMontage = function deleteMontage(req, res) {
-  cov_u0pc63r4z.f[8]++;
-  cov_u0pc63r4z.s[13]++;
+  cov_rq5wbngxv.f[8]++;
+  cov_rq5wbngxv.s[13]++;
   return res.json((0, _montages.deleteMontage)({ _id: req.params.id }));
 };

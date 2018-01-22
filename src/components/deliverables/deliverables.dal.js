@@ -1,5 +1,5 @@
 /**
- * Plurishing-backend
+ * Metis-backend
  * =======
  * Deliverable data access layer
  */
@@ -7,7 +7,7 @@ import {lookup} from 'mime-types';
 
 import db from '../../utils/plugDb';
 
-import {Deliverable as schema} from 'plurishing-schemas';
+import {Deliverable as schema} from 'metis-schemas';
 
 import design from './deliverables.design';
 import {addDesign} from '../../utils/couchdb';

@@ -9,13 +9,13 @@ var _extends2 = require('babel-runtime/helpers/extends');
 
 var _extends3 = _interopRequireDefault(_extends2);
 
-var cov_46ir9d5pi = function () {
-  var path = '/Users/rawbin/Documents/Projets/collaborations/ensad-publishing/prototype/plurishing-backend/src/components/assets/assets.controller.js',
-      hash = 'b32eac54ce44e16d8f86423a7a46738bb29d324e',
+var cov_100515d9mo = function () {
+  var path = '/Users/rawbin/Documents/Projets/collaborations/ensad-publishing/prototype/metis-backend/src/components/assets/assets.controller.js',
+      hash = 'd1ebbc19209a45a954aa149fd586cb77ae798d15',
       global = new Function('return this')(),
       gcv = '__coverage__',
       coverageData = {
-    path: '/Users/rawbin/Documents/Projets/collaborations/ensad-publishing/prototype/plurishing-backend/src/components/assets/assets.controller.js',
+    path: '/Users/rawbin/Documents/Projets/collaborations/ensad-publishing/prototype/metis-backend/src/components/assets/assets.controller.js',
     statementMap: {
       '0': {
         start: {
@@ -908,7 +908,7 @@ var cov_46ir9d5pi = function () {
   coverageData.hash = hash;
   return coverage[path] = coverageData;
 }(); /**
-      * Plurishing-backend
+      * Metis-backend
       * =======
       * Assets component controller
       */
@@ -936,10 +936,10 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
  * @param {object} res - the resource of query
  * @todo add filters handling through req queries
  */
-cov_46ir9d5pi.s[0]++;
+cov_100515d9mo.s[0]++;
 var getAssets = exports.getAssets = function getAssets(req, res) {
-  cov_46ir9d5pi.f[0]++;
-  cov_46ir9d5pi.s[1]++;
+  cov_100515d9mo.f[0]++;
+  cov_100515d9mo.s[1]++;
   return res.json((0, _assets.getAssets)({}));
 };
 
@@ -948,10 +948,10 @@ var getAssets = exports.getAssets = function getAssets(req, res) {
  * @param {object} req - the request of query
  * @param {object} res - the resource of query
  */
-cov_46ir9d5pi.s[2]++;
+cov_100515d9mo.s[2]++;
 var getAsset = exports.getAsset = function getAsset(req, res) {
-  cov_46ir9d5pi.f[1]++;
-  cov_46ir9d5pi.s[3]++;
+  cov_100515d9mo.f[1]++;
+  cov_100515d9mo.s[3]++;
   return res.json((0, _assets.getAsset)({
     id: req.params.id
   }));
@@ -962,10 +962,10 @@ var getAsset = exports.getAsset = function getAsset(req, res) {
  * @param {object} req - the request of query
  * @param {object} res - the resource of query
  */
-cov_46ir9d5pi.s[4]++;
+cov_100515d9mo.s[4]++;
 var getAssetAttachment = exports.getAssetAttachment = function getAssetAttachment(req, res) {
-  cov_46ir9d5pi.f[2]++;
-  cov_46ir9d5pi.s[5]++;
+  cov_100515d9mo.f[2]++;
+  cov_100515d9mo.s[5]++;
 
   (0, _assets.getAssetAttachment)((0, _extends3.default)({}, req.query, {
     id: req.params.id,
@@ -973,11 +973,11 @@ var getAssetAttachment = exports.getAssetAttachment = function getAssetAttachmen
   })).then(function (_ref) {
     var data = _ref.data,
         mimetype = _ref.mimetype;
-    cov_46ir9d5pi.f[3]++;
-    cov_46ir9d5pi.s[6]++;
+    cov_100515d9mo.f[3]++;
+    cov_100515d9mo.s[6]++;
 
     res.writeHead(200, { 'Content-Type': mimetype });
-    cov_46ir9d5pi.s[7]++;
+    cov_100515d9mo.s[7]++;
     res.end(data, 'binary');
   });
 };
@@ -987,50 +987,50 @@ var getAssetAttachment = exports.getAssetAttachment = function getAssetAttachmen
  * @param {object} req - the request of query
  * @param {object} res - the resource of query
  */
-cov_46ir9d5pi.s[8]++;
+cov_100515d9mo.s[8]++;
 var createAsset = exports.createAsset = function createAsset(req, res) {
-  cov_46ir9d5pi.f[4]++;
+  cov_100515d9mo.f[4]++;
 
-  var filename = (cov_46ir9d5pi.s[9]++, decodeURIComponent(req.params.id));
-  var form = (cov_46ir9d5pi.s[10]++, new _formidable2.default.IncomingForm({
+  var filename = (cov_100515d9mo.s[9]++, decodeURIComponent(req.params.id));
+  var form = (cov_100515d9mo.s[10]++, new _formidable2.default.IncomingForm({
     uploadDir: (0, _path.resolve)(__dirname + '/../../../temp'),
     // multiples : true,
     keepExtensions: true
   }));
 
-  cov_46ir9d5pi.s[11]++;
+  cov_100515d9mo.s[11]++;
   form.on('error', function (err) {
-    cov_46ir9d5pi.f[5]++;
-    cov_46ir9d5pi.s[12]++;
+    cov_100515d9mo.f[5]++;
+    cov_100515d9mo.s[12]++;
 
     return res.status(500).send(err);
   });
 
-  cov_46ir9d5pi.s[13]++;
+  cov_100515d9mo.s[13]++;
   form.parse(req, function (err, fields, files) {
-    cov_46ir9d5pi.f[6]++;
+    cov_100515d9mo.f[6]++;
 
-    var attachmentPath = (cov_46ir9d5pi.s[14]++, files.file.path);
-    cov_46ir9d5pi.s[15]++;
+    var attachmentPath = (cov_100515d9mo.s[14]++, files.file.path);
+    cov_100515d9mo.s[15]++;
     (0, _fsExtra.readFile)(attachmentPath).then(function (data) {
-      cov_46ir9d5pi.f[7]++;
-      cov_46ir9d5pi.s[16]++;
+      cov_100515d9mo.f[7]++;
+      cov_100515d9mo.s[16]++;
       return (0, _assets.createAsset)({
         _id: (0, _uuid.v4)(),
         filename: filename,
         type: 'asset'
       }, data);
     }).then(function () {
-      cov_46ir9d5pi.f[8]++;
-      cov_46ir9d5pi.s[17]++;
+      cov_100515d9mo.f[8]++;
+      cov_100515d9mo.s[17]++;
       return (0, _fsExtra.remove)(attachmentPath);
     }).then(function () {
-      cov_46ir9d5pi.f[9]++;
-      cov_46ir9d5pi.s[18]++;
+      cov_100515d9mo.f[9]++;
+      cov_100515d9mo.s[18]++;
       return res.json((0, _assets.getAssets)({}));
     }).catch(function (e) {
-      cov_46ir9d5pi.f[10]++;
-      cov_46ir9d5pi.s[19]++;
+      cov_100515d9mo.f[10]++;
+      cov_100515d9mo.s[19]++;
       return res.status(500).send(e);
     });
   });
@@ -1040,53 +1040,53 @@ var createAsset = exports.createAsset = function createAsset(req, res) {
  * @param {object} req - the request of query
  * @param {object} res - the resource of query
  */
-cov_46ir9d5pi.s[20]++;
+cov_100515d9mo.s[20]++;
 var updateAsset = exports.updateAsset = function updateAsset(req, res) {
-  cov_46ir9d5pi.f[11]++;
+  cov_100515d9mo.f[11]++;
 
-  var assetId = (cov_46ir9d5pi.s[21]++, req.params.id);
-  var form = (cov_46ir9d5pi.s[22]++, new _formidable2.default.IncomingForm({
+  var assetId = (cov_100515d9mo.s[21]++, req.params.id);
+  var form = (cov_100515d9mo.s[22]++, new _formidable2.default.IncomingForm({
     uploadDir: (0, _path.resolve)(__dirname + '/../../../temp'),
     // multiples : true,
     keepExtensions: true
   }));
 
-  cov_46ir9d5pi.s[23]++;
+  cov_100515d9mo.s[23]++;
   form.on('error', function (err) {
-    cov_46ir9d5pi.f[12]++;
-    cov_46ir9d5pi.s[24]++;
+    cov_100515d9mo.f[12]++;
+    cov_100515d9mo.s[24]++;
 
     return res.status(500).send(err);
   });
 
-  cov_46ir9d5pi.s[25]++;
+  cov_100515d9mo.s[25]++;
   form.parse(req, function (err, fields, files) {
-    cov_46ir9d5pi.f[13]++;
+    cov_100515d9mo.f[13]++;
 
-    var attachmentPath = (cov_46ir9d5pi.s[26]++, files.file.path);
-    var filename = (cov_46ir9d5pi.s[27]++, files.file.name);
-    var mimetype = (cov_46ir9d5pi.s[28]++, (0, _mimeTypes.lookup)(filename));
-    cov_46ir9d5pi.s[29]++;
+    var attachmentPath = (cov_100515d9mo.s[26]++, files.file.path);
+    var filename = (cov_100515d9mo.s[27]++, files.file.name);
+    var mimetype = (cov_100515d9mo.s[28]++, (0, _mimeTypes.lookup)(filename));
+    cov_100515d9mo.s[29]++;
     (0, _fsExtra.readFile)(attachmentPath).then(function (data) {
-      cov_46ir9d5pi.f[14]++;
-      cov_46ir9d5pi.s[30]++;
+      cov_100515d9mo.f[14]++;
+      cov_100515d9mo.s[30]++;
       return (0, _assets.updateAsset)(assetId, {
         filename: filename,
         mimetype: mimetype
       }, data);
     }).then(function () {
-      cov_46ir9d5pi.f[15]++;
-      cov_46ir9d5pi.s[31]++;
+      cov_100515d9mo.f[15]++;
+      cov_100515d9mo.s[31]++;
       return (0, _fsExtra.remove)(attachmentPath);
     }).then(function () {
-      cov_46ir9d5pi.f[16]++;
-      cov_46ir9d5pi.s[32]++;
+      cov_100515d9mo.f[16]++;
+      cov_100515d9mo.s[32]++;
       return res.json((0, _assets.getAsset)({
         id: assetId
       }));
     }).catch(function (e) {
-      cov_46ir9d5pi.f[17]++;
-      cov_46ir9d5pi.s[33]++;
+      cov_100515d9mo.f[17]++;
+      cov_100515d9mo.s[33]++;
       return res.status(500).send(e);
     });
   });
@@ -1097,9 +1097,9 @@ var updateAsset = exports.updateAsset = function updateAsset(req, res) {
  * @param {object} req - the request of query
  * @param {object} res - the resource of query
  */
-cov_46ir9d5pi.s[34]++;
+cov_100515d9mo.s[34]++;
 var deleteAsset = exports.deleteAsset = function deleteAsset(req, res) {
-  cov_46ir9d5pi.f[18]++;
-  cov_46ir9d5pi.s[35]++;
+  cov_100515d9mo.f[18]++;
+  cov_100515d9mo.s[35]++;
   return res.json((0, _assets.deleteAsset)({ _id: req.params.id }));
 };

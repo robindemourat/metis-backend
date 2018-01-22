@@ -9,13 +9,13 @@ var _extends2 = require('babel-runtime/helpers/extends');
 
 var _extends3 = _interopRequireDefault(_extends2);
 
-var cov_ut1gnjtfe = function () {
-  var path = '/Users/rawbin/Documents/Projets/collaborations/ensad-publishing/prototype/plurishing-backend/src/components/compositions/compositions.controller.js',
-      hash = 'd3fd531466089b3dcf4e5b9672a21f18b577d8ae',
+var cov_117uvz14id = function () {
+  var path = '/Users/rawbin/Documents/Projets/collaborations/ensad-publishing/prototype/metis-backend/src/components/compositions/compositions.controller.js',
+      hash = 'e64ef56b8a88e00abc6981db28bd153b37b399d6',
       global = new Function('return this')(),
       gcv = '__coverage__',
       coverageData = {
-    path: '/Users/rawbin/Documents/Projets/collaborations/ensad-publishing/prototype/plurishing-backend/src/components/compositions/compositions.controller.js',
+    path: '/Users/rawbin/Documents/Projets/collaborations/ensad-publishing/prototype/metis-backend/src/components/compositions/compositions.controller.js',
     statementMap: {
       '0': {
         start: {
@@ -416,7 +416,7 @@ var cov_ut1gnjtfe = function () {
   coverageData.hash = hash;
   return coverage[path] = coverageData;
 }(); // /**
-//  * Plurishing-backend
+//  * Metis-backend
 //  * =======
 //  * Compositions component controller
 //  */
@@ -431,10 +431,10 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
  * @param {object} res - the resource of query
  * @todo add filters handling through req queries
  */
-cov_ut1gnjtfe.s[0]++;
+cov_117uvz14id.s[0]++;
 var getCompositions = exports.getCompositions = function getCompositions(req, res) {
-  cov_ut1gnjtfe.f[0]++;
-  cov_ut1gnjtfe.s[1]++;
+  cov_117uvz14id.f[0]++;
+  cov_117uvz14id.s[1]++;
   return res.json((0, _compositions.getCompositions)({}));
 };
 
@@ -443,10 +443,10 @@ var getCompositions = exports.getCompositions = function getCompositions(req, re
  * @param {object} req - the request of query
  * @param {object} res - the resource of query
  */
-cov_ut1gnjtfe.s[2]++;
+cov_117uvz14id.s[2]++;
 var getComposition = exports.getComposition = function getComposition(req, res) {
-  cov_ut1gnjtfe.f[1]++;
-  cov_ut1gnjtfe.s[3]++;
+  cov_117uvz14id.f[1]++;
+  cov_117uvz14id.s[3]++;
   return res.json((0, _compositions.getComposition)({
     id: req.params.id
   }));
@@ -457,10 +457,10 @@ var getComposition = exports.getComposition = function getComposition(req, res) 
  * @param {object} req - the request of query
  * @param {object} res - the resource of query
  */
-cov_ut1gnjtfe.s[4]++;
+cov_117uvz14id.s[4]++;
 var createComposition = exports.createComposition = function createComposition(req, res) {
-  cov_ut1gnjtfe.f[2]++;
-  cov_ut1gnjtfe.s[5]++;
+  cov_117uvz14id.f[2]++;
+  cov_117uvz14id.s[5]++;
   return (
     // create the composition
     (0, _compositions.createComposition)((0, _extends3.default)({}, req.body, {
@@ -469,12 +469,12 @@ var createComposition = exports.createComposition = function createComposition(r
     // return the composition
     .then(function (_ref) {
       var id = _ref.id;
-      cov_ut1gnjtfe.f[3]++;
-      cov_ut1gnjtfe.s[6]++;
+      cov_117uvz14id.f[3]++;
+      cov_117uvz14id.s[6]++;
       return (0, _compositions.getComposition)({ id: id });
     }).then(function (composition) {
-      cov_ut1gnjtfe.f[4]++;
-      cov_ut1gnjtfe.s[7]++;
+      cov_117uvz14id.f[4]++;
+      cov_117uvz14id.s[7]++;
       return res.json(composition);
     })
   );
@@ -485,22 +485,22 @@ var createComposition = exports.createComposition = function createComposition(r
  * @param {object} req - the request of query
  * @param {object} res - the resource of query
  */
-cov_ut1gnjtfe.s[8]++;
+cov_117uvz14id.s[8]++;
 var updateComposition = exports.updateComposition = function updateComposition(req, res) {
-  cov_ut1gnjtfe.f[5]++;
-  cov_ut1gnjtfe.s[9]++;
+  cov_117uvz14id.f[5]++;
+  cov_117uvz14id.s[9]++;
   return res.json(
   // update the composition
   (0, _compositions.updateComposition)(req.params.id, req.body).
   // return the composition
   then(function (_ref2) {
     var id = _ref2.id;
-    cov_ut1gnjtfe.f[6]++;
-    cov_ut1gnjtfe.s[10]++;
+    cov_117uvz14id.f[6]++;
+    cov_117uvz14id.s[10]++;
     return (0, _compositions.getComposition)({ id: id });
   }).then(function (composition) {
-    cov_ut1gnjtfe.f[7]++;
-    cov_ut1gnjtfe.s[11]++;
+    cov_117uvz14id.f[7]++;
+    cov_117uvz14id.s[11]++;
     return res.json(composition);
   }));
 };
@@ -510,9 +510,9 @@ var updateComposition = exports.updateComposition = function updateComposition(r
  * @param {object} req - the request of query
  * @param {object} res - the resource of query
  */
-cov_ut1gnjtfe.s[12]++;
+cov_117uvz14id.s[12]++;
 var deleteComposition = exports.deleteComposition = function deleteComposition(req, res) {
-  cov_ut1gnjtfe.f[8]++;
-  cov_ut1gnjtfe.s[13]++;
+  cov_117uvz14id.f[8]++;
+  cov_117uvz14id.s[13]++;
   return res.json((0, _compositions.deleteComposition)({ _id: req.params.id }));
 };

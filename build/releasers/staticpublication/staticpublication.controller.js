@@ -9,13 +9,13 @@ var _promise = require('babel-runtime/core-js/promise');
 
 var _promise2 = _interopRequireDefault(_promise);
 
-var cov_12klhr1bjw = function () {
-  var path = '/Users/rawbin/Documents/Projets/collaborations/ensad-publishing/prototype/plurishing-backend/src/releasers/staticpublication/staticpublication.controller.js',
-      hash = '237b43ab592d38334bbfe20b9584376ca8a89df8',
+var cov_wxhobszfa = function () {
+  var path = '/Users/rawbin/Documents/Projets/collaborations/ensad-publishing/prototype/metis-backend/src/releasers/staticpublication/staticpublication.controller.js',
+      hash = '32f3234b9869373daf5434cbb5d1c321352741c8',
       global = new Function('return this')(),
       gcv = '__coverage__',
       coverageData = {
-    path: '/Users/rawbin/Documents/Projets/collaborations/ensad-publishing/prototype/plurishing-backend/src/releasers/staticpublication/staticpublication.controller.js',
+    path: '/Users/rawbin/Documents/Projets/collaborations/ensad-publishing/prototype/metis-backend/src/releasers/staticpublication/staticpublication.controller.js',
     statementMap: {
       '0': {
         start: {
@@ -363,61 +363,61 @@ var _epub2 = _interopRequireDefault(_epub);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-cov_12klhr1bjw.s[0]++;
+cov_wxhobszfa.s[0]++;
 var release = exports.release = function release(diffusion) {
-  cov_12klhr1bjw.f[0]++;
-  cov_12klhr1bjw.s[1]++;
+  cov_wxhobszfa.f[0]++;
+  cov_wxhobszfa.s[1]++;
 
   return new _promise2.default(function (resolve, reject) {
-    cov_12klhr1bjw.f[1]++;
-    cov_12klhr1bjw.s[2]++;
+    cov_wxhobszfa.f[1]++;
+    cov_wxhobszfa.s[2]++;
 
     // get related montage
     _montages.dal.getMontage({ id: diffusion.montage_id }).then(function (montage) {
-      cov_12klhr1bjw.f[2]++;
-      cov_12klhr1bjw.s[3]++;
+      cov_wxhobszfa.f[2]++;
+      cov_wxhobszfa.s[3]++;
 
       // fetch montage dependencies
       return (0, _data.fetchMontageDependencies)(montage);
     })
     // register all release operations to perform
     .then(function (data) {
-      cov_12klhr1bjw.f[3]++;
+      cov_wxhobszfa.f[3]++;
 
-      var targets = (cov_12klhr1bjw.s[4]++, diffusion.parameters.targets);
+      var targets = (cov_wxhobszfa.s[4]++, diffusion.parameters.targets);
 
-      var operations = (cov_12klhr1bjw.s[5]++, targets.map(function (targetId) {
-        cov_12klhr1bjw.f[4]++;
-        cov_12klhr1bjw.s[6]++;
+      var operations = (cov_wxhobszfa.s[5]++, targets.map(function (targetId) {
+        cov_wxhobszfa.f[4]++;
+        cov_wxhobszfa.s[6]++;
 
         switch (targetId) {
 
           case 'pdf':
-            cov_12klhr1bjw.b[0][0]++;
-            cov_12klhr1bjw.s[7]++;
+            cov_wxhobszfa.b[0][0]++;
+            cov_wxhobszfa.s[7]++;
 
             return (0, _pdf2.default)(data, diffusion);
 
           case 'epub-reflowable':
-            cov_12klhr1bjw.b[0][1]++;
-            cov_12klhr1bjw.s[8]++;
+            cov_wxhobszfa.b[0][1]++;
+            cov_wxhobszfa.s[8]++;
 
             return (0, _epub2.default)(data, diffusion, targetId);
           case 'epub-fixed':
-            cov_12klhr1bjw.b[0][2]++;
-            cov_12klhr1bjw.s[9]++;
+            cov_wxhobszfa.b[0][2]++;
+            cov_wxhobszfa.s[9]++;
 
             return (0, _epub2.default)(data, diffusion, targetId);
 
           default:
-            cov_12klhr1bjw.b[0][3]++;
-            cov_12klhr1bjw.s[10]++;
+            cov_wxhobszfa.b[0][3]++;
+            cov_wxhobszfa.s[10]++;
 
             return _promise2.default.resolve();
         }
       }));
       // execute
-      cov_12klhr1bjw.s[11]++;
+      cov_wxhobszfa.s[11]++;
       return _promise2.default.all(operations);
     }).then(resolve).catch(reject);
   });

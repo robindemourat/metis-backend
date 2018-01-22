@@ -4,13 +4,13 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var cov_2jw51gk9sd = function () {
-  var path = '/Users/rawbin/Documents/Projets/collaborations/ensad-publishing/prototype/plurishing-backend/src/releasers/web/index.js',
-      hash = '35ec2b0106300a23eae98fa72cf926c5f55acb12',
+var cov_26femfauz7 = function () {
+  var path = '/Users/rawbin/Documents/Projets/collaborations/ensad-publishing/prototype/metis-backend/src/releasers/web/index.js',
+      hash = '5ee92afd62c34e82f97f5b697b75fc1f6516d581',
       global = new Function('return this')(),
       gcv = '__coverage__',
       coverageData = {
-    path: '/Users/rawbin/Documents/Projets/collaborations/ensad-publishing/prototype/plurishing-backend/src/releasers/web/index.js',
+    path: '/Users/rawbin/Documents/Projets/collaborations/ensad-publishing/prototype/metis-backend/src/releasers/web/index.js',
     statementMap: {
       '0': {
         start: {
@@ -135,20 +135,20 @@ var _config = require('../../utils/config');
 
 var _crypto = require('../../utils/crypto');
 
-var _ref = (cov_2jw51gk9sd.s[0]++, (0, _config.getConfig)()),
+var _ref = (cov_26femfauz7.s[0]++, (0, _config.getConfig)()),
     websiteBuilderUri = _ref.websiteBuilderUri,
     secret = _ref.secret;
 
 function publish(data, diffusion) {
-  cov_2jw51gk9sd.f[0]++;
-  cov_2jw51gk9sd.s[1]++;
+  cov_26femfauz7.f[0]++;
+  cov_26femfauz7.s[1]++;
 
   return (0, _crypto.hash)(secret).then(function (pwd) {
-    cov_2jw51gk9sd.f[1]++;
+    cov_26femfauz7.f[1]++;
 
-    var endpoint = (cov_2jw51gk9sd.s[2]++, websiteBuilderUri + '/update');
+    var endpoint = (cov_26femfauz7.s[2]++, websiteBuilderUri + '/update');
     // send new data
-    cov_2jw51gk9sd.s[3]++;
+    cov_26femfauz7.s[3]++;
     return (0, _axios.post)(endpoint, { data: data, diffusion: diffusion, pwd: pwd });
   });
 }

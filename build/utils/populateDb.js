@@ -4,13 +4,13 @@ var _extends2 = require('babel-runtime/helpers/extends');
 
 var _extends3 = _interopRequireDefault(_extends2);
 
-var cov_25akiw6xvc = function () {
-  var path = '/Users/rawbin/Documents/Projets/collaborations/ensad-publishing/prototype/plurishing-backend/src/utils/populateDb.js',
-      hash = '2a0a311feb135cd1acb3e20a5061d64f6ba56bef',
+var cov_29bl13sckc = function () {
+  var path = '/Users/rawbin/Documents/Projets/collaborations/ensad-publishing/prototype/metis-backend/src/utils/populateDb.js',
+      hash = '5c193ca435961a0f84d4167f867fd446fb82ba47',
       global = new Function('return this')(),
       gcv = '__coverage__',
       coverageData = {
-    path: '/Users/rawbin/Documents/Projets/collaborations/ensad-publishing/prototype/plurishing-backend/src/utils/populateDb.js',
+    path: '/Users/rawbin/Documents/Projets/collaborations/ensad-publishing/prototype/metis-backend/src/utils/populateDb.js',
     statementMap: {
       '0': {
         start: {
@@ -278,7 +278,7 @@ var cov_25akiw6xvc = function () {
   coverageData.hash = hash;
   return coverage[path] = coverageData;
 }(); /**
-      * Plurishing-backend
+      * Metis-backend
       * =======
       * Server population script
       */
@@ -295,14 +295,14 @@ var _config = require('./config');
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var _ref = (cov_25akiw6xvc.s[0]++, (0, _config.getConfig)()),
+var _ref = (cov_29bl13sckc.s[0]++, (0, _config.getConfig)()),
     adminPassword = _ref.adminPassword,
     adminEmail = _ref.adminEmail;
 
 // admin object
 
 
-var admin = (cov_25akiw6xvc.s[1]++, {
+var admin = (cov_29bl13sckc.s[1]++, {
   type: 'user',
   name: 'admin',
   password: adminPassword,
@@ -310,41 +310,41 @@ var admin = (cov_25akiw6xvc.s[1]++, {
   email: adminEmail
 });
 
-cov_25akiw6xvc.s[2]++;
+cov_29bl13sckc.s[2]++;
 var addAdmin = function addAdmin(doc) {
-  cov_25akiw6xvc.f[0]++;
+  cov_29bl13sckc.f[0]++;
 
   var _rev = void 0;
-  cov_25akiw6xvc.s[3]++;
+  cov_29bl13sckc.s[3]++;
   if (doc) {
-    cov_25akiw6xvc.b[0][0]++;
-    cov_25akiw6xvc.s[4]++;
+    cov_29bl13sckc.b[0][0]++;
+    cov_29bl13sckc.s[4]++;
 
     _rev = doc._rev;
   } else {
-    cov_25akiw6xvc.b[0][1]++;
+    cov_29bl13sckc.b[0][1]++;
   }
-  cov_25akiw6xvc.s[5]++;
+  cov_29bl13sckc.s[5]++;
   (0, _crypto.hash)(admin.password).then(function (password) {
-    cov_25akiw6xvc.f[1]++;
-    cov_25akiw6xvc.s[6]++;
+    cov_29bl13sckc.f[1]++;
+    cov_29bl13sckc.s[6]++;
     return _plugDb2.default.insertAsync((0, _extends3.default)({}, admin, {
       _rev: _rev,
       password: password
     }), 'admin');
   }).then(function (info) {
-    cov_25akiw6xvc.f[2]++;
-    cov_25akiw6xvc.s[7]++;
+    cov_29bl13sckc.f[2]++;
+    cov_29bl13sckc.s[7]++;
 
     console.info('created admin', info);
   }).catch(function (error) {
-    cov_25akiw6xvc.f[3]++;
-    cov_25akiw6xvc.s[8]++;
+    cov_29bl13sckc.f[3]++;
+    cov_29bl13sckc.s[8]++;
 
     console.info('error while creating admin', error);
   });
 };
 
 // create or update admin
-cov_25akiw6xvc.s[9]++;
+cov_29bl13sckc.s[9]++;
 _plugDb2.default.getAsync('admin').then(addAdmin).catch(addAdmin);

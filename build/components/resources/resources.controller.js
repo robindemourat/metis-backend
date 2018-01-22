@@ -9,13 +9,13 @@ var _extends2 = require('babel-runtime/helpers/extends');
 
 var _extends3 = _interopRequireDefault(_extends2);
 
-var cov_2j7z9qtn8t = function () {
-  var path = '/Users/rawbin/Documents/Projets/collaborations/ensad-publishing/prototype/plurishing-backend/src/components/resources/resources.controller.js',
-      hash = 'f707c0c2dc94782abdc7d082ae54d43473d616d7',
+var cov_200y1aktnw = function () {
+  var path = '/Users/rawbin/Documents/Projets/collaborations/ensad-publishing/prototype/metis-backend/src/components/resources/resources.controller.js',
+      hash = 'c8ecc93f06c5482e566c5cf8b8b89bddcaaad828',
       global = new Function('return this')(),
       gcv = '__coverage__',
       coverageData = {
-    path: '/Users/rawbin/Documents/Projets/collaborations/ensad-publishing/prototype/plurishing-backend/src/components/resources/resources.controller.js',
+    path: '/Users/rawbin/Documents/Projets/collaborations/ensad-publishing/prototype/metis-backend/src/components/resources/resources.controller.js',
     statementMap: {
       '0': {
         start: {
@@ -416,7 +416,7 @@ var cov_2j7z9qtn8t = function () {
   coverageData.hash = hash;
   return coverage[path] = coverageData;
 }(); // /**
-//  * Plurishing-backend
+//  * Metis-backend
 //  * =======
 //  * Resources component controller
 //  */
@@ -431,10 +431,10 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
  * @param {object} res - the resource of query
  * @todo add filters handling through req queries
  */
-cov_2j7z9qtn8t.s[0]++;
+cov_200y1aktnw.s[0]++;
 var getResources = exports.getResources = function getResources(req, res) {
-  cov_2j7z9qtn8t.f[0]++;
-  cov_2j7z9qtn8t.s[1]++;
+  cov_200y1aktnw.f[0]++;
+  cov_200y1aktnw.s[1]++;
   return res.json((0, _resources.getResources)({}));
 };
 
@@ -443,10 +443,10 @@ var getResources = exports.getResources = function getResources(req, res) {
  * @param {object} req - the request of query
  * @param {object} res - the resource of query
  */
-cov_2j7z9qtn8t.s[2]++;
+cov_200y1aktnw.s[2]++;
 var getResource = exports.getResource = function getResource(req, res) {
-  cov_2j7z9qtn8t.f[1]++;
-  cov_2j7z9qtn8t.s[3]++;
+  cov_200y1aktnw.f[1]++;
+  cov_200y1aktnw.s[3]++;
   return res.json((0, _resources.getResource)({
     id: req.params.id
   }));
@@ -457,10 +457,10 @@ var getResource = exports.getResource = function getResource(req, res) {
  * @param {object} req - the request of query
  * @param {object} res - the resource of query
  */
-cov_2j7z9qtn8t.s[4]++;
+cov_200y1aktnw.s[4]++;
 var createResource = exports.createResource = function createResource(req, res) {
-  cov_2j7z9qtn8t.f[2]++;
-  cov_2j7z9qtn8t.s[5]++;
+  cov_200y1aktnw.f[2]++;
+  cov_200y1aktnw.s[5]++;
   return (
     // create the resource
     (0, _resources.createResource)((0, _extends3.default)({}, req.body, {
@@ -469,12 +469,12 @@ var createResource = exports.createResource = function createResource(req, res) 
     // return the resource
     .then(function (_ref) {
       var id = _ref.id;
-      cov_2j7z9qtn8t.f[3]++;
-      cov_2j7z9qtn8t.s[6]++;
+      cov_200y1aktnw.f[3]++;
+      cov_200y1aktnw.s[6]++;
       return (0, _resources.getResource)({ id: id });
     }).then(function (resource) {
-      cov_2j7z9qtn8t.f[4]++;
-      cov_2j7z9qtn8t.s[7]++;
+      cov_200y1aktnw.f[4]++;
+      cov_200y1aktnw.s[7]++;
       return res.json(resource);
     })
   );
@@ -485,22 +485,22 @@ var createResource = exports.createResource = function createResource(req, res) 
  * @param {object} req - the request of query
  * @param {object} res - the resource of query
  */
-cov_2j7z9qtn8t.s[8]++;
+cov_200y1aktnw.s[8]++;
 var updateResource = exports.updateResource = function updateResource(req, res) {
-  cov_2j7z9qtn8t.f[5]++;
-  cov_2j7z9qtn8t.s[9]++;
+  cov_200y1aktnw.f[5]++;
+  cov_200y1aktnw.s[9]++;
   return res.json(
   // update the resource
   (0, _resources.updateResource)(req.params.id, req.body).
   // return the resource
   then(function (_ref2) {
     var id = _ref2.id;
-    cov_2j7z9qtn8t.f[6]++;
-    cov_2j7z9qtn8t.s[10]++;
+    cov_200y1aktnw.f[6]++;
+    cov_200y1aktnw.s[10]++;
     return (0, _resources.getResource)({ id: id });
   }).then(function (resource) {
-    cov_2j7z9qtn8t.f[7]++;
-    cov_2j7z9qtn8t.s[11]++;
+    cov_200y1aktnw.f[7]++;
+    cov_200y1aktnw.s[11]++;
     return res.json(resource);
   }));
 };
@@ -510,9 +510,9 @@ var updateResource = exports.updateResource = function updateResource(req, res) 
  * @param {object} req - the request of query
  * @param {object} res - the resource of query
  */
-cov_2j7z9qtn8t.s[12]++;
+cov_200y1aktnw.s[12]++;
 var deleteResource = exports.deleteResource = function deleteResource(req, res) {
-  cov_2j7z9qtn8t.f[8]++;
-  cov_2j7z9qtn8t.s[13]++;
+  cov_200y1aktnw.f[8]++;
+  cov_200y1aktnw.s[13]++;
   return res.json((0, _resources.deleteResource)({ _id: req.params.id }));
 };

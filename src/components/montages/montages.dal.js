@@ -1,12 +1,12 @@
 /**
- * Plurishing-backend
+ * Metis-backend
  * =======
  * Montage data access layer
  */
 
 import db from '../../utils/plugDb';
 
-import {Montage as schema} from 'plurishing-schemas';
+import {Montage as schema} from 'metis-schemas';
 import design from './montages.design';
 import {addDesign} from '../../utils/couchdb';
 import {dataIsValid} from '../../utils/schemas';

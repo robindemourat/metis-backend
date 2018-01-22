@@ -4,13 +4,13 @@ var _keys = require('babel-runtime/core-js/object/keys');
 
 var _keys2 = _interopRequireDefault(_keys);
 
-var cov_13xoxyw8ab = function () {
-    var path = '/Users/rawbin/Documents/Projets/collaborations/ensad-publishing/prototype/plurishing-backend/src/components/diffusions/diffusions.design.spec.js',
-        hash = '4d32d566d6a12748a8adacade88609125291df0b',
+var cov_aqe1fi6xi = function () {
+    var path = '/Users/rawbin/Documents/Projets/collaborations/ensad-publishing/prototype/metis-backend/src/components/diffusions/diffusions.design.spec.js',
+        hash = 'c1070a40010d329ca69485794992803720ba1904',
         global = new Function('return this')(),
         gcv = '__coverage__',
         coverageData = {
-        path: '/Users/rawbin/Documents/Projets/collaborations/ensad-publishing/prototype/plurishing-backend/src/components/diffusions/diffusions.design.spec.js',
+        path: '/Users/rawbin/Documents/Projets/collaborations/ensad-publishing/prototype/metis-backend/src/components/diffusions/diffusions.design.spec.js',
         statementMap: {
             '0': {
                 start: {
@@ -182,25 +182,25 @@ var _diffusions2 = _interopRequireDefault(_diffusions);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-cov_13xoxyw8ab.s[0]++;
+cov_aqe1fi6xi.s[0]++;
 
 
 describe('Diffusions couchdb design', function () {
-    cov_13xoxyw8ab.f[0]++;
-    cov_13xoxyw8ab.s[1]++;
+    cov_aqe1fi6xi.f[0]++;
+    cov_aqe1fi6xi.s[1]++;
 
     it('should eval each view map as a function', function (done) {
-        cov_13xoxyw8ab.f[1]++;
-        cov_13xoxyw8ab.s[2]++;
+        cov_aqe1fi6xi.f[1]++;
+        cov_aqe1fi6xi.s[2]++;
 
         (0, _keys2.default)(_diffusions2.default.views).forEach(function (id) {
-            cov_13xoxyw8ab.f[2]++;
+            cov_aqe1fi6xi.f[2]++;
 
-            var view = (cov_13xoxyw8ab.s[3]++, _diffusions2.default.views[id]);
-            cov_13xoxyw8ab.s[4]++;
+            var view = (cov_aqe1fi6xi.s[3]++, _diffusions2.default.views[id]);
+            cov_aqe1fi6xi.s[4]++;
             (0, _chai.expect)(eval('(' + view.map + ')')).to.be.a('function');
         });
-        cov_13xoxyw8ab.s[5]++;
+        cov_aqe1fi6xi.s[5]++;
         done();
     });
 });

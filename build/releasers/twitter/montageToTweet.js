@@ -4,13 +4,13 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var cov_oq6l14t8s = function () {
-  var path = '/Users/rawbin/Documents/Projets/collaborations/ensad-publishing/prototype/plurishing-backend/src/releasers/twitter/montageToTweet.js',
-      hash = '6626af425300342bd0d336e2e432d1405efcfb93',
+var cov_1owyohr9kk = function () {
+  var path = '/Users/rawbin/Documents/Projets/collaborations/ensad-publishing/prototype/metis-backend/src/releasers/twitter/montageToTweet.js',
+      hash = '20033bb8616a116aeb1c9c45226c42be4b3183b1',
       global = new Function('return this')(),
       gcv = '__coverage__',
       coverageData = {
-    path: '/Users/rawbin/Documents/Projets/collaborations/ensad-publishing/prototype/plurishing-backend/src/releasers/twitter/montageToTweet.js',
+    path: '/Users/rawbin/Documents/Projets/collaborations/ensad-publishing/prototype/metis-backend/src/releasers/twitter/montageToTweet.js',
     statementMap: {
       '0': {
         start: {
@@ -779,75 +779,75 @@ var cov_oq6l14t8s = function () {
 exports.default = montageToTweet;
 
 
-var TEXT_LIMIT = (cov_oq6l14t8s.s[0]++, 280);
+var TEXT_LIMIT = (cov_1owyohr9kk.s[0]++, 280);
 
-cov_oq6l14t8s.s[1]++;
+cov_1owyohr9kk.s[1]++;
 var makeText = function makeText(title, link, creators) {
-  cov_oq6l14t8s.f[0]++;
+  cov_1owyohr9kk.f[0]++;
 
-  var creatorsStr = (cov_oq6l14t8s.s[2]++, creators.reduce(function (str, creator, index) {
-    cov_oq6l14t8s.f[1]++;
-    cov_oq6l14t8s.s[3]++;
-    return str + (creator.given ? (cov_oq6l14t8s.b[0][0]++, creator.given) : (cov_oq6l14t8s.b[0][1]++, '')) + ((cov_oq6l14t8s.b[2][0]++, creator.given) && (cov_oq6l14t8s.b[2][1]++, creator.family) ? (cov_oq6l14t8s.b[1][0]++, ' ') : (cov_oq6l14t8s.b[1][1]++, '')) + (creator.family ? (cov_oq6l14t8s.b[3][0]++, creator.family) : (cov_oq6l14t8s.b[3][1]++, '')) + (index === creators.length - 1 ? (cov_oq6l14t8s.b[4][0]++, '') : (cov_oq6l14t8s.b[4][1]++, ' & '));
+  var creatorsStr = (cov_1owyohr9kk.s[2]++, creators.reduce(function (str, creator, index) {
+    cov_1owyohr9kk.f[1]++;
+    cov_1owyohr9kk.s[3]++;
+    return str + (creator.given ? (cov_1owyohr9kk.b[0][0]++, creator.given) : (cov_1owyohr9kk.b[0][1]++, '')) + ((cov_1owyohr9kk.b[2][0]++, creator.given) && (cov_1owyohr9kk.b[2][1]++, creator.family) ? (cov_1owyohr9kk.b[1][0]++, ' ') : (cov_1owyohr9kk.b[1][1]++, '')) + (creator.family ? (cov_1owyohr9kk.b[3][0]++, creator.family) : (cov_1owyohr9kk.b[3][1]++, '')) + (index === creators.length - 1 ? (cov_1owyohr9kk.b[4][0]++, '') : (cov_1owyohr9kk.b[4][1]++, ' & '));
   }, ''));
 
-  var vals = (cov_oq6l14t8s.s[4]++, [title, link, creatorsStr]);
-  var txt = (cov_oq6l14t8s.s[5]++, '');
-  cov_oq6l14t8s.s[6]++;
+  var vals = (cov_1owyohr9kk.s[4]++, [title, link, creatorsStr]);
+  var txt = (cov_1owyohr9kk.s[5]++, '');
+  cov_1owyohr9kk.s[6]++;
   vals.forEach(function (val) {
-    cov_oq6l14t8s.f[2]++;
-    cov_oq6l14t8s.s[7]++;
+    cov_1owyohr9kk.f[2]++;
+    cov_1owyohr9kk.s[7]++;
 
-    if ((cov_oq6l14t8s.b[6][0]++, val) && (cov_oq6l14t8s.b[6][1]++, (txt + ' ' + val).length <= TEXT_LIMIT)) {
-      cov_oq6l14t8s.b[5][0]++;
-      cov_oq6l14t8s.s[8]++;
+    if ((cov_1owyohr9kk.b[6][0]++, val) && (cov_1owyohr9kk.b[6][1]++, (txt + ' ' + val).length <= TEXT_LIMIT)) {
+      cov_1owyohr9kk.b[5][0]++;
+      cov_1owyohr9kk.s[8]++;
 
       txt += ' ' + val;
     } else {
-      cov_oq6l14t8s.b[5][1]++;
+      cov_1owyohr9kk.b[5][1]++;
     }
   });
-  cov_oq6l14t8s.s[9]++;
+  cov_1owyohr9kk.s[9]++;
   return txt;
 };
 
 function montageToTweet(montage, composition, assets) {
-  cov_oq6l14t8s.f[3]++;
+  cov_1owyohr9kk.f[3]++;
 
-  var _ref = (cov_oq6l14t8s.s[10]++, montage),
+  var _ref = (cov_1owyohr9kk.s[10]++, montage),
       _ref$data = _ref.data,
       link = _ref$data.link,
       include_abstract = _ref$data.include_abstract,
       attached_assets = _ref$data.attached_assets;
 
-  var _ref2 = (cov_oq6l14t8s.s[11]++, composition),
+  var _ref2 = (cov_1owyohr9kk.s[11]++, composition),
       _ref2$metadata = _ref2.metadata,
       title = _ref2$metadata.title,
       creators = _ref2$metadata.creators;
 
-  var _ref3 = (cov_oq6l14t8s.s[12]++, assets),
+  var _ref3 = (cov_1owyohr9kk.s[12]++, assets),
       abstractImageUri = _ref3.abstractImageUri;
 
-  var status = (cov_oq6l14t8s.s[13]++, makeText(title, link, creators));
-  var media = (cov_oq6l14t8s.s[14]++, (cov_oq6l14t8s.b[8][0]++, include_abstract) && (cov_oq6l14t8s.b[8][1]++, abstractImageUri) ? (cov_oq6l14t8s.b[7][0]++, [{
+  var status = (cov_1owyohr9kk.s[13]++, makeText(title, link, creators));
+  var media = (cov_1owyohr9kk.s[14]++, (cov_1owyohr9kk.b[8][0]++, include_abstract) && (cov_1owyohr9kk.b[8][1]++, abstractImageUri) ? (cov_1owyohr9kk.b[7][0]++, [{
     type: 'image',
     description: 'abstract image',
     uri: abstractImageUri
-  }]) : (cov_oq6l14t8s.b[7][1]++, []));
-  cov_oq6l14t8s.s[15]++;
+  }]) : (cov_1owyohr9kk.b[7][1]++, []));
+  cov_1owyohr9kk.s[15]++;
   if (attached_assets) {
-    cov_oq6l14t8s.b[9][0]++;
+    cov_1owyohr9kk.b[9][0]++;
 
     // limit to first 4 medias (limit of twitter)
-    var limit = (cov_oq6l14t8s.s[16]++, media.length ? (cov_oq6l14t8s.b[10][0]++, 4 - media.length) : (cov_oq6l14t8s.b[10][1]++, 4));
+    var limit = (cov_1owyohr9kk.s[16]++, media.length ? (cov_1owyohr9kk.b[10][0]++, 4 - media.length) : (cov_1owyohr9kk.b[10][1]++, 4));
     /**
      * @todo it should be explicited somewhere/at some point in ui that twitter accepts max 4 images
      */
-    cov_oq6l14t8s.s[17]++;
+    cov_1owyohr9kk.s[17]++;
     attached_assets.slice(0, limit).forEach(function (citation) {
-      cov_oq6l14t8s.f[4]++;
+      cov_1owyohr9kk.f[4]++;
 
-      var _ref4 = (cov_oq6l14t8s.s[18]++, citation),
+      var _ref4 = (cov_1owyohr9kk.s[18]++, citation),
           image_asset_id = _ref4.image_asset_id;
       /**
        * @todo investigate possible security issue
@@ -855,8 +855,8 @@ function montageToTweet(montage, composition, assets) {
        */
 
 
-      var uri = (cov_oq6l14t8s.s[19]++, assets[image_asset_id].base64); /* eslint security/detect-object-injection : 0 */
-      cov_oq6l14t8s.s[20]++;
+      var uri = (cov_1owyohr9kk.s[19]++, assets[image_asset_id].base64); /* eslint security/detect-object-injection : 0 */
+      cov_1owyohr9kk.s[20]++;
       media.push({
         type: 'image',
         description: 'attached image',
@@ -864,9 +864,9 @@ function montageToTweet(montage, composition, assets) {
       });
     });
   } else {
-    cov_oq6l14t8s.b[9][1]++;
+    cov_1owyohr9kk.b[9][1]++;
   }
-  cov_oq6l14t8s.s[21]++;
+  cov_1owyohr9kk.s[21]++;
   return {
     status: status,
     media: media

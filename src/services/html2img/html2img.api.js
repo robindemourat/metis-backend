@@ -1,7 +1,7 @@
 
 
 /**
- * Plurishing-backend
+ * Metis-backend
  * =======
  * Html to image api
  */

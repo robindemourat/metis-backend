@@ -4,9 +4,9 @@ import {v4 as generateId} from 'uuid';
 import {writeFile, remove} from 'fs-extra';
 import Prince from 'prince';
 
-import PdfNoteContentPointer from 'plurishing-shared/dist/components/views/static/PdfNoteContentPointer';
-import PdfNotePointerPointer from 'plurishing-shared/dist/components/views/static/PdfNotePointerPointer';
-import PdfLink from 'plurishing-shared/dist/components/views/static/PdfLink';
+import PdfNoteContentPointer from 'metis-shared/dist/components/views/static/PdfNoteContentPointer';
+import PdfNotePointerPointer from 'metis-shared/dist/components/views/static/PdfNotePointerPointer';
+import PdfLink from 'metis-shared/dist/components/views/static/PdfLink';
 
 import {TranslationsProvider} from '../../utils/react-components';/* eslint no-unused-vars : 0 */
 

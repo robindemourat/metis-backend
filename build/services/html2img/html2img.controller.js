@@ -4,13 +4,13 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var cov_2c0pwfx4y9 = function () {
-  var path = '/Users/rawbin/Documents/Projets/collaborations/ensad-publishing/prototype/plurishing-backend/src/services/html2img/html2img.controller.js',
-      hash = '6983c7d1a238526b6c656bb6ead2dd9ab1762263',
+var cov_1qv3v7zld6 = function () {
+  var path = '/Users/rawbin/Documents/Projets/collaborations/ensad-publishing/prototype/metis-backend/src/services/html2img/html2img.controller.js',
+      hash = '4217d72e9438ab4f5fa0c0853de700a4574aef0c',
       global = new Function('return this')(),
       gcv = '__coverage__',
       coverageData = {
-    path: '/Users/rawbin/Documents/Projets/collaborations/ensad-publishing/prototype/plurishing-backend/src/services/html2img/html2img.controller.js',
+    path: '/Users/rawbin/Documents/Projets/collaborations/ensad-publishing/prototype/metis-backend/src/services/html2img/html2img.controller.js',
     statementMap: {
       '0': {
         start: {
@@ -293,41 +293,41 @@ var _path = require('path');
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var temp = (cov_2c0pwfx4y9.s[0]++, (0, _path.resolve)(__dirname + '/../../../temp/'));
+var temp = (cov_1qv3v7zld6.s[0]++, (0, _path.resolve)(__dirname + '/../../../temp/'));
 
 function controller(req, res) {
-  cov_2c0pwfx4y9.f[0]++;
+  cov_1qv3v7zld6.f[0]++;
 
-  var html = (cov_2c0pwfx4y9.s[1]++, req.body.data);
-  var id = (cov_2c0pwfx4y9.s[2]++, (0, _uuid.v4)());
-  var filename = (cov_2c0pwfx4y9.s[3]++, temp + '/' + id + '.jpg');
+  var html = (cov_1qv3v7zld6.s[1]++, req.body.data);
+  var id = (cov_1qv3v7zld6.s[2]++, (0, _uuid.v4)());
+  var filename = (cov_1qv3v7zld6.s[3]++, temp + '/' + id + '.jpg');
   // convert to image
-  cov_2c0pwfx4y9.s[4]++;
+  cov_1qv3v7zld6.s[4]++;
   (0, _html2imgService2.default)(html, filename, function (err) {
-    cov_2c0pwfx4y9.f[1]++;
-    cov_2c0pwfx4y9.s[5]++;
+    cov_1qv3v7zld6.f[1]++;
+    cov_1qv3v7zld6.s[5]++;
 
     if (err) {
-      cov_2c0pwfx4y9.b[0][0]++;
-      cov_2c0pwfx4y9.s[6]++;
+      cov_1qv3v7zld6.b[0][0]++;
+      cov_1qv3v7zld6.s[6]++;
 
       return res.status(500).send(err);
     } else {
-      cov_2c0pwfx4y9.b[0][1]++;
+      cov_1qv3v7zld6.b[0][1]++;
     }
     // read file as base64
-    cov_2c0pwfx4y9.s[7]++;
+    cov_1qv3v7zld6.s[7]++;
     (0, _fsExtra.readFile)(filename, 'base64')
     // send file
     .then(function (base64) {
-      cov_2c0pwfx4y9.f[2]++;
-      cov_2c0pwfx4y9.s[8]++;
+      cov_1qv3v7zld6.f[2]++;
+      cov_1qv3v7zld6.s[8]++;
       return res.send(base64);
     })
     // remove temp file
     .then(function () {
-      cov_2c0pwfx4y9.f[3]++;
-      cov_2c0pwfx4y9.s[9]++;
+      cov_1qv3v7zld6.f[3]++;
+      cov_1qv3v7zld6.s[9]++;
       return (0, _fsExtra.remove)(filename);
     });
   });

@@ -1,12 +1,12 @@
 'use strict';
 
-var cov_gyzh2bx2v = function () {
-  var path = '/Users/rawbin/Documents/Projets/collaborations/ensad-publishing/prototype/plurishing-backend/src/server.js',
-      hash = '7941e0e3f32092d93a132aefa2800e0a6b3ada9b',
+var cov_fd9w2gpym = function () {
+  var path = '/Users/rawbin/Documents/Projets/collaborations/ensad-publishing/prototype/metis-backend/src/server.js',
+      hash = 'db9479bfce5117c22bafc56dbb2251108858e78d',
       global = new Function('return this')(),
       gcv = '__coverage__',
       coverageData = {
-    path: '/Users/rawbin/Documents/Projets/collaborations/ensad-publishing/prototype/plurishing-backend/src/server.js',
+    path: '/Users/rawbin/Documents/Projets/collaborations/ensad-publishing/prototype/metis-backend/src/server.js',
     statementMap: {
       '0': {
         start: {
@@ -114,9 +114,9 @@ var _config = require('./utils/config');
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var config = (cov_gyzh2bx2v.s[0]++, (0, _config.getConfig)());
+var config = (cov_fd9w2gpym.s[0]++, (0, _config.getConfig)());
 
-var _ref = (cov_gyzh2bx2v.s[1]++, config),
+var _ref = (cov_fd9w2gpym.s[1]++, config),
     port = _ref.port;
 
 /**
@@ -148,10 +148,10 @@ var _ref = (cov_gyzh2bx2v.s[1]++, config),
  * ===============
  */
 
-cov_gyzh2bx2v.s[2]++;
+cov_fd9w2gpym.s[2]++;
 _app2.default.listen(port, null, function () {
-  cov_gyzh2bx2v.f[0]++;
-  cov_gyzh2bx2v.s[3]++;
+  cov_fd9w2gpym.f[0]++;
+  cov_fd9w2gpym.s[3]++;
 
   console.log('Server listening on port %d in %s mode', this.address().port, _app2.default.settings.env);
 });

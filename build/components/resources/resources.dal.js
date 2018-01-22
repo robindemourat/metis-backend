@@ -13,13 +13,13 @@ var _promise = require('babel-runtime/core-js/promise');
 
 var _promise2 = _interopRequireDefault(_promise);
 
-var cov_20bhr2j2uw = function () {
-  var path = '/Users/rawbin/Documents/Projets/collaborations/ensad-publishing/prototype/plurishing-backend/src/components/resources/resources.dal.js',
-      hash = '8358d7c5b05f190df8752f0b079acced588672f0',
+var cov_25lcvfvez9 = function () {
+  var path = '/Users/rawbin/Documents/Projets/collaborations/ensad-publishing/prototype/metis-backend/src/components/resources/resources.dal.js',
+      hash = '97535cc5b18f86ad83c7607601561f749d9bbe8a',
       global = new Function('return this')(),
       gcv = '__coverage__',
       coverageData = {
-    path: '/Users/rawbin/Documents/Projets/collaborations/ensad-publishing/prototype/plurishing-backend/src/components/resources/resources.dal.js',
+    path: '/Users/rawbin/Documents/Projets/collaborations/ensad-publishing/prototype/metis-backend/src/components/resources/resources.dal.js',
     statementMap: {
       '0': {
         start: {
@@ -602,7 +602,7 @@ var cov_20bhr2j2uw = function () {
   coverageData.hash = hash;
   return coverage[path] = coverageData;
 }(); /**
-      * Plurishing-backend
+      * Metis-backend
       * =======
       * Resource data access layer
       */
@@ -611,7 +611,7 @@ var _plugDb = require('../../utils/plugDb');
 
 var _plugDb2 = _interopRequireDefault(_plugDb);
 
-var _plurishingSchemas = require('plurishing-schemas');
+var _metisSchemas = require('metis-schemas');
 
 var _resources = require('./resources.design');
 
@@ -626,7 +626,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 /**
  * Registering couchdb views related to resources objects
  */
-cov_20bhr2j2uw.s[0]++;
+cov_25lcvfvez9.s[0]++;
 (0, _couchdb.addDesign)(_plugDb2.default, 'resources', _resources2.default);
 
 /**
@@ -634,24 +634,24 @@ cov_20bhr2j2uw.s[0]++;
  * @param {object} parameters
  * @return {Promise}
  */
-cov_20bhr2j2uw.s[1]++;
+cov_25lcvfvez9.s[1]++;
 var getResources = exports.getResources = function getResources(_ref) {
   var _ref$include_docs = _ref.include_docs,
-      include_docs = _ref$include_docs === undefined ? (cov_20bhr2j2uw.b[0][0]++, true) : _ref$include_docs;
-  cov_20bhr2j2uw.f[0]++;
-  cov_20bhr2j2uw.s[2]++;
+      include_docs = _ref$include_docs === undefined ? (cov_25lcvfvez9.b[0][0]++, true) : _ref$include_docs;
+  cov_25lcvfvez9.f[0]++;
+  cov_25lcvfvez9.s[2]++;
 
   return _plugDb2.default.viewAsync('resources', 'by_id', {
     include_docs: include_docs
   }).then(function (results) {
-    cov_20bhr2j2uw.f[1]++;
-    cov_20bhr2j2uw.s[3]++;
+    cov_25lcvfvez9.f[1]++;
+    cov_25lcvfvez9.s[3]++;
     return new _promise2.default(function (resolve) {
-      cov_20bhr2j2uw.f[2]++;
-      cov_20bhr2j2uw.s[4]++;
+      cov_25lcvfvez9.f[2]++;
+      cov_25lcvfvez9.s[4]++;
       return resolve(results.rows.map(function (doc) {
-        cov_20bhr2j2uw.f[3]++;
-        cov_20bhr2j2uw.s[5]++;
+        cov_25lcvfvez9.f[3]++;
+        cov_25lcvfvez9.s[5]++;
         return doc.doc;
       }));
     });
@@ -663,17 +663,17 @@ var getResources = exports.getResources = function getResources(_ref) {
  * @param {object} parameters
  * @return {Promise}
  */
-cov_20bhr2j2uw.s[6]++;
+cov_25lcvfvez9.s[6]++;
 var getResource = exports.getResource = function getResource(_ref2) {
   var id = _ref2.id;
-  cov_20bhr2j2uw.f[4]++;
-  cov_20bhr2j2uw.s[7]++;
+  cov_25lcvfvez9.f[4]++;
+  cov_25lcvfvez9.s[7]++;
   return _plugDb2.default.getAsync(id).then(function (resource) {
-    cov_20bhr2j2uw.f[5]++;
-    cov_20bhr2j2uw.s[8]++;
+    cov_25lcvfvez9.f[5]++;
+    cov_25lcvfvez9.s[8]++;
     return (
       // verify that data is compliant before returning it
-      (0, _schemas.dataIsValid)(resource, _plurishingSchemas.Resource)
+      (0, _schemas.dataIsValid)(resource, _metisSchemas.Resource)
     );
   });
 };
@@ -683,13 +683,13 @@ var getResource = exports.getResource = function getResource(_ref2) {
  * @param {object} resource
  * @return {Promise}
  */
-cov_20bhr2j2uw.s[9]++;
+cov_25lcvfvez9.s[9]++;
 var createResource = exports.createResource = function createResource(resource) {
-  cov_20bhr2j2uw.f[6]++;
-  cov_20bhr2j2uw.s[10]++;
-  return (0, _schemas.dataIsValid)(resource, _plurishingSchemas.Resource).then(function () {
-    cov_20bhr2j2uw.f[7]++;
-    cov_20bhr2j2uw.s[11]++;
+  cov_25lcvfvez9.f[6]++;
+  cov_25lcvfvez9.s[10]++;
+  return (0, _schemas.dataIsValid)(resource, _metisSchemas.Resource).then(function () {
+    cov_25lcvfvez9.f[7]++;
+    cov_25lcvfvez9.s[11]++;
     return _plugDb2.default.insertAsync(resource);
   });
 };
@@ -700,23 +700,23 @@ var createResource = exports.createResource = function createResource(resource) 
  * @param {object} resource - data to update
  * @return {Promise}
  */
-cov_20bhr2j2uw.s[12]++;
+cov_25lcvfvez9.s[12]++;
 var updateResource = exports.updateResource = function updateResource(id, resource) {
-  cov_20bhr2j2uw.f[8]++;
-  cov_20bhr2j2uw.s[13]++;
+  cov_25lcvfvez9.f[8]++;
+  cov_25lcvfvez9.s[13]++;
   return (
     // validate
-    (0, _schemas.dataIsValid)(resource, _plurishingSchemas.Resource)
+    (0, _schemas.dataIsValid)(resource, _metisSchemas.Resource)
     // get existing document
     .then(function () {
-      cov_20bhr2j2uw.f[9]++;
-      cov_20bhr2j2uw.s[14]++;
+      cov_25lcvfvez9.f[9]++;
+      cov_25lcvfvez9.s[14]++;
       return _plugDb2.default.getAsync(id);
     })
     // update with new rev
     .then(function (resourceDb) {
-      cov_20bhr2j2uw.f[10]++;
-      cov_20bhr2j2uw.s[15]++;
+      cov_25lcvfvez9.f[10]++;
+      cov_25lcvfvez9.s[15]++;
       return _plugDb2.default.insertAsync((0, _extends3.default)({}, resource, {
         _rev: resourceDb._rev
       }), resourceDb._id);
@@ -729,14 +729,14 @@ var updateResource = exports.updateResource = function updateResource(id, resour
  * @param {object} resource - resource to delete
  * @return {Promise}
  */
-cov_20bhr2j2uw.s[16]++;
+cov_25lcvfvez9.s[16]++;
 var deleteResource = exports.deleteResource = function deleteResource(_ref3) {
   var _id = _ref3._id;
-  cov_20bhr2j2uw.f[11]++;
-  cov_20bhr2j2uw.s[17]++;
+  cov_25lcvfvez9.f[11]++;
+  cov_25lcvfvez9.s[17]++;
   return _plugDb2.default.getAsync(_id).then(function (resource) {
-    cov_20bhr2j2uw.f[12]++;
-    cov_20bhr2j2uw.s[18]++;
+    cov_25lcvfvez9.f[12]++;
+    cov_25lcvfvez9.s[18]++;
     return _plugDb2.default.destroyAsync(_id, resource._rev);
   });
 };

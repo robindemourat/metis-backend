@@ -5,14 +5,14 @@ import {v4 as generateId} from 'uuid';
 import {writeFile, remove} from 'fs-extra';
 import Epub from 'epub-gen';
 
-import DecoratedComposition from 'plurishing-shared/dist/components/views/static/DecoratedComposition';
+import DecoratedComposition from 'metis-shared/dist/components/views/static/DecoratedComposition';
 
-import EpubNoteContentPointer from 'plurishing-shared/dist/components/views/static/EpubNoteContentPointer';
-import EpubNotePointerPointer from 'plurishing-shared/dist/components/views/static/EpubNotePointerPointer';
-import EpubLink from 'plurishing-shared/dist/components/views/static/EpubLink';
-import StandaloneCover from 'plurishing-shared/dist/components/views/static/StandaloneCover';
-import Colophon from 'plurishing-shared/dist/components/views/static/Colophon';
-// import Toc from 'plurishing-shared/dist/components/views/static/Toc';
+import EpubNoteContentPointer from 'metis-shared/dist/components/views/static/EpubNoteContentPointer';
+import EpubNotePointerPointer from 'metis-shared/dist/components/views/static/EpubNotePointerPointer';
+import EpubLink from 'metis-shared/dist/components/views/static/EpubLink';
+import StandaloneCover from 'metis-shared/dist/components/views/static/StandaloneCover';
+import Colophon from 'metis-shared/dist/components/views/static/Colophon';
+// import Toc from 'metis-shared/dist/components/views/static/Toc';
 
 import {TranslationsProvider} from '../../utils/react-components';/* eslint no-unused-vars : 0 */
 

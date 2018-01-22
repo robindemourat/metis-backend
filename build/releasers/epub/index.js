@@ -8,13 +8,13 @@ var _promise = require('babel-runtime/core-js/promise');
 
 var _promise2 = _interopRequireDefault(_promise);
 
-var cov_1ea3uoml1a = function () {
-  var path = '/Users/rawbin/Documents/Projets/collaborations/ensad-publishing/prototype/plurishing-backend/src/releasers/epub/index.js',
-      hash = '99f3f8e7a1c987e5ecc329842801d6269cfdd246',
+var cov_2kshggfa6t = function () {
+  var path = '/Users/rawbin/Documents/Projets/collaborations/ensad-publishing/prototype/metis-backend/src/releasers/epub/index.js',
+      hash = '56dfb5a188063a1493c1763a2fc91229be8d59f9',
       global = new Function('return this')(),
       gcv = '__coverage__',
       coverageData = {
-    path: '/Users/rawbin/Documents/Projets/collaborations/ensad-publishing/prototype/plurishing-backend/src/releasers/epub/index.js',
+    path: '/Users/rawbin/Documents/Projets/collaborations/ensad-publishing/prototype/metis-backend/src/releasers/epub/index.js',
     statementMap: {
       '0': {
         start: {
@@ -33,7 +33,7 @@ var cov_1ea3uoml1a = function () {
         },
         end: {
           line: 14,
-          column: 119
+          column: 114
         }
       },
       '2': {
@@ -389,29 +389,29 @@ var _data = require('../../utils/data');
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var tempDirPath = (cov_1ea3uoml1a.s[0]++, (0, _path.resolve)(__dirname + '/../../../temp'));
-var styles = (cov_1ea3uoml1a.s[1]++, (0, _fs.readFileSync)((0, _path.resolve)(__dirname + '/../../../node_modules/plurishing-shared/dist/style.css'), 'utf8'));
+var tempDirPath = (cov_2kshggfa6t.s[0]++, (0, _path.resolve)(__dirname + '/../../../temp'));
+var styles = (cov_2kshggfa6t.s[1]++, (0, _fs.readFileSync)((0, _path.resolve)(__dirname + '/../../../node_modules/metis-shared/dist/style.css'), 'utf8'));
 
 function publish(data, diffusion) {
-  var renderingMode = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : (cov_1ea3uoml1a.b[0][0]++, 'epub-reflowable');
-  cov_1ea3uoml1a.f[0]++;
-  cov_1ea3uoml1a.s[2]++;
+  var renderingMode = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : (cov_2kshggfa6t.b[0][0]++, 'epub-reflowable');
+  cov_2kshggfa6t.f[0]++;
+  cov_2kshggfa6t.s[2]++;
 
   return new _promise2.default(function (resolve, reject) {
-    cov_1ea3uoml1a.f[1]++;
+    cov_2kshggfa6t.f[1]++;
 
 
     var deliverable = void 0;
     var getAssetUri = void 0;
 
-    cov_1ea3uoml1a.s[3]++;
+    cov_2kshggfa6t.s[3]++;
     (0, _data.mountLocalAssets)(data.assets).then(function (fn) {
-      cov_1ea3uoml1a.f[2]++;
-      cov_1ea3uoml1a.s[4]++;
+      cov_2kshggfa6t.f[2]++;
+      cov_2kshggfa6t.s[4]++;
 
       getAssetUri = function getAssetUri(asset) {
-        cov_1ea3uoml1a.f[3]++;
-        cov_1ea3uoml1a.s[5]++;
+        cov_2kshggfa6t.f[3]++;
+        cov_2kshggfa6t.s[5]++;
 
         // if (asset.mimetype.indexOf('image') > -1) {
         //   const path = fn(asset);
@@ -422,16 +422,16 @@ function publish(data, diffusion) {
         return 'file://' + fn(asset);
         // }
       };
-      cov_1ea3uoml1a.s[6]++;
+      cov_2kshggfa6t.s[6]++;
       return (0, _data.fetchCitationData)();
     }).then(function (citationData) {
-      cov_1ea3uoml1a.f[4]++;
+      cov_2kshggfa6t.f[4]++;
 
-      var _ref = (cov_1ea3uoml1a.s[7]++, citationData),
+      var _ref = (cov_2kshggfa6t.s[7]++, citationData),
           citationStyle = _ref.citationStyle,
           citationLocale = _ref.citationLocale;
 
-      cov_1ea3uoml1a.s[8]++;
+      cov_2kshggfa6t.s[8]++;
 
       return (0, _epub2.default)({
         // Component,
@@ -444,8 +444,8 @@ function publish(data, diffusion) {
         renderingMode: renderingMode,
         styles: styles
       }, function (epubPath) {
-        cov_1ea3uoml1a.f[5]++;
-        cov_1ea3uoml1a.s[9]++;
+        cov_2kshggfa6t.f[5]++;
+        cov_2kshggfa6t.s[9]++;
 
         deliverable = {
           type: 'deliverable',
@@ -458,10 +458,10 @@ function publish(data, diffusion) {
           filename: epubPath.split('/').pop(),
           mimetype: 'application/epub+zip'
         };
-        cov_1ea3uoml1a.s[10]++;
+        cov_2kshggfa6t.s[10]++;
         return (0, _fsExtra.readFile)(epubPath).then(function (deliverableData) {
-          cov_1ea3uoml1a.f[6]++;
-          cov_1ea3uoml1a.s[11]++;
+          cov_2kshggfa6t.f[6]++;
+          cov_2kshggfa6t.s[11]++;
 
           return _deliverables.dal.createDeliverable(deliverable, deliverableData);
         });

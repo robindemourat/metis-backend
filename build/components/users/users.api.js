@@ -4,13 +4,13 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var cov_2bdrnkusn2 = function () {
-  var path = '/Users/rawbin/Documents/Projets/collaborations/ensad-publishing/prototype/plurishing-backend/src/components/users/users.api.js',
-      hash = 'e9072dae1a9d0ec50cb1f5091e68d0d0446cfecf',
+var cov_ldm6pvqkv = function () {
+  var path = '/Users/rawbin/Documents/Projets/collaborations/ensad-publishing/prototype/metis-backend/src/components/users/users.api.js',
+      hash = 'bec2f65a1107af41241669b69bd1e09e1d425c10',
       global = new Function('return this')(),
       gcv = '__coverage__',
       coverageData = {
-    path: '/Users/rawbin/Documents/Projets/collaborations/ensad-publishing/prototype/plurishing-backend/src/components/users/users.api.js',
+    path: '/Users/rawbin/Documents/Projets/collaborations/ensad-publishing/prototype/metis-backend/src/components/users/users.api.js',
     statementMap: {
       '0': {
         start: {
@@ -107,7 +107,7 @@ var cov_2bdrnkusn2 = function () {
   coverageData.hash = hash;
   return coverage[path] = coverageData;
 }(); /**
-      * Plurishing-backend
+      * Metis-backend
       * =======
       * User api
       */
@@ -120,20 +120,20 @@ var _users = require('./users.controller');
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var router = (cov_2bdrnkusn2.s[0]++, new _express2.default.Router());
+var router = (cov_ldm6pvqkv.s[0]++, new _express2.default.Router());
 
-cov_2bdrnkusn2.s[1]++;
+cov_ldm6pvqkv.s[1]++;
 router.get('/', _users.getUsers);
-cov_2bdrnkusn2.s[2]++;
+cov_ldm6pvqkv.s[2]++;
 router.get('/:id', _users.getUser);
-cov_2bdrnkusn2.s[3]++;
+cov_ldm6pvqkv.s[3]++;
 router.post('/', _users.createUser);
 // password change is particularly protected (only own user can access it)
-cov_2bdrnkusn2.s[4]++;
+cov_ldm6pvqkv.s[4]++;
 router.post('/change-password', _users.changeUserPassword);
-cov_2bdrnkusn2.s[5]++;
+cov_ldm6pvqkv.s[5]++;
 router.put('/:id', _users.updateUser);
-cov_2bdrnkusn2.s[6]++;
+cov_ldm6pvqkv.s[6]++;
 router.delete('/:id', _users.deleteUser);
 
 exports.default = router;

@@ -21,13 +21,13 @@ var _promise = require('babel-runtime/core-js/promise');
 
 var _promise2 = _interopRequireDefault(_promise);
 
-var cov_27caz4pvrq = function () {
-  var path = '/Users/rawbin/Documents/Projets/collaborations/ensad-publishing/prototype/plurishing-backend/src/releasers/micropublication/micropublication.controller.js',
-      hash = '59cbab491e69a33db506b0cafd86aa6850e3c15f',
+var cov_1ml29j46d1 = function () {
+  var path = '/Users/rawbin/Documents/Projets/collaborations/ensad-publishing/prototype/metis-backend/src/releasers/micropublication/micropublication.controller.js',
+      hash = '2b8c2a0e1327b7804eb9615c646fa69c5e75b3c5',
       global = new Function('return this')(),
       gcv = '__coverage__',
       coverageData = {
-    path: '/Users/rawbin/Documents/Projets/collaborations/ensad-publishing/prototype/plurishing-backend/src/releasers/micropublication/micropublication.controller.js',
+    path: '/Users/rawbin/Documents/Projets/collaborations/ensad-publishing/prototype/metis-backend/src/releasers/micropublication/micropublication.controller.js',
     statementMap: {
       '0': {
         start: {
@@ -1371,7 +1371,7 @@ var _config = require('../../utils/config');
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var _ref = (cov_27caz4pvrq.s[0]++, (0, _config.getConfig)()),
+var _ref = (cov_1ml29j46d1.s[0]++, (0, _config.getConfig)()),
     twitter_consumer_key = _ref.twitter_consumer_key,
     twitter_consumer_secret = _ref.twitter_consumer_secret,
     twitter_access_token = _ref.twitter_access_token,
@@ -1382,14 +1382,14 @@ var _ref = (cov_27caz4pvrq.s[0]++, (0, _config.getConfig)()),
     mailingHubEmail = _ref.mailingHubEmail,
     serverUri = _ref.serverUri;
 
-var twitterConfig = (cov_27caz4pvrq.s[1]++, {
+var twitterConfig = (cov_1ml29j46d1.s[1]++, {
   consumer_key: twitter_consumer_key,
   consumer_secret: twitter_consumer_secret,
   access_token: twitter_access_token,
   access_token_secret: twitter_access_token_secret
 });
 
-var mailConfig = (cov_27caz4pvrq.s[2]++, {
+var mailConfig = (cov_1ml29j46d1.s[2]++, {
   smtp_service: smtpService,
   smtp_password: smtpPassword,
   smtp_email: smtpEmail,
@@ -1399,107 +1399,107 @@ var mailConfig = (cov_27caz4pvrq.s[2]++, {
 /**
  * @todo refactor as shared util
  */
-cov_27caz4pvrq.s[3]++;
+cov_1ml29j46d1.s[3]++;
 var renderAbstractAsHtml = function renderAbstractAsHtml(composition) {
-  cov_27caz4pvrq.f[0]++;
+  cov_1ml29j46d1.f[0]++;
 
-  var abstr = (cov_27caz4pvrq.s[4]++, (cov_27caz4pvrq.b[0][0]++, composition) && (cov_27caz4pvrq.b[0][1]++, composition.metadata.abstract_original));
-  cov_27caz4pvrq.s[5]++;
+  var abstr = (cov_1ml29j46d1.s[4]++, (cov_1ml29j46d1.b[0][0]++, composition) && (cov_1ml29j46d1.b[0][1]++, composition.metadata.abstract_original));
+  cov_1ml29j46d1.s[5]++;
   if (abstr) {
-    cov_27caz4pvrq.b[1][0]++;
-    cov_27caz4pvrq.s[6]++;
+    cov_1ml29j46d1.b[1][0]++;
+    cov_1ml29j46d1.s[6]++;
 
     return '<html>\n    <head>\n      <style>\n        *{background: white; color: black;}\n      </style>\n    </head>\n    <body><p>' + abstr + '</p></body></html>';
   } else {
-    cov_27caz4pvrq.b[1][1]++;
+    cov_1ml29j46d1.b[1][1]++;
   }
-  cov_27caz4pvrq.s[7]++;
+  cov_1ml29j46d1.s[7]++;
   return '';
 };
 
-cov_27caz4pvrq.s[8]++;
+cov_1ml29j46d1.s[8]++;
 var release = exports.release = function release(diffusion) {
-  cov_27caz4pvrq.f[1]++;
-  cov_27caz4pvrq.s[9]++;
+  cov_1ml29j46d1.f[1]++;
+  cov_1ml29j46d1.s[9]++;
 
   return new _promise2.default(function (resolve, reject) {
-    cov_27caz4pvrq.f[2]++;
+    cov_1ml29j46d1.f[2]++;
 
     var montage = void 0;
     var composition = void 0;
-    var assets = (cov_27caz4pvrq.s[10]++, {});
+    var assets = (cov_1ml29j46d1.s[10]++, {});
     // fetch montage
-    cov_27caz4pvrq.s[11]++;
+    cov_1ml29j46d1.s[11]++;
     _montages.dal.getMontage({ id: diffusion.montage_id })
     // fetch composition demendency
     .then(function (thatMontage) {
-      cov_27caz4pvrq.f[3]++;
-      cov_27caz4pvrq.s[12]++;
+      cov_1ml29j46d1.f[3]++;
+      cov_1ml29j46d1.s[12]++;
 
       montage = thatMontage;
-      var compositionId = (cov_27caz4pvrq.s[13]++, montage.data.target_composition_id);
-      cov_27caz4pvrq.s[14]++;
+      var compositionId = (cov_1ml29j46d1.s[13]++, montage.data.target_composition_id);
+      cov_1ml29j46d1.s[14]++;
       return _compositions.dal.getComposition({ id: compositionId });
     })
     // fetch resource dependencies
     .then(function (thatComposition) {
-      cov_27caz4pvrq.f[4]++;
-      cov_27caz4pvrq.s[15]++;
+      cov_1ml29j46d1.f[4]++;
+      cov_1ml29j46d1.s[15]++;
 
       composition = thatComposition;
-      var resources = (cov_27caz4pvrq.s[16]++, montage.resources);
-      cov_27caz4pvrq.s[17]++;
+      var resources = (cov_1ml29j46d1.s[16]++, montage.resources);
+      cov_1ml29j46d1.s[17]++;
       if (resources) {
         // do stuff to fetch them
         /**
          * @todo implement resource fetching when adding resources images in micropublication
          */
 
-        cov_27caz4pvrq.b[2][0]++;
+        cov_1ml29j46d1.b[2][0]++;
       } else {
-        cov_27caz4pvrq.b[2][1]++;
-        cov_27caz4pvrq.s[18]++;
+        cov_1ml29j46d1.b[2][1]++;
+        cov_1ml29j46d1.s[18]++;
 
         return _promise2.default.resolve();
       }
     })
     // fetch assets dependencies
     .then(function () {
-      cov_27caz4pvrq.f[5]++;
+      cov_1ml29j46d1.f[5]++;
 
-      var operations = (cov_27caz4pvrq.s[19]++, []);
+      var operations = (cov_1ml29j46d1.s[19]++, []);
       // produce abstract image ?
-      cov_27caz4pvrq.s[20]++;
-      if ((cov_27caz4pvrq.b[4][0]++, montage.data.include_abstract) && (cov_27caz4pvrq.b[4][1]++, diffusion.parameters.targets.indexOf('twitter') > -1)) {
-        cov_27caz4pvrq.b[3][0]++;
+      cov_1ml29j46d1.s[20]++;
+      if ((cov_1ml29j46d1.b[4][0]++, montage.data.include_abstract) && (cov_1ml29j46d1.b[4][1]++, diffusion.parameters.targets.indexOf('twitter') > -1)) {
+        cov_1ml29j46d1.b[3][0]++;
 
-        var html = (cov_27caz4pvrq.s[21]++, renderAbstractAsHtml(composition));
-        var absPath = (cov_27caz4pvrq.s[22]++, __dirname + '/../../../temp/' + (0, _uuid.v4)() + '.jpg');
-        var path = (cov_27caz4pvrq.s[23]++, (0, _path.resolve)(absPath));
-        cov_27caz4pvrq.s[24]++;
+        var html = (cov_1ml29j46d1.s[21]++, renderAbstractAsHtml(composition));
+        var absPath = (cov_1ml29j46d1.s[22]++, __dirname + '/../../../temp/' + (0, _uuid.v4)() + '.jpg');
+        var path = (cov_1ml29j46d1.s[23]++, (0, _path.resolve)(absPath));
+        cov_1ml29j46d1.s[24]++;
         operations.push(new _promise2.default(function (reso, rej) {
-          cov_27caz4pvrq.f[6]++;
-          cov_27caz4pvrq.s[25]++;
+          cov_1ml29j46d1.f[6]++;
+          cov_1ml29j46d1.s[25]++;
           return (/* eslint promise/param-names : 0 */
             (0, _html2img.service)(html, path, function (err) {
-              cov_27caz4pvrq.f[7]++;
-              cov_27caz4pvrq.s[26]++;
+              cov_1ml29j46d1.f[7]++;
+              cov_1ml29j46d1.s[26]++;
 
               if (err) {
-                cov_27caz4pvrq.b[5][0]++;
-                cov_27caz4pvrq.s[27]++;
+                cov_1ml29j46d1.b[5][0]++;
+                cov_1ml29j46d1.s[27]++;
 
                 return rej(err);
               } else {
-                cov_27caz4pvrq.b[5][1]++;
-                cov_27caz4pvrq.s[28]++;
+                cov_1ml29j46d1.b[5][1]++;
+                cov_1ml29j46d1.s[28]++;
 
                 (0, _fsExtra.readFile)(path, 'base64').then(function (base64) {
-                  cov_27caz4pvrq.f[8]++;
-                  cov_27caz4pvrq.s[29]++;
+                  cov_1ml29j46d1.f[8]++;
+                  cov_1ml29j46d1.s[29]++;
 
                   assets.abstractImageUri = base64;
-                  cov_27caz4pvrq.s[30]++;
+                  cov_1ml29j46d1.s[30]++;
                   return (0, _fsExtra.remove)(path);
                 }).then(reso);
               }
@@ -1507,104 +1507,104 @@ var release = exports.release = function release(diffusion) {
           );
         }));
       } else {
-        cov_27caz4pvrq.b[3][1]++;
+        cov_1ml29j46d1.b[3][1]++;
       }
-      cov_27caz4pvrq.s[31]++;
-      if ((cov_27caz4pvrq.b[7][0]++, montage.data.attached_assets) && (cov_27caz4pvrq.b[7][1]++, montage.data.attached_assets.length)) {
-        cov_27caz4pvrq.b[6][0]++;
-        cov_27caz4pvrq.s[32]++;
+      cov_1ml29j46d1.s[31]++;
+      if ((cov_1ml29j46d1.b[7][0]++, montage.data.attached_assets) && (cov_1ml29j46d1.b[7][1]++, montage.data.attached_assets.length)) {
+        cov_1ml29j46d1.b[6][0]++;
+        cov_1ml29j46d1.s[32]++;
 
         montage.data.attached_assets.forEach(function (citation) {
-          cov_27caz4pvrq.f[9]++;
+          cov_1ml29j46d1.f[9]++;
 
-          var _ref2 = (cov_27caz4pvrq.s[33]++, citation),
+          var _ref2 = (cov_1ml29j46d1.s[33]++, citation),
               imageAssetId = _ref2.image_asset_id;
 
-          cov_27caz4pvrq.s[34]++;
+          cov_1ml29j46d1.s[34]++;
 
           operations.push(new _promise2.default(function (reso, rej) {
-            cov_27caz4pvrq.f[10]++;
+            cov_1ml29j46d1.f[10]++;
             /* eslint promise/param-names : 0 */
             var asset = void 0;
-            cov_27caz4pvrq.s[35]++;
+            cov_1ml29j46d1.s[35]++;
             _assets.dal.getAsset({
               id: imageAssetId
             }).then(function (ass) {
-              cov_27caz4pvrq.f[11]++;
-              cov_27caz4pvrq.s[36]++;
+              cov_1ml29j46d1.f[11]++;
+              cov_1ml29j46d1.s[36]++;
 
               asset = ass;
-              cov_27caz4pvrq.s[37]++;
+              cov_1ml29j46d1.s[37]++;
               return _assets.dal.getAssetAttachment({
                 id: ass._id,
                 filename: ass.filename,
                 encoding: 'base64'
               });
             }).then(function (resp) {
-              cov_27caz4pvrq.f[12]++;
-              cov_27caz4pvrq.s[38]++;
+              cov_1ml29j46d1.f[12]++;
+              cov_1ml29j46d1.s[38]++;
 
               assets[imageAssetId] = {
                 url: serverUri + '/api/assets/' + asset._id + '/' + asset.filename,
                 base64: resp.data
               };
-              cov_27caz4pvrq.s[39]++;
+              cov_1ml29j46d1.s[39]++;
               return _promise2.default.resolve();
             }).then(reso).catch(rej);
           }));
         });
       } else {
-        cov_27caz4pvrq.b[6][1]++;
+        cov_1ml29j46d1.b[6][1]++;
       }
-      cov_27caz4pvrq.s[40]++;
+      cov_1ml29j46d1.s[40]++;
       return _promise2.default.all(operations);
     })
     // register release operations to perform
     .then(function () {
-      cov_27caz4pvrq.f[13]++;
+      cov_1ml29j46d1.f[13]++;
 
       // execute
-      var targets = (cov_27caz4pvrq.s[41]++, diffusion.parameters.targets);
+      var targets = (cov_1ml29j46d1.s[41]++, diffusion.parameters.targets);
 
-      var operations = (cov_27caz4pvrq.s[42]++, targets.map(function (targetId) {
-        cov_27caz4pvrq.f[14]++;
+      var operations = (cov_1ml29j46d1.s[42]++, targets.map(function (targetId) {
+        cov_1ml29j46d1.f[14]++;
 
         var tweetContents = void 0;
         var mailContents = void 0;
-        var urledAssets = (cov_27caz4pvrq.s[43]++, (0, _keys2.default)(assets).reduce(function (total, key) {
-          cov_27caz4pvrq.f[15]++;
-          cov_27caz4pvrq.s[44]++;
+        var urledAssets = (cov_1ml29j46d1.s[43]++, (0, _keys2.default)(assets).reduce(function (total, key) {
+          cov_1ml29j46d1.f[15]++;
+          cov_1ml29j46d1.s[44]++;
           return (0, _extends4.default)({}, total, (0, _defineProperty3.default)({}, key, assets[key].url));
         }, {}));
-        cov_27caz4pvrq.s[45]++;
+        cov_1ml29j46d1.s[45]++;
         switch (targetId) {
           case 'twitter':
-            cov_27caz4pvrq.b[8][0]++;
-            cov_27caz4pvrq.s[46]++;
+            cov_1ml29j46d1.b[8][0]++;
+            cov_1ml29j46d1.s[46]++;
 
             tweetContents = (0, _twitter.montageToTweet)(montage, composition, assets);
-            cov_27caz4pvrq.s[47]++;
+            cov_1ml29j46d1.s[47]++;
             return (0, _twitter.tweet)(tweetContents, twitterConfig);
 
           case 'mailing':
-            cov_27caz4pvrq.b[8][1]++;
-            cov_27caz4pvrq.s[48]++;
+            cov_1ml29j46d1.b[8][1]++;
+            cov_1ml29j46d1.s[48]++;
 
             mailContents = (0, _mailing.montageToMail)(montage, composition, urledAssets, mailConfig);
-            cov_27caz4pvrq.s[49]++;
+            cov_1ml29j46d1.s[49]++;
             return (0, _mailing.mail)(mailContents, mailConfig);
 
           case 'facebook':
-            cov_27caz4pvrq.b[8][2]++;
+            cov_1ml29j46d1.b[8][2]++;
 
           default:
-            cov_27caz4pvrq.b[8][3]++;
-            cov_27caz4pvrq.s[50]++;
+            cov_1ml29j46d1.b[8][3]++;
+            cov_1ml29j46d1.s[50]++;
 
             return _promise2.default.resolve();
         }
       }));
-      cov_27caz4pvrq.s[51]++;
+      cov_1ml29j46d1.s[51]++;
       return _promise2.default.all(operations);
     }).then(resolve).catch(reject);
   });

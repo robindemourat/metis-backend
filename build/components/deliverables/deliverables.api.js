@@ -4,13 +4,13 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var cov_22zt848e3k = function () {
-  var path = '/Users/rawbin/Documents/Projets/collaborations/ensad-publishing/prototype/plurishing-backend/src/components/deliverables/deliverables.api.js',
-      hash = 'df9ac1492c3b19470fe04806ad9c4c2e1256d1d8',
+var cov_27gbb8n6e2 = function () {
+  var path = '/Users/rawbin/Documents/Projets/collaborations/ensad-publishing/prototype/metis-backend/src/components/deliverables/deliverables.api.js',
+      hash = '4592024a3dd101837825ede0763a4b3572603251',
       global = new Function('return this')(),
       gcv = '__coverage__',
       coverageData = {
-    path: '/Users/rawbin/Documents/Projets/collaborations/ensad-publishing/prototype/plurishing-backend/src/components/deliverables/deliverables.api.js',
+    path: '/Users/rawbin/Documents/Projets/collaborations/ensad-publishing/prototype/metis-backend/src/components/deliverables/deliverables.api.js',
     statementMap: {
       '0': {
         start: {
@@ -107,7 +107,7 @@ var cov_22zt848e3k = function () {
   coverageData.hash = hash;
   return coverage[path] = coverageData;
 }(); /**
-      * Plurishing-backend
+      * Metis-backend
       * =======
       * Deliverable api
       */
@@ -120,20 +120,20 @@ var _deliverables = require('./deliverables.controller');
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var router = (cov_22zt848e3k.s[0]++, new _express2.default.Router());
+var router = (cov_27gbb8n6e2.s[0]++, new _express2.default.Router());
 
-cov_22zt848e3k.s[1]++;
+cov_27gbb8n6e2.s[1]++;
 router.get('/', _deliverables.getDeliverables);
-cov_22zt848e3k.s[2]++;
+cov_27gbb8n6e2.s[2]++;
 router.get('/:id', _deliverables.getDeliverable);
-cov_22zt848e3k.s[3]++;
+cov_27gbb8n6e2.s[3]++;
 router.get('/:id/:filename', _deliverables.getDeliverableAttachment);
 
-cov_22zt848e3k.s[4]++;
+cov_27gbb8n6e2.s[4]++;
 router.post('/:id', _deliverables.createDeliverable);
-cov_22zt848e3k.s[5]++;
+cov_27gbb8n6e2.s[5]++;
 router.put('/:id', _deliverables.updateDeliverable);
-cov_22zt848e3k.s[6]++;
+cov_27gbb8n6e2.s[6]++;
 router.delete('/:id', _deliverables.deleteDeliverable);
 
 exports.default = router;

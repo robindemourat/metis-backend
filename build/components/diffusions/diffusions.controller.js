@@ -13,13 +13,13 @@ var _extends2 = require('babel-runtime/helpers/extends');
 
 var _extends3 = _interopRequireDefault(_extends2);
 
-var cov_1pp8drd87p = function () {
-  var path = '/Users/rawbin/Documents/Projets/collaborations/ensad-publishing/prototype/plurishing-backend/src/components/diffusions/diffusions.controller.js',
-      hash = '5d4ee078e94da61b0e38ca5c993a86ea4dd22ce9',
+var cov_911ccnkco = function () {
+  var path = '/Users/rawbin/Documents/Projets/collaborations/ensad-publishing/prototype/metis-backend/src/components/diffusions/diffusions.controller.js',
+      hash = '724eaa0f5c91e70e9f8c3664290443b9de199cc5',
       global = new Function('return this')(),
       gcv = '__coverage__',
       coverageData = {
-    path: '/Users/rawbin/Documents/Projets/collaborations/ensad-publishing/prototype/plurishing-backend/src/components/diffusions/diffusions.controller.js',
+    path: '/Users/rawbin/Documents/Projets/collaborations/ensad-publishing/prototype/metis-backend/src/components/diffusions/diffusions.controller.js',
     statementMap: {
       '0': {
         start: {
@@ -718,7 +718,7 @@ var cov_1pp8drd87p = function () {
   coverageData.hash = hash;
   return coverage[path] = coverageData;
 }(); // /**
-//  * Plurishing-backend
+//  * Metis-backend
 //  * =======
 //  * Diffusions component controller
 //  */
@@ -739,10 +739,10 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
  * @param {object} res - the resource of query
  * @todo add filters handling through req queries
  */
-cov_1pp8drd87p.s[0]++;
+cov_911ccnkco.s[0]++;
 var getDiffusions = exports.getDiffusions = function getDiffusions(req, res) {
-  cov_1pp8drd87p.f[0]++;
-  cov_1pp8drd87p.s[1]++;
+  cov_911ccnkco.f[0]++;
+  cov_911ccnkco.s[1]++;
   return res.json((0, _diffusions.getDiffusions)({}));
 };
 
@@ -751,10 +751,10 @@ var getDiffusions = exports.getDiffusions = function getDiffusions(req, res) {
  * @param {object} req - the request of query
  * @param {object} res - the resource of query
  */
-cov_1pp8drd87p.s[2]++;
+cov_911ccnkco.s[2]++;
 var getDiffusion = exports.getDiffusion = function getDiffusion(req, res) {
-  cov_1pp8drd87p.f[1]++;
-  cov_1pp8drd87p.s[3]++;
+  cov_911ccnkco.f[1]++;
+  cov_911ccnkco.s[3]++;
   return res.json((0, _diffusions.getDiffusion)({
     id: req.params.id
   }));
@@ -765,31 +765,31 @@ var getDiffusion = exports.getDiffusion = function getDiffusion(req, res) {
  * @param {object} req - the request of query
  * @param {object} res - the resource of query
  */
-cov_1pp8drd87p.s[4]++;
+cov_911ccnkco.s[4]++;
 var createDiffusion = exports.createDiffusion = function createDiffusion(req, res) {
-  cov_1pp8drd87p.f[2]++;
+  cov_911ccnkco.f[2]++;
 
   // normally diffusion should have a 'waiting' status when provided
-  var diff = (cov_1pp8drd87p.s[5]++, (0, _extends3.default)({}, req.body, {
+  var diff = (cov_911ccnkco.s[5]++, (0, _extends3.default)({}, req.body, {
     status: 'waiting'
   }));
   var diffId = void 0;
   // create the diffusion
-  cov_1pp8drd87p.s[6]++;
+  cov_911ccnkco.s[6]++;
   (0, _diffusions.createDiffusion)(diff)
   // return the diffusion with 'processing' status
   .then(function (_ref) {
     var id = _ref.id;
-    cov_1pp8drd87p.f[3]++;
-    cov_1pp8drd87p.s[7]++;
+    cov_911ccnkco.f[3]++;
+    cov_911ccnkco.s[7]++;
 
     diffId = id;
-    cov_1pp8drd87p.s[8]++;
+    cov_911ccnkco.s[8]++;
     return (0, _diffusions.getDiffusion)({ id: id });
   }).then(function (diffusion) {
-    cov_1pp8drd87p.f[4]++;
-    cov_1pp8drd87p.s[9]++;
-    return (cov_1pp8drd87p.b[0][0]++, res.json(diffusion)) && (cov_1pp8drd87p.b[0][1]++, _promise2.default.resolve());
+    cov_911ccnkco.f[4]++;
+    cov_911ccnkco.s[9]++;
+    return (cov_911ccnkco.b[0][0]++, res.json(diffusion)) && (cov_911ccnkco.b[0][1]++, _promise2.default.resolve());
   })
   // launch diffusion operations
   /**
@@ -797,46 +797,46 @@ var createDiffusion = exports.createDiffusion = function createDiffusion(req, re
    * @body in real life a queue system should be put in place so that one diffusion at a time is resolved
    */
   .then(function () {
-    cov_1pp8drd87p.f[5]++;
-    cov_1pp8drd87p.s[10]++;
+    cov_911ccnkco.f[5]++;
+    cov_911ccnkco.s[10]++;
     return (0, _diffusions.updateDiffusion)(diffId, (0, _extends3.default)({}, diff, { status: 'processing' }));
   }).then(function () {
-    cov_1pp8drd87p.f[6]++;
-    cov_1pp8drd87p.s[11]++;
+    cov_911ccnkco.f[6]++;
+    cov_911ccnkco.s[11]++;
 
     switch (diff.montage_type) {
       case 'micropublication':
-        cov_1pp8drd87p.b[1][0]++;
-        cov_1pp8drd87p.s[12]++;
+        cov_911ccnkco.b[1][0]++;
+        cov_911ccnkco.s[12]++;
 
         return _micropublication.controller.release((0, _extends3.default)({}, diff, { _id: diffId }));
       case 'static':
-        cov_1pp8drd87p.b[1][1]++;
-        cov_1pp8drd87p.s[13]++;
+        cov_911ccnkco.b[1][1]++;
+        cov_911ccnkco.s[13]++;
 
         return _staticpublication.controller.release((0, _extends3.default)({}, diff, { _id: diffId }));
       case 'dynamic':
-        cov_1pp8drd87p.b[1][2]++;
-        cov_1pp8drd87p.s[14]++;
+        cov_911ccnkco.b[1][2]++;
+        cov_911ccnkco.s[14]++;
 
         return _dynamicpublication.controller.release((0, _extends3.default)({}, diff, { _id: diffId }));
       default:
-        cov_1pp8drd87p.b[1][3]++;
-        cov_1pp8drd87p.s[15]++;
+        cov_911ccnkco.b[1][3]++;
+        cov_911ccnkco.s[15]++;
 
         return _promise2.default.resolve();
     }
   })
   // success
   .then(function () {
-    cov_1pp8drd87p.f[7]++;
-    cov_1pp8drd87p.s[16]++;
+    cov_911ccnkco.f[7]++;
+    cov_911ccnkco.s[16]++;
     return (0, _diffusions.updateDiffusion)(diffId, (0, _extends3.default)({}, diff, { status: 'success' }));
   })
   // error
   .catch(function () {
-    cov_1pp8drd87p.f[8]++;
-    cov_1pp8drd87p.s[17]++;
+    cov_911ccnkco.f[8]++;
+    cov_911ccnkco.s[17]++;
     return (0, _diffusions.updateDiffusion)(diffId, (0, _extends3.default)({}, diff, { status: 'failure' }));
   });
 };
@@ -846,22 +846,22 @@ var createDiffusion = exports.createDiffusion = function createDiffusion(req, re
  * @param {object} req - the request of query
  * @param {object} res - the resource of query
  */
-cov_1pp8drd87p.s[18]++;
+cov_911ccnkco.s[18]++;
 var updateDiffusion = exports.updateDiffusion = function updateDiffusion(req, res) {
-  cov_1pp8drd87p.f[9]++;
-  cov_1pp8drd87p.s[19]++;
+  cov_911ccnkco.f[9]++;
+  cov_911ccnkco.s[19]++;
   return res.json(
   // update the diffusion
   (0, _diffusions.updateDiffusion)(req.params.id, req.body).
   // return the diffusion
   then(function (_ref2) {
     var id = _ref2.id;
-    cov_1pp8drd87p.f[10]++;
-    cov_1pp8drd87p.s[20]++;
+    cov_911ccnkco.f[10]++;
+    cov_911ccnkco.s[20]++;
     return (0, _diffusions.getDiffusion)({ id: id });
   }).then(function (diffusion) {
-    cov_1pp8drd87p.f[11]++;
-    cov_1pp8drd87p.s[21]++;
+    cov_911ccnkco.f[11]++;
+    cov_911ccnkco.s[21]++;
     return res.json(diffusion);
   }));
 };
@@ -871,9 +871,9 @@ var updateDiffusion = exports.updateDiffusion = function updateDiffusion(req, re
  * @param {object} req - the request of query
  * @param {object} res - the resource of query
  */
-cov_1pp8drd87p.s[22]++;
+cov_911ccnkco.s[22]++;
 var deleteDiffusion = exports.deleteDiffusion = function deleteDiffusion(req, res) {
-  cov_1pp8drd87p.f[12]++;
-  cov_1pp8drd87p.s[23]++;
+  cov_911ccnkco.f[12]++;
+  cov_911ccnkco.s[23]++;
   return res.json((0, _diffusions.deleteDiffusion)({ _id: req.params.id }));
 };

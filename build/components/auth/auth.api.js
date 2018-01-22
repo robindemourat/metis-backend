@@ -4,13 +4,13 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var cov_1en15y3zz4 = function () {
-  var path = '/Users/rawbin/Documents/Projets/collaborations/ensad-publishing/prototype/plurishing-backend/src/components/auth/auth.api.js',
-      hash = '7e4375618363f3e0c432b1dadbad28995afb5b43',
+var cov_17sznndkpe = function () {
+  var path = '/Users/rawbin/Documents/Projets/collaborations/ensad-publishing/prototype/metis-backend/src/components/auth/auth.api.js',
+      hash = '1388b049d55341571463fa63703fa4965f5ed339',
       global = new Function('return this')(),
       gcv = '__coverage__',
       coverageData = {
-    path: '/Users/rawbin/Documents/Projets/collaborations/ensad-publishing/prototype/plurishing-backend/src/components/auth/auth.api.js',
+    path: '/Users/rawbin/Documents/Projets/collaborations/ensad-publishing/prototype/metis-backend/src/components/auth/auth.api.js',
     statementMap: {
       '0': {
         start: {
@@ -94,15 +94,15 @@ var _auth = require('./auth.controller');
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var router = (cov_1en15y3zz4.s[0]++, new _express2.default.Router());
+var router = (cov_17sznndkpe.s[0]++, new _express2.default.Router());
 
-cov_1en15y3zz4.s[1]++;
+cov_17sznndkpe.s[1]++;
 router.post('/request-password-reset', _auth.resetPassword);
-cov_1en15y3zz4.s[2]++;
+cov_17sznndkpe.s[2]++;
 router.post('/sign-up', _auth.signup);
-cov_1en15y3zz4.s[3]++;
+cov_17sznndkpe.s[3]++;
 router.post('/login', _auth.login);
-cov_1en15y3zz4.s[4]++;
+cov_17sznndkpe.s[4]++;
 router;
 
 exports.default = router;

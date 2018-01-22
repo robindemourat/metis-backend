@@ -13,13 +13,13 @@ var _promise = require('babel-runtime/core-js/promise');
 
 var _promise2 = _interopRequireDefault(_promise);
 
-var cov_2l9x15qscx = function () {
-  var path = '/Users/rawbin/Documents/Projets/collaborations/ensad-publishing/prototype/plurishing-backend/src/components/compositions/compositions.dal.js',
-      hash = '587e33621484f324f223cb363ea9eac7ce8ad498',
+var cov_vgwyx12ia = function () {
+  var path = '/Users/rawbin/Documents/Projets/collaborations/ensad-publishing/prototype/metis-backend/src/components/compositions/compositions.dal.js',
+      hash = '30b5d4f942aff08d2a02c0b9ba36a5dacc851d65',
       global = new Function('return this')(),
       gcv = '__coverage__',
       coverageData = {
-    path: '/Users/rawbin/Documents/Projets/collaborations/ensad-publishing/prototype/plurishing-backend/src/components/compositions/compositions.dal.js',
+    path: '/Users/rawbin/Documents/Projets/collaborations/ensad-publishing/prototype/metis-backend/src/components/compositions/compositions.dal.js',
     statementMap: {
       '0': {
         start: {
@@ -602,7 +602,7 @@ var cov_2l9x15qscx = function () {
   coverageData.hash = hash;
   return coverage[path] = coverageData;
 }(); /**
-      * Plurishing-backend
+      * Metis-backend
       * =======
       * Composition data access layer
       */
@@ -611,7 +611,7 @@ var _plugDb = require('../../utils/plugDb');
 
 var _plugDb2 = _interopRequireDefault(_plugDb);
 
-var _plurishingSchemas = require('plurishing-schemas');
+var _metisSchemas = require('metis-schemas');
 
 var _compositions = require('./compositions.design');
 
@@ -626,7 +626,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 /**
  * Registering couchdb views related to compositions objects
  */
-cov_2l9x15qscx.s[0]++;
+cov_vgwyx12ia.s[0]++;
 (0, _couchdb.addDesign)(_plugDb2.default, 'compositions', _compositions2.default);
 
 /**
@@ -634,24 +634,24 @@ cov_2l9x15qscx.s[0]++;
  * @param {object} parameters
  * @return {Promise}
  */
-cov_2l9x15qscx.s[1]++;
+cov_vgwyx12ia.s[1]++;
 var getCompositions = exports.getCompositions = function getCompositions(_ref) {
   var _ref$include_docs = _ref.include_docs,
-      include_docs = _ref$include_docs === undefined ? (cov_2l9x15qscx.b[0][0]++, true) : _ref$include_docs;
-  cov_2l9x15qscx.f[0]++;
-  cov_2l9x15qscx.s[2]++;
+      include_docs = _ref$include_docs === undefined ? (cov_vgwyx12ia.b[0][0]++, true) : _ref$include_docs;
+  cov_vgwyx12ia.f[0]++;
+  cov_vgwyx12ia.s[2]++;
 
   return _plugDb2.default.viewAsync('compositions', 'by_id', {
     include_docs: include_docs
   }).then(function (results) {
-    cov_2l9x15qscx.f[1]++;
-    cov_2l9x15qscx.s[3]++;
+    cov_vgwyx12ia.f[1]++;
+    cov_vgwyx12ia.s[3]++;
     return new _promise2.default(function (resolve) {
-      cov_2l9x15qscx.f[2]++;
-      cov_2l9x15qscx.s[4]++;
+      cov_vgwyx12ia.f[2]++;
+      cov_vgwyx12ia.s[4]++;
       return resolve(results.rows.map(function (doc) {
-        cov_2l9x15qscx.f[3]++;
-        cov_2l9x15qscx.s[5]++;
+        cov_vgwyx12ia.f[3]++;
+        cov_vgwyx12ia.s[5]++;
         return doc.doc;
       }));
     });
@@ -663,17 +663,17 @@ var getCompositions = exports.getCompositions = function getCompositions(_ref) {
  * @param {object} parameters
  * @return {Promise}
  */
-cov_2l9x15qscx.s[6]++;
+cov_vgwyx12ia.s[6]++;
 var getComposition = exports.getComposition = function getComposition(_ref2) {
   var id = _ref2.id;
-  cov_2l9x15qscx.f[4]++;
-  cov_2l9x15qscx.s[7]++;
+  cov_vgwyx12ia.f[4]++;
+  cov_vgwyx12ia.s[7]++;
   return _plugDb2.default.getAsync(id).then(function (composition) {
-    cov_2l9x15qscx.f[5]++;
-    cov_2l9x15qscx.s[8]++;
+    cov_vgwyx12ia.f[5]++;
+    cov_vgwyx12ia.s[8]++;
     return (
       // verify that returned data is compliant before returning it
-      (0, _schemas.dataIsValid)(composition, _plurishingSchemas.Composition)
+      (0, _schemas.dataIsValid)(composition, _metisSchemas.Composition)
     );
   });
 };
@@ -683,13 +683,13 @@ var getComposition = exports.getComposition = function getComposition(_ref2) {
  * @param {object} composition
  * @return {Promise}
  */
-cov_2l9x15qscx.s[9]++;
+cov_vgwyx12ia.s[9]++;
 var createComposition = exports.createComposition = function createComposition(composition) {
-  cov_2l9x15qscx.f[6]++;
-  cov_2l9x15qscx.s[10]++;
-  return (0, _schemas.dataIsValid)(composition, _plurishingSchemas.Composition).then(function () {
-    cov_2l9x15qscx.f[7]++;
-    cov_2l9x15qscx.s[11]++;
+  cov_vgwyx12ia.f[6]++;
+  cov_vgwyx12ia.s[10]++;
+  return (0, _schemas.dataIsValid)(composition, _metisSchemas.Composition).then(function () {
+    cov_vgwyx12ia.f[7]++;
+    cov_vgwyx12ia.s[11]++;
     return _plugDb2.default.insertAsync(composition);
   });
 };
@@ -700,23 +700,23 @@ var createComposition = exports.createComposition = function createComposition(c
  * @param {object} composition - data to update
  * @return {Promise}
  */
-cov_2l9x15qscx.s[12]++;
+cov_vgwyx12ia.s[12]++;
 var updateComposition = exports.updateComposition = function updateComposition(id, composition) {
-  cov_2l9x15qscx.f[8]++;
-  cov_2l9x15qscx.s[13]++;
+  cov_vgwyx12ia.f[8]++;
+  cov_vgwyx12ia.s[13]++;
   return (
     // validate
-    (0, _schemas.dataIsValid)(composition, _plurishingSchemas.Composition)
+    (0, _schemas.dataIsValid)(composition, _metisSchemas.Composition)
     // get existing document
     .then(function () {
-      cov_2l9x15qscx.f[9]++;
-      cov_2l9x15qscx.s[14]++;
+      cov_vgwyx12ia.f[9]++;
+      cov_vgwyx12ia.s[14]++;
       return _plugDb2.default.getAsync(id);
     })
     // update with new rev
     .then(function (compositionDb) {
-      cov_2l9x15qscx.f[10]++;
-      cov_2l9x15qscx.s[15]++;
+      cov_vgwyx12ia.f[10]++;
+      cov_vgwyx12ia.s[15]++;
       return _plugDb2.default.insertAsync((0, _extends3.default)({}, composition, {
         _rev: compositionDb._rev
       }), compositionDb._id);
@@ -729,14 +729,14 @@ var updateComposition = exports.updateComposition = function updateComposition(i
  * @param {object} composition - composition to delete
  * @return {Promise}
  */
-cov_2l9x15qscx.s[16]++;
+cov_vgwyx12ia.s[16]++;
 var deleteComposition = exports.deleteComposition = function deleteComposition(_ref3) {
   var _id = _ref3._id;
-  cov_2l9x15qscx.f[11]++;
-  cov_2l9x15qscx.s[17]++;
+  cov_vgwyx12ia.f[11]++;
+  cov_vgwyx12ia.s[17]++;
   return _plugDb2.default.getAsync(_id).then(function (composition) {
-    cov_2l9x15qscx.f[12]++;
-    cov_2l9x15qscx.s[18]++;
+    cov_vgwyx12ia.f[12]++;
+    cov_vgwyx12ia.s[18]++;
     return _plugDb2.default.destroyAsync(_id, composition._rev);
   });
 };

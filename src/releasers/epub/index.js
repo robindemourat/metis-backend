@@ -11,7 +11,7 @@ import {
 } from '../../utils/data';
 
 const tempDirPath = resolvePath(__dirname + '/../../../temp');
-const styles = readFileSync(resolvePath(__dirname + '/../../../node_modules/plurishing-shared/dist/style.css'), 'utf8');
+const styles = readFileSync(resolvePath(__dirname + '/../../../node_modules/metis-shared/dist/style.css'), 'utf8');
 
 export default function publish(data, diffusion, renderingMode = 'epub-reflowable') {
   return new Promise((resolve, reject) => {

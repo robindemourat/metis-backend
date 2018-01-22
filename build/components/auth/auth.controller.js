@@ -9,13 +9,13 @@ var _assign = require('babel-runtime/core-js/object/assign');
 
 var _assign2 = _interopRequireDefault(_assign);
 
-var cov_2qifgc6540 = function () {
-  var path = '/Users/rawbin/Documents/Projets/collaborations/ensad-publishing/prototype/plurishing-backend/src/components/auth/auth.controller.js',
-      hash = '076994bd513faae9d5f6ab5f03c5344ba05309a5',
+var cov_9ry3vizze = function () {
+  var path = '/Users/rawbin/Documents/Projets/collaborations/ensad-publishing/prototype/metis-backend/src/components/auth/auth.controller.js',
+      hash = 'a5c2651ce66e9e9fe0059def49f2b3d908c3beea',
       global = new Function('return this')(),
       gcv = '__coverage__',
       coverageData = {
-    path: '/Users/rawbin/Documents/Projets/collaborations/ensad-publishing/prototype/plurishing-backend/src/components/auth/auth.controller.js',
+    path: '/Users/rawbin/Documents/Projets/collaborations/ensad-publishing/prototype/metis-backend/src/components/auth/auth.controller.js',
     statementMap: {
       '0': {
         start: {
@@ -1421,7 +1421,7 @@ var cov_2qifgc6540 = function () {
   coverageData.hash = hash;
   return coverage[path] = coverageData;
 }(); /**
-      * Plurishing-backend
+      * Metis-backend
       * =======
       * Authentification routes handler
       */
@@ -1452,15 +1452,15 @@ var _config = require('../../utils/config');
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var config = (cov_2qifgc6540.s[0]++, (0, _config.getConfig)());
+var config = (cov_9ry3vizze.s[0]++, (0, _config.getConfig)());
 
-var _ref = (cov_2qifgc6540.s[1]++, config),
+var _ref = (cov_9ry3vizze.s[1]++, config),
     smtpEmail = _ref.smtpEmail,
     smtpService = _ref.smtpService,
     smtpPassword = _ref.smtpPassword,
     backofficeBaseUri = _ref.backofficeBaseUri;
 
-var mailConfig = (cov_2qifgc6540.s[2]++, {
+var mailConfig = (cov_9ry3vizze.s[2]++, {
   // smtpPort,
   // smtpHost,
   smtpEmail: smtpEmail,
@@ -1476,19 +1476,19 @@ var mailConfig = (cov_2qifgc6540.s[2]++, {
  * @return {string} token
  * note : 86400 == expires in 24 hours
  */
-cov_2qifgc6540.s[3]++;
+cov_9ry3vizze.s[3]++;
 var buildToken = function buildToken(user, secret) {
-  var expiresIn = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : (cov_2qifgc6540.b[0][0]++, 86400);
-  cov_2qifgc6540.f[0]++;
+  var expiresIn = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : (cov_9ry3vizze.b[0][0]++, 86400);
+  cov_9ry3vizze.f[0]++;
 
-  var payload = (cov_2qifgc6540.s[4]++, {
+  var payload = (cov_9ry3vizze.s[4]++, {
     admin: user.admin,
     userid: user._id
   });
-  var token = (cov_2qifgc6540.s[5]++, _jsonwebtoken2.default.sign(payload, secret, {
+  var token = (cov_9ry3vizze.s[5]++, _jsonwebtoken2.default.sign(payload, secret, {
     expiresIn: expiresIn
   }));
-  cov_2qifgc6540.s[6]++;
+  cov_9ry3vizze.s[6]++;
   return token;
 };
 /**
@@ -1498,10 +1498,10 @@ var buildToken = function buildToken(user, secret) {
  * @param {object} req - the request
  * @param {object} res - the resource
  */
-cov_2qifgc6540.s[7]++;
+cov_9ry3vizze.s[7]++;
 var login = exports.login = function login(req, res) {
-  cov_2qifgc6540.f[1]++;
-  cov_2qifgc6540.s[8]++;
+  cov_9ry3vizze.f[1]++;
+  cov_9ry3vizze.s[8]++;
 
   // find the user
   _users.dal.getUser({
@@ -1509,34 +1509,34 @@ var login = exports.login = function login(req, res) {
   })
   // then check his credentials
   .then(function (user) {
-    cov_2qifgc6540.f[2]++;
-    cov_2qifgc6540.s[9]++;
+    cov_9ry3vizze.f[2]++;
+    cov_9ry3vizze.s[9]++;
 
     if (!user) {
-      cov_2qifgc6540.b[1][0]++;
-      cov_2qifgc6540.s[10]++;
+      cov_9ry3vizze.b[1][0]++;
+      cov_9ry3vizze.s[10]++;
 
       return res.json({ success: false, message: 'Authentication failed. User not found.' });
     } else {
-        cov_2qifgc6540.b[1][1]++;
-        cov_2qifgc6540.s[11]++;
+        cov_9ry3vizze.b[1][1]++;
+        cov_9ry3vizze.s[11]++;
         if (user) {
-          cov_2qifgc6540.b[2][0]++;
+          cov_9ry3vizze.b[2][0]++;
 
-          var pwd = (cov_2qifgc6540.s[12]++, req.body.password);
-          var hash = (cov_2qifgc6540.s[13]++, user.password);
-          cov_2qifgc6540.s[14]++;
+          var pwd = (cov_9ry3vizze.s[12]++, req.body.password);
+          var hash = (cov_9ry3vizze.s[13]++, user.password);
+          cov_9ry3vizze.s[14]++;
           (0, _crypto.comparePwd)(pwd, hash).then(function (correct) {
-            cov_2qifgc6540.f[3]++;
-            cov_2qifgc6540.s[15]++;
+            cov_9ry3vizze.f[3]++;
+            cov_9ry3vizze.s[15]++;
 
             if (correct) {
-              cov_2qifgc6540.b[3][0]++;
+              cov_9ry3vizze.b[3][0]++;
 
               // if user is found and password is right
               // create a token
-              var token = (cov_2qifgc6540.s[16]++, buildToken(user, req.app.get('superSecret')));
-              cov_2qifgc6540.s[17]++;
+              var token = (cov_9ry3vizze.s[16]++, buildToken(user, req.app.get('superSecret')));
+              cov_9ry3vizze.s[17]++;
               res.json({
                 success: true,
                 message: 'Enjoy your token!',
@@ -1544,24 +1544,24 @@ var login = exports.login = function login(req, res) {
                 token: token
               });
             } else {
-              cov_2qifgc6540.b[3][1]++;
-              cov_2qifgc6540.s[18]++;
+              cov_9ry3vizze.b[3][1]++;
+              cov_9ry3vizze.s[18]++;
 
               res.status(422).json({ success: false, message: 'Authentication failed. Wrong password.' });
             }
           }).catch(function (e) {
-            cov_2qifgc6540.f[4]++;
-            cov_2qifgc6540.s[19]++;
+            cov_9ry3vizze.f[4]++;
+            cov_9ry3vizze.s[19]++;
 
             res.status(422).json({ success: false, message: 'Authentication failed. Error with password.', error: e });
           });
         } else {
-          cov_2qifgc6540.b[2][1]++;
+          cov_9ry3vizze.b[2][1]++;
         }
       }
   }).catch(function (error) {
-    cov_2qifgc6540.f[5]++;
-    cov_2qifgc6540.s[20]++;
+    cov_9ry3vizze.f[5]++;
+    cov_9ry3vizze.s[20]++;
 
     res.status(404).json({ success: false, message: 'No match.', error: error });
   });
@@ -1574,59 +1574,59 @@ var login = exports.login = function login(req, res) {
  * @param {object} req - the request
  * @param {object} res - the resource
  */
-cov_2qifgc6540.s[21]++;
+cov_9ry3vizze.s[21]++;
 var signup = exports.signup = function signup(req, res) {
-  cov_2qifgc6540.f[6]++;
-  cov_2qifgc6540.s[22]++;
+  cov_9ry3vizze.f[6]++;
+  cov_9ry3vizze.s[22]++;
 
   // find the user
   _users.dal.getUser({
     id: req.body.id
   }).then(function (user) {
-    cov_2qifgc6540.f[7]++;
-    cov_2qifgc6540.s[23]++;
+    cov_9ry3vizze.f[7]++;
+    cov_9ry3vizze.s[23]++;
 
     if (!user) {
-      cov_2qifgc6540.b[4][0]++;
-      cov_2qifgc6540.s[24]++;
+      cov_9ry3vizze.b[4][0]++;
+      cov_9ry3vizze.s[24]++;
 
       res.json({ success: false, message: 'Authentication failed. User not found.' });
     } else {
-        cov_2qifgc6540.b[4][1]++;
-        cov_2qifgc6540.s[25]++;
+        cov_9ry3vizze.b[4][1]++;
+        cov_9ry3vizze.s[25]++;
         if (user) {
-          cov_2qifgc6540.b[5][0]++;
+          cov_9ry3vizze.b[5][0]++;
 
-          var token = (cov_2qifgc6540.s[26]++, (cov_2qifgc6540.b[6][0]++, req.body.token) || (cov_2qifgc6540.b[6][1]++, req.param('token')) || (cov_2qifgc6540.b[6][2]++, req.headers['x-access-token']));
+          var token = (cov_9ry3vizze.s[26]++, (cov_9ry3vizze.b[6][0]++, req.body.token) || (cov_9ry3vizze.b[6][1]++, req.param('token')) || (cov_9ry3vizze.b[6][2]++, req.headers['x-access-token']));
           // decode token
-          cov_2qifgc6540.s[27]++;
+          cov_9ry3vizze.s[27]++;
           if (token) {
-            cov_2qifgc6540.b[7][0]++;
-            cov_2qifgc6540.s[28]++;
+            cov_9ry3vizze.b[7][0]++;
+            cov_9ry3vizze.s[28]++;
 
             // verifies secret and checks exp
             _jsonwebtoken2.default.verify(token, req.app.get('superSecret'), function (err) {
-              cov_2qifgc6540.f[8]++;
-              cov_2qifgc6540.s[29]++;
+              cov_9ry3vizze.f[8]++;
+              cov_9ry3vizze.s[29]++;
 
               if (err) {
-                cov_2qifgc6540.b[8][0]++;
-                cov_2qifgc6540.s[30]++;
+                cov_9ry3vizze.b[8][0]++;
+                cov_9ry3vizze.s[30]++;
 
                 return res.json({ success: false, message: 'Failed to authenticate signup token.' });
               } else {
-                cov_2qifgc6540.b[8][1]++;
+                cov_9ry3vizze.b[8][1]++;
 
 
                 // create a new login token
-                var newToken = (cov_2qifgc6540.s[31]++, buildToken(user, req.app.get('superSecret')));
+                var newToken = (cov_9ry3vizze.s[31]++, buildToken(user, req.app.get('superSecret')));
                 // delete temporary token
                 // user.resetPasswordToken = undefined;
 
-                cov_2qifgc6540.s[32]++;
+                cov_9ry3vizze.s[32]++;
                 _users.dal.updateUser(user._id, user).then(function () {
-                  cov_2qifgc6540.f[9]++;
-                  cov_2qifgc6540.s[33]++;
+                  cov_9ry3vizze.f[9]++;
+                  cov_9ry3vizze.s[33]++;
 
                   res.json({
                     success: true,
@@ -1635,8 +1635,8 @@ var signup = exports.signup = function signup(req, res) {
                     token: newToken
                   });
                 }).catch(function (e) {
-                  cov_2qifgc6540.f[10]++;
-                  cov_2qifgc6540.s[34]++;
+                  cov_9ry3vizze.f[10]++;
+                  cov_9ry3vizze.s[34]++;
 
                   res.status(500).send({
                     success: false,
@@ -1647,8 +1647,8 @@ var signup = exports.signup = function signup(req, res) {
               }
             });
           } else {
-            cov_2qifgc6540.b[7][1]++;
-            cov_2qifgc6540.s[35]++;
+            cov_9ry3vizze.b[7][1]++;
+            cov_9ry3vizze.s[35]++;
 
             // if there is no token
             // return an error
@@ -1658,7 +1658,7 @@ var signup = exports.signup = function signup(req, res) {
             });
           }
         } else {
-          cov_2qifgc6540.b[5][1]++;
+          cov_9ry3vizze.b[5][1]++;
         }
       }
   });
@@ -1670,42 +1670,42 @@ var signup = exports.signup = function signup(req, res) {
  * @param {object} req - the request
  * @param {object} res - the resource
  */
-cov_2qifgc6540.s[36]++;
+cov_9ry3vizze.s[36]++;
 var resetPassword = exports.resetPassword = function resetPassword(req, res) {
-  cov_2qifgc6540.f[11]++;
+  cov_9ry3vizze.f[11]++;
 
-  var body = (cov_2qifgc6540.s[37]++, req.body);
-  var email = (cov_2qifgc6540.s[38]++, body.email);
-  cov_2qifgc6540.s[39]++;
+  var body = (cov_9ry3vizze.s[37]++, req.body);
+  var email = (cov_9ry3vizze.s[38]++, body.email);
+  cov_9ry3vizze.s[39]++;
   if (email) {
-    cov_2qifgc6540.b[9][0]++;
-    cov_2qifgc6540.s[40]++;
+    cov_9ry3vizze.b[9][0]++;
+    cov_9ry3vizze.s[40]++;
 
     _users.dal.getUser({
       email: email
     }).then(function (user) {
-      cov_2qifgc6540.f[12]++;
-      cov_2qifgc6540.s[41]++;
+      cov_9ry3vizze.f[12]++;
+      cov_9ry3vizze.s[41]++;
 
       if (user) {
-        cov_2qifgc6540.b[10][0]++;
+        cov_9ry3vizze.b[10][0]++;
 
         // create a token
-        var token = (cov_2qifgc6540.s[42]++, buildToken(user, req.app.get('superSecret')));
-        cov_2qifgc6540.s[43]++;
+        var token = (cov_9ry3vizze.s[42]++, buildToken(user, req.app.get('superSecret')));
+        cov_9ry3vizze.s[43]++;
         user.resetPasswordToken = token;
 
-        cov_2qifgc6540.s[44]++;
+        cov_9ry3vizze.s[44]++;
         _users.dal.updateUser(user._id, user).then(function () {
-          cov_2qifgc6540.f[13]++;
+          cov_9ry3vizze.f[13]++;
 
-          var appUrl = (cov_2qifgc6540.s[45]++, backofficeBaseUri);
+          var appUrl = (cov_9ry3vizze.s[45]++, backofficeBaseUri);
 
-          var _ref2 = (cov_2qifgc6540.s[46]++, (0, _emails.resetPwdEmail)(appUrl, user)),
+          var _ref2 = (cov_9ry3vizze.s[46]++, (0, _emails.resetPwdEmail)(appUrl, user)),
               html = _ref2.html,
               subject = _ref2.subject;
 
-          cov_2qifgc6540.s[47]++;
+          cov_9ry3vizze.s[47]++;
 
 
           return (0, _mailer2.default)({
@@ -1714,29 +1714,29 @@ var resetPassword = exports.resetPassword = function resetPassword(req, res) {
             to: [email]
           }, mailConfig, req.log);
         }).then(function () {
-          cov_2qifgc6540.f[14]++;
-          cov_2qifgc6540.s[48]++;
+          cov_9ry3vizze.f[14]++;
+          cov_9ry3vizze.s[48]++;
 
           res.json({ message: 'request sent' });
         }).catch(function (e) {
-          cov_2qifgc6540.f[15]++;
-          cov_2qifgc6540.s[49]++;
+          cov_9ry3vizze.f[15]++;
+          cov_9ry3vizze.s[49]++;
           return res.status(500).send({ error: e, message: 'mail failed' });
         });
       } else {
-        cov_2qifgc6540.b[10][1]++;
-        cov_2qifgc6540.s[50]++;
+        cov_9ry3vizze.b[10][1]++;
+        cov_9ry3vizze.s[50]++;
 
         res.status(404).json({ message: 'user not found' });
       }
     }).catch(function (error) {
-      cov_2qifgc6540.f[16]++;
-      cov_2qifgc6540.s[51]++;
+      cov_9ry3vizze.f[16]++;
+      cov_9ry3vizze.s[51]++;
       return res.status(500).json({ message: 'error in db', error: error });
     });
   } else {
-    cov_2qifgc6540.b[9][1]++;
-    cov_2qifgc6540.s[52]++;
+    cov_9ry3vizze.b[9][1]++;
+    cov_9ry3vizze.s[52]++;
 
     res.status(422).json({ message: 'no email in request' });
   }

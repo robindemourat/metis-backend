@@ -5,13 +5,13 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.getMontageData = exports.getAssetAttachmentUrl = undefined;
 
-var cov_1np82nrldr = function () {
-  var path = '/Users/rawbin/Documents/Projets/collaborations/ensad-publishing/prototype/plurishing-backend/src/services/data-provider/data-provider.controller.js',
-      hash = 'f1c325766335361e4a9a67b6047517c276b0bc01',
+var cov_22dzt85ga1 = function () {
+  var path = '/Users/rawbin/Documents/Projets/collaborations/ensad-publishing/prototype/metis-backend/src/services/data-provider/data-provider.controller.js',
+      hash = '2d3d6941791b7dfe964b9c821402a6c3b0c04426',
       global = new Function('return this')(),
       gcv = '__coverage__',
       coverageData = {
-    path: '/Users/rawbin/Documents/Projets/collaborations/ensad-publishing/prototype/plurishing-backend/src/services/data-provider/data-provider.controller.js',
+    path: '/Users/rawbin/Documents/Projets/collaborations/ensad-publishing/prototype/metis-backend/src/services/data-provider/data-provider.controller.js',
     statementMap: {
       '0': {
         start: {
@@ -383,15 +383,15 @@ var _assets = require('../../components/assets');
 
 var _data = require('../../utils/data');
 
-cov_1np82nrldr.s[0]++;
+cov_22dzt85ga1.s[0]++;
 var getAssetAttachmentUrl = exports.getAssetAttachmentUrl = function getAssetAttachmentUrl(req, res) {
-  cov_1np82nrldr.f[0]++;
+  cov_22dzt85ga1.f[0]++;
 
-  var id = (cov_1np82nrldr.s[1]++, req.params.id);
-  cov_1np82nrldr.s[2]++;
+  var id = (cov_22dzt85ga1.s[1]++, req.params.id);
+  cov_22dzt85ga1.s[2]++;
   return _assets.dal.getAsset({ id: id }).then(function (asset) {
-    cov_1np82nrldr.f[1]++;
-    cov_1np82nrldr.s[3]++;
+    cov_22dzt85ga1.f[1]++;
+    cov_22dzt85ga1.s[3]++;
 
     return _assets.dal.getAssetAttachment({
       id: id,
@@ -400,41 +400,41 @@ var getAssetAttachmentUrl = exports.getAssetAttachmentUrl = function getAssetAtt
   }).then(function (_ref) {
     var data = _ref.data,
         mimetype = _ref.mimetype;
-    cov_1np82nrldr.f[2]++;
-    cov_1np82nrldr.s[4]++;
+    cov_22dzt85ga1.f[2]++;
+    cov_22dzt85ga1.s[4]++;
 
     res.writeHead(200, { 'Content-Type': mimetype });
-    cov_1np82nrldr.s[5]++;
+    cov_22dzt85ga1.s[5]++;
     res.end(data, 'binary');
   }).catch(function (e) {
-    cov_1np82nrldr.f[3]++;
-    cov_1np82nrldr.s[6]++;
+    cov_22dzt85ga1.f[3]++;
+    cov_22dzt85ga1.s[6]++;
     return res.status(500).send(e);
   });
 };
 
-cov_1np82nrldr.s[7]++;
+cov_22dzt85ga1.s[7]++;
 var getMontageData = exports.getMontageData = function getMontageData(req, res) {
-  cov_1np82nrldr.f[4]++;
+  cov_22dzt85ga1.f[4]++;
 
-  var id = (cov_1np82nrldr.s[8]++, req.params.id);
-  cov_1np82nrldr.s[9]++;
+  var id = (cov_22dzt85ga1.s[8]++, req.params.id);
+  cov_22dzt85ga1.s[9]++;
   _montages.dal.getMontage({ id: id }).then(function (montage) {
-    cov_1np82nrldr.f[5]++;
-    cov_1np82nrldr.s[10]++;
+    cov_22dzt85ga1.f[5]++;
+    cov_22dzt85ga1.s[10]++;
 
     // fetch montage dependencies
     return (0, _data.fetchMontageDependencies)(montage);
   })
   // register all release operations to perform
   .then(function (data) {
-    cov_1np82nrldr.f[6]++;
-    cov_1np82nrldr.s[11]++;
+    cov_22dzt85ga1.f[6]++;
+    cov_22dzt85ga1.s[11]++;
 
     return res.json(data);
   }).catch(function (e) {
-    cov_1np82nrldr.f[7]++;
-    cov_1np82nrldr.s[12]++;
+    cov_22dzt85ga1.f[7]++;
+    cov_22dzt85ga1.s[12]++;
     return res.status(500).send(e);
   });
 };

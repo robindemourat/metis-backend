@@ -12,13 +12,13 @@ var _promise = require('babel-runtime/core-js/promise');
 
 var _promise2 = _interopRequireDefault(_promise);
 
-var cov_1c0qoqgg8e = function () {
-  var path = '/Users/rawbin/Documents/Projets/collaborations/ensad-publishing/prototype/plurishing-backend/src/releasers/twitter/tweet.js',
-      hash = '4bc862f6ae13929d56cdc39944d8ff335b1e85b4',
+var cov_17ml9rpmhe = function () {
+  var path = '/Users/rawbin/Documents/Projets/collaborations/ensad-publishing/prototype/metis-backend/src/releasers/twitter/tweet.js',
+      hash = 'ceb38affe9d0f37709e084ed61fdd6abab5f0bf0',
       global = new Function('return this')(),
       gcv = '__coverage__',
       coverageData = {
-    path: '/Users/rawbin/Documents/Projets/collaborations/ensad-publishing/prototype/plurishing-backend/src/releasers/twitter/tweet.js',
+    path: '/Users/rawbin/Documents/Projets/collaborations/ensad-publishing/prototype/metis-backend/src/releasers/twitter/tweet.js',
     statementMap: {
       '0': {
         start: {
@@ -945,7 +945,7 @@ var _twitterParameters2 = _interopRequireDefault(_twitterParameters);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var ajv = (cov_1c0qoqgg8e.s[0]++, new _ajv2.default());
+var ajv = (cov_17ml9rpmhe.s[0]++, new _ajv2.default());
 
 /**
  * @param {object} contents - the contents to send
@@ -953,57 +953,57 @@ var ajv = (cov_1c0qoqgg8e.s[0]++, new _ajv2.default());
  * @return {Promise} promise
  */
 function tweet(contents, params) {
-  cov_1c0qoqgg8e.f[0]++;
-  cov_1c0qoqgg8e.s[1]++;
+  cov_17ml9rpmhe.f[0]++;
+  cov_17ml9rpmhe.s[1]++;
 
   return new _promise2.default(function (resolve, reject) {
-    cov_1c0qoqgg8e.f[1]++;
+    cov_17ml9rpmhe.f[1]++;
 
     // validate contents object
-    var contentsValidation = (cov_1c0qoqgg8e.s[2]++, ajv.validate(_tweetContents2.default, contents));
-    cov_1c0qoqgg8e.s[3]++;
+    var contentsValidation = (cov_17ml9rpmhe.s[2]++, ajv.validate(_tweetContents2.default, contents));
+    cov_17ml9rpmhe.s[3]++;
     if (!contentsValidation) {
-      cov_1c0qoqgg8e.b[0][0]++;
-      cov_1c0qoqgg8e.s[4]++;
+      cov_17ml9rpmhe.b[0][0]++;
+      cov_17ml9rpmhe.s[4]++;
 
       return reject(ajv.errors);
     } else {
-      cov_1c0qoqgg8e.b[0][1]++;
+      cov_17ml9rpmhe.b[0][1]++;
     }
 
     // validate params object
-    var paramsValidation = (cov_1c0qoqgg8e.s[5]++, ajv.validate(_twitterParameters2.default, params));
-    cov_1c0qoqgg8e.s[6]++;
+    var paramsValidation = (cov_17ml9rpmhe.s[5]++, ajv.validate(_twitterParameters2.default, params));
+    cov_17ml9rpmhe.s[6]++;
     if (!paramsValidation) {
-      cov_1c0qoqgg8e.b[1][0]++;
-      cov_1c0qoqgg8e.s[7]++;
+      cov_17ml9rpmhe.b[1][0]++;
+      cov_17ml9rpmhe.s[7]++;
 
       return reject(ajv.errors);
     } else {
-      cov_1c0qoqgg8e.b[1][1]++;
+      cov_17ml9rpmhe.b[1][1]++;
     }
 
     // connect to api
-    var client = (cov_1c0qoqgg8e.s[8]++, new _twit2.default(params));
+    var client = (cov_17ml9rpmhe.s[8]++, new _twit2.default(params));
 
     // tweet with media attachment
-    cov_1c0qoqgg8e.s[9]++;
+    cov_17ml9rpmhe.s[9]++;
     if (contents.media) {
-      cov_1c0qoqgg8e.b[2][0]++;
+      cov_17ml9rpmhe.b[2][0]++;
 
-      var mediaIds = (cov_1c0qoqgg8e.s[10]++, []);
-      var toResolve = (cov_1c0qoqgg8e.s[11]++, contents.media.map(function (media) {
-        cov_1c0qoqgg8e.f[2]++;
-        cov_1c0qoqgg8e.s[12]++;
+      var mediaIds = (cov_17ml9rpmhe.s[10]++, []);
+      var toResolve = (cov_17ml9rpmhe.s[11]++, contents.media.map(function (media) {
+        cov_17ml9rpmhe.f[2]++;
+        cov_17ml9rpmhe.s[12]++;
         return new _promise2.default(function (reso, rej) {
-          cov_1c0qoqgg8e.f[3]++;
-          cov_1c0qoqgg8e.s[13]++;
+          cov_17ml9rpmhe.f[3]++;
+          cov_17ml9rpmhe.s[13]++;
 
           // -> we use the base64 uri provided if any
           if (media.type === 'image') {
-            cov_1c0qoqgg8e.b[3][0]++;
+            cov_17ml9rpmhe.b[3][0]++;
 
-            var _ref = (cov_1c0qoqgg8e.s[14]++, media),
+            var _ref = (cov_17ml9rpmhe.s[14]++, media),
                 uri = _ref.uri,
                 description = _ref.description;
 
@@ -1019,23 +1019,23 @@ function tweet(contents, params) {
             // post the media to Twitter
 
 
-            cov_1c0qoqgg8e.s[15]++;
+            cov_17ml9rpmhe.s[15]++;
             client.post('media/upload', { media_data: uri }, function (err, data /* , response */) {
-              cov_1c0qoqgg8e.f[4]++;
-              cov_1c0qoqgg8e.s[16]++;
+              cov_17ml9rpmhe.f[4]++;
+              cov_17ml9rpmhe.s[16]++;
 
               if (err) {
-                cov_1c0qoqgg8e.b[4][0]++;
-                cov_1c0qoqgg8e.s[17]++;
+                cov_17ml9rpmhe.b[4][0]++;
+                cov_17ml9rpmhe.s[17]++;
 
                 return rej(err);
               } else {
-                cov_1c0qoqgg8e.b[4][1]++;
+                cov_17ml9rpmhe.b[4][1]++;
 
                 // assign alt text to the media, for use by screen readers and
                 // other text-based presentations and interpreters
-                var mediaIdStr = (cov_1c0qoqgg8e.s[18]++, data.media_id_string);
-                var meta_params = (cov_1c0qoqgg8e.s[19]++, {
+                var mediaIdStr = (cov_17ml9rpmhe.s[18]++, data.media_id_string);
+                var meta_params = (cov_17ml9rpmhe.s[19]++, {
                   media_id: mediaIdStr,
                   alt_text: {
                     text: description
@@ -1043,55 +1043,55 @@ function tweet(contents, params) {
                 });
 
                 // create metadata for media
-                cov_1c0qoqgg8e.s[20]++;
+                cov_17ml9rpmhe.s[20]++;
                 client.post('media/metadata/create', meta_params, function (err /* , data, response */) {
-                  cov_1c0qoqgg8e.f[5]++;
-                  cov_1c0qoqgg8e.s[21]++;
+                  cov_17ml9rpmhe.f[5]++;
+                  cov_17ml9rpmhe.s[21]++;
 
                   if (err) {
-                    cov_1c0qoqgg8e.b[5][0]++;
-                    cov_1c0qoqgg8e.s[22]++;
+                    cov_17ml9rpmhe.b[5][0]++;
+                    cov_17ml9rpmhe.s[22]++;
 
                     return rej(err);
                   } else {
-                    cov_1c0qoqgg8e.b[5][1]++;
-                    cov_1c0qoqgg8e.s[23]++;
+                    cov_17ml9rpmhe.b[5][1]++;
+                    cov_17ml9rpmhe.s[23]++;
 
                     mediaIds.push(mediaIdStr);
-                    cov_1c0qoqgg8e.s[24]++;
+                    cov_17ml9rpmhe.s[24]++;
                     return reso();
                   }
                 });
               }
             });
           } else {
-            cov_1c0qoqgg8e.b[3][1]++;
+            cov_17ml9rpmhe.b[3][1]++;
           }
         });
       }));
-      cov_1c0qoqgg8e.s[25]++;
+      cov_17ml9rpmhe.s[25]++;
       _promise2.default.all(toResolve).then(function () {
-        cov_1c0qoqgg8e.f[6]++;
+        cov_17ml9rpmhe.f[6]++;
 
         // update contents with proper media
-        var enrichedContents = (cov_1c0qoqgg8e.s[26]++, (0, _extends3.default)({}, contents, {
+        var enrichedContents = (cov_17ml9rpmhe.s[26]++, (0, _extends3.default)({}, contents, {
           media: undefined,
           media_ids: mediaIds
         }));
         // eventually tweet
-        cov_1c0qoqgg8e.s[27]++;
+        cov_17ml9rpmhe.s[27]++;
         client.post('statuses/update', enrichedContents, function (err /* , data, response */) {
-          cov_1c0qoqgg8e.f[7]++;
-          cov_1c0qoqgg8e.s[28]++;
+          cov_17ml9rpmhe.f[7]++;
+          cov_17ml9rpmhe.s[28]++;
 
           if (err) {
-            cov_1c0qoqgg8e.b[6][0]++;
-            cov_1c0qoqgg8e.s[29]++;
+            cov_17ml9rpmhe.b[6][0]++;
+            cov_17ml9rpmhe.s[29]++;
 
             return reject(err);
           } else {
-            cov_1c0qoqgg8e.b[6][1]++;
-            cov_1c0qoqgg8e.s[30]++;
+            cov_17ml9rpmhe.b[6][1]++;
+            cov_17ml9rpmhe.s[30]++;
 
             return resolve();
           }
@@ -1099,21 +1099,21 @@ function tweet(contents, params) {
       }).catch(reject);
       // case simple tweet
     } else {
-      cov_1c0qoqgg8e.b[2][1]++;
-      cov_1c0qoqgg8e.s[31]++;
+      cov_17ml9rpmhe.b[2][1]++;
+      cov_17ml9rpmhe.s[31]++;
 
       client.post('statuses/update', contents, function (err /* , data, response */) {
-        cov_1c0qoqgg8e.f[8]++;
-        cov_1c0qoqgg8e.s[32]++;
+        cov_17ml9rpmhe.f[8]++;
+        cov_17ml9rpmhe.s[32]++;
 
         if (err) {
-          cov_1c0qoqgg8e.b[7][0]++;
-          cov_1c0qoqgg8e.s[33]++;
+          cov_17ml9rpmhe.b[7][0]++;
+          cov_17ml9rpmhe.s[33]++;
 
           reject(err);
         } else {
-          cov_1c0qoqgg8e.b[7][1]++;
-          cov_1c0qoqgg8e.s[34]++;
+          cov_17ml9rpmhe.b[7][1]++;
+          cov_17ml9rpmhe.s[34]++;
 
           resolve();
         }

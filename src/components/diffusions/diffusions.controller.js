@@ -1,5 +1,5 @@
 // /**
-//  * Plurishing-backend
+//  * Metis-backend
 //  * =======
 //  * Diffusions component controller
 //  */

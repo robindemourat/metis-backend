@@ -8,13 +8,13 @@ var _promise = require('babel-runtime/core-js/promise');
 
 var _promise2 = _interopRequireDefault(_promise);
 
-var cov_2e9j97jaji = function () {
-  var path = '/Users/rawbin/Documents/Projets/collaborations/ensad-publishing/prototype/plurishing-backend/src/releasers/facebook/index.js',
-      hash = 'a4e0e567df42b9de8beccfeef0259a711ed1ac39',
+var cov_3tm42evqp = function () {
+  var path = '/Users/rawbin/Documents/Projets/collaborations/ensad-publishing/prototype/metis-backend/src/releasers/facebook/index.js',
+      hash = '35a70929fc8db06b4fbb8566267094138050225a',
       global = new Function('return this')(),
       gcv = '__coverage__',
       coverageData = {
-    path: '/Users/rawbin/Documents/Projets/collaborations/ensad-publishing/prototype/plurishing-backend/src/releasers/facebook/index.js',
+    path: '/Users/rawbin/Documents/Projets/collaborations/ensad-publishing/prototype/metis-backend/src/releasers/facebook/index.js',
     statementMap: {
       '0': {
         start: {
@@ -443,7 +443,7 @@ var _facebookParameters2 = _interopRequireDefault(_facebookParameters);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var ajv = (cov_2e9j97jaji.s[0]++, new _ajv2.default());
+var ajv = (cov_3tm42evqp.s[0]++, new _ajv2.default());
 
 /**
  * Sends a personal feed's status message
@@ -452,60 +452,60 @@ var ajv = (cov_2e9j97jaji.s[0]++, new _ajv2.default());
  * @return {Promise} promise
  */
 function status(contents, params) {
-  cov_2e9j97jaji.f[0]++;
-  cov_2e9j97jaji.s[1]++;
+  cov_3tm42evqp.f[0]++;
+  cov_3tm42evqp.s[1]++;
 
   return new _promise2.default(function (resolve, reject) {
-    cov_2e9j97jaji.f[1]++;
+    cov_3tm42evqp.f[1]++;
 
 
     // validate contents object
-    var contentsValidation = (cov_2e9j97jaji.s[2]++, ajv.validate(_facebookStatus2.default, contents));
-    cov_2e9j97jaji.s[3]++;
+    var contentsValidation = (cov_3tm42evqp.s[2]++, ajv.validate(_facebookStatus2.default, contents));
+    cov_3tm42evqp.s[3]++;
     if (!contentsValidation) {
-      cov_2e9j97jaji.b[0][0]++;
-      cov_2e9j97jaji.s[4]++;
+      cov_3tm42evqp.b[0][0]++;
+      cov_3tm42evqp.s[4]++;
 
       return reject(ajv.errors);
     } else {
-      cov_2e9j97jaji.b[0][1]++;
+      cov_3tm42evqp.b[0][1]++;
     }
 
     // validate params object
-    var paramsValidation = (cov_2e9j97jaji.s[5]++, ajv.validate(_facebookParameters2.default, params));
-    cov_2e9j97jaji.s[6]++;
+    var paramsValidation = (cov_3tm42evqp.s[5]++, ajv.validate(_facebookParameters2.default, params));
+    cov_3tm42evqp.s[6]++;
     if (!paramsValidation) {
-      cov_2e9j97jaji.b[1][0]++;
-      cov_2e9j97jaji.s[7]++;
+      cov_3tm42evqp.b[1][0]++;
+      cov_3tm42evqp.s[7]++;
 
       return reject(ajv.errors);
     } else {
-      cov_2e9j97jaji.b[1][1]++;
+      cov_3tm42evqp.b[1][1]++;
     }
 
-    var _ref = (cov_2e9j97jaji.s[8]++, params),
+    var _ref = (cov_3tm42evqp.s[8]++, params),
         access_token = _ref.access_token;
 
-    cov_2e9j97jaji.s[9]++;
+    cov_3tm42evqp.s[9]++;
 
     _fb2.default.setAccessToken(access_token);
-    cov_2e9j97jaji.s[10]++;
+    cov_3tm42evqp.s[10]++;
     _fb2.default.api('me/feed', 'post', contents, function (res) {
-      cov_2e9j97jaji.f[2]++;
-      cov_2e9j97jaji.s[11]++;
+      cov_3tm42evqp.f[2]++;
+      cov_3tm42evqp.s[11]++;
 
-      if ((cov_2e9j97jaji.b[3][0]++, !res) || (cov_2e9j97jaji.b[3][1]++, res.error)) {
-        cov_2e9j97jaji.b[2][0]++;
-        cov_2e9j97jaji.s[12]++;
+      if ((cov_3tm42evqp.b[3][0]++, !res) || (cov_3tm42evqp.b[3][1]++, res.error)) {
+        cov_3tm42evqp.b[2][0]++;
+        cov_3tm42evqp.s[12]++;
 
         reject(res.error);
-        cov_2e9j97jaji.s[13]++;
+        cov_3tm42evqp.s[13]++;
         return;
       } else {
-        cov_2e9j97jaji.b[2][1]++;
+        cov_3tm42evqp.b[2][1]++;
       }
       // console.log('Post Id: ' + res.id);
-      cov_2e9j97jaji.s[14]++;
+      cov_3tm42evqp.s[14]++;
       resolve();
     });
 

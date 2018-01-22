@@ -4,13 +4,13 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var cov_14m8mz51ty = function () {
-  var path = '/Users/rawbin/Documents/Projets/collaborations/ensad-publishing/prototype/plurishing-backend/src/services/data-provider/data-provider.api.js',
-      hash = '261a6af1deceae616a97c7c1d3482cd6793acb50',
+var cov_sv81ouu9l = function () {
+  var path = '/Users/rawbin/Documents/Projets/collaborations/ensad-publishing/prototype/metis-backend/src/services/data-provider/data-provider.api.js',
+      hash = '0951b154a5a70585d3502a5cf50bb8ff96aa3d25',
       global = new Function('return this')(),
       gcv = '__coverage__',
       coverageData = {
-    path: '/Users/rawbin/Documents/Projets/collaborations/ensad-publishing/prototype/plurishing-backend/src/services/data-provider/data-provider.api.js',
+    path: '/Users/rawbin/Documents/Projets/collaborations/ensad-publishing/prototype/metis-backend/src/services/data-provider/data-provider.api.js',
     statementMap: {
       '0': {
         start: {
@@ -64,7 +64,7 @@ var cov_14m8mz51ty = function () {
   return coverage[path] = coverageData;
 }();
 /**
- * Plurishing-backend
+ * Metis-backend
  * =======
  * Data provider api
  */
@@ -77,11 +77,11 @@ var _dataProvider = require('./data-provider.controller');
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var router = (cov_14m8mz51ty.s[0]++, new _express2.default.Router());
+var router = (cov_sv81ouu9l.s[0]++, new _express2.default.Router());
 
-cov_14m8mz51ty.s[1]++;
+cov_sv81ouu9l.s[1]++;
 router.get('/montage/:id', _dataProvider.getMontageData);
-cov_14m8mz51ty.s[2]++;
+cov_sv81ouu9l.s[2]++;
 router.get('/asset/:id', _dataProvider.getAssetAttachmentUrl);
 
 exports.default = router;

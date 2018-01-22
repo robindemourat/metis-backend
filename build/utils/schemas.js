@@ -9,13 +9,13 @@ var _promise = require('babel-runtime/core-js/promise');
 
 var _promise2 = _interopRequireDefault(_promise);
 
-var cov_24ul7h925z = function () {
-  var path = '/Users/rawbin/Documents/Projets/collaborations/ensad-publishing/prototype/plurishing-backend/src/utils/schemas.js',
-      hash = '66cf84d0da9420e60dc90aa64a094261c2bd961d',
+var cov_24nqgqlxou = function () {
+  var path = '/Users/rawbin/Documents/Projets/collaborations/ensad-publishing/prototype/metis-backend/src/utils/schemas.js',
+      hash = '69c80b755405a7b46df6b21115f2e5ac31ba8dae',
       global = new Function('return this')(),
       gcv = '__coverage__',
       coverageData = {
-    path: '/Users/rawbin/Documents/Projets/collaborations/ensad-publishing/prototype/plurishing-backend/src/utils/schemas.js',
+    path: '/Users/rawbin/Documents/Projets/collaborations/ensad-publishing/prototype/metis-backend/src/utils/schemas.js',
     statementMap: {
       '0': {
         start: {
@@ -207,25 +207,25 @@ var _ajv2 = _interopRequireDefault(_ajv);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var ajv = (cov_24ul7h925z.s[0]++, new _ajv2.default());
+var ajv = (cov_24nqgqlxou.s[0]++, new _ajv2.default());
 
-cov_24ul7h925z.s[1]++;
+cov_24nqgqlxou.s[1]++;
 var dataIsValid = exports.dataIsValid = function dataIsValid(data, schema) {
-  cov_24ul7h925z.f[0]++;
-  cov_24ul7h925z.s[2]++;
+  cov_24nqgqlxou.f[0]++;
+  cov_24nqgqlxou.s[2]++;
   return new _promise2.default(function (resolve, reject) {
-    cov_24ul7h925z.f[1]++;
+    cov_24nqgqlxou.f[1]++;
 
-    var valid = (cov_24ul7h925z.s[3]++, ajv.validate(schema, data));
-    cov_24ul7h925z.s[4]++;
+    var valid = (cov_24nqgqlxou.s[3]++, ajv.validate(schema, data));
+    cov_24nqgqlxou.s[4]++;
     if (valid) {
-      cov_24ul7h925z.b[0][0]++;
-      cov_24ul7h925z.s[5]++;
+      cov_24nqgqlxou.b[0][0]++;
+      cov_24nqgqlxou.s[5]++;
 
       resolve(data);
     } else {
-      cov_24ul7h925z.b[0][1]++;
-      cov_24ul7h925z.s[6]++;
+      cov_24nqgqlxou.b[0][1]++;
+      cov_24nqgqlxou.s[6]++;
 
       reject(ajv.errors);
     }

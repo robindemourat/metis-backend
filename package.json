@@ -1,18 +1,18 @@
 {
-  "name": "plurishing-backend",
+  "name": "metis-backend",
   "version": "0.0.1",
   "description": "Backend handling multimodal publishing",
   "main": "index.js",
   "license": "LGPL-3",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/robindemourat/plurishing-backend.git"
+    "url": "git+https://github.com/robindemourat/metis-backend.git"
   },
   "author": "Robin de Mourat <robin.demourat@gmail.com> (https://github.com/robindemourat)",
   "bugs": {
-    "url": "https://github.com/robindemourat/plurishing-backend/issues"
+    "url": "https://github.com/robindemourat/metis-backend/issues"
   },
-  "homepage": "https://github.com/robindemourat/plurishing-backend#readme",
+  "homepage": "https://github.com/robindemourat/metis-backend#readme",
   "engines": {
     "node": ">=9.2.0"
   },
@@ -92,8 +92,8 @@
     "mime-types": "^2.1.17",
     "nano": "^6.4.2",
     "nodemailer": "^4.4.1",
-    "plurishing-schemas": "git+https://github.com/robindemourat/plurishing-schemas.git",
-    "plurishing-shared": "git+https://github.com/robindemourat/plurishing-shared.git",
+    "metis-schemas": "git+https://github.com/robindemourat/metis-schemas.git",
+    "metis-shared": "git+https://github.com/robindemourat/metis-shared.git",
     "pm2": "^2.8.0",
     "prince": "^1.4.7",
     "react": "^16.2.0",

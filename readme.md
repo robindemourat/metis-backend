@@ -1,7 +1,7 @@
-Plurishing-server
+Metis-server
 ===
 
-Plurishing-server is the main backend application used to run the `plurishing` experimental plateform for multimodal publishing.
+Metis-server is the main backend application used to run the `metis` experimental plateform for multimodal publishing.
 
 The app is an express app allowing to interact with a `couchdb` database storing different types of objects relating to the experiment, and also to provide some microservices used by other applications.
 
@@ -13,8 +13,8 @@ Once you have Prince installed, here is the procedure for the server installatio
 
 ```
 # clone repo
-git clone https://github.com/robindemourat/plurishing-backend
-cd plurishing-backend
+git clone https://github.com/robindemourat/metis-backend
+cd metis-backend
 # install dependencies
 npm install
 # install precommit dependency
@@ -593,8 +593,8 @@ DELETE /dump/
 - [mime-types](https://github.com/jshttp/mime-types): The ultimate javascript content-type utility.
 - [nano](https://github.com/apache/couchdb-nano): The official CouchDB client for Node.js
 - [nodemailer](https://github.com/nodemailer/nodemailer): Easy as cake e-mail sending from your Node.js applications
-- [plurishing-schemas](git+https://github.com/robindemourat/plurishing-backend.git): Multimodal publishing schemas
-- [plurishing-shared](git+https://github.com/robindemourat/plurishing-backend.git): Collection of plurishing elements being used accross apps
+- [metis-schemas](git+https://github.com/robindemourat/metis-backend.git): Multimodal publishing schemas
+- [metis-shared](git+https://github.com/robindemourat/metis-backend.git): Collection of metis elements being used accross apps
 - [pm2](https://github.com/Unitech/pm2): Production process manager for Node.JS applications with a built-in load balancer.
 - [prince](https://github.com/rse/node-prince): Node API for executing XML/HTML to PDF renderer PrinceXML via prince(1) CLI
 - [react](https://github.com/facebook/react): React is a JavaScript library for building user interfaces.

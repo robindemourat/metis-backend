@@ -888,7 +888,7 @@ Checks whether string matches hash
 
 ## `welcomeEmail()`
 
-Plurishing-backend ======= Mailing utils
+Metis-backend ======= Mailing utils
 
 | Name | Type | Attribute | Description |
 | --- | --- | --- | --- |

@@ -1,12 +1,12 @@
 /**
- * Plurishing-backend
+ * Metis-backend
  * =======
  * Diffusion data access layer
  */
 
 import db from '../../utils/plugDb';
 
-import {Diffusion as schema} from 'plurishing-schemas';
+import {Diffusion as schema} from 'metis-schemas';
 import design from './diffusions.design';
 import {addDesign} from '../../utils/couchdb';
 import {dataIsValid} from '../../utils/schemas';

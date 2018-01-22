@@ -13,13 +13,13 @@ var _promise = require('babel-runtime/core-js/promise');
 
 var _promise2 = _interopRequireDefault(_promise);
 
-var cov_fbpigcu09 = function () {
-  var path = '/Users/rawbin/Documents/Projets/collaborations/ensad-publishing/prototype/plurishing-backend/src/components/montages/montages.dal.js',
-      hash = 'deb60056d42a3caa7023d0b9a46a237daab7ade5',
+var cov_j8p5ej56a = function () {
+  var path = '/Users/rawbin/Documents/Projets/collaborations/ensad-publishing/prototype/metis-backend/src/components/montages/montages.dal.js',
+      hash = 'b8bf65a0e9100c53dd7c7a7dc03a17d8113d1dc7',
       global = new Function('return this')(),
       gcv = '__coverage__',
       coverageData = {
-    path: '/Users/rawbin/Documents/Projets/collaborations/ensad-publishing/prototype/plurishing-backend/src/components/montages/montages.dal.js',
+    path: '/Users/rawbin/Documents/Projets/collaborations/ensad-publishing/prototype/metis-backend/src/components/montages/montages.dal.js',
     statementMap: {
       '0': {
         start: {
@@ -602,7 +602,7 @@ var cov_fbpigcu09 = function () {
   coverageData.hash = hash;
   return coverage[path] = coverageData;
 }(); /**
-      * Plurishing-backend
+      * Metis-backend
       * =======
       * Montage data access layer
       */
@@ -611,7 +611,7 @@ var _plugDb = require('../../utils/plugDb');
 
 var _plugDb2 = _interopRequireDefault(_plugDb);
 
-var _plurishingSchemas = require('plurishing-schemas');
+var _metisSchemas = require('metis-schemas');
 
 var _montages = require('./montages.design');
 
@@ -626,7 +626,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 /**
  * Registering couchdb views related to montages objects
  */
-cov_fbpigcu09.s[0]++;
+cov_j8p5ej56a.s[0]++;
 (0, _couchdb.addDesign)(_plugDb2.default, 'montages', _montages2.default);
 
 /**
@@ -634,24 +634,24 @@ cov_fbpigcu09.s[0]++;
  * @param {object} parameters
  * @return {Promise}
  */
-cov_fbpigcu09.s[1]++;
+cov_j8p5ej56a.s[1]++;
 var getMontages = exports.getMontages = function getMontages(_ref) {
   var _ref$include_docs = _ref.include_docs,
-      include_docs = _ref$include_docs === undefined ? (cov_fbpigcu09.b[0][0]++, true) : _ref$include_docs;
-  cov_fbpigcu09.f[0]++;
-  cov_fbpigcu09.s[2]++;
+      include_docs = _ref$include_docs === undefined ? (cov_j8p5ej56a.b[0][0]++, true) : _ref$include_docs;
+  cov_j8p5ej56a.f[0]++;
+  cov_j8p5ej56a.s[2]++;
 
   return _plugDb2.default.viewAsync('montages', 'by_id', {
     include_docs: include_docs
   }).then(function (results) {
-    cov_fbpigcu09.f[1]++;
-    cov_fbpigcu09.s[3]++;
+    cov_j8p5ej56a.f[1]++;
+    cov_j8p5ej56a.s[3]++;
     return new _promise2.default(function (resolve) {
-      cov_fbpigcu09.f[2]++;
-      cov_fbpigcu09.s[4]++;
+      cov_j8p5ej56a.f[2]++;
+      cov_j8p5ej56a.s[4]++;
       return resolve(results.rows.map(function (doc) {
-        cov_fbpigcu09.f[3]++;
-        cov_fbpigcu09.s[5]++;
+        cov_j8p5ej56a.f[3]++;
+        cov_j8p5ej56a.s[5]++;
         return doc.doc;
       }));
     });
@@ -663,17 +663,17 @@ var getMontages = exports.getMontages = function getMontages(_ref) {
  * @param {object} parameters
  * @return {Promise}
  */
-cov_fbpigcu09.s[6]++;
+cov_j8p5ej56a.s[6]++;
 var getMontage = exports.getMontage = function getMontage(_ref2) {
   var id = _ref2.id;
-  cov_fbpigcu09.f[4]++;
-  cov_fbpigcu09.s[7]++;
+  cov_j8p5ej56a.f[4]++;
+  cov_j8p5ej56a.s[7]++;
   return _plugDb2.default.getAsync(id).then(function (montage) {
-    cov_fbpigcu09.f[5]++;
-    cov_fbpigcu09.s[8]++;
+    cov_j8p5ej56a.f[5]++;
+    cov_j8p5ej56a.s[8]++;
     return (
       // verify that data is compliant before returning it
-      (0, _schemas.dataIsValid)(montage, _plurishingSchemas.Montage)
+      (0, _schemas.dataIsValid)(montage, _metisSchemas.Montage)
     );
   });
 };
@@ -683,13 +683,13 @@ var getMontage = exports.getMontage = function getMontage(_ref2) {
  * @param {object} montage
  * @return {Promise}
  */
-cov_fbpigcu09.s[9]++;
+cov_j8p5ej56a.s[9]++;
 var createMontage = exports.createMontage = function createMontage(montage) {
-  cov_fbpigcu09.f[6]++;
-  cov_fbpigcu09.s[10]++;
-  return (0, _schemas.dataIsValid)(montage, _plurishingSchemas.Montage).then(function () {
-    cov_fbpigcu09.f[7]++;
-    cov_fbpigcu09.s[11]++;
+  cov_j8p5ej56a.f[6]++;
+  cov_j8p5ej56a.s[10]++;
+  return (0, _schemas.dataIsValid)(montage, _metisSchemas.Montage).then(function () {
+    cov_j8p5ej56a.f[7]++;
+    cov_j8p5ej56a.s[11]++;
     return _plugDb2.default.insertAsync(montage);
   });
 };
@@ -700,23 +700,23 @@ var createMontage = exports.createMontage = function createMontage(montage) {
  * @param {object} montage - data to update
  * @return {Promise}
  */
-cov_fbpigcu09.s[12]++;
+cov_j8p5ej56a.s[12]++;
 var updateMontage = exports.updateMontage = function updateMontage(id, montage) {
-  cov_fbpigcu09.f[8]++;
-  cov_fbpigcu09.s[13]++;
+  cov_j8p5ej56a.f[8]++;
+  cov_j8p5ej56a.s[13]++;
   return (
     // validate
-    (0, _schemas.dataIsValid)(montage, _plurishingSchemas.Montage)
+    (0, _schemas.dataIsValid)(montage, _metisSchemas.Montage)
     // get existing document
     .then(function () {
-      cov_fbpigcu09.f[9]++;
-      cov_fbpigcu09.s[14]++;
+      cov_j8p5ej56a.f[9]++;
+      cov_j8p5ej56a.s[14]++;
       return _plugDb2.default.getAsync(id);
     })
     // update with new rev
     .then(function (montageDb) {
-      cov_fbpigcu09.f[10]++;
-      cov_fbpigcu09.s[15]++;
+      cov_j8p5ej56a.f[10]++;
+      cov_j8p5ej56a.s[15]++;
       return _plugDb2.default.insertAsync((0, _extends3.default)({}, montage, {
         _rev: montageDb._rev
       }), montageDb._id);
@@ -729,14 +729,14 @@ var updateMontage = exports.updateMontage = function updateMontage(id, montage) 
  * @param {object} montage - montage to delete
  * @return {Promise}
  */
-cov_fbpigcu09.s[16]++;
+cov_j8p5ej56a.s[16]++;
 var deleteMontage = exports.deleteMontage = function deleteMontage(_ref3) {
   var _id = _ref3._id;
-  cov_fbpigcu09.f[11]++;
-  cov_fbpigcu09.s[17]++;
+  cov_j8p5ej56a.f[11]++;
+  cov_j8p5ej56a.s[17]++;
   return _plugDb2.default.getAsync(_id).then(function (montage) {
-    cov_fbpigcu09.f[12]++;
-    cov_fbpigcu09.s[18]++;
+    cov_j8p5ej56a.f[12]++;
+    cov_j8p5ej56a.s[18]++;
     return _plugDb2.default.destroyAsync(_id, montage._rev);
   });
 };

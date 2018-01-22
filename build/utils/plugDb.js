@@ -4,13 +4,13 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var cov_m9rginnw1 = function () {
-  var path = '/Users/rawbin/Documents/Projets/collaborations/ensad-publishing/prototype/plurishing-backend/src/utils/plugDb.js',
-      hash = '5abb0ba6c742b0089c1fd2c18cab519f66175fd6',
+var cov_2d4sihlqgn = function () {
+  var path = '/Users/rawbin/Documents/Projets/collaborations/ensad-publishing/prototype/metis-backend/src/utils/plugDb.js',
+      hash = 'c6c7da1192071a261cf88d5ec4d3bd94a594d585',
       global = new Function('return this')(),
       gcv = '__coverage__',
       coverageData = {
-    path: '/Users/rawbin/Documents/Projets/collaborations/ensad-publishing/prototype/plurishing-backend/src/utils/plugDb.js',
+    path: '/Users/rawbin/Documents/Projets/collaborations/ensad-publishing/prototype/metis-backend/src/utils/plugDb.js',
     statementMap: {
       '0': {
         start: {
@@ -87,28 +87,28 @@ var cov_m9rginnw1 = function () {
 }();
 
 /**
- * Plurishing-backend
+ * Metis-backend
  * =======
  * Couchdb connection script
  */
-var Promise = (cov_m9rginnw1.s[0]++, require('bluebird'));
+var Promise = (cov_2d4sihlqgn.s[0]++, require('bluebird'));
 
-var config = (cov_m9rginnw1.s[1]++, require('./config').getConfig());
+var config = (cov_2d4sihlqgn.s[1]++, require('./config').getConfig());
 
 /**
  * Init nano
  */
-var nano = (cov_m9rginnw1.s[2]++, require('nano')(config.couchdbUri));
+var nano = (cov_2d4sihlqgn.s[2]++, require('nano')(config.couchdbUri));
 
 /**
  * Specify db name
  */
-var db = (cov_m9rginnw1.s[3]++, nano.db.use(config.couchdbName));
+var db = (cov_2d4sihlqgn.s[3]++, nano.db.use(config.couchdbName));
 
 /**
  * Promisify
  */
-cov_m9rginnw1.s[4]++;
+cov_2d4sihlqgn.s[4]++;
 Promise.promisifyAll(db);
 
 exports.default = db;
