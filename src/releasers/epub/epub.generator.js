@@ -99,14 +99,13 @@ export default function generateEpub ({
   citationStyle,
   getAssetUri,
   styles='',
-  mode
+  renderingMode
 }, onFileGenerated) {
   return new Promise((resolve, reject) => {
     const montage = props.montage;
     const compositions= props.compositions;
     const metadata = montage.metadata;
 
-    const renderingMode = mode === 'static' ? 'epub-reflowable' : 'epub-fixed';
     const css = [
       styles,
       // montage-specific css code
@@ -147,6 +146,7 @@ export default function generateEpub ({
           author: buildAuthors(metadata.creators),
           cover: coverFilePath,
           appendChapterTitles: false,
+          layout: renderingMode === 'epub-reflowable' ? 'reflowable' : 'fixed',
           tocTitle: 'Table des matières',
           // publisher: "Macmillan & Co.", // optional
           content: [

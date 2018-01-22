@@ -13,7 +13,7 @@ import {
 const tempDirPath = resolvePath(__dirname + '/../../../temp');
 const styles = readFileSync(resolvePath(__dirname + '/../../../node_modules/plurishing-shared/dist/style.css'), 'utf8');
 
-export default function publish(data, diffusion, mode = 'static') {
+export default function publish(data, diffusion, renderingMode = 'epub-reflowable') {
   return new Promise((resolve, reject) => {
 
     let deliverable;
@@ -44,7 +44,7 @@ export default function publish(data, diffusion, mode = 'static') {
         citationStyle,
         citationLocale,
         getAssetUri,
-        mode,
+        renderingMode,
         styles
       }, epubPath => {
         deliverable = {

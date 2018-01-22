@@ -10,7 +10,7 @@ var _promise2 = _interopRequireDefault(_promise);
 
 var cov_1ea3uoml1a = function () {
   var path = '/Users/rawbin/Documents/Projets/collaborations/ensad-publishing/prototype/plurishing-backend/src/releasers/epub/index.js',
-      hash = '6b9b5af205eda372997150436700d7e2f0b7a4b6',
+      hash = '99f3f8e7a1c987e5ecc329842801d6269cfdd246',
       global = new Function('return this')(),
       gcv = '__coverage__',
       coverageData = {
@@ -153,7 +153,7 @@ var cov_1ea3uoml1a = function () {
         loc: {
           start: {
             line: 16,
-            column: 66
+            column: 84
           },
           end: {
             line: 70,
@@ -316,18 +316,18 @@ var cov_1ea3uoml1a = function () {
           },
           end: {
             line: 16,
-            column: 64
+            column: 82
           }
         },
         type: 'default-arg',
         locations: [{
           start: {
             line: 16,
-            column: 56
+            column: 65
           },
           end: {
             line: 16,
-            column: 64
+            column: 82
           }
         }],
         line: 16
@@ -393,7 +393,7 @@ var tempDirPath = (cov_1ea3uoml1a.s[0]++, (0, _path.resolve)(__dirname + '/../..
 var styles = (cov_1ea3uoml1a.s[1]++, (0, _fs.readFileSync)((0, _path.resolve)(__dirname + '/../../../node_modules/plurishing-shared/dist/style.css'), 'utf8'));
 
 function publish(data, diffusion) {
-  var mode = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : (cov_1ea3uoml1a.b[0][0]++, 'static');
+  var renderingMode = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : (cov_1ea3uoml1a.b[0][0]++, 'epub-reflowable');
   cov_1ea3uoml1a.f[0]++;
   cov_1ea3uoml1a.s[2]++;
 
@@ -441,7 +441,7 @@ function publish(data, diffusion) {
         citationStyle: citationStyle,
         citationLocale: citationLocale,
         getAssetUri: getAssetUri,
-        mode: mode,
+        renderingMode: renderingMode,
         styles: styles
       }, function (epubPath) {
         cov_1ea3uoml1a.f[5]++;

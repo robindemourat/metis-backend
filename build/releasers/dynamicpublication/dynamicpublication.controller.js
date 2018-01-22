@@ -11,7 +11,7 @@ var _promise2 = _interopRequireDefault(_promise);
 
 var cov_2mna9o3sx8 = function () {
   var path = '/Users/rawbin/Documents/Projets/collaborations/ensad-publishing/prototype/plurishing-backend/src/releasers/dynamicpublication/dynamicpublication.controller.js',
-      hash = '1db38e7a5a9e2094da4d2f9254321e25c6d7c72b',
+      hash = 'c5e8fd408080419c690ed8b6c0b89800e5db1b3b',
       global = new Function('return this')(),
       gcv = '__coverage__',
       coverageData = {
@@ -19,111 +19,101 @@ var cov_2mna9o3sx8 = function () {
     statementMap: {
       '0': {
         start: {
-          line: 7,
+          line: 6,
           column: 23
         },
         end: {
-          line: 37,
+          line: 33,
           column: 1
         }
       },
       '1': {
         start: {
-          line: 8,
+          line: 7,
           column: 2
         },
         end: {
-          line: 36,
+          line: 32,
           column: 5
         }
       },
       '2': {
         start: {
-          line: 10,
+          line: 9,
           column: 4
         },
         end: {
-          line: 35,
+          line: 31,
           column: 21
         }
       },
       '3': {
         start: {
-          line: 13,
+          line: 12,
           column: 8
         },
         end: {
-          line: 13,
+          line: 12,
           column: 49
         }
       },
       '4': {
         start: {
-          line: 17,
+          line: 16,
           column: 24
         },
         end: {
-          line: 17,
+          line: 16,
           column: 52
         }
       },
       '5': {
         start: {
-          line: 18,
+          line: 17,
           column: 27
         },
         end: {
-          line: 30,
+          line: 26,
           column: 10
         }
       },
       '6': {
         start: {
-          line: 19,
+          line: 18,
           column: 10
         },
         end: {
-          line: 29,
+          line: 25,
           column: 11
         }
       },
       '7': {
         start: {
-          line: 22,
+          line: 21,
           column: 14
         },
         end: {
-          line: 22,
+          line: 21,
           column: 42
         }
       },
       '8': {
         start: {
-          line: 25,
+          line: 24,
           column: 14
         },
         end: {
-          line: 25,
-          column: 54
+          line: 24,
+          column: 39
         }
       },
       '9': {
         start: {
           line: 28,
-          column: 14
-        },
-        end: {
-          line: 28,
-          column: 39
-        }
-      },
-      '10': {
-        start: {
-          line: 32,
           column: 8
         },
         end: {
-          line: 32,
+          line: 28,
           column: 39
         }
       }
@@ -133,165 +123,156 @@ var cov_2mna9o3sx8 = function () {
         name: '(anonymous_0)',
         decl: {
           start: {
-            line: 7,
+            line: 6,
             column: 23
           },
           end: {
-            line: 7,
+            line: 6,
             column: 24
           }
         },
         loc: {
           start: {
-            line: 7,
+            line: 6,
             column: 38
           },
           end: {
-            line: 37,
+            line: 33,
             column: 1
           }
         },
-        line: 7
+        line: 6
       },
       '1': {
         name: '(anonymous_1)',
         decl: {
           start: {
-            line: 8,
+            line: 7,
             column: 22
           },
           end: {
-            line: 8,
+            line: 7,
             column: 23
           }
         },
         loc: {
           start: {
-            line: 8,
+            line: 7,
             column: 43
           },
           end: {
-            line: 36,
+            line: 32,
             column: 3
           }
         },
-        line: 8
+        line: 7
       },
       '2': {
         name: '(anonymous_2)',
         decl: {
           start: {
-            line: 11,
+            line: 10,
             column: 12
           },
           end: {
-            line: 11,
+            line: 10,
             column: 13
           }
         },
         loc: {
           start: {
-            line: 11,
+            line: 10,
             column: 23
           },
           end: {
-            line: 14,
+            line: 13,
             column: 7
           }
         },
-        line: 11
+        line: 10
       },
       '3': {
         name: '(anonymous_3)',
         decl: {
           start: {
-            line: 16,
+            line: 15,
             column: 12
           },
           end: {
-            line: 16,
+            line: 15,
             column: 13
           }
         },
         loc: {
           start: {
-            line: 16,
+            line: 15,
             column: 20
           },
           end: {
-            line: 33,
+            line: 29,
             column: 7
           }
         },
-        line: 16
+        line: 15
       },
       '4': {
         name: '(anonymous_4)',
         decl: {
           start: {
-            line: 18,
+            line: 17,
             column: 39
           },
           end: {
-            line: 18,
+            line: 17,
             column: 40
           }
         },
         loc: {
           start: {
-            line: 18,
+            line: 17,
             column: 51
           },
           end: {
-            line: 30,
+            line: 26,
             column: 9
           }
         },
-        line: 18
+        line: 17
       }
     },
     branchMap: {
       '0': {
         loc: {
           start: {
-            line: 19,
+            line: 18,
             column: 10
           },
           end: {
-            line: 29,
+            line: 25,
             column: 11
           }
         },
         type: 'switch',
         locations: [{
           start: {
-            line: 21,
+            line: 20,
             column: 12
           },
           end: {
-            line: 22,
+            line: 21,
             column: 42
           }
         }, {
           start: {
+            line: 23,
+            column: 12
+          },
+          end: {
             line: 24,
-            column: 12
-          },
-          end: {
-            line: 25,
-            column: 54
-          }
-        }, {
-          start: {
-            line: 27,
-            column: 12
-          },
-          end: {
-            line: 28,
             column: 39
           }
         }],
-        line: 19
+        line: 18
       }
     },
     s: {
@@ -304,8 +285,7 @@ var cov_2mna9o3sx8 = function () {
       '6': 0,
       '7': 0,
       '8': 0,
-      '9': 0,
-      '10': 0
+      '9': 0
     },
     f: {
       '0': 0,
@@ -315,7 +295,7 @@ var cov_2mna9o3sx8 = function () {
       '4': 0
     },
     b: {
-      '0': [0, 0, 0]
+      '0': [0, 0]
     },
     _coverageSchema: '332fd63041d2c1bcb487cc26dd0d5f7d97098a6c'
   },
@@ -336,10 +316,6 @@ var _data = require('../../utils/data');
 var _web = require('../web');
 
 var _web2 = _interopRequireDefault(_web);
-
-var _epub = require('../epub');
-
-var _epub2 = _interopRequireDefault(_epub);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -377,21 +353,15 @@ var release = exports.release = function release(diffusion) {
 
             return (0, _web2.default)(data, diffusion);
 
-          case 'epub':
+          default:
             cov_2mna9o3sx8.b[0][1]++;
             cov_2mna9o3sx8.s[8]++;
-
-            return (0, _epub2.default)(data, diffusion, 'dynamic');
-
-          default:
-            cov_2mna9o3sx8.b[0][2]++;
-            cov_2mna9o3sx8.s[9]++;
 
             return _promise2.default.resolve();
         }
       }));
       // execute
-      cov_2mna9o3sx8.s[10]++;
+      cov_2mna9o3sx8.s[9]++;
       return _promise2.default.all(operations);
     }).then(resolve).catch(reject);
   });

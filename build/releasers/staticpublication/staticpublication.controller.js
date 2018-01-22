@@ -11,7 +11,7 @@ var _promise2 = _interopRequireDefault(_promise);
 
 var cov_12klhr1bjw = function () {
   var path = '/Users/rawbin/Documents/Projets/collaborations/ensad-publishing/prototype/plurishing-backend/src/releasers/staticpublication/staticpublication.controller.js',
-      hash = 'd454860ab1b17d52b9593a6edb2b7964052e9469',
+      hash = '237b43ab592d38334bbfe20b9584376ca8a89df8',
       global = new Function('return this')(),
       gcv = '__coverage__',
       coverageData = {
@@ -23,7 +23,7 @@ var cov_12klhr1bjw = function () {
           column: 23
         },
         end: {
-          line: 38,
+          line: 41,
           column: 1
         }
       },
@@ -33,7 +33,7 @@ var cov_12klhr1bjw = function () {
           column: 2
         },
         end: {
-          line: 37,
+          line: 40,
           column: 5
         }
       },
@@ -43,7 +43,7 @@ var cov_12klhr1bjw = function () {
           column: 4
         },
         end: {
-          line: 36,
+          line: 39,
           column: 21
         }
       },
@@ -73,7 +73,7 @@ var cov_12klhr1bjw = function () {
           column: 27
         },
         end: {
-          line: 31,
+          line: 34,
           column: 10
         }
       },
@@ -83,7 +83,7 @@ var cov_12klhr1bjw = function () {
           column: 10
         },
         end: {
-          line: 30,
+          line: 33,
           column: 11
         }
       },
@@ -109,21 +109,31 @@ var cov_12klhr1bjw = function () {
       },
       '9': {
         start: {
-          line: 29,
+          line: 28,
           column: 14
         },
         end: {
-          line: 29,
-          column: 39
+          line: 28,
+          column: 53
         }
       },
       '10': {
         start: {
-          line: 33,
+          line: 32,
+          column: 14
+        },
+        end: {
+          line: 32,
+          column: 39
+        }
+      },
+      '11': {
+        start: {
+          line: 36,
           column: 8
         },
         end: {
-          line: 33,
+          line: 36,
           column: 39
         }
       }
@@ -147,7 +157,7 @@ var cov_12klhr1bjw = function () {
             column: 38
           },
           end: {
-            line: 38,
+            line: 41,
             column: 1
           }
         },
@@ -171,7 +181,7 @@ var cov_12klhr1bjw = function () {
             column: 43
           },
           end: {
-            line: 37,
+            line: 40,
             column: 3
           }
         },
@@ -219,7 +229,7 @@ var cov_12klhr1bjw = function () {
             column: 20
           },
           end: {
-            line: 34,
+            line: 37,
             column: 7
           }
         },
@@ -243,7 +253,7 @@ var cov_12klhr1bjw = function () {
             column: 51
           },
           end: {
-            line: 31,
+            line: 34,
             column: 9
           }
         },
@@ -258,7 +268,7 @@ var cov_12klhr1bjw = function () {
             column: 10
           },
           end: {
-            line: 30,
+            line: 33,
             column: 11
           }
         },
@@ -283,11 +293,20 @@ var cov_12klhr1bjw = function () {
           }
         }, {
           start: {
-            line: 28,
+            line: 27,
             column: 12
           },
           end: {
-            line: 29,
+            line: 28,
+            column: 53
+          }
+        }, {
+          start: {
+            line: 31,
+            column: 12
+          },
+          end: {
+            line: 32,
             column: 39
           }
         }],
@@ -305,7 +324,8 @@ var cov_12klhr1bjw = function () {
       '7': 0,
       '8': 0,
       '9': 0,
-      '10': 0
+      '10': 0,
+      '11': 0
     },
     f: {
       '0': 0,
@@ -315,7 +335,7 @@ var cov_12klhr1bjw = function () {
       '4': 0
     },
     b: {
-      '0': [0, 0, 0]
+      '0': [0, 0, 0, 0]
     },
     _coverageSchema: '332fd63041d2c1bcb487cc26dd0d5f7d97098a6c'
   },
@@ -378,21 +398,26 @@ var release = exports.release = function release(diffusion) {
 
             return (0, _pdf2.default)(data, diffusion);
 
-          case 'epub':
+          case 'epub-reflowable':
             cov_12klhr1bjw.b[0][1]++;
             cov_12klhr1bjw.s[8]++;
 
-            return (0, _epub2.default)(data, diffusion, 'static');
-
-          default:
+            return (0, _epub2.default)(data, diffusion, targetId);
+          case 'epub-fixed':
             cov_12klhr1bjw.b[0][2]++;
             cov_12klhr1bjw.s[9]++;
+
+            return (0, _epub2.default)(data, diffusion, targetId);
+
+          default:
+            cov_12klhr1bjw.b[0][3]++;
+            cov_12klhr1bjw.s[10]++;
 
             return _promise2.default.resolve();
         }
       }));
       // execute
-      cov_12klhr1bjw.s[10]++;
+      cov_12klhr1bjw.s[11]++;
       return _promise2.default.all(operations);
     }).then(resolve).catch(reject);
   });

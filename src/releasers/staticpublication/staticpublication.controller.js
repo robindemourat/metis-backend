@@ -22,8 +22,11 @@ export const release = (diffusion) => {
             case 'pdf':
               return pdf(data, diffusion);
 
-            case 'epub':
-              return epub(data, diffusion, 'static');
+            case 'epub-reflowable':
+              return epub(data, diffusion, targetId);
+            case 'epub-fixed':
+              return epub(data, diffusion, targetId);
+
 
             default:
               return Promise.resolve();

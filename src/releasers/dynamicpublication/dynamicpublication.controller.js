@@ -2,7 +2,6 @@ import {dal as montageDal} from '../../components/montages';
 import {fetchMontageDependencies} from '../../utils/data';
 
 import web from '../web';
-import epub from '../epub';
 
 export const release = (diffusion) => {
   return new Promise ((resolve, reject) => {
@@ -20,9 +19,6 @@ export const release = (diffusion) => {
 
             case 'web':
               return web(data, diffusion);
-
-            case 'epub':
-              return epub(data, diffusion, 'dynamic');
 
             default:
               return Promise.resolve();

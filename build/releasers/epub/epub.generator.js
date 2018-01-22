@@ -18,7 +18,7 @@ var _promise2 = _interopRequireDefault(_promise);
 
 var cov_2iqzemf91b = function () {
   var path = '/Users/rawbin/Documents/Projets/collaborations/ensad-publishing/prototype/plurishing-backend/src/releasers/epub/epub.generator.js',
-      hash = '3eba4403d61e3b8b51109a0aaf3974f1905619fe',
+      hash = 'd30e6b4572c9368b2d937288111e58b3843dfa8d',
       global = new Function('return this')(),
       gcv = '__coverage__',
       coverageData = {
@@ -197,56 +197,46 @@ var cov_2iqzemf91b = function () {
       '17': {
         start: {
           line: 109,
-          column: 26
+          column: 16
         },
         end: {
-          line: 109,
-          column: 78
+          line: 114,
+          column: 18
         }
       },
       '18': {
         start: {
-          line: 110,
-          column: 16
+          line: 116,
+          column: 22
         },
         end: {
-          line: 115,
-          column: 18
+          line: 116,
+          column: 71
         }
       },
       '19': {
         start: {
           line: 117,
-          column: 22
+          column: 26
         },
         end: {
           line: 117,
-          column: 71
+          column: 61
         }
       },
       '20': {
         start: {
-          line: 118,
-          column: 26
+          line: 131,
+          column: 25
         },
         end: {
-          line: 118,
-          column: 61
+          line: 137,
+          column: 5
         }
       },
       '21': {
         start: {
-          line: 132,
-          column: 25
-        },
-        end: {
-          line: 138,
-          column: 5
-        }
-      },
-      '22': {
-        start: {
-          line: 141,
+          line: 140,
           column: 4
         },
         end: {
@@ -254,9 +244,9 @@ var cov_2iqzemf91b = function () {
           column: 7
         }
       },
-      '23': {
+      '22': {
         start: {
-          line: 142,
+          line: 141,
           column: 6
         },
         end: {
@@ -264,19 +254,19 @@ var cov_2iqzemf91b = function () {
           column: 7
         }
       },
-      '24': {
+      '23': {
         start: {
-          line: 143,
+          line: 142,
           column: 8
         },
         end: {
-          line: 143,
+          line: 142,
           column: 20
         }
       },
-      '25': {
+      '24': {
         start: {
-          line: 145,
+          line: 144,
           column: 24
         },
         end: {
@@ -284,7 +274,7 @@ var cov_2iqzemf91b = function () {
           column: 9
         }
       },
-      '26': {
+      '25': {
         start: {
           line: 160,
           column: 53
@@ -294,7 +284,7 @@ var cov_2iqzemf91b = function () {
           column: 18
         }
       },
-      '27': {
+      '26': {
         start: {
           line: 168,
           column: 32
@@ -304,7 +294,7 @@ var cov_2iqzemf91b = function () {
           column: 36
         }
       },
-      '28': {
+      '27': {
         start: {
           line: 178,
           column: 27
@@ -314,7 +304,7 @@ var cov_2iqzemf91b = function () {
           column: 65
         }
       },
-      '29': {
+      '28': {
         start: {
           line: 179,
           column: 8
@@ -324,7 +314,7 @@ var cov_2iqzemf91b = function () {
           column: 31
         }
       },
-      '30': {
+      '29': {
         start: {
           line: 181,
           column: 18
@@ -334,7 +324,7 @@ var cov_2iqzemf91b = function () {
           column: 46
         }
       },
-      '31': {
+      '30': {
         start: {
           line: 182,
           column: 18
@@ -518,17 +508,17 @@ var cov_2iqzemf91b = function () {
         name: '(anonymous_7)',
         decl: {
           start: {
-            line: 141,
+            line: 140,
             column: 39
           },
           end: {
-            line: 141,
+            line: 140,
             column: 40
           }
         },
         loc: {
           start: {
-            line: 141,
+            line: 140,
             column: 46
           },
           end: {
@@ -536,7 +526,7 @@ var cov_2iqzemf91b = function () {
             column: 5
           }
         },
-        line: 141
+        line: 140
       },
       '8': {
         name: '(anonymous_8)',
@@ -672,40 +662,7 @@ var cov_2iqzemf91b = function () {
       '2': {
         loc: {
           start: {
-            line: 109,
-            column: 26
-          },
-          end: {
-            line: 109,
-            column: 78
-          }
-        },
-        type: 'cond-expr',
-        locations: [{
-          start: {
-            line: 109,
-            column: 46
-          },
-          end: {
-            line: 109,
-            column: 63
-          }
-        }, {
-          start: {
-            line: 109,
-            column: 66
-          },
-          end: {
-            line: 109,
-            column: 78
-          }
-        }],
-        line: 109
-      },
-      '3': {
-        loc: {
-          start: {
-            line: 142,
+            line: 141,
             column: 6
           },
           end: {
@@ -716,7 +673,7 @@ var cov_2iqzemf91b = function () {
         type: 'if',
         locations: [{
           start: {
-            line: 142,
+            line: 141,
             column: 6
           },
           end: {
@@ -725,7 +682,7 @@ var cov_2iqzemf91b = function () {
           }
         }, {
           start: {
-            line: 142,
+            line: 141,
             column: 6
           },
           end: {
@@ -733,7 +690,40 @@ var cov_2iqzemf91b = function () {
             column: 7
           }
         }],
-        line: 142
+        line: 141
+      },
+      '3': {
+        loc: {
+          start: {
+            line: 149,
+            column: 18
+          },
+          end: {
+            line: 149,
+            column: 78
+          }
+        },
+        type: 'cond-expr',
+        locations: [{
+          start: {
+            line: 149,
+            column: 56
+          },
+          end: {
+            line: 149,
+            column: 68
+          }
+        }, {
+          start: {
+            line: 149,
+            column: 71
+          },
+          end: {
+            line: 149,
+            column: 78
+          }
+        }],
+        line: 149
       }
     },
     s: {
@@ -767,8 +757,7 @@ var cov_2iqzemf91b = function () {
       '27': 0,
       '28': 0,
       '29': 0,
-      '30': 0,
-      '31': 0
+      '30': 0
     },
     f: {
       '0': 0,
@@ -961,7 +950,7 @@ function generateEpub(_ref3, onFileGenerated) {
       getAssetUri = _ref3.getAssetUri,
       _ref3$styles = _ref3.styles,
       styles = _ref3$styles === undefined ? (cov_2iqzemf91b.b[1][0]++, '') : _ref3$styles,
-      mode = _ref3.mode;
+      renderingMode = _ref3.renderingMode;
   cov_2iqzemf91b.f[5]++;
   cov_2iqzemf91b.s[13]++;
 
@@ -972,13 +961,12 @@ function generateEpub(_ref3, onFileGenerated) {
     var compositions = (cov_2iqzemf91b.s[15]++, props.compositions);
     var metadata = (cov_2iqzemf91b.s[16]++, montage.metadata);
 
-    var renderingMode = (cov_2iqzemf91b.s[17]++, mode === 'static' ? (cov_2iqzemf91b.b[2][0]++, 'epub-reflowable') : (cov_2iqzemf91b.b[2][1]++, 'epub-fixed'));
-    var css = (cov_2iqzemf91b.s[18]++, [styles,
+    var css = (cov_2iqzemf91b.s[17]++, [styles,
     // montage-specific css code
     montage.data.css.shared_css_code, montage.data.css[renderingMode + '_css_code']].join('\n\n'));
 
-    var coverHTML = (cov_2iqzemf91b.s[19]++, generateCoverHtml(montage, renderingMode, styles));
-    var coverFilePath = (cov_2iqzemf91b.s[20]++, tempFolder + '/' + (0, _uuid.v4)() + '.jpg');
+    var coverHTML = (cov_2iqzemf91b.s[18]++, generateCoverHtml(montage, renderingMode, styles));
+    var coverFilePath = (cov_2iqzemf91b.s[19]++, tempFolder + '/' + (0, _uuid.v4)() + '.jpg');
 
     // console.log('will render toc html');
     // const ToCHtml = ReactDOMServer.renderToStaticMarkup(
@@ -992,7 +980,7 @@ function generateEpub(_ref3, onFileGenerated) {
     //   </TranslationsProvider>
     // );
 
-    var colophonHTML = (cov_2iqzemf91b.s[21]++, _server2.default.renderToStaticMarkup(_react2.default.createElement(
+    var colophonHTML = (cov_2iqzemf91b.s[20]++, _server2.default.renderToStaticMarkup(_react2.default.createElement(
       _reactComponents.TranslationsProvider,
       null,
       _react2.default.createElement(_Colophon2.default, {
@@ -1000,29 +988,30 @@ function generateEpub(_ref3, onFileGenerated) {
       })
     )));
 
-    cov_2iqzemf91b.s[22]++;
+    cov_2iqzemf91b.s[21]++;
     (0, _html2img2.default)(coverHTML, coverFilePath, function (err) {
       cov_2iqzemf91b.f[7]++;
-      cov_2iqzemf91b.s[23]++;
+      cov_2iqzemf91b.s[22]++;
 
       if (err) {
-        cov_2iqzemf91b.b[3][0]++;
-        cov_2iqzemf91b.s[24]++;
+        cov_2iqzemf91b.b[2][0]++;
+        cov_2iqzemf91b.s[23]++;
 
         reject(err);
       } else {
-        cov_2iqzemf91b.b[3][1]++;
+        cov_2iqzemf91b.b[2][1]++;
 
-        var options = (cov_2iqzemf91b.s[25]++, {
+        var options = (cov_2iqzemf91b.s[24]++, {
           title: metadata.title,
           author: buildAuthors(metadata.creators),
           cover: coverFilePath,
           appendChapterTitles: false,
+          layout: renderingMode === 'epub-reflowable' ? (cov_2iqzemf91b.b[3][0]++, 'reflowable') : (cov_2iqzemf91b.b[3][1]++, 'fixed'),
           tocTitle: 'Table des matières',
           // publisher: "Macmillan & Co.", // optional
           content: [].concat((0, _toConsumableArray3.default)(montage.data.compositions.map(function (compositionCitation, index) {
             cov_2iqzemf91b.f[8]++;
-            cov_2iqzemf91b.s[26]++;
+            cov_2iqzemf91b.s[25]++;
             return renderComposition(compositionCitation, (0, _extends3.default)({}, props, {
               renderingMode: renderingMode,
               citationStyle: citationStyle,
@@ -1032,7 +1021,7 @@ function generateEpub(_ref3, onFileGenerated) {
             }));
           }).filter(function (comp) {
             cov_2iqzemf91b.f[9]++;
-            cov_2iqzemf91b.s[27]++;
+            cov_2iqzemf91b.s[26]++;
             return comp;
           })), [{
             title: 'Colophon',
@@ -1042,14 +1031,14 @@ function generateEpub(_ref3, onFileGenerated) {
           css: css
         });
 
-        var outputPath = (cov_2iqzemf91b.s[28]++, outputDirPath + '/' + montage._id + '.epub');
-        cov_2iqzemf91b.s[29]++;
+        var outputPath = (cov_2iqzemf91b.s[27]++, outputDirPath + '/' + montage._id + '.epub');
+        cov_2iqzemf91b.s[28]++;
         return new _epubGen2.default(options, outputPath).promise.then(function () {
           cov_2iqzemf91b.f[10]++;
-          cov_2iqzemf91b.s[30]++;
+          cov_2iqzemf91b.s[29]++;
 
           onFileGenerated(outputPath);
-          cov_2iqzemf91b.s[31]++;
+          cov_2iqzemf91b.s[30]++;
           resolve(outputPath);
         }).catch(reject);
       }
