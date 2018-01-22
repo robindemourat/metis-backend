@@ -13,7 +13,7 @@ import {resolve} from 'path';
 import bunyanLogger from 'express-bunyan-logger';
 import debugStream from 'bunyan-debug-stream';
 import {
-  //authenticateWithTokens,
+  authenticateWithTokens,
   errorHandler
 } from './utils/middlewares';
 /**
@@ -111,16 +111,18 @@ apiRoutes.use('/', auth);
  * API documentation route
  */
 
+apiRoutes.use('/assets', assets);
+
 /**
  * Apply authentication middleware for protected routes using jwt
  * (after that line all routes are protected)
  */
-// apiRoutes.use(authenticateWithTokens);
+apiRoutes.use(authenticateWithTokens);
+
 /**
  * Protected api routes
  */
 apiRoutes.use('/users', users);
-apiRoutes.use('/assets', assets);
 apiRoutes.use('/resources', resources);
 apiRoutes.use('/compositions', compositions);
 apiRoutes.use('/diffusions', diffusions);
