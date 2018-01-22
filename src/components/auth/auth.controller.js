@@ -189,15 +189,25 @@ export const resetPassword = (req, res) => {
           }, mailConfig, req.log);
         })
         .then(() => {
-          res.json({message: 'request sent'});
+          res.json({
+            success: true,
+            message: 'request sent'
+          });
         })
-        .catch(e => res.status(500).send({error: e, message: 'mail failed'}));
+        .catch(e => res.status(500).send({
+          success: false,
+          error: e,
+          message: 'mail failed'
+        }));
       } else {
-        res.status(404).json({message: 'user not found'});
+        res.status(404).json({
+          success: false,
+          message: 'user not found'
+        });
       }
     })
-    .catch(error => res.status(500).json({message: 'error in db', error}));
+    .catch(error => res.status(500).json({success: false, message: 'error in db', error}));
   } else {
-    res.status(422).json({message: 'no email in request'});
+    res.status(422).json({success: false, message: 'no email in request'});
   }
 };
