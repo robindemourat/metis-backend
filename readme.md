@@ -9,7 +9,7 @@ It is an express app allowing to interact with a `couchdb` database storing diff
 
 ## Install prince xml
 
-You have to install [PrinceXMl](https://www.princexml.com/) bin on your server machine in addition to the node app.
+You have to install [PrinceXML](https://www.princexml.com/) bin on your server machine in addition to the node app.
 
 ## Setup couchdb in development
 
@@ -31,12 +31,14 @@ You will be asked to provide an email address and password to use for sending em
 
 ### Setup a twitter API access
 
-You will be asked to provide twitter API credentials in order to be able to send tweets from the plateforme.
+You will be asked to provide twitter API credentials in order to be able to send tweets from the plateform:
 
 * go to [Twitter applications homepage](https://apps.twitter.com/)
 * click on `create a new app` and fill related form
 * go to your new application page, then to the `Keys and Access Tokens` tab
 * generate consumer key, consumer secret, access token, access token secret. Keep these values for later.
+
+*Please note that tweets will be sent from the account from which you have setup the new twitter app*.
 
 ## Clone repo, install dependencies, setup config
 
@@ -141,6 +143,8 @@ TWITTER_ACCESS_TOKEN # see https://apps.twitter.com/
 
 TWITTER_ACCESS_TOKEN_SECRET # see https://apps.twitter.com/
 ```
+
+*Please note that for a herokuapp deployment scenario, a specific script providing an automatic way to convert prod config `json` file into environments variables is accessible through the `deploy:heroku` npm script*.
 
 
 # Application endpoints
@@ -1216,5 +1220,6 @@ binary data of the asset attachment
 ## License
 
 LGPL-3
+
 CECCIL-C
 
