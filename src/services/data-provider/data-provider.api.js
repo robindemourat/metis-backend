@@ -7,11 +7,11 @@
 
 import express from 'express';
 
-import {getMontageData, getAssetAttachmentUrl} from './data-provider.controller';
+import {getMontageData, getAssetAttachment} from './data-provider.controller';
 
 const router = new express.Router();
 
 router.get('/montage/:id', getMontageData);
-router.get('/asset/:id', getAssetAttachmentUrl);
+router.get('/asset/:id', getAssetAttachment);
 
 export default router;

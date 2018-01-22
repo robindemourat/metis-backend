@@ -6,7 +6,7 @@ Object.defineProperty(exports, "__esModule", {
 
 var cov_sv81ouu9l = function () {
   var path = '/Users/rawbin/Documents/Projets/collaborations/ensad-publishing/prototype/metis-backend/src/services/data-provider/data-provider.api.js',
-      hash = '0951b154a5a70585d3502a5cf50bb8ff96aa3d25',
+      hash = '2e9ab3546a4a75f56647dd5af0e05b3943b7c5ce',
       global = new Function('return this')(),
       gcv = '__coverage__',
       coverageData = {
@@ -39,7 +39,7 @@ var cov_sv81ouu9l = function () {
         },
         end: {
           line: 15,
-          column: 48
+          column: 45
         }
       }
     },
@@ -82,6 +82,6 @@ var router = (cov_sv81ouu9l.s[0]++, new _express2.default.Router());
 cov_sv81ouu9l.s[1]++;
 router.get('/montage/:id', _dataProvider.getMontageData);
 cov_sv81ouu9l.s[2]++;
-router.get('/asset/:id', _dataProvider.getAssetAttachmentUrl);
+router.get('/asset/:id', _dataProvider.getAssetAttachment);
 
 exports.default = router;

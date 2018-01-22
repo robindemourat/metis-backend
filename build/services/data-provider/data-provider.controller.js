@@ -3,11 +3,11 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.getMontageData = exports.getAssetAttachmentUrl = undefined;
+exports.getMontageData = exports.getAssetAttachment = undefined;
 
 var cov_22dzt85ga1 = function () {
   var path = '/Users/rawbin/Documents/Projets/collaborations/ensad-publishing/prototype/metis-backend/src/services/data-provider/data-provider.controller.js',
-      hash = '2d3d6941791b7dfe964b9c821402a6c3b0c04426',
+      hash = 'ec3f69cb75899ce59026455d3218e127e6de4a36',
       global = new Function('return this')(),
       gcv = '__coverage__',
       coverageData = {
@@ -16,7 +16,7 @@ var cov_22dzt85ga1 = function () {
       '0': {
         start: {
           line: 8,
-          column: 37
+          column: 34
         },
         end: {
           line: 22,
@@ -150,17 +150,17 @@ var cov_22dzt85ga1 = function () {
         decl: {
           start: {
             line: 8,
-            column: 37
+            column: 34
           },
           end: {
             line: 8,
-            column: 38
+            column: 35
           }
         },
         loc: {
           start: {
             line: 8,
-            column: 51
+            column: 48
           },
           end: {
             line: 22,
@@ -384,7 +384,7 @@ var _assets = require('../../components/assets');
 var _data = require('../../utils/data');
 
 cov_22dzt85ga1.s[0]++;
-var getAssetAttachmentUrl = exports.getAssetAttachmentUrl = function getAssetAttachmentUrl(req, res) {
+var getAssetAttachment = exports.getAssetAttachment = function getAssetAttachment(req, res) {
   cov_22dzt85ga1.f[0]++;
 
   var id = (cov_22dzt85ga1.s[1]++, req.params.id);

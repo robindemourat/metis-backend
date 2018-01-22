@@ -777,7 +777,7 @@ Sends a personal feed's status message
 | Name | Type | Attribute | Description |
 | --- | --- | --- | --- |
 
-## `getAssetAttachmentUrl()`
+## `getAssetAttachment()`
 
 | Name | Type | Attribute | Description |
 | --- | --- | --- | --- |

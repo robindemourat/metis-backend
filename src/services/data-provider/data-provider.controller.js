@@ -5,7 +5,7 @@ import {fetchMontageDependencies} from '../../utils/data';
 
 
 
-export const getAssetAttachmentUrl = (req, res) => {
+export const getAssetAttachment = (req, res) => {
   const id = req.params.id;
   return assetDal.getAsset({id})
           .then(asset => {
