@@ -11,7 +11,7 @@ var _assign2 = _interopRequireDefault(_assign);
 
 var cov_9ry3vizze = function () {
   var path = '/Users/rawbin/Documents/Projets/collaborations/ensad-publishing/prototype/metis-backend/src/components/auth/auth.controller.js',
-      hash = 'a5c2651ce66e9e9fe0059def49f2b3d908c3beea',
+      hash = '3793cd18a62d2ca834d4a8c4634fc5d9f1d13be8',
       global = new Function('return this')(),
       gcv = '__coverage__',
       coverageData = {
@@ -383,7 +383,7 @@ var cov_9ry3vizze = function () {
           column: 29
         },
         end: {
-          line: 203,
+          line: 213,
           column: 1
         }
       },
@@ -413,7 +413,7 @@ var cov_9ry3vizze = function () {
           column: 2
         },
         end: {
-          line: 202,
+          line: 212,
           column: 3
         }
       },
@@ -423,8 +423,8 @@ var cov_9ry3vizze = function () {
           column: 4
         },
         end: {
-          line: 199,
-          column: 75
+          line: 209,
+          column: 91
         }
       },
       '41': {
@@ -433,7 +433,7 @@ var cov_9ry3vizze = function () {
           column: 6
         },
         end: {
-          line: 197,
+          line: 207,
           column: 7
         }
       },
@@ -463,8 +463,8 @@ var cov_9ry3vizze = function () {
           column: 8
         },
         end: {
-          line: 194,
-          column: 78
+          line: 201,
+          column: 12
         }
       },
       '45': {
@@ -503,48 +503,48 @@ var cov_9ry3vizze = function () {
           column: 10
         },
         end: {
-          line: 192,
-          column: 46
+          line: 195,
+          column: 13
         }
       },
       '49': {
         start: {
-          line: 194,
+          line: 197,
           column: 20
         },
         end: {
-          line: 194,
-          column: 76
+          line: 201,
+          column: 10
         }
       },
       '50': {
         start: {
-          line: 196,
+          line: 203,
           column: 8
         },
         end: {
-          line: 196,
-          column: 58
+          line: 206,
+          column: 11
         }
       },
       '51': {
         start: {
-          line: 199,
+          line: 209,
           column: 20
         },
         end: {
-          line: 199,
-          column: 73
+          line: 209,
+          column: 89
         }
       },
       '52': {
         start: {
-          line: 201,
+          line: 211,
           column: 4
         },
         end: {
-          line: 201,
-          column: 59
+          line: 211,
+          column: 75
         }
       }
     },
@@ -831,7 +831,7 @@ var cov_9ry3vizze = function () {
             column: 43
           },
           end: {
-            line: 203,
+            line: 213,
             column: 1
           }
         },
@@ -855,7 +855,7 @@ var cov_9ry3vizze = function () {
             column: 18
           },
           end: {
-            line: 198,
+            line: 208,
             column: 5
           }
         },
@@ -903,7 +903,7 @@ var cov_9ry3vizze = function () {
             column: 20
           },
           end: {
-            line: 193,
+            line: 196,
             column: 9
           }
         },
@@ -913,49 +913,49 @@ var cov_9ry3vizze = function () {
         name: '(anonymous_15)',
         decl: {
           start: {
-            line: 194,
+            line: 197,
             column: 15
           },
           end: {
-            line: 194,
+            line: 197,
             column: 16
           }
         },
         loc: {
           start: {
-            line: 194,
+            line: 197,
             column: 20
           },
           end: {
-            line: 194,
-            column: 76
+            line: 201,
+            column: 10
           }
         },
-        line: 194
+        line: 197
       },
       '16': {
         name: '(anonymous_16)',
         decl: {
           start: {
-            line: 199,
+            line: 209,
             column: 11
           },
           end: {
-            line: 199,
+            line: 209,
             column: 12
           }
         },
         loc: {
           start: {
-            line: 199,
+            line: 209,
             column: 20
           },
           end: {
-            line: 199,
-            column: 73
+            line: 209,
+            column: 89
           }
         },
-        line: 199
+        line: 209
       }
     },
     branchMap: {
@@ -1263,7 +1263,7 @@ var cov_9ry3vizze = function () {
             column: 2
           },
           end: {
-            line: 202,
+            line: 212,
             column: 3
           }
         },
@@ -1274,7 +1274,7 @@ var cov_9ry3vizze = function () {
             column: 2
           },
           end: {
-            line: 202,
+            line: 212,
             column: 3
           }
         }, {
@@ -1283,7 +1283,7 @@ var cov_9ry3vizze = function () {
             column: 2
           },
           end: {
-            line: 202,
+            line: 212,
             column: 3
           }
         }],
@@ -1296,7 +1296,7 @@ var cov_9ry3vizze = function () {
             column: 6
           },
           end: {
-            line: 197,
+            line: 207,
             column: 7
           }
         },
@@ -1307,7 +1307,7 @@ var cov_9ry3vizze = function () {
             column: 6
           },
           end: {
-            line: 197,
+            line: 207,
             column: 7
           }
         }, {
@@ -1316,7 +1316,7 @@ var cov_9ry3vizze = function () {
             column: 6
           },
           end: {
-            line: 197,
+            line: 207,
             column: 7
           }
         }],
@@ -1717,27 +1717,37 @@ var resetPassword = exports.resetPassword = function resetPassword(req, res) {
           cov_9ry3vizze.f[14]++;
           cov_9ry3vizze.s[48]++;
 
-          res.json({ message: 'request sent' });
+          res.json({
+            success: true,
+            message: 'request sent'
+          });
         }).catch(function (e) {
           cov_9ry3vizze.f[15]++;
           cov_9ry3vizze.s[49]++;
-          return res.status(500).send({ error: e, message: 'mail failed' });
+          return res.status(500).send({
+            success: false,
+            error: e,
+            message: 'mail failed'
+          });
         });
       } else {
         cov_9ry3vizze.b[10][1]++;
         cov_9ry3vizze.s[50]++;
 
-        res.status(404).json({ message: 'user not found' });
+        res.status(404).json({
+          success: false,
+          message: 'user not found'
+        });
       }
     }).catch(function (error) {
       cov_9ry3vizze.f[16]++;
       cov_9ry3vizze.s[51]++;
-      return res.status(500).json({ message: 'error in db', error: error });
+      return res.status(500).json({ success: false, message: 'error in db', error: error });
     });
   } else {
     cov_9ry3vizze.b[9][1]++;
     cov_9ry3vizze.s[52]++;
 
-    res.status(422).json({ message: 'no email in request' });
+    res.status(422).json({ success: false, message: 'no email in request' });
   }
 };

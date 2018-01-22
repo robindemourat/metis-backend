@@ -100,11 +100,15 @@ export const getUsers = (req, res) =>
  * @param {object} res - the resource of query
  */
 export const getUser = (req, res) =>
-  res.json(
-    getUserDAL({
-      id: req.params.id
-    })
-  );
+  ensureAdminOrOwn(req)
+    .catch(error => res.status(403).json({message: 'admin only', error}))
+    .then(() =>
+      res.json(
+        getUserDAL({
+          id: req.params.id
+        })
+      )
+    );
 
 /**
  * Create a single user

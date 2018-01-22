@@ -6,7 +6,7 @@ Object.defineProperty(exports, "__esModule", {
 
 var cov_tnxaix1zt = function () {
   var path = '/Users/rawbin/Documents/Projets/collaborations/ensad-publishing/prototype/metis-backend/src/components/assets/assets.api.js',
-      hash = 'f9fad48a6b59c26d6b31accf6d9d702339f3c0de',
+      hash = 'b077ca91e3b9079ed8a52c8b133fcdf8bbcda2b3',
       global = new Function('return this')(),
       gcv = '__coverage__',
       coverageData = {
@@ -14,71 +14,81 @@ var cov_tnxaix1zt = function () {
     statementMap: {
       '0': {
         start: {
-          line: 18,
+          line: 22,
           column: 15
         },
         end: {
-          line: 18,
+          line: 22,
           column: 35
         }
       },
       '1': {
         start: {
-          line: 20,
+          line: 25,
           column: 0
         },
         end: {
-          line: 20,
-          column: 27
+          line: 25,
+          column: 49
         }
       },
       '2': {
         start: {
-          line: 21,
+          line: 28,
           column: 0
         },
         end: {
-          line: 21,
-          column: 29
+          line: 28,
+          column: 35
         }
       },
       '3': {
         start: {
-          line: 22,
+          line: 30,
           column: 0
         },
         end: {
-          line: 22,
-          column: 49
+          line: 30,
+          column: 27
         }
       },
       '4': {
         start: {
-          line: 24,
+          line: 31,
           column: 0
         },
         end: {
-          line: 24,
-          column: 33
+          line: 31,
+          column: 29
         }
       },
       '5': {
         start: {
-          line: 25,
+          line: 33,
           column: 0
         },
         end: {
-          line: 25,
-          column: 32
+          line: 33,
+          column: 33
         }
       },
       '6': {
         start: {
-          line: 26,
+          line: 34,
           column: 0
         },
         end: {
-          line: 26,
+          line: 34,
+          column: 32
+        }
+      },
+      '7': {
+        start: {
+          line: 35,
+          column: 0
+        },
+        end: {
+          line: 35,
           column: 35
         }
       }
@@ -92,7 +102,8 @@ var cov_tnxaix1zt = function () {
       '3': 0,
       '4': 0,
       '5': 0,
-      '6': 0
+      '6': 0,
+      '7': 0
     },
     f: {},
     b: {},
@@ -118,22 +129,30 @@ var _express2 = _interopRequireDefault(_express);
 
 var _assets = require('./assets.controller');
 
+var _middlewares = require('../../utils/middlewares');
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var router = (cov_tnxaix1zt.s[0]++, new _express2.default.Router());
 
+// only this route is public
 cov_tnxaix1zt.s[1]++;
-router.get('/', _assets.getAssets);
-cov_tnxaix1zt.s[2]++;
-router.get('/:id', _assets.getAsset);
-cov_tnxaix1zt.s[3]++;
 router.get('/:id/:filename', _assets.getAssetAttachment);
 
+// other routes are protected by an access token
+cov_tnxaix1zt.s[2]++;
+router.use(_middlewares.authenticateWithTokens);
+
+cov_tnxaix1zt.s[3]++;
+router.get('/', _assets.getAssets);
 cov_tnxaix1zt.s[4]++;
-router.post('/:id', _assets.createAsset);
+router.get('/:id', _assets.getAsset);
+
 cov_tnxaix1zt.s[5]++;
-router.put('/:id', _assets.updateAsset);
+router.post('/:id', _assets.createAsset);
 cov_tnxaix1zt.s[6]++;
+router.put('/:id', _assets.updateAsset);
+cov_tnxaix1zt.s[7]++;
 router.delete('/:id', _assets.deleteAsset);
 
 exports.default = router;

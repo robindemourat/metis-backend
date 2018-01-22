@@ -924,6 +924,16 @@ Sends an email
 | Name | Type | Attribute | Description |
 | --- | --- | --- | --- |
 
+## `retrieveToken()`
+
+| Name | Type | Attribute | Description |
+| --- | --- | --- | --- |
+
+## `authenticateWithTokens()`
+
+| Name | Type | Attribute | Description |
+| --- | --- | --- | --- |
+
 ## `addAdmin()`
 
 | Name | Type | Attribute | Description |
