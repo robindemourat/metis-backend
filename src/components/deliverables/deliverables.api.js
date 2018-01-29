@@ -7,6 +7,10 @@
 import express from 'express';
 
 import {
+  authenticateWithTokens
+} from '../../utils/middlewares';
+
+import {
   getDeliverables,
   getDeliverable,
   getDeliverableAttachment,
@@ -17,9 +21,10 @@ import {
 
 const router = new express.Router();
 
+router.get('/:id/:filename', getDeliverableAttachment);
+router.use(authenticateWithTokens);
 router.get('/', getDeliverables);
 router.get('/:id', getDeliverable);
-router.get('/:id/:filename', getDeliverableAttachment);
 
 router.post('/:id', createDeliverable);
 router.put('/:id', updateDeliverable);

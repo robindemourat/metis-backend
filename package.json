@@ -27,10 +27,7 @@
     "test": "cross-env NODE_ENV=test mocha --compilers js:babel-core/register --R  spec --recursive $(find src -name '*.spec.js')",
     "test:watch": "npm run test -- --watch",
     "cov": "cross-env NODE_ENV=test nyc npm test && nyc check-coverage --lines 0 --functions 0 --branches 0n && nyc report --reporter=text-lcov",
-    "doc": "esdoc -c esdoc.json",
     "build": "babel src/ -d build/",
-    "add-build-to-stage": "git add build",
-    "add-doc-to-stage": "git add doc",
     "deploy:heroku": "node setHerokuEnv;git push heroku master",
     "clean": "rm -rf temp;mkdir temp"
   },
@@ -60,10 +57,7 @@
   "pre-commit": [
     "lint",
     "cov",
-    "build",
-    "doc",
-    "add-doc-to-stage",
-    "add-build-to-stage"
+    "build"
   ],
   "dependencies": {
     "ajv": "^5.5.2",

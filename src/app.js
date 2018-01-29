@@ -107,6 +107,7 @@ const apiRoutes = express.Router();
  * No-token authentication-related routes
  */
 apiRoutes.use('/', auth);
+apiRoutes.use('/deliverables', deliverables);
 
 /**
  * API documentation route
@@ -128,7 +129,6 @@ apiRoutes.use('/resources', resources);
 apiRoutes.use('/compositions', compositions);
 apiRoutes.use('/diffusions', diffusions);
 apiRoutes.use('/montages', montages);
-apiRoutes.use('/deliverables', deliverables);
 
 /**
  * Connect the api router to the app
