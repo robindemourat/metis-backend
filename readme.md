@@ -9,7 +9,7 @@ It is an express app allowing to interact with a `couchdb` database storing diff
 
 ## Install prince xml
 
-You have to install [PrinceXML](https://www.princexml.com/) bin on your server machine in addition to the node app.
+You have to install [PrinceXML](https://www.princexml.com/) bin on your server machine in addition to the node app, and have it available through your `PATH`.
 
 ## Setup couchdb in development
 
