@@ -66,7 +66,7 @@ export const fetchCitationData = () =>
     readFile(`${assetsFolder}/apa.csl`, 'utf8')
           .then(str => {
             citationStyle = str;
-            return readFile(`${assetsFolder}/english-locale.xml`, 'utf8');
+            return readFile(`${assetsFolder}/french-locale.xml`, 'utf8');
           })
           .then(str => {
             citationLocale = str;
