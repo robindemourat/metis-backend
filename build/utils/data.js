@@ -19,7 +19,7 @@ var _promise2 = _interopRequireDefault(_promise);
 
 var cov_1amvx6zirx = function () {
   var path = '/Users/rawbin/Documents/Projets/collaborations/ensad-publishing/prototype/metis-backend/src/utils/data.js',
-      hash = '6d59d0ee4333635e129714f73be5922ec3a0a5f9',
+      hash = '537d6f238fc3274707febdb9eb5e5007d2682a48',
       global = new Function('return this')(),
       gcv = '__coverage__',
       coverageData = {
@@ -252,7 +252,7 @@ var cov_1amvx6zirx = function () {
         },
         end: {
           line: 69,
-          column: 74
+          column: 73
         }
       },
       '23': {
@@ -1816,7 +1816,7 @@ var fetchCitationData = exports.fetchCitationData = function fetchCitationData()
 
       citationStyle = str;
       cov_1amvx6zirx.s[22]++;
-      return (0, _fsExtra.readFile)(assetsFolder + '/english-locale.xml', 'utf8');
+      return (0, _fsExtra.readFile)(assetsFolder + '/french-locale.xml', 'utf8');
     }).then(function (str) {
       cov_1amvx6zirx.f[14]++;
       cov_1amvx6zirx.s[23]++;
