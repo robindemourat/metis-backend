@@ -6,7 +6,7 @@ Object.defineProperty(exports, "__esModule", {
 
 var cov_2q2jexkalk = function () {
   var path = '/Users/rawbin/Documents/Projets/collaborations/ensad-publishing/prototype/metis-backend/src/app.js',
-      hash = '04cb1b7981ab8a08bab877591e76eb8754f4ea6a',
+      hash = '0d6df1c93320d18159132dfe217659d206bae700',
       global = new Function('return this')(),
       gcv = '__coverage__',
       coverageData = {
@@ -174,32 +174,32 @@ var cov_2q2jexkalk = function () {
       },
       '16': {
         start: {
-          line: 115,
+          line: 110,
           column: 0
         },
         end: {
-          line: 115,
-          column: 33
+          line: 110,
+          column: 45
         }
       },
       '17': {
         start: {
-          line: 121,
+          line: 116,
           column: 0
         },
         end: {
-          line: 121,
-          column: 38
+          line: 116,
+          column: 33
         }
       },
       '18': {
         start: {
-          line: 126,
+          line: 122,
           column: 0
         },
         end: {
-          line: 126,
-          column: 31
+          line: 122,
+          column: 38
         }
       },
       '19': {
@@ -209,7 +209,7 @@ var cov_2q2jexkalk = function () {
         },
         end: {
           line: 127,
-          column: 39
+          column: 31
         }
       },
       '20': {
@@ -219,7 +219,7 @@ var cov_2q2jexkalk = function () {
         },
         end: {
           line: 128,
-          column: 45
+          column: 39
         }
       },
       '21': {
@@ -229,7 +229,7 @@ var cov_2q2jexkalk = function () {
         },
         end: {
           line: 129,
-          column: 41
+          column: 45
         }
       },
       '22': {
@@ -239,7 +239,7 @@ var cov_2q2jexkalk = function () {
         },
         end: {
           line: 130,
-          column: 37
+          column: 41
         }
       },
       '23': {
@@ -249,7 +249,7 @@ var cov_2q2jexkalk = function () {
         },
         end: {
           line: 131,
-          column: 45
+          column: 37
         }
       },
       '24': {
@@ -541,36 +541,36 @@ var apiRoutes = (cov_2q2jexkalk.s[14]++, _express2.default.Router());
  */
 cov_2q2jexkalk.s[15]++;
 apiRoutes.use('/', _auth.api);
+cov_2q2jexkalk.s[16]++;
+apiRoutes.use('/deliverables', _deliverables.api);
 
 /**
  * API documentation route
  */
 
-cov_2q2jexkalk.s[16]++;
+cov_2q2jexkalk.s[17]++;
 apiRoutes.use('/assets', _assets.api);
 
 /**
  * Apply authentication middleware for protected routes using jwt
  * (after that line all routes are protected)
  */
-cov_2q2jexkalk.s[17]++;
+cov_2q2jexkalk.s[18]++;
 apiRoutes.use(_middlewares.authenticateWithTokens);
 
 /**
  * Protected api routes
  */
-cov_2q2jexkalk.s[18]++;
-apiRoutes.use('/users', _users.api);
 cov_2q2jexkalk.s[19]++;
-apiRoutes.use('/resources', _resources.api);
+apiRoutes.use('/users', _users.api);
 cov_2q2jexkalk.s[20]++;
-apiRoutes.use('/compositions', _compositions.api);
+apiRoutes.use('/resources', _resources.api);
 cov_2q2jexkalk.s[21]++;
-apiRoutes.use('/diffusions', _diffusions.api);
+apiRoutes.use('/compositions', _compositions.api);
 cov_2q2jexkalk.s[22]++;
-apiRoutes.use('/montages', _montages.api);
+apiRoutes.use('/diffusions', _diffusions.api);
 cov_2q2jexkalk.s[23]++;
-apiRoutes.use('/deliverables', _deliverables.api);
+apiRoutes.use('/montages', _montages.api);
 
 /**
  * Connect the api router to the app
