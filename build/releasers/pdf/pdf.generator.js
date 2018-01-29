@@ -18,7 +18,7 @@ var _promise2 = _interopRequireDefault(_promise);
 
 var cov_l44h4nr0x = function () {
   var path = '/Users/rawbin/Documents/Projets/collaborations/ensad-publishing/prototype/metis-backend/src/releasers/pdf/pdf.generator.js',
-      hash = '71a4cfa2a43fc9fcc1e7dd57174f15f545f25d0b',
+      hash = '1e357f34b9f2540b896b496ddf897d403b0e86df',
       global = new Function('return this')(),
       gcv = '__coverage__',
       coverageData = {
@@ -37,14 +37,24 @@ var cov_l44h4nr0x = function () {
       '1': {
         start: {
           line: 29,
-          column: 16
+          column: 23
         },
         end: {
-          line: 53,
+          line: 43,
           column: 5
         }
       },
       '2': {
+        start: {
+          line: 44,
+          column: 16
+        },
+        end: {
+          line: 55,
+          column: 1
+        }
+      },
+      '3': {
         start: {
           line: 56,
           column: 15
@@ -54,7 +64,7 @@ var cov_l44h4nr0x = function () {
           column: 27
         }
       },
-      '3': {
+      '4': {
         start: {
           line: 57,
           column: 21
@@ -64,7 +74,7 @@ var cov_l44h4nr0x = function () {
           column: 48
         }
       },
-      '4': {
+      '5': {
         start: {
           line: 58,
           column: 20
@@ -74,7 +84,7 @@ var cov_l44h4nr0x = function () {
           column: 48
         }
       },
-      '5': {
+      '6': {
         start: {
           line: 59,
           column: 4
@@ -84,7 +94,7 @@ var cov_l44h4nr0x = function () {
           column: 21
         }
       },
-      '6': {
+      '7': {
         start: {
           line: 61,
           column: 8
@@ -94,7 +104,7 @@ var cov_l44h4nr0x = function () {
           column: 21
         }
       },
-      '7': {
+      '8': {
         start: {
           line: 67,
           column: 8
@@ -104,7 +114,7 @@ var cov_l44h4nr0x = function () {
           column: 40
         }
       },
-      '8': {
+      '9': {
         start: {
           line: 69,
           column: 18
@@ -114,7 +124,7 @@ var cov_l44h4nr0x = function () {
           column: 34
         }
       },
-      '9': {
+      '10': {
         start: {
           line: 70,
           column: 18
@@ -307,7 +317,8 @@ var cov_l44h4nr0x = function () {
       '6': 0,
       '7': 0,
       '8': 0,
-      '9': 0
+      '9': 0,
+      '10': 0
     },
     f: {
       '0': 0,
@@ -390,58 +401,41 @@ function generatePdf(_ref, onFileGenerated) {
   return new _promise2.default(function (resolve, reject) {
     cov_l44h4nr0x.f[1]++;
 
-    var str = (cov_l44h4nr0x.s[1]++, _server2.default.renderToStaticMarkup(_react2.default.createElement(
-      'html',
+    var contentStr = (cov_l44h4nr0x.s[1]++, _server2.default.renderToStaticMarkup(_react2.default.createElement(
+      _reactComponents.TranslationsProvider,
       null,
-      _react2.default.createElement(
-        'head',
-        null,
-        _react2.default.createElement(
-          'style',
-          null,
-          styles
-        )
-      ),
-      _react2.default.createElement(
-        'body',
-        null,
-        _react2.default.createElement(
-          _reactComponents.TranslationsProvider,
-          null,
-          _react2.default.createElement(Component, (0, _extends4.default)({}, props, (0, _defineProperty3.default)({
-            renderingMode: 'pdf',
-            getAssetUri: getAssetUri,
-            citationStyle: citationStyle,
-            citationLocale: citationLocale,
-            Link: _PdfLink2.default,
-            NoteContentPointer: _PdfNoteContentPointer2.default,
-            NotePointerPointer: _PdfNotePointerPointer2.default
-          }, 'Link', _PdfLink2.default)))
-        )
-      )
+      _react2.default.createElement(Component, (0, _extends4.default)({}, props, (0, _defineProperty3.default)({
+        renderingMode: 'pdf',
+        getAssetUri: getAssetUri,
+        citationStyle: citationStyle,
+        citationLocale: citationLocale,
+        Link: _PdfLink2.default,
+        NoteContentPointer: _PdfNoteContentPointer2.default,
+        NotePointerPointer: _PdfNotePointerPointer2.default
+      }, 'Link', _PdfLink2.default)))
     )));
-
-    var id = (cov_l44h4nr0x.s[2]++, (0, _uuid.v4)());
-    var tempHtml = (cov_l44h4nr0x.s[3]++, tempDirPath + '/' + id + '.html');
-    var tempPdf = (cov_l44h4nr0x.s[4]++, outputDirPath + '/' + id + '.pdf');
-    cov_l44h4nr0x.s[5]++;
-    (0, _fsExtra.writeFile)(tempHtml, str).then(function () {
+    var str = (cov_l44h4nr0x.s[2]++, '\n<html>\n  <head>\n  </head>\n  <body>\n    ' + contentStr + '\n    <style>\n      ' + styles + '\n    </style>\n  </body>\n</html>\n');
+    var id = (cov_l44h4nr0x.s[3]++, (0, _uuid.v4)());
+    var tempHtml = (cov_l44h4nr0x.s[4]++, tempDirPath + '/' + id + '.html');
+    var tempPdf = (cov_l44h4nr0x.s[5]++, outputDirPath + '/' + id + '.pdf');
+    cov_l44h4nr0x.s[6]++;
+    (0, _fsExtra.writeFile)(tempHtml, str, 'utf8').then(function () {
       cov_l44h4nr0x.f[2]++;
-      cov_l44h4nr0x.s[6]++;
+      cov_l44h4nr0x.s[7]++;
 
       return (0, _prince2.default)().inputs(tempHtml).output(tempPdf).execute();
     }).then(function () {
       cov_l44h4nr0x.f[3]++;
-      cov_l44h4nr0x.s[7]++;
+      cov_l44h4nr0x.s[8]++;
 
       return onFileGenerated(tempPdf);
     }).then(function () {
       cov_l44h4nr0x.f[4]++;
-      cov_l44h4nr0x.s[8]++;
+      cov_l44h4nr0x.s[9]++;
       return (0, _fsExtra.remove)(tempHtml);
     }).then(function () {
       cov_l44h4nr0x.f[5]++;
-      cov_l44h4nr0x.s[9]++;
+      cov_l44h4nr0x.s[10]++;
       return (0, _fsExtra.remove)(tempPdf);
     }).then(resolve).catch(reject);
   });

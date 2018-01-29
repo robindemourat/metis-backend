@@ -10,7 +10,7 @@ var _promise2 = _interopRequireDefault(_promise);
 
 var cov_2kshggfa6t = function () {
   var path = '/Users/rawbin/Documents/Projets/collaborations/ensad-publishing/prototype/metis-backend/src/releasers/epub/index.js',
-      hash = '9d6e102cb1ec75d33498a2702445536d588ab296',
+      hash = 'efe43ed75351f3bbd7944ed15d9b83da500828b7',
       global = new Function('return this')(),
       gcv = '__coverage__',
       coverageData = {
@@ -42,97 +42,97 @@ var cov_2kshggfa6t = function () {
           column: 2
         },
         end: {
-          line: 74,
+          line: 73,
           column: 5
         }
       },
       '3': {
         start: {
-          line: 28,
+          line: 27,
           column: 4
         },
         end: {
-          line: 73,
+          line: 72,
           column: 19
         }
       },
       '4': {
         start: {
-          line: 30,
+          line: 29,
           column: 6
         },
         end: {
-          line: 39,
+          line: 38,
           column: 8
         }
       },
       '5': {
         start: {
-          line: 37,
+          line: 36,
           column: 8
         },
         end: {
-          line: 37,
+          line: 36,
           column: 37
         }
       },
       '6': {
         start: {
-          line: 40,
+          line: 39,
           column: 6
         },
         end: {
-          line: 40,
+          line: 39,
           column: 33
         }
       },
       '7': {
         start: {
-          line: 43,
+          line: 42,
           column: 46
         },
         end: {
-          line: 43,
+          line: 42,
           column: 58
         }
       },
       '8': {
         start: {
-          line: 44,
+          line: 43,
           column: 6
         },
         end: {
-          line: 70,
+          line: 69,
           column: 9
         }
       },
       '9': {
         start: {
-          line: 55,
+          line: 54,
           column: 8
         },
         end: {
-          line: 65,
+          line: 64,
           column: 10
         }
       },
       '10': {
         start: {
-          line: 66,
+          line: 65,
           column: 8
         },
         end: {
-          line: 69,
+          line: 68,
           column: 13
         }
       },
       '11': {
         start: {
-          line: 68,
+          line: 67,
           column: 12
         },
         end: {
-          line: 68,
+          line: 67,
           column: 82
         }
       }
@@ -156,7 +156,7 @@ var cov_2kshggfa6t = function () {
             column: 84
           },
           end: {
-            line: 75,
+            line: 74,
             column: 1
           }
         },
@@ -180,7 +180,7 @@ var cov_2kshggfa6t = function () {
             column: 42
           },
           end: {
-            line: 74,
+            line: 73,
             column: 3
           }
         },
@@ -190,121 +190,121 @@ var cov_2kshggfa6t = function () {
         name: '(anonymous_2)',
         decl: {
           start: {
-            line: 29,
+            line: 28,
             column: 10
           },
           end: {
-            line: 29,
+            line: 28,
             column: 11
           }
         },
         loc: {
           start: {
-            line: 29,
+            line: 28,
             column: 16
           },
           end: {
-            line: 41,
+            line: 40,
             column: 5
           }
         },
-        line: 29
+        line: 28
       },
       '3': {
         name: '(anonymous_3)',
         decl: {
           start: {
-            line: 30,
+            line: 29,
             column: 20
           },
           end: {
-            line: 30,
+            line: 29,
             column: 21
           }
         },
         loc: {
           start: {
-            line: 30,
+            line: 29,
             column: 29
           },
           end: {
-            line: 39,
+            line: 38,
             column: 7
           }
         },
-        line: 30
+        line: 29
       },
       '4': {
         name: '(anonymous_4)',
         decl: {
           start: {
-            line: 42,
+            line: 41,
             column: 10
           },
           end: {
-            line: 42,
+            line: 41,
             column: 11
           }
         },
         loc: {
           start: {
-            line: 42,
+            line: 41,
             column: 26
           },
           end: {
-            line: 71,
+            line: 70,
             column: 5
           }
         },
-        line: 42
+        line: 41
       },
       '5': {
         name: '(anonymous_5)',
         decl: {
           start: {
-            line: 54,
+            line: 53,
             column: 9
           },
           end: {
-            line: 54,
+            line: 53,
             column: 10
           }
         },
         loc: {
           start: {
-            line: 54,
+            line: 53,
             column: 21
           },
           end: {
-            line: 70,
+            line: 69,
             column: 7
           }
         },
-        line: 54
+        line: 53
       },
       '6': {
         name: '(anonymous_6)',
         decl: {
           start: {
-            line: 67,
+            line: 66,
             column: 16
           },
           end: {
-            line: 67,
+            line: 66,
             column: 17
           }
         },
         loc: {
           start: {
-            line: 67,
+            line: 66,
             column: 35
           },
           end: {
-            line: 69,
+            line: 68,
             column: 11
           }
         },
-        line: 67
+        line: 66
       }
     },
     branchMap: {
