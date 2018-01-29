@@ -24,7 +24,6 @@ export default function publish(data, diffusion, renderingMode = 'epub-reflowabl
     let deliverable;
     let getAssetUri;
 
-
     mountLocalAssets(data.assets)
     .then(fn => {
       getAssetUri = asset => {

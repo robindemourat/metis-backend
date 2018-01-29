@@ -26,16 +26,8 @@ export default function generatePdf ({
   styles = ''
 }, onFileGenerated) {
   return new Promise((resolve, reject) => {
-    const str = ReactDOMServer.renderToStaticMarkup(
-      <html>
-        <head>
-          <style>
-            {styles}
-          </style>
-        </head>
-        <body>
+    const contentStr = ReactDOMServer.renderToStaticMarkup(
           <TranslationsProvider>
-
             <Component
               {...props}
               renderingMode="pdf"
@@ -48,15 +40,23 @@ export default function generatePdf ({
               Link={PdfLink}
             />
           </TranslationsProvider>
-        </body>
-      </html>
     );
-
-
+    const str = `
+<html>
+  <head>
+  </head>
+  <body>
+    ${contentStr}
+    <style>
+      ${styles}
+    </style>
+  </body>
+</html>
+`;
     const id = generateId();
     const tempHtml = `${tempDirPath}/${id}.html`;
     const tempPdf = `${outputDirPath}/${id}.pdf`;
-    writeFile(tempHtml, str)
+    writeFile(tempHtml, str, 'utf8')
       .then(() => {
         return Prince()
           .inputs(tempHtml)
